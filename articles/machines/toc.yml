@@ -1,0 +1,11 @@
+- name: Klasszikus gépek és illesztők
+  href: index.md
+- name: Kvantumszimulátor
+  href: full-state-simulator.md
+- name: Erőforrásbecslő
+  href: resources-estimator.md
+- name: Kvantumszámítógép nyomkövetési szimulátora
+  topicHref: qc-trace-simulator/index.md
+  href: qc-trace-simulator/toc.yml
+- name: Toffoli-szimulátor
+  href: toffoli-simulator.md

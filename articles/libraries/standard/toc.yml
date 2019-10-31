@@ -1,0 +1,22 @@
+- name: OSS-licencelés
+  href: licensing.md
+- name: A bevezetés
+  href: prelude.md
+- name: Klasszikus matematika
+  href: math.md
+- name: Típuskonverziók
+  href: convert.md
+- name: Magasabb rendű átvitelvezérlés
+  href: control-flow.md
+- name: Adatszerkezetek és modellezés
+  href: data-structures.md
+- name: Kvantumalgoritmusok
+  href: algorithms.md
+- name: Diagnosztika
+  href: diagnostics.md
+- name: Jellemzők definiálása
+  href: characterization.md
+- name: Hibajavítás
+  href: error-correction.md
+- name: Alkalmazások
+  href: applications.md
