@@ -9,8 +9,8 @@ ms.openlocfilehash: 5a5b28f7e8c1669d26d1064753f20551a6b0d036
 ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
 ms.translationtype: HT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72970397"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73056452"
 ---
 A Quantum Development Kit számos olyan kódtárat tartalmaz, melyek megkönnyítik a kvantumalkalmazások Q# nyelven történő fejlesztését.
 A dokumentáció e szakaszában ismertetjük ezeket a kódtárakat és a programokban való felhasználásukat.
