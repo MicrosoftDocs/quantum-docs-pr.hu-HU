@@ -1,0 +1,20 @@
+- name: Mi az a kvantum-számítástechnika?
+  href: index.md
+- name: Vektorok és mátrixok
+  href: vectors-and-matrices.md
+- name: Speciális mátrixfogalmak
+  href: advanced-matrices.md
+- name: A qubit
+  href: the-qubit.md
+- name: Több qubit
+  href: multiple-qubits.md
+- name: Dirac-jelölés
+  href: dirac-notation.md
+- name: Pauli-mérések
+  href: pauli-measurements.md
+- name: Kvantumkörök
+  href: circuits.md
+- name: Kvantumorákulumok
+  href: oracles.md
+- name: Szoftverkészlet
+  href: software-stack.md

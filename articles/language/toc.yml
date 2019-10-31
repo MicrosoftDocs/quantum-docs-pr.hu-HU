@@ -1,0 +1,8 @@
+- name: 'A Q#-modelltípus'
+  href: type-model.md
+- name: Kifejezések
+  href: expressions.md
+- name: Utasítások
+  href: statements.md
+- name: Fájlstruktúra
+  href: file-structure.md

@@ -1,0 +1,10 @@
+- name: Hibajelentés
+  href: reporting-bugs.md
+- name: Hozzájárulás a dokumentációhoz
+  href: docs.md
+- name: Lekéréses kérelmek megnyitása
+  href: pull-requests.md
+- name: Hozzájárulás a kódhoz
+  href: code.md
+- name: Stílusútmutató
+  href: style-guide.md

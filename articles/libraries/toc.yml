@@ -1,0 +1,9 @@
+- name: Szabványos kódtárak
+  topicHref: standard/index.md
+  href: standard/toc.yml
+- name: Kvantumkémiai kódtár
+  topicHref: chemistry/index.md
+  href: chemistry/toc.yml
+- name: Kvantumnumerikus kódtár
+  topicHref: numerics/index.md
+  href: numerics/toc.yml
