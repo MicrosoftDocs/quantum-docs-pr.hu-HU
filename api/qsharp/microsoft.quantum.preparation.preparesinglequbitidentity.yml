@@ -1,0 +1,35 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.preparation.preparesinglequbitidentity
+name: PrepareSingleQubitIdentity
+type: operation
+namespace: Microsoft.Quantum.Preparation
+summary: >-
+  Qubit előkészítése a maximálisan kevert állapotban.
+
+
+  Előkészíti a megadott qubit a $ \boldone/$2 állapotban a depolarizációs csatorna $ $ \begin{align} \Omega (\rho) \mathrel{: =} \frac{1}{4} \sum_{\mu \in \{0, 1, 2, 3\}} \sigma\_{\mu} \rho \sigma\_{\mu} ^ {\ tőr}, \end{align} $ $, ahol $ \sigma\_i $ a $i $ th. Pauli operátor, ahol a $ \rho $ egy vegyes állapotot jelölő sűrűségű operátor.
+remarks: >-
+  A vegyes állapotú $ \boldone/$2 azt írja le, hogy a művelet egy adott állapotra való alkalmazásának eredményét implicit módon mutatja-e be a műveletben végrehajtott véletlenszerű választási lehetőség.
+
+  Így egyetlen alkalmazás esetében a művelet leképezi a tiszta állapotokat a tiszta állapotokra, de a várt módon működik.
+
+  Ez a művelet a Process tomográfia szolgáltatásban használható a csatorna *nem egységes* összetevőinek mérésére.
+syntax: 'operation PrepareSingleQubitIdentity (qubit : Qubit) : Unit'
+input:
+  content: '(qubit : Qubit)'
+  types:
+  - name: qubit
+    summary: Egy qubit, amelynek állapotát a fent leírt módon kell leállítani.
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+ms.openlocfilehash: 944178e3a8473b2206de037031bd8def546425b8
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73226522"

@@ -1,0 +1,41 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.logical.greaterthani
+name: GreaterThanI
+type: function
+namespace: Microsoft.Quantum.Logical
+summary: Igaz értéket ad vissza, és csak akkor, ha egy szám nagyobb, mint egy másik szám.
+remarks: >-
+  A következők egyenértékűek:
+
+
+  ```Q#
+
+  let cond = a > b;
+
+  let cond = GreaterThanI(a, b);
+
+  ```
+syntax: 'function GreaterThanI (a : Int, b : Int) : Bool'
+input:
+  content: '(a : Int, b : Int)'
+  types:
+  - name: a
+    summary: Az összehasonlításhoz használandó első érték.
+    isPrimitive: true
+    uid: Int
+  - name: b
+    summary: Az összehasonlítandó második érték.
+    isPrimitive: true
+    uid: Int
+output:
+  content: Bool
+  types:
+  - summary: '`true`, ha a `a` szigorúan nagyobb, mint `b`.'
+    isPrimitive: true
+    uid: Bool
+ms.openlocfilehash: 9fc87e612d2234c47fc343cfa353d46dadbd556a
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73225689"

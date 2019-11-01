@@ -1,0 +1,54 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.delayed
+name: Delayed
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: Egy olyan műveletet ad vissza, amely a megadott argumentummal megadott műveletet alkalmazza.
+syntax: "function Delayed (op : ('T => 'U), arg : 'T) : (Unit => 'U)"
+input:
+  content: "(op : ('T => 'U), arg : 'T)"
+  types:
+  - name: op
+    summary: Egy alkalmazni kívánt művelet.
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - uid: "'U"
+        isLocal: true
+  - name: arg
+    summary: Az a bemenet, amelyre a művelet vonatkozik.
+    uid: "'T"
+    isLocal: true
+output:
+  content: (Unit => 'U)
+  types:
+  - summary: Egy új művelet, amely `op`t alkalmaz a bemeneti `arg`
+    isOperation: true
+    input:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    output:
+      types:
+      - uid: "'U"
+        isLocal: true
+typeParameters:
+- uid: "'T"
+  summary: A késleltetni kívánt művelet bemeneti típusa.
+- uid: "'U"
+  summary: A késleltetni kívánt művelet visszatérési típusa.
+seeAlso:
+- microsoft.quantum.canon.delayedc
+- microsoft.quantum.canon.delayeda
+- microsoft.quantum.canon.delayedca
+- microsoft.quantum.canon.delay
+ms.openlocfilehash: 33a8e225d8478c36a83bc2240c6f622a5c1d0155
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73219637"

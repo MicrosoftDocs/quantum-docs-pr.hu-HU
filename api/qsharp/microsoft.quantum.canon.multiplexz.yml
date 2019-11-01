@@ -1,0 +1,45 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.multiplexz
+name: MultiplexZ
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  Egy qubits tömbön alkalmazza a Pauli Z rotációs feltételt.
+
+
+  Ez a szorzási vezérlésű, $U $ értéket alkalmazza, amely a $ \theta_j $ szöget hajtja végre az egyszeres qubit Pauli-operátortól, $Z $ értékkel, ha az $n $-qubit Number State $ \ket{j} $ értékkel van vezérelve.
+
+
+  $U = \sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j}\otimes e ^ {i Z \theta_j} $.
+remarks: a `coefficients` a $ \theta_j = $0,0 elemmel lesz feltöltve, ha kevesebb, mint $2 ^ n $ van megadva.
+syntax: 'operation MultiplexZ (coefficients : Double[], control : Microsoft.Quantum.Arithmetic.LittleEndian, target : Qubit) : Unit'
+references: '- A kvantum-logikai áramkörök összeszintézise: Vivek V. Shende, Stephen S. Bullock, Igor L. Markov https://arxiv.org/abs/quant-ph/0406176'
+input:
+  content: '(coefficients : Double[], control : Microsoft.Quantum.Arithmetic.LittleEndian, target : Qubit)'
+  types:
+  - name: coefficients
+    summary: Legfeljebb $2 ^ n $ együttható, $ \theta_j $. A $j $ th együttható a $ \ket{j} $ kódolású számú állapotot indexeli a kis endian formátumban.
+    isArray: true
+    isPrimitive: true
+    uid: Double
+  - name: control
+    summary: $n $-qubit-vezérlő regisztrálása, amely kis endian formátumban kódolja a szám állapotot $ \ket{j} $ értékre.
+    uid: microsoft.quantum.arithmetic.littleendian
+  - name: target
+    summary: Egyetlen qubit-regisztráció, amelyet a $e ^ {i P \theta_j} $ elforgat.
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 7098b849ea730b46b4cc3039520ef2b040d43d34
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73222697"

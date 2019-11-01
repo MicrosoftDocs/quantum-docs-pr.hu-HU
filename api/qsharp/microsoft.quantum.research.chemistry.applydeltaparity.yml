@@ -1,0 +1,44 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.research.chemistry.applydeltaparity
+name: ApplyDeltaParity
+type: operation
+namespace: Microsoft.Quantum.Research.Chemistry
+summary: Kiszámítja az előző PQRS paritásos különbözetét... feltételek és a következő PQRS... távú. Ezt a különbözetet egy kiegészítő qubit számítjuk ki.
+remarks: Ez azt feltételezi, hogy a P < Q < R < S <... mind a prevPQ, mind a nextPQ esetében.
+syntax: 'operation ApplyDeltaParity (prevFermionicTerm : Int[], nextFermionicTerm : Int[], aux : Qubit, qubits : Qubit[]) : Unit'
+input:
+  content: '(prevFermionicTerm : Int[], nextFermionicTerm : Int[], aux : Qubit, qubits : Qubit[])'
+  types:
+  - name: prevFermionicTerm
+    summary: Indexek listája az előző PQRS... feltételek.
+    isArray: true
+    isPrimitive: true
+    uid: Int
+  - name: nextFermionicTerm
+    summary: Indexek listája a következő PQRS... feltételek.
+    isArray: true
+    isPrimitive: true
+    uid: Int
+  - name: aux
+    summary: Az a kiegészítő qubit, amelybe a paritásos számítási eredmények tárolódnak.
+    isPrimitive: true
+    uid: Qubit
+  - name: qubits
+    summary: A Qubit az összes PQRS által működött... feltételek.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 35ca6ae9ff6ac6db0d0a61cff9c89c7abf862f66
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73228052"

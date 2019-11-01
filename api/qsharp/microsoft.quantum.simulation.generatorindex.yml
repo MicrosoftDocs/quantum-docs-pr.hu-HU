@@ -1,0 +1,36 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.simulation.generatorindex
+name: generatorIndex
+type: newtype
+namespace: Microsoft.Quantum.Simulation
+summary: >-
+  A dinamikus generátorok készletében egyetlen primitív kifejezést képvisel, például a Hermitian operátorok, amelyek esetében az adott generátorhoz tartozó Térkép az adott generátor által `EvolutionSet`on keresztüli időbeli alakulását jelenti.
+
+
+  Az első elem (int [], Double []) indexeli ezt az egyszeri kifejezést – például a 0,5-as együtthatóval rendelkező XXY-karakterláncot ([1, 1, 2], [0,5]) indexeli. Azt is megteheti, hogy egy folytonos változó (például X cos φ + Y Sin φ) által Hamiltonians paramétert a (z) ([], [φ]) által reprezentált példány lehet. A második elem indexeli azt az alrendszert, amelyen a létrehozó működik.
+remarks: >-
+  > [!WARNING]
+
+  > Egy `GeneratorIndex` értelmezése nincs definiálva, kivéve a generátorok adott készletére mutató hivatkozást.
+
+
+  ### <a name="examples"></a>Példák
+
+  A <xref:microsoft.quantum.simulation.paulievolutionset>használatával a \pi X_2 X_5 Y_9 $ operátor a következőképpen jelenik meg:
+
+
+  ```qsharp
+
+  let index = GeneratorIndex(([1, 1, 2], [PI()]), [2, 5, 9]);
+
+  ```
+syntax: newtype GeneratorIndex = ((Int[], Double[]), Int[]);
+seeAlso:
+- evolutionset
+- paulievolutionset
+ms.openlocfilehash: dc5f5b96a6d1708e94de918a65cbd68e0af06192
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73067050"

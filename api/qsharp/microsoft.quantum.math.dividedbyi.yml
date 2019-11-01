@@ -1,0 +1,30 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.math.dividedbyi
+name: DividedByI
+type: function
+namespace: Microsoft.Quantum.Math
+summary: Két bemenet hányadosát adja vissza.
+syntax: 'function DividedByI (a : Int, b : Int) : Int'
+input:
+  content: '(a : Int, b : Int)'
+  types:
+  - name: a
+    summary: Az első bemeneti $a $ megosztásra.
+    isPrimitive: true
+    uid: Int
+  - name: b
+    summary: A második bemeneti $b $ megosztásra.
+    isPrimitive: true
+    uid: Int
+output:
+  content: Int
+  types:
+  - summary: A hányados $a/b $.
+    isPrimitive: true
+    uid: Int
+ms.openlocfilehash: 7ca78817169fc56a42bfcd662c112d9d8c902635
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73229718"

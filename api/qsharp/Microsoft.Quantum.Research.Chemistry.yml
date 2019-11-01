@@ -1,0 +1,23 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.research.chemistry
+name: Microsoft.Quantum.Research.Chemistry
+functions:
+- uid: microsoft.quantum.research.chemistry.jordanwigneroptimizedfermionevolutionset
+  summary: Szimulálható kapuk készletének és a Pauli-alapú bővítésnek a dinamikus generátort jelöli.
+- uid: microsoft.quantum.research.chemistry.jwoptimizedfermionevolutionfunction
+  summary: A dinamikus generátort szimulálható kapuk készlete jelöli, a JWOptimized pedig kibővíthető.
+- uid: microsoft.quantum.research.chemistry.jwoptimizedgeneratorsystem
+  summary: A `JWOptimizedHTerms` által ismertetett Hamilton alakítja át az ebben a fájlban definiált `GeneratorIndex` egyezményben kifejezett `GeneratorSystem`.
+- uid: microsoft.quantum.research.chemistry.optimizedtrottersteporacle
+  summary: Az optimalizált Trotter lépés műveletet és a futtatásához szükséges paramétereket adja vissza.
+operations:
+- uid: microsoft.quantum.research.chemistry.applydeltaparity
+  summary: Kiszámítja az előző PQRS paritásos különbözetét... feltételek és a következő PQRS... távú. Ezt a különbözetet egy kiegészítő qubit számítjuk ki.
+- uid: microsoft.quantum.research.chemistry.jwoptimizedstatepreparation
+  summary: Próbaverziós állapot egyszerű állapotának előkészítése a spin-orbits elfoglalásával
+ms.openlocfilehash: 8737229d1362a444f54d1a8d0791da9312923224
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73215948"

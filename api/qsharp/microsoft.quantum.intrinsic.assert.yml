@@ -1,0 +1,45 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.intrinsic.assert
+name: Assert
+type: operation
+namespace: Microsoft.Quantum.Intrinsic
+summary: Azt állítja be, hogy a megadott Pauli-alapú qubits mérése mindig a megadott eredménnyel jár.
+remarks: Vegye figyelembe, hogy a művelet Adjoint és ellenőrzött verziói nem ellenőrzik a feltételt.
+syntax: 'operation Assert (bases : Pauli[], qubits : Qubit[], result : Result, msg : String) : Unit'
+input:
+  content: '(bases : Pauli[], qubits : Qubit[], result : Result, msg : String)'
+  types:
+  - name: bases
+    summary: A több qubit Pauli-operátor valószínűségének meghatározására szolgáló mérési hatás.
+    isArray: true
+    isPrimitive: true
+    uid: Pauli
+  - name: qubits
+    summary: A regisztráció, amelyre az állítást el kell végezni.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+  - name: result
+    summary: '`Measure(bases, qubits)`várt eredménye.'
+    isPrimitive: true
+    uid: Result
+  - name: msg
+    summary: Az az üzenet, amelyet jelenteni kell, ha az állítás sikertelen.
+    isPrimitive: true
+    uid: String
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+seeAlso:
+- assertprob
+ms.openlocfilehash: 214ec7f96a5a486d0e6025e53cca1dbf4f121795
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73235651"

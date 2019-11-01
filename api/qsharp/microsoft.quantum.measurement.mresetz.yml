@@ -1,0 +1,26 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.measurement.mresetz
+name: MResetZ
+type: operation
+namespace: Microsoft.Quantum.Measurement
+summary: Egyetlen qubit mér a `Z` alapján, és alaphelyzetbe állítja a standard állapotot | 0 〉 a mérés után.
+syntax: 'operation MResetZ (target : Qubit) : Result'
+input:
+  content: '(target : Qubit)'
+  types:
+  - name: target
+    summary: Egyetlen qubit kell mérni.
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Result
+  types:
+  - summary: A `target` a Pauli $Z $ alapján történő mérésének eredménye.
+    isPrimitive: true
+    uid: Result
+ms.openlocfilehash: a0a07ec90e36b06640ff66340b7a3d979251b0ff
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73231180"

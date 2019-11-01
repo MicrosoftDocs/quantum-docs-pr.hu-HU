@@ -1,0 +1,28 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.logical.equalc
+name: EqualC
+type: function
+namespace: Microsoft.Quantum.Logical
+summary: Igaz értéket ad vissza, és csak akkor, ha két bemenet egyenlő.
+syntax: 'function EqualC (a : Microsoft.Quantum.Math.Complex, b : Microsoft.Quantum.Math.Complex) : Bool'
+input:
+  content: '(a : Microsoft.Quantum.Math.Complex, b : Microsoft.Quantum.Math.Complex)'
+  types:
+  - name: a
+    summary: Az összehasonlításhoz használandó első érték.
+    uid: microsoft.quantum.math.complex
+  - name: b
+    summary: Az összehasonlítandó második érték.
+    uid: microsoft.quantum.math.complex
+output:
+  content: Bool
+  types:
+  - summary: '`true`, ha a `a` értéke `b`.'
+    isPrimitive: true
+    uid: Bool
+ms.openlocfilehash: 73d36b39c05fc459371be744e043422e3e324d94
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73233254"

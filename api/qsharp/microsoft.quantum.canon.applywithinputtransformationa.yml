@@ -1,0 +1,65 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applywithinputtransformationa
+name: ApplyWithInputTransformationA
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: Egy olyan művelet, amely egy bizonyos bemenetet fogad el, egy olyan függvényt ad vissza, amely kompatibilis a művelettel, és a függvény bemenete a művelettel a művelet által várt űrlapra alakítja át a bemenetet.
+examples: >-
+  A következő hívás a @"Microsoft.Quantum.Arithmetic.LittleEndianAsBigEndian" használatával alkalmaz egy @"Microsoft.Quantum.Arithmetic.LittleEndian"típusú bemenetre @"Microsoft.Quantum.Arithmetic.BigEndian" bemenetre tervezett műveletet.
+
+
+  ```qsharp
+
+  ApplyWithInputTransformation(LittleEndianAsBigEndian, ApplyXorInPlaceBE, LittleEndian(qubits));
+
+  ```
+syntax: "operation ApplyWithInputTransformationA (fn : ('U -> 'T), op : ('T => Unit is Adj), input : 'U) : Unit"
+input:
+  content: "(fn : ('U -> 'T), op : ('T => Unit is Adj), input : 'U)"
+  types:
+  - name: fn
+    summary: Függvény, amely átalakítja a megadott bemenetet a művelet által várt űrlapra.
+    isFunction: true
+    input:
+      types:
+      - uid: "'U"
+        isLocal: true
+    output:
+      types:
+      - uid: "'T"
+        isLocal: true
+  - name: op
+    summary: Az alkalmazni kívánt művelet.
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+  - name: input
+    summary: A függvény bemenete.
+    uid: "'U"
+    isLocal: true
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+seeAlso:
+- applywithinputtransformation
+- applywithinputtransformationc
+- applywithinputtransformationca
+- transformedoperation
+ms.openlocfilehash: 29b22fdff94be068341e94ad4c5f67303011a298
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73212667"

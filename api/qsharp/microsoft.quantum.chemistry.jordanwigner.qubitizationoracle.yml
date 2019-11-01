@@ -1,0 +1,42 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.chemistry.jordanwigner.qubitizationoracle
+name: QubitizationOracle
+type: function
+namespace: Microsoft.Quantum.Chemistry.JordanWigner
+summary: A Qubitization műveletet és a futtatásához szükséges paramétereket adja vissza.
+syntax: 'function QubitizationOracle (qSharpData : Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerEncodingData) : (Int, (Double, (Qubit[] => Unit is Adj + Ctl)))'
+input:
+  content: '(qSharpData : Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerEncodingData)'
+  types:
+  - name: qSharpData
+    summary: A Hamilton `JordanWignerEncodingData` formátuma írja le.
+    uid: microsoft.quantum.chemistry.jordanwigner.jordanwignerencodingdata
+output:
+  content: (Int, (Double, (Qubit[] => Unit is Adj + Ctl)))
+  types:
+  - summary: Az a rekord, ahol a `Int` a lefoglalt qubits száma, `Double` a Hamilton-együtthatók egy normája, a művelet pedig a Qubitization által létrehozott Quantum Walk.
+    types:
+    - isPrimitive: true
+      uid: Int
+    - types:
+      - isPrimitive: true
+        uid: Double
+      - isOperation: true
+        input:
+          types:
+          - isArray: true
+            isPrimitive: true
+            uid: Qubit
+        output:
+          types:
+          - isPrimitive: true
+            uid: Unit
+        functors:
+        - Adjoint
+        - Controlled
+ms.openlocfilehash: 4890f95631a5d99720fc5da307707ad040f0b391
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73233509"

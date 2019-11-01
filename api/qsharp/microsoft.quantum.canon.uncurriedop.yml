@@ -1,0 +1,58 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.uncurriedop
+name: UncurriedOp
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: Egy olyan függvény, amely egy műveletet ad vissza, egy új műveletet ad vissza, amely mindkét bemenetet rekordként veszi át.
+syntax: "function UncurriedOp (curriedOp : ('T -> ('U => Unit))) : (('T, 'U) => Unit)"
+input:
+  content: "(curriedOp : ('T -> ('U => Unit)))"
+  types:
+  - name: curriedOp
+    summary: Egy függvény, amely visszaadja A műveleteket.
+    isFunction: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isOperation: true
+        input:
+          types:
+          - uid: "'U"
+            isLocal: true
+        output:
+          types:
+          - isPrimitive: true
+            uid: Unit
+output:
+  content: (('T, 'U) => Unit)
+  types:
+  - summary: Egy új művelet `op`, hogy `op(t, u)` egyenértékű a `(curriedOp(t))(u)`.
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+      - uid: "'U"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+typeParameters:
+- uid: "'T"
+  summary: Egy Currie-függvény első argumentumának típusa.
+- uid: "'U"
+  summary: Egy Currie-függvény második argumentumának típusa.
+seeAlso:
+- microsoft.quantum.canon.uncurryopc
+- microsoft.quantum.canon.uncurryopa
+- microsoft.quantum.canon.uncurryopca
+ms.openlocfilehash: ebd2c277eee73f8920804ae79815c3b482a3d39b
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73217002"

@@ -1,0 +1,27 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.math.randomint
+name: RandomInt
+type: operation
+namespace: Microsoft.Quantum.Math
+summary: Egy, a nullánál nagyobb vagy azzal egyenlő, és a megadott felső határértéknél kisebb, egyforma, véletlenszerűen kiválasztott véletlenszerű egész számot hoz létre.
+remarks: Ez a függvény meghívja a <xref:microsoft.quantum.intrinsic.random>t, így a véletlenszerűség a `Random`megvalósítástól függ.
+syntax: 'operation RandomInt (maxInt : Int) : Int'
+input:
+  content: '(maxInt : Int)'
+  types:
+  - name: maxInt
+    summary: Egy egész szám, amely nagyobb, mint a művelet által visszaadott legnagyobb egész szám.
+    isPrimitive: true
+    uid: Int
+output:
+  content: Int
+  types:
+  - summary: Egy egész szám $x $, amely a megadott intervallumban egységesen véletlenszerű. Ez a $ \Pr (x) = \frac{1}{\texttt{maxInt}} $.
+    isPrimitive: true
+    uid: Int
+ms.openlocfilehash: 83db1cc0e58cfbf2e3da4af4c72f59ccde4fedf9
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73220028"

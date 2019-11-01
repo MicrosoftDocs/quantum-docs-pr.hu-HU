@@ -1,0 +1,23 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.math.randomsinglequbitpauli
+name: RandomSingleQubitPauli
+type: operation
+namespace: Microsoft.Quantum.Math
+summary: A qubit Pauli-operátorok egyikét adja vissza egységesen véletlenszerűen.
+remarks: Ez a függvény meghívja a <xref:microsoft.quantum.intrinsic.random>t, így a véletlenszerűség a `Random`megvalósítástól függ.
+syntax: 'operation RandomSingleQubitPauli () : Pauli'
+input:
+  content: ()
+  types: []
+output:
+  content: Pauli
+  types:
+  - summary: '`Pauli` operátor, amely a `[PauliI, PauliX, PauliY, PauliZ]`egyike.'
+    isPrimitive: true
+    uid: Pauli
+ms.openlocfilehash: 564e6c78859d5f74e0fc4ca9c5467e806742b7b2
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73219943"

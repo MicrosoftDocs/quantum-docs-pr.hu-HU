@@ -1,0 +1,17 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.errorcorrection.encodeop
+name: EncodeOp
+type: newtype
+namespace: Microsoft.Quantum.ErrorCorrection
+summary: >-
+  Egy olyan műveletet jelöl, amely a fizikai regisztrációt logikai regiszterbe kódolja a megadott Scratch qubits használatával.
+
+
+  Az első argumentum a fizikai regiszter lesz, amely kódolva lesz, míg a második argumentum lesz a használni kívánt kaparós regisztráció.
+syntax: newtype EncodeOp = ((Qubit[], Qubit[]) => Microsoft.Quantum.ErrorCorrection.LogicalRegister);
+ms.openlocfilehash: c078fe4b308d0d2aea7d5046b399fb31191d9ed7
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73231724"

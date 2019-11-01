@@ -1,0 +1,50 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.convert.functionasoperation
+name: FunctionAsOperation
+type: function
+namespace: Microsoft.Quantum.Convert
+summary: >-
+  Átalakítja a függvényeket a műveletekre.
+
+
+  A függvény adott funkciója olyan műveletet ad vissza, amely meghívja a függvényt, és amely nem más.
+remarks: Ez különösen hasznos a függvények olyan függvényekhez vagy műveletekhez való átadásához, amelyek bemenetként egy műveletet várnak.
+syntax: "function FunctionAsOperation (fn : ('Input -> 'Output)) : ('Input => 'Output)"
+input:
+  content: "(fn : ('Input -> 'Output))"
+  types:
+  - name: fn
+    summary: Egy műveletre konvertálandó függvény.
+    isFunction: true
+    input:
+      types:
+      - uid: "'Input"
+        isLocal: true
+    output:
+      types:
+      - uid: "'Output"
+        isLocal: true
+output:
+  content: ('Input => 'Output)
+  types:
+  - summary: Egy művelet `op` úgy, hogy `op(input)` azonos az összes `input``fn(input)`.
+    isOperation: true
+    input:
+      types:
+      - uid: "'Input"
+        isLocal: true
+    output:
+      types:
+      - uid: "'Output"
+        isLocal: true
+typeParameters:
+- uid: "'Input"
+  summary: Az átalakítandó függvény bemeneti típusa.
+- uid: "'Output"
+  summary: Az átalakítandó függvény kimeneti típusa.
+ms.openlocfilehash: a58e2fc4f9c8f931b4020cb06abebdd94c642bd9
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73220385"

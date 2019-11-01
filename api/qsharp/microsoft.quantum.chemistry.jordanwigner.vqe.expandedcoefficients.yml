@@ -1,0 +1,32 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.chemistry.jordanwigner.vqe.expandedcoefficients
+name: ExpandedCoefficients
+type: function
+namespace: Microsoft.Quantum.Chemistry.JordanWigner.VQE
+summary: Kibővíti a Jordan-Wigner együtthatók kompakt megjelenítését, hogy egy-az-egyhez leképezést kapjon ezek és a Pauli-kifejezések között.
+syntax: 'function ExpandedCoefficients (coeff : Double[], termType : Int) : Double[]'
+input:
+  content: '(coeff : Double[], termType : Int)'
+  types:
+  - name: coeff
+    summary: A Jordan-Wigner Hamilton adatstruktúrából beolvasott együtthatók tömbje.
+    isArray: true
+    isPrimitive: true
+    uid: Double
+  - name: termType
+    summary: A Jordán-Wigner kifejezés típusa.
+    isPrimitive: true
+    uid: Int
+output:
+  content: Double[]
+  types:
+  - summary: Az együtthatók kibontott tömbje, egy Pauli-kifejezéssel.
+    isArray: true
+    isPrimitive: true
+    uid: Double
+ms.openlocfilehash: 1eb141b0410e8d4cccaef0001bfec67fecf12831
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73227508"

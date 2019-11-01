@@ -1,0 +1,59 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applytopartitionca
+name: ApplyToPartitionCA
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  Egy pár műveletet alkalmaz a regiszter egy adott partícióján két részre.
+
+  A módosító `CA` azt jelzi, hogy a művelet ellenőrizhető és adjointable.
+syntax: 'operation ApplyToPartitionCA (op : ((Qubit[], Qubit[]) => Unit is Ctl + Adj), numberOfQubitsToFirstArgument : Int, target : Qubit[]) : Unit'
+input:
+  content: '(op : ((Qubit[], Qubit[]) => Unit is Ctl + Adj), numberOfQubitsToFirstArgument : Int, target : Qubit[])'
+  types:
+  - name: op
+    summary: Az adott partíción alkalmazni kívánt műveletek pár.
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+    - Controlled
+  - name: numberOfQubitsToFirstArgument
+    summary: >-
+      Azon qubits száma, amelyeket a rendszer a partíció első részébe helyez.
+
+      A fennmaradó qubits a partíció második részét képezik.
+    isPrimitive: true
+    uid: Int
+  - name: target
+    summary: A megadott két művelet által particionált és üzemeltetett qubits-jegyzék.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+seeAlso:
+- microsoft.quantum.canon.applytopartition
+ms.openlocfilehash: 8eced8b43f98878de9c66135ba022cad8702c56e
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73213007"

@@ -1,0 +1,45 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.intrinsic.ccnot
+name: CCNOT
+type: operation
+namespace: Microsoft.Quantum.Intrinsic
+summary: A kettős vezérlésű – NOT (CCNOT) kaput alkalmazza három qubits.
+remarks: >-
+  Egyenértékű a következővel:
+
+
+  ```qsharp
+
+  Controlled X([control1, control2], target);
+
+  ```
+syntax: 'operation CCNOT (control1 : Qubit, control2 : Qubit, target : Qubit) : Unit'
+input:
+  content: '(control1: Qubit, 2. vezérlőelem: Qubit, cél: Qubit)'
+  types:
+  - name: control1
+    summary: A CCNOT-kapu első vezérlőelem-qubit.
+    isPrimitive: true
+    uid: Qubit
+  - name: 2. vezérlőelem
+    summary: A CCNOT Gate második vezérlőelem-qubit.
+    isPrimitive: true
+    uid: Qubit
+  - name: cél
+    summary: A CCNOT kapu cél qubit.
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit (Egység)
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: cf3731ba41dde045fb5b7509d7d33801f8e3cee6
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73067356"

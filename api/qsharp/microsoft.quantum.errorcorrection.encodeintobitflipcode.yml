@@ -1,0 +1,33 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.errorcorrection.encodeintobitflipcode
+name: EncodeIntoBitFlipCode
+type: operation
+namespace: Microsoft.Quantum.ErrorCorrection
+summary: Kódolja a [3, 1, 3]/⟦ 3, 1, 1 ⟧ bit-flip kódot.
+syntax: 'operation EncodeIntoBitFlipCode (physRegister : Qubit[], auxQubits : Qubit[]) : Microsoft.Quantum.ErrorCorrection.LogicalRegister'
+input:
+  content: '(physRegister : Qubit[], auxQubits : Qubit[])'
+  types:
+  - name: physRegister
+    summary: A védeni kívánt adatmennyiséget jelképező fizikai qubits.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+  - name: auxQubits
+    summary: A rendszer először a $ \ket{00}$ állapotú kiegészítő qubits regisztrálja, amely a védeni kívánt adatkódolásban használatos.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Microsoft.Quantum.ErrorCorrection.LogicalRegister
+  types:
+  - summary: A kódoláshoz használt fizikai és kiegészítő qubits logikai regiszterként jelennek meg.
+    uid: microsoft.quantum.errorcorrection.logicalregister
+seeAlso:
+- logicalregister
+ms.openlocfilehash: 3890f4eebb70ea38fd23ffbe2b7b7eadf9e41d7b
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73234580"

@@ -1,0 +1,62 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.chemistry.jordanwigner.vqe.estimatetermexpectation
+name: EstimateTermExpectation
+type: operation
+namespace: Microsoft.Quantum.Chemistry.JordanWigner.VQE
+summary: >-
+  Egy adott Jordan-Wigner Hamilton-kifejezéshez társított energia kiszámítása
+
+
+  Ez a művelet becslést készít az egyes mérési operátorokhoz társított elvárások értékéről, és a mintavételezéssel megszorozza azt a megfelelő együtthatóval.
+
+  A rendszer összesíti az eredményeket egy olyan változóba, amely tartalmazza a Jordan-Wigner kifejezés energiáját.
+syntax: 'operation EstimateTermExpectation (inputStateUnitary : (Qubit[] => Unit is Adj), ops : Pauli[][], coeffs : Double[], nQubits : Int, nSamples : Int) : Double'
+input:
+  content: '(inputStateUnitary : (Qubit[] => Unit is Adj), ops : Pauli[][], coeffs : Double[], nQubits : Int, nSamples : Int)'
+  types:
+  - name: inputStateUnitary
+    summary: Az állapot előkészítéséhez használt egységes szolgáltatás.
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+  - name: ops
+    summary: A Jordan-Wigner kifejezés mérési operátorai.
+    isArray: true
+    types:
+    - isArray: true
+      isPrimitive: true
+      uid: Pauli
+  - name: coeffs
+    summary: A Jordan-Wigner kifejezés együtthatói.
+    isArray: true
+    isPrimitive: true
+    uid: Double
+  - name: nQubits
+    summary: A molekuláris rendszerek szimulálásához szükséges qubits száma.
+    isPrimitive: true
+    uid: Int
+  - name: nSamples
+    summary: A kifejezés elvárt értékének becsléséhez használandó minták száma.
+    isPrimitive: true
+    uid: Int
+output:
+  content: Double
+  types:
+  - summary: A Jordan-Wigner kifejezéshez kapcsolódó energia.
+    isPrimitive: true
+    uid: Double
+ms.openlocfilehash: 9efa1c2aaa66d4b35e3266f785f837cb5e4dba27
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73228443"

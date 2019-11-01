@@ -1,0 +1,38 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.errorcorrection.knilldistill
+name: KnillDistill
+type: operation
+namespace: Microsoft.Quantum.ErrorCorrection
+summary: >-
+  Implementálja a Knill mágikus állapotának kimaradó algoritmusát.
+
+
+  Egy mágikus állapot ($ $ \begin{align} \cos\frac{\pi}{8} \ket{0} + \sin \frac{\pi}{8} \ket{1} \end{align}, $ $ megközelítőleg 15 hozzávetőleges példánya egy magasabb színvonalú másolatot eredményez.
+remarks: >-
+  Követjük a Knill algoritmusát.
+
+  A jelen implementáció azonban messze nem optimális, mivel túl sok qubits használ.
+
+  A rendszer befecskendezi a mágikus állapotokat ebben a rutinban, ebben az esetben jobb protokollok vannak.
+syntax: 'operation KnillDistill (roughMagic : Qubit[]) : Bool'
+references: '- [Knill](https://arxiv.org/abs/quant-ph/0402171)'
+input:
+  content: '(roughMagic : Qubit[])'
+  types:
+  - name: roughMagic
+    summary: Egy olyan tizenöt qubits-bejegyzés, amely a mágikus állapot hozzávetőleges másolatait tartalmazza. A jelen desztilláló eljárás alkalmazása után `roughMagic[0]` egy jobb minőségű másolatot fog tartalmazni, és a regisztráció többi része visszaáll a $ \ket{00\cdots 0} $ állapotra.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Bool
+  types:
+  - summary: Ha `true`, akkor az eljárás sikeres volt, és a jobb minőségű másolatot el kell fogadni. Ha `false`, az eljárás meghiúsult, és a regiszter állapotát nem definiált értéknek kell tekinteni.
+    isPrimitive: true
+    uid: Bool
+ms.openlocfilehash: 81d87b3dcd6f669a63847e331865b1f2c389f3ce
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73226726"

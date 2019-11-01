@@ -1,0 +1,74 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.curriedop
+name: CurriedOp
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  Egy művelet egy két bemenetén lévő, a művelethez tartozó, Currie-beli verzióját adja vissza.
+
+
+  Ez azt eredményezi, hogy a művelet két bemenettel rendelkezik, ez a függvény a curry isomorphism $f (x, y) \equiv f (x) (y) $-t alkalmazza egy olyan bemenet műveletének visszaadására, amely egy bemenet műveletét adja vissza.
+remarks: >-
+  A következők egyenértékűek:
+
+
+  ```qsharp
+
+  op(x, y);
+
+
+  let curried = CurriedOp(op);
+
+  let partial = curried(x);
+
+  partial(y);
+
+  ```
+syntax: "function CurriedOp (op : (('T, 'U) => Unit)) : ('T -> ('U => Unit))"
+input:
+  content: "(op: ((nem, ' U) = > egység))"
+  types:
+  - name: op
+    summary: Olyan művelet, amelynek bemenete egy pár.
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+      - uid: "'U"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+output:
+  content: (Nem > (' U = > egység))
+  types:
+  - summary: Egy olyan művelet, amely egy pár első elemét fogadja, és egy olyan műveletet ad vissza, amely az eredeti művelet bemenetének második elemeként fogadja el.
+    isFunction: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isOperation: true
+        input:
+          types:
+          - uid: "'U"
+            isLocal: true
+        output:
+          types:
+          - isPrimitive: true
+            uid: Unit
+typeParameters:
+- uid: "'T"
+  summary: A párokban definiált függvény első összetevőjének típusa.
+- uid: "'U"
+  summary: A párokban definiált függvény második összetevőjének típusa.
+ms.openlocfilehash: 788648d24ba536926504caba92e768ecb34e001a
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73067900"

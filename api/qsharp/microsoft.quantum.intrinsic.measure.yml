@@ -1,0 +1,39 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.intrinsic.measure
+name: Measure
+type: operation
+namespace: Microsoft.Quantum.Intrinsic
+summary: >-
+  Egy vagy több qubits közös mérését hajtja végre a megadott Pauli-alapokon.
+
+
+  A kimenet eredményét a következő eloszlás adja meg: \begin{align} \Pr (\texttt{Zero} | \ket{\psi}) = \frac12 \braket{\psi \mid | \left (\boldone + P_0 \otimes P_1 \otimes \cdots \otimes P_ {N-1} \right) \mid | \psi}, \end{align}, ahol a $P _i $ a $i $ th eleme @no__ t_0_, és hol $N = \texttt{Length} (\texttt{bases}) $.
+
+  Ez azt eredményezi, hogy a mérés egy `Result` $d $ értéket ad vissza, hogy a megfigyelt sajátérték értéke $ (-1) ^ d $.
+remarks: Ha az alap tömb és a qubit tömb eltérő hosszúságú, akkor a művelet sikertelen lesz.
+syntax: 'operation Measure (bases : Pauli[], qubits : Qubit[]) : Result'
+input:
+  content: '(bases : Pauli[], qubits : Qubit[])'
+  types:
+  - name: bases
+    summary: A qubit Pauli-értékek tömbje, amely az egyes qubit a kétféle termékre vonatkozó tényezőket jelzi.
+    isArray: true
+    isPrimitive: true
+    uid: Pauli
+  - name: qubits
+    summary: A mérendő qubits regisztrálása.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Result
+  types:
+  - summary: '`Zero`, hogy megfigyelhető-e a $ + $1 sajátérték, és `One`, hogy a $-$1 sajátérték meg van-e figyelve.'
+    isPrimitive: true
+    uid: Result
+ms.openlocfilehash: 65390f851d82eb579d89072dc770f3ce077ce515
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73234104"

@@ -1,0 +1,13 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.math.bigfraction
+name: BigFraction
+type: newtype
+namespace: Microsoft.Quantum.Math
+summary: A `p/q`űrlap racionális számát jelöli. Az egész `p` a rekord első eleme, és a `q` a rekord második eleme.
+syntax: newtype BigFraction = (BigInt, BigInt);
+ms.openlocfilehash: 641939304a0846c6de4b200f87c28546278005e6
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73230211"

@@ -1,0 +1,57 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applytopartitiona
+name: ApplyToPartitionA
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  Egy pár műveletet alkalmaz a regiszter egy adott partícióján két részre.
+
+  A módosító `A` azt jelzi, hogy a művelet adjointable.
+syntax: 'operation ApplyToPartitionA (op : ((Qubit[], Qubit[]) => Unit is Adj), numberOfQubitsToFirstArgument : Int, target : Qubit[]) : Unit'
+input:
+  content: '(op : ((Qubit[], Qubit[]) => Unit is Adj), numberOfQubitsToFirstArgument : Int, target : Qubit[])'
+  types:
+  - name: op
+    summary: Az adott partíción alkalmazni kívánt műveletek pár.
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+  - name: numberOfQubitsToFirstArgument
+    summary: >-
+      Azon qubits száma, amelyeket a rendszer a partíció első részébe helyez.
+
+      A fennmaradó qubits a partíció második részét képezik.
+    isPrimitive: true
+    uid: Int
+  - name: target
+    summary: A megadott két művelet által particionált és üzemeltetett qubits-jegyzék.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+seeAlso:
+- microsoft.quantum.canon.applytopartition
+ms.openlocfilehash: 3f61db3a56581f7fbabe245deac7a7b47f510c09
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73213041"

@@ -1,0 +1,48 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.logical.conditioned
+name: Conditioned
+type: function
+namespace: Microsoft.Quantum.Logical
+summary: Egy logikai feltétel értékétől függően két érték egyikét adja vissza.
+remarks: >-
+  A `?|` operátortól eltérően ez a függvény nem rövidzárlat, így mindkét bemenet teljes mértékben ki van értékelve.
+
+
+  Akár rövid összekapcsolási viselkedés, a következők egyenértékűek:
+
+
+  ```Q#
+
+  let x = condition ? ifTrue | ifFalse;
+
+  let x = Conditioned(condition, ifTrue, ifFalse);
+
+  ```
+syntax: "function Conditioned (condition : Bool, ifTrue : 'T, ifFalse : 'T) : 'T"
+input:
+  content: "(condition : Bool, ifTrue : 'T, ifFalse : 'T)"
+  types:
+  - name: condition
+    summary: A visszaadott bemenet szabályozására szolgáló feltétel.
+    isPrimitive: true
+    uid: Bool
+  - name: ifTrue
+    summary: A `condition` `true`akor visszaadott érték.
+    uid: "'T"
+    isLocal: true
+  - name: ifFalse
+    summary: A `condition` `false`akor visszaadott érték.
+    uid: "'T"
+    isLocal: true
+output:
+  content: "'T"
+  types:
+  - summary: '`ifTrue`, ha `condition` `true`, és `ifFalse` másként.'
+    uid: "'T"
+    isLocal: true
+ms.openlocfilehash: f26e540b181ce405125dbf80cd97c3e177ad9531
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73233339"

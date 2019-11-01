@@ -1,0 +1,33 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.diagnostics.dumpmachine
+name: DumpMachine
+type: function
+namespace: Microsoft.Quantum.Diagnostics
+summary: Az aktuális célszámítógép állapotának kiírása.
+remarks: >-
+  Ez a módszer lehetővé teszi a célszámítógép aktuális állapotával kapcsolatos információk egy fájlba vagy egy másik helyre való kiírását.
+
+  A ténylegesen létrehozott információk és a `location` szemantikai adatai az egyes célszámítógépeken jellemzőek. Ha azonban üres rekordokat ad meg helyként (`()`), vagy csak a `location` paraméter kihagyása általában azt jelenti, hogy a kimenetet a konzolon hozza elő.
+
+
+  A Quantum Development Kit részeként elosztott helyi teljes állapotú szimulátor esetében ez a metódus egy karakterláncot vár egy olyan fájl elérési útjával, amelyben a Wave függvényt összetett számok egydimenziós tömbként fogja írni, amelyben az egyes elemek a következőt jelölik: a megfelelő állapot mérési valószínűségének amplitúdója.
+syntax: "function DumpMachine (location : 'T) : Unit"
+input:
+  content: "(location : 'T)"
+  types:
+  - name: location
+    summary: Információt nyújt a gép memóriaképének létrehozásáról.
+    uid: "'T"
+    isLocal: true
+output:
+  content: Unit
+  types:
+  - summary: Nincs.
+    isPrimitive: true
+    uid: Unit
+ms.openlocfilehash: 7d268127c56dc5554e7c99494ae90b2bc14b336c
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73227066"

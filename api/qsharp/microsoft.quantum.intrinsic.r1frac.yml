@@ -1,0 +1,58 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.intrinsic.r1frac
+name: R1Frac
+type: operation
+namespace: Microsoft.Quantum.Intrinsic
+summary: >-
+  A $ \ket{1}$ állapotú rotációt alkalmazza dyadic-frakcióként megadott szögben.
+
+
+  \begin{align} R_1 (n, k) \mathrel{: =} \operatorname{diag} (1, e ^ {i \pi k/2 ^ n}).
+
+  \end{align}
+
+
+  > [!WARNING]
+
+  > Ez a művelet a @"microsoft.quantum.intrinsic.r"tól eltérő aláírási konvenciót használ, és nem **tartalmazza a @"microsoft.quantum.intrinsic.r1"** által tartalmazott $1/2 $ tényezőt.
+remarks: >-
+  Egyenértékű a következővel:
+
+
+  ```qsharp
+
+  RFrac(PauliZ, -numerator, denominator + 1, qubit);
+
+  RFrac(PauliI, numerator, denominator + 1, qubit);
+
+  ```
+syntax: 'operation R1Frac (numerator : Int, power : Int, qubit : Qubit) : Unit'
+input:
+  content: '(numerator : Int, power : Int, qubit : Qubit)'
+  types:
+  - name: numerator
+    summary: A számláló azon szög dyadic-frakciójának ábrázolása, amellyel a qubit el kell forgatni.
+    isPrimitive: true
+    uid: Int
+  - name: power
+    summary: A két ereje annak a szögnek a nevezőjét határozza meg, amellyel a qubit el kell forgatni.
+    isPrimitive: true
+    uid: Int
+  - name: qubit
+    summary: A Qubit, amelyre a kaput alkalmazni kell.
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: c91aa9424abd038fa3a5a22fd23ac92cce171414
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73233985"

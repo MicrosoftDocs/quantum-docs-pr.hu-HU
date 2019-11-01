@@ -1,0 +1,50 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.measurement.measurepaulis
+name: MeasurePaulis
+type: operation
+namespace: Microsoft.Quantum.Measurement
+summary: A több qubit Pauli-operátorok tömbje a megadott mérési minialkalmazások alapján méri le az eredményeket, majd visszaadja az eredmények tömbjét.
+syntax: 'operation MeasurePaulis (paulis : Pauli[][], target : Qubit[], gadget : ((Pauli[], Qubit[]) => Result)) : Result[]'
+input:
+  content: '(paulis : Pauli[][], target : Qubit[], gadget : ((Pauli[], Qubit[]) => Result))'
+  types:
+  - name: paulis
+    summary: Több qubit Pauli-operátorok tömbje.
+    isArray: true
+    types:
+    - isArray: true
+      isPrimitive: true
+      uid: Pauli
+  - name: target
+    summary: Regisztráljon, amelyen az adott operátorok mérhetők.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+  - name: gadget
+    summary: Egy adott qubit operátor mérését végző művelet.
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Pauli
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Result
+output:
+  content: Result[]
+  types:
+  - summary: A `target``paulis` egyes elemeinek mérése során kapott eredmények tömbje.
+    isArray: true
+    isPrimitive: true
+    uid: Result
+ms.openlocfilehash: 97ad0beb222a6a6d11394499e0039c405a3be9e8
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73231401"

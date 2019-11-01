@@ -1,0 +1,30 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.simulation.multiplygeneratorsystem
+name: MultiplyGeneratorSystem
+type: function
+namespace: Microsoft.Quantum.Simulation
+summary: Megszorozza a `GeneratorSystem`összes kifejezésének együtthatóját.
+syntax: 'function MultiplyGeneratorSystem (multiplier : Double, generatorSystem : Microsoft.Quantum.Simulation.GeneratorSystem) : Microsoft.Quantum.Simulation.GeneratorSystem'
+input:
+  content: '(szorzó: Double, generatorSystem: Microsoft. Quantum. szimulációs. GeneratorSystem)'
+  types:
+  - name: szorzó
+    summary: A szorzó a koefficiens alapján.
+    isPrimitive: true
+    uid: Double
+  - name: generatorSystem
+    summary: A megszorozni kívánt `GeneratorSystem`.
+    uid: microsoft.quantum.simulation.generatorsystem
+output:
+  content: Microsoft. Quantum. szimulációs. GeneratorSystem
+  types:
+  - summary: Egy olyan rendszer `GeneratorSystem`, amely együtthatókkal `multiplier` nagyobb tényezőt képvisel.
+    uid: microsoft.quantum.simulation.generatorsystem
+seeAlso:
+- microsoft.quantum.canon.generatorsystem
+ms.openlocfilehash: e96870c4e59773542924dcd247aedc498d3f3307
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73065452"

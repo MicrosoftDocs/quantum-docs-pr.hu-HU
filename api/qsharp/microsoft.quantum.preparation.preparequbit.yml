@@ -1,0 +1,38 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.preparation.preparequbit
+name: PrepareQubit
+type: operation
+namespace: Microsoft.Quantum.Preparation
+summary: >-
+  Előkészít egy qubit az adott Pauli-operátor + 1 (`Zero`) eigenstate.
+
+  Ha az Identity operátor meg van adva, a qubit a maximálisan kevert állapotba kerül elő.
+
+
+  Ha a qubit kezdetben a $ \ket{0}$ állapotban van, akkor ez a művelet előkészíti a qubit egy adott Pauli-operátor $ + $1 eigenstate, vagy `PauliI`esetében a maximálisan vegyes állapotú helyet (lásd: <xref:microsoft.quantum.preparation.preparesinglequbitidentity>).
+
+
+  Ha a qubit a $ \ket{0}$-tól eltérő állapotban volt, a művelet a következő kapukat alkalmazza: $H $ for `PauliX`, $HS $ for `PauliY`, $I $ for `PauliZ` és <xref:microsoft.quantum.preparation.preparesinglequbitidentity> `PauliI`.
+syntax: 'operation PrepareQubit (basis : Pauli, qubit : Qubit) : Unit'
+input:
+  content: '(basis : Pauli, qubit : Qubit)'
+  types:
+  - name: basis
+    summary: Egy Pauli-operátor $P $.
+    isPrimitive: true
+    uid: Pauli
+  - name: qubit
+    summary: Egy előkészített qubit.
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+ms.openlocfilehash: be4eb730bebd00531aaa49302578b23f4a52237b
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73226539"
