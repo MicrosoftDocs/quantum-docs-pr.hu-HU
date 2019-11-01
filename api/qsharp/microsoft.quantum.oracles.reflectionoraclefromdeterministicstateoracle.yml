@@ -1,0 +1,31 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.oracles.reflectionoraclefromdeterministicstateoracle
+name: ReflectionOracleFromDeterministicStateOracle
+type: function
+namespace: Microsoft.Quantum.Oracles
+summary: >-
+  Egy Oracle-ből származó adott állapottal kapcsolatos reflexiót hoz létre.
+
+
+  Ha az Oracle $O $ típusú <xref:microsoft.quantum.oracles.deterministicstateoracle>, a függvény eredménye a $ \ket{\psi} $ állapotú, amely $O \ket{0} = \ket{\psi} $.
+syntax: 'function ReflectionOracleFromDeterministicStateOracle (oracle : Microsoft.Quantum.Oracles.DeterministicStateOracle) : Microsoft.Quantum.Oracles.ReflectionOracle'
+input:
+  content: '(Oracle: Microsoft. Quantum. Oracles. DeterministicStateOracle)'
+  types:
+  - name: Oracle
+    summary: "\"DeterministicStateOracle\" típusú Oracle"
+    uid: microsoft.quantum.oracles.deterministicstateoracle
+output:
+  content: Microsoft. Quantum. Oracles. ReflectionOracle
+  types:
+  - summary: A $ \ket{\psi} $ állapotot tükröző `ReflectionOracle`.
+    uid: microsoft.quantum.oracles.reflectionoracle
+seeAlso:
+- deterministicstateoracle
+- reflectionoracle
+ms.openlocfilehash: c48c9259b4b3c122a8d7551db6d326ea523dd2a0
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73050326"

@@ -1,0 +1,29 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.simulation.timedependenttrottersimulationalgorithm
+name: TimeDependentTrotterSimulationAlgorithm
+type: function
+namespace: Microsoft.Quantum.Simulation
+summary: '`TimeDependentSimulationAlgorithm` függvény, amely egy Trotter – Suzuki dekompozíciót használ egy olyan egységes operátor közelítéséhez, amely megoldja az időfüggő Schrödinger-egyenletet.'
+syntax: 'function TimeDependentTrotterSimulationAlgorithm (trotterStepSize : Double, trotterOrder : Int) : Microsoft.Quantum.Simulation.TimeDependentSimulationAlgorithm'
+input:
+  content: '(trotterStepSize: Double, trotterOrder: int)'
+  types:
+  - name: trotterStepSize
+    summary: Szimulált idő időbeli alakulása egyetlen Trotter lépésben.
+    isPrimitive: true
+    uid: Double
+  - name: trotterOrder
+    summary: A Trotter-integrátor sorrendje. Ennek 1 vagy páros számnak kell lennie.
+    isPrimitive: true
+    uid: Int
+output:
+  content: Microsoft. Quantum. szimulációs. TimeDependentSimulationAlgorithm
+  types:
+  - summary: '`TimeDependentSimulationAlgorithm` típus.'
+    uid: microsoft.quantum.simulation.timedependentsimulationalgorithm
+ms.openlocfilehash: dbac8ac91d7145216f9594f26e443f3a2660831e
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73065248"

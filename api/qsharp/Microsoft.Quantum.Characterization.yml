@@ -1,0 +1,33 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.characterization
+name: Microsoft. Quantum. jellemzés
+summary: " # <a name=\"summary\"></a>Összefoglalás\n Ez a névtér a kvantum-állapotok és-folyamatok tanulási tulajdonságainak, például a tomográfia és a fázisok becslésének megismerésére szolgáló függvényeket és műveleteket tartalmaz."
+operations:
+- uid: microsoft.quantum.characterization.continuousphaseestimationiteration
+  summary: Egy iterációs (klasszikusan vezérelt) fázis-értékelési algoritmus egyszeri ismétlését hajtja végre, amely egy egységes Oracle tetszőleges valós hatáskörét használja.
+- uid: microsoft.quantum.characterization.discretephaseestimationiteration
+  summary: Egy iterációs (klasszikusan vezérelt) fázis-értékelési algoritmus egyszeri ismétlését hajtja végre egy egységes Oracle egész számú erejével.
+- uid: microsoft.quantum.characterization.estimatefrequency
+  summary: Az előkészítés és a mérés alapján a rendszer a megadott számú kísérlet végrehajtásával becsüli meg, hogy a mérték milyen gyakorisággal sikeres (`Zero`).
+- uid: microsoft.quantum.characterization.estimatefrequencya
+  summary: A adjointable és a mérést követően a rendszer a megadott számú kísérlet végrehajtásával becsüli meg, hogy a mérték milyen gyakorisággal sikeres (`Zero`).
+- uid: microsoft.quantum.characterization.measureallz
+  summary: >-
+    Közösen méri a qubits-regisztrációt a Pauli Z alapján.
+
+
+    Más szóval a művelet $Z \otimes Z \otimes \cdots \otimes Z $ egy adott regisztráción.
+- uid: microsoft.quantum.characterization.measureidentity
+  summary: Megméri az Identity operátort a qubits-regisztrációban.
+- uid: microsoft.quantum.characterization.quantumphaseestimation
+  summary: Végrehajtja az adott Oracle-`U` és `targetState`kvantum fázisának becslési algoritmusát, és a fázist egy nagy endian kvantum-regiszterbe olvassa.
+- uid: microsoft.quantum.characterization.robustphaseestimation
+  summary: Elvégzi a robusztus, nem ismétlődő kvantum-értékelési algoritmust egy adott Oracle-`U` és-eigenstate esetében, és egyetlen valós értékű becslést nyújt a fázisról a Heisenberg korláton belüli variancia-skálázással.
+- uid: microsoft.quantum.characterization.singlequbitprocesstomographymeasurement
+  summary: Egy qubit-alapú Process tomográfia-mérést hajt végre Pauli alapon, egy adott érdeklődési csatornán keresztül.
+ms.openlocfilehash: f6ca8c97c1e44950fb87da8ed7335c885cabc425
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73056946"

@@ -1,0 +1,117 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.errorcorrection
+name: Microsoft. Quantum. ErrorCorrection
+summary: " # <a name=\"summary\"></a>Összefoglalás\n Ez a névtér függvények, műveletek és felhasználó által definiált típusokat tartalmaz a kvantum-hibák kijavításához."
+functions:
+- uid: microsoft.quantum.errorcorrection.bitflipcode
+  summary: Egy QECC értéket ad vissza, amely a ⟦ 3, 1, 1 ⟧ bit flip Code kódolót és dekódert jelöli a helyi szindrómás mérésével.
+- uid: microsoft.quantum.errorcorrection.bitfliprecoveryfn
+  summary: Függvény helyreállítási Pauli-műveletekhez az adott szindrómára vonatkozóan a ⟦ 3, 1, 1 ⟧ bit flip Code értékre való táblázatos kereséssel.
+- uid: microsoft.quantum.errorcorrection.fivequbitcode
+  summary: Egy QECC értéket ad vissza, amely a ⟦ 5, 1, 3 ⟧ és a dekódert, valamint a helyi szindrómás mérését jelöli.
+- uid: microsoft.quantum.errorcorrection.fivequbitcoderecoveryfn
+  summary: Azt a függvényt adja vissza, amely leképezi a hiba-szindrómát a megfelelő hiba kijavítani a Pauli-operátorok számára az 5, 1, 3 ⟧ kvantum-kód ⟦.
+- uid: microsoft.quantum.errorcorrection.steanecode
+  summary: Egy CSS-értéket ad vissza, amely a ⟦ 7, 1, 3 ⟧ Steane és a dekódert a helyi szindrómás mérésével adja meg.
+- uid: microsoft.quantum.errorcorrection.steanecoderecoveryfns
+  summary: A kombinált X-és Z-⟦ a (Z) 7, 1, 3 ⟧ Steane kvantum-kód stabilizátor-csoportjának egy részét.
+- uid: microsoft.quantum.errorcorrection.steanecoderecoveryx
+  summary: A ⟦ 7, 1, 3 ⟧ Steane kvantum-kód stabilizátor csoportjába tartozó X-részhez tartozó dekóder.
+- uid: microsoft.quantum.errorcorrection.steanecoderecoveryz
+  summary: A (Z) ⟦-7, 1, 3 ⟧ Steane kvantum-kód stabilizátor csoportjának Z-részének dekódolója.
+- uid: microsoft.quantum.errorcorrection.tablelookuprecovery
+  summary: A qubits adott nyilvántartásába tartozó egy adott táblázat esetében ez a függvény egy `RecoveryFn` típusú objektumot ad vissza, amely tartalmazza az összes olyan információt, amely egy táblázatos keresési dekódolás végrehajtásához szükséges a Pauli-műveletek adott tömbje tekintetében.
+operations:
+- uid: microsoft.quantum.errorcorrection.bitflipdecoder
+  summary: >-
+    > [!WARNING]
+
+    > Elavult @"microsoft.quantum.errorcorrection.encodeintobitflipcode"használata.
+- uid: microsoft.quantum.errorcorrection.bitflipencoder
+  summary: >-
+    > [!WARNING]
+
+    > Elavult @"microsoft.quantum.errorcorrection.encodeintobitflipcode"használata.
+- uid: microsoft.quantum.errorcorrection.decodefrombitflipcode
+  summary: 'Dekódolja a következőt: [3, 1, 3]/⟦ 3, 1, 1 ⟧ bit-flip code.'
+- uid: microsoft.quantum.errorcorrection.decodefromfivequbitcode
+  summary: A ⟦ 5, 1, 3 ⟧ kvantum-kód dekódolása.
+- uid: microsoft.quantum.errorcorrection.decodefromsteanecode
+  summary: Inverz kódolási művelet, amely egy nem kódolt kvantum-regisztrációt képez le egy kódolt kvantum-regiszterbe a ⟦ 7, 1, 3 ⟧ Steane kvantum-kódjában.
+- uid: microsoft.quantum.errorcorrection.encodeintobitflipcode
+  summary: Kódolja a [3, 1, 3]/⟦ 3, 1, 1 ⟧ bit-flip kódot.
+- uid: microsoft.quantum.errorcorrection.encodeintofivequbitcode
+  summary: Kódolja a ⟦ 5, 1, 3 ⟧ Quantum Code-ba.
+- uid: microsoft.quantum.errorcorrection.encodeintosteanecode
+  summary: Kódolási művelet, amely egy nem kódolt kvantum-regisztrációt képez le egy kódolt kvantum-regiszterbe a ⟦ 7, 1, 3 ⟧ Steane kvantum-kódjában.
+- uid: microsoft.quantum.errorcorrection.fivequbitcodedecoder
+  summary: >-
+    > [!WARNING]
+
+    > Elavult @"microsoft.quantum.errorcorrection.decodefromfivequbitcode"használata.
+- uid: microsoft.quantum.errorcorrection.fivequbitcodeencoder
+  summary: >-
+    > [!WARNING]
+
+    > Elavult @"microsoft.quantum.errorcorrection.encodeintofivequbitcode"használata.
+- uid: microsoft.quantum.errorcorrection.injectpi4yrotation
+  summary: >-
+    Egy π/4 rotációs műveletet hajt végre `Y`.
+
+
+    Az elforgatás a mágikus állapot elfogyasztásával történik. Ez a példány a $ $ \begin{align} \cos\frac{\pi}{8} \ket{0} + \sin \frac{\pi}{8} \ket{1}.
+
+    \end{align} $ $
+- uid: microsoft.quantum.errorcorrection.knilldistill
+  summary: >-
+    Implementálja a Knill mágikus állapotának kimaradó algoritmusát.
+
+
+    Egy mágikus állapot ($ $ \begin{align} \cos\frac{\pi}{8} \ket{0} + \sin \frac{\pi}{8} \ket{1} \end{align}, $ $ megközelítőleg 15 hozzávetőleges példánya egy magasabb színvonalú másolatot eredményez.
+- uid: microsoft.quantum.errorcorrection.measurestabilizergenerators
+  summary: A stabilizátorok csoportjának adott készletét méri.
+- uid: microsoft.quantum.errorcorrection.recover
+  summary: Egy `QECC` típus által leírt kvantum-kóddal hajtja végre a hibajavítások egy részét.
+- uid: microsoft.quantum.errorcorrection.recovercss
+  summary: Egy `CSS` típus által leírt kvantum-kóddal hajtja végre a hibajavítások egy részét.
+- uid: microsoft.quantum.errorcorrection.steanecodedecoder
+  summary: >-
+    > [!WARNING]
+
+    > Elavult @"microsoft.quantum.errorcorrection.decodefromfivequbitcode"használata.
+- uid: microsoft.quantum.errorcorrection.steanecodeencoder
+  summary: >-
+    > [!WARNING]
+
+    > Elavult @"microsoft.quantum.errorcorrection.decodefromfivequbitcode"használata.
+newtypes:
+- uid: microsoft.quantum.errorcorrection.css
+  summary: Egy Calderbank – rövid – Steane (CSS) kódot jelöl, amelyet a kódoló, a dekóder és a szindrómás mérési eljárásai határoznak meg `X` és `Z` hibák esetén.
+- uid: microsoft.quantum.errorcorrection.decodeop
+  summary: >-
+    Egy olyan műveletet jelöl, amely kódolja a kódolt regisztrációt egy fizikai regiszterbe, valamint a tünetegyüttes rögzítéséhez használt qubits.
+
+
+    Egy DecodeOp argumentuma megegyezik egy EncodeOp való visszatéréssel, és fordítva.
+- uid: microsoft.quantum.errorcorrection.encodeop
+  summary: >-
+    Egy olyan műveletet jelöl, amely a fizikai regisztrációt logikai regiszterbe kódolja a megadott Scratch qubits használatával.
+
+
+    Az első argumentum a fizikai regiszter lesz, amely kódolva lesz, míg a második argumentum lesz a használni kívánt kaparós regisztráció.
+- uid: microsoft.quantum.errorcorrection.logicalregister
+  summary: A logikai qubits kódolására szolgáló fizikai qubits `Qubit[]`-regisztrációjának típusa.
+- uid: microsoft.quantum.errorcorrection.qecc
+  summary: A kódoló, a dekóder és a szindróma mérési eljárása által meghatározott hiba-helyesbítési kódot jelöli.
+- uid: microsoft.quantum.errorcorrection.recoveryfn
+  summary: Írja be azt a függvényt, amely a hibás szindrómát leképező `Pauli[]` műveleteknek az észlelt hibát javító sorát adja meg.
+- uid: microsoft.quantum.errorcorrection.syndrome
+  summary: A mérési eredmények `Result[]`, amelyek egy kvantum-kód hibát okozó szindrómát határoznak meg.
+- uid: microsoft.quantum.errorcorrection.syndromemeasop
+  summary: Egy olyan műveletet jelöl, amely egy hiba-javító kód blokkolásának mérésére szolgál.
+ms.openlocfilehash: 6e1ef3ba9f22dac172e4edfb93bf1012e7bb21b4
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73056788"

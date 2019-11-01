@@ -1,0 +1,32 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.assertphaselessthan
+name: AssertPhaseLessThan
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: Azt állítja, hogy a PhaseLittleEndian-ben kódolt `number` kevesebb, mint `value`.
+remarks: A művelet ellenőrzött verziója figyelmen kívül hagyja a vezérlőket.
+syntax: 'operation AssertPhaseLessThan (value : Int, number : Microsoft.Quantum.Arithmetic.PhaseLittleEndian) : Unit'
+input:
+  content: '(value : Int, number : Microsoft.Quantum.Arithmetic.PhaseLittleEndian)'
+  types:
+  - name: value
+    summary: '`number` ennél kisebbnek kell lennie.'
+    isPrimitive: true
+    uid: Int
+  - name: number
+    summary: Előjel nélküli egész szám, amely a `value`hoz képest.
+    uid: microsoft.quantum.arithmetic.phaselittleendian
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 391e90783666da5d1549a26f2ad828863aa7dd3b
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73221422"

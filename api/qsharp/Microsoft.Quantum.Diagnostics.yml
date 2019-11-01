@@ -1,0 +1,82 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.diagnostics
+name: Microsoft. Quantum. Diagnostics
+functions:
+- uid: microsoft.quantum.diagnostics.allequalityfactb
+  summary: Azt állítja, hogy a logikai értékek két tömbje egyenlő.
+- uid: microsoft.quantum.diagnostics.dumpmachine
+  summary: Az aktuális célszámítógép állapotának kiírása.
+- uid: microsoft.quantum.diagnostics.dumpregister
+  summary: A megadott qubits tartozó aktuális célszámítógép állapotának kiírása.
+- uid: microsoft.quantum.diagnostics.equalityfactb
+  summary: Azt állítja be, hogy a klasszikus bool változó a várt értékkel rendelkezik.
+- uid: microsoft.quantum.diagnostics.equalityfactc
+  summary: Azt állítja, hogy egy összetett szám a várt értékkel rendelkezik.
+- uid: microsoft.quantum.diagnostics.equalityfactcp
+  summary: Azt állítja, hogy egy összetett szám a várt értékkel rendelkezik.
+- uid: microsoft.quantum.diagnostics.equalityfacti
+  summary: Azt állítja be, hogy a klasszikus int változó a várt értékkel rendelkezik.
+- uid: microsoft.quantum.diagnostics.equalityfactl
+  summary: Azt állítja be, hogy a klasszikus BigInt változó a várt értékkel rendelkezik.
+- uid: microsoft.quantum.diagnostics.equalityfactr
+  summary: Azt állítja be, hogy egy klasszikus eredmény változó a várt értékkel rendelkezik.
+- uid: microsoft.quantum.diagnostics.equalitywithintolerancefact
+  summary: Azt a jogcímet jelöli, amely szerint egy klasszikus lebegőpontos érték a várt értékkel rendelkezik egy adott abszolút toleranciával.
+- uid: microsoft.quantum.diagnostics.fact
+  summary: Kijelenti, hogy a klasszikus feltétel igaz.
+- uid: microsoft.quantum.diagnostics.nearequalityfactc
+  summary: Azt állítja, hogy a klasszikus komplex szám a várt értékkel rendelkezik a 1e-10 kis tűréshatára alapján.
+- uid: microsoft.quantum.diagnostics.nearequalityfactcp
+  summary: Azt állítja, hogy a klasszikus komplex szám a várt értékkel rendelkezik a 1e-10 kis tűréshatára alapján.
+- uid: microsoft.quantum.diagnostics.nearequalityfactd
+  summary: Azt állítja, hogy egy klasszikus lebegőpontos érték a várt értékkel rendelkezik a 1e-10 kis tűréshatára alapján.
+operations:
+- uid: microsoft.quantum.diagnostics.assertallzero
+  summary: Azt állítja, hogy a megadott qubits mind a $ \ket{0}$ állapotban vannak.
+- uid: microsoft.quantum.diagnostics.assertallzerowithintolerance
+  summary: Azt állítja, hogy a megadott qubits mind a $ \ket{0}$ állapotba kerülnek egy adott toleranciával szemben.
+- uid: microsoft.quantum.diagnostics.assertoperationsequalinplace
+  summary: >-
+    A két művelet miatt a azt állítja, hogy az összes bemeneti állapot esetében azonos módon működnek.
+
+
+    Ez az állítás a műveleteknek a $V _0 \otimes... \otimes V_ {n-1} $, ahol a $V _K $ egyike a (z) $ \ket{0}$, $ \ket{1}$, $ \ket{+} $ és $ \ket{i} $ (+ 1 eigenstate Pauli Y operátor) állapotának ellenőrzésével valósul meg.
+
+
+    Ez az állítás $n $ qubits használ, és több hívást igényel a műveletekhez képest.
+- uid: microsoft.quantum.diagnostics.assertoperationsequalinplacecompbasis
+  summary: >-
+    Ellenőrzi, hogy a művelet `givenU` egyenlő-e a művelet `expectedU` a megadott bemeneti mérettel, ha a műveletek műveletét csak a vektorokon, a számítási alap alapján ellenőrzi.
+
+    Ez egy szükséges, de nem elégséges, a két unitaries egyenlőségének feltétele.
+- uid: microsoft.quantum.diagnostics.assertoperationsequalreferenced
+  summary: >-
+    A két művelet miatt a azt állítja, hogy az összes bemeneti állapot esetében azonos módon működnek.
+
+
+    Ez az állítás a Choi – Jamiłkowski isomorphism használatával valósítható meg, hogy csökkentse az állítást az egyik qubit-állapotra vonatkozóan két kusza regisztrációnál.
+
+    Ezért ennek a műveletnek csak egyetlen hívással kell rendelkeznie minden tesztelt művelethez, de kétszer annyi qubits kell lefoglalni.
+
+    Ezzel az állítással biztosítható például, hogy egy adott művelet optimalizált verziója azonos módon viselkedik a naiv megvalósításával, vagy egy olyan művelet, amely egy tartományon kívüli adatbevitelt hajt végre, ismert esetekkel egyetért.
+- uid: microsoft.quantum.diagnostics.assertqubit
+  summary: Azt állítja, hogy a qubit `q` a Pauli Z operátor várt eigenstate van.
+- uid: microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance
+  summary: >-
+    Azt állítja be, hogy a qubit a várt állapotú.
+
+
+    `expected` egy összetett vektort, a $ \ket{\psi} = \begin{bmatrix}a & b\end {bmatrix} ^ {\mathrm{T}} $ értéket jelöli.
+
+    A $a $, $b $ értéket képviselő rekordok első eleme a komplex szám valódi része, míg a második a képzeletbeli rész.
+
+    Az utolsó argumentum meghatározza azt a tűréshatárt, amellyel az érvényesítés történik.
+- uid: microsoft.quantum.diagnostics.assertqubitwithintolerance
+  summary: Azt állítja, hogy a qubit `q` a Pauli Z operátor várt eigenstate van, legfeljebb egy adott toleranciával.
+summary: " # <a name=\"summary\"></a>Összefoglalás\n Ez a névtér diagnosztikai célokra használható függvényeket és műveleteket tartalmaz, beleértve az érvényesítési műveleteket és a jogcím-függvényeket."
+ms.openlocfilehash: c387a7dc3b2e997d00d54457b0af89a04fa918d3
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73056855"

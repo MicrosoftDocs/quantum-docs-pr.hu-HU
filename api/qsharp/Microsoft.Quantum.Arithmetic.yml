@@ -1,0 +1,223 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.arithmetic
+name: Microsoft. Quantum. aritmetika
+summary: " # <a name=\"summary\"></a>Összefoglalás\n Ez a névtér a következetes számítástechnikai aritmetikai funkcióit és műveleteit tartalmazza."
+functions:
+- uid: microsoft.quantum.arithmetic.bigendianaslittleendian
+  summary: '`BigEndian` qubit-regisztrációt konvertál egy `LittleEndian` qubit-regisztrációra a qubit megfordításával.'
+- uid: microsoft.quantum.arithmetic.identicalformatfactfxp
+  summary: Azt állítja be, hogy a megadott tömbben lévő összes rögzített pont száma azonos pont pozícióval és qubit-számokkal.
+- uid: microsoft.quantum.arithmetic.identicalpointposfactfxp
+  summary: Azt állítja be, hogy a megadott tömbben lévő összes rögzített szintű szám azonos ponttal rendelkezik, amikor a legkevésbé jelentős mennyiségtől számít. Azaz a BITS mínusz pont pozíciójának állandónak kell lennie a tömbben lévő összes rögzített számnál.
+- uid: microsoft.quantum.arithmetic.littleendianasbigendian
+  summary: '`LittleEndian` qubit-regisztrációt konvertál egy `BigEndian` qubit-regisztrációra a qubit megfordításával.'
+- uid: microsoft.quantum.arithmetic.reversedopbe
+  summary: Olyan művelet miatt, amely nagy endian adatbevitelt igényel, egy új műveletet ad vissza, amely egy kis endian-bemenetet vesz igénybe.
+- uid: microsoft.quantum.arithmetic.reversedopbea
+  summary: Olyan művelet miatt, amely nagy endian adatbevitelt igényel, egy új műveletet ad vissza, amely egy kis endian-bemenetet vesz igénybe.
+- uid: microsoft.quantum.arithmetic.reversedopbec
+  summary: Olyan művelet miatt, amely nagy endian adatbevitelt igényel, egy új műveletet ad vissza, amely egy kis endian-bemenetet vesz igénybe.
+- uid: microsoft.quantum.arithmetic.reversedopbeca
+  summary: Olyan művelet miatt, amely nagy endian adatbevitelt igényel, egy új műveletet ad vissza, amely egy kis endian-bemenetet vesz igénybe.
+- uid: microsoft.quantum.arithmetic.reversedople
+  summary: Egy kis endian bemeneti művelet miatt egy új műveletet ad vissza, amely egy nagy endian-bemenetet vesz igénybe.
+- uid: microsoft.quantum.arithmetic.reversedoplea
+  summary: Egy kis endian bemeneti művelet miatt egy új műveletet ad vissza, amely egy nagy endian-bemenetet vesz igénybe.
+- uid: microsoft.quantum.arithmetic.reversedoplec
+  summary: Egy kis endian bemeneti művelet miatt egy új műveletet ad vissza, amely egy nagy endian-bemenetet vesz igénybe.
+- uid: microsoft.quantum.arithmetic.reversedopleca
+  summary: Egy kis endian bemeneti művelet miatt egy új műveletet ad vissza, amely egy nagy endian-bemenetet vesz igénybe.
+operations:
+- uid: microsoft.quantum.arithmetic.addconstantfxp
+  summary: Egy klasszikus állandót hoz létre egy rögzített számú kvantum-ponthoz.
+- uid: microsoft.quantum.arithmetic.addfxp
+  summary: Két, a kvantum-regiszterekben tárolt, rögzített ponttal rendelkező számot adja meg.
+- uid: microsoft.quantum.arithmetic.addi
+  summary: A (z) a `ys`regisztrációjának méretétől függően automatikusan kiválasztja a (z) és a (z) közötti hozzáadást.
+- uid: microsoft.quantum.arithmetic.applyleoperationonphasele
+  summary: Egy olyan műveletet alkalmaz, amely a <xref:microsoft.quantum.arithmetic.phaselittleendian> regisztrálása bemenetként <xref:microsoft.quantum.arithmetic.littleendian>típusú célként megadott regiszterben.
+- uid: microsoft.quantum.arithmetic.applyleoperationonphaselea
+  summary: ''
+- uid: microsoft.quantum.arithmetic.applyleoperationonphaselec
+  summary: ''
+- uid: microsoft.quantum.arithmetic.applyleoperationonphaseleca
+  summary: ''
+- uid: microsoft.quantum.arithmetic.applyphaseleoperationonle
+  summary: Egy olyan műveletet alkalmaz, amely a <xref:microsoft.quantum.arithmetic.littleendian> regisztrálása bemenetként <xref:microsoft.quantum.arithmetic.phaselittleendian>típusú célként megadott regiszterben.
+- uid: microsoft.quantum.arithmetic.applyphaseleoperationonlea
+  summary: ''
+- uid: microsoft.quantum.arithmetic.applyphaseleoperationonlec
+  summary: ''
+- uid: microsoft.quantum.arithmetic.applyphaseleoperationonleca
+  summary: ''
+- uid: microsoft.quantum.arithmetic.applyreversedopbe
+  summary: Egy olyan műveletet alkalmaz, amely nagy endian adatbevitelt tesz lehetővé egy olyan, előjel nélküli egész számra, amely kis endian formátumot használ.
+- uid: microsoft.quantum.arithmetic.applyreversedopbea
+  summary: Egy olyan műveletet alkalmaz, amely nagy endian adatbevitelt tesz lehetővé egy olyan, előjel nélküli egész számra, amely kis endian formátumot használ.
+- uid: microsoft.quantum.arithmetic.applyreversedopbec
+  summary: Egy olyan műveletet alkalmaz, amely nagy endian adatbevitelt tesz lehetővé egy olyan, előjel nélküli egész számra, amely kis endian formátumot használ.
+- uid: microsoft.quantum.arithmetic.applyreversedopbeca
+  summary: Egy olyan műveletet alkalmaz, amely nagy endian adatbevitelt tesz lehetővé egy olyan, előjel nélküli egész számra, amely kis endian formátumot használ.
+- uid: microsoft.quantum.arithmetic.applyreversedople
+  summary: Egy olyan műveletet alkalmaz, amely kis endian-bevitelt tesz lehetővé egy előjel nélküli egész számra a big-endian formátum használatával.
+- uid: microsoft.quantum.arithmetic.applyreversedoplea
+  summary: Egy olyan műveletet alkalmaz, amely kis endian-bevitelt tesz lehetővé egy előjel nélküli egész számra a big-endian formátum használatával.
+- uid: microsoft.quantum.arithmetic.applyreversedoplec
+  summary: Egy olyan műveletet alkalmaz, amely kis endian-bevitelt tesz lehetővé egy előjel nélküli egész számra a big-endian formátum használatával.
+- uid: microsoft.quantum.arithmetic.applyreversedopleca
+  summary: Egy olyan műveletet alkalmaz, amely kis endian-bevitelt tesz lehetővé egy előjel nélküli egész számra a big-endian formátum használatával.
+- uid: microsoft.quantum.arithmetic.applyxorinplace
+  summary: >-
+    `X` műveleteket alkalmaz a qubits egy kis endian-regisztráción egy egész számon belül 1 bit alapján.
+
+
+    Tegyük fel, hogy az a `value` jelöli meg, és hagyja, hogy y legyen egy előjel nélküli egész szám `target`ban, majd `InPlaceXorLE` végrehajtja a következő Térkép által megadott műveletet: $ \ket{y}\rightarrow \ket{y\oplus a} $, ahol a $ \oplus $ a bitenkénti kizárólagos vagy operátor.
+- uid: microsoft.quantum.arithmetic.assertallzerofxp
+  summary: 'A Helper függvény azt állítja be, hogy a rendszer nulla értékű rögzített pontú számot inicializál, azaz az összes qubits a következő állapotban van: $ \ket{0}$.'
+- uid: microsoft.quantum.arithmetic.assertmostsignificantbit
+  summary: Azt állítja be, hogy egy qubit-regiszter legjelentősebb qubit, amely egy előjel nélküli egész számot jelöl, egy adott állapotban van.
+- uid: microsoft.quantum.arithmetic.assertphaselessthan
+  summary: Azt állítja, hogy a PhaseLittleEndian-ben kódolt `number` kevesebb, mint `value`.
+- uid: microsoft.quantum.arithmetic.assertprobint
+  summary: >-
+    Azt állítja, hogy a kvantum-regiszter adott állapotának valószínűsége a várt érték.
+
+
+    Adott $n $-qubit Quantum State $ \ket{\psi} = \sum ^ {2 ^ n-1} _ {j = 0} \alpha_j \ket{j} $, azt állítja, hogy a várt érték: $ | \alpha_j | ^ 2 $, amelynek állapota $ \ket{j} $ indexelt $j $.
+- uid: microsoft.quantum.arithmetic.carry
+  summary: Végrehajt egy reverzibilis Carry-kaput. A qubit-`carryIn` és a `summand1` és `summand2`ban található két summand-bitek esetében a rendszer a qubit `summand1` `carryIn`, `summand2` és `summand2` bitenkénti XOR értékének kiszámításával a xored `carryOut`.
+- uid: microsoft.quantum.arithmetic.cascadeccnot
+  summary: >-
+    Egy kaszkád CCNOT-kaput valósít meg, amely a két qubit-regiszter megfelelő BITS-nyilvántartásába van irányítva, amely az egyik regiszter következő qubit működik.
+
+    A (z) 0. pozícióban lévő qubits kezdve a CCNOT a rendszer a qubit 1. pozíciójában alkalmazza, majd az 1. pozíción a qubits a cél regiszter 2. pozíciójában, a qubit pedig a a cél qubit a pozícióban `Length(nQubits)-1`.
+- uid: microsoft.quantum.arithmetic.cascadecnot
+  summary: Egy lépcsőzetes CNEM-kaput valósít meg a szomszédos qubits egy adott qubit-regiszterben, kezdve a 0. pozícióban lévő qubit, amely az 1. pozícióban található, célként megadott qubit, majd az 1. pozícióban lévő qubit vezérlőelemként, a 2. pozícióban pedig a célként megadott qubit. stb., a `Length(register)-1` pozícióban lévő qubit végződik.
+- uid: microsoft.quantum.arithmetic.comparegreaterthanfxp
+  summary: Összehasonlítja a kvantum-regiszterekben tárolt két rögzített pont számát, és az eredményhez tartozó tükrözést vezérli.
+- uid: microsoft.quantum.arithmetic.comparegti
+  summary: 'Burkoló az egész szám összehasonlításához: `result = x > y`.'
+- uid: microsoft.quantum.arithmetic.comparegtsi
+  summary: 'A burkoló az aláírt Integer összehasonlításhoz: `result = xs > ys`.'
+- uid: microsoft.quantum.arithmetic.compareusingripplecarry
+  summary: >-
+    Ezt az egységes tesztet akkor kell megtenni, ha két egész szám `x`, és `y` azonos méretű qubit-regiszterekben tárolja `x > y`. Ha az értéke TRUE (igaz), a rendszer XORed egy kimeneti qubit. Ellenkező esetben a 0 értéket XORed egy kimeneti qubit.
+
+
+    Ez azt jelenti, hogy ez az egységes $U $ megfelel a következőnek: $ $ \begin{align} U\ket {x} \ ket {y} \ ket {z} = \ket{x}\ket{y}\ket{z\oplus (x > y)}.
+
+    \end{align} $ $.
+- uid: microsoft.quantum.arithmetic.computereciprocalfxp
+  summary: Kiszámítja a $1/x $ értéket egy rögzített pont $x $ értékű számra.
+- uid: microsoft.quantum.arithmetic.computereciprocali
+  summary: Kiszámítja az 1/x értéket egy előjel nélküli egész x-re az egész szám osztással. Az eredmény egész számként értelmezve lesz `floor(2^(2*n-1) / x)`.
+- uid: microsoft.quantum.arithmetic.copymostsignificantbit
+  summary: A qubit-regiszter legjelentősebb részét másolja `from` egy előjel nélküli egész számot jelképez a qubit `target`.
+- uid: microsoft.quantum.arithmetic.dividei
+  summary: Két kvantum egész számot oszt ki.
+- uid: microsoft.quantum.arithmetic.evaluateevenpolynomialfxp
+  summary: Kiértékeli a páros polinom-t egy rögzített pontos ábrázolásban.
+- uid: microsoft.quantum.arithmetic.evaluateoddpolynomialfxp
+  summary: Kiértékeli a páratlan polinom-t egy rögzített pontos ábrázolásban.
+- uid: microsoft.quantum.arithmetic.evaluatepolynomialfxp
+  summary: A polinom kiértékelése rögzített pontú ábrázolásban.
+- uid: microsoft.quantum.arithmetic.greaterthan
+  summary: Szigorúan nagyobb, mint két egész szám összehasonlítása $x $ és $y $, a qubit-ben kódolva, az XS és az időpontot. Ha $x > y $, akkor az eredmény qubit lesz tükrözve, máskülönben megtartja az állapotát.
+- uid: microsoft.quantum.arithmetic.incrementbyinteger
+  summary: Megnöveli egy előjel nélküli kvantum-regisztrációt egy klasszikus egész számmal, fázisok forgása alapján.
+- uid: microsoft.quantum.arithmetic.incrementbymodularinteger
+  summary: >-
+    Egy qubit-regiszter moduláris növekményét hajtja végre egy egész állandó értékkel.
+
+
+    Tegyük fel, hogy az a `increment` jelöli meg, `modulus` az N és az egész számot kódolja az y `target`, majd a művelet végrehajtja a következő átalakítást: \begin{align} \ket{y} \mapsto \ket{y + 1 \operatorname{mod} N} \end{align} egész számok kódolása kis endian formátumban történik.
+- uid: microsoft.quantum.arithmetic.incrementphasebyinteger
+  summary: Megnöveli egy előjel nélküli kvantum-regisztrációt egy klasszikus egész számmal, fázisok forgása alapján.
+- uid: microsoft.quantum.arithmetic.incrementphasebymodularinteger
+  summary: >-
+    Egy qubit-regiszter moduláris növekményét hajtja végre egy egész állandó értékkel.
+
+
+    Tegyük fel, hogy az a `increment` jelöli meg, `modulus` az N és az egész számot kódolja az y `target`, majd a művelet a következő átalakítást hajtja végre: | y ⟩ ↦ | y + a (mod N) ⟩ egész számok kódolása kis endian formátumban QFT alapján
+- uid: microsoft.quantum.arithmetic.inplacemajority
+  summary: >-
+    Ez kiszámítja a többségi függvényt helyben, 3 qubits.
+
+
+    Ha a kimeneti qubit $z $ és a bemeneti qubits $x $ és $y $ értékre jelöli, a művelet a következő átalakítást hajtja végre: $ \ket{XYZ} \rightarrow \ket{x \oplus z} \ket{y \oplus z} \ket{\operatorname{MAJ} (x, y, z)} $.
+- uid: microsoft.quantum.arithmetic.invert2ssi
+  summary: Egy adott egész szám, a 2. adatosztási modul kiegészítését fordította.
+- uid: microsoft.quantum.arithmetic.maj
+  summary: Ez a helyi többségi műveletet 3 qubits alkalmazza.
+- uid: microsoft.quantum.arithmetic.measurefxp
+  summary: Rögzített pont számának mérése, az értékét adja vissza dupla értékként, és visszaállítja az összes regisztrációt nullára.
+- uid: microsoft.quantum.arithmetic.measureinteger
+  summary: A kvantum-regiszter tartalmát méri, és egy egész számra konvertálja. A mérés a standard számítási alapon történik, azaz a `PauliZ`eigenbasis.
+- uid: microsoft.quantum.arithmetic.multiplyandaddbymodularinteger
+  summary: >-
+    Egy qubit-regiszterben egy moduláris szorzást és-hozzáadást végez az egész számok állandói alapján.
+
+
+    A $ $ \begin{align} \ket{x} \ket{b} \mapsto \ket{x} \ket{b + a \cdot x \operatorname{mod} N} \end{align} $ $ értéket implementálja egy adott modulus $N $, konstans szorzó $a $ és summand $y $ esetében.
+- uid: microsoft.quantum.arithmetic.multiplyandaddphasebymodularinteger
+  summary: Ugyanaz, mint a ModularAddProductLE, de azt feltételezi, hogy a summand QFT-alapú egész számokat kódol
+- uid: microsoft.quantum.arithmetic.multiplybymodularinteger
+  summary: >-
+    A qubit-regiszterben egy egész állandó használatával hajtja végre a moduláris szorzást.
+
+
+    Tegyük fel, hogy a modulusot N és constMultiplier szerint jelöli meg, ez a művelet egy, az alábbi Térkép által a számítási alapokon definiált egységes értéket implementálja: | y ⟩ ↦ | a ⋅ y (mod N) ⟩, minden y 0 és N-1 között
+- uid: microsoft.quantum.arithmetic.multiplyfxp
+  summary: A kvantum-regiszterekben két rögzített pontú számot szoroz.
+- uid: microsoft.quantum.arithmetic.multiplyi
+  summary: Az egész szám `xs` egész szám `ys` és az eredmény `result`ban való tárolása, amelyeknek kezdetben nullának kell lennie.
+- uid: microsoft.quantum.arithmetic.multiplysi
+  summary: Az aláírt egész szám `xs` az aláírt egész szám `ys` és az eredmény `result`ben való tárolása, amelyeknek kezdetben nullának kell lennie.
+- uid: microsoft.quantum.arithmetic.preparefxp
+  summary: A kvantum rögzített pont számának inicializálása klasszikus állandó értékre.
+- uid: microsoft.quantum.arithmetic.ripplecarryaddercdkm
+  summary: >-
+    Visszafordítható, helyi hullámos – két egész szám hozzáadását hajthatja végre.
+
+    A LittleEndian-ben `xs` és `ys`, valamint egy qubit-t tartalmazó két $n $ bites egész számnak megfelelően a művelet kiszámítja a két egész szám összegét, amelyekben az eredmény $n $ legkevésbé jelentős bitet tárolja `ys`, és a végrehajtás bit a xored qubit `carry`.
+- uid: microsoft.quantum.arithmetic.ripplecarryadderd
+  summary: >-
+    Visszafordítható, helyi hullámos – két egész szám hozzáadását hajthatja végre.
+
+    A LittleEndian-ben `xs` és `ys`, valamint egy qubit-t tartalmazó két $n $ bites egész számnak megfelelően a művelet kiszámítja a két egész szám összegét, amelyekben az eredmény $n $ legkevésbé jelentős bitet tárolja `ys`, és a végrehajtás bit a xored qubit `carry`.
+- uid: microsoft.quantum.arithmetic.ripplecarryaddernocarryttk
+  summary: Visszafordítható, helyi hullámos – a végrehajtás nélkül két egész számot is végezhet. A LittleEndian-ben a két $n $ bites egész számnak a `xs` és a `ys`regisztrálása során a művelet kiszámítja a két egész számból álló, 2 ^ n $ adatmennyiséget, ahol $n $ a bemenetek mérete `xs` és `ys`. Nem számítja ki az elvégzési bitet.
+- uid: microsoft.quantum.arithmetic.ripplecarryadderttk
+  summary: >-
+    Visszafordítható, helyi hullámos – két egész szám hozzáadását hajthatja végre.
+
+    A LittleEndian-ben `xs` és `ys`, valamint egy qubit-t tartalmazó két $n $ bites egész számnak megfelelően a művelet kiszámítja a két egész szám összegét, amelyekben az eredmény $n $ legkevésbé jelentős bitet tárolja `ys`, és a végrehajtás bit a xored qubit `carry`.
+- uid: microsoft.quantum.arithmetic.squarefxp
+  summary: A négyzetek rögzített pontú szám.
+- uid: microsoft.quantum.arithmetic.squarei
+  summary: Kiszámítja az egész szám négyzetét, `xs` a `result`, amely kezdetben nullának kell lennie.
+- uid: microsoft.quantum.arithmetic.squaresi
+  summary: A négyzet alá eső egész szám `xs`, és az eredményt a `result`ban tárolja, amelynek kezdetben nullának kell lennie.
+- uid: microsoft.quantum.arithmetic.sum
+  summary: Egy reverzibilis összegű kaput implementál. A qubit-`carryIn`ban és a `summand1` és `summand2`ban két summand-bit kódolása miatt a rendszer kiszámítja a qubit `summand1` `carryIn`, `summand2` és `summand2`bitenkénti.
+newtypes:
+- uid: microsoft.quantum.arithmetic.bigendian
+  summary: Regisztrálja, hogy a rendszer egy előjel nélküli egész számot kódol a big-endian sorrendben. A qubit indextel `0` kódolja az előjel nélküli egész számok legmagasabb részét.
+- uid: microsoft.quantum.arithmetic.fixedpoint
+  summary: Egy rögzített pont számú qubits-kódolású regisztert jelöl. Egy egész számból áll, amely egyenlő a bináris ponttól balra lévő qubits számával, azaz az 1 értéknél nagyobb vagy azzal egyenlő qubits, valamint a kvantum-regisztrációval.
+- uid: microsoft.quantum.arithmetic.littleendian
+  summary: Regisztrálja, hogy az előjel nélküli egész számot kódolja kis endian sorrendben. Az indextel `0` qubit egy előjel nélküli egész szám legalacsonyabb részét kódolja.
+- uid: microsoft.quantum.arithmetic.phaselittleendian
+  summary: >-
+    Kis endian előjel nélküli egész számok QFT alapján.
+
+
+    Ha például a $ \ket{x} $ a $x $ egész szám kis endian kódolása számítási alapon, akkor a $ \operatorname{QFTLE} \ket{x} $ a QFT-alapú $x $ kódolású.
+- uid: microsoft.quantum.arithmetic.signedlittleendian
+  summary: 'A kis endian tárolt aláírt egész számok típusa (lásd: LittleEndian).'
+ms.openlocfilehash: 95a399e09ad5c1617c34a68302f9212a8ec4e0ad
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73065146"

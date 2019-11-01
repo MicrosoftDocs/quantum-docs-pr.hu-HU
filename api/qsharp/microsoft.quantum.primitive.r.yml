@@ -1,0 +1,39 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.primitive.r
+name: R
+type: operation
+namespace: Microsoft.Quantum.Primitive
+summary: >-
+  > [!WARNING]
+
+  > Elavult
+
+
+  Kérjük, használja a @"microsoft.quantum.intrinsic.r".
+syntax: 'operation R (pauli : Pauli, theta : Double, qubit : Qubit) : Unit'
+input:
+  content: '(Pauli: Pauli, Théta: Double, qubit: Qubit)'
+  types:
+  - name: Pauli
+    isPrimitive: true
+    uid: Pauli
+  - name: THÉTA
+    isPrimitive: true
+    uid: Double
+  - name: qubit
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit (Egység)
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 19ed71daeb4359203f0c95b7d6a231791606a4f4
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73067152"

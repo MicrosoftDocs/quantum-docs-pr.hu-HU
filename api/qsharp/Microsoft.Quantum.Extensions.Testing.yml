@@ -1,0 +1,56 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.extensions.testing
+name: Microsoft.Quantum.Extensions.Testing
+operations:
+- uid: microsoft.quantum.extensions.testing.assertallzero
+  summary: >-
+    > [!WARNING]
+
+    > Elavult @"microsoft.quantum.diagnostics.assertallzero"használata.
+- uid: microsoft.quantum.extensions.testing.assertallzerotol
+  summary: >-
+    > [!WARNING]
+
+    > Elavult @"microsoft.quantum.diagnostics.assertallzerowithintolerance"használata.
+- uid: microsoft.quantum.extensions.testing.assertoperationsequalinplace
+  summary: >-
+    > [!WARNING]
+
+    > Elavult @"microsoft.quantum.diagnostics.assertoperationsequalinplace"használata.
+
+    Vegye figyelembe, hogy a művelet argumentumai sorrendje megváltozott.
+- uid: microsoft.quantum.extensions.testing.assertoperationsequalinplacecompbasis
+  summary: >-
+    > [!WARNING]
+
+    > Elavult @"microsoft.quantum.diagnostics.assertoperationsequalinplaceCompBasis"használata.
+
+    Vegye figyelembe, hogy a művelet argumentumai sorrendje megváltozott.
+- uid: microsoft.quantum.extensions.testing.assertoperationsequalreferenced
+  summary: >-
+    > [!WARNING]
+
+    > Elavult @"microsoft.quantum.diagnostics.assertoperationsequalreferenced"használata.
+
+    Vegye figyelembe, hogy a művelet argumentumai sorrendje megváltozott.
+- uid: microsoft.quantum.extensions.testing.assertqubit
+  summary: >-
+    > [!WARNING]
+
+    > Elavult @"microsoft.quantum.diagnostics.assertqubit"használata.
+- uid: microsoft.quantum.extensions.testing.assertqubitstate
+  summary: >-
+    > [!WARNING]
+
+    > Elavult @"microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance"használata.
+- uid: microsoft.quantum.extensions.testing.assertqubittol
+  summary: >-
+    > [!WARNING]
+
+    > Elavult @"microsoft.quantum.diagnostics.assertqubitwithintolerance"használata.
+ms.openlocfilehash: 031bbd476ac37f113f9fb692ccd6fca916612ac3
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73210348"

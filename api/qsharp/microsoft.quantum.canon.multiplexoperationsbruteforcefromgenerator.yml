@@ -1,0 +1,60 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.multiplexoperationsbruteforcefromgenerator
+name: MultiplexOperationsBruteForceFromGenerator
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  A szorzásra vezérelt, egységes művelet $U $, amely egy egységes $V _j $-t alkalmaz, ha n-qubit számú állapotot ($ \ket{j} $) vezérel.
+
+
+  $U = \sum ^ {N-1} _ {j = 0} \ket{j}\bra{j}\otimes V_j $.
+remarks: a `coefficients` az azonosító elemek kitöltésével lesznek feltöltve, ha kevesebb, mint $2 ^ n $ van megadva. Ez a verzió közvetlenül az n vezérelt, egységes operátorok használatával valósítható meg.
+syntax: "operation MultiplexOperationsBruteForceFromGenerator (unitaryGenerator : (Int, (Int -> ('T => Unit is Adj + Ctl))), index : Microsoft.Quantum.Arithmetic.LittleEndian, target : 'T) : Unit"
+input:
+  content: "(unitaryGenerator : (Int, (Int -> ('T => Unit is Adj + Ctl))), index : Microsoft.Quantum.Arithmetic.LittleEndian, target : 'T)"
+  types:
+  - name: unitaryGenerator
+    summary: Egy olyan rekord, amelyben az első elem `Int` a unitaries száma $N $, a második elem `(Int -> ('T => () is Adj + Ctl))` egy függvény, amely egy egész $j $ értéket vesz igénybe $ [0, N-1] $ értékben, és az egységes művelet $V _j $ értéket adja eredményül.
+    types:
+    - isPrimitive: true
+      uid: Int
+    - isFunction: true
+      input:
+        types:
+        - isPrimitive: true
+          uid: Int
+      output:
+        types:
+        - isOperation: true
+          input:
+            types:
+            - uid: "'T"
+              isLocal: true
+          output:
+            types:
+            - isPrimitive: true
+              uid: Unit
+          functors:
+          - Adjoint
+          - Controlled
+  - name: index
+    summary: $n $-qubit-vezérlő regisztrálása, amely kis endian formátumban kódolja a szám állapotot $ \ket{j} $ értékre.
+    uid: microsoft.quantum.arithmetic.littleendian
+  - name: target
+    summary: Általános qubit regisztrálja, hogy $V _j $.
+    uid: "'T"
+    isLocal: true
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: a010fc41e76c09f064fdb7a0fa890efcfd8a41f8
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73225162"
