@@ -1,0 +1,31 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.math.randomreal
+name: RandomReal
+type: operation
+namespace: Microsoft.Quantum.Math
+summary: Egy véletlenszerű valós számot ad vissza, amely nullánál nagyobb vagy egyenlő, és kevesebb mint egy.
+remarks: Ez a függvény meghívja a <xref:microsoft.quantum.intrinsic.random>t, így a véletlenszerűség a `Random`megvalósítástól függ.
+syntax: 'operation RandomReal (bitsRandom : Int) : Double'
+input:
+  content: '(bitsRandom : Int)'
+  types:
+  - name: bitsRandom
+    summary: >-
+      Azon bitek száma, amelyekhez a véletlenszerű számot mintát kell venni.
+
+          # Output
+
+      Egy valós szám $x = k/2 ^ {\texttt{bitsRandom}} $ egy egész számú $k $ mintában, a $ [0, 2 ^ {\texttt{bitsRandom}}) $ értékkel, a valószínűség $ \Pr (k) = 1/2 ^ {\texttt{bitsRandom}} $.
+    isPrimitive: true
+    uid: Int
+output:
+  content: Double
+  types:
+  - isPrimitive: true
+    uid: Double
+ms.openlocfilehash: c0780e0b8771c74a04145d5dce70d47dfefafa0e
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73219960"

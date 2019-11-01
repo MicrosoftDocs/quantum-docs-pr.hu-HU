@@ -1,0 +1,27 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.math.randomintpow2
+name: RandomIntPow2
+type: operation
+namespace: Microsoft.Quantum.Math
+summary: Egy véletlenszerű egész számot hoz létre, amely az összes olyan egész számból, amely egy adott számú biten megjeleníthető.
+remarks: Ez a függvény meghívja a <xref:microsoft.quantum.intrinsic.random>t, így a véletlenszerűség a `Random`megvalósítástól függ.
+syntax: 'operation RandomIntPow2 (maxBits : Int) : Int'
+input:
+  content: '(maxBits : Int)'
+  types:
+  - name: maxBits
+    summary: A művelet által visszaadott legnagyobb egész számot jelölő klasszikus bitek száma.
+    isPrimitive: true
+    uid: Int
+output:
+  content: Int
+  types:
+  - summary: A $ [0, 2 ^ {\texttt{maxBits}}-1] $ értékkel egységesen véletlenszerűen kapott egész $x $. Ez a $ \Pr (x) = \frac{1}{2 ^ {\texttt{maxBits}}} $.
+    isPrimitive: true
+    uid: Int
+ms.openlocfilehash: e690509a7dcd2b1ec51bdde85da6439a688e75e7
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73219977"

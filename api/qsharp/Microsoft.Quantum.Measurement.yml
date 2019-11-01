@@ -1,0 +1,22 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.measurement
+name: Microsoft.Quantum.Measurement
+operations:
+- uid: microsoft.quantum.measurement.measurepaulis
+  summary: A több qubit Pauli-operátorok tömbje a megadott mérési minialkalmazások alapján méri le az eredményeket, majd visszaadja az eredmények tömbjét.
+- uid: microsoft.quantum.measurement.measurewithscratch
+  summary: A megadott Pauli-operátort egy explicit qubit használatával méri a mérés végrehajtásához.
+- uid: microsoft.quantum.measurement.mresetx
+  summary: X alapon egyetlen qubit mér, és a mérést követően visszaállítja a standard szintű állapotba | 0 〉.
+- uid: microsoft.quantum.measurement.mresety
+  summary: Egyetlen qubit mér az Y alapon, és alaphelyzetbe állítja a standard állapotot | 0 〉 a mérés után.
+- uid: microsoft.quantum.measurement.mresetz
+  summary: Egyetlen qubit mér a `Z` alapján, és alaphelyzetbe állítja a standard állapotot | 0 〉 a mérés után.
+- uid: microsoft.quantum.measurement.multim
+  summary: A standard szintű egy adott tömb mindegyik qubit méri.
+ms.openlocfilehash: 872031f8a6ebd77e72cd74e1c98e7347c09ca14a
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73210984"

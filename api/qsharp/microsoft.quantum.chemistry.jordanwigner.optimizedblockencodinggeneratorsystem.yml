@@ -1,0 +1,24 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.chemistry.jordanwigner.optimizedblockencodinggeneratorsystem
+name: OptimizedBlockEncodingGeneratorSystem
+type: function
+namespace: Microsoft.Quantum.Chemistry.JordanWigner
+summary: '`JWOptimizedHTerms` által leírt Hamilton alakít át egy, a Pauli `GeneratorIndex`kifejezésben kifejezett `GeneratorSystem`ra.'
+syntax: 'function OptimizedBlockEncodingGeneratorSystem (data : Microsoft.Quantum.Chemistry.JordanWigner.JWOptimizedHTerms) : Microsoft.Quantum.Chemistry.JordanWigner.OptimizedBEGeneratorSystem'
+input:
+  content: '(data : Microsoft.Quantum.Chemistry.JordanWigner.JWOptimizedHTerms)'
+  types:
+  - name: data
+    summary: A Hamilton leírása `JWOptimizedHTerms` formátumban.
+    uid: microsoft.quantum.chemistry.jordanwigner.jwoptimizedhterms
+output:
+  content: Microsoft.Quantum.Chemistry.JordanWigner.OptimizedBEGeneratorSystem
+  types:
+  - summary: A Hamilton `GeneratorSystem`ként való megjelenítése.
+    uid: microsoft.quantum.chemistry.jordanwigner.optimizedbegeneratorsystem
+ms.openlocfilehash: 85e34ffd430096873e9bdb9e15be9ebaf7127e94
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73231928"

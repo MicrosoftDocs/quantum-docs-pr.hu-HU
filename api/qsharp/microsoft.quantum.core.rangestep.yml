@@ -1,0 +1,26 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.core.rangestep
+name: RangeStep
+type: function
+namespace: Microsoft.Quantum.Core
+summary: Azt az egész számot adja vissza, amely megadja egy tartomány következő értékének kiszámítását.
+remarks: A Range kifejezés első eleme `start`, a második elem `start+step`, a harmadik elem pedig `start+step+step`, stb., amíg `end` át nem telik.
+syntax: 'function RangeStep (range : Range) : Int'
+input:
+  content: '(tartomány: tartomány)'
+  types:
+  - name: tartomány
+    isPrimitive: true
+    uid: Range
+output:
+  content: int
+  types:
+  - summary: A megadott tartomány megadott lépésének értéke.
+    isPrimitive: true
+    uid: Int
+ms.openlocfilehash: 0195f0f2eb03c163ae08cc789867627286a44097
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73066608"

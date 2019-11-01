@@ -1,0 +1,22 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.math.logof2
+name: LogOf2
+type: function
+namespace: Microsoft.Quantum.Math
+summary: A 2 természetes alapú logaritmusát adja vissza.
+syntax: 'function LogOf2 () : Double'
+input:
+  content: ()
+  types: []
+output:
+  content: Double
+  types:
+  - summary: A $0.6931471805599453 $ értékkel egyenlő `Double` ad vissza.
+    isPrimitive: true
+    uid: Double
+ms.openlocfilehash: 4a2bbd6adff643a5240fd280a020be076190eed1
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73232506"

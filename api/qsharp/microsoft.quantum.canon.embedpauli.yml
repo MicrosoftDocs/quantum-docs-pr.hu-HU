@@ -1,0 +1,43 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.embedpauli
+name: EmbedPauli
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: Egy qubit Pauli-operátor és egy qubit indexe egy több qubit Pauli-operátort ad vissza, amely a megadott qubit operátort adja meg az indexben, és minden más indexnél `PauliI`.
+examples: >-
+  A tömb `[PauliI, PauliI, PauliX, PauliI]`ának beszerzése:
+
+
+  ```qsharp
+
+  EmbedPauli(PauliX, 2, 3);
+
+  ```
+syntax: 'function EmbedPauli (pauli : Pauli, location : Int, n : Int) : Pauli[]'
+input:
+  content: '(pauli : Pauli, location : Int, n : Int)'
+  types:
+  - name: pauli
+    summary: Egy qubit Pauli-operátort kell elhelyezni a megadott helyen.
+    isPrimitive: true
+    uid: Pauli
+  - name: location
+    summary: Egy olyan index, amely `output[location] == pauli`, ahol `output` a függvény kimenete.
+    isPrimitive: true
+    uid: Int
+  - name: n
+    summary: A visszaadott tömb hossza.
+    isPrimitive: true
+    uid: Int
+output:
+  content: Pauli[]
+  types:
+  - isArray: true
+    isPrimitive: true
+    uid: Pauli
+ms.openlocfilehash: 1e852781f6dd85e5432f5613184f028db0e84b87
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73219382"

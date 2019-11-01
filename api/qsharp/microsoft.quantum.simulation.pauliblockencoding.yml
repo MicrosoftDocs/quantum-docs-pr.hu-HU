@@ -1,0 +1,42 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.simulation.pauliblockencoding
+name: PauliBlockEncoding
+type: function
+namespace: Microsoft.Quantum.Simulation
+summary: >-
+  Létrehoz egy blokk-Encoding egységes Hamilton.
+
+
+  A Hamilton $H = \sum_{j}\alpha_j P_j $ $P _j $ értékkel rendelkezik, amelyek mindegyike valódi együtthatóval ($ \alpha_j $) van leírva.
+remarks: 'Ezt a rendszer a következő állapot előkészítésével és előkészítésével szerzi be: $ \ sum_ {j} \ SQRT {\ alpha_j/\ Alpha} \ ket {j} $, valamint egy szorzásra vezérelt, egységes <xref:microsoft.quantum.preparation.statepreparationpositivecoefficients> és <xref:microsoft.quantum.canon.multiplexoperationsfromgenerator>létrehozásával.'
+syntax: 'function PauliBlockEncoding (generatorSystem : Microsoft.Quantum.Simulation.GeneratorSystem) : (Double, Microsoft.Quantum.Simulation.BlockEncodingReflection)'
+input:
+  content: '(generatorSystem : Microsoft.Quantum.Simulation.GeneratorSystem)'
+  types:
+  - name: generatorSystem
+    summary: '`GeneratorSystem`, amely a $H $ értéket írja elő a Pauli-kifejezések összegeként'
+    uid: microsoft.quantum.simulation.generatorsystem
+output:
+  content: (Double, Microsoft.Quantum.Simulation.BlockEncodingReflection)
+  types:
+  - summary: >-
+      ## <a name="first-parameter"></a>Első paraméter
+
+
+      Az együtthatók egynormája $ \alpha = \sum_{j} | \alpha_j | $.
+
+
+      ## <a name="second-parameter"></a>Második paraméter
+
+
+      A Hamilton $H $ `BlockEncodingReflection` egységes $U $. Mivel ez az egységes megfelel a $U ^ 2 = I $-nek, azt is tükrözi.
+    types:
+    - isPrimitive: true
+      uid: Double
+    - uid: microsoft.quantum.simulation.blockencodingreflection
+ms.openlocfilehash: 352ab71457601c38b22e93f706cb59f50bf24151
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73216135"

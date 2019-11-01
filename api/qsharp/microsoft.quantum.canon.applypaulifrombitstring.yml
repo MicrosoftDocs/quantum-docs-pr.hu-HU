@@ -1,0 +1,43 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applypaulifrombitstring
+name: ApplyPauliFromBitString
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: Egy, a tömb minden qubit alkalmazza a Pauli-operátort, ha a logikai tömb megfelelő bitje egy adott bemenetnek felel meg.
+remarks: A logikai tömbnek és a kvantum-regiszternek egyenlő hosszúságú kell lennie.
+syntax: 'operation ApplyPauliFromBitString (pauli : Pauli, bitApply : Bool, bits : Bool[], qubits : Qubit[]) : Unit'
+input:
+  content: '(pauli : Pauli, bitApply : Bool, bits : Bool[], qubits : Qubit[])'
+  types:
+  - name: pauli
+    summary: A Pauli operátor, amely a `qubits[idx]`re vonatkozik, ahol `bitsApply == bits[idx]`
+    isPrimitive: true
+    uid: Pauli
+  - name: bitApply
+    summary: a Pauli alkalmazása, ha a bit értéke ez az érték
+    isPrimitive: true
+    uid: Bool
+  - name: bits
+    summary: Logikai regiszter, amely meghatározza, hogy a `qubits` mely megfelelő qubit kell működtetni
+    isArray: true
+    isPrimitive: true
+    uid: Bool
+  - name: qubits
+    summary: Quantum-regisztráció, amelyen szelektíven alkalmazni kell a megadott Pauli-operátort
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: a39d19c11a0ce48b2901097ac497c2ad9c707bba
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73220674"

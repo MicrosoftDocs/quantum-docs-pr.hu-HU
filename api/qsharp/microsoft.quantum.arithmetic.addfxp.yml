@@ -1,0 +1,35 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.addfxp
+name: AddFxP
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: >-
+  Két, a kvantum-regiszterekben tárolt, rögzített ponttal rendelkező számot adja meg.
+
+
+  A $ \ket{f_1} $ és a $ \ket{f_2} $ állapotú két rögzített pontos regisztráció miatt a $ \ket{f_1} \ket{f_2} \mapsto \ket{f_1} \ket{f_1 + f_2} $ műveletet hajtja végre.
+remarks: A jelenlegi megvalósításhoz a két rögzített pontból kiszámított számnak azonos ponttal kell rendelkeznie a legkevésbé jelentős, azaz $n _i $ és $p _i $ értékkel egyenlőnek kell lennie.
+syntax: 'operation AddFxP (fp1 : Microsoft.Quantum.Arithmetic.FixedPoint, fp2 : Microsoft.Quantum.Arithmetic.FixedPoint) : Unit'
+input:
+  content: '(fp1 : Microsoft.Quantum.Arithmetic.FixedPoint, fp2 : Microsoft.Quantum.Arithmetic.FixedPoint)'
+  types:
+  - name: fp1
+    summary: Első rögzített pont száma
+    uid: microsoft.quantum.arithmetic.fixedpoint
+  - name: fp2
+    summary: A rendszer frissíti a második rögzített pont számát, hogy tartalmazza a két bemenet összegét.
+    uid: microsoft.quantum.arithmetic.fixedpoint
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 142c7927519e59fb3df1661b3beadd32cda0d2c8
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73215421"

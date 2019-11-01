@@ -1,0 +1,43 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.reversedople
+name: ReversedOpLE
+type: function
+namespace: Microsoft.Quantum.Arithmetic
+summary: Egy kis endian bemeneti művelet miatt egy új műveletet ad vissza, amely egy nagy endian-bemenetet vesz igénybe.
+syntax: 'function ReversedOpLE (op : (Microsoft.Quantum.Arithmetic.LittleEndian => Unit)) : (Microsoft.Quantum.Arithmetic.BigEndian => Unit)'
+input:
+  content: '(op : (Microsoft.Quantum.Arithmetic.LittleEndian => Unit))'
+  types:
+  - name: op
+    summary: Az a művelet, amelynek a bemenetét vissza kell fordítani.
+    isOperation: true
+    input:
+      types:
+      - uid: microsoft.quantum.arithmetic.littleendian
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+output:
+  content: (Microsoft.Quantum.Arithmetic.BigEndian => Unit)
+  types:
+  - summary: Új művelet, amely nagy endian-regisztrációként fogadja el a bemenetét.
+    isOperation: true
+    input:
+      types:
+      - uid: microsoft.quantum.arithmetic.bigendian
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+seeAlso:
+- applyreversedople
+- reversedoplea
+- reversedoplec
+- reversedopleca
+ms.openlocfilehash: c28c5a87a908287323d25cff82f0079f2c062882
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73218515"

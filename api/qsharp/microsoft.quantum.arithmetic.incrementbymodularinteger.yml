@@ -1,0 +1,42 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.incrementbymodularinteger
+name: IncrementByModularInteger
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: >-
+  Egy qubit-regiszter moduláris növekményét hajtja végre egy egész állandó értékkel.
+
+
+  Tegyük fel, hogy az a `increment` jelöli meg, `modulus` az N és az egész számot kódolja az y `target`, majd a művelet végrehajtja a következő átalakítást: \begin{align} \ket{y} \mapsto \ket{y + 1 \operatorname{mod} N} \end{align} egész számok kódolása kis endian formátumban történik.
+remarks: Feltételezi, hogy a célként megadott érték kisebb, mint N. vegye figyelembe, hogy a <xref:microsoft.quantum.arithmetic.incrementphasebymodularinteger> ugyanazt a műveletet valósítja meg, de a `PhaseLittleEndian` alapján.
+syntax: 'operation IncrementByModularInteger (increment : Int, modulus : Int, target : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
+input:
+  content: '(increment : Int, modulus : Int, target : Microsoft.Quantum.Arithmetic.LittleEndian)'
+  types:
+  - name: increment
+    summary: Az y értékhez hozzáadni kívánt egész szám.
+    isPrimitive: true
+    uid: Int
+  - name: modulus
+    summary: N egész szám, amely a mods y + a karaktert.
+    isPrimitive: true
+    uid: Int
+  - name: target
+    summary: Egész szám y `LittleEndian` formátumban, amelyet a `increment` hozzáad a következőhöz:.
+    uid: microsoft.quantum.arithmetic.littleendian
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+seeAlso:
+- incrementphasebymodularinteger
+ms.openlocfilehash: 9b61ed007a08d176d1754a7c1cd6cd2d9edce7d2
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73219059"

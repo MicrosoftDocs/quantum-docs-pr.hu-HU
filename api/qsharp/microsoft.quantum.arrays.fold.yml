@@ -1,0 +1,61 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.fold
+name: Fold
+type: function
+namespace: Microsoft.Quantum.Arrays
+summary: Egy függvényt `f` egy tömb `array`ján, `f(f(f(initialState, array[0]), array[1]), ...)`visszaadva.
+examples: >-
+  ```qsharp
+
+  function Plus(a : Double, b : Double) {
+      return a + b;
+  }
+
+  function Sum(xs : Double[]) {
+      return Fold(Plus, 0.0, xs);
+  }
+
+  ```
+syntax: "function Fold (folder : (('State, 'T) -> 'State), state : 'State, array : 'T[]) : 'State"
+input:
+  content: "(folder : (('State, 'T) -> 'State), state : 'State, array : 'T[])"
+  types:
+  - name: folder
+    summary: A tömbben hajtogatható függvény.
+    isFunction: true
+    input:
+      types:
+      - uid: "'State"
+        isLocal: true
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - uid: "'State"
+        isLocal: true
+  - name: state
+    summary: A mappa kezdeti állapota.
+    uid: "'State"
+    isLocal: true
+  - name: array
+    summary: Az áthajtogatható értékek tömbje.
+    isArray: true
+    uid: "'T"
+    isLocal: true
+output:
+  content: "'State"
+  types:
+  - summary: A mappa által a `array`összes elemének megismétlése után visszaadott utolsó állapot.
+    uid: "'State"
+    isLocal: true
+typeParameters:
+- uid: "'State"
+  summary: Azon állapotok típusa, amelyeken a `folder` függvény működik, azaz az első argumentumként fogadja el, és visszaadja.
+- uid: "'T"
+  summary: '`array` elemek típusa'
+ms.openlocfilehash: 4be4752029b10351cfb3fe0fa6aa61b84b157510
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73214350"

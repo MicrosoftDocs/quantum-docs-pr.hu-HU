@@ -1,0 +1,57 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.characterization.estimatefrequencya
+name: EstimateFrequencyA
+type: operation
+namespace: Microsoft.Quantum.Characterization
+summary: A adjointable és a mérést követően a rendszer a megadott számú kísérlet végrehajtásával becsüli meg, hogy a mérték milyen gyakorisággal sikeres (`Zero`).
+remarks: A adjointable műveletek esetében bizonyos feltételezések olyanok, mint például a művelet meghívása, hogy a qubits pontosan ugyanazt az állapotot hozza létre, ami lehetővé teszi a célszámítógép számára a teljesítmény optimalizálása érdekében.
+syntax: 'operation EstimateFrequencyA (preparation : (Qubit[] => Unit is Adj), measurement : (Qubit[] => Result), nQubits : Int, nMeasurements : Int) : Double'
+input:
+  content: '(preparation : (Qubit[] => Unit is Adj), measurement : (Qubit[] => Result), nQubits : Int, nMeasurements : Int)'
+  types:
+  - name: preparation
+    summary: Egy adjointable művelet $P $, amely előkészít egy adott állapotot $ \rho $ értékre a bemeneti regiszterében.
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+  - name: measurement
+    summary: Egy művelet, $M $, amely a kamat mértékét jelképezi.
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Result
+  - name: nQubits
+    summary: Azon qubits száma, amelyeken az egyes műveletek előkészítése és mérése megtörténjen.
+    isPrimitive: true
+    uid: Int
+  - name: nMeasurements
+    summary: Ennyi alkalommal kell elvégezni a mérést a kamat gyakoriságának becslése érdekében.
+    isPrimitive: true
+    uid: Int
+output:
+  content: Double
+  types:
+  - summary: Az a gyakoriság, amellyel a $M (P (\ket{00 \cdots 0} \bra{00 \cdots 0}) $ értéket adja `Zero`vissza a \hat{p}, amely a nem elfogult binomiális kalkulátor $ \hat{p} = n\_{\uparrow}/n\_{\text{Measurements}} $, ahol $n\_{\ a felfelé mutató} $ érték a megfigyelt `Zero` találatok számát jelöli.
+    isPrimitive: true
+    uid: Double
+ms.openlocfilehash: cfc90cee0b98b88391ee23218489669600a97920
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73229174"

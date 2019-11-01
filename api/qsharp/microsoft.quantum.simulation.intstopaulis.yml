@@ -1,0 +1,28 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.simulation.intstopaulis
+name: IntsToPaulis
+type: function
+namespace: Microsoft.Quantum.Simulation
+summary: Egész számok tömbjét alakítja át egy qubit Pauli-operátorok tömbje számára.
+syntax: 'function IntsToPaulis (ints : Int[]) : Pauli[]'
+input:
+  content: '(csoportcsomagból: int [])'
+  types:
+  - name: csoportcsomagból
+    summary: A tartományban lévő egész számok tömbje, `0..3` a Pauli-operátorokra konvertálva.
+    isArray: true
+    isPrimitive: true
+    uid: Int
+output:
+  content: Pauli []
+  types:
+  - summary: A Pauli-operátorok tömbje `paulis` `Pauli[]` ugyanolyan hosszú, mint `ints`, hogy `paulis[idxPauli]` egyenlő a `[PauliI, PauliX, PauliY, PauliZ]` által megadott elemmel.
+    isArray: true
+    isPrimitive: true
+    uid: Pauli
+ms.openlocfilehash: 407ad1481c220f390fffb5f1b59f0968d6d6570c
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73066982"

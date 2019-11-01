@@ -1,0 +1,70 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applymulticontrolledca
+name: ApplyMultiControlledCA
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  Egy megfelelően vezérelt művelet szorzás vezérelt verzióját alkalmazza.
+
+  A módosító `CA` azt jelzi, hogy az qubit művelet ellenőrizhető és adjointable.
+remarks: >-
+  Ez a művelet csak a tiszta Ancilla-qubits használja.
+
+
+  A magyarázathoz és az áramköri diagramhoz lásd a 4,10., 4,3. szakaszát a Nielsen & a következő ábrán:
+syntax: 'operation ApplyMultiControlledCA (singlyControlledOp : (Qubit[] => Unit is Adj), ccnot : Microsoft.Quantum.Canon.CCNOTop, controls : Qubit[], targets : Qubit[]) : Unit'
+references: '- [*Michael A. Nielsen, Isaac L.*, a Quantum számítási és a kvantum-információk](http://doi.org/10.1017/CBO9780511976667)'
+input:
+  content: '(singlyControlledOp : (Qubit[] => Unit is Adj), ccnot : Microsoft.Quantum.Canon.CCNOTop, controls : Qubit[], targets : Qubit[])'
+  types:
+  - name: singlyControlledOp
+    summary: >-
+      Egyetlen qubit vezérelt művelet.
+
+      A művelet argumentumának első qubit a vezérlőnek kell lennie, és a többi a cél qubits feltételezhető.
+
+      `ApplyMultiControlled` mindig legalább 1 argumentummal meghívja a `singlyControlledOp`.
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+  - name: ccnot
+    summary: A vezérelt vezérléssel nem rendelkező kapu, amely az építkezéshez használható.
+    uid: microsoft.quantum.canon.ccnotop
+  - name: controls
+    summary: >-
+      Az `singlyControlledOp` qubits.
+
+      A `controls` hosszának legalább 1-nek kell lennie.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+  - name: targets
+    summary: A `singlyControlledOp` qubits.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+seeAlso:
+- microsoft.quantum.canon.applymulticontrolledc
+ms.openlocfilehash: d9b0f2b18d025d0ce60bbb02a9559546539eaecd
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73220708"

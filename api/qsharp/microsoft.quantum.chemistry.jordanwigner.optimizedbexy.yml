@@ -1,0 +1,37 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.chemistry.jordanwigner.optimizedbexy
+name: OptimizedBEXY
+type: operation
+namespace: Microsoft.Quantum.Chemistry.JordanWigner
+summary: 'Egy egységes $U $, amely a Pauli-karakterláncot alkalmazza $ (X ^ {z + 1}\_a következőt: ^ {z}\_p) Z\_{p-1}... Z_0 $ on qubits $0.. p $ feltétele egy index $z \in\{0, 1\}$ és $p $. Ez a $ $ \begin{align} U\ket {z} \ ket {p} \ ket {\ PSI} = \ket{z}\ket{p} (X ^ {z + 1}\_, ^ {z}\_p) Z\_{p-1}... Z_0\ket {\ PSI} \end{align} $ $'
+syntax: 'operation OptimizedBEXY (pauliBasis : Qubit, indexRegister : Microsoft.Quantum.Arithmetic.LittleEndian, targetRegister : Qubit[]) : Unit'
+references: '- Elektronikus spektrumok kódolása a kvantum-áramkörökben lineáris T komplexitású Ryan Babbush, Craig Gidney, Dominic W. Berry, Nathan Wiebe, fahamvas McClean, Alexandru Paleer, Austin Fowler, Hartmut neven https://arxiv.org/abs/1805.03662'
+input:
+  content: '(pauliBasis : Qubit, indexRegister : Microsoft.Quantum.Arithmetic.LittleEndian, targetRegister : Qubit[])'
+  types:
+  - name: pauliBasis
+    summary: Ha a qubit állapota $ \ket{0}$, $X $ van alkalmazva. Ha a $ \ket{1}$ állapotban van, $Y $ lesz alkalmazva.
+    isPrimitive: true
+    uid: Qubit
+  - name: indexRegister
+    summary: A regisztrációhoz tartozó $ \ket{p} $ érték határozza meg azt a qubit, amelyen a $X $ vagy $Y $ értéket alkalmazza a rendszer.
+    uid: microsoft.quantum.arithmetic.littleendian
+  - name: targetRegister
+    summary: Azon qubits regisztrálása, amelyeken a Pauli-operátorok vannak alkalmazva.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: e0ac3f2f050ed584053f7da7a310f1855e992141
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73228460"

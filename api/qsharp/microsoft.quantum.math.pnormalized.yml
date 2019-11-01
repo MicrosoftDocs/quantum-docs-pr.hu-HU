@@ -1,0 +1,37 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.math.pnormalized
+name: PNormalized
+type: function
+namespace: Microsoft.Quantum.Math
+summary: >-
+  `Double`s vektorának normalizálása a `L(p)` normában.
+
+
+  Ez azt eredményezi, hogy a tömb $x $ típusú `Double[]`, amely egy olyan tömböt ad vissza, amelyben az összes elem az $p $-Norm $\|x\|_p $ értékre van osztva.
+syntax: 'function PNormalized (p : Double, array : Double[]) : Double[]'
+input:
+  content: '(p: Double, tömb: Double [])'
+  types:
+  - name: P
+    summary: A kitevő $p $ a $p $-NORM.
+    isPrimitive: true
+    uid: Double
+  - name: tömb
+    isArray: true
+    isPrimitive: true
+    uid: Double
+output:
+  content: Double []
+  types:
+  - summary: A $p $-Norm $\|x\|_p $ által normalizált tömb $x $.
+    isArray: true
+    isPrimitive: true
+    uid: Double
+seeAlso:
+- pnorm
+ms.openlocfilehash: 5fd219b866b14d3d6faf58cdf4f1ce2b9fbadf9d
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73067288"

@@ -1,0 +1,40 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.math.expmodi
+name: ExpModI
+type: function
+namespace: Microsoft.Quantum.Math
+summary: >-
+  Egy adott hatványra kiváltott egész számot ad vissza egy adott modulusra vonatkozóan.
+
+
+  A expBase $x $, a Power by $p $ és a modulus $N $ értéket jelöli.
+
+  A függvény a $x ^ p \operatorname{mod} N $ értéket adja vissza.
+
+
+  Feltételezzük, hogy $N $, $x $ értéke pozitív, és a teljesítmény nem negatív.
+remarks: A `power`ban lévő BITS számával arányos időt vesz igénybe, nem maga a `power`.
+syntax: 'function ExpModI (expBase : Int, power : Int, modulus : Int) : Int'
+input:
+  content: '(expBase : Int, power : Int, modulus : Int)'
+  types:
+  - name: expBase
+    isPrimitive: true
+    uid: Int
+  - name: power
+    isPrimitive: true
+    uid: Int
+  - name: modulus
+    isPrimitive: true
+    uid: Int
+output:
+  content: Int
+  types:
+  - isPrimitive: true
+    uid: Int
+ms.openlocfilehash: cd98e60dab928d1cbb5055a762c8ffa31c460009
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73229497"

@@ -1,0 +1,36 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.diagnostics.assertqubitwithintolerance
+name: AssertQubitWithinTolerance
+type: operation
+namespace: Microsoft.Quantum.Diagnostics
+summary: Azt állítja, hogy a qubit `q` a Pauli Z operátor várt eigenstate van, legfeljebb egy adott toleranciával.
+remarks: <xref:microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance> lehetővé teszi tetszőleges qubit-állapotok beállítását, nem csak $Z $ eigenstates.
+syntax: 'operation AssertQubitWithinTolerance (expected : Result, q : Qubit, tolerance : Double) : Unit'
+input:
+  content: '(expected : Result, q : Qubit, tolerance : Double)'
+  types:
+  - name: expected
+    summary: 'A qubit várható állapota a következő: `Zero` vagy `One`.'
+    isPrimitive: true
+    uid: Result
+  - name: q
+    summary: Az a qubit, amelynek az állapota érvényesítve van.
+    isPrimitive: true
+    uid: Qubit
+  - name: tolerance
+    summary: A várt eredményt visszaadó qubit mértékének valószínűségére vonatkozó tűréshatár.
+    isPrimitive: true
+    uid: Double
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+seeAlso:
+- assertqubitisinstatewithintolerance
+ms.openlocfilehash: ccb44aed5612c369ff7c4e687e72fc65fba4180e
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73227083"

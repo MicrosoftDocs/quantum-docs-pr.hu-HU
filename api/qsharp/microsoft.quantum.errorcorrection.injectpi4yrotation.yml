@@ -1,0 +1,63 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.errorcorrection.injectpi4yrotation
+name: InjectPi4YRotation
+type: operation
+namespace: Microsoft.Quantum.ErrorCorrection
+summary: >-
+  Egy π/4 rotációs műveletet hajt végre `Y`.
+
+
+  Az elforgatás a mágikus állapot elfogyasztásával történik. Ez a példány a $ $ \begin{align} \cos\frac{\pi}{8} \ket{0} + \sin \frac{\pi}{8} \ket{1}.
+
+  \end{align} $ $
+remarks: >-
+  A következők egyenértékűek:
+
+
+  ```qsharp
+
+  Ry(PI() / 4.0, data);
+
+  ```
+
+
+  és
+
+
+  ```qsharp
+
+  using (magic = Qubit()) {
+      Ry(PI() / 4.0, magic);
+      InjectPi4YRotation(data, magic);
+      Reset(magic);
+  }
+
+  ```
+
+
+  Ez a művelet támogatja a `Adjoint`-kezelőt, amely esetben ugyanazt a mágikus állapotot használja a rendszer, de az adatqubit gyakorolt hatás a $-\ PI/4 $ $Y $-forgás.
+syntax: 'operation InjectPi4YRotation (data : Qubit, magic : Qubit) : Unit'
+input:
+  content: '(data : Qubit, magic : Qubit)'
+  types:
+  - name: data
+    summary: A $ \pi/$4 értékkel el$Y forgatható qubit.
+    isPrimitive: true
+    uid: Qubit
+  - name: magic
+    summary: Egy qubit kezdetben a mágikus állapotban van. A művelet végrehajtása után `magic` visszakerül a $ \ket{0}$ állapotba.
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+ms.openlocfilehash: fa0b69740e94247aa9f31d03715464be1b29a0a6
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73211426"

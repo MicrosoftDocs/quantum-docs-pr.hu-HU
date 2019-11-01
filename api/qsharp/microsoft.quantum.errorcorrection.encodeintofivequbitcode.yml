@@ -1,0 +1,33 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.errorcorrection.encodeintofivequbitcode
+name: EncodeIntoFiveQubitCode
+type: operation
+namespace: Microsoft.Quantum.ErrorCorrection
+summary: Kódolja a ⟦ 5, 1, 3 ⟧ Quantum Code-ba.
+syntax: 'operation EncodeIntoFiveQubitCode (physRegister : Qubit[], auxQubits : Qubit[]) : Microsoft.Quantum.ErrorCorrection.LogicalRegister'
+input:
+  content: '(physRegister : Qubit[], auxQubits : Qubit[])'
+  types:
+  - name: physRegister
+    summary: Egy qubit, amely nem kódolt állapotot jelöl. A tömb `Qubit[]` hossza 1.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+  - name: auxQubits
+    summary: A kódolt állapotot jelölő kiegészítő qubits regisztere.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Microsoft.Quantum.ErrorCorrection.LogicalRegister
+  types:
+  - summary: A kódolt állapotot tároló `LogicalRegister` típusú fizikai qubits tömbje.
+    uid: microsoft.quantum.errorcorrection.logicalregister
+seeAlso:
+- logicalregister
+ms.openlocfilehash: 6147098742759d72dba9c8eee0218d973320793b
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73234563"

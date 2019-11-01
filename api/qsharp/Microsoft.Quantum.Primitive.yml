@@ -1,0 +1,151 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.primitive
+name: Microsoft.Quantum.Primitive
+functions:
+- uid: microsoft.quantum.primitive.message
+  summary: >-
+    > [!WARNING]
+
+    > Elavult @"microsoft.quantum.intrinsic.message"használata.
+operations:
+- uid: microsoft.quantum.primitive.assert
+  summary: >-
+    > [!WARNING]
+
+    > Elavult @"microsoft.quantum.intrinsic.assert"használata.
+- uid: microsoft.quantum.primitive.assertprob
+  summary: >-
+    > [!WARNING]
+
+    > Elavult @"microsoft.quantum.intrinsic.assertprob"használata.
+- uid: microsoft.quantum.primitive.ccnot
+  summary: >-
+    > [!WARNING]
+
+    > Elavult @"microsoft.quantum.intrinsic.ccnot"használata.
+- uid: microsoft.quantum.primitive.cnot
+  summary: >-
+    > [!WARNING]
+
+    > Elavult @"microsoft.quantum.intrinsic.cnot"használata.
+- uid: microsoft.quantum.primitive.exp
+  summary: >-
+    > [!WARNING]
+
+    > Elavult @"microsoft.quantum.intrinsic.exp"használata.
+- uid: microsoft.quantum.primitive.expfrac
+  summary: >-
+    > [!WARNING]
+
+    > Elavult @"microsoft.quantum.intrinsic.expfrac"használata.
+- uid: microsoft.quantum.primitive.h
+  summary: >-
+    > [!WARNING]
+
+    > Elavult @"microsoft.quantum.intrinsic.h"használata.
+- uid: microsoft.quantum.primitive.i
+  summary: >-
+    > [!WARNING]
+
+    > Elavult @"microsoft.quantum.intrinsic.i"használata.
+- uid: microsoft.quantum.primitive.m
+  summary: >-
+    > [!WARNING]
+
+    > Elavult @"microsoft.quantum.intrinsic.m"használata.
+- uid: microsoft.quantum.primitive.measure
+  summary: >-
+    > [!WARNING]
+
+    > Elavult @"microsoft.quantum.intrinsic.measure"használata.
+- uid: microsoft.quantum.primitive.multix
+  summary: >-
+    > [!WARNING]
+
+    > Elavult @"microsoft.quantum.canon.applytoeachca"használata.
+- uid: microsoft.quantum.primitive.r
+  summary: >-
+    > [!WARNING]
+
+    > Elavult @"microsoft.quantum.intrinsic.r"használata.
+- uid: microsoft.quantum.primitive.r1
+  summary: >-
+    > [!WARNING]
+
+    > Elavult @"microsoft.quantum.intrinsic.r1"használata.
+- uid: microsoft.quantum.primitive.r1frac
+  summary: >-
+    > [!WARNING]
+
+    > Elavult @"microsoft.quantum.intrinsic.r1frac"használata.
+- uid: microsoft.quantum.primitive.random
+  summary: >-
+    > [!WARNING]
+
+    > Elavult @"microsoft.quantum.intrinsic.random"használata.
+- uid: microsoft.quantum.primitive.reset
+  summary: >-
+    > [!WARNING]
+
+    > Elavult @"microsoft.quantum.intrinsic.reset"használata.
+- uid: microsoft.quantum.primitive.resetall
+  summary: >-
+    > [!WARNING]
+
+    > Elavult @"microsoft.quantum.intrinsic.resetall"használata.
+- uid: microsoft.quantum.primitive.rfrac
+  summary: >-
+    > [!WARNING]
+
+    > Elavult @"microsoft.quantum.intrinsic.rfrac"használata.
+- uid: microsoft.quantum.primitive.rx
+  summary: >-
+    > [!WARNING]
+
+    > Elavult @"microsoft.quantum.intrinsic.rx"használata.
+- uid: microsoft.quantum.primitive.ry
+  summary: >-
+    > [!WARNING]
+
+    > Elavult @"microsoft.quantum.intrinsic.ry"használata.
+- uid: microsoft.quantum.primitive.rz
+  summary: >-
+    > [!WARNING]
+
+    > Elavult @"microsoft.quantum.intrinsic.rz"használata.
+- uid: microsoft.quantum.primitive.s
+  summary: >-
+    > [!WARNING]
+
+    > Elavult @"microsoft.quantum.intrinsic.s"használata.
+- uid: microsoft.quantum.primitive.swap
+  summary: >-
+    > [!WARNING]
+
+    > Elavult @"microsoft.quantum.intrinsic.swap"használata.
+- uid: microsoft.quantum.primitive.t
+  summary: >-
+    > [!WARNING]
+
+    > Elavult @"microsoft.quantum.intrinsic.t"használata.
+- uid: microsoft.quantum.primitive.x
+  summary: >-
+    > [!WARNING]
+
+    > Elavult @"microsoft.quantum.intrinsic.x"használata.
+- uid: microsoft.quantum.primitive.y
+  summary: >-
+    > [!WARNING]
+
+    > Elavult @"microsoft.quantum.intrinsic.y"használata.
+- uid: microsoft.quantum.primitive.z
+  summary: >-
+    > [!WARNING]
+
+    > Elavult @"microsoft.quantum.intrinsic.z"használata.
+ms.openlocfilehash: 87dc52b15f7fb17c6e9c3c11ec04a91e775a36ef
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73216033"

@@ -1,0 +1,41 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.ripplecarryaddercdkm
+name: RippleCarryAdderCDKM
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: >-
+  Visszafordítható, helyi hullámos – két egész szám hozzáadását hajthatja végre.
+
+  A LittleEndian-ben `xs` és `ys`, valamint egy qubit-t tartalmazó két $n $ bites egész számnak megfelelően a művelet kiszámítja a két egész szám összegét, amelyekben az eredmény $n $ legkevésbé jelentős bitet tárolja `ys`, és a végrehajtás bit a xored qubit `carry`.
+remarks: Ez a művelet ugyanazokkal a funkciókkal rendelkezik, mint a RippleCarryAdderD, de $n $ helyett csak egy Ancilla-qubit használ.
+syntax: 'operation RippleCarryAdderCDKM (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, carry : Qubit) : Unit'
+references: >-
+  - Steven A. Cuccaro, Thomas G. Drapérier, Samuel A. Kutin, David Petra Moulton: "egy új kvantum-hullám-Carry összeadás Circuit", 2004.
+    https://arxiv.org/abs/quant-ph/0410184v1
+input:
+  content: '(xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, carry : Qubit)'
+  types:
+  - name: xs
+    summary: LittleEndian qubit regisztrálja az első egész szám summand kódolását.
+    uid: microsoft.quantum.arithmetic.littleendian
+  - name: ys
+    summary: A LittleEndian qubit-regisztrációja a második egész szám summand kódolásával módosul, hogy az összeg legalább n jelentős bitet tároljon.
+    uid: microsoft.quantum.arithmetic.littleendian
+  - name: carry
+    summary: A carry qubit az összeg legjelentősebb xored.
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 2d973659a9457c301ba65a282e4fd4b627c93671
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73218481"

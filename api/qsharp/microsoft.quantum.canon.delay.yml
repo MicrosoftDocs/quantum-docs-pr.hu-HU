@@ -1,0 +1,58 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.delay
+name: Delay
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  Egy megadott műveletet késleltetve alkalmaz.
+
+
+  Adott művelet és a művelet bemenete esetén a művelet a további adatok megadása után alkalmazza a műveletet.
+
+  Különösen a `Delay(op, arg, _)` kifejezés egy olyan művelet, amely `op` `arg`re vonatkozik, amikor hívásra kerül.
+
+  A kifejezés `Delay(op,arg,_)` lehetővé teszi `op`alkalmazásának késleltetését.
+syntax: "operation Delay (op : ('T => 'U), arg : 'T, aux : Unit) : 'U"
+input:
+  content: "(op : ('T => 'U), arg : 'T, aux : Unit)"
+  types:
+  - name: op
+    summary: Egy alkalmazni kívánt művelet.
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - uid: "'U"
+        isLocal: true
+  - name: arg
+    summary: Az a bemenet, amelyre a művelet vonatkozik.
+    uid: "'T"
+    isLocal: true
+  - name: aux
+    summary: A művelet alkalmazásának a részleges alkalmazás használatával történő késleltetésére szolgáló argumentum.
+    isPrimitive: true
+    uid: Unit
+output:
+  content: "'U"
+  types:
+  - uid: "'U"
+    isLocal: true
+typeParameters:
+- uid: "'T"
+  summary: A késleltetni kívánt művelet bemeneti típusa.
+- uid: "'U"
+  summary: A késleltetni kívánt művelet visszatérési típusa.
+seeAlso:
+- microsoft.quantum.canon.delayc
+- microsoft.quantum.canon.delaya
+- microsoft.quantum.canon.delayca
+- microsoft.quantum.canon.delayed
+ms.openlocfilehash: 1759670182cff1153859c62e9c95d1be1f998674
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73226114"

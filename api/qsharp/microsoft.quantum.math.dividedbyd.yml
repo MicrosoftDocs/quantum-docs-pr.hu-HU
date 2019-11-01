@@ -1,0 +1,30 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.math.dividedbyd
+name: DividedByD
+type: function
+namespace: Microsoft.Quantum.Math
+summary: Két bemenet hányadosát adja vissza.
+syntax: 'function DividedByD (a : Double, b : Double) : Double'
+input:
+  content: '(a : Double, b : Double)'
+  types:
+  - name: a
+    summary: Az első bemeneti $a $ megosztásra.
+    isPrimitive: true
+    uid: Double
+  - name: b
+    summary: A második bemeneti $b $ megosztásra.
+    isPrimitive: true
+    uid: Double
+output:
+  content: Double
+  types:
+  - summary: A hányados $a/b $.
+    isPrimitive: true
+    uid: Double
+ms.openlocfilehash: 8be5ff05b3a878958ffb61f6be3113c37f3d1dcd
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73229735"

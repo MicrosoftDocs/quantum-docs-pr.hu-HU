@@ -1,0 +1,31 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.oracles.deterministicstateoraclefromstateoracle
+name: DeterministicStateOracleFromStateOracle
+type: function
+namespace: Microsoft.Quantum.Oracles
+summary: '`StateOracle` típusú Oracle-t konvertál `DeterministicStateOracle`re.'
+syntax: 'function DeterministicStateOracleFromStateOracle (idxFlagQubit : Int, stateOracle : Microsoft.Quantum.Oracles.StateOracle) : Microsoft.Quantum.Oracles.DeterministicStateOracle'
+input:
+  content: '(idxFlagQubit : Int, stateOracle : Microsoft.Quantum.Oracles.StateOracle)'
+  types:
+  - name: idxFlagQubit
+    summary: 'A `stateOracle` $A $ qubit jelző indexe, amely kifejezetten két regiszterre vonatkozik: a jelző $f $ és a System $s $, például $A \ket{0}\_f\ket {\ PSI}\_s $.'
+    isPrimitive: true
+    uid: Int
+  - name: stateOracle
+    summary: Állapot-előkészítési Oracle $A $ típusú `StateOracle`.
+    uid: microsoft.quantum.oracles.stateoracle
+output:
+  content: Microsoft.Quantum.Oracles.DeterministicStateOracle
+  types:
+  - summary: 'Ugyanez az állapot-előkészítési Oracle $A $, de mostantól `DeterministicStateOracle`típusú, ezért olyan regisztrálást végez, ahol a $a, s $ nem explicit módon külön, például:  $A \ket{0\psi}\_{as} $.'
+    uid: microsoft.quantum.oracles.deterministicstateoracle
+seeAlso:
+- microsoft.quantum.canon.stateoracle
+- microsoft.quantum.canon.deterministicstateoracle
+ms.openlocfilehash: 5eda40115d4d4ca7b4187f76b5e0807695913407
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73231095"

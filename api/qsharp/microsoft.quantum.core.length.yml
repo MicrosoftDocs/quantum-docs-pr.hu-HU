@@ -1,0 +1,27 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.core.length
+name: Length
+type: function
+namespace: Microsoft.Quantum.Core
+summary: Egy tömb elemeinek számát adja vissza.
+syntax: "function Length (a : 'T[]) : Int"
+input:
+  content: "(a : 'T[])"
+  types:
+  - name: a
+    summary: Bemeneti tömb.
+    isArray: true
+    uid: "'T"
+    isLocal: true
+output:
+  content: Int
+  types:
+  - summary: Egy tömb elemeinek teljes száma.
+    isPrimitive: true
+    uid: Int
+ms.openlocfilehash: 5219b26d1d756e9ec603cd256e88ac7188ad4fc3
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73222085"

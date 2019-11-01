@@ -1,0 +1,57 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applytofirsttwoqubitsc
+name: ApplyToFirstTwoQubitsC
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  Egy műveletet alkalmaz a regisztráció első két qubits.
+
+  A módosító `C` azt jelzi, hogy a művelet ellenőrizhető.
+remarks: >-
+  Ez egyenértékű a következővel:
+
+
+  ```qsharp
+
+  op(register[0], register[1]);
+
+  ```
+syntax: 'operation ApplyToFirstTwoQubitsC (op : ((Qubit, Qubit) => Unit is Ctl), register : Qubit[]) : Unit'
+input:
+  content: '(op : ((Qubit, Qubit) => Unit is Ctl), register : Qubit[])'
+  types:
+  - name: op
+    summary: Az első két qubits alkalmazandó művelet
+    isOperation: true
+    input:
+      types:
+      - isPrimitive: true
+        uid: Qubit
+      - isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Controlled
+  - name: register
+    summary: Qubit a tömböt az első két qubits, amelynek a műveletét alkalmazza a rendszer.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Controlled
+seeAlso:
+- microsoft.quantum.canon.applytofirsttwoqubits
+ms.openlocfilehash: def9af6b641d5f4a3301c77319dfbf55e348f142
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73225519"

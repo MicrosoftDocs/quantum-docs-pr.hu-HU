@@ -1,0 +1,65 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.convert
+name: Microsoft.Quantum.Convert
+summary: " # <a name=\"summary\"></a>Összefoglalás\n Ez a névtér a különböző Q # adattípusok közötti átalakításhoz tartalmaz függvényeket."
+functions:
+- uid: microsoft.quantum.convert.bigintasboolarray
+  summary: >-
+    Egy adott nagy egész számot alakít át logikai értékek tömbje számára.
+
+    A tömb 0 eleme a legkevesebb nagy egész szám.
+- uid: microsoft.quantum.convert.boolarrayasbigint
+  summary: >-
+    Logikai értékek adott tömbjét konvertálja egy egyenértékű nagy egész számra.
+
+    A tömb 0 eleme a legkevesebb nagy egész szám.
+- uid: microsoft.quantum.convert.boolarrayasint
+  summary: Egy kis endian formátumú, pozitív egész számot hoz létre egy BITS-karakterláncból.
+- uid: microsoft.quantum.convert.boolarrayaspauli
+  summary: Egy kis karakterlánc miatt egy qubit Pauli-operátort ad vissza, amely egyetlen qubit Pauli-operátorok tömbje.
+- uid: microsoft.quantum.convert.boolarrayasresultarray
+  summary: Egy `Bool[]` típus konvertálása `Result[]` típusra, ahol a `true` `One`re van leképezve, és `false` van leképezve `Zero`.
+- uid: microsoft.quantum.convert.boolasresult
+  summary: Egy `Bool` típus konvertálása `Result` típusra, ahol a `true` `One`re van leképezve, és `false` van leképezve `Zero`.
+- uid: microsoft.quantum.convert.boolasstring
+  summary: Egy adott logikai értéket egy egyenértékű karakterlánc-ábrázolásra konvertál.
+- uid: microsoft.quantum.convert.doubleasstring
+  summary: Egy adott kétszeres pontosságú lebegőpontos számot konvertál egy egyenértékű karakterlánc-ábrázolásra.
+- uid: microsoft.quantum.convert.doubleasstringwithformat
+  summary: Egy adott kétszeres pontosságú lebegőpontos számot alakít át egy egyenértékű karakterlánc-ábrázolásra a megadott formátum használatával.
+- uid: microsoft.quantum.convert.functionasoperation
+  summary: Átalakítja a függvényeket a műveletekre.
+- uid: microsoft.quantum.convert.intasbigint
+  summary: Egy adott egész számot egy egyenértékű nagy egész számra konvertál.
+- uid: microsoft.quantum.convert.intasboolarray
+  summary: Egy pozitív egész szám bináris ábrázolását állítja elő a visszaadott tömb kis endian ábrázolásával.
+- uid: microsoft.quantum.convert.intasdouble
+  summary: Egy adott egész számot egy egyenértékű, kétszeres pontosságú lebegőpontos számra konvertál.
+- uid: microsoft.quantum.convert.intasstring
+  summary: Egy adott egész számot konvertál egy egyenértékű karakterlánc-ábrázolásra.
+- uid: microsoft.quantum.convert.intasstringwithformat
+  summary: Egy adott egész számot egy egyenértékű karakterlánc-ábrázolásra konvertál, a megadott formátum használatával.
+- uid: microsoft.quantum.convert.maybebigintasint
+  summary: >-
+    Egy adott nagy egész számot egy egyenértékű egész számra konvertál, ha lehetséges.
+
+    A függvény az eredményül kapott egész számot és egy logikai jelzőt ad vissza, amely igaz, és csak akkor, ha az átalakítás lehetséges.
+- uid: microsoft.quantum.convert.pauliarrayasint
+  summary: Egy több qubit Pauli-operátort kódol egy egész számra, amely egy qubit Pauli-operátorok tömbje.
+- uid: microsoft.quantum.convert.rangeasintarray
+  summary: Létrehoz egy, a Start... számú számokból álló tömb `arr`. lépés.. végén.
+- uid: microsoft.quantum.convert.resultarrayasboolarray
+  summary: Egy `Result[]` típus konvertálása `Bool[]` típusra, ahol a `One` `true`re van leképezve, és `Zero` van leképezve `false`.
+- uid: microsoft.quantum.convert.resultarrayasint
+  summary: Egy pozitív egész számot hoz létre egy rövid endian formátumú eredményekből.
+- uid: microsoft.quantum.convert.resultasbool
+  summary: Egy `Result` típus konvertálása `Bool` típusra, ahol a `One` `true`re van leképezve, és `Zero` van leképezve `false`.
+operations:
+- uid: microsoft.quantum.convert.call
+  summary: Egy függvényt hív meg egy megadott bemenettel.
+ms.openlocfilehash: a0c347d8004b8f8bd35fc1b7f7eaf52e6230cee0
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73210967"

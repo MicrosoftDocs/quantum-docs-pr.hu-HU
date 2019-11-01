@@ -1,0 +1,80 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.oracles
+name: Microsoft.Quantum.Oracles
+summary: " # <a name=\"summary\"></a>Összefoglalás\n Ez a névterek felhasználó által definiált típusokat biztosítanak különféle Oracle-típusok kiépítéséhez a kvantum-algoritmusokban, például a fázisok becslése és az amplitúdó-erősítés alapján."
+functions:
+- uid: microsoft.quantum.oracles.deterministicstateoraclefromstateoracle
+  summary: '`StateOracle` típusú Oracle-t konvertál `DeterministicStateOracle`re.'
+- uid: microsoft.quantum.oracles.obliviousoraclefromdeterministicstateoracle
+  summary: Az Oracles `DeterministicStateOracle` és `ObliviousOracle`kombinálása.
+- uid: microsoft.quantum.oracles.oracletodiscrete
+  summary: Egy "Black-Box" Oracle-t jelképező művelet miatt egy diszkrét idejű Oracle-t ad vissza, amely a "fekete doboz" Oracle többször ismétlődik.
+- uid: microsoft.quantum.oracles.reflectionoraclefromdeterministicstateoracle
+  summary: >-
+    Egy Oracle-ből származó adott állapottal kapcsolatos reflexiót hoz létre.
+
+
+    Ha az Oracle $O $ típusú <xref:microsoft.quantum.oracles.deterministicstateoracle>, a függvény eredménye a $ \ket{\psi} $ állapotú, amely $O \ket{0} = \ket{\psi} $.
+- uid: microsoft.quantum.oracles.stateoraclefromdeterministicstateoracle
+  summary: '`DeterministicStateOracle` típusú Oracle-t konvertál `StateOracle`re.'
+newtypes:
+- uid: microsoft.quantum.oracles.continuousoracle
+  summary: >-
+    Folyamatos Oracle-t jelöl.
+
+
+    Ez egy Oracle, amely megvalósítja $U (\delta t): \ket{\psi (t)} \mapsto \ket{\psi (t + \delta t)} $ minden alkalommal $t $, ahol a $U $ egy rögzített művelet, ahol a $ \delta t $ értéke nem negatív valós szám.
+- uid: microsoft.quantum.oracles.deterministicstateoracle
+  summary: >-
+    Egy Oracle-t jelöl a determinisztikus állapotának előkészítéséhez.
+
+
+    Az Oracle $O $ értékre való bemenet a következő:
+
+
+    - A regisztráció, amely a kívánt Quantum State $ \ket{\psi}\_s $ értéket fogja tárolni.
+- uid: microsoft.quantum.oracles.discreteoracle
+  summary: >-
+    Diszkrét idejű Oracle-t jelöl.
+
+
+    Ez egy olyan Oracle, amely $U ^ millió dollárt valósít meg egy rögzített művelethez $U $ és egy nem negatív egész számú $m $ értékkel.
+- uid: microsoft.quantum.oracles.obliviousoracle
+  summary: >-
+    Egy Oracle for feledékenys amplitúdó-erősítést jelöl.
+
+
+    Az Oracle $O $ bemenetei a következők:
+
+
+    - A Ancilla regisztrálja $a $-t, amely $O $ műveleteket végez.
+
+    - A rendszer regisztrálja $s $ értéket, amelyre a kívánt egységes $U $ alkalmazás van alkalmazva, majd a Register $a $ bejegyzés után a $ \ket{t}\_a $ értékű állapotban van.
+- uid: microsoft.quantum.oracles.reflectionoracle
+  summary: >-
+    Egy reflexiós Oracle-t jelöl.
+
+
+    A reflexiós Oracle, $O $, bemenetekkel rendelkezik:
+
+
+    - A $ \phi $ fázis, amelyből el kell forgatni a tükrözt alterületet.
+
+    - A qubit regisztrálnia kell a megadott reflexió végrehajtásához.
+- uid: microsoft.quantum.oracles.stateoracle
+  summary: >-
+    Az állapot előkészítésére szolgáló Oracle.
+
+
+    Az Oracle $O $ bemenetei a következők:
+
+
+    - Egy egész szám, amely indexeli a jelző qubit $f $ értéket.
+
+    - A rendszer regisztrálja $s $, amely a kívánt Quantum State $ \ket{\psi}\_s $ értéket fogja tárolni.
+ms.openlocfilehash: 10eb2c7acebf805b955816abe2bf1cabb95ce059
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73216101"

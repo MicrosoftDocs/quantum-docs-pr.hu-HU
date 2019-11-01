@@ -1,0 +1,51 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applyifone
+name: ApplyIfOne
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  Egy olyan műveletet alkalmaz, amely egy klasszikus eredmény értéke egy.
+
+
+  A művelet `op` és az eredmény `result``op` a `target`ra vonatkozik, ha `result` `One`. Ha `Zero`, semmi nem történik a `target`.
+syntax: "operation ApplyIfOne (result : Result, (op : ('T => Unit), target : 'T)) : Unit"
+input:
+  content: "(result : Result, (op : ('T => Unit), target : 'T))"
+  types:
+  - name: result
+    summary: Egy mérési eredmény, amely meghatározza, hogy az op alkalmazva van-e.
+    isPrimitive: true
+    uid: Result
+  - name: op
+    summary: Egy feltételesen alkalmazni kívánt művelet.
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+  - name: target
+    summary: Az a bemenet, amelyre a művelet vonatkozik.
+    uid: "'T"
+    isLocal: true
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+typeParameters:
+- uid: "'T"
+  summary: A feltételesen alkalmazni kívánt művelet bemeneti típusa.
+seeAlso:
+- microsoft.quantum.canon.applyifonec
+- microsoft.quantum.canon.applyifonea
+- microsoft.quantum.canon.applyifoneca
+ms.openlocfilehash: 5609226c113fd6b9660fdad2f05d154a7abde5a3
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73220912"

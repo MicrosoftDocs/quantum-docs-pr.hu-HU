@@ -1,0 +1,57 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applyifzeroa
+name: ApplyIfZeroA
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  Egy olyan adjointable műveletet alkalmaz, amely klasszikus eredmény értéke nulla.
+
+
+  A művelet `op` és az eredmény `result``op` a `target`ra vonatkozik, ha `result` `Zero`. Ha `One`, semmi nem történik a `target`.
+
+  Az utótag `A` azt jelzi, hogy az alkalmazni kívánt művelet a adjointable.
+syntax: "operation ApplyIfZeroA (result : Result, (op : ('T => Unit is Adj), target : 'T)) : Unit"
+input:
+  content: "(result : Result, (op : ('T => Unit is Adj), target : 'T))"
+  types:
+  - name: result
+    summary: Egy mérési eredmény, amely meghatározza, hogy az op alkalmazva van-e.
+    isPrimitive: true
+    uid: Result
+  - name: op
+    summary: Egy feltételesen alkalmazni kívánt művelet.
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+  - name: target
+    summary: Az a bemenet, amelyre a művelet vonatkozik.
+    uid: "'T"
+    isLocal: true
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+typeParameters:
+- uid: "'T"
+  summary: A feltételesen alkalmazni kívánt művelet bemeneti típusa.
+functors:
+- Adjoint
+seeAlso:
+- microsoft.quantum.canon.applyifzeroc
+- microsoft.quantum.canon.applyifzeroa
+- microsoft.quantum.canon.applyifzeroca
+ms.openlocfilehash: 626bb5bbd18cceb409632ec0d27b48c6ea98fbbe
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73220725"
