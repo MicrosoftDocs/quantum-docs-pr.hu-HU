@@ -1,0 +1,40 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.diagnostics.dumpregister
+name: DumpRegister
+type: function
+namespace: Microsoft.Quantum.Diagnostics
+summary: A megadott qubits tartozó aktuális célszámítógép állapotának kiírása.
+remarks: >-
+  Ez a módszer lehetővé teszi az adott qubits állapotával kapcsolatos adatok egy fájlba vagy más helyre történő kiírását.
+
+  A ténylegesen létrehozott információk és a `location` szemantikai adatai az egyes célszámítógépeken jellemzőek. Ha azonban üres rekordot (`()`) ad meg, általában a kimenetet a-konzolra hozza elő.
+
+
+  A Quantum Development Kit részeként elosztott helyi teljes állapotú szimulátor esetében ez a metódus egy karakterláncot vár egy olyan fájl elérési útjával, amelyben a megadott qubits (azaz a megfelelő alrendszer Wave funkciója) egy egydimenziós AR-ként fog szerepelni. az összetett számok sugara, amelyben az egyes elemek a megfelelő állapot mérésének valószínűségét jelölik.
+
+  Ha a megadott qubits más qubit vannak összefoglalva, és az állapotuk nem különíthető el, akkor csak azt jelenti, hogy a qubits összekeverve vannak.
+syntax: "function DumpRegister (location : 'T, qubits : Qubit[]) : Unit"
+input:
+  content: "(location : 'T, qubits : Qubit[])"
+  types:
+  - name: location
+    summary: Információt nyújt az állapot memóriaképének létrehozásáról.
+    uid: "'T"
+    isLocal: true
+  - name: qubits
+    summary: A jelentést tartalmazó qubits listája.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - summary: Nincs.
+    isPrimitive: true
+    uid: Unit
+ms.openlocfilehash: 6d553a95bfa619d142b681e2830fc0375c6bcae5
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73227032"

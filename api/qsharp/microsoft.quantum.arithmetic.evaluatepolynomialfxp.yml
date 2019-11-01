@@ -1,0 +1,35 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.evaluatepolynomialfxp
+name: EvaluatePolynomialFxP
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: A polinom kiértékelése rögzített pontú ábrázolásban.
+syntax: 'operation EvaluatePolynomialFxP (coefficients : Double[], fpx : Microsoft.Quantum.Arithmetic.FixedPoint, result : Microsoft.Quantum.Arithmetic.FixedPoint) : Unit'
+input:
+  content: '(coefficients : Double[], fpx : Microsoft.Quantum.Arithmetic.FixedPoint, result : Microsoft.Quantum.Arithmetic.FixedPoint)'
+  types:
+  - name: coefficients
+    summary: 'A polinom és a kettős tömb együttes hatékonysága, azaz a következő tömb: $ [a_0, a_1,..., a_d] $ a polinom $P (x) = a_0 + a_1 x + \cdots + a_d x ^ d $.'
+    isArray: true
+    isPrimitive: true
+    uid: Double
+  - name: fpx
+    summary: Bemeneti rögzített pont száma, amelynek kiértékeléséhez a polinom szükséges.
+    uid: microsoft.quantum.arithmetic.fixedpoint
+  - name: result
+    summary: Kimeneti rögzített pont száma, amely $P (x) $ értéket fogja tárolni. Kezdetben a $ \ket{0}$ állapotban kell lennie.
+    uid: microsoft.quantum.arithmetic.fixedpoint
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 8a3531860001c09fa3dadd5ba4db276f0a20d06a
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73220997"

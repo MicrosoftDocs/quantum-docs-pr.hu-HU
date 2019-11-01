@@ -1,0 +1,32 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.preparation.prepareidentity
+name: PrepareIdentity
+type: operation
+namespace: Microsoft.Quantum.Preparation
+summary: >-
+  A regisztrációt követően a rendszer felkészíti a regisztrációt a maximálisan vegyes állapotba.
+
+
+  A regisztráció előkészítése a $ \boldone/2 ^ N $ állapotban történik a teljes depolarizációs csatorna minden qubit való alkalmazásával, ahol a $N $ a regisztráció hossza.
+syntax: 'operation PrepareIdentity (register : Qubit[]) : Unit'
+input:
+  content: '(register : Qubit[])'
+  types:
+  - name: register
+    summary: Olyan regisztráció, amelynek állapotát a fent leírt módon kell leállítani.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+seeAlso:
+- microsoft.quantum.canon.preparesinglequbitidentity
+ms.openlocfilehash: 3242bb0249f26e78ac33f0d16eb7b7c9dcd86ee8
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73226607"

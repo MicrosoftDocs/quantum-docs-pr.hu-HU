@@ -1,0 +1,28 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.convert.boolarrayasresultarray
+name: BoolArrayAsResultArray
+type: function
+namespace: Microsoft.Quantum.Convert
+summary: Egy `Bool[]` típus konvertálása `Result[]` típusra, ahol a `true` `One`re van leképezve, és `false` van leképezve `Zero`.
+syntax: 'function BoolArrayAsResultArray (input : Bool[]) : Result[]'
+input:
+  content: '(bemenet: bool [])'
+  types:
+  - name: bemenet
+    summary: konvertálandó `Bool[]`.
+    isArray: true
+    isPrimitive: true
+    uid: Bool
+output:
+  content: Eredmény []
+  types:
+  - summary: A `input`t jelölő `Result[]`.
+    isArray: true
+    isPrimitive: true
+    uid: Result
+ms.openlocfilehash: c81ac2d1bcfdc8e08769bc448f83fa215e058a9a
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73066880"

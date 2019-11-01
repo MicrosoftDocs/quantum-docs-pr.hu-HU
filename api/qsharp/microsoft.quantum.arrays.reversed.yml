@@ -1,0 +1,31 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.reversed
+name: Reversed
+type: function
+namespace: Microsoft.Quantum.Arrays
+summary: Hozzon létre egy tömböt, amely ugyanazokat az elemeket tartalmazza, mint a bemeneti tömb, de fordított sorrendben.
+syntax: "function Reversed (array : 'T[]) : 'T[]"
+input:
+  content: "(array : 'T[])"
+  types:
+  - name: array
+    summary: Olyan tömb, amelynek elemeit fordított sorrendben kell másolni.
+    isArray: true
+    uid: "'T"
+    isLocal: true
+output:
+  content: "'T[]"
+  types:
+  - summary: Az elemeket tartalmazó tömb, `array[Length(array) - 1]`.. `array[0]` kérdésre adott válaszban foglalt lépéseket.
+    isArray: true
+    uid: "'T"
+    isLocal: true
+typeParameters:
+- uid: "'T"
+  summary: A tömb elemeinek típusa
+ms.openlocfilehash: 946d1f06619a4533a2c32cf58266815d7a510434
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73218022"

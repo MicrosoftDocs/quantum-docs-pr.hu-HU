@@ -1,0 +1,53 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.zip3
+name: Zip3
+type: function
+namespace: Microsoft.Quantum.Arrays
+summary: A három tömb esetében a rekordok egy új tömböt ad vissza, amely szerint minden 3 rekord tartalmaz egy elemet az eredeti tömbből.
+syntax: "function Zip3 (first : 'T1[], second : 'T2[], third : 'T3[]) : ('T1, 'T2, 'T3)[]"
+input:
+  content: "(first : 'T1[], second : 'T2[], third : 'T3[])"
+  types:
+  - name: first
+    summary: Az egyes adatrekordok első elemének értékeit tartalmazó tömb.
+    isArray: true
+    uid: "'T1"
+    isLocal: true
+  - name: second
+    summary: A rekord második elemének értékeit tartalmazó tömb.
+    isArray: true
+    uid: "'T2"
+    isLocal: true
+  - name: third
+    summary: Az egyes adatrekordok harmadik elemének értékeit tartalmazó tömb.
+    isArray: true
+    uid: "'T3"
+    isLocal: true
+output:
+  content: ('T1, 'T2, 'T3)[]
+  types:
+  - summary: Az egyes `idx`ekhez `(first[idx], second[idx], third[idx])` űrlap 3 rekordok tartalmazó tömb. Ha a három tömb nem egyenlő hosszúságú, a kimenet a lehető legrövidebb lesz.
+    isArray: true
+    types:
+    - uid: "'T1"
+      isLocal: true
+    - uid: "'T2"
+      isLocal: true
+    - uid: "'T3"
+      isLocal: true
+typeParameters:
+- uid: "'T1"
+  summary: Az első tömb elemeinek típusa
+- uid: "'T2"
+  summary: A második tömb elemeinek típusa
+- uid: "'T3"
+  summary: A harmadik tömb elemeinek típusa.
+seeAlso:
+- zip
+- zip4
+ms.openlocfilehash: 1a4f3a533178e089d975d5a510d202afe004d999
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73214180"

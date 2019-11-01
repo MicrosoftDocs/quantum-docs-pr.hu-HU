@@ -1,0 +1,76 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applyifelserc
+name: ApplyIfElseRC
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  A klasszikus eredmények értékétől függően két ellenőrizhető művelet egyikét alkalmazza.
+
+
+  Az eredmény `result`miatt a művelet `zeroOp` a `zeroInput`, ha a `result` `Zero`értékkel egyenlő, és `oneOp(oneInput)`re vonatkozik.
+syntax: "operation ApplyIfElseRC (result : Result, (zeroOp : ('T => Unit is Ctl), zeroInput : 'T), (oneOp : ('U => Unit is Ctl), oneInput : 'U)) : Unit"
+input:
+  content: "(result : Result, (zeroOp : ('T => Unit is Ctl), zeroInput : 'T), (oneOp : ('U => Unit is Ctl), oneInput : 'U))"
+  types:
+  - name: result
+    summary: Az `zeroOp` vagy `oneOp` alkalmazásának megállapításához használt mérési eredmény.
+    isPrimitive: true
+    uid: Result
+  - name: zeroOp
+    summary: A `result == Zero`kor alkalmazandó, ellenőrizhető művelet.
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Controlled
+  - name: zeroInput
+    summary: A `result == Zero`kor `zeroOp`hoz megadott bemenet.
+    uid: "'T"
+    isLocal: true
+  - name: oneOp
+    summary: A `result == One`kor alkalmazandó, ellenőrizhető művelet.
+    isOperation: true
+    input:
+      types:
+      - uid: "'U"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Controlled
+  - name: oneInput
+    summary: A `result == One`kor `oneOp`hoz megadott bemenet.
+    uid: "'U"
+    isLocal: true
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+typeParameters:
+- uid: "'T"
+  summary: A feltételesen alkalmazni kívánt művelet bemeneti típusa `zeroOp`.
+- uid: "'U"
+  summary: A feltételesen alkalmazni kívánt művelet bemeneti típusa `oneOp`.
+functors:
+- Controlled
+seeAlso:
+- microsoft.quantum.canon.applyifzero
+- microsoft.quantum.canon.applyifone
+- microsoft.quantum.canon.applyifelserc
+- microsoft.quantum.canon.applyifelsera
+- microsoft.quantum.canon.applyifelserca
+ms.openlocfilehash: e2dd871aa42ed22ba088e6eaad9d9705dfb26254
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73220929"

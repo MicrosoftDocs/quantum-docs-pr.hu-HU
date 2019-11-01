@@ -1,0 +1,42 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.all
+name: All
+type: function
+namespace: Microsoft.Quantum.Arrays
+summary: Egy tömböt és egy predikátumot adott meg, amely a tömb elemeihez van meghatározva, és ellenőrzi, hogy a tömb összes eleme megfelel-e a predikátumnak.
+remarks: "A függvény általános típusokhoz van definiálva (például ha egy Array `'T[]` és egy függvényt is `predicate: 'T -> Bool` egy `Bool` értéket, amely azt jelzi, hogy az összes elem megfelel-e `predicate`nak."
+syntax: "function All (predicate : ('T -> Bool), array : 'T[]) : Bool"
+input:
+  content: "(predicate : ('T -> Bool), array : 'T[])"
+  types:
+  - name: predicate
+    summary: A `'T` függvényből `Bool`, amely az elemek vizsgálatára szolgál.
+    isFunction: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Bool
+  - name: array
+    summary: Elemek tömbje `'T`fölé.
+    isArray: true
+    uid: "'T"
+    isLocal: true
+output:
+  content: Bool
+  types:
+  - summary: Az összes elemre alkalmazott predikátum és függvény `Bool` értéke.
+    isPrimitive: true
+    uid: Bool
+typeParameters:
+- uid: "'T"
+  summary: '`array` elemek típusa'
+ms.openlocfilehash: bb439ae76d0f7644625686cd89f05670051a4c9d
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73214452"

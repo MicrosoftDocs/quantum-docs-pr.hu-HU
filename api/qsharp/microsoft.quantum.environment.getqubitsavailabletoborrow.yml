@@ -1,0 +1,30 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.environment.getqubitsavailabletoborrow
+name: GetQubitsAvailableToBorrow
+type: operation
+namespace: Microsoft.Quantum.Environment
+summary: >-
+  A jelenleg elérhető qubits számát adja vissza.
+
+  Ez magában foglalja a nem használt qubits; Ez magában foglalja a `GetQubitsAvailableToUse`által visszaadott qubits.
+syntax: 'operation GetQubitsAvailableToBorrow () : Int'
+input:
+  content: ()
+  types: []
+output:
+  content: Int
+  types:
+  - summary: >-
+      Egy `borrowing`-utasításban foglalható qubits száma.
+
+      Ha a használt célszámítógép nem adja meg ezeket az adatokat, akkor a rendszer `-1` visszaadja.
+    isPrimitive: true
+    uid: Int
+seeAlso:
+- getqubitsavailabletouse
+ms.openlocfilehash: c0caf866ad9a8773aa11ee7c6951ca3acc60cbaa
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73230483"

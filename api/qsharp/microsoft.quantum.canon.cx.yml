@@ -1,0 +1,55 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.cx
+name: CX
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  A vezérelt-X (CX) kaput alkalmazza egy pár qubits.
+
+
+  $ $ \begin{align} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 & 1 \\\\ 0 & 0 & 1 & 0 \end{align} $ $ $, ahol a sorok és oszlopok a Quantum Concepts útmutatóban vannak rendszerezve.
+remarks: >-
+  Egyenértékű a következővel:
+
+
+  ```qsharp
+
+  Controlled X([control], target);
+
+  ```
+
+
+  és:
+
+
+  ```qsharp
+
+  CNOT(control, target);
+
+  ```
+syntax: 'operation CX (control : Qubit, target : Qubit) : Unit'
+input:
+  content: '(vezérlő: Qubit, cél: Qubit)'
+  types:
+  - name: Ellenőrzési
+    summary: A CX-kapu qubit vezérlése.
+    isPrimitive: true
+    uid: Qubit
+  - name: cél
+    summary: A CX-kapu cél qubit.
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit (Egység)
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 26cbc8dc2f22cdf8583d453b84e53b0151619f5d
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73067866"

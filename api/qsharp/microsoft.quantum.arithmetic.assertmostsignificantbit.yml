@@ -1,0 +1,34 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.assertmostsignificantbit
+name: AssertMostSignificantBit
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: Azt állítja be, hogy egy qubit-regiszter legjelentősebb qubit, amely egy előjel nélküli egész számot jelöl, egy adott állapotban van.
+remarks: A művelet ellenőrzött verziója figyelmen kívül hagyja a vezérlőket.
+syntax: 'operation AssertMostSignificantBit (value : Result, number : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
+input:
+  content: '(value : Result, number : Microsoft.Quantum.Arithmetic.LittleEndian)'
+  types:
+  - name: value
+    summary: Az érvényesített legmagasabb bit értéke.
+    isPrimitive: true
+    uid: Result
+  - name: number
+    summary: Előjel nélküli egész szám, amelynek a legmagasabb bit be van jelölve.
+    uid: microsoft.quantum.arithmetic.littleendian
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+seeAlso:
+- microsoft.quantum.intrinsic.assert
+ms.openlocfilehash: 594ecbb7ba3ccc657c4e55f964714b86e575a6ce
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73221609"
