@@ -1,0 +1,46 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.multiplybymodularinteger
+name: MultiplyByModularInteger
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: >-
+  A qubit-regiszterben egy egész állandó használatával hajtja végre a moduláris szorzást.
+
+
+  Tegyük fel, hogy a modulusot N és constMultiplier szerint jelöli meg, ez a művelet egy, az alábbi Térkép által a számítási alapokon definiált egységes értéket implementálja: | y ⟩ ↦ | a ⋅ y (mod N) ⟩, minden y 0 és N-1 között
+remarks: >-
+  - Az áramköri diagramhoz és a magyarázathoz lásd a 7. ábrán a [arXiv: Quant-pH/0205095v3](https://arxiv.org/pdf/quant-ph/0205095v3.pdf#page=8)
+
+  - Ez a művelet megfelel az U ₐ a [arXiv-ben: Quant-pH/0205095v3](https://arxiv.org/pdf/quant-ph/0205095v3.pdf)
+syntax: 'operation MultiplyByModularInteger (constMultiplier : Int, modulus : Int, multiplier : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
+input:
+  content: '(constMultiplier : Int, modulus : Int, multiplier : Microsoft.Quantum.Arithmetic.LittleEndian)'
+  types:
+  - name: constMultiplier
+    summary: Az állandó, amellyel a szorzót megszorozzuk. A modulus értékének együtt kell lennie.
+    isPrimitive: true
+    uid: Int
+  - name: modulus
+    summary: A szorzási művelet elvégzése többértékű `modulus`
+    isPrimitive: true
+    uid: Int
+  - name: multiplier
+    summary: >-
+      A szám egy állandóval megszorozva.
+
+      Ez egy tömb qubits, amely az egész számot jelöli a endian bit sorrendben.
+    uid: microsoft.quantum.arithmetic.littleendian
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 4a99aff903b22ad4edcd96f2a980bd65c740025f
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73218753"

@@ -1,0 +1,37 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.oracles.oracletodiscrete
+name: OracleToDiscrete
+type: function
+namespace: Microsoft.Quantum.Oracles
+summary: Egy "Black-Box" Oracle-t jelképező művelet miatt egy diszkrét idejű Oracle-t ad vissza, amely a "fekete doboz" Oracle többször ismétlődik.
+examples: a `OracleToDiscrete(U)(3, target)` egyenlő, mint háromszor ismétlődő `U(target)`.
+syntax: 'function OracleToDiscrete (blackBoxOracle : (Qubit[] => Unit is Adj + Ctl)) : Microsoft.Quantum.Oracles.DiscreteOracle'
+input:
+  content: '(blackBoxOracle : (Qubit[] => Unit is Adj + Ctl))'
+  types:
+  - name: blackBoxOracle
+    summary: A exponentiated művelet.
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+    - Controlled
+output:
+  content: Microsoft.Quantum.Oracles.DiscreteOracle
+  types:
+  - summary: Részben alkalmazott művelet a különálló Oracle-t jelképező "fekete doboz" Oracle esetében
+    uid: microsoft.quantum.oracles.discreteoracle
+ms.openlocfilehash: e82c2f3a9d606b1e5316c45aaceeff702d067258
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73230891"
