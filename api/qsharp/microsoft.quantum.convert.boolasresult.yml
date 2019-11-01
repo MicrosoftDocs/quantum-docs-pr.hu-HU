@@ -1,0 +1,26 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.convert.boolasresult
+name: BoolAsResult
+type: function
+namespace: Microsoft.Quantum.Convert
+summary: Egy `Bool` típus konvertálása `Result` típusra, ahol a `true` `One`re van leképezve, és `false` van leképezve `Zero`.
+syntax: 'function BoolAsResult (input : Bool) : Result'
+input:
+  content: '(input : Bool)'
+  types:
+  - name: input
+    summary: konvertálandó `Bool`.
+    isPrimitive: true
+    uid: Bool
+output:
+  content: Result
+  types:
+  - summary: A `input`t jelölő `Result`.
+    isPrimitive: true
+    uid: Result
+ms.openlocfilehash: 88019e17d91753f9aeafd273d2f38fef0f420be2
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73212293"

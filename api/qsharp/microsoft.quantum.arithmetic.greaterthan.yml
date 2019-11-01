@@ -1,0 +1,40 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.greaterthan
+name: GreaterThan
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: Szigorúan nagyobb, mint két egész szám összehasonlítása $x $ és $y $, a qubit-ben kódolva, az XS és az időpontot. Ha $x > y $, akkor az eredmény qubit lesz tükrözve, máskülönben megtartja az állapotát.
+remarks: A (z) $x-y = (x ' + y) ' $ értéket használja, ahol a "az egymást kiegészítő értéket jelöli.
+syntax: 'operation GreaterThan (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, result : Qubit) : Unit'
+references: >-
+  - Steven A. Cuccaro, Thomas G. Drapérier, Samuel A. Kutin, David Petra Moulton: "egy új kvantum-hullám-Carry összeadás Circuit", 2004.
+    https://arxiv.org/abs/quant-ph/0410184v1
+
+  - Thomas Haener, Martin Roetteler, Garai Viktória M. Svore: "faktoring 2n + 2 qubits Toffoli-alapú moduláris szorzással", 2016 https://arxiv.org/abs/1611.07995
+input:
+  content: '(xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, result : Qubit)'
+  types:
+  - name: xs
+    summary: A LittleEndian qubit regisztrálja az első egész számot $x $ értékkel.
+    uid: microsoft.quantum.arithmetic.littleendian
+  - name: ys
+    summary: A LittleEndian qubit regisztrálja a második egész számot $y $ értékkel.
+    uid: microsoft.quantum.arithmetic.littleendian
+  - name: result
+    summary: Egyetlen qubit, amely akkor lesz felfordítva, ha $x > y $ értéket.
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 6961a6a4f22d2290a264298a3be3b15f7bdb0ac7
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73214945"

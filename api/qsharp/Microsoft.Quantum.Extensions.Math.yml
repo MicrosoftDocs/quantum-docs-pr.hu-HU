@@ -1,0 +1,190 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.extensions.math
+name: Microsoft. Quantum. Extensions. Math
+functions:
+- uid: microsoft.quantum.extensions.math.absb
+  summary: >-
+    > [!WARNING]
+
+    > Elavult @"microsoft.quantum.math.absl"használata.
+- uid: microsoft.quantum.extensions.math.absd
+  summary: >-
+    > [!WARNING]
+
+    > Elavult @"microsoft.quantum.math.absd"használata.
+- uid: microsoft.quantum.extensions.math.absi
+  summary: >-
+    > [!WARNING]
+
+    > Elavult @"microsoft.quantum.math.absi"használata.
+- uid: microsoft.quantum.extensions.math.arccos
+  summary: >-
+    > [!WARNING]
+
+    > Elavult @"microsoft.quantum.math.arccos"használata.
+- uid: microsoft.quantum.extensions.math.arcsin
+  summary: >-
+    > [!WARNING]
+
+    > Elavult @"microsoft.quantum.math.arcsin"használata.
+- uid: microsoft.quantum.extensions.math.arctan
+  summary: >-
+    > [!WARNING]
+
+    > Elavult @"microsoft.quantum.math.arctan"használata.
+- uid: microsoft.quantum.extensions.math.arctan2
+  summary: >-
+    > [!WARNING]
+
+    > Elavult @"microsoft.quantum.math.arctan2"használata.
+- uid: microsoft.quantum.extensions.math.ceiling
+  summary: >-
+    > [!WARNING]
+
+    > Elavult @"microsoft.quantum.math.ceiling"használata.
+- uid: microsoft.quantum.extensions.math.cos
+  summary: >-
+    > [!WARNING]
+
+    > Elavult @"microsoft.quantum.math.cos"használata.
+- uid: microsoft.quantum.extensions.math.cosh
+  summary: >-
+    > [!WARNING]
+
+    > Elavult @"microsoft.quantum.math.cosh"használata.
+- uid: microsoft.quantum.extensions.math.divremb
+  summary: >-
+    > [!WARNING]
+
+    > Elavult @"microsoft.quantum.math.divreml"használata.
+- uid: microsoft.quantum.extensions.math.e
+  summary: >-
+    > [!WARNING]
+
+    > Elavult @"microsoft.quantum.math.e"használata.
+- uid: microsoft.quantum.extensions.math.expd
+  summary: >-
+    > [!WARNING]
+
+    > Elavult @"microsoft.quantum.math.expd"használata.
+- uid: microsoft.quantum.extensions.math.floor
+  summary: >-
+    > [!WARNING]
+
+    > Elavult @"microsoft.quantum.math.floor"használata.
+- uid: microsoft.quantum.extensions.math.ieeeremainder
+  summary: >-
+    > [!WARNING]
+
+    > Elavult @"microsoft.quantum.math.ieeeremainder"használata.
+- uid: microsoft.quantum.extensions.math.log
+  summary: >-
+    > [!WARNING]
+
+    > Elavult @"microsoft.quantum.math.log"használata.
+- uid: microsoft.quantum.extensions.math.log10
+  summary: >-
+    > [!WARNING]
+
+    > Elavult @"microsoft.quantum.math.log10"használata.
+- uid: microsoft.quantum.extensions.math.maxb
+  summary: >-
+    > [!WARNING]
+
+    > Elavult @"microsoft.quantum.math.maxl"használata.
+- uid: microsoft.quantum.extensions.math.maxd
+  summary: >-
+    > [!WARNING]
+
+    > Elavult @"microsoft.quantum.math.maxd"használata.
+- uid: microsoft.quantum.extensions.math.maxi
+  summary: >-
+    > [!WARNING]
+
+    > Elavult @"microsoft.quantum.math.maxi"használata.
+- uid: microsoft.quantum.extensions.math.minb
+  summary: >-
+    > [!WARNING]
+
+    > Elavult @"microsoft.quantum.math.minl"használata.
+- uid: microsoft.quantum.extensions.math.mind
+  summary: >-
+    > [!WARNING]
+
+    > Elavult @"microsoft.quantum.math.mind"használata.
+- uid: microsoft.quantum.extensions.math.mini
+  summary: >-
+    > [!WARNING]
+
+    > Elavult @"microsoft.quantum.math.mini"használata.
+- uid: microsoft.quantum.extensions.math.modpowb
+  summary: >-
+    > [!WARNING]
+
+    > Elavult @"microsoft.quantum.math.modpowl"használata.
+- uid: microsoft.quantum.extensions.math.pi
+  summary: >-
+    > [!WARNING]
+
+    > Elavult @"microsoft.quantum.math.pi"használata.
+- uid: microsoft.quantum.extensions.math.powd
+  summary: >-
+    > [!WARNING]
+
+    > Elavult @"microsoft.quantum.math.powd"használata.
+- uid: microsoft.quantum.extensions.math.round
+  summary: >-
+    > [!WARNING]
+
+    > Elavult @"microsoft.quantum.math.round"használata.
+- uid: microsoft.quantum.extensions.math.signb
+  summary: >-
+    > [!WARNING]
+
+    > Elavult @"microsoft.quantum.math.signl"használata.
+- uid: microsoft.quantum.extensions.math.signd
+  summary: >-
+    > [!WARNING]
+
+    > Elavult @"microsoft.quantum.math.signd"használata.
+- uid: microsoft.quantum.extensions.math.signi
+  summary: >-
+    > [!WARNING]
+
+    > Elavult @"microsoft.quantum.math.signi"használata.
+- uid: microsoft.quantum.extensions.math.sin
+  summary: >-
+    > [!WARNING]
+
+    > Elavult @"microsoft.quantum.math.sin"használata.
+- uid: microsoft.quantum.extensions.math.sinh
+  summary: >-
+    > [!WARNING]
+
+    > Elavult @"microsoft.quantum.math.sinh"használata.
+- uid: microsoft.quantum.extensions.math.sqrt
+  summary: >-
+    > [!WARNING]
+
+    > Elavult @"microsoft.quantum.math.sqrt"használata.
+- uid: microsoft.quantum.extensions.math.tan
+  summary: >-
+    > [!WARNING]
+
+    > Elavult @"microsoft.quantum.math.tan"használata.
+- uid: microsoft.quantum.extensions.math.tanh
+  summary: >-
+    > [!WARNING]
+
+    > Elavult @"microsoft.quantum.math.tanh"használata.
+- uid: microsoft.quantum.extensions.math.truncate
+  summary: >-
+    > [!WARNING]
+
+    > Elavult @"microsoft.quantum.math.truncate"használata.
+ms.openlocfilehash: a1a8cda192f7e95141eb2e34baa37ddaae4cb8c9
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73056332"

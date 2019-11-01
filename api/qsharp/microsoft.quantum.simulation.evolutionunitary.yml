@@ -1,0 +1,17 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.simulation.evolutionunitary
+name: EvolutionUnitary
+type: newtype
+namespace: Microsoft.Quantum.Simulation
+summary: >-
+  Egy egységes idő-Evolution operátort jelöl.
+
+
+  Az első paraméter a Time-Evolution (időtartam), a második paraméter pedig a qubit-regisztráció, amelyet az egységes egység végez.
+syntax: newtype EvolutionUnitary = ((Double, Qubit[]) => Unit is Adj + Ctl);
+ms.openlocfilehash: 185e621920a7800fd2c78ccbfb7b4ca12d51e8ba
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73067084"

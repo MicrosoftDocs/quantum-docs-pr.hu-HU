@@ -1,0 +1,36 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.bitwise.not
+name: Not
+type: function
+namespace: Microsoft.Quantum.Bitwise
+summary: >-
+  A nem egész szám típusú bitenkénti adja vissza.
+
+  Ez ugyanazokat a számításokat hajtja végre, mint a beépített `~~~` operátor.
+remarks: További részletekért tekintse meg a [ C# ~ operátort](https://docs.microsoft.com/dotnet/csharp/language-reference/operators/bitwise-complement-operator) .
+examples: >-
+  ```qsharp
+
+  let a = 248;
+
+  let x = Not(a); // x : Int = -249, due to two's complement representation.
+
+  ```
+syntax: 'function Not (a : Int) : Int'
+input:
+  content: '(a : Int)'
+  types:
+  - name: a
+    isPrimitive: true
+    uid: Int
+output:
+  content: Int
+  types:
+  - isPrimitive: true
+    uid: Int
+ms.openlocfilehash: f06b4d6b5cd7e030936ac4f6018665bc5636f04a
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73213993"

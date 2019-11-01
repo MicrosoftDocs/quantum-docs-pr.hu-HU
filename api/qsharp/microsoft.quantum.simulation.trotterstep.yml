@@ -1,0 +1,45 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.simulation.trotterstep
+name: TrotterStep
+type: function
+namespace: Microsoft.Quantum.Simulation
+summary: A Trotter – Suzuki dekompozíció használatával egyetlen időpontot valósít meg a `EvolutionGenerator` által ismertetett rendszerállapot-alakulás.
+remarks: 'A Trotter – Suzuki dekompozícióval kapcsolatos további információkért lásd: [Időrendezve](/quantum/libraries/control-flow#time-ordered-composition).'
+syntax: 'function TrotterStep (evolutionGenerator : Microsoft.Quantum.Simulation.EvolutionGenerator, trotterOrder : Int, trotterStepSize : Double) : (Qubit[] => Unit is Adj + Ctl)'
+input:
+  content: '(evolutionGenerator: Microsoft. Quantum. szimulációs. EvolutionGenerator, trotterOrder: int, trotterStepSize: Double)'
+  types:
+  - name: evolutionGenerator
+    summary: A szimulálni kívánt rendszer teljes leírása.
+    uid: microsoft.quantum.simulation.evolutiongenerator
+  - name: trotterOrder
+    summary: A Trotter-integrátor sorrendje. Ennek 1 vagy páros számnak kell lennie.
+    isPrimitive: true
+    uid: Int
+  - name: trotterStepSize
+    summary: Szimulált idő időbeli alakulása egyetlen Trotter lépésben.
+    isPrimitive: true
+    uid: Double
+output:
+  content: '(Qubit [] = > egység: Adj + CTL)'
+  types:
+  - summary: Egységes művelet, amely megközelíti az idő `trotterStepSize`ának időbeli alakulását.
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+    - Controlled
+ms.openlocfilehash: 0605c7de832286b8b7a11b82af50b528d233d18c
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73065214"

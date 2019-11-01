@@ -1,0 +1,26 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.oracles.stateoracle
+name: StateOracle
+type: newtype
+namespace: Microsoft.Quantum.Oracles
+summary: >-
+  Az állapot előkészítésére szolgáló Oracle.
+
+
+  Az Oracle $O $ bemenetei a következők:
+
+
+  - Egy egész szám, amely indexeli a jelző qubit $f $ értéket.
+
+  - A rendszer regisztrálja $s $, amely a kívánt Quantum State $ \ket{\psi}\_s $ értéket fogja tárolni.
+remarks: >-
+  Ez az Oracle által definiált $ $ O\ket{0}\_{f} \ket{0}\_s = \lambda\ket{1}\_f\ket {\ PSI}\_s + \sqrt{1-| \lambda | ^ 2} \ket{0}\_f\cdots , a $ $ a számítás alapjául szolgáló állapot $ \ket{0}\_{f} \ket{0}\_s $, hogy hozza létre a cél állapotot $ \ket{\psi}\_s $ és amplitúdó $ \lambda $ alapján, amelyet a $ \ket{1}\_f $ megjelöl.
+
+  Az első paraméter a $ \ket{0}\_f $ qubit-regisztrációjának indexe. A második paraméter mindkét regisztert magában foglalja.
+syntax: newtype StateOracle = ((Int, Qubit[]) => Unit is Adj + Ctl);
+ms.openlocfilehash: 1faa47c21e43355ed036498adf4e823ff3f8a0e4
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73067220"

@@ -1,0 +1,72 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applyifa
+name: ApplyIfA
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  Egy klasszikus bites adjointable műveletet alkalmaz.
+
+
+  A művelet `op` és egy kis értékű `bit`esetén `op` a `target`ra vonatkozik, ha `bit` `true`. Ha `false`, semmi nem történik a `target`.
+
+  Az utótag `A` azt jelzi, hogy az alkalmazni kívánt művelet a adjointable.
+examples: >-
+  A következő előkészíti a qubits-regisztrációt olyan számítási állapotba, amelyet egy `Bool` értékek tömbje megadott klasszikus bites sztring képvisel:
+
+
+  ```Q#
+
+  let bitstring = [true, false, true];
+
+  using (register = Qubit(3)) {
+      ApplyToEach(ApplyIf(X, _, _), Zip(bitstring, register));
+      // register should now be in the state |101⟩.
+      ...
+  }
+
+  ```
+syntax: "operation ApplyIfA (op : ('T => Unit is Adj), bit : Bool, target : 'T) : Unit"
+input:
+  content: "(op : ('T => Unit is Adj), bit : Bool, target : 'T)"
+  types:
+  - name: op
+    summary: Egy feltételesen alkalmazni kívánt művelet.
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+  - name: bit
+    summary: egy logikai érték, amely azt szabályozza, hogy az op alkalmazva van-e.
+    isPrimitive: true
+    uid: Bool
+  - name: target
+    summary: Az a bemenet, amelyre a művelet vonatkozik.
+    uid: "'T"
+    isLocal: true
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+typeParameters:
+- uid: "'T"
+  summary: A feltételesen alkalmazni kívánt művelet bemeneti típusa.
+functors:
+- Adjoint
+seeAlso:
+- microsoft.quantum.canon.applyifc
+- microsoft.quantum.canon.applyifa
+- microsoft.quantum.canon.applyifca
+ms.openlocfilehash: 2c62617251d7795f19fa67f7de01859679c94313
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73213874"

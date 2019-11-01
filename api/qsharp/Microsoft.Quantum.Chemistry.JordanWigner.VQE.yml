@@ -1,0 +1,19 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.chemistry.jordanwigner.vqe
+name: Microsoft. Quantum. kémia. JordanWigner. VQE
+functions:
+- uid: microsoft.quantum.chemistry.jordanwigner.vqe.expandedcoefficients
+  summary: Kibővíti a Jordan-Wigner együtthatók kompakt megjelenítését, hogy egy-az-egyhez leképezést kapjon ezek és a Pauli-kifejezések között.
+- uid: microsoft.quantum.chemistry.jordanwigner.vqe.measurementoperators
+  summary: Kiszámítja az összes olyan mérési operátort, amely a Jordan-Wigner kifejezés várt értékének kiszámításához szükséges.
+operations:
+- uid: microsoft.quantum.chemistry.jordanwigner.vqe.estimateenergy
+  summary: A molekula energia-kiszámítását az egyes Jordan-Wigner feltételek által biztosított energia összegzésével becsüli.
+- uid: microsoft.quantum.chemistry.jordanwigner.vqe.estimatetermexpectation
+  summary: Egy adott Jordan-Wigner Hamilton-kifejezéshez társított energia kiszámítása
+ms.openlocfilehash: 5c56599c1926f2a11631c74cc03545c43a724eeb
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73057113"

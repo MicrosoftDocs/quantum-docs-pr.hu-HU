@@ -1,0 +1,64 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.arrays
+name: Microsoft. Quantum. Arrays
+summary: " # <a name=\"summary\"></a>Összefoglalás\n Ez a névtér az adattömbök létrehozására és módosítására szolgáló függvényeket tartalmaz."
+functions:
+- uid: microsoft.quantum.arrays.all
+  summary: Egy tömböt és egy predikátumot adott meg, amely a tömb elemeihez van meghatározva, és ellenőrzi, hogy a tömb összes eleme megfelel-e a predikátumnak.
+- uid: microsoft.quantum.arrays.any
+  summary: A tömb elemeihez megadott tömb és predikátum alapján a rendszer ellenőrzi, hogy a tömb legalább egy eleme megfelel-e a predikátumnak.
+- uid: microsoft.quantum.arrays.constantarray
+  summary: Egy adott hosszúságú tömböt hoz létre a megadott értékkel egyenlő összes elemmel.
+- uid: microsoft.quantum.arrays.enumerated
+  summary: A tömbnek megfelelően egy új tömböt ad vissza, amely az eredeti tömb elemeit tartalmazza, valamint az egyes elemek indexeit.
+- uid: microsoft.quantum.arrays.exclude
+  summary: Egy olyan tömböt ad vissza, amely egy másik tömb elemeit tartalmazza, és az indexek adott listáján szereplő elemeket is kizárja.
+- uid: microsoft.quantum.arrays.filtered
+  summary: Egy tömb és egy, a tömb elemeihez definiált predikátum miatt egy tömböt ad vissza, amely a predikátumnak megfelelő elemeket tartalmaz.
+- uid: microsoft.quantum.arrays.fold
+  summary: Egy függvényt `f` egy tömb `array`ján, `f(f(f(initialState, array[0]), array[1]), ...)`visszaadva.
+- uid: microsoft.quantum.arrays.head
+  summary: A tömb első elemét adja vissza.
+- uid: microsoft.quantum.arrays.indexof
+  summary: Egy olyan tömb első elemének első indexét adja vissza, amely megfelel egy adott predikátumnak. Ha nem létezik ilyen elem, a a-1 értéket adja vissza.
+- uid: microsoft.quantum.arrays.indexrange
+  summary: Egy tömb esetében az adott tömb indexei között egy tartományt ad vissza, amely a for ciklusban használható.
+- uid: microsoft.quantum.arrays.lookupfunction
+  summary: A tömb adott értéke egy olyan függvényt ad vissza, amely a tömb elemeit adja vissza.
+- uid: microsoft.quantum.arrays.mapped
+  summary: Egy tömb és egy függvény, amely a tömb elemeihez van meghatározva, egy új tömböt ad vissza, amely a függvényben található eredeti tömb képéből áll.
+- uid: microsoft.quantum.arrays.mappedbyindex
+  summary: Egy tömb és egy függvény, amely a tömb indexelt elemeihez van definiálva, egy új tömböt ad vissza, amely a függvényben található eredeti tömb képéből áll.
+- uid: microsoft.quantum.arrays.most
+  summary: Egy olyan tömböt hoz létre, amely egy bemeneti tömbnek felel meg, kivéve, ha a legutolsó tömb elem el lett dobva.
+- uid: microsoft.quantum.arrays.padded
+  summary: Egy olyan tömböt ad vissza, amely a megadott értékekkel megadott hosszúságú.
+- uid: microsoft.quantum.arrays.partitioned
+  summary: Tömb felosztása több részre.
+- uid: microsoft.quantum.arrays.rest
+  summary: Egy olyan tömböt hoz létre, amely egy bemeneti tömbnek felel meg, kivéve, hogy az első tömb elem el lett dobva.
+- uid: microsoft.quantum.arrays.reversed
+  summary: Hozzon létre egy tömböt, amely ugyanazokat az elemeket tartalmazza, mint a bemeneti tömb, de fordított sorrendben.
+- uid: microsoft.quantum.arrays.sequencei
+  summary: Egész számokból álló tömb beolvasása egy adott intervallumban.
+- uid: microsoft.quantum.arrays.sequencel
+  summary: Egész számokból álló tömb beolvasása egy adott intervallumban.
+- uid: microsoft.quantum.arrays.subarray
+  summary: Egy tömböt és egy listát hoz létre, és létrehoz egy új tömböt az eredeti tömb elemeiből, amelyek megfelelnek az adott helyeknek.
+- uid: microsoft.quantum.arrays.tail
+  summary: A tömb utolsó elemét adja vissza.
+- uid: microsoft.quantum.arrays.zip
+  summary: Az adott két tömb a párok új tömbjét adja vissza, így minden pár tartalmaz egy elemet az eredeti tömbből.
+- uid: microsoft.quantum.arrays.zip3
+  summary: A három tömb esetében a rekordok egy új tömböt ad vissza, amely szerint minden 3 rekord tartalmaz egy elemet az eredeti tömbből.
+- uid: microsoft.quantum.arrays.zip4
+  summary: A megadott négy tömb a 4 rekordok egy új tömbjét adja vissza, amely minden 4 rekord tartalmaz egy elemet az eredeti tömbből.
+operations:
+- uid: microsoft.quantum.arrays.foreach
+  summary: Egy tömb és egy olyan művelet, amely a tömb elemeihez van meghatározva, egy új tömböt ad vissza, amely a művelet alatt található eredeti tömb képéből áll.
+ms.openlocfilehash: 7c377d5df0e32be0da75f133b08c778ec94c6a39
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73057166"

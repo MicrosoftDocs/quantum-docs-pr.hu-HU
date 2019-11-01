@@ -1,0 +1,29 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.cascadecnot
+name: CascadeCNOT
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: Egy lépcsőzetes CNEM-kaput valósít meg a szomszédos qubits egy adott qubit-regiszterben, kezdve a 0. pozícióban lévő qubit, amely az 1. pozícióban található, célként megadott qubit, majd az 1. pozícióban lévő qubit vezérlőelemként, a 2. pozícióban pedig a célként megadott qubit. stb., a `Length(register)-1` pozícióban lévő qubit végződik.
+syntax: 'operation CascadeCNOT (register : Qubit[]) : Unit'
+input:
+  content: '(register : Qubit[])'
+  types:
+  - name: register
+    summary: Qubit-regisztráció.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 9089948665a9ad8d4884196c4a84ed715104048a
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73221303"

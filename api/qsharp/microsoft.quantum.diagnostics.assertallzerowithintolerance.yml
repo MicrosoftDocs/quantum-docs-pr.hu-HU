@@ -1,0 +1,35 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.diagnostics.assertallzerowithintolerance
+name: AssertAllZeroWithinTolerance
+type: operation
+namespace: Microsoft.Quantum.Diagnostics
+summary: Azt állítja, hogy a megadott qubits mind a $ \ket{0}$ állapotba kerülnek egy adott toleranciával szemben.
+syntax: 'operation AssertAllZeroWithinTolerance (qubits : Qubit[], tolerance : Double) : Unit'
+input:
+  content: '(qubits: Qubit [], tolerancia: Double)'
+  types:
+  - name: qubits
+    summary: A qubits $ \ket{0}$ állapotban kell lennie.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+  - name: hibatűrés
+    summary: Pontosság, amellyel az állapotnak $ \ket{0}$ állapotban kell lennie
+    isPrimitive: true
+    uid: Double
+output:
+  content: Unit (Egység)
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+seeAlso:
+- assertqubitwithintolerance
+ms.openlocfilehash: 0e3b560d08077bb353147d98a921a2c2ca3ae202
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73066540"

@@ -1,0 +1,22 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.simulation.paulievolutionset
+name: PauliEvolutionSet
+type: function
+namespace: Microsoft.Quantum.Simulation
+summary: Szimulálható kapuk készletének és a Pauli-alapú bővítésnek a dinamikus generátort jelöli.
+remarks: Ezt a <xref:microsoft.quantum.simulation.paulievolutionfunction>részleges alkalmazása szerzi be.
+syntax: 'function PauliEvolutionSet () : Microsoft.Quantum.Simulation.EvolutionSet'
+input:
+  content: ()
+  types: []
+output:
+  content: Microsoft. Quantum. szimulációs. EvolutionSet
+  types:
+  - summary: Egy `EvolutionSet`, amely a Pauli-alapú `GeneratorIndex` egy "EvolutionUnitary képezi le.
+    uid: microsoft.quantum.simulation.evolutionset
+ms.openlocfilehash: cd1180caa3e2afeea044e409ddde9ac414a7ee84
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73065384"

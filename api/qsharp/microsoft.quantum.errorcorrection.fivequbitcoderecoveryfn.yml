@@ -1,0 +1,27 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.errorcorrection.fivequbitcoderecoveryfn
+name: FiveQubitCodeRecoveryFn
+type: function
+namespace: Microsoft.Quantum.ErrorCorrection
+summary: Azt a függvényt adja vissza, amely leképezi a hiba-szindrómát a megfelelő hiba kijavítani a Pauli-operátorok számára az 5, 1, 3 ⟧ kvantum-kód ⟦.
+remarks: >-
+  Az $1 $ súlyozású összes hiba megismétlésével összesen $3 \ alkalommal 5 = 15 $ lehetséges, nem triviális tünetegyüttest kapunk.
+
+  Az identitással együtt a rendszer felépíti a hibát tartalmazó táblázatot és a megfelelő szindrómát. Az 5 qubit-kód esetében ezt a táblázatot a következő adja meg: $X\_1: (0, 0, 0, 1); X\_2: (1, 0, 0, 0); X\_3: (1, 1, 0, 0); X\_4: (0, 1, 1, 0); X\_5: (0, 0, 1, 1) $, $Z\_1: (1, 0, 1, 0); Z\_2: (0, 1, 0, 1); Z\_3: (0, 0, 1, 0); Z\_4: (1, 0, 0, 1); Z\_5: (0, 1, 0, 0) $ $Y _i $ beszerzésével, a $X _i $ és $Z _i $ szindrómák hozzáadásával. Vegye figyelembe, hogy a tábla keresésének helyreállítását úgy adja meg, hogy a bitvectors egész számmá (kis endian használatával) konvertálja.
+syntax: 'function FiveQubitCodeRecoveryFn () : Microsoft.Quantum.ErrorCorrection.RecoveryFn'
+input:
+  content: ()
+  types: []
+output:
+  content: Microsoft.Quantum.ErrorCorrection.RecoveryFn
+  types:
+  - summary: '`RecoveryFn` típusú függvény, amely egy tünetegyüttes-mérési `Result[]`, és az észlelt hibát javító `Pauli[]` operátorokat adja vissza.'
+    uid: microsoft.quantum.errorcorrection.recoveryfn
+seeAlso:
+- recoveryfn
+ms.openlocfilehash: efeabbeb6595d1440882eef73f152610a3ac74c5
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73211630"
