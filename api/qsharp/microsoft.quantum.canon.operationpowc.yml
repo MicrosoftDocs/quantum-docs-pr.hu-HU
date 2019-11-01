@@ -1,0 +1,59 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.operationpowc
+name: OperationPowC
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  Kivált egy műveletet egy hatványra.
+
+  A módosító `C` azt jelzi, hogy a művelet ellenőrizhető.
+
+
+  Ez azt jelenti, hogy egy $U $ kaput jelképező művelet miatt egy új műveletet ad vissza $U ^ m $ a Power $m $-hoz.
+syntax: "function OperationPowC (oracle : ('T => Unit is Ctl), power : Int) : ('T => Unit is Ctl)"
+input:
+  content: "(oracle : ('T => Unit is Ctl), power : Int)"
+  types:
+  - name: oracle
+    summary: A megismételni kívánt kaput jelző művelet $U $.
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Controlled
+  - name: power
+    summary: Ennyi alkalommal kell megismételni a $U $ értéket.
+    isPrimitive: true
+    uid: Int
+output:
+  content: ('T => Unit is Ctl)
+  types:
+  - summary: Egy új művelet, amely a $U ^ m $ értéket jelképezi, ahol $m = \texttt{Power} $.
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Controlled
+typeParameters:
+- uid: "'T"
+  summary: A bekapcsolni kívánt művelet típusa.
+seeAlso:
+- microsoft.quantum.canon.operationpow
+ms.openlocfilehash: 5bc317597ef660bf92291b690fdb2d255eaaa616
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73230806"

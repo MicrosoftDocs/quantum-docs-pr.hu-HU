@@ -1,0 +1,51 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applytoeachindexa
+name: ApplyToEachIndexA
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  Egyetlen qubit műveletet alkalmaz a tételjegyzék minden indexelt elemére.
+
+  A módosító `A` azt jelzi, hogy az qubit művelet adjointable.
+syntax: "operation ApplyToEachIndexA (singleElementOperation : ((Int, 'T) => Unit is Adj), register : 'T[]) : Unit"
+input:
+  content: "(singleElementOperation: ((int, 'T) = > egység), regisztráció: 'T [])"
+  types:
+  - name: singleElementOperation
+    summary: Az egyes qubit alkalmazandó művelet.
+    isOperation: true
+    input:
+      types:
+      - isPrimitive: true
+        uid: Int
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+  - name: Regisztráció
+    summary: Azon qubits tömbje, amelyeken alkalmazni kell a megadott műveletet.
+    isArray: true
+    uid: "'T"
+    isLocal: true
+output:
+  content: Unit (Egység)
+  types:
+  - isPrimitive: true
+    uid: Unit
+typeParameters:
+- uid: "'T"
+  summary: A cél, amelyen az egyes műveletek működnek.
+functors:
+- Adjoint
+seeAlso:
+- microsoft.quantum.canon.applytoeachindex
+ms.openlocfilehash: 6b99e977120a417780875475b35094a44d1c4e08
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73068478"

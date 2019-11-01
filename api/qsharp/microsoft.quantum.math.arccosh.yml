@@ -1,0 +1,26 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.math.arccosh
+name: ArcCosh
+type: function
+namespace: Microsoft.Quantum.Math
+summary: Egy szám inverz hiperbolikus koszinuszát számítja ki.
+syntax: 'function ArcCosh (x : Double) : Double'
+input:
+  content: '(x : Double)'
+  types:
+  - name: x
+    summary: Egy valós szám $x \geq $1.
+    isPrimitive: true
+    uid: Double
+output:
+  content: Double
+  types:
+  - summary: Egy valós szám $y $, például $x = \cosh (y) $.
+    isPrimitive: true
+    uid: Double
+ms.openlocfilehash: 27f77a5b94344f285ad312425b103020deee6775
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73221949"

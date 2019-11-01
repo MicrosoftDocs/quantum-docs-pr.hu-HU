@@ -1,0 +1,67 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applymulticontrolledc
+name: ApplyMultiControlledC
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  Egy megfelelően vezérelt művelet szorzás vezérelt verzióját alkalmazza.
+
+  A módosító `C` azt jelzi, hogy az qubit művelet ellenőrizhető.
+remarks: >-
+  Ez a művelet csak a tiszta Ancilla-qubits használja.
+
+
+  A magyarázathoz és az áramköri diagramhoz lásd a 4,10., 4,3. szakaszát a Nielsen & a következő ábrán:
+syntax: 'operation ApplyMultiControlledC (singlyControlledOp : (Qubit[] => Unit), ccnot : Microsoft.Quantum.Canon.CCNOTop, controls : Qubit[], targets : Qubit[]) : Unit'
+references: '- [*Michael A. Nielsen, Isaac L.*, a Quantum számítási és a kvantum-információk](http://doi.org/10.1017/CBO9780511976667)'
+input:
+  content: '(singlyControlledOp : (Qubit[] => Unit), ccnot : Microsoft.Quantum.Canon.CCNOTop, controls : Qubit[], targets : Qubit[])'
+  types:
+  - name: singlyControlledOp
+    summary: >-
+      Egyetlen qubit vezérelt művelet.
+
+      A művelet argumentumának első qubit a vezérlőnek kell lennie, a többi pedig a célként megadott qubits.
+
+      `ApplyMultiControlled` mindig legalább 1 argumentummal meghívja a `singlyControlledOp`.
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+  - name: ccnot
+    summary: A vezérelt vezérléssel nem rendelkező kapu, amely az építkezéshez használható.
+    uid: microsoft.quantum.canon.ccnotop
+  - name: controls
+    summary: >-
+      Az `singlyControlledOp` qubits.
+
+      A `controls` hosszának legalább 1-nek kell lennie.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+  - name: targets
+    summary: A `singlyControlledOp` qubits.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Controlled
+seeAlso:
+- microsoft.quantum.canon.applymulticontrolledca
+ms.openlocfilehash: 0c6f30505081f3b5f449a72a10bac89815c3bf14
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73217342"

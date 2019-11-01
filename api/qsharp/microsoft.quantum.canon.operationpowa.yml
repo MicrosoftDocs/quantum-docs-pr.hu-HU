@@ -1,0 +1,59 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.operationpowa
+name: OperationPowA
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  Kivált egy műveletet egy hatványra.
+
+  A módosító `A` azt jelzi, hogy a művelet adjointable.
+
+
+  Ez azt jelenti, hogy egy $U $ kaput jelképező művelet miatt egy új műveletet ad vissza $U ^ m $ a Power $m $-hoz.
+syntax: "function OperationPowA (oracle : ('T => Unit is Adj), power : Int) : ('T => Unit is Adj)"
+input:
+  content: "(oracle : ('T => Unit is Adj), power : Int)"
+  types:
+  - name: oracle
+    summary: A megismételni kívánt kaput jelző művelet $U $.
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+  - name: power
+    summary: Ennyi alkalommal kell megismételni a $U $ értéket.
+    isPrimitive: true
+    uid: Int
+output:
+  content: ('T => Unit is Adj)
+  types:
+  - summary: Egy új művelet, amely a $U ^ m $ értéket jelképezi, ahol $m = \texttt{Power} $.
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+typeParameters:
+- uid: "'T"
+  summary: A bekapcsolni kívánt művelet típusa.
+seeAlso:
+- microsoft.quantum.canon.operationpow
+ms.openlocfilehash: 59f7ea68a9b6528e0f3dd116c98961280edd3229
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73230840"

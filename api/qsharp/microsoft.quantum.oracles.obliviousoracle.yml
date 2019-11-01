@@ -1,0 +1,26 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.oracles.obliviousoracle
+name: ObliviousOracle
+type: newtype
+namespace: Microsoft.Quantum.Oracles
+summary: >-
+  Egy Oracle for feledékenys amplitúdó-erősítést jelöl.
+
+
+  Az Oracle $O $ bemenetei a következők:
+
+
+  - A Ancilla regisztrálja $a $-t, amely $O $ műveleteket végez.
+
+  - A rendszer regisztrálja $s $ értéket, amelyre a kívánt egységes $U $ alkalmazás van alkalmazva, majd a Register $a $ bejegyzés után a $ \ket{t}\_a $ értékű állapotban van.
+remarks: >-
+  Ez az Oracle által definiált $ $ O\ket {s}\_a\ket {\ PSI}\_s = \lambda\ket{t}\_a U \ket{\psi}\_s + \sqrt{1-| \lambda | ^ 2} \ket{t ^ \perp}\_a\cdots $ $ a Ancilla State $ \ket{s}\_a $ implementálja az egységes $U $-t bármely rendszerállapot $ \ket{\psi}\_s $ és amplitúdó $ \lambda $ használatával, amelyet a $ \ket{t}\_a $ számú megjelöl.
+
+  Az első paraméter a $ \ket{s}\_a $ qubit-regisztráció. A második paraméter a $ \ket{\psi}\_s $ qubit-regisztrációja.
+syntax: newtype ObliviousOracle = ((Qubit[], Qubit[]) => Unit is Adj + Ctl);
+ms.openlocfilehash: f06527701dfad61843df66faca5dd265525b6aa6
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73231061"
