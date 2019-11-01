@@ -1,0 +1,69 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applyifelseb
+name: ApplyIfElseB
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  A klasszikus bit értékétől függően két művelet egyikét alkalmazza.
+
+
+  Egy kicsit `bit`adott a művelet `trueOp` a `trueInput` a `bit` `true`kor, és `falseOp(falseInput)` `bit` esetén alkalmazza.
+syntax: "operation ApplyIfElseB (bit : Bool, (trueOp : ('T => Unit), trueInput : 'T), (falseOp : ('U => Unit), falseInput : 'U)) : Unit"
+input:
+  content: "(bit : Bool, (trueOp : ('T => Unit), trueInput : 'T), (falseOp : ('U => Unit), falseInput : 'U))"
+  types:
+  - name: bit
+    isPrimitive: true
+    uid: Bool
+  - name: trueOp
+    summary: A `bit` `true`akor alkalmazandó művelet.
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+  - name: trueInput
+    summary: A `trueOp` számára megadott bemenet, ha `bit` `true`.
+    uid: "'T"
+    isLocal: true
+  - name: falseOp
+    summary: A `bit` `false`akor alkalmazandó művelet.
+    isOperation: true
+    input:
+      types:
+      - uid: "'U"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+  - name: falseInput
+    summary: A `falseOp` számára megadott bemenet, ha `bit` `false`.
+    uid: "'U"
+    isLocal: true
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+typeParameters:
+- uid: "'T"
+  summary: A feltételesen alkalmazni kívánt művelet bemeneti típusa `trueOp`.
+- uid: "'U"
+  summary: A feltételesen alkalmazni kívánt művelet bemeneti típusa `falseOp`.
+seeAlso:
+- microsoft.quantum.canon.applyifzero
+- microsoft.quantum.canon.applyifone
+- microsoft.quantum.canon.applyifelserc
+- microsoft.quantum.canon.applyifelsera
+- microsoft.quantum.canon.applyifelserca
+ms.openlocfilehash: 023608bfe390acff37363fde3dac71ab03eb3bb2
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73217478"

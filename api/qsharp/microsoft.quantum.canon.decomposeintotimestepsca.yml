@@ -1,0 +1,69 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.decomposeintotimestepsca
+name: DecomposeIntoTimeStepsCA
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: Egy adott művelethez tartozó Trotter – Suzuki integrátort megvalósító műveletet ad vissza.
+syntax: "function DecomposeIntoTimeStepsCA ((nSteps : Int, op : ((Int, Double, 'T) => Unit is Adj + Ctl)), trotterOrder : Int) : ((Double, 'T) => Unit is Adj + Ctl)"
+references: >-
+  We use the implementation in
+
+
+  - [ *D. W. Berry, G. Ahokas, R. Cleve, B. C. Sanders* ](https://arxiv.org/abs/quant-ph/0508139)
+input:
+  content: "((nSteps: int, op: (int, Double, 'T) = > egység az Adj + CTL)), trotterOrder: int)"
+  types:
+  - name: nSteps
+    isPrimitive: true
+    uid: Int
+  - name: op
+    isOperation: true
+    input:
+      types:
+      - isPrimitive: true
+        uid: Int
+      - isPrimitive: true
+        uid: Double
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+    - Controlled
+  - name: trotterOrder
+    summary: >-
+      Kiválasztja a használni kívánt Trotter-Suzuki-integrátor sorrendjét.
+
+      Az 1. és a 2. sorrend jelenleg támogatott.
+    isPrimitive: true
+    uid: Int
+output:
+  content: "((Double, 'T) = > egység: Adj + CTL)"
+  types:
+  - summary: A Trotter – Suzuki integrátor egységes megvalósítását adja vissza, ahol az első paraméter `Double` az integrációs lépés mérete, a második paraméter pedig a cél.
+    isOperation: true
+    input:
+      types:
+      - isPrimitive: true
+        uid: Double
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+    - Controlled
+typeParameters:
+- uid: "'T"
+  summary: Az a típus, amely az egyes időpontokban cselekszik; általában `Qubit[]` vagy `Qubit`.
+ms.openlocfilehash: 328db9b314320c724cf03adb19ee59d63a33e56e
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73067832"

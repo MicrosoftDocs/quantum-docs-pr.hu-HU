@@ -1,0 +1,26 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.math.powc
+name: PowC
+type: function
+namespace: Microsoft.Quantum.Math
+summary: Egy megadott hatványra emelt számot ad vissza.
+syntax: 'function PowC (base_ : Microsoft.Quantum.Math.Complex, power : Microsoft.Quantum.Math.Complex) : Microsoft.Quantum.Math.Complex'
+input:
+  content: '(base_: Microsoft. Quantum. Math. Complex, Power: Microsoft. Quantum. matematika. Complex)'
+  types:
+  - name: alap
+    uid: microsoft.quantum.math.complex
+  - name: Power
+    summary: A Power $b $, amelyhez $a $ értéket meg kell adni.
+    uid: microsoft.quantum.math.complex
+output:
+  content: Microsoft. Quantum. Math. Complex
+  types:
+  - summary: A Power $a ^ b $
+    uid: microsoft.quantum.math.complex
+ms.openlocfilehash: 77a3f8fdc769947e50b35b31547a98017e6e2529
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73067254"

@@ -1,0 +1,20 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.simulation.blockencoding
+name: blockEncoding
+type: newtype
+namespace: Microsoft.Quantum.Simulation
+summary: >-
+  Olyan egységes, amelyben a kamatot egy tetszőleges operátor kódolja a bal felső blokkban.
+
+
+  Ez azt a `BlockEncoding` egy egységes $U $, ahol egy tetszőleges operátor $H $ értékű, amely a rendszerregisztrálás `s` a rendszer-regisztrálásra jogosult, a \ket{0}_a $ kiegészítő állapotnak megfelelő bal felső blokkban van kódolva. az
+
+
+  $ $ \begin{align} (\bra{0}_a \ otimes I_s) U (\ket{0}_a \ otimes I_s) = H \end{align} $ $.
+syntax: newtype BlockEncoding = ((Qubit[], Qubit[]) => Unit is Adj + Ctl);
+ms.openlocfilehash: 0991b1b54cdd8e908f60fc104edf588ae08e12e7
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73066030"

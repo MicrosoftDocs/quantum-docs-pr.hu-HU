@@ -1,0 +1,53 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.padded
+name: Padded
+type: function
+namespace: Microsoft.Quantum.Arrays
+summary: Egy olyan tömböt ad vissza, amely a megadott értékekkel megadott hosszúságú.
+examples: >-
+  ```qsharp
+
+  let array = [10, 11, 12];
+
+  // The following line returns [10, 12, 15, 2, 2, 2].
+
+  let output = Padded(-6, array, 2);
+
+  // The following line returns [2, 2, 2, 10, 12, 15].
+
+  let output = Padded(6, array, 2);
+
+  ```
+syntax: "function Padded (nElementsTotal : Int, defaultElement : 'T, inputArray : 'T[]) : 'T[]"
+input:
+  content: "(nElementsTotal : Int, defaultElement : 'T, inputArray : 'T[])"
+  types:
+  - name: nElementsTotal
+    summary: A párnázott tömb hossza. Ha ez pozitív, `inputArray` a fejlécbe van befeltöltve. Ha ez negatív, `inputArray` a farok margója.
+    isPrimitive: true
+    uid: Int
+  - name: defaultElement
+    summary: A kitöltési elemekhez használandó alapértelmezett érték.
+    uid: "'T"
+    isLocal: true
+  - name: inputArray
+    summary: Az a tömb, amelynek értékei a kimeneti tömb élén vannak.
+    isArray: true
+    uid: "'T"
+    isLocal: true
+output:
+  content: "'T[]"
+  types:
+  - summary: Egy tömb `output`, amely a `inputArray` `defaultElement`s betűvel párnázott, `output` hossza `nElementsTotal`
+    isArray: true
+    uid: "'T"
+    isLocal: true
+typeParameters:
+- uid: "'T"
+  summary: A tömb elemeinek típusa
+ms.openlocfilehash: 3fb999af73e68de9143ddc051b8a43247f5282f0
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73218056"

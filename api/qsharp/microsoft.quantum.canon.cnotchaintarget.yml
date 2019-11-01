@@ -1,0 +1,56 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.cnotchaintarget
+name: CNOTChainTarget
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  Kiszámítja egy qubits-tömb paritását egy célként megadott qubit.
+
+
+  Ha a tömb kezdetben a $ \ket{q_0} \ket{q_1} \cdots \ket{Q_{\text{Target}}} $ állapotban van, a végleges állapotot a $ \ket{q_0} \ket{q_1 \oplus q_0} \cdots \ket{Q_{n-1} \oplus \cdots \oplus q_0 \oplus Q_ {\text{Target}}} $ értékkel adja meg.
+remarks: >-
+  A következők egyenértékűek:
+
+
+  ```qsharp
+
+  CNOTChainTarget(Most(qs), Last(qs));
+
+  ```
+
+
+  és
+
+
+  ```qsharp
+
+  CNOTChain(qs);
+
+  ```
+syntax: 'operation CNOTChainTarget (qubits : Qubit[], targetQubit : Qubit) : Unit'
+input:
+  content: '(qubits: Qubit [], targetQubit: Qubit)'
+  types:
+  - name: qubits
+    summary: Azon qubits tömbje, amelyeken a paritás kiszámítása történik.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+  - name: targetQubit
+    summary: A végső qubit, amelybe a "qubits" paritása XORed.
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit (Egység)
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 26893296ec8fe7ec8d8cc5309e2bd5066f315849
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73068036"

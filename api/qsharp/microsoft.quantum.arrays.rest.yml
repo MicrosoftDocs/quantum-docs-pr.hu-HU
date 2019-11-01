@@ -1,0 +1,31 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.rest
+name: Rest
+type: function
+namespace: Microsoft.Quantum.Arrays
+summary: Egy olyan tömböt hoz létre, amely egy bemeneti tömbnek felel meg, kivéve, hogy az első tömb elem el lett dobva.
+syntax: "function Rest (array : 'T[]) : 'T[]"
+input:
+  content: "(array : 'T[])"
+  types:
+  - name: array
+    summary: Az a tömb, amelynek az utolsó eleme a kimeneti tömb alkotása.
+    isArray: true
+    uid: "'T"
+    isLocal: true
+output:
+  content: "'T[]"
+  types:
+  - summary: A `array[1..Length(array) - 1]`elemeket tartalmazó tömb.
+    isArray: true
+    uid: "'T"
+    isLocal: true
+typeParameters:
+- uid: "'T"
+  summary: A tömb elemeinek típusa
+ms.openlocfilehash: 96779f32f93d2d045502b5e7264de1af39affd9f
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73218039"

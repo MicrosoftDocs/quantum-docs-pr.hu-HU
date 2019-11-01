@@ -1,0 +1,29 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.simulation.addgeneratorsystems
+name: AddGeneratorSystems
+type: function
+namespace: Microsoft.Quantum.Simulation
+summary: Két `GeneratorSystem`s hozzáadásával új `GeneratorSystem`hozhat létre.
+syntax: 'function AddGeneratorSystems (generatorSystemA : Microsoft.Quantum.Simulation.GeneratorSystem, generatorSystemB : Microsoft.Quantum.Simulation.GeneratorSystem) : Microsoft.Quantum.Simulation.GeneratorSystem'
+input:
+  content: '(generatorSystemA: Microsoft. Quantum. szimulációs. GeneratorSystem, generatorSystemB: Microsoft. Quantum. szimulációs. GeneratorSystem)'
+  types:
+  - name: generatorSystemA
+    summary: Az első `GeneratorSystem`.
+    uid: microsoft.quantum.simulation.generatorsystem
+  - name: generatorSystemB
+    summary: A második `GeneratorSystem`.
+    uid: microsoft.quantum.simulation.generatorsystem
+output:
+  content: Microsoft. Quantum. szimulációs. GeneratorSystem
+  types:
+  - summary: Egy `GeneratorSystem`, amely a bemeneti létrehozó rendszerek összegét képező rendszert jelképezi.
+    uid: microsoft.quantum.simulation.generatorsystem
+seeAlso:
+- microsoft.quantum.canon.generatorsystem
+ms.openlocfilehash: 33155c0af61281bc34b7af5ecb6afe404d3e427d
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73066064"

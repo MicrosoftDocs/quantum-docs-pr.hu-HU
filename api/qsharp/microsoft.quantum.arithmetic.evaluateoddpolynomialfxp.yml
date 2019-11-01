@@ -1,0 +1,35 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.evaluateoddpolynomialfxp
+name: EvaluateOddPolynomialFxP
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: Kiértékeli a páratlan polinom-t egy rögzített pontos ábrázolásban.
+syntax: 'operation EvaluateOddPolynomialFxP (coefficients : Double[], fpx : Microsoft.Quantum.Arithmetic.FixedPoint, result : Microsoft.Quantum.Arithmetic.FixedPoint) : Unit'
+input:
+  content: '(coefficients : Double[], fpx : Microsoft.Quantum.Arithmetic.FixedPoint, result : Microsoft.Quantum.Arithmetic.FixedPoint)'
+  types:
+  - name: coefficients
+    summary: 'A páratlan polinom kettős tömbként, azaz a következő tömbben: $ [a_0, a_1,..., a_k] $ a páratlan polinom $P (x) = a_0 x + a_1 x ^ 3 + \cdots + a_k x ^ {2k + 1} $.'
+    isArray: true
+    isPrimitive: true
+    uid: Double
+  - name: fpx
+    summary: Bemeneti rögzített pont száma, amelynek kiértékeléséhez a polinom szükséges.
+    uid: microsoft.quantum.arithmetic.fixedpoint
+  - name: result
+    summary: Kimeneti rögzített pont szám, amely a P (x) értéket fogja tárolni. Kezdetben a $ \ket{0}$ állapotban kell lennie.
+    uid: microsoft.quantum.arithmetic.fixedpoint
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 3ae6ab137b2c257a98b0ec777c19212d8732f619
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73219110"

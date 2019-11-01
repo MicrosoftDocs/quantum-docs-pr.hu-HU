@@ -1,0 +1,36 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.amplitudeamplification.ampampphasesfixedpoint
+name: AmpAmpPhasesFixedPoint
+type: function
+namespace: Microsoft.Quantum.AmplitudeAmplification
+summary: Kiszámítja a rögzített pont amplitúdó-erősítésének részleges reflexiós fázisait.
+syntax: 'function AmpAmpPhasesFixedPoint (nQueries : Int, successMin : Double) : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases'
+references: >-
+  A "rögzített pontú amplitúdó-erősítés" fázisait a lekérdezések optimális számával használjuk.
+
+
+  - [YoderLowChuang2014](https://arxiv.org/abs/1409.3305) Lásd még: "összetett kvantum-kapuk módszertana"
+
+  - A fázisok [LowYoderChuang2016](https://arxiv.org/abs/1603.03996) a `RotationPhases` formátumban.
+input:
+  content: '(nQueries : Int, successMin : Double)'
+  types:
+  - name: nQueries
+    summary: Az állapot-előkészítési Oracle-nek küldött lekérdezések száma. Páratlan egész számnak kell lennie.
+    isPrimitive: true
+    uid: Int
+  - name: successMin
+    summary: A cél minimális sikerességének valószínűsége.
+    isPrimitive: true
+    uid: Double
+output:
+  content: Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases
+  types:
+  - summary: Fázisok tömbje, amelyek felhasználhatók a rögzített pont amplitúdó-erősítési kvantum-algoritmus megvalósításában.
+    uid: microsoft.quantum.amplitudeamplification.reflectionphases
+ms.openlocfilehash: 0dc2c9b18998bac65cd746b5c4065a09a990ef13
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73215693"

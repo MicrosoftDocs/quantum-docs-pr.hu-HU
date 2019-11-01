@@ -1,0 +1,31 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.math.modulusi
+name: ModulusI
+type: function
+namespace: Microsoft.Quantum.Math
+summary: Kiszámítja `value` adatosztási `modulus`kanonikus maradékát.
+remarks: 'Ez a függvény eltérő módon viselkedik, mint a kezelő `%` C# és a Q #, ahogy az eredményben mindig pozitív egész szám 0 és `modulus - 1`között, még akkor is, ha az érték negatív.'
+syntax: 'function ModulusI (value : Int, modulus : Int) : Int'
+input:
+  content: '(value : Int, modulus : Int)'
+  types:
+  - name: value
+    summary: A maradék kiszámításának értéke
+    isPrimitive: true
+    uid: Int
+  - name: modulus
+    summary: A maradékok által elvégezhető modulusnak pozitívnak kell lennie
+    isPrimitive: true
+    uid: Int
+output:
+  content: Int
+  types:
+  - summary: Egész szám $r $0 és `modulus - 1` között, hogy a `value - r` a modulus alapján osztható meg.
+    isPrimitive: true
+    uid: Int
+ms.openlocfilehash: 1bb3877b4d66b5ad09dabbc072d7d9fb61813745
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73212089"
