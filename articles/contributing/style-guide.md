@@ -1,0 +1,470 @@
+---
+title: 'Q # Style útmutató | Microsoft Docs'
+description: 'Q # Style útmutató'
+author: cgranade
+ms.author: chgranad
+ms.date: 10/12/2018
+ms.topic: article
+uid: microsoft.quantum.contributing.style
+ms.openlocfilehash: 56455e9d5cd452b8620ee794f40563d1d3040193
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: HT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/26/2019
+ms.locfileid: "73183845"
+---
+# <a name="q-style-guide"></a><span data-ttu-id="712d1-103">Q # Style útmutató</span><span class="sxs-lookup"><span data-stu-id="712d1-103">Q# Style Guide</span></span> #
+## <a name="general-conventions"></a><span data-ttu-id="712d1-104">Általános konvenciók</span><span class="sxs-lookup"><span data-stu-id="712d1-104">General Conventions</span></span> ##
+
+<span data-ttu-id="712d1-105">Az ebben az útmutatóban javasolt konvenciók célja, hogy a Q # könnyebben olvasható és értelmezhető programokat és kódtárakat segítse.</span><span class="sxs-lookup"><span data-stu-id="712d1-105">The conventions suggested in this guide are intended to help make programs and libraries written in Q# easier to read and understand.</span></span>
+
+# <a name="guidancetabguidance"></a>[<span data-ttu-id="712d1-106">Útmutatás</span><span class="sxs-lookup"><span data-stu-id="712d1-106">Guidance</span></span>](#tab/guidance)
+
+<span data-ttu-id="712d1-107">Javasoljuk, hogy:</span><span class="sxs-lookup"><span data-stu-id="712d1-107">We suggest:</span></span>
+
+- <span data-ttu-id="712d1-108">Soha ne hagyja figyelmen kívül az egyezményt, hacsak nem ezt szándékosan teszi, hogy könnyebben olvasható és értelmezhető kódot nyújtson a felhasználók számára.</span><span class="sxs-lookup"><span data-stu-id="712d1-108">Never disregard a convention unless you’re doing so intentionally in order to provide more readable and understandable code for your users.</span></span>
+
+# <a name="examplestabexamples"></a>[<span data-ttu-id="712d1-109">Példák</span><span class="sxs-lookup"><span data-stu-id="712d1-109">Examples</span></span>](#tab/examples)
+
+***
+
+## <a name="naming-conventions"></a><span data-ttu-id="712d1-110">Elnevezési konvenciók</span><span class="sxs-lookup"><span data-stu-id="712d1-110">Naming Conventions</span></span> ##
+
+<span data-ttu-id="712d1-111">A Quantum Development Kit szolgáltatásban a függvény-és műveleti nevekre törekszünk, amelyek segítenek a kvantum-fejlesztőknek olyan programok írásához, amelyek könnyen olvashatóak, és a lehető legkevesebb meglepetést okozzák.</span><span class="sxs-lookup"><span data-stu-id="712d1-111">In offering the Quantum Development Kit, we strive for function and operation names that help quantum developers write programs that are easy to read and that minimize surprise.</span></span>
+<span data-ttu-id="712d1-112">Fontos része annak, hogy ha a függvények, műveletek és típusok neveit választjuk, a programozók a Quantum fogalmak kifejezéséhez használt *szókincset* hoznak létre. a választásunk során segítünk vagy meggátoljuk őket abban, hogy világosan kommunikáljanak.</span><span class="sxs-lookup"><span data-stu-id="712d1-112">An important part of that is that when we choose names for functions, operations, and types, we are establishing the *vocabulary* that programmers use to express quantum concepts; with our choices, we either help or hinder them in their effort to clearly communicate.</span></span>
+<span data-ttu-id="712d1-113">Ez felelősséget vállal a számunkra, hogy megbizonyosodjon róla, hogy az általunk bevezetett nevek egyértelműek és nem homályosak.</span><span class="sxs-lookup"><span data-stu-id="712d1-113">This places a responsibility on us to make sure that the names we introduce offer clarity rather than obscurity.</span></span>
+<span data-ttu-id="712d1-114">Ebben a szakaszban részletesen ismertetjük, hogyan teljesítjük ezt a kötelezettséget olyan explicit útmutatás szempontjából, amely segít a legjobb megoldás a Q # fejlesztői közösség számára.</span><span class="sxs-lookup"><span data-stu-id="712d1-114">In this section, we detail how we meet this obligation in terms of explicit guidance that helps us do the best by the Q# development community.</span></span>
+
+### <a name="operations-and-functions"></a><span data-ttu-id="712d1-115">Műveletek és függvények</span><span class="sxs-lookup"><span data-stu-id="712d1-115">Operations and Functions</span></span> ###
+
+<span data-ttu-id="712d1-116">Az egyik első dolog, amit a névnek meg kell állapítania, hogy egy adott szimbólum függvényt vagy műveletet jelöl.</span><span class="sxs-lookup"><span data-stu-id="712d1-116">One of the first things that a name should establish is whether a given symbol represents a function or an operation.</span></span>
+<span data-ttu-id="712d1-117">A függvények és a műveletek közötti különbség elengedhetetlen a kód egy blokkjának megismeréséhez.</span><span class="sxs-lookup"><span data-stu-id="712d1-117">The difference between functions and operations is critical to understanding how a block of code behaves.</span></span>
+<span data-ttu-id="712d1-118">A függvények és a műveletek a felhasználók közötti megkülönböztetésének közléséhez a Q # modellek kvantum-műveleteire támaszkodunk a mellékhatások használatával.</span><span class="sxs-lookup"><span data-stu-id="712d1-118">To communicate the distinction between functions and operations to users, we rely on that Q# models quantum operations through the use of side effects.</span></span>
+<span data-ttu-id="712d1-119">*Ez egy művelet végrehajtása* .</span><span class="sxs-lookup"><span data-stu-id="712d1-119">That is, an operation *does* something.</span></span>
+
+<span data-ttu-id="712d1-120">Ezzel szemben a függvények leírják az adatok közötti matematikai kapcsolatokat.</span><span class="sxs-lookup"><span data-stu-id="712d1-120">By contrast, functions describe the mathematical relationships between data.</span></span>
+<span data-ttu-id="712d1-121">A `Sin(PI() / 2.0)` kifejezés `1.0`, és semmit *sem jelent a* program vagy a qubits állapotával kapcsolatban.</span><span class="sxs-lookup"><span data-stu-id="712d1-121">The expression `Sin(PI() / 2.0)` *is* `1.0`, and implies nothing about the state of a program or its qubits.</span></span>
+
+<span data-ttu-id="712d1-122">Összefoglalva, a műveletek műveleteket végeznek, miközben a függvények a dolgok.</span><span class="sxs-lookup"><span data-stu-id="712d1-122">Summarizing, operations do things while functions are things.</span></span>
+<span data-ttu-id="712d1-123">Ez a különbségtétel azt sugallja, hogy az Operations és a függvények neve a következő: nevek.</span><span class="sxs-lookup"><span data-stu-id="712d1-123">This distinction suggests that we name operations as verbs and functions as nouns.</span></span>
+
+> [!NOTE]
+> <span data-ttu-id="712d1-124">Felhasználó által definiált típus deklarálása esetén az adott típusú példányokat létrehozó új függvény implicit módon van definiálva egy időben.</span><span class="sxs-lookup"><span data-stu-id="712d1-124">When a user-defined type is declared, a new function that constructs instances of that type is implicitly defined at the same time.</span></span>
+> <span data-ttu-id="712d1-125">Ebből a szemszögből a felhasználó által definiált típusok neveként kell nevezni, hogy mind a típus, mind a konstruktor függvény konzisztens névvel rendelkezzen.</span><span class="sxs-lookup"><span data-stu-id="712d1-125">From that perspective, user-defined types should be named as nouns so that both the type itself and the constructor function have consistent names.</span></span>
+
+<span data-ttu-id="712d1-126">Ahol ésszerű, győződjön meg arról, hogy a műveleti nevek olyan műveletekkel kezdődnek, amelyek egyértelműen jelzik a művelet által végrehajtott hatást.</span><span class="sxs-lookup"><span data-stu-id="712d1-126">Where reasonable, ensure that operation names begin with verbs that clearly indicate the effect taken by the operation.</span></span>
+<span data-ttu-id="712d1-127">Példa:</span><span class="sxs-lookup"><span data-stu-id="712d1-127">For example:</span></span>
+
+- `MeasureInteger`
+- `EstimateEnergy`
+- `SampleInt`
+
+<span data-ttu-id="712d1-128">Egy eset, amely különleges említést érdemel, ha egy művelet bemenetként egy másik műveletet hajt végre, és meghívja azt.</span><span class="sxs-lookup"><span data-stu-id="712d1-128">One case that deserves special mention is when an operation takes another operation as input and calls it.</span></span>
+<span data-ttu-id="712d1-129">Ilyen esetekben a bemeneti művelet által végrehajtott művelet nem egyértelmű, ha a külső művelet definiálva van, úgy, hogy a megfelelő művelet ne legyen azonnal egyértelmű.</span><span class="sxs-lookup"><span data-stu-id="712d1-129">In such cases, the action taken by the input operation is not clear when the outer operation is defined, such that the right verb is not immediately clear.</span></span>
+<span data-ttu-id="712d1-130">A `ApplyIf`, a `ApplyToEach`és a `ApplyToFirst`esetében a `Apply`művelet használatát javasoljuk.</span><span class="sxs-lookup"><span data-stu-id="712d1-130">We recommend the verb `Apply`, as in `ApplyIf`, `ApplyToEach`, and `ApplyToFirst`.</span></span>
+<span data-ttu-id="712d1-131">Ebben az esetben más műveletek is hasznosak lehetnek, mint a `IterateThroughCartesianPower`.</span><span class="sxs-lookup"><span data-stu-id="712d1-131">Other verbs may be useful in this case as well, as in `IterateThroughCartesianPower`.</span></span>
+
+| <span data-ttu-id="712d1-132">Művelet</span><span class="sxs-lookup"><span data-stu-id="712d1-132">Verb</span></span> | <span data-ttu-id="712d1-133">Várt hatás</span><span class="sxs-lookup"><span data-stu-id="712d1-133">Expected Effect</span></span> |
+| ---- | ------ |
+| <span data-ttu-id="712d1-134">Jelentkezés</span><span class="sxs-lookup"><span data-stu-id="712d1-134">Apply</span></span> | <span data-ttu-id="712d1-135">A bemenetként megadott műveletet nevezzük</span><span class="sxs-lookup"><span data-stu-id="712d1-135">An operation provided as input is called</span></span> |
+| <span data-ttu-id="712d1-136">Érvényesíteni</span><span class="sxs-lookup"><span data-stu-id="712d1-136">Assert</span></span> | <span data-ttu-id="712d1-137">A lehetséges kvantum-mérés eredményével kapcsolatos hipotézist egy szimulátor ellenőrzi</span><span class="sxs-lookup"><span data-stu-id="712d1-137">A hypothesis about the outcome of a possible quantum measurement is checked by a simulator</span></span> |
+| <span data-ttu-id="712d1-138">Becslés</span><span class="sxs-lookup"><span data-stu-id="712d1-138">Estimate</span></span> | <span data-ttu-id="712d1-139">Egy klasszikus értéket ad vissza, amely egy vagy több mérésből álló becslést jelöl.</span><span class="sxs-lookup"><span data-stu-id="712d1-139">A classical value is returned, representing an estimate drawn from one or more measurements</span></span> |
+| <span data-ttu-id="712d1-140">Intézkedés</span><span class="sxs-lookup"><span data-stu-id="712d1-140">Measure</span></span> | <span data-ttu-id="712d1-141">A rendszer elvégzi a kvantum-mérést, és annak eredményét visszaadja a felhasználónak</span><span class="sxs-lookup"><span data-stu-id="712d1-141">A quantum measurement is performed, and its result is returned to the user</span></span> |
+| <span data-ttu-id="712d1-142">Előkészületek</span><span class="sxs-lookup"><span data-stu-id="712d1-142">Prepare</span></span> | <span data-ttu-id="712d1-143">A qubits adott regisztrálása egy adott állapotba van inicializálva</span><span class="sxs-lookup"><span data-stu-id="712d1-143">A given register of qubits is initialized into a particular state</span></span> |
+| <span data-ttu-id="712d1-144">Minta</span><span class="sxs-lookup"><span data-stu-id="712d1-144">Sample</span></span> | <span data-ttu-id="712d1-145">Egy klasszikus értéket ad vissza véletlenszerűen egy bizonyos eloszlásból</span><span class="sxs-lookup"><span data-stu-id="712d1-145">A classical value is returned at random from some distribution</span></span> |
+
+<span data-ttu-id="712d1-146">A függvények esetében javasoljuk, hogy kerülje a műveletek használatát a közös nevek mellett (lásd az alábbi, a földrajzi nevekkel kapcsolatos útmutatót) vagy a mellékneveket:</span><span class="sxs-lookup"><span data-stu-id="712d1-146">For functions, we suggest avoiding the use of verbs in favor of common nouns (see guidance on proper nouns below) or adjectives:</span></span>
+
+- `ConstantArray`
+- `Head`
+- `LookupFunction`
+
+<span data-ttu-id="712d1-147">Különösen, ha szinte minden esetben azt javasoljuk, hogy a múltbeli táblázatos adatok használatával jelezze, hogy egy függvény neve erősen csatlakozik egy művelethez vagy egy mellékhatáshoz a kvantum-programban másutt.</span><span class="sxs-lookup"><span data-stu-id="712d1-147">In particular, in almost all cases, we suggest using past participles where appropriate to indicate that a function name is strongly connected to an action or side effect elsewhere in a quantum program.</span></span>
+<span data-ttu-id="712d1-148">A `ControlledOnInt` például a "vezérlő" művelet "vezérlőelem" kifejezésének "a" kifejezést használja annak jelzésére, hogy a függvény melléknévként viselkedik az argumentumának módosításához.</span><span class="sxs-lookup"><span data-stu-id="712d1-148">For example,  `ControlledOnInt` uses the part participle form of the verb "control" to indicate that the function acts as an adjective to modify its argument.</span></span>
+<span data-ttu-id="712d1-149">Ennek a névnek a további előnye, hogy a beépített `Controlled`-inaktívnak megfelelő szemantikai feltételnek felel meg, ahogy azt az alábbiakban tárgyaljuk.</span><span class="sxs-lookup"><span data-stu-id="712d1-149">This name has the additional benefit of matching the semantics of the built-in `Controlled` functor, as discussed further below.</span></span>
+<span data-ttu-id="712d1-150">Hasonlóképpen, az _ügynökök_ nevei a függvények és a UDT nevéből is felhasználhatók a műveleti nevekből, ahogy a neve `Encoder` a `Encode`hoz szorosan társított UDT esetében.</span><span class="sxs-lookup"><span data-stu-id="712d1-150">Similarly, _agent nouns_ can be used to construct function and UDT names from operation names, as in the case of the name `Encoder` for a UDT that is strongly associated with `Encode`.</span></span>
+
+# <a name="guidancetabguidance"></a>[<span data-ttu-id="712d1-151">Útmutatás</span><span class="sxs-lookup"><span data-stu-id="712d1-151">Guidance</span></span>](#tab/guidance)
+
+<span data-ttu-id="712d1-152">Javasoljuk, hogy:</span><span class="sxs-lookup"><span data-stu-id="712d1-152">We suggest:</span></span>
+
+- <span data-ttu-id="712d1-153">Műveletek neveihez használjon műveleteket.</span><span class="sxs-lookup"><span data-stu-id="712d1-153">Use verbs for operation names.</span></span>
+- <span data-ttu-id="712d1-154">Nevek vagy melléknevek használata a függvények neveihez.</span><span class="sxs-lookup"><span data-stu-id="712d1-154">Use nouns or adjectives for function names.</span></span>
+- <span data-ttu-id="712d1-155">A felhasználó által definiált típusokhoz és attribútumokhoz tartozó nevek használata.</span><span class="sxs-lookup"><span data-stu-id="712d1-155">Use nouns for user-defined types and attributes.</span></span>
+- <span data-ttu-id="712d1-156">Az összes hívható név esetén a `CamelCase` erős preferencia alapján `pascalCase`, `snake_case`vagy `ANGRY_CASE`.</span><span class="sxs-lookup"><span data-stu-id="712d1-156">For all callable names, use `CamelCase` in strong preference to `pascalCase`, `snake_case`, or `ANGRY_CASE`.</span></span> <span data-ttu-id="712d1-157">Különösen ügyeljen arra, hogy a hívható nevek nagybetűvel kezdődjön.</span><span class="sxs-lookup"><span data-stu-id="712d1-157">In particular, ensure that callable names start with uppercase letters.</span></span>
+- <span data-ttu-id="712d1-158">Az összes helyi változó esetében a `pascalCase` erős preferencia használatával `CamelCase`, `snake_case`vagy `ANGRY_CASE`.</span><span class="sxs-lookup"><span data-stu-id="712d1-158">For all local variables, use `pascalCase` in strong preference to `CamelCase`, `snake_case`, or `ANGRY_CASE`.</span></span> <span data-ttu-id="712d1-159">Különösen ügyeljen arra, hogy a helyi változók kisbetűkkel kezdődjön.</span><span class="sxs-lookup"><span data-stu-id="712d1-159">In particular, ensure that local variables start with lowercase letters.</span></span>
+- <span data-ttu-id="712d1-160">Az aláhúzások használatának elkerülése a függvények és a műveletek neveiben `_` Ha további hierarchiára van szükség, használja a névtereket és a névterek aliasait.</span><span class="sxs-lookup"><span data-stu-id="712d1-160">Avoid the use of underscores `_` in function and operation names; where additional levels of hierarchy are needed, use namespaces and namespace aliases.</span></span>
+
+# <a name="examplestabexamples"></a>[<span data-ttu-id="712d1-161">Példák</span><span class="sxs-lookup"><span data-stu-id="712d1-161">Examples</span></span>](#tab/examples)
+
+|   | <span data-ttu-id="712d1-162">Név</span><span class="sxs-lookup"><span data-stu-id="712d1-162">Name</span></span> | <span data-ttu-id="712d1-163">Leírás</span><span class="sxs-lookup"><span data-stu-id="712d1-163">Description</span></span> |
+|---|------|-------------|
+| <span data-ttu-id="712d1-164">☑</span><span class="sxs-lookup"><span data-stu-id="712d1-164">☑</span></span> | `operation ReflectAboutStart` | <span data-ttu-id="712d1-165">A művelet hatásának jelzéséhez törölje a műveletet ("tükrözze").</span><span class="sxs-lookup"><span data-stu-id="712d1-165">Clear use of a verb ("reflect") to indicate the effect of the operation.</span></span> |
+| <span data-ttu-id="712d1-166">☒</span><span class="sxs-lookup"><span data-stu-id="712d1-166">☒</span></span> | <s>`operation XRotation`</s> | <span data-ttu-id="712d1-167">A főnévi kifejezés a művelet helyett a függvényt javasolja.</span><span class="sxs-lookup"><span data-stu-id="712d1-167">Use of noun phrase suggests function, rather than operation.</span></span> |
+| <span data-ttu-id="712d1-168">☒</span><span class="sxs-lookup"><span data-stu-id="712d1-168">☒</span></span> | <s>`operation search_oracle`</s> | <span data-ttu-id="712d1-169">`snake_case` ellentétes Q # jelölés használata.</span><span class="sxs-lookup"><span data-stu-id="712d1-169">Use of `snake_case` contravenes Q# notation.</span></span> |
+| <span data-ttu-id="712d1-170">☒</span><span class="sxs-lookup"><span data-stu-id="712d1-170">☒</span></span> | <s>`operation Search_Oracle`</s> | <span data-ttu-id="712d1-171">A belső és a műveleti név közötti aláhúzás használata a Q # jelöléssel ellentétes.</span><span class="sxs-lookup"><span data-stu-id="712d1-171">Use of underscores internal to operation name contravenes Q# notation.</span></span> |
+| <span data-ttu-id="712d1-172">☑</span><span class="sxs-lookup"><span data-stu-id="712d1-172">☑</span></span> | `function StatePreparationOracle` | <span data-ttu-id="712d1-173">A főnévi kifejezés használata azt sugallja, hogy a függvény egy műveletet ad vissza.</span><span class="sxs-lookup"><span data-stu-id="712d1-173">Use of noun phrase suggests that the function returns an operation.</span></span> |
+| <span data-ttu-id="712d1-174">☑</span><span class="sxs-lookup"><span data-stu-id="712d1-174">☑</span></span> | `function EqualityFact` | <span data-ttu-id="712d1-175">A főnév ("Fact") egyértelmű használata annak jelzésére, hogy ez egy függvény, míg a melléknév.</span><span class="sxs-lookup"><span data-stu-id="712d1-175">Clear use of noun ("fact") to indicate that this is a function, while the adjective.</span></span> |
+| <span data-ttu-id="712d1-176">☒</span><span class="sxs-lookup"><span data-stu-id="712d1-176">☒</span></span> | <s>`function GetRotationAngles`</s> | <span data-ttu-id="712d1-177">Az ige ("Get") használata azt jelzi, hogy ez egy művelet.</span><span class="sxs-lookup"><span data-stu-id="712d1-177">Use of verb ("get") suggests that this is an operation.</span></span> |
+| <span data-ttu-id="712d1-178">☑</span><span class="sxs-lookup"><span data-stu-id="712d1-178">☑</span></span> | `newtype GeneratorTerm` | <span data-ttu-id="712d1-179">A főnévi kifejezés használata egyértelműen a UDT konstruktor hívásának eredményét jelenti.</span><span class="sxs-lookup"><span data-stu-id="712d1-179">Use of noun phrase clearly refers to the result of calling the UDT constructor.</span></span> |
+| <span data-ttu-id="712d1-180">☒</span><span class="sxs-lookup"><span data-stu-id="712d1-180">☒</span></span> | <s>`@Attribute() newtype RunOnce()`</s> | <span data-ttu-id="712d1-181">A ige kifejezés használata azt sugallja, hogy a UDT konstruktora egy művelet.</span><span class="sxs-lookup"><span data-stu-id="712d1-181">Use of verb phrase suggests that the UDT constructor is an operation.</span></span> |
+| <span data-ttu-id="712d1-182">☑</span><span class="sxs-lookup"><span data-stu-id="712d1-182">☑</span></span> | `@Attribute() newtype Deprecated(Reason : String)` | <span data-ttu-id="712d1-183">A főnévi kifejezés használata az attribútum használatát közli.</span><span class="sxs-lookup"><span data-stu-id="712d1-183">Use of noun phrase communicates the use of the attribute.</span></span> |
+
+***
+
+### <a name="shorthand-and-abbreviations"></a><span data-ttu-id="712d1-184">Rövidítések és rövidítések</span><span class="sxs-lookup"><span data-stu-id="712d1-184">Shorthand and Abbreviations</span></span> ###
+
+<span data-ttu-id="712d1-185">A fenti tanácsokban a Gyorsírás számos formája létezik, amely a kvantum-számítástechnika általános és átható használatát látja el.</span><span class="sxs-lookup"><span data-stu-id="712d1-185">The above advice notwithstanding, there are many forms of shorthand that see common and pervasive use in quantum computing.</span></span>
+<span data-ttu-id="712d1-186">Javasoljuk, hogy meglévő és közös gyorsírást használjon, ahol létezik, különösen olyan műveletek esetén, amelyek a célszámítógép működéséhez tartoznak.</span><span class="sxs-lookup"><span data-stu-id="712d1-186">We suggest using existing and common shorthand where it exists, especially for operations that are intrinsic to the operation of a target machine.</span></span>
+<span data-ttu-id="712d1-187">Például a `ApplyX`helyett `X` nevet választjuk, `RotateAboutZ`helyett pedig `Rz`.</span><span class="sxs-lookup"><span data-stu-id="712d1-187">For example, we choose the name `X` instead of `ApplyX`, and `Rz` instead of `RotateAboutZ`.</span></span>
+<span data-ttu-id="712d1-188">Az ilyen rövidítések használatakor a művelet neve csak nagybetűs lehet (például: `MAJ`).</span><span class="sxs-lookup"><span data-stu-id="712d1-188">When using such shorthand, operation names should be all uppercase (e.g.: `MAJ`).</span></span>
+
+<span data-ttu-id="712d1-189">Erre az egyezményre akkor van szükség, ha gyakran használt betűszók és nagybetűk, például "QFT" a "Quantum Fourier átalakítás" kifejezésre alkalmazzák.</span><span class="sxs-lookup"><span data-stu-id="712d1-189">Some care is required when applying this convention in the case of commonly used acronyms and initialisms such as "QFT" for "quantum Fourier transform."</span></span>
+<span data-ttu-id="712d1-190">Javasoljuk, hogy az általános .NET-konvenciókat a betűszók és a nagyszótárak teljes névben való használatára ajánljuk, amely az alábbiakat írja elő:</span><span class="sxs-lookup"><span data-stu-id="712d1-190">We suggest following general .NET conventions for the use of acronyms and initialisms in full names, which prescribe that:</span></span>
+
+- <span data-ttu-id="712d1-191">a kétbetűs mozaikszavak és a nagyvállalatok neve nagybetűs (pl.: `BE` a "big-endian" esetében),</span><span class="sxs-lookup"><span data-stu-id="712d1-191">two-letter acronyms and initialisms are named in upper case (e.g.: `BE` for "big-endian"),</span></span>
+- <span data-ttu-id="712d1-192">minden további betűszó és nagybetűk neve `CamelCase` (például: `Qft` a "Quantum Fourier Transform")</span><span class="sxs-lookup"><span data-stu-id="712d1-192">all longer acronyms and initialisms are named in `CamelCase` (e.g.: `Qft` for "quantum Fourier transform")</span></span>
+
+<span data-ttu-id="712d1-193">Ennek megfelelően a QFT megvalósító művelet vagy `QFT` lehet gyorsírásként, vagy `ApplyQft`ként kiírva.</span><span class="sxs-lookup"><span data-stu-id="712d1-193">Thus, an operation implementing the QFT could either be called `QFT` as shorthand, or written out as `ApplyQft`.</span></span>
+
+<span data-ttu-id="712d1-194">A gyakran használt műveletek és függvények esetében érdemes lehet egy rövidített nevet megadni egy hosszú űrlap _aliasként_ való megadásához:</span><span class="sxs-lookup"><span data-stu-id="712d1-194">For particularly commonly used operations and functions, it may be desirable to provide a shorthand name as an _alias_ for a longer form:</span></span>
+
+```qsharp
+operation CCNOT(control0 : Qubit, control1 : Qubit, target : Qubit)
+is Adj + Ctl {
+    Controlled X([control0, control1], target);
+}
+```
+
+# <a name="guidancetabguidance"></a>[<span data-ttu-id="712d1-195">Útmutatás</span><span class="sxs-lookup"><span data-stu-id="712d1-195">Guidance</span></span>](#tab/guidance)
+
+<span data-ttu-id="712d1-196">Javasoljuk, hogy:</span><span class="sxs-lookup"><span data-stu-id="712d1-196">We suggest:</span></span>
+
+- <span data-ttu-id="712d1-197">Ha szükséges, tekintse meg a gyakran elfogadott és széles körben használt rövidített neveket.</span><span class="sxs-lookup"><span data-stu-id="712d1-197">Consider commonly accepted and widely used shorthand names when appropriate.</span></span>
+- <span data-ttu-id="712d1-198">Kis-és nagybetűk használata a gyorsíráshoz.</span><span class="sxs-lookup"><span data-stu-id="712d1-198">Use uppercase for shorthand.</span></span>
+- <span data-ttu-id="712d1-199">Rövid (kétbetűs) betűszók és nagybetűk használata.</span><span class="sxs-lookup"><span data-stu-id="712d1-199">Use uppercase for short (two-letter) acronyms and initialisms.</span></span>
+- <span data-ttu-id="712d1-200">A hosszabb (három vagy több betűs) betűszók és a nagybetűk használatát `CamelCase` használhatja.</span><span class="sxs-lookup"><span data-stu-id="712d1-200">Use `CamelCase` for longer (three or more letter) acronyms and initialisms.</span></span>
+
+# <a name="examplestabexamples"></a>[<span data-ttu-id="712d1-201">Példák</span><span class="sxs-lookup"><span data-stu-id="712d1-201">Examples</span></span>](#tab/examples)
+
+|   | <span data-ttu-id="712d1-202">Név</span><span class="sxs-lookup"><span data-stu-id="712d1-202">Name</span></span> | <span data-ttu-id="712d1-203">Leírás</span><span class="sxs-lookup"><span data-stu-id="712d1-203">Description</span></span> |
+|---|------|-------------|
+| <span data-ttu-id="712d1-204">☑</span><span class="sxs-lookup"><span data-stu-id="712d1-204">☑</span></span> | `X` | <span data-ttu-id="712d1-205">Jól ismert Gyorsírás a "$X $ átalakítás alkalmazása"</span><span class="sxs-lookup"><span data-stu-id="712d1-205">Well-understood shorthand for "apply an $X$ transformation"</span></span> |
+| <span data-ttu-id="712d1-206">☑</span><span class="sxs-lookup"><span data-stu-id="712d1-206">☑</span></span> | `CNOT` | <span data-ttu-id="712d1-207">Jól értelmezhető Gyorsírás a "vezérelt – nem"</span><span class="sxs-lookup"><span data-stu-id="712d1-207">Well-understood shorthand for "controlled-NOT"</span></span> |
+| <span data-ttu-id="712d1-208">☒</span><span class="sxs-lookup"><span data-stu-id="712d1-208">☒</span></span> | <s>`Cnot`</s> | <span data-ttu-id="712d1-209">A Gyorsírás nem lehet `CamelCase`ban.</span><span class="sxs-lookup"><span data-stu-id="712d1-209">Shorthand should not be in `CamelCase`.</span></span> |
+| <span data-ttu-id="712d1-210">☑</span><span class="sxs-lookup"><span data-stu-id="712d1-210">☑</span></span> | `ApplyQft` | <span data-ttu-id="712d1-211">A "QFT" általános inicializálás a hosszú formátumú név részeként jelenik meg.</span><span class="sxs-lookup"><span data-stu-id="712d1-211">Common initialism "QFT" appears as a part of a long-form name.</span></span> |
+| <span data-ttu-id="712d1-212">☑</span><span class="sxs-lookup"><span data-stu-id="712d1-212">☑</span></span> | `QFT` | <span data-ttu-id="712d1-213">A "QFT" általános inicializálás egy rövidített név részeként jelenik meg.</span><span class="sxs-lookup"><span data-stu-id="712d1-213">Common initialism "QFT" appears as a part of a shorthand name.</span></span> |
+
+
+
+***
+
+
+### <a name="proper-nouns-in-names"></a><span data-ttu-id="712d1-214">Megfelelő nevek a névben</span><span class="sxs-lookup"><span data-stu-id="712d1-214">Proper Nouns in Names</span></span> ###
+
+<span data-ttu-id="712d1-215">A fizikában gyakran előfordul, hogy az első személynek a róluk való közzétételét követően a legtöbb nem fizikus nem ismeri a mindenki nevét és az előzményeket.</span><span class="sxs-lookup"><span data-stu-id="712d1-215">While in physics it is common to name things after the first person to publish about them, most non-physicists aren’t familiar with everyone’s names and all of the history.</span></span>
+<span data-ttu-id="712d1-216">A fizika elnevezési konvenciói alapján túl nagy mértékben támaszkodhat a beléptetésre, mivel a más hátterű felhasználóknak nagy mennyiségű látszólag átlátszatlan nevet kell megtanulniuk ahhoz, hogy közös műveleteket és fogalmakat lehessen használni.</span><span class="sxs-lookup"><span data-stu-id="712d1-216">Relying too heavily on naming conventions from physics can thus put up a substantial barrier to entry, as users from other backgrounds must learn a large number of seemingly opaque names in order to use common operations and concepts.</span></span>
+<!-- An important part of the task of reducing confusion is to make code more accessible.
+Especially in a field such as quantum computing that is rich with domain expertise, we must at all times be cognizant of the demands we place on that expertise as we design quantum software.
+In naming code symbols, one way that this cognizance expresses itself is as an awareness of the convention from physics of adopting as the names of algorithms and operations the names of their original publishers.
+While we must maintain the history and intellectual provenance of concepts in quantum computing, demanding that all users be versed in this history to use even the most basic of functions and operations places a barrier to entry that is in most cases severe enough to even present an ethical compromise. -->
+<span data-ttu-id="712d1-217">Ezért azt javasoljuk, hogy ha ésszerű, a fogalmakat leíró általános nevek erős előnyben legyenek kitéve a fogalmak közzétételének előzményeit leíró földrajzi nevek iránt.</span><span class="sxs-lookup"><span data-stu-id="712d1-217">Thus, we recommend that wherever reasonable, common nouns that describe a concept be adopted in strong preference to proper nouns that describe the publication history of a concept.</span></span>
+<span data-ttu-id="712d1-218">Ebben az esetben az "Fredkin" és a "Toffoli" műveletet gyakran nevezik a tudományos irodalomban, de a Q # elsődlegesen a `CSWAP` és `CCNOT`.</span><span class="sxs-lookup"><span data-stu-id="712d1-218">As a particular example, the singly controlled SWAP and doubly controlled NOT operations are often called the "Fredkin" and "Toffoli" operations in academic literature, but are identified in Q# primarily as `CSWAP` and `CCNOT`.</span></span>
+<span data-ttu-id="712d1-219">Az API-dokumentációs megjegyzések mindkét esetben a megfelelő neveken alapuló szinonimákat biztosítanak az összes megfelelő hivatkozással együtt.</span><span class="sxs-lookup"><span data-stu-id="712d1-219">In both cases, the API documentation comments provide synonymous names based on proper nouns, along with all appropriate citations.</span></span>
+
+<span data-ttu-id="712d1-220">Ez a beállítás különösen fontos, mivel a megfelelő főnevek bizonyos használata mindig szükséges – a Q # a számos klasszikus nyelv által meghatározott hagyományt követi, és a `Bool` típusokra hivatkozik a logikai logikára, amely a tiszteletben megnevezett George Boole-től.</span><span class="sxs-lookup"><span data-stu-id="712d1-220">This preference is especially important given that some usage of proper nouns will always be necessary — Q# follows the tradition set by many classical languages, for instance, and refers to `Bool` types in reference to Boolean logic, which is in turn named in honor of George Boole.</span></span>
+<span data-ttu-id="712d1-221">Ehhez hasonló módon kell elnevezni néhány kvantum-fogalmat, például a Q # nyelvhez beépített `Pauli` típust.</span><span class="sxs-lookup"><span data-stu-id="712d1-221">A few quantum concepts similarly are named in a similar fashion, including the `Pauli` type built-in to the Q# language.</span></span>
+<span data-ttu-id="712d1-222">A megfelelő főnevek használatának minimalizálása, ha az ilyen használat nem alapvető fontosságú, csökkentik annak a hatását, hogy a megfelelő földrajzi nevek ne legyenek ésszerűen elkerülhetők.</span><span class="sxs-lookup"><span data-stu-id="712d1-222">By minimizing the usage of proper nouns where such usage is not essential, we reduce the impact where proper nouns cannot be reasonably avoided.</span></span>
+
+# <a name="guidancetabguidance"></a>[<span data-ttu-id="712d1-223">Útmutatás</span><span class="sxs-lookup"><span data-stu-id="712d1-223">Guidance</span></span>](#tab/guidance) 
+
+<span data-ttu-id="712d1-224">Javasoljuk, hogy:</span><span class="sxs-lookup"><span data-stu-id="712d1-224">We suggest:</span></span>
+
+- <span data-ttu-id="712d1-225">Kerülje a nevekben a megfelelő nevek használatát.</span><span class="sxs-lookup"><span data-stu-id="712d1-225">Avoid the use of proper nouns in names.</span></span>
+
+# <a name="examplestabexamples"></a>[<span data-ttu-id="712d1-226">Példák</span><span class="sxs-lookup"><span data-stu-id="712d1-226">Examples</span></span>](#tab/examples)
+
+***
+
+### <a name="type-conversions"></a><span data-ttu-id="712d1-227">Típus konverziója</span><span class="sxs-lookup"><span data-stu-id="712d1-227">Type Conversions</span></span> ###
+
+<span data-ttu-id="712d1-228">Mivel a Q # egy erősen és statikusan beírt nyelv, az egyik típusú érték csak egy másik típusú értékként használható egy típus-átalakítási függvény kifejezett hívásával.</span><span class="sxs-lookup"><span data-stu-id="712d1-228">Since Q# is a strongly and staticly typed language, a value of one type can only be used as a value of another type by using an explicit call to a type conversion function.</span></span>
+<span data-ttu-id="712d1-229">Ez ellentétben áll azokkal a nyelvekkel, amelyek lehetővé teszik, hogy az értékek implicit módon módosítsák a típusokat (pl.: Type Promotion) vagy a casting használatával.</span><span class="sxs-lookup"><span data-stu-id="712d1-229">This is in contrast to languages which allow for values to change types implicitly (e.g.: type promotion), or through casting.</span></span>
+<span data-ttu-id="712d1-230">Ennek eredményeképpen az átalakítási függvények fontos szerepet játszanak a Q # könyvtár fejlesztésében, és az elnevezéssel kapcsolatban leggyakrabban felmerülő döntések egyikét alkotják.</span><span class="sxs-lookup"><span data-stu-id="712d1-230">As a result, type conversion functions play an important role in Q# library development, and comprise one of the more commonly encountered decisions about naming.</span></span>
+<span data-ttu-id="712d1-231">Azonban ez azt jelzi, hogy mivel a Type konverziók mindig _determinisztikus_, a függvények is megírhatók, ezért a fenti tanács alá tartoznak.</span><span class="sxs-lookup"><span data-stu-id="712d1-231">We note, however, that since type conversions are always _deterministic_, they can be written as functions and thus fall under the advice above.</span></span>
+<span data-ttu-id="712d1-232">Különösen azt javasoljuk, hogy az átalakítási függvények soha ne legyenek elnevezve műveleteknek (pl.: `ConvertToX`) vagy a határozószók előírási kifejezéseknek (`ToX`), hanem a forrás-és a rendeltetési típust jelző, melléknévi (`XAsY`).</span><span class="sxs-lookup"><span data-stu-id="712d1-232">In particular, we suggest that type conversion functions should never be named as verbs (e.g.: `ConvertToX`) or adverb prepositional phrases (`ToX`), but should be named as adjective prepositional phrases that indicate the source and destination types (`XAsY`).</span></span>
+<span data-ttu-id="712d1-233">A típus átalakítási függvények neveiben szereplő tömb típusok listázásakor ajánlott a Gyorsírás `Arr`.</span><span class="sxs-lookup"><span data-stu-id="712d1-233">When listing array types in type conversion function names, we recommend the shorthand `Arr`.</span></span>
+<span data-ttu-id="712d1-234">A kivételes körülmények korlátozásával azt javasoljuk, hogy az összes típus-átalakítási függvényt `As` használatával lehessen elnevezni, hogy gyorsan azonosíthatóak legyenek.</span><span class="sxs-lookup"><span data-stu-id="712d1-234">Barring exceptional circumstances, we recommend that all type conversion functions be named using `As` so that they can be quickly identified.</span></span>
+
+# <a name="guidancetabguidance"></a>[<span data-ttu-id="712d1-235">Útmutatás</span><span class="sxs-lookup"><span data-stu-id="712d1-235">Guidance</span></span>](#tab/guidance)
+
+<span data-ttu-id="712d1-236">Javasoljuk, hogy:</span><span class="sxs-lookup"><span data-stu-id="712d1-236">We suggest:</span></span>
+
+- <span data-ttu-id="712d1-237">Ha egy függvény `X` típusú értéket konvertál `Y`típusú értékre, használja a `AsY` vagy a `XAsY`nevet.</span><span class="sxs-lookup"><span data-stu-id="712d1-237">If a function converts a value of type `X` to a value of type `Y`, use either the name `AsY` or `XAsY`.</span></span>
+
+# <a name="examplestabexamples"></a>[<span data-ttu-id="712d1-238">Példák</span><span class="sxs-lookup"><span data-stu-id="712d1-238">Examples</span></span>](#tab/examples)
+
+|   | <span data-ttu-id="712d1-239">Név</span><span class="sxs-lookup"><span data-stu-id="712d1-239">Name</span></span> | <span data-ttu-id="712d1-240">Leírás</span><span class="sxs-lookup"><span data-stu-id="712d1-240">Description</span></span> |
+|---|------|-------------|
+| <span data-ttu-id="712d1-241">☒</span><span class="sxs-lookup"><span data-stu-id="712d1-241">☒</span></span> | <s>`ToDouble`</s> | <span data-ttu-id="712d1-242">A "to" utasítás a művelethez tartozó kifejezést eredményez, és nem függvényt jelez.</span><span class="sxs-lookup"><span data-stu-id="712d1-242">The preposition "to" results in a verb phrase, indicating an operation and not a function.</span></span> |
+| <span data-ttu-id="712d1-243">☒</span><span class="sxs-lookup"><span data-stu-id="712d1-243">☒</span></span> | <s>`AsDouble`</s> | <span data-ttu-id="712d1-244">A bemeneti típus nem egyértelmű a függvény nevéből.</span><span class="sxs-lookup"><span data-stu-id="712d1-244">The input type is not clear from the function name.</span></span> |
+| <span data-ttu-id="712d1-245">☒</span><span class="sxs-lookup"><span data-stu-id="712d1-245">☒</span></span> | <s>`PauliArrFromBoolArr`</s> | <span data-ttu-id="712d1-246">A bemeneti és a kimeneti típusok nem megfelelő sorrendben jelennek meg.</span><span class="sxs-lookup"><span data-stu-id="712d1-246">The input and output types appear in the wrong order.</span></span> |
+| <span data-ttu-id="712d1-247">☑</span><span class="sxs-lookup"><span data-stu-id="712d1-247">☑</span></span> | `ResultArrAsBoolArr` | <span data-ttu-id="712d1-248">A bemeneti típusok és a kimeneti típusok egyaránt törlődnek.</span><span class="sxs-lookup"><span data-stu-id="712d1-248">Both the input types and output types are clear.</span></span> |
+
+***
+
+### <a name="private-or-internal-names"></a><span data-ttu-id="712d1-249">Magán-vagy belső nevek</span><span class="sxs-lookup"><span data-stu-id="712d1-249">Private or Internal Names</span></span> ###
+
+<span data-ttu-id="712d1-250">Sok esetben a név kifejezetten a belső könyvtárakhoz vagy projektekhez való használatra szolgál, és nem a könyvtár által kínált API garantált részét képezi.</span><span class="sxs-lookup"><span data-stu-id="712d1-250">In many cases, a name is intended strictly for use internal to a library or project, and is not a guaranteed part of the API offered by a library.</span></span>
+<span data-ttu-id="712d1-251">Hasznos lehet egyértelműen jelezni, hogy ez a helyzet az elnevezési függvények és műveletek esetében, hogy a csak belső kódok véletlen függőségei legyenek egyértelműek.</span><span class="sxs-lookup"><span data-stu-id="712d1-251">It is helpful to clearly indicate that this is the case when naming functions and operations so that accidental dependencies on internal-only code are made obvious.</span></span>
+<span data-ttu-id="712d1-252">Ha egy művelet vagy függvény nem közvetlen használatra készült, hanem egy, a részleges alkalmazás által elvégezhető egyező meghívónak kell használnia, érdemes lehet olyan nevet használni, amely a részben alkalmazott hívható `_`.</span><span class="sxs-lookup"><span data-stu-id="712d1-252">If an operation or function is not intended for direct use, but rather should be used by a matching callable which acts by partial application, consider using a name starting with `_` for the callable that is partially applied.</span></span>
+
+# <a name="guidancetabguidance"></a>[<span data-ttu-id="712d1-253">Útmutatás</span><span class="sxs-lookup"><span data-stu-id="712d1-253">Guidance</span></span>](#tab/guidance)
+
+<span data-ttu-id="712d1-254">Javasoljuk, hogy:</span><span class="sxs-lookup"><span data-stu-id="712d1-254">We suggest:</span></span>
+
+- <span data-ttu-id="712d1-255">Ha egy függvény, művelet vagy felhasználó által definiált típus nem része a Q # függvénytárának vagy programjának a nyilvános API-nak, akkor győződjön meg arról, hogy a neve kezdő aláhúzással (`_`) kezdődik.</span><span class="sxs-lookup"><span data-stu-id="712d1-255">When a function, operation, or user-defined type is not a part of the public API for a Q# library or program, ensure that its name begins with a leading underscore (`_`).</span></span>
+
+# <a name="examplestabexamples"></a>[<span data-ttu-id="712d1-256">Példák</span><span class="sxs-lookup"><span data-stu-id="712d1-256">Examples</span></span>](#tab/examples)
+
+|   | <span data-ttu-id="712d1-257">Név</span><span class="sxs-lookup"><span data-stu-id="712d1-257">Name</span></span> | <span data-ttu-id="712d1-258">Leírás</span><span class="sxs-lookup"><span data-stu-id="712d1-258">Description</span></span> |
+|---|------|-------------|
+| <span data-ttu-id="712d1-259">☒</span><span class="sxs-lookup"><span data-stu-id="712d1-259">☒</span></span> | <s>`ApplyDecomposedOperation_`</s> | <span data-ttu-id="712d1-260">Az aláhúzás `_` nem szerepelhet a név végén.</span><span class="sxs-lookup"><span data-stu-id="712d1-260">The underscore `_` should not appear at the end of the name.</span></span> |
+| <span data-ttu-id="712d1-261">☑</span><span class="sxs-lookup"><span data-stu-id="712d1-261">☑</span></span> | `_ApplyDecomposedOperation` | <span data-ttu-id="712d1-262">Az aláhúzás `_` az elején egyértelműen azt jelzi, hogy ez a művelet csak belső használatra szolgál.</span><span class="sxs-lookup"><span data-stu-id="712d1-262">The underscore `_` at the beginning clearly indicates that this operation is for internal use only.</span></span> |
+
+***
+
+### <a name="variants"></a><span data-ttu-id="712d1-263">Változatok</span><span class="sxs-lookup"><span data-stu-id="712d1-263">Variants</span></span> ###
+
+<span data-ttu-id="712d1-264">Bár ez a korlátozás nem szűnik meg a Q # jövőbeli verzióiban, jelenleg a kapcsolódó műveletek vagy függvények olyan csoportjai lesznek, amelyek megkülönböztetni egymástól a bemenők által támogatott, illetve az argumentumok konkrét típusait.</span><span class="sxs-lookup"><span data-stu-id="712d1-264">Though this limitation may not persist in future versions of Q#, it is presently the case that there will often be groups of related operations or functions that are distinguished by which functors their inputs support, or by the concrete types of their arguments.</span></span>
+<span data-ttu-id="712d1-265">Ezek a csoportok megkülönböztetni ugyanazt a legfelső szintű nevet, majd egy vagy két betűt, amelyek jelzik a változatát.</span><span class="sxs-lookup"><span data-stu-id="712d1-265">These groups can be distinguished by using the same root name, followed by one or two letters that indicate its variant.</span></span>
+
+| <span data-ttu-id="712d1-266">Utótag</span><span class="sxs-lookup"><span data-stu-id="712d1-266">Suffix</span></span> | <span data-ttu-id="712d1-267">Jelentés</span><span class="sxs-lookup"><span data-stu-id="712d1-267">Meaning</span></span> |
+|--------|---------|
+| `A` | <span data-ttu-id="712d1-268">A `Adjoint` támogatásához szükséges bemenet</span><span class="sxs-lookup"><span data-stu-id="712d1-268">Input expected to support `Adjoint`</span></span> |
+| `C` | <span data-ttu-id="712d1-269">A `Controlled` támogatásához szükséges bemenet</span><span class="sxs-lookup"><span data-stu-id="712d1-269">Input expected to support `Controlled`</span></span> |
+| `CA` | <span data-ttu-id="712d1-270">A `Controlled` és `Adjoint` támogatásához szükséges bemenet</span><span class="sxs-lookup"><span data-stu-id="712d1-270">Input expected to support `Controlled` and `Adjoint`</span></span> |
+| `I` | <span data-ttu-id="712d1-271">A bemenet vagy bemenet típusa `Int`</span><span class="sxs-lookup"><span data-stu-id="712d1-271">Input or inputs are of type `Int`</span></span> |
+| `D` | <span data-ttu-id="712d1-272">A bemenet vagy bemenet típusa `Double`</span><span class="sxs-lookup"><span data-stu-id="712d1-272">Input or inputs are of type `Double`</span></span> |
+| `L` | <span data-ttu-id="712d1-273">A bemenet vagy bemenet típusa `BigInt`</span><span class="sxs-lookup"><span data-stu-id="712d1-273">Input or inputs are of type `BigInt`</span></span> |
+
+# <a name="guidancetabguidance"></a>[<span data-ttu-id="712d1-274">Útmutatás</span><span class="sxs-lookup"><span data-stu-id="712d1-274">Guidance</span></span>](#tab/guidance)
+
+<span data-ttu-id="712d1-275">Javasoljuk, hogy:</span><span class="sxs-lookup"><span data-stu-id="712d1-275">We suggest:</span></span>
+
+- <span data-ttu-id="712d1-276">Ha egy függvény vagy művelet nem kapcsolódik hasonló funkciókhoz vagy műveletekhez a bemenetek típusai és a nem megfelelő működésének támogatásával, ne használjon utótagot.</span><span class="sxs-lookup"><span data-stu-id="712d1-276">If a function or operation is not related to any similar functions or operations by the types and functor support of their inputs, do not use a suffix.</span></span>
+- <span data-ttu-id="712d1-277">Ha egy függvény vagy művelet bármely hasonló függvényhez vagy művelethez kapcsolódik, és a bemenetek típusai és az azokon lévők is támogatják, a változatok megkülönböztetéséhez használja a fenti táblázatban szereplő utótagokat.</span><span class="sxs-lookup"><span data-stu-id="712d1-277">If a function or operation is related to any similar functions or operations by the types and functor support of their inputs, use suffixes as in the table above to distinguish variants.</span></span>
+
+# <a name="examplestabexamples"></a>[<span data-ttu-id="712d1-278">Példák</span><span class="sxs-lookup"><span data-stu-id="712d1-278">Examples</span></span>](#tab/examples)
+
+***
+
+### <a name="arguments-and-variables"></a><span data-ttu-id="712d1-279">Argumentumok és változók</span><span class="sxs-lookup"><span data-stu-id="712d1-279">Arguments and Variables</span></span> ###
+
+<span data-ttu-id="712d1-280">Egy függvény vagy művelet Q # kódjának fő célja, hogy könnyen olvasható és értelmezhető legyen.</span><span class="sxs-lookup"><span data-stu-id="712d1-280">A key goal of the Q# code for a function or operation is for it to be easily read and understood.</span></span>
+<span data-ttu-id="712d1-281">Hasonlóképpen, a bemenetek és a Type argumentumok neveinek kell megadniuk, hogy a rendszer hogyan használja a függvényt vagy az argumentumot.</span><span class="sxs-lookup"><span data-stu-id="712d1-281">Similarly, the names of inputs and type arguments should communicate how a function or argument will be used once provided.</span></span>
+
+
+# <a name="guidancetabguidance"></a>[<span data-ttu-id="712d1-282">Útmutatás</span><span class="sxs-lookup"><span data-stu-id="712d1-282">Guidance</span></span>](#tab/guidance)
+
+<span data-ttu-id="712d1-283">Javasoljuk, hogy:</span><span class="sxs-lookup"><span data-stu-id="712d1-283">We suggest:</span></span>
+
+- <span data-ttu-id="712d1-284">A változó és a bemeneti nevek esetében a `pascalCase` erős preferencia használatával `CamelCase`, `snake_case`vagy `ANGRY_CASE`.</span><span class="sxs-lookup"><span data-stu-id="712d1-284">For all variable and input names, use `pascalCase` in strong preference to `CamelCase`, `snake_case`, or `ANGRY_CASE`.</span></span>
+- <span data-ttu-id="712d1-285">A bemeneti névnek leírónak kell lennie. lehetőleg ne adjon meg egy vagy két betűt.</span><span class="sxs-lookup"><span data-stu-id="712d1-285">Input names should be descriptive; avoid one or two letter names where possible.</span></span>
+- <span data-ttu-id="712d1-286">A pontosan egy típusú argumentumot elfogadó műveletek és függvények a típus argumentumát `T`, ha a szerepköre nyilvánvaló.</span><span class="sxs-lookup"><span data-stu-id="712d1-286">Operations and functions accepting exactly one type argument should denote that type argument by `T` when its role is obvious.</span></span>
+- <span data-ttu-id="712d1-287">Ha egy függvény vagy művelet több típusú argumentumot is igénybe vesz, vagy ha egy adott típusú argumentum szerepköre nem egyértelmű, érdemes lehet egy rövid, `T` (például: `TOutput`) típusú tőkésített szót használni az egyes típusokhoz.</span><span class="sxs-lookup"><span data-stu-id="712d1-287">If a function or operation takes multiple type arguments, or if the role of a single type argument is not obvious, consider using a short capitalized word prefaced by `T` (e.g.: `TOutput`) for each type.</span></span>
+- <span data-ttu-id="712d1-288">Az argumentumban és a változók neveiben ne szerepeljenek a nevek. ezt az információt a fejlesztési környezetnek is meg kell adni.</span><span class="sxs-lookup"><span data-stu-id="712d1-288">Do not include type names in argument and variable names; this information can and should be provided by your development environment.</span></span>
+- <span data-ttu-id="712d1-289">A skaláris típusokat a literális nevük szerint (`flagQubit`), a tömböket pedig többes szám (`measResults`) alapján jelöli.</span><span class="sxs-lookup"><span data-stu-id="712d1-289">Denote scalar types by their literal names (`flagQubit`), and array types by a plural (`measResults`).</span></span>
+  <span data-ttu-id="712d1-290">A qubits esetében érdemes megfontolni az ilyen típusok jelölését `Register`, ha a név olyan qubits-sorozatra hivatkozik, amely valamilyen módon szorosan összefügg egymással.</span><span class="sxs-lookup"><span data-stu-id="712d1-290">For arrays of qubits in particular, consider denoting such types by `Register` where the name refers to a sequence of qubits that are closely related in some way.</span></span>
+- <span data-ttu-id="712d1-291">A tömbökben indexként használt változóknak `idx` kell kezdődnie, és csak számnak kell lennie (például: `things[idxThing]`).</span><span class="sxs-lookup"><span data-stu-id="712d1-291">Variables used as indices into arrays should begin with `idx` and should be singular (e.g.: `things[idxThing]`).</span></span>
+  <span data-ttu-id="712d1-292">Különösen érdemes elkerülni az egybetűs változók nevének indexként való használatát. legalább a `idx`t kell használnia.</span><span class="sxs-lookup"><span data-stu-id="712d1-292">In particular, strongly avoid using single-letter variable names as indices; consider using `idx` at a minimum.</span></span>
+- <span data-ttu-id="712d1-293">A tömbök hosszának tárolására használt változóknak `n` kell kezdődnie, és a következőnek kell lennie: (például `nThings`).</span><span class="sxs-lookup"><span data-stu-id="712d1-293">Variables used to hold lengths of arrays should begin with `n` and should be pluralized (e.g.: `nThings`).</span></span>
+
+# <a name="examplestabexamples"></a>[<span data-ttu-id="712d1-294">Példák</span><span class="sxs-lookup"><span data-stu-id="712d1-294">Examples</span></span>](#tab/examples)
+
+***
+
+### <a name="user-defined-type-named-items"></a><span data-ttu-id="712d1-295">A felhasználó által definiált típusú elemek neve</span><span class="sxs-lookup"><span data-stu-id="712d1-295">User Defined Type Named Items</span></span> ###
+
+<span data-ttu-id="712d1-296">A felhasználó által definiált típusok elnevezett elemeinek `CamelCase`nak kell lenniük, még a UDT konstruktorok bemenetében is.</span><span class="sxs-lookup"><span data-stu-id="712d1-296">Named items in user-defined types should be named as `CamelCase`, even in input to UDT constructors.</span></span>
+<span data-ttu-id="712d1-297">Ez segít az elnevezett elemek egyértelmű elkülönítésében a helyileg hatókörön belüli változókra mutató hivatkozásokon, ha a hozzáférési jelölést (például: `callable::Apply`) vagy a másolás és frissítés jelölését (`set arr w/= Data <- newData`) használja.</span><span class="sxs-lookup"><span data-stu-id="712d1-297">This helps in order to clearly separate named items from references to locally scoped variables when using accessor notation (e.g.: `callable::Apply`) or copy-and-update notation (`set arr w/= Data <- newData`).</span></span>
+
+# <a name="guidancetabguidance"></a>[<span data-ttu-id="712d1-298">Útmutatás</span><span class="sxs-lookup"><span data-stu-id="712d1-298">Guidance</span></span>](#tab/guidance)
+
+<span data-ttu-id="712d1-299">Javasoljuk, hogy:</span><span class="sxs-lookup"><span data-stu-id="712d1-299">We suggest:</span></span>
+
+- <span data-ttu-id="712d1-300">A UDT konstruktorokban megnevezett elemek neve `CamelCase`; tehát a kezdeti nagybetűvel kell kezdődnie.</span><span class="sxs-lookup"><span data-stu-id="712d1-300">Named items in UDT constructors should be named as `CamelCase`; that is, they should begin with an initial uppercase.</span></span>
+- <span data-ttu-id="712d1-301">A műveletekhez feloldani megnevezett elemek művelet fázisként kell nevezni.</span><span class="sxs-lookup"><span data-stu-id="712d1-301">Named items that resolve to operations should be named as verb phases.</span></span>
+- <span data-ttu-id="712d1-302">A műveleteknek nem feloldható megnevezett elemeknek főnévi kifejezéseknek kell lenniük.</span><span class="sxs-lookup"><span data-stu-id="712d1-302">Named items that do not resolve to operations should be named as noun phrases.</span></span>
+- <span data-ttu-id="712d1-303">A műveleteket UDT egy `Apply` nevű, egyetlen névvel ellátott elemnek kell definiálni.</span><span class="sxs-lookup"><span data-stu-id="712d1-303">For UDTs that wrap operations, a single named item called `Apply` should be defined.</span></span>
+
+# <a name="examplestabexamples"></a>[<span data-ttu-id="712d1-304">Példák</span><span class="sxs-lookup"><span data-stu-id="712d1-304">Examples</span></span>](#tab/examples)
+
+|   | <span data-ttu-id="712d1-305">Részlet</span><span class="sxs-lookup"><span data-stu-id="712d1-305">Snippet</span></span> | <span data-ttu-id="712d1-306">Leírás</span><span class="sxs-lookup"><span data-stu-id="712d1-306">Description</span></span> |
+|---|---------|-------------|
+| <span data-ttu-id="712d1-307">☑</span><span class="sxs-lookup"><span data-stu-id="712d1-307">☑</span></span> | `newtype Oracle = (Apply : Qubit[] => Unit is Adj + Ctl)` | <span data-ttu-id="712d1-308">A `Apply` neve `CamelCase`formázott kifejezés, amely arra utal, hogy az elnevezett elem egy művelet.</span><span class="sxs-lookup"><span data-stu-id="712d1-308">The name `Apply` is a `CamelCase`-formatted verb phrase, suggesting that the named item is an operation.</span></span> |
+| <span data-ttu-id="712d1-309">☒</span><span class="sxs-lookup"><span data-stu-id="712d1-309">☒</span></span> | <s>`newtype Oracle = (apply : Qubit[] => Unit is Adj + Ctl) `</s> | <span data-ttu-id="712d1-310">Az elnevezett elemeknek kezdeti nagybetűvel kell kezdődnie.</span><span class="sxs-lookup"><span data-stu-id="712d1-310">Named items should begin with an initial uppercase letter.</span></span> |
+| <span data-ttu-id="712d1-311">☒</span><span class="sxs-lookup"><span data-stu-id="712d1-311">☒</span></span> | <s>`newtype Collection = (Length : Int, Get : Int -> (Qubit => Unit)) `</s> | <span data-ttu-id="712d1-312">A függvények feloldására szolgáló névvel ellátott elemeknek főnévi kifejezéseknek kell lenniük, nem pedig ige kifejezéseknek.</span><span class="sxs-lookup"><span data-stu-id="712d1-312">Named items which resolve to functions should be named as noun phrases, not as verb phrases.</span></span> |
+
+***
+
+## <a name="input-conventions"></a><span data-ttu-id="712d1-313">Bemeneti konvenciók</span><span class="sxs-lookup"><span data-stu-id="712d1-313">Input Conventions</span></span> ##
+
+<span data-ttu-id="712d1-314">Amikor egy fejlesztő meghívja a műveletet vagy a függvényt, az adott művelethez vagy függvényhez tartozó különböző bemeneteket egy adott sorrendben kell megadnia, ami növeli a fejlesztők által felhasználható kognitív terhelést, hogy használhassa a kódtárat.</span><span class="sxs-lookup"><span data-stu-id="712d1-314">When a developer calls into an operation or function, the various inputs to that operation or function must be specified in a particular order, increasing the cognitive load that a developer faces in order to make use of a library.</span></span>
+<span data-ttu-id="712d1-315">A bemeneti sorrendek megemlékezésének feladata különösen az, ha a feladatból gyakran elkerülnek a következők: egy kvantum-algoritmus megvalósításának programozása.</span><span class="sxs-lookup"><span data-stu-id="712d1-315">In particular, the task of remembering input orderings is often a distraction from the task at hand: programming an implementation of a quantum algorithm.</span></span>
+<span data-ttu-id="712d1-316">Bár a gazdag IDE-támogatás nagy mértékben csökkentheti ezt a megoldást, a jó tervezés és a közös konvenciók betartása is segítheti az API-k által kiszabott kognitív terhelés minimalizálását.</span><span class="sxs-lookup"><span data-stu-id="712d1-316">Though rich IDE support can mitigate this to a large extent, good design and adherence to common conventions can also help to minimize the cognitive load imposed by an API.</span></span>
+
+<span data-ttu-id="712d1-317">Ahol lehetséges, hasznos lehet csökkenteni a művelet vagy a függvény által várt bemenetek számát, így az egyes bemenetek szerepe azonnal nyilvánvalóvá válik az adott művelethez vagy függvényhez tartozó fejlesztők számára, valamint a programkódot később olvasó fejlesztők számára.</span><span class="sxs-lookup"><span data-stu-id="712d1-317">Where possible, it can be helpful to reduce the number of inputs expected by an operation or function, so that the role of each input is more immediately obvious both to developers calling into that operation or function, and to developers reading that code later.</span></span>
+<span data-ttu-id="712d1-318">Különösen, ha nem lehetséges vagy ésszerű az argumentumok számának csökkentése egy művelet vagy függvény számára, fontos, hogy konzisztens megrendelés álljon rendelkezésre, amely minimalizálja azt a meglepetést, amelyet a felhasználó a bemenetek sorrendjének előrejelzése során szembesül.</span><span class="sxs-lookup"><span data-stu-id="712d1-318">Especially when it is not possible or reasonable to reduce the number of arguments to an operation or function, it is important to have a consistent ordering that minimizes the surprise that a user faces when predicting the order of inputs.</span></span>
+
+<span data-ttu-id="712d1-319">Javasoljuk, hogy olyan bemeneti rendezési konvenciókat ajánlunk, amelyek nagyrészt az f (x, y) ≡ f (x) (y).</span><span class="sxs-lookup"><span data-stu-id="712d1-319">We recommend an input ordering conventions that largely derives from thinking of partial application as a generalization of currying 𝑓(𝑥, 𝑦) ≡ 𝑓(𝑥)(𝑦).</span></span>
+<span data-ttu-id="712d1-320">Ezért az első argumentumok részleges alkalmazása olyan meghívót eredményezhet, amely a saját jogon hasznos, ha ésszerű.</span><span class="sxs-lookup"><span data-stu-id="712d1-320">Thus, partially applying the first arguments should result in a callable that is useful in its own right whenever that is reasonable.</span></span>
+<span data-ttu-id="712d1-321">Ezt az elvet követve érdemes lehet a következő argumentumokat használni:</span><span class="sxs-lookup"><span data-stu-id="712d1-321">Following this principle, consider using the following order of arguments:</span></span>
+
+- <span data-ttu-id="712d1-322">Klasszikus, nem hívható argumentumok, például szögek, hatáskörök vektorai stb.</span><span class="sxs-lookup"><span data-stu-id="712d1-322">Classical non-callable arguments such as angles, vectors of powers, etc.</span></span>
+- <span data-ttu-id="712d1-323">Hívható argumentumok (függvények és argumentumok).</span><span class="sxs-lookup"><span data-stu-id="712d1-323">Callable arguments (functions and arguments).</span></span>
+  <span data-ttu-id="712d1-324">Ha a functions és a Operations is argumentumként van megadva, érdemes lehet műveleteket végrehajtani a függvények után.</span><span class="sxs-lookup"><span data-stu-id="712d1-324">If both functions and operations are taken as arguments, consider placing operations after functions.</span></span>
+- <span data-ttu-id="712d1-325">A gyűjtemények a meghívásos argumentumok alapján `Map`, `Iter`, `Enumerate`és `Fold`hoz hasonló módon jártak el.</span><span class="sxs-lookup"><span data-stu-id="712d1-325">Collections acted upon by callable arguments in a similar way to `Map`, `Iter`, `Enumerate`, and `Fold`.</span></span>
+- <span data-ttu-id="712d1-326">A vezérlőkként használt Qubit argumentumok.</span><span class="sxs-lookup"><span data-stu-id="712d1-326">Qubit arguments used as controls.</span></span>
+- <span data-ttu-id="712d1-327">Qubit használt argumentumok.</span><span class="sxs-lookup"><span data-stu-id="712d1-327">Qubit arguments used as targets.</span></span>
+
+<span data-ttu-id="712d1-328">Vegye fontolóra egy művelet `ApplyPhaseEstimationIteration` a fázis-becslésben való használathoz, amely egy szöget és egy Oracle-t használ, átadja a szöget úgy, hogy a különböző skálázási tényezők tömbje `Rz` módosítsa, majd az Oracle alkalmazásait vezérli.</span><span class="sxs-lookup"><span data-stu-id="712d1-328">Consider an operation `ApplyPhaseEstimationIteration` for use in phase estimation that takes an angle and an oracle, passes the angle to `Rz` modified by an array of different scaling factors, and then controls applications of the oracle.</span></span>
+<span data-ttu-id="712d1-329">A bemeneteket a következő módon `ApplyPhaseEstimationIteration`juk:</span><span class="sxs-lookup"><span data-stu-id="712d1-329">We would order the inputs to `ApplyPhaseEstimationIteration` in the following fashion:</span></span>
+
+```qsharp
+operation ApplyPhaseEstimationIteration(
+    angle : Double,
+    callable : (Qubit => () is Ctl),
+    scaleFactors : Double[],
+    controlQubit : Qubit,
+    targetQubits : Qubit[]
+)
+: Unit
+...
+```
+<span data-ttu-id="712d1-330">A kis-és nagybetűk minimálisra csökkentése érdekében egyes függvények és műveletek a beépített elhasználók viselkedését utánozzák `Adjoint` és `Controlled`.</span><span class="sxs-lookup"><span data-stu-id="712d1-330">As a special case of minimizing surprise, some functions and operations mimic the behavior of the built-in functors `Adjoint` and `Controlled`.</span></span>
+<span data-ttu-id="712d1-331">A `ControlledOnInt<'T>` például `(Int, ('T => Unit is Adj + Ctl)) => ((Qubit[], 'T) => Unit is Adj + Ctl)`típust tartalmaz, így a `ControlledOnInt<Qubit[]>(5, _)` például a `Controlled`-kezelőhöz hasonlóan viselkedik, de a vezérlő regisztrálása a \ket{5} = \ket{101}$ állapotot jelöli.</span><span class="sxs-lookup"><span data-stu-id="712d1-331">For instance, `ControlledOnInt<'T>` has type `(Int, ('T => Unit is Adj + Ctl)) => ((Qubit[], 'T) => Unit is Adj + Ctl)`, such that `ControlledOnInt<Qubit[]>(5, _)` acts like the `Controlled` functor, but on the condition that the control register represents the state $\ket{5} = \ket{101}$.</span></span>
+<span data-ttu-id="712d1-332">Így a fejlesztő azt várja, hogy a `ControlledOnInt` helyezze át a meghívót az utolsó értékre, és hogy az eredményül kapott művelet ugyanolyan sorrendben legyen, mint a bemeneti `(Qubit[], 'T)`---, ahogyan az a `Controlled`-futtató kimenete.</span><span class="sxs-lookup"><span data-stu-id="712d1-332">Thus, a developer expects that the inputs to `ControlledOnInt` place the callable being transformed last, and that the resulting operation takes as its input `(Qubit[], 'T)` --- the same order as followed by the output of the `Controlled` functor.</span></span>
+
+# <a name="guidancetabguidance"></a>[<span data-ttu-id="712d1-333">Útmutatás</span><span class="sxs-lookup"><span data-stu-id="712d1-333">Guidance</span></span>](#tab/guidance)
+
+<span data-ttu-id="712d1-334">Javasoljuk, hogy:</span><span class="sxs-lookup"><span data-stu-id="712d1-334">We suggest:</span></span>
+
+- <span data-ttu-id="712d1-335">A részleges alkalmazás használatával összhangban lévő bemeneti sorrendek használata.</span><span class="sxs-lookup"><span data-stu-id="712d1-335">Use input orderings consistent with the use of partial application.</span></span>
+- <span data-ttu-id="712d1-336">Beépített feladatokkal konzisztens bemeneti sorrendek használata.</span><span class="sxs-lookup"><span data-stu-id="712d1-336">Use input orderings consistent with built-in functors.</span></span>
+- <span data-ttu-id="712d1-337">Helyezzen minden klasszikus bemenetet a kvantum-bevitel előtt.</span><span class="sxs-lookup"><span data-stu-id="712d1-337">Place all classical inputs before any quantum inputs.</span></span>
+
+# <a name="examplestabexamples"></a>[<span data-ttu-id="712d1-338">Példák</span><span class="sxs-lookup"><span data-stu-id="712d1-338">Examples</span></span>](#tab/examples)
+
+***
+
+## <a name="documentation-conventions"></a><span data-ttu-id="712d1-339">Dokumentációs konvenciók</span><span class="sxs-lookup"><span data-stu-id="712d1-339">Documentation Conventions</span></span> ##
+
+<span data-ttu-id="712d1-340">A Q # nyelv lehetővé teszi a dokumentáció csatolását a műveletekhez, a függvényekhez és a felhasználó által definiált típusokhoz a speciálisan formázott dokumentációs megjegyzések használatával.</span><span class="sxs-lookup"><span data-stu-id="712d1-340">The Q# language allows for attaching documentation to operations, functions, and user-defined types through the use of specially formatted documentation comments.</span></span>
+<span data-ttu-id="712d1-341">A Triple-perjel (`///`) által megjelenített megjegyzések olyan kis [DocFX-stílusú Markdown-](https://dotnet.github.io/docfx/spec/docfx_flavored_markdown.html) dokumentumok, amelyek az egyes műveletek, függvények és felhasználó által definiált típusok, valamint a várt bemeneti adatok céljának leírására használhatók.</span><span class="sxs-lookup"><span data-stu-id="712d1-341">Denoted by triple-slashes (`///`), these documentation comments are small [DocFX-flavored Markdown](https://dotnet.github.io/docfx/spec/docfx_flavored_markdown.html) documents that can be used to describing the purpose of each operation, function, and user-defined type, what inputs each expects, and so forth.</span></span>
+<span data-ttu-id="712d1-342">A Quantum Development Kit által biztosított fordító kibontja ezeket a megjegyzéseket, és felhasználja őket a https://docs.microsoft.com/quantum hoz hasonló dokumentációk videótartalmakban.</span><span class="sxs-lookup"><span data-stu-id="712d1-342">The compiler provided with the Quantum Development Kit extracts these comments and uses them to help typeset documentation similar to that at https://docs.microsoft.com/quantum.</span></span>
+<span data-ttu-id="712d1-343">Hasonlóképpen, a Quantum Development Kit által biztosított nyelvi kiszolgáló ezeket a megjegyzéseket használja, hogy segítséget nyújtson a felhasználóknak a Q # kódjában lévő szimbólumok fölé helyezve.</span><span class="sxs-lookup"><span data-stu-id="712d1-343">Similarly, the language server provided with the Quantum Development Kit uses these comments to provide help to users when they hover over symbols in their Q# code.</span></span>
+<span data-ttu-id="712d1-344">A dokumentációs megjegyzések használata így segítheti a felhasználókat a kód értelmezésében azáltal, hogy a jelen dokumentum többi konvenciója alapján nem könnyen elérhetővé tett részletekre vonatkozó hasznos hivatkozást biztosítanak.</span><span class="sxs-lookup"><span data-stu-id="712d1-344">Making use of documentation comments can thus help users to make sense of code by providing a useful reference for details that are not easily expressed using the other conventions in this document.</span></span>
+
+<div class="nextstepaction"><span data-ttu-id="712d1-345">
+    [Dokumentációs Megjegyzés szintaxisának hivatkozása](xref:microsoft.quantum.language.statements#documentation-comments)
+</span><span class="sxs-lookup"><span data-stu-id="712d1-345">
+    [Documentation comment syntax reference](xref:microsoft.quantum.language.statements#documentation-comments)
+</span></span></div>
+
+<span data-ttu-id="712d1-346">Ahhoz, hogy hatékonyan használhassa ezt a funkciót a felhasználók számára, javasoljuk, hogy a dokumentációs megjegyzések írásakor ne feledje el néhány dolgot.</span><span class="sxs-lookup"><span data-stu-id="712d1-346">In order to effectively use this functionality to help users, we recommend keeping a few things in mind as you write documentation comments.</span></span>
+
+# <a name="guidancetabguidance"></a>[<span data-ttu-id="712d1-347">Útmutatás</span><span class="sxs-lookup"><span data-stu-id="712d1-347">Guidance</span></span>](#tab/guidance)
+
+<span data-ttu-id="712d1-348">Javasoljuk, hogy:</span><span class="sxs-lookup"><span data-stu-id="712d1-348">We suggest:</span></span>
+
+- <span data-ttu-id="712d1-349">Minden nyilvános funkciót, műveletet és felhasználó által definiált típust közvetlenül a dokumentációs Megjegyzés előtt kell megadni.</span><span class="sxs-lookup"><span data-stu-id="712d1-349">Each public function, operation, and user-defined type should be immediately preceded by a documentation comment.</span></span>
+- <span data-ttu-id="712d1-350">Az egyes dokumentációs megjegyzéseknek legalább a következő részeket kell tartalmazniuk:</span><span class="sxs-lookup"><span data-stu-id="712d1-350">At a minimum, each documentation comment should include the following sections:</span></span>
+    - <span data-ttu-id="712d1-351">Összefoglalás</span><span class="sxs-lookup"><span data-stu-id="712d1-351">Summary</span></span>
+    - <span data-ttu-id="712d1-352">Input (Bemenet)</span><span class="sxs-lookup"><span data-stu-id="712d1-352">Input</span></span>
+    - <span data-ttu-id="712d1-353">Kimenet (ha van ilyen)</span><span class="sxs-lookup"><span data-stu-id="712d1-353">Output (if applicable)</span></span>
+- <span data-ttu-id="712d1-354">Győződjön meg arról, hogy minden összefoglaló két mondat vagy kevesebb.</span><span class="sxs-lookup"><span data-stu-id="712d1-354">Ensure that all summaries are two sentences or less.</span></span> <span data-ttu-id="712d1-355">Ha további helyiségre van szükség, adjon meg egy `# Description` szakaszt közvetlenül a `# Summary` után, a teljes részletességgel.</span><span class="sxs-lookup"><span data-stu-id="712d1-355">If more room is needed, provide a `# Description` section immediately following `# Summary` with complete details.</span></span>
+- <span data-ttu-id="712d1-356">Ahol ésszerű, ne szerepeljenek a matematika az összefoglalókban, mivel nem minden ügyfél támogatja a TeX-jelöléseket az összefoglalók között.</span><span class="sxs-lookup"><span data-stu-id="712d1-356">Where reasonable, do not include math in summaries, as not all clients support TeX notation in summaries.</span></span> <span data-ttu-id="712d1-357">Vegye figyelembe, hogy a prózai dokumentumok (például a TeX vagy a Markdown) írásakor érdemes lehet hosszabb vonali hosszúságot használni.</span><span class="sxs-lookup"><span data-stu-id="712d1-357">Note that when writing prose documents (e.g. TeX or Markdown), it may be preferable to use longer line lengths.</span></span>
+- <span data-ttu-id="712d1-358">Adja meg az összes releváns matematikai kifejezést a `# Description` szakaszban.</span><span class="sxs-lookup"><span data-stu-id="712d1-358">Provide all relevant mathematical expressions in the `# Description` section.</span></span>
+- <span data-ttu-id="712d1-359">A bemenetek leírásakor ne ismételje meg az egyes bemenetek típusait, mivel ezek a fordító számára következtetni tudnak, és az inkonzisztencia bevezetését kockáztatják.</span><span class="sxs-lookup"><span data-stu-id="712d1-359">When describing inputs, do not repeat the types of each input as these can be inferred by the compiler and risk introducing inconsistency.</span></span>
+- <span data-ttu-id="712d1-360">Szükség szerint adjon meg példákat a saját `# Example` szakaszában.</span><span class="sxs-lookup"><span data-stu-id="712d1-360">Provide examples as appropriate, each in their own `# Example` section.</span></span>
+- <span data-ttu-id="712d1-361">A kód listázása előtt röviden ismertesse az egyes példákat.</span><span class="sxs-lookup"><span data-stu-id="712d1-361">Briefly describe each example before listing code.</span></span>
+- <span data-ttu-id="712d1-362">Tekintse meg az összes releváns tanulmányi kiadványt (pl.: dokumentumok, eljárások, blogbejegyzések és alternatív implementációk) egy `# References` szakaszban a hivatkozások felsorolásával.</span><span class="sxs-lookup"><span data-stu-id="712d1-362">Cite all relevant academic publications (e.g.: papers, proceedings, blog posts, and alternative implementations) in a `# References` section as a bulleted list of links.</span></span>
+- <span data-ttu-id="712d1-363">Győződjön meg arról, hogy ha lehetséges, az összes hivatkozási hivatkozás állandó és megváltoztathatatlan azonosítók (DOIs vagy verziószámmal ellátott arXiv-számok).</span><span class="sxs-lookup"><span data-stu-id="712d1-363">Ensure that, where possible, all citation links are to permanent and immutable identifiers (DOIs or versioned arXiv numbers).</span></span>
+- <span data-ttu-id="712d1-364">Ha egy művelet vagy függvény más műveletekhez vagy függvényekhez kapcsolódik, és az esetlegesen előforduló változatok vannak, akkor a `# See Also` szakaszban található felsorolásjelként sorolja fel a többi változatot.</span><span class="sxs-lookup"><span data-stu-id="712d1-364">When an operation or function is related to other operations or functions by functor variants, list other variants as bullets in the `# See Also` section.</span></span>
+- <span data-ttu-id="712d1-365">Hagyjon üres megjegyzést a Level-1 (`/// #`) szakaszban, de ne hagyjon üres vonalat a 2. szintű (`/// ##`) szakaszban.</span><span class="sxs-lookup"><span data-stu-id="712d1-365">Leave a blank comment line between level-1 (`/// #`) sections, but do not leave a blank line between level-2 (`/// ##`) sections.</span></span>
+
+# <a name="examplestabexamples"></a>[<span data-ttu-id="712d1-366">Példák</span><span class="sxs-lookup"><span data-stu-id="712d1-366">Examples</span></span>](#tab/examples)
+
+#### <a name=""></a><span data-ttu-id="712d1-367">☑</span><span class="sxs-lookup"><span data-stu-id="712d1-367">☑</span></span> ####
+
+```
+/// # Summary
+/// Applies a rotation about the X-axis by a given angle.
+///
+///
+/// # Description
+/// This operation rotates a single qubit by the unitary operation
+/// \begin{align}
+///     R_x(\theta) \mathrel{:=} e^{-i \theta \sigma_x / 2}.
+/// \end{align}
+///
+/// # Input
+/// ## theta
+/// Angle about which the qubit is to be rotated.
+/// ## qubit
+/// Qubit to which the gate should be applied.
+///
+/// # Remarks
+/// Equivalent to:
+/// ```qsharp
+/// R(PauliX, theta, qubit);
+/// ```
+///
+/// # See Also
+/// - Ry
+/// - Rz
+operation Rx(theta : Double, qubit : Qubit) : Unit
+is Adj + Ctl {
+    body (...) { R(PauliX, theta, qubit); }
+    adjoint (...) { R(PauliX, -theta, qubit); }
+}
+```
+
+***
+
+## <a name="formatting-conventions"></a><span data-ttu-id="712d1-368">Formázási konvenciók</span><span class="sxs-lookup"><span data-stu-id="712d1-368">Formatting Conventions</span></span> ##
+
+<span data-ttu-id="712d1-369">Az előző javaslatok mellett hasznos lehet a kód a lehető legkönnyebben felismerhetővé tétele a konzisztens formázási szabályok használatához.</span><span class="sxs-lookup"><span data-stu-id="712d1-369">In addition to the preceding suggestions, it is helpful to help make code as legible as possible to use consistent formatting rules.</span></span>
+<span data-ttu-id="712d1-370">A természet szerinti formázási szabályok általában némileg önkényesak és szigorúan személyes esztétikai jellegűek.</span><span class="sxs-lookup"><span data-stu-id="712d1-370">Such formatting rules by nature tend to be somewhat arbitrary and strongly up to personal aesthetics.</span></span>
+<span data-ttu-id="712d1-371">Ugyanakkor javasolt a formázási konvenciók egységes csoportjának fenntartása a közreműködők csoportjain belül, és különösen a nagy Q # projektekhez, például a Quantum Development Kit-hoz.</span><span class="sxs-lookup"><span data-stu-id="712d1-371">Nonetheless, we recommend maintaining a consistent set of formatting conventions within a group of collaborators, and especially for large Q# projects such as the Quantum Development Kit itself.</span></span>
+<span data-ttu-id="712d1-372">Ezek a szabályok automatikusan alkalmazhatók a Q # fordítóprogrammal integrált formázó eszköz használatával.</span><span class="sxs-lookup"><span data-stu-id="712d1-372">These rules can be automatically applied by using the formatting tool integrated with the Q# compiler.</span></span>
+
+# <a name="guidancetabguidance"></a>[<span data-ttu-id="712d1-373">Útmutatás</span><span class="sxs-lookup"><span data-stu-id="712d1-373">Guidance</span></span>](#tab/guidance) 
+
+<span data-ttu-id="712d1-374">Javasoljuk, hogy:</span><span class="sxs-lookup"><span data-stu-id="712d1-374">We suggest:</span></span>
+
+- <span data-ttu-id="712d1-375">A hordozhatósághoz tabulátorok helyett négy szóközt használjon.</span><span class="sxs-lookup"><span data-stu-id="712d1-375">Use four spaces instead of tabs for portability.</span></span>
+  <span data-ttu-id="712d1-376">Például a VS Code-ban:</span><span class="sxs-lookup"><span data-stu-id="712d1-376">For instance, in VS Code:</span></span>
+  ```json
+    "editor.insertSpaces": true,
+    "editor.tabSize": 4
+  ```
+- <span data-ttu-id="712d1-377">A sortörés 79 karakternél, ahol ésszerű.</span><span class="sxs-lookup"><span data-stu-id="712d1-377">Line wrap at 79 characters where reasonable.</span></span>
+- <span data-ttu-id="712d1-378">Használjon szóközöket a bináris operátorok köré.</span><span class="sxs-lookup"><span data-stu-id="712d1-378">Use spaces around binary operators.</span></span>
+- <span data-ttu-id="712d1-379">Használjon szóközöket a típushoz tartozó kettőspontok egyik oldalán.</span><span class="sxs-lookup"><span data-stu-id="712d1-379">Use spaces on either side of colons used for type annotations.</span></span>
+- <span data-ttu-id="712d1-380">A tömbben és a rekordokban lévő literálokban (például a functions és a Operations műveletekben) használt vesszők után egyetlen helyet használjon.</span><span class="sxs-lookup"><span data-stu-id="712d1-380">Use a single space after commas used in array and tuple literals (e.g.: in inputs to functions and operations).</span></span>
+- <span data-ttu-id="712d1-381">Ne használjon szóközt a függvény, a művelet vagy a UDT neve után, vagy a `@` az attribútum deklarációjában.</span><span class="sxs-lookup"><span data-stu-id="712d1-381">Do not use spaces after function, operation, or UDT names, or after the `@` in attribute declarations.</span></span>
+- <span data-ttu-id="712d1-382">Minden attribútum deklarációjának saját sorban kell lennie.</span><span class="sxs-lookup"><span data-stu-id="712d1-382">Each attribute declaration should be on its own line.</span></span>
+
+# <a name="examplestabexamples"></a>[<span data-ttu-id="712d1-383">Példák</span><span class="sxs-lookup"><span data-stu-id="712d1-383">Examples</span></span>](#tab/examples)
+
+|   | <span data-ttu-id="712d1-384">Részlet</span><span class="sxs-lookup"><span data-stu-id="712d1-384">Snippet</span></span> | <span data-ttu-id="712d1-385">Leírás</span><span class="sxs-lookup"><span data-stu-id="712d1-385">Description</span></span> |
+|---|---------|-------------|
+| <span data-ttu-id="712d1-386">☒</span><span class="sxs-lookup"><span data-stu-id="712d1-386">☒</span></span> | <s>`2+3`</s> | <span data-ttu-id="712d1-387">Használjon szóközöket a bináris operátorok köré.</span><span class="sxs-lookup"><span data-stu-id="712d1-387">Use spaces around binary operators.</span></span> |
+| <span data-ttu-id="712d1-388">☒</span><span class="sxs-lookup"><span data-stu-id="712d1-388">☒</span></span> | <s>`target:Qubit`</s> | <span data-ttu-id="712d1-389">Használjon szóközt a típus megjegyzési kettőspontok használatával.</span><span class="sxs-lookup"><span data-stu-id="712d1-389">Use spaces around type annotation colons.</span></span> |
+| <span data-ttu-id="712d1-390">☑</span><span class="sxs-lookup"><span data-stu-id="712d1-390">☑</span></span> | `Example(a, b, c)` | <span data-ttu-id="712d1-391">A bemeneti rekordban lévő elemek megfelelően vannak elfoglalva az olvashatóság érdekében.</span><span class="sxs-lookup"><span data-stu-id="712d1-391">Items in input tuple are correctly spaced for readability.</span></span> |
+| <span data-ttu-id="712d1-392">☒</span><span class="sxs-lookup"><span data-stu-id="712d1-392">☒</span></span> | <s>`Example (a, b, c)`</s> | <span data-ttu-id="712d1-393">A szóközöket a függvény, a művelet vagy a UDT neve után le kell tiltani.</span><span class="sxs-lookup"><span data-stu-id="712d1-393">Spaces should be suppressed after function, operation, or UDT names.</span></span> |
+
+***
+
