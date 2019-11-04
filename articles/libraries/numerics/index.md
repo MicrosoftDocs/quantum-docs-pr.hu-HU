@@ -6,14 +6,14 @@ ms.author: thhaner
 ms.date: 5/14/2019
 ms.topic: article
 uid: microsoft.quantum.numerics.intro
-ms.openlocfilehash: 0bffe0c2adeacce514fd9985c9206f6f9c3157be
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: efd1a712616534ac281433fc008f0983271881d7
+ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
 ms.translationtype: HT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73056430"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73442439"
 ---
-# <a name="introduction"></a>Bevezetés
+# <a name="introduction-to-the-quantum-numerics-library"></a>A kvantumnumerikus kódtár bemutatása
 
 Sok kvantumalgoritmus olyan [orákulumokra](xref:microsoft.quantum.concepts.oracles) támaszkodik, amelyek a bemenetek szuperpozícióján értékelnek ki matematikai függvényeket.
 Shor algoritmusának fő összetevője például kiértékeli az $f(x) = a^x\operatorname{mod} N$ függvényt, hogy megkapja a fix $a$ értéket, amely az $N$ együtthatójának kiszámolásához szükséges szám, illetve az $x$ értéket, amely egy $2n$ qubites egész szám egységes szuperpozícióban az összes $2n$ bites sztringben.

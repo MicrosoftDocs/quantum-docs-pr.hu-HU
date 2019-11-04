@@ -1,4 +1,4 @@
-- name: Klasszikus gépek és illesztők
+- name: Áttekintés
   href: index.md
 - name: Kvantumszimulátor
   href: full-state-simulator.md

@@ -6,16 +6,16 @@ ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.language.intro
-ms.openlocfilehash: d8759b9f043d2e13f4b0c97d54bd824c7e87d6de
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 560926f6f3e05c32a935f01ca5107a614e743ee2
+ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
 ms.translationtype: HT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73035264"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73442471"
 ---
 # <a name="the-q-programming-language"></a>A Q# programozási nyelv
 
-# <a name="introduction"></a>Bevezetés
+## <a name="introduction"></a>Bevezetés
 
 A kvantum-számítástechnika természetes modellje szerint a kvantumszámítógépet a GPU-k, FPGA-k és egyéb segédprocesszorok esetében használthoz hasonló koprocesszornak kell tekinteni.
 Az elsődleges vezérlőlogika hagyományos kódot futtat a hagyományos „gazdagépen”.
@@ -36,7 +36,7 @@ A következő szakaszok az alábbiakat ismertetik:
 - [Utasítások](xref:microsoft.quantum.language.statements)
 - [Fájlstruktúra](xref:microsoft.quantum.language.file-structure)
 
-# <a name="conventions"></a>Konvenciók
+## <a name="conventions"></a>Konvenciók
 
 Dolgozunk azon, hogy a gyakori írásjelek minden környezetben következetesen legyenek használva.
 Reméljük, hogy ezáltal a Q# elsajátítása és olvasása egyszerűbbé válik, hiszen a jelek minden esetben ugyanazt jelentik, és az azonos fogalmak mindig azonos módon lesznek kifejezve.
