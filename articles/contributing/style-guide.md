@@ -6,27 +6,23 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.style
-ms.openlocfilehash: 56455e9d5cd452b8620ee794f40563d1d3040193
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: HT
+ms.openlocfilehash: 4050e2ee9e516aed7a8ba1398792562926808ee0
+ms.sourcegitcommit: c93fea5980d1d46fbda1e7c7153831b9337134bf
+ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73183845"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73463326"
 ---
 # <a name="q-style-guide"></a>Q # Style útmutató #
 ## <a name="general-conventions"></a>Általános konvenciók ##
 
 Az ebben az útmutatóban javasolt konvenciók célja, hogy a Q # könnyebben olvasható és értelmezhető programokat és kódtárakat segítse.
 
-# <a name="guidancetabguidance"></a>[Útmutatás](#tab/guidance)
+## <a name="guidance"></a>Segédletek
 
 Javasoljuk, hogy:
 
 - Soha ne hagyja figyelmen kívül az egyezményt, hacsak nem ezt szándékosan teszi, hogy könnyebben olvasható és értelmezhető kódot nyújtson a felhasználók számára.
-
-# <a name="examplestabexamples"></a>[Példák](#tab/examples)
-
-***
 
 ## <a name="naming-conventions"></a>Elnevezési konvenciók ##
 
@@ -67,9 +63,9 @@ Ebben az esetben más műveletek is hasznosak lehetnek, mint a `IterateThroughCa
 | Művelet | Várt hatás |
 | ---- | ------ |
 | Jelentkezés | A bemenetként megadott műveletet nevezzük |
-| Érvényesíteni | A lehetséges kvantum-mérés eredményével kapcsolatos hipotézist egy szimulátor ellenőrzi |
+| Assert | A lehetséges kvantum-mérés eredményével kapcsolatos hipotézist egy szimulátor ellenőrzi |
 | Becslés | Egy klasszikus értéket ad vissza, amely egy vagy több mérésből álló becslést jelöl. |
-| Intézkedés | A rendszer elvégzi a kvantum-mérést, és annak eredményét visszaadja a felhasználónak |
+| Measure | A rendszer elvégzi a kvantum-mérést, és annak eredményét visszaadja a felhasználónak |
 | Előkészületek | A qubits adott regisztrálása egy adott állapotba van inicializálva |
 | Minta | Egy klasszikus értéket ad vissza véletlenszerűen egy bizonyos eloszlásból |
 

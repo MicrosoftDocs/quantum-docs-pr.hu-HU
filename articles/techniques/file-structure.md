@@ -5,14 +5,14 @@ author: QuantumWriter
 ms.author: Christopher.Granade@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 9c266fe16b8e2a265d91a99f8574a6acfcf03160
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: HT
+ms.openlocfilehash: 702d23293a1c340ddd3d7032d0e05294345469b2
+ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73183250"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73442560"
 ---
-# <a name="what-is-q"></a>Mi az a Q#? #
+# <a name="q-program-overview"></a>Q # program áttekintése
 
 A Q # egy méretezhető, több paradigma, tartományszintű programozási nyelv a kvantum-számítástechnika számára. A Q # egy Quantum programozási nyelv, amelynek segítségével leírható, hogy a rendszer hogyan hajtja végre az utasításokat a kvantum-gépeken. Azok a gépek, amelyek megcélozható a szimulátorok és a tényleges kvantum-hardver között. A Q # méretezhető: egyszerű bemutató programokat írhat, például a teleportot, amely néhány qubits fut, de támogatja a nagyméretű és kifinomult programok írását is, mint például az összetett molekulák szimulálása, amelyeknek több millió qubits kell lennie. Annak ellenére, hogy a nagyméretű fizikai gépek továbbra is a jövőben vannak, a Q # lehetővé teszi a programozók számára, hogy az összetett kvantum-algoritmusokat. Mi több, a Q # támogatja a különböző feladatokat, például a hibakeresést, a profilkészítést, az erőforrás-becslést és bizonyos speciális célú szimulációkat méretezhető módon. 
 

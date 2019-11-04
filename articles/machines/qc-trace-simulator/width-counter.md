@@ -1,17 +1,17 @@
 ---
 title: Szélesség számlálója | Quantum Computer nyomkövetési szimulátor | Microsoft Docs
-description: A Quantum Computer Trace Simulator áttekintése
+description: A kvantumszámítógép nyomkövetési szimulátorának áttekintése
 author: vadym-kl
 ms.author: vadym@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.width-counter
-ms.openlocfilehash: e202c527e7e26751361e0c46355ffcefa9c95091
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: HT
+ms.openlocfilehash: ae0c0ec2e677be03dc8dc1497dc62ad9034295a4
+ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73184916"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73442405"
 ---
 # <a name="width-counter"></a>Szélesség számlálója
 
@@ -29,7 +29,7 @@ operation MultiControlledXDriver( numberOfQubits : Int ) : Unit {
 }
 ```
 
-# <a name="using-width-counter-within-a-c-program"></a>C# Programon belüli szélességi számláló használata
+## <a name="using-width-counter-within-a-c-program"></a>C# Programon belüli szélességi számláló használata
 
 Az 5 qubits teljes körűen szabályozott `X` kiosztása 2 kiegészítő qubits, a bemeneti szélessége pedig 5 lesz. A következő C# program használatával ellenőrizhető, hogy ez a helyzet-e:
 

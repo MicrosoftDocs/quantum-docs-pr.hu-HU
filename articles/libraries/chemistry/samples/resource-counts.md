@@ -6,14 +6,14 @@ ms.author: gulow
 ms.date: 10/23/2018
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.examples.resourcecounts
-ms.openlocfilehash: b28a27c4c1f1e64644fcfb074a731ff7b65cacb6
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: HT
+ms.openlocfilehash: f9311c1987ced4336c4e98bdb984fbee009e9acc
+ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73184083"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73442461"
 ---
-## <a name="obtaining-resource-counts"></a>Erőforrás-számlálások beszerzése
+# <a name="obtaining-resource-counts"></a>Erőforrásszámok lekérése
 
 A klasszikus számítógépeken a $n $ qubits szimulálása a $n $-val exponenciálisan méretezhető. Ez nagy mértékben korlátozza a kvantum-kémia szimulációt, amelyet a teljes állapotú szimulátorral lehet elvégezni. A kémia nagy példányai esetében is hasznos információkhoz juthat. Itt megvizsgáljuk, hogy az erőforrás-költségek, például a T-Gates vagy a CNEM-kapuk száma, a szimuláló kémia esetében a [nyomkövetési szimulátor](xref:microsoft.quantum.machines.qc-trace-simulator.intro)használatával automatizált módon szerezhetők be. Ezek az információk arra utalnak minket, hogy ha a kvantum-számítógépek elég nagyok ahhoz, hogy ezeket a kvantum-kémiai algoritmusokat futtatni tudják. A hivatkozásokat lásd a megadott `GetGateCount` mintában.
 
@@ -83,7 +83,7 @@ operation RunQubitizationStep (qSharpData: JordanWignerEncodingData) : Double {
 }
 ```
 
-Most a nyomkövetési szimulátort úgy konfiguráltuk, hogy nyomon kövessük a kívánt erőforrásokat. Ebben az esetben a primitív kvantum-műveleteket a `usePrimitiveOperationsCounter` jelző `true`re való beállításával számítjuk ki. A technikai részletes `throwOnUnconstraintMeasurement` `false`re van beállítva, hogy elkerülje a kivételeket azokban az esetekben, amikor a Q # kód helytelenül állítja elő a mérési eredmények probabiltiy.
+Most a nyomkövetési szimulátort úgy konfiguráltuk, hogy nyomon kövessük a kívánt erőforrásokat. Ebben az esetben a primitív kvantum-műveleteket a `usePrimitiveOperationsCounter` jelző `true`re való beállításával számítjuk ki. A technikai részletes `throwOnUnconstraintMeasurement` `false`re van beállítva, hogy elkerülje a kivételeket azokban az esetekben, amikor a Q # kód helytelenül állítja elő a mérési eredmények valószínűségét, ha vannak ilyenek.
 
 ```csharp
 private static QCTraceSimulator CreateAndConfigureTraceSim()

@@ -1,20 +1,19 @@
 ---
 title: Symmetries | Microsoft Docs
 description: Symmetries a molekuláris szerves fogalmi docs
-keywords: Ne adjon hozzá kulcsszavakat és ne szerkessze azokat a keresőoptimalizálást végző szakemberrel való egyeztetés nélkül.
 author: nathanwiebe2
 ms.author: nawiebe
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.symmetries
-ms.openlocfilehash: d539b6339a937c7ab9049e7b50d7852272c25deb
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: HT
+ms.openlocfilehash: 041d600bc8d65e7d67f5fe7d61a69426fb42ffbc
+ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73185579"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73442391"
 ---
-## <a name="symmetries-of-molecular-integrals"></a>Symmetries
+# <a name="symmetries-of-molecular-integrals"></a>Symmetries
 
 A Coulomb-Hamilton, amely az [elektronikus rendszerek kvantum-modelljeiben](xref:microsoft.quantum.chemistry.concepts.quantummodels)megadott Hamilton, amely az elektronok és az atommagok közötti interakciót mutatja be, számos olyan symmetries eredményez, amely a következő lehet: a Hamilton feltételeinek tömörítése.
 Általánosságban elmondható, hogy ha nem készül további feltételezés a $ \psi_j $ függvénnyel kapcsolatban, akkor csak a \begin{Equation} h_ {pqrs} = h_ {qpsr}, \tag{★} \label{EQ: hpqrs} \end{Equation} lehet, amely azonnal látható a [Quantum models in Az elektronikus rendszerek](xref:microsoft.quantum.chemistry.concepts.quantummodels) abban az esetben, ha az értékek változatlanok maradnak, ha a $p, a q $ és a $r, s $ megváltozása nem változik.

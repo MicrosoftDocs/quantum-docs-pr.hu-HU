@@ -1,19 +1,19 @@
 ---
-title: Kvantumszimulátorok és klasszikus illesztők | Microsoft Docs
+title: Kvantumszimulátorok és gazdaalkalmazások | Microsoft Docs
 description: Annak az ismertetése, hogyan lehet a kvantumszimulátorokat klasszikus számítástechnikai .NET nyelvvel (jellemzően C#-vel vagy Q#-val) vezérelni.
 author: QuantumWriter
 ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.machines
-ms.openlocfilehash: 5ac79280669ae0acfe993a1c2ae1c069b0c01848
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 14aed75ed0ed192f88699b1c7dbacfae23f74642
+ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
 ms.translationtype: HT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73035118"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73442220"
 ---
-# <a name="classical-drivers-and-machines"></a>Klasszikus illesztők és gépek
+# <a name="quantum-simulators-and-host-applications"></a>Kvantumszimulátorok és gazdaalkalmazások
 
 ## <a name="what-youll-learn"></a>Ismertetett témák
 
@@ -52,7 +52,7 @@ Mindegyik meg van határozva a `Microsoft.Quantum.Simulation.Simulators` névté
 * Egy [nyomkövetés-alapú erőforrás-kalkulátor](xref:microsoft.quantum.machines.qc-trace-simulator.intro), a `QCTraceSimulator` osztály, ami lehetővé teszi az algoritmus teljes hívási gráfjának erőforrás-felhasználási elemzését.
 * Egy [Toffoli-szimulátor](xref:microsoft.quantum.machines.toffoli-simulator), a `ToffoliSimulator` osztály.
 
-## <a name="writing-a-classical-driver-program"></a>Klasszikus illesztő írása
+## <a name="writing-a-host-application"></a>Gazdaalkalmazás írása
 
 A [kvantumprogram írásával](xref:microsoft.quantum.write-program) foglalkozó részben egy egyszerű C#-illesztőt írtunk a teleportációs algoritmushoz. A C#-illesztőnek 4 fő célja van:
 
@@ -94,7 +94,7 @@ Néhány részlet a `Run` metódusnak átadott argumentumokkal kapcsolatban:
 * A tömböket `Microsoft.Quantum.Simulation.Core.QArray<T>` objektumba kell ágyazni.
     Egy `QArray` osztály olyan konstruktorral rendelkezik, amely a megfelelő objektumok bármely rendezett gyűjteményét (`IEnumerable<T>`) képes használni.
 * A Q#-ban az üres rekordot a `()`, a C#-ben a `QVoid.Instance` jelzi.
-* A nem üres rekordok .NET `ValueType` példányokként jelennek meg.
+* A nem üres rekordok .NET `ValueTuple` példányokként jelennek meg.
 * A Q# felhasználó által definiált típusai az alaptípusaikként lesznek átadva.
 * Egy művelet vagy függvény `Run` metódusba való átadásához be kell szereznie a művelet vagy függvény osztályának egy példányát a szimulátor `Get<>` metódusával.
 

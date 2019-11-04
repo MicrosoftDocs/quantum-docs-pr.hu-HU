@@ -1,0 +1,40 @@
+- name: Microsoft Quantum-dokumentáció
+  href: index.yml
+- name: Áttekintés
+  href: welcome.md
+- name: Gyors útmutatók
+  items:
+    - name: A QDK telepítése
+      href: install-guide/index.md
+    - name: A QDK frissítése
+      href: install-guide/update.md
+    - name: Az első kvantumprogram megírása
+      href: quickstart.md
+- name: Alapelvek
+  items:
+    - name: Kvantumfejlesztési módszerek
+      topicHref: techniques/index.md
+      href: techniques/toc.yml
+    - name: 'Q# programozási nyelv'
+      topicHref: language/index.md
+      href: language/toc.yml
+    - name: 'Q#-kódtárak'
+      href: libraries/toc.yml
+    - name: Kvantum-számítástechnikai fogalmak
+      href: concepts/toc.yml
+    - name: Útmutató kvantumgépek üzemeltetéséhez
+      href: machines/toc.yml
+- name: További források
+  items:
+    - name: QDK – Kibocsátási megjegyzések
+      topicHref: relnotes/index.md
+      href: relnotes/toc.yml
+    - name: Hozzájárulás a QDK-hoz
+      href: contributing/toc.yml
+      topicHref: contributing/index.md
+    - name: Szószedet
+      href: Glossary.md
+    - name: További tudnivalók
+      href: for-more-info.md
+    - name: Licenc
+      href: license.md

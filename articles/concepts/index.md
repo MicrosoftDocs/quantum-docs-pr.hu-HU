@@ -1,19 +1,19 @@
 ---
-title: Kvantum-számítástechnikai fogalmak
-description: Mi az a kvantum-számítástechnika?
+title: A kvantum-számítástechnika története és háttere
+description: Ismerje meg a kvantum-számítástechnikai történetét, a működését leíró néhány háttér-információt és a Microsoft Quantum Development Kitet.
 author: QuantumWriter
-ms.author: nawiebe@microsoft.com
+ms.author: nawiebe
 uid: microsoft.quantum.concepts.intro
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 37f5181f2d9e4e11efa29811c24116ca7d64f81b
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: fb1df9e3460c18d0cdc0ff430fa236192b3aa2fa
+ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
 ms.translationtype: HT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72978956"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73442313"
 ---
-# <a name="what-is-quantum-computing"></a>Mi az a kvantum-számítástechnika?
+# <a name="quantum-computing-history-and-background"></a>A kvantum-számítástechnika története és háttere
 
 Az elmúlt néhány évben számos újdonság jelent meg a számítástechnika terén, amelyek közül vitathatatlanul a kvantum-számítástechnika igényli a legnagyobb paradigmaváltást a fejlesztők részéről.  A kvantum-számítógépek ötletével [Richard Feynman](https://en.wikipedia.org/wiki/Richard_Feynman) és [Jurij Manyin](https://en.wikipedia.org/wiki/Yuri_Manin) állt elő az 1980-as években.  A kvantum-számítástechnika mögötti ösztönzőerő abból ered, amit sokan a fizika egyik legnagyobb szégyenének tartanak, vagyis hogy a jelentős tudományos fejlődés folyton beleütközik abba az akadályba, hogy még az egyszerű rendszereket sem tudjuk modellezni. Mint ismeretes, a kvantummechanikát 1900 és 1925 között fejlesztették ki, és azóta is ez jelenti a kémia, a kondenzáltanyag-fizika, illetve a számítógépektől a LED-világításig terjedő technológiai újítások alapját.  Mindezen sikerek ellenére azonban olykor még a legegyszerűbb rendszerek kvantummechanikai modellezése is meghaladta az emberi teljesítőképességet.  Ennek az oka az, hogy még néhány tucat egymással kommunikáló részecske szimulálása is nagyobb számítási teljesítményt igényel, mint ami bármely hagyományos számítógép több ezer évig tartó munkájával elérhető lenne.
 

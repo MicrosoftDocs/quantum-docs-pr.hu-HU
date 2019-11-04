@@ -1,23 +1,23 @@
 ---
-title: Quantum Information-referenciák | Microsoft Docs
-description: Quantum Information-referenciák
+title: Quantum Computing learning-erőforrások | Microsoft Docs
+description: A kvantum-számítástechnikai témakörök részletes ismertetését tartalmazó hivatkozási lista, ha többet szeretne megtudni a kvantum-számítógép programozásáról.
 author: QuantumWriter
 uid: microsoft.quantum.more-information
 ms.author: nawiebe@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: ef0d8a6a268a717935070cefa73875150117bbec
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: HT
+ms.openlocfilehash: 7302acddb37a30ad3d20cabd08ce31d90bd155dc
+ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73210443"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73442531"
 ---
-# <a name="for-more-information"></a>További információ
+# <a name="more-quantum-computing-learning-resources"></a>További Quantum Computing learning-erőforrások
 
 Ebben a rövid bevezetőben áttekintjük, hogyan tekinthető meg a kvantum-számítógép olyan eszközként, amely egy exponenciálisan nagy vektoros térben tárolja az adatokat, és azt, hogy a Quantum Gates hogyan használható az információk módon történő elforgatására calcul áció.  Azt is tárgyaljuk, hogy a kvantum-műveletek, például a kvantum-áramkörök és a Dirac-jelölések részletes leírását is ismerteti, amely lehetővé teszi, hogy a fejlesztők gyorsan megértsék az összetett kvantum-állapotokat és alrutinokat.
 
-Habár ezek az eszközök a kvantum-szoftverek bármely fejlesztője számára alapvető jellegűek, egyáltalán nem jelenti azt, hogy a kvantum-számítógép programozásával és az algoritmus kialakításával kapcsolatos információk mélységét vagy szélességét nem fedi le.  Mivel a kvantum-számítástechnika továbbra is gyorsan fejlődő mező, nincs olyan erőforrás, amely az eszközök legjobb kihasználásához szükséges összes információt tartalmazni tudja a problémák megoldása érdekében.  Ezért összeállítottunk egy listát az alábbi listából, amely érdekesnek tekintheti az olvasót, aki többet szeretne megtudni a kvantum-számítógép programozásának művészetéről és szépségéről.
+Habár ezek az eszközök a kvantum-szoftverek bármely fejlesztője számára alapvető jellegűek, egyáltalán nem jelenti azt, hogy a kvantum-számítógép programozásával és az algoritmus kialakításával kapcsolatos információk mélységét vagy szélességét nem fedi le.  Mivel a kvantum-számítástechnika továbbra is gyorsan fejlődő mező, nincs olyan erőforrás, amely az eszközök legjobb kihasználásához szükséges összes információt tartalmazni tudja a problémák megoldása érdekében.  Ezért összeállítottunk egy olyan referenciát, amely érdekesnek tekintheti az olvasót, aki többet szeretne megtudni a kvantum-számítógép programozásának művészetéről és szépségéről.
 Ez a szakasz a kvantum-számítástechnikai témakörök részletes lefedettségére mutató kiválasztott hivatkozásokat tartalmaz.
 
 ## <a name="basic-quantum-computing"></a>Alapszintű Quantum Computing ##

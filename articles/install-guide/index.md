@@ -6,12 +6,12 @@ ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install
-ms.openlocfilehash: 3ec53934436b47908fd4d794a98933010f6059a7
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 2a098d89f13278d7137bf182a184a74afb9393be
+ms.sourcegitcommit: 2ca4755d1a63431e3cb2d2918a10ad477ec2e368
 ms.translationtype: HT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73035283"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73462866"
 ---
 # <a name="install-the-microsoft-quantum-development-kit-qdk"></a>A Microsoft Quantum Development Kit (QDK) telepítése
 
@@ -26,11 +26,13 @@ A választott fejlesztési környezettől függően a telepítés lépései elt�
 
 ## <a name="develop-with-python"></a>Fejlesztés a Pythonnal
 
+A Pythonhoz készült qsharp csomag megkönnyíti a Q#-műveletek és -függvények Pythonon belüli szimulálását. Az IQ# elsősorban a Jupyter és a Python által használt bővítmény, amely a Q#-műveletek összeállításának és szimulálásának alapvető funkcióit nyújtja.
+
 1. Előfeltételek
 
     - [Python](https://www.python.org/downloads/) 3.6 vagy újabb verzió
     - A [PIP](https://pip.pypa.io/en/stable/installing) Python-csomagkezelő
-    - [.NET Core SDK 2.1 vagy újabb verzió](https://www.microsoft.com/net/download)
+    - [.NET Core SDK 3.0 vagy újabb verzió](https://www.microsoft.com/net/download)
 
 1. Telepítse a(z) `iqsharp` csomagot
 
@@ -87,11 +89,16 @@ A választott fejlesztési környezettől függően a telepítés lépései elt�
 
 ## <a name="develop-with-jupyter-notebooks"></a>Fejlesztés a Jupyter-notebookokkal
 
+Az oktatási területeken, tudományos laborokban és az internetes, együttműködése alapuló programozásban kedvenc Jupyter-notebookok helyszíni kódvégrehajtást tesznek lehetővé (most már Q#-kóddal is) utasításokkal, megjegyzésekkel és egyéb tartalmakkal együtt.  Az alábbiakat kell elvégeznie a saját Q#-notebookok létrehozásának megkezdéséhez.
+
+Az IQ# elsősorban a Jupyter és a Python által a .NET Core SDK-hoz használt bővítmény, amely a Q#-műveletek összeállításának és szimulálásának alapvető funkcióit nyújtja.
+
+
 1. Előfeltételek
 
     - [Python](https://www.python.org/downloads/) 3.6 vagy újabb verzió
     - [Jupyter Notebook](https://jupyter.readthedocs.io/en/latest/install.html)
-    - [.NET Core SDK 2.1 vagy újabb verzió](https://www.microsoft.com/net/download)
+    - [.NET Core SDK 3.0 vagy újabb verzió](https://www.microsoft.com/net/download)
 
 1. Telepítse a(z) `iqsharp` csomagot
 
@@ -120,11 +127,22 @@ A választott fejlesztési környezettől függően a telepítés lépései elt�
 
     - Futtassa a notebook következő celláját:
 
-        ![Jupyter-notebookcella](~/media/install-guide-jupyter.png)
+        ![Jupyter-notebookcella Q#-kóddal](~/media/install-guide-jupyter.png)
 
         A cella kimenetében a következőnek kell megjelennie: `SayHello`. A Jupyter-notebookokban való futtatáskor a Q#-kód le lesz fordítva, és a notebook kiadja a talált művelet(ek) nevét.
 
+
+    - Egy új cellában szimulálja a most létrehozott `%simulate`-művelet végrehajtását egy kvantumszámítógépen:
+
+        ![Jupyter-notebookcella %simulate használatával](~/media/install-guide-jupyter-simulate.png)
+
+        A képernyőn megjelenik az üzenet a meghívott művelet eredményével együtt (ebben az esetben üresen).
+
+
 ## <a name="develop-with-c-on-windows-using-visual-studio"></a>Fejlesztés C#-pal Windows rendszeren, a Visual Studio használatával
+
+A Visual Studio gazdag környezetet nyújt a Q#-programok fejlesztéséhez, nagyszerű funkciókkal, például kódkiegészítéssel és szintaxiskiemeléssel, amelyek végigvezetik a fejlesztőt az alkalmazások összeállításán.  A Q# Visual Studio-bővítmény Q#-fájlok és -projektek sablonjait, valamint szintaxiskiemelést és IntelliSense-támogatást tartalmaz.
+
 
 1. Előfeltételek
 
@@ -158,12 +176,14 @@ A választott fejlesztési környezettől függően a telepítés lépései elt�
 > [!NOTE]
 > * Ha egy Visual Studio-megoldásban több projekt is található, a megoldásban foglalt összes projektnek a megoldás mappájában vagy valamelyik almappájában kell lennie.  
 
-## <a name="develop-with-c-using-vs-code"></a>Fejlesztés a C# és a VS Code használatával
+## <a name="develop-with-c-using-visual-studio-code"></a>Fejlesztés C# nyelven a Visual Studio Code használatával
+
+A Visual Studio Code (VS Code) gazdag környezetet nyújt a Q#-programok fejlesztéséhez számos különféle számítógépes környezethez, beleértve a Windows, Linux és Mac rendszereket, és nagyszerű funkciókat tartalmaz, például kódkiegészítést és szintaxiskiemelést, amelyek végigvezetik a fejlesztőt az alkalmazások összeállításán.  A Q# VS Code-bővítmény szintaxiskiemelést és Q#-kódrészleteket tartalmaz.
 
 1. Előfeltételek
 
    - [VS Code](https://code.visualstudio.com/download)
-   - [.NET Core SDK 2.1 vagy újabb verzió](https://www.microsoft.com/net/download)
+   - [.NET Core SDK 3.0 vagy újabb verzió](https://www.microsoft.com/net/download)
 
 1. Telepítse a Quantum VS Code-bővítményt
 
@@ -195,9 +215,11 @@ A választott fejlesztési környezettől függően a telepítés lépései elt�
 
 ## <a name="develop-with-c-using-the-dotnet-command-line-tool"></a>Fejlesztés a C# és a(z) `dotnet` parancssori eszköz használatával
 
+Természetesen a parancssorból is egyszerűen összeállíthat és futtathat Q#-programokat, ha telepíti a .NET Core SDK-t és a QDK-projektsablonokat. 
+
 1. Előfeltételek
 
-    - [.NET Core SDK 2.1 vagy újabb verzió](https://www.microsoft.com/net/download)
+    - [.NET Core SDK 3.0 vagy újabb verzió](https://www.microsoft.com/net/download)
 
 1. Telepítse a .NET-hez tartozó Quantum-projektsablonokat
 

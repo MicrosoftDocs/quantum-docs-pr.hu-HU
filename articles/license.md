@@ -1,21 +1,18 @@
 ---
-title: Microsoft Quantum Development Kit licenc | Microsoft Docs
+title: Microsoft Quantum Development Kit licenc
 description: Microsoft Quantum Development Kit licenc
-services: service-name-with-dashes-AZURE-ONLY
-keywords: Ne adjon hozzá kulcsszavakat és ne szerkessze azokat a keresőoptimalizálást végző szakemberrel való egyeztetés nélkül.
 author: QuantumWriter
-ms.author: MSFT-alias-person-or-DL
-ms.date: 10/09/2017
-ms.topic: article-type-from-white-list
-ms.openlocfilehash: e14720143144d4890358a1c6167541a0ea5a8362
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: HT
+ms.author: cpalmer
+ms.date: 11/04/2019
+ms.openlocfilehash: d864c3e4ecefa6f998b9a893ecc4a3995d67dac4
+ms.sourcegitcommit: c93fea5980d1d46fbda1e7c7153831b9337134bf
+ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73184933"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73463368"
 ---
 # <a name="microsoft-software-license-terms"></a>MICROSOFT SZOFTVERLICENC-SZERZŐDÉS 
-# <a name="microsoft-quantum-development-kit-preview"></a>MICROSOFT QUANTUM DEVELOPMENT KIT (ELŐZETES VERZIÓ)
+## <a name="microsoft-quantum-development-kit-preview"></a>MICROSOFT QUANTUM DEVELOPMENT KIT (ELŐZETES VERZIÓ)
 
 
 * * *
@@ -61,13 +58,13 @@ HA MEGFELEL A JELEN LICENCFELTÉTELEK FELTÉTELEINEK, AZ ALÁBBI JOGOKKAL RENDEL
     
     e. a szoftver megosztásához, közzétételéhez, terjesztéséhez vagy kikölcsönzéséhez önálló, saját üzemeltetésű megoldásként adja meg a szoftvert, vagy vigye át a szoftvert vagy a jelen szerződést harmadik félre.
 
-1. **exportálási korlátozások**. Be kell tartania a szoftverre vonatkozó összes belföldi és nemzetközi exportálási törvényt és előírást, amely magában foglalja a célhelyekre, a végfelhasználóra és a végfelhasználói használatra vonatkozó korlátozásokat. Az exportálási korlátozásokkal kapcsolatos további információkért látogasson el http://aka.ms/exporting.
+1. **exportálási korlátozások**. Be kell tartania a szoftverre vonatkozó összes belföldi és nemzetközi exportálási törvényt és előírást, amely magában foglalja a célhelyekre, a végfelhasználóra és a végfelhasználói használatra vonatkozó korlátozásokat. Az exportálási korlátozásokkal kapcsolatos további információkért látogasson el https://aka.ms/exporting.
 
 1. **támogatási szolgáltatások**. A Microsoft a jelen Szerződés értelmében nem köteles a szoftverhez kapcsolódó támogatási szolgáltatásokat biztosítani. Minden biztosított támogatás "as is", "az összes hibával", és bármiféle garancia nélkül.
 
 1. **Frissítések**. Előfordulhat, hogy a szoftver rendszeresen frissítéseket keres, és letölti és telepíti őket. A frissítéseket csak a Microsofttól vagy a felhatalmazott forrásokból kérheti le. Előfordulhat, hogy a Microsoft frissítenie kell a rendszerét a frissítések biztosításához. Ön vállalja, hogy további értesítés nélkül megkapja ezeket az automatikus frissítéseket. Előfordulhat, hogy a frissítések nem tartalmazzák és nem támogatják az összes meglévő szoftvert, szolgáltatást vagy perifériát.
 
-1. **kötési választottbírósági és osztály műveleti mentesítés. Ez a szakasz vonatkozik arra az esetre, ha a (vagy ha egy vállalat, a**vállalata üzleti tevékenysége) a Egyesült Államok.  Ha Ön és a Microsoft vitája van, Ön és a Microsoft vállalja, hogy 60 napig próbálkozik az informális megoldással. Ha Ön és a Microsoft nem tudja, Ön és a Microsoft megállapodik abban, hogy a szövetségi választottbírósági eljárás ("FAA") alá tartozó amerikai választottbírósági társulás, valamint a **bíró vagy zsűri előtt nem pereli**az **Egyéni választottbírósági eljárást** . Ehelyett egy semleges választottbírót kell eldöntenie. Az **osztályokra vonatkozó perek, az egész osztályra kiterjedő választottbírósági eljárások, a magán-és általános műveletek**, valamint a többi olyan tevékenység, ahol a képviselők **nem jogosultak**az adott minőségben való részvételre; és nem az egyéni eljárások egyesítése az összes fél beleegyezike nélkül. A teljes választottbírósági megállapodás több feltételt tartalmaz, és http://aka.ms/arb-agreement-1. Ön és a Microsoft elfogadja ezeket a feltételeket.
+1. **kötési választottbírósági és osztály műveleti mentesítés. Ez a szakasz vonatkozik arra az esetre, ha a (vagy ha egy vállalat, a**vállalata üzleti tevékenysége) a Egyesült Államok.  Ha Ön és a Microsoft vitája van, Ön és a Microsoft vállalja, hogy 60 napig próbálkozik az informális megoldással. Ha Ön és a Microsoft nem tudja, Ön és a Microsoft megállapodik abban, hogy a szövetségi választottbírósági eljárás ("FAA") alá tartozó amerikai választottbírósági társulás, valamint a **bíró vagy zsűri előtt nem pereli**az **Egyéni választottbírósági eljárást** . Ehelyett egy semleges választottbírót kell eldöntenie. Az **osztályokra vonatkozó perek, az egész osztályra kiterjedő választottbírósági eljárások, a magán-és általános műveletek**, valamint a többi olyan tevékenység, ahol a képviselők **nem jogosultak**az adott minőségben való részvételre; és nem az egyéni eljárások egyesítése az összes fél beleegyezike nélkül. A teljes választottbírósági megállapodás több feltételt tartalmaz, és https://aka.ms/arb-agreement-1. Ön és a Microsoft elfogadja ezeket a feltételeket.
 
 1. **teljes szerződés**. A jelen Szerződés és a Microsoft egyéb feltételei kiegészítik a kiegészítőket, a frissítéseket vagy a harmadik féltől származó alkalmazásokat, a teljes szerződés a szoftverhez.
 
