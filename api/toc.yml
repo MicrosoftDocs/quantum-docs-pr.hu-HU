@@ -1,0 +1,12 @@
+- name: Referencia
+  items:
+    - name: 'Q#-kódtárak'
+      href: qsharp/toc.yml
+    - name: .NET-kódtárak
+      items:
+        - name: Nyomkövetési szimulátor
+          href: 'https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators'
+        - name: Kvantumkémia
+          href: 'https://docs.microsoft.com/dotnet/api/microsoft.quantum.chemistry'
+    - name: Python-kódtárak
+      href: 'https://docs.microsoft.com/python/qsharp'
