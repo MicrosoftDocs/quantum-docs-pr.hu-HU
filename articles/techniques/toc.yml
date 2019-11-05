@@ -1,4 +1,4 @@
-- name: 'Q# és fájlstruktúrák'
+- name: 'A Q#-beli programozás áttekintése'
   href: file-structure.md
 - name: Műveletek és függvények
   href: operations-and-functions.md
