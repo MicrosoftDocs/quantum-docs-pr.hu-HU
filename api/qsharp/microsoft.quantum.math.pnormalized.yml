@@ -10,18 +10,18 @@ summary: >-
   Ez azt eredményezi, hogy a tömb $x $ típusú `Double[]`, amely egy olyan tömböt ad vissza, amelyben az összes elem az $p $-Norm $\|x\|_p $ értékre van osztva.
 syntax: 'function PNormalized (p : Double, array : Double[]) : Double[]'
 input:
-  content: '(p: Double, tömb: Double [])'
+  content: '(p : Double, array : Double[])'
   types:
-  - name: P
+  - name: p
     summary: A kitevő $p $ a $p $-NORM.
     isPrimitive: true
     uid: Double
-  - name: tömb
+  - name: array
     isArray: true
     isPrimitive: true
     uid: Double
 output:
-  content: Double []
+  content: Double[]
   types:
   - summary: A $p $-Norm $\|x\|_p $ által normalizált tömb $x $.
     isArray: true
@@ -29,9 +29,10 @@ output:
     uid: Double
 seeAlso:
 - pnorm
-ms.openlocfilehash: 5fd219b866b14d3d6faf58cdf4f1ce2b9fbadf9d
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: hu-HU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73067288"
+metadata:
+  ms.openlocfilehash: 5fd219b866b14d3d6faf58cdf4f1ce2b9fbadf9d
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: hu-HU
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73067288"

@@ -49,9 +49,10 @@ output:
   - summary: Az a gyakoriság, amellyel a $M (P (\ket{00 \cdots 0} \bra{00 \cdots 0}) $ értéket adja `Zero`vissza a \hat{p}, amely a nem elfogult binomiális kalkulátor $ \hat{p} = n\_{\uparrow}/n\_{\text{Measurements}} $, ahol $n\_{\ a felfelé mutató} $ érték a megfigyelt `Zero` találatok számát jelöli.
     isPrimitive: true
     uid: Double
-ms.openlocfilehash: cfc90cee0b98b88391ee23218489669600a97920
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: hu-HU
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73229174"
+metadata:
+  ms.openlocfilehash: cfc90cee0b98b88391ee23218489669600a97920
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: hu-HU
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73229174"
