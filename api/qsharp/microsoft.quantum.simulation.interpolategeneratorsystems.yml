@@ -6,7 +6,7 @@ namespace: Microsoft.Quantum.Simulation
 summary: Egy `TimeDependentGeneratorSystem` ad vissza, amely a két `GeneratorSystem`s közötti lineáris interpolációt jelképezi.
 syntax: 'function InterpolateGeneratorSystems (generatorSystemStart : Microsoft.Quantum.Simulation.GeneratorSystem, generatorSystemEnd : Microsoft.Quantum.Simulation.GeneratorSystem) : Microsoft.Quantum.Simulation.TimeDependentGeneratorSystem'
 input:
-  content: '(generatorSystemStart: Microsoft. Quantum. szimulációs. GeneratorSystem, generatorSystemEnd: Microsoft. Quantum. szimulációs. GeneratorSystem)'
+  content: '(generatorSystemStart : Microsoft.Quantum.Simulation.GeneratorSystem, generatorSystemEnd : Microsoft.Quantum.Simulation.GeneratorSystem)'
   types:
   - name: generatorSystemStart
     summary: A Start `GeneratorSystem`.
@@ -15,16 +15,17 @@ input:
     summary: A befejezési `GeneratorSystem`.
     uid: microsoft.quantum.simulation.generatorsystem
 output:
-  content: Microsoft. Quantum. szimulációs. TimeDependentGeneratorSystem
+  content: Microsoft.Quantum.Simulation.TimeDependentGeneratorSystem
   types:
   - summary: A `TimeDependentGeneratorSystem` egy olyan rendszert képvisel, amely a bemeneti generátor rendszerének összege, amelynek súlya $ (1-s) $ `generatorSystemStart` és súlyozás $s $ `generatorSystemEnd`.
     uid: microsoft.quantum.simulation.timedependentgeneratorsystem
 seeAlso:
 - microsoft.quantum.canon.generatorsystem
 - microsoft.quantum.canon.timedependentgeneratorsystem
-ms.openlocfilehash: ac01ddee211ddf2ad741b611707aa6e5e6ea70f9
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: hu-HU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73065520"
+metadata:
+  ms.openlocfilehash: ac01ddee211ddf2ad741b611707aa6e5e6ea70f9
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: hu-HU
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73065520"

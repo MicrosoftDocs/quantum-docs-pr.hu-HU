@@ -37,9 +37,10 @@ functions:
 - uid: microsoft.quantum.bitwise.zbits
   summary: Egy olyan egész számot ad vissza, amely a Pauli operátorok tömbének Z bitejét jelöli.
 summary: " # <a name=\"summary\"></a>Összefoglalás\n Ez a névtér a klasszikus adattípusok bitenkénti ábrázolására szolgáló függvényeket tartalmaz."
-ms.openlocfilehash: c474d92e7a40f5491b21d80e00294fbdff96a62a
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: hu-HU
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73210950"
+metadata:
+  ms.openlocfilehash: c474d92e7a40f5491b21d80e00294fbdff96a62a
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: hu-HU
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73210950"

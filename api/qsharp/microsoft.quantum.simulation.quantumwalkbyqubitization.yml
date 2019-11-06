@@ -9,17 +9,14 @@ summary: >-
 
   Ez egy olyan `BlockEncodingReflection` egységes $U $, amely egy operátort $H $ kamatot kódol, egy Quantum Walk $W $ értékre konvertálja, amely a $ \pm e ^ {\pm i\sin ^{-1}(H)} $ spektrumot tartalmazza.
 syntax: 'function QuantumWalkByQubitization (blockEncoding : Microsoft.Quantum.Simulation.BlockEncodingReflection) : ((Qubit[], Qubit[]) => Unit is Adj + Ctl)'
-references: >-
-  - Hamiltonian Simulation by Qubitization
-    Guang Hao Low, Isaac L. Chuang
-    https://arxiv.org/abs/1610.06546
+references: '- Hamilton szimuláció a Qubitization Guang felfüggeszti Hao Low, Isaac L. https://arxiv.org/abs/1610.06546'
 input:
-  content: '(blockEncoding: Microsoft. Quantum. szimulációs. BlockEncodingReflection)'
+  content: '(blockEncoding : Microsoft.Quantum.Simulation.BlockEncodingReflection)'
   types:
   - name: blockEncoding
     uid: microsoft.quantum.simulation.blockencodingreflection
 output:
-  content: '((Qubit [], Qubit []) = > egység: Adj + CTL)'
+  content: ((Qubit[], Qubit[]) => Unit is Adj + Ctl)
   types:
   - summary: A (z) $W $ `a` és `s`, amely blokkolja a $H $ kódolást, és a $ \pm e ^ {\pm i\sin ^{-1}(H)} $ spektrumot tartalmazza.
     isOperation: true
@@ -41,9 +38,10 @@ output:
 seeAlso:
 - microsoft.quantum.canon.blockencoding
 - microsoft.quantum.canon.blockencodingreflection
-ms.openlocfilehash: aec6e81e44d4fa09e2ca131f0350590541f4dc8d
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: hu-HU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73065350"
+metadata:
+  ms.openlocfilehash: aec6e81e44d4fa09e2ca131f0350590541f4dc8d
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: hu-HU
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73065350"
