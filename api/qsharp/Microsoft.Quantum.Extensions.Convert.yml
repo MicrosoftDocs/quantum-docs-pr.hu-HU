@@ -1,6 +1,6 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.extensions.convert
-name: Microsoft. Quantum. Extensions. Convert
+name: Microsoft.Quantum.Extensions.Convert
 summary: " # <a name=\"summary\"></a>Összefoglalás\n Ezek a System. functions által használt függvények. a .NET CLR olyan névterét alakítsa át, amelyek relevánsak a Q # Type rendszeren belül.\n\n # <a name=\"remarks\"></a>Megjegyzések\n Ha a függvény több verziója áll rendelkezésre a bool, az int és a Double típusok esetében, a megfelelő függvények a következő utótagot használják: B, I és D."
 functions:
 - uid: microsoft.quantum.extensions.convert.biginttobools
@@ -53,9 +53,10 @@ functions:
     > [!WARNING]
 
     > Elavult @"microsoft.quantum.convert.intasstringwithformat"használata.
-ms.openlocfilehash: 57f341ec6e8f82cfa9fc4bb958a580743a350218
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: hu-HU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73056490"
+metadata:
+  ms.openlocfilehash: 57f341ec6e8f82cfa9fc4bb958a580743a350218
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: hu-HU
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73056490"

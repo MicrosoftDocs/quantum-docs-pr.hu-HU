@@ -7,20 +7,21 @@ summary: Azt az egész számot adja vissza, amely megadja egy tartomány követk
 remarks: A Range kifejezés első eleme `start`, a második elem `start+step`, a harmadik elem pedig `start+step+step`, stb., amíg `end` át nem telik.
 syntax: 'function RangeStep (range : Range) : Int'
 input:
-  content: '(tartomány: tartomány)'
+  content: '(range : Range)'
   types:
-  - name: tartomány
+  - name: range
     isPrimitive: true
     uid: Range
 output:
-  content: int
+  content: Int
   types:
   - summary: A megadott tartomány megadott lépésének értéke.
     isPrimitive: true
     uid: Int
-ms.openlocfilehash: 0195f0f2eb03c163ae08cc789867627286a44097
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: hu-HU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73066608"
+metadata:
+  ms.openlocfilehash: 0195f0f2eb03c163ae08cc789867627286a44097
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: hu-HU
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73066608"

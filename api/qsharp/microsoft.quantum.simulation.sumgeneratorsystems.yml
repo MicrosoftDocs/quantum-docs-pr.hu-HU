@@ -6,22 +6,23 @@ namespace: Microsoft.Quantum.Simulation
 summary: Több `GeneratorSystem`s hozzáadásával új GeneratorSystem hozhat létre.
 syntax: 'function SumGeneratorSystems (generatorSystems : Microsoft.Quantum.Simulation.GeneratorSystem[]) : Microsoft.Quantum.Simulation.GeneratorSystem'
 input:
-  content: '(generatorSystems: Microsoft. Quantum. szimulációs. GeneratorSystem [])'
+  content: '(generatorSystems : Microsoft.Quantum.Simulation.GeneratorSystem[])'
   types:
   - name: generatorSystems
     summary: '`GeneratorSystem[]`típusú tömb.'
     isArray: true
     uid: microsoft.quantum.simulation.generatorsystem
 output:
-  content: Microsoft. Quantum. szimulációs. GeneratorSystem
+  content: Microsoft.Quantum.Simulation.GeneratorSystem
   types:
   - summary: Egy `GeneratorSystem`, amely a bemeneti létrehozó rendszerek összegét képező rendszert jelképezi.
     uid: microsoft.quantum.simulation.generatorsystem
 seeAlso:
 - microsoft.quantum.canon.generatorsystem
-ms.openlocfilehash: 610e6f8e49d940d70c9f0e7d15eb63298453920e
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: hu-HU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73065316"
+metadata:
+  ms.openlocfilehash: 610e6f8e49d940d70c9f0e7d15eb63298453920e
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: hu-HU
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73065316"
