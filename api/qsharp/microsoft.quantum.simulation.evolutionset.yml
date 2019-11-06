@@ -9,9 +9,10 @@ summary: >-
 
   A készletben lévő elemeket egy <xref:microsoft.quantum.simulation.generatorindex>indexeli, és az egyes készleteket `GeneratorIndex`-<xref:microsoft.quantum.simulation.evolutionunitary>függvény írja le, amely egy valós szám által megadott időt jelképező művelet.
 syntax: newtype EvolutionSet = (Microsoft.Quantum.Simulation.GeneratorIndex -> Microsoft.Quantum.Simulation.EvolutionUnitary);
-ms.openlocfilehash: 2e3e717ca219f5e575f750a32f640215142b170c
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: hu-HU
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73211086"
+metadata:
+  ms.openlocfilehash: 2e3e717ca219f5e575f750a32f640215142b170c
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: hu-HU
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73211086"

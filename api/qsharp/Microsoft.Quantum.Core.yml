@@ -1,6 +1,6 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.core
-name: Microsoft. Quantum. Core
+name: Microsoft.Quantum.Core
 summary: " # <a name=\"summary\"></a>Összefoglalás\n Ez a névtér Q # Core függvényeket és műveleteket tartalmaz.\n\n # <a name=\"remarks\"></a>Megjegyzések\n A Q # fordítóprogram automatikusan megnyitja ezt a névteret, így a névtér minden eleme mindig elérhető."
 functions:
 - uid: microsoft.quantum.core.length
@@ -13,9 +13,10 @@ functions:
   summary: A megadott tartomány megadott indítási értékét adja vissza.
 - uid: microsoft.quantum.core.rangestep
   summary: Azt az egész számot adja vissza, amely megadja egy tartomány következő értékének kiszámítását.
-ms.openlocfilehash: 41c28f8e8e11990ec1cf9b315478996a1e0811f4
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: hu-HU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73056896"
+metadata:
+  ms.openlocfilehash: 41c28f8e8e11990ec1cf9b315478996a1e0811f4
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: hu-HU
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73056896"
