@@ -6,9 +6,10 @@ namespace: Microsoft.Quantum.Arithmetic
 summary: Regisztrálja, hogy a rendszer egy előjel nélküli egész számot kódol a big-endian sorrendben. A qubit indextel `0` kódolja az előjel nélküli egész számok legmagasabb részét.
 remarks: A dokumentációban `BE` rövidítve `BigEndian`.
 syntax: newtype BigEndian = Qubit[];
-ms.openlocfilehash: a4d96ab9299d983583949de5ae8eebba64a189a4
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: hu-HU
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73221354"
+metadata:
+  ms.openlocfilehash: a4d96ab9299d983583949de5ae8eebba64a189a4
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: hu-HU
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73221354"

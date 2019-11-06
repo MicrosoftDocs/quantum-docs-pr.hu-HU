@@ -1,6 +1,6 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.environment
-name: Microsoft. Quantum. Environment
+name: Microsoft.Quantum.Environment
 summary: " # <a name=\"summary\"></a>Összefoglalás\n Ezek a függvények információt nyújtanak arról a környezetről, amelyben a kvantum-számítás történik."
 operations:
 - uid: microsoft.quantum.environment.getqubitsavailabletoborrow
@@ -10,9 +10,10 @@ operations:
     Ez magában foglalja a nem használt qubits; Ez magában foglalja a `GetQubitsAvailableToUse`által visszaadott qubits.
 - uid: microsoft.quantum.environment.getqubitsavailabletouse
   summary: A jelenleg használható qubits számát adja vissza.
-ms.openlocfilehash: 50e5cfb7c1b9a4075c25b2705d00b435a09e159e
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: hu-HU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73056831"
+metadata:
+  ms.openlocfilehash: 50e5cfb7c1b9a4075c25b2705d00b435a09e159e
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: hu-HU
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73056831"

@@ -15,9 +15,10 @@ summary: >-
   - A qubit regisztrálnia kell a megadott reflexió végrehajtásához.
 remarks: Ez az Oracle $O = \boldone-(1-e ^ {i \phi}) \ket{\psi}\bra{\psi} $ egy részleges tükröződést végez egy $ \phi $ fázissal, amely egyetlen tiszta állapotot ($ \ket{\psi} $) mutat.
 syntax: newtype ReflectionOracle = ((Double, Qubit[]) => Unit is Adj + Ctl);
-ms.openlocfilehash: 7ca6551a83ae279c5a937556d7c2c9dde98e4522
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: hu-HU
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73230857"
+metadata:
+  ms.openlocfilehash: 7ca6551a83ae279c5a937556d7c2c9dde98e4522
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: hu-HU
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73230857"
