@@ -6,12 +6,12 @@ ms.author: nakersha
 ms.date: 09/30/2019
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: 169a8ac31c53f2892624618a227d8bdbdc458458
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 868d256270516cf99c228a757a11c6dc1a6319df
+ms.sourcegitcommit: c93fea5980d1d46fbda1e7c7153831b9337134bf
 ms.translationtype: HT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "72958879"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73463334"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>A Microsoft Quantum Development Kit kibocsátási megjegyzései
 
@@ -20,6 +20,19 @@ Ez a cikk információkat tartalmaz a Quantum Development Kit egyes verzióiról
 A telepítési utasításokat lásd a [telepítési útmutatóban](xref:microsoft.quantum.install).
 
 A frissítésre vonatkozó utasításokat lásd a [frissítési útmutatóban](xref:microsoft.quantum.update).
+
+## <a name="version-0101911307"></a>0\.10.1911.307-es verzió
+
+*Kiadási dátum: 2019. november 1.*
+
+A verzió a következőket tartalmazza:
+
+- A Visual Studio Code és a Visual Studio bővítményeinek frissítései nyelvi kiszolgáló önálló végrehajtható alkalmazásként való üzembe helyezéséhez, kiküszöbölve a .NET Core SDK-verzió függőségét  
+- Migrálás a .NET Core 3.0-ba
+- A Microsoft.Quantum.Simulation.Core.IOperationFactory kompatibilitástörő változása az új `Fail` metódus bevezetésével. Ez csak a SimulatorBase-en nem túllépő egyéni szimulátorokra van hatással. További részletekért [tekintse meg a lekéréses kérelmet a GitHubon](https://github.com/microsoft/qsharp-runtime/pull/59).
+- Az elavult attribútumok új támogatása
+
+A [kódtárak](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [fordítók](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [futtatókörnyezetek](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [minták](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed) és [Katák ](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed) lezárt lekéréses kérelmeinek teljes listáját itt tekintheti meg.  
 
 ## <a name="version-0919093002"></a>0\.9.1909.3002-es verzió
 
@@ -448,7 +461,7 @@ Ez a kiadás a közösség által jelentett problémák javítását tartalmazza
 #### <a name="hardware-and-software-requirements"></a>Hardver- és szoftverkövetelmények
 
 - A Quantum Development Kit részét képező szimulátor futtatásához 64 bites Microsoft Windows használata szükséges.
-- A Microsoft a Quantum Development Kit részeként telepített kvantumszimulátora az Advance Vector Extensions (AVX) bővítményeket használja, és egy AVX-kompatibilis processzor használatát igényli. Az AVX-et a 2011 első negyedévében gyártott (Sandy Bridge) vagy későbbi Intel-processzorok támogatják. Vizsgáljuk a korábbi CPU-k támogatásának lehetőségét is. Az ezzel kapcsolatos részletek bejelentésére a későbbiekben kerülhet sor.
+- A Microsoft a Quantum Development Kit részeként telepített kvantumszimulátora az Advanced Vector Extensions (AVX) bővítményeket használja, és egy AVX-kompatibilis processzor használatát igényli. Az AVX-et a 2011 első negyedévében gyártott (Sandy Bridge) vagy későbbi Intel-processzorok támogatják. Vizsgáljuk a korábbi CPU-k támogatásának lehetőségét is. Az ezzel kapcsolatos részletek bejelentésére a későbbiekben kerülhet sor.
 
 #### <a name="project-creation"></a>Projekt létrehozása
 
