@@ -12,27 +12,25 @@ summary: >-
   Ez növeli a $U $ kiegészítő regisztrációjának méretét egy qubit.
 remarks: Ez növeli a $U $ kiegészítő regisztrációjának méretét egy qubit.
 syntax: 'function BlockEncodingToReflection (blockEncoding : Microsoft.Quantum.Simulation.BlockEncoding) : Microsoft.Quantum.Simulation.BlockEncodingReflection'
-references: >-
-  - Hamiltonian Simulation by Qubitization
-    Guang Hao Low, Isaac L. Chuang
-    https://arxiv.org/abs/1610.06546
+references: '- Hamilton szimuláció a Qubitization Guang felfüggeszti Hao Low, Isaac L. https://arxiv.org/abs/1610.06546'
 input:
-  content: '(blockEncoding: Microsoft. Quantum. szimulációs. BlockEncoding)'
+  content: '(blockEncoding : Microsoft.Quantum.Simulation.BlockEncoding)'
   types:
   - name: blockEncoding
     summary: Egy `BlockEncoding` egységes $U $, amely reflexióba konvertálható.
     uid: microsoft.quantum.simulation.blockencoding
 output:
-  content: Microsoft. Quantum. szimulációs. BlockEncodingReflection
+  content: Microsoft.Quantum.Simulation.BlockEncodingReflection
   types:
   - summary: Egy egységes $U "$, amely közösen működik a regisztereken `a` és `s`, amely blokkolja a $H $ kódolást, és megfelel a (z)" ^ \dagger = U "$ $U.
     uid: microsoft.quantum.simulation.blockencodingreflection
 seeAlso:
 - microsoft.quantum.canon.blockencoding
 - microsoft.quantum.canon.blockencodingreflection
-ms.openlocfilehash: 47eba3c59ef30f89139830aa4d9b98d22d141d8f
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: hu-HU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73065622"
+metadata:
+  ms.openlocfilehash: 47eba3c59ef30f89139830aa4d9b98d22d141d8f
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: hu-HU
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73065622"

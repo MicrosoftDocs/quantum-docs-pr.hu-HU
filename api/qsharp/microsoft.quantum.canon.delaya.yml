@@ -1,6 +1,6 @@
 ### YamlMime:QSharpType
 uid: microsoft.quantum.canon.delaya
-name: Késleltetés
+name: DelayA
 type: operation
 namespace: Microsoft.Quantum.Canon
 summary: >-
@@ -14,7 +14,7 @@ summary: >-
   A kifejezés `Delay(op,arg,_)` lehetővé teszi `op`alkalmazásának késleltetését.
 syntax: "operation DelayA (op : ('T => Unit is Adj), arg : 'T, aux : Unit) : Unit"
 input:
-  content: "(op: (nem = > egység értéke), ARG: 'T, AUX: egység)"
+  content: "(op : ('T => Unit is Adj), arg : 'T, aux : Unit)"
   types:
   - name: op
     summary: Egy alkalmazni kívánt művelet.
@@ -29,16 +29,16 @@ input:
         uid: Unit
     functors:
     - Adjoint
-  - name: ARG
+  - name: arg
     summary: Az a bemenet, amelyre a művelet vonatkozik.
     uid: "'T"
     isLocal: true
-  - name: AUX
+  - name: aux
     summary: A művelet alkalmazásának a részleges alkalmazás használatával történő késleltetésére szolgáló argumentum.
     isPrimitive: true
     uid: Unit
 output:
-  content: Unit (Egység)
+  content: Unit
   types:
   - isPrimitive: true
     uid: Unit
@@ -50,9 +50,10 @@ functors:
 seeAlso:
 - microsoft.quantum.canon.delay
 - microsoft.quantum.canon.delayed
-ms.openlocfilehash: f36930faacf0aa4a1ea87a09fc3018e06e62d7ac
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: hu-HU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73067798"
+metadata:
+  ms.openlocfilehash: f36930faacf0aa4a1ea87a09fc3018e06e62d7ac
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: hu-HU
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73067798"
