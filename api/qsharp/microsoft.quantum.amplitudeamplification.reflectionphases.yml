@@ -9,9 +9,10 @@ remarks: >-
 
   Mindkét tömbnek egyenlő hosszúságú kell lennie. Vegye figyelembe, hogy sok esetben a kezdeti állapot és az utolsó fázis a megcélzott állapottal kapcsolatos első fázisa globális fázis-eltolást mutat be, és $0 $ értékre állítható be.
 syntax: newtype ReflectionPhases = (Double[], Double[]);
-ms.openlocfilehash: ce9bab0540f70ac0115d5b7780437410e019a09b
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: hu-HU
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73215557"
+metadata:
+  ms.openlocfilehash: ce9bab0540f70ac0115d5b7780437410e019a09b
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: hu-HU
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73215557"

@@ -7,7 +7,7 @@ summary: Az adott külső és belső műveletek olyan új műveletet adnak vissz
 remarks: A külső művelet mindig adjointable, de nem szükséges ahhoz, hogy az összevont művelet ellenőrizhető legyen, és ne legyenek ellenőrizhetők.
 syntax: "function ConjugatedBy (outerOperation : ('T => Unit is Adj), innerOperation : ('T => Unit)) : ('T => Unit)"
 input:
-  content: "(outerOperation: ('T = > egység), innerOperation: (nem = > egység))"
+  content: "(outerOperation : ('T => Unit is Adj), innerOperation : ('T => Unit))"
   types:
   - name: outerOperation
     summary: $U $ művelet, amelyet a $V $ konjugátumhoz kell használni. Vegye figyelembe, hogy a külső műveletnek $U $ adjointable kell lennie, de nem feltétlenül szükséges.
@@ -34,7 +34,7 @@ input:
       - isPrimitive: true
         uid: Unit
 output:
-  content: (Nem = > egység)
+  content: ('T => Unit)
   types:
   - summary: Egy új művelet, amelynek a műveletét az egységes $U ^ {\dagger} V U $ jelképezi.
     isOperation: true
@@ -54,9 +54,10 @@ seeAlso:
 - conjugatedbyc
 - conjugatedbyca
 - applywith
-ms.openlocfilehash: 4acd29aa515d1f2323b301673bd620f2b81d76f5
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: hu-HU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73068002"
+metadata:
+  ms.openlocfilehash: 4acd29aa515d1f2323b301673bd620f2b81d76f5
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: hu-HU
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73068002"

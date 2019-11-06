@@ -9,7 +9,7 @@ summary: >-
   Ez egy szükséges, de nem elégséges, a két unitaries egyenlőségének feltétele.
 syntax: 'operation AssertOperationsEqualInPlaceCompBasis (nQubits : Int, givenU : (Qubit[] => Unit), expectedU : (Qubit[] => Unit is Adj)) : Unit'
 input:
-  content: '(nQubits: int, givenU: (Qubit [] = > egység), expectedU: (Qubit [] = > egység az Adj))'
+  content: '(nQubits : Int, givenU : (Qubit[] => Unit), expectedU : (Qubit[] => Unit is Adj))'
   types:
   - name: nQubits
     summary: Azon qubits száma, $n $, amelyeken a műveletek `givenU` és `expectedU` működnek.
@@ -42,13 +42,14 @@ input:
     functors:
     - Adjoint
 output:
-  content: Unit (Egység)
+  content: Unit
   types:
   - isPrimitive: true
     uid: Unit
-ms.openlocfilehash: 5841b6dc60047c051b38305c177f54d3eb84e087
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: hu-HU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73066557"
+metadata:
+  ms.openlocfilehash: 5841b6dc60047c051b38305c177f54d3eb84e087
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: hu-HU
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73066557"

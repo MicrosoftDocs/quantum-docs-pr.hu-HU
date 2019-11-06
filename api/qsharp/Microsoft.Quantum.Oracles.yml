@@ -72,9 +72,10 @@ newtypes:
     - Egy egész szám, amely indexeli a jelző qubit $f $ értéket.
 
     - A rendszer regisztrálja $s $, amely a kívánt Quantum State $ \ket{\psi}\_s $ értéket fogja tárolni.
-ms.openlocfilehash: 10eb2c7acebf805b955816abe2bf1cabb95ce059
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: hu-HU
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73216101"
+metadata:
+  ms.openlocfilehash: 10eb2c7acebf805b955816abe2bf1cabb95ce059
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: hu-HU
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73216101"
