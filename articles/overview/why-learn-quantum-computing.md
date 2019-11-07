@@ -6,28 +6,30 @@ ms.author: nakersha
 ms.date: 10/16/2019
 ms.topic: article
 uid: microsoft.quantum.overview.why
-ms.openlocfilehash: 1ccf21aad9473f18a33bf6b12e14b021ac159cbb
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.openlocfilehash: 389b745a9f19caa6272e7d537e3ee5f884cec36b
+ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
 ms.translationtype: HT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73443902"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73529913"
 ---
 # <a name="why-learn-quantum-computing"></a>Miért érdemes kvantum-számítástechnikát tanulni?
 
-A kvantumszámítógépek klasszak, de miért érdemes kvantum-számítástechnikát tanulni? Ebben a szakaszban felsorolunk néhány érvet amellett, hogy miért jó ötlet ma kvantum-számítástechnikát tanulni.
+A kvantumszámítógépek klasszak, de miért érdemes kvantum-számítástechnikát tanulni?
+
+Ebben a szakaszban felsorolunk néhány érvet amellett, hogy miért jó ötlet ma kvantum-számítástechnikát tanulni.
 
 ## <a name="join-the-quantum-revolution"></a>Része lehet a kvantumforradalomnak
 
-A kutatók még csak most kezdik felvázolni a jövőbeli kvantumtechnológiákban rejlő lehetőségeket. Ma szemtanúi lehetünk annak, amit sokan a második kvantumforradalomnak neveznek. Az első forradalmat az jelentette, amikor a kvantumfizika törvényeit az olyan korszakalkotó találmányok megalkotásához használták fel, mint a lézer és a tranzisztor. Az elmúlt évtizedben a tudomány lassan elkezdte irányítása alá vonni a kvantumrendszereket az önálló részecskék szintjén. Ez óriási lehetőségeket nyit meg előttünk, amelyek jelentős része még felfedezésre vár. Ne csak szemlélő legyen, cselekedjen! Már ma kiveheti a részét annak a technológiának a fejlesztéséből, amely átformálja majd a jövőt.
+A kutatók még csak most kezdik felvázolni a jövőbeli kvantumtechnológiákban rejlő lehetőségeket. Ma szemtanúi lehetünk annak, amit sokan a második kvantumforradalomnak neveznek. Az első forradalmat az jelentette, amikor a kvantumfizika törvényeit az olyan korszakalkotó találmányok megalkotásához használták fel, mint a lézer és a tranzisztor. Az elmúlt évtizedben a tudomány lassan elkezdte irányítása alá vonni a kvantumrendszereket az önálló részecskék szintjén, ami óriási lehetőségeket nyit meg előttünk, amelyek jelentős része még felfedezésre vár. Ne csak szemlélő legyen, cselekedjen! Már ma kiveheti a részét annak a technológiának a fejlesztéséből, amely átformálja majd a jövőt.
 
 ## <a name="solving-great-challenges-requires-diverse-communities"></a>A nagy kihívások megoldásához sokszínű közösségre van szükség
 
-A hatékony kvantum-számítástechnika megvalósítása kétségkívül korunk egyik legnagyobb kihívása. A bonyolultságát az adja, hogy számos különböző szempontnak kell teljesülnie: többek között megbízható és skálázható kvantumhardver, hatékony kvantumszoftver, robusztus és olcsó hibajavítási protokollok, illetve praktikus felhasználási lehetőségek szükségesek hozzá. Ezen kihívások megoldása csak egy tudósok, mérnökök és fejlesztők alkotta jelentős méretű közösség együttes munkája révén lehetséges. Ennek a közösségnek a létrehozása széles körű hálózatot igényel, amelyben mindenféle terület képviselteti magát. Mindegy, hogy milyen szakmai háttérrel rendelkezik, a kvantumforradalomhoz ma bárki csatlakozhat. A kvantumküldetés mindenkit tárt karokkal vár.
+A hatékony kvantum-számítástechnika megvalósítása kétségkívül korunk egyik legnagyobb kihívása. A bonyolultságát az adja, hogy számos különböző szempontnak kell teljesülnie: többek között megbízható és skálázható kvantumhardver, hatékony kvantumszoftver, robusztus és olcsó hibajavítási protokollok, illetve praktikus felhasználási lehetőségek szükségesek hozzá. Ezek a kihívások csak a tudósok, mérnökök és fejlesztők jelentős méretű közösségének munkájával oldhatók meg. Ennek a közösségnek a létrehozása széles körű hálózatot igényel, amelyben mindenféle terület képviselteti magát. Mindegy, hogy milyen szakmai háttérrel rendelkezik, a kvantumforradalomhoz ma bárki csatlakozhat. A kvantumküldetés mindenkit tárt karokkal vár.
 
 ## <a name="get-inspired-by-the-quantum-world"></a>Inspiráció a kvantumvilágból
 
-Bár a hibatűrő kvantumszámítógépektől még messze vagyunk, a kvantum-számítástechnika következményei már a hagyományos számítástechnikában is tetten érhetők. Az elmúlt néhány évben számos új algoritmust fejlesztettek ki a kvantum-számítástechnikában alkalmazott technikák alapján. Ezek az úgynevezett kvantumalapú algoritmusok hagyományos számítógépeken is futtathatók. Ide tartoznak például az ajánlórendszerek vagy a genetikus algoritmusok, amelyek minden korábbi klasszikus metódusnál gyorsabbak. A kvantum-számítástechnikai ismeretek elsajátításával új nézőpontra tehet szert a számítástechnika terén, ami megváltoztatja majd a klasszikus programozásról kialakult képét.
+Bár a hibatűrő kvantumszámítógépektől még messze vagyunk, a kvantum-számítástechnika következményei már a hagyományos számítástechnikában is tetten érhetők. Az elmúlt néhány évben számos új algoritmust fejlesztettek ki a kvantum-számítástechnikában alkalmazott technikák alapján. Ezek az algoritmusok úgynevezett kvantumalapú algoritmusok, és hagyományos számítógépeken is futtathatók. Ide tartoznak például az ajánlórendszerek vagy a genetikus algoritmusok, amelyek minden korábbi klasszikus metódusnál gyorsabbak. A kvantum-számítástechnikai ismeretek elsajátításával új nézőpontra tehet szert a számítástechnika terén, ami megváltoztatja majd a klasszikus programozásról kialakult képét.
 
 ## <a name="quantum-computing-is-fun"></a>A kvantum-számítástechnika jó móka!
 

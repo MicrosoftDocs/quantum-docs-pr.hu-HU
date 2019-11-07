@@ -6,18 +6,20 @@ ms.author: nakersha
 ms.date: 10/23/2019
 ms.topic: article
 uid: microsoft.quantum.overview.computers
-ms.openlocfilehash: d4be970c635ca090e8dcb1b58d5c840eebd4d110
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.openlocfilehash: 9d8ba90a504f298f9465ebf564c43625a4d43168
+ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
 ms.translationtype: HT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73443834"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73529953"
 ---
 # <a name="what-can-a-quantum-computer-do"></a>Mire képesek a kvantumszámítógépek?
 
 Mit tud egy kvantumszámítógép, amit egy klasszikus nem?
 
-A világ legnagyobb kihívást okozó problémáira a jelenlegi számítógépek több milliárd év után szolgáltatnának megoldást, míg egy kvantumszámítógép napok, órák vagy csupán percek alatt képes ugyanerre. A kvantum-számítástechnika segít a kutatóknak kifejleszteni új katalizátorokat és anyagokat, fokozni a gyógyszerek hatását, gyorsítani a mesterséges intelligencia előrehaladását, és megválaszolni az alapvető kérdéseket a világegyetem eredetéről.
+A világ legnagyobb kihívást okozó problémáira a jelenlegi számítógépek több milliárd év után szolgáltatnának megoldást, míg egy kvantumszámítógép napok, órák vagy csupán percek alatt képes ugyanerre.
+
+A kvantum-számítástechnika segít a kutatóknak kifejleszteni új katalizátorokat és anyagokat, fokozni a gyógyszerek hatását, gyorsítani a mesterséges intelligencia előrehaladását, és megválaszolni az alapvető kérdéseket a világegyetem eredetéről.
 
 ## <a name="quantum-simulation"></a>Kvantumszimuláció
 
@@ -29,19 +31,25 @@ A vegyi molekulák kvantumrendszerek, így ilyen módon lehetőség nyílik az e
 
 ## <a name="cryptography"></a>Titkosítás
 
-A kvantumszámítógépek leghíresebb alkalmazási területe valószínűleg a kriptográfia, amellyel kapcsolatban Peter Shor 1994-ben megállapította, hogy egy skálázható kvantumszámítógép az összes széles körben használt titkosítási technikát fel tudja törni.  A klasszikus kriptográfia a nagy számokkal végrehajtott műveletek megoldhatatlanságán alapszik, ilyen például a nagy számok két prímszámra történő prímfelbontása.  A kvantum-számítástechnika ezeket a műveleteket elméletben (Shor algoritmusán keresztül) megoldhatóvá teszi. Bár az algoritmus implementálása fizikai akadályokba ütközik a kvantumhardverek jelenlegi keretei között, elindította a kvantumrezisztens algoritmusok fejlesztését a jövőálló adatbiztonság terén, beleértve a titkosításhoz és a kriptográfiai kulcselosztáshoz használatos új kvantumalgoritmusok megalkotását.  A Microsoft világelső posztkvantum-kriptográfiai és biztonsági csapata kvantumrezisztens algoritmusok kifejlesztésén dolgozik. 
+A kvantumszámítógépek leghíresebb alkalmazási területe valószínűleg a kriptográfia, amellyel kapcsolatban Peter Shor 1994-ben megállapította, hogy egy skálázható kvantumszámítógép az összes széles körben használt titkosítási technikát fel tudja törni.  A klasszikus kriptográfia a nagy számokkal végrehajtott műveletek megoldhatatlanságán alapszik, ilyen például a nagy számok két prímszámra történő prímfelbontása.
+
+A kvantum-számítástechnika ezeket a műveleteket elméletben (Shor algoritmusán keresztül) megoldhatóvá teszi. Bár az algoritmus implementálása fizikai akadályokba ütközik a kvantumhardverek jelenlegi keretei között, elindította a kvantumrezisztens algoritmusok fejlesztését a jövőálló adatbiztonság terén, beleértve a titkosításhoz és a kriptográfiai kulcselosztáshoz használatos új kvantumalgoritmusok megalkotását.
+
+A Microsoft világelső posztkvantum-kriptográfiai és biztonsági csapata kvantumrezisztens algoritmusok kifejlesztésén dolgozik.
 
 ## <a name="optimization"></a>Optimalizálás
 
-Az optimalizálás egy olyan feladat, amely során a rendszer nagy léptékű keresést hajt végre egy magas dimenziójú térben egy olyan kiváló megoldás után kutatva, amely minimalizálja az adott költségfüggvényt.   A kvantumszámítógépeken fel tudjuk gyorsítani az optimalizálási algoritmusokat, így olyan megoldásokra találhatunk rá, amelyekre egyébként képtelenek lettünk volna. Alkalmazásuk történhet szállítmányozási és logisztikai, egészségügyi, diagnosztikai és anyagtudományi területen, és ezen iparágak hatékonyabbá válására jelentős hatást gyakorolhatnak. 
+Az optimalizálás egy olyan feladat, amely során a rendszer nagy léptékű keresést hajt végre egy magas dimenziójú térben egy olyan megoldás után kutatva, amely minimalizálja az adott költségfüggvényt.   A kvantumszámítógépeken fel tudjuk gyorsítani az optimalizálási algoritmusokat, így olyan megoldásokra találhatunk rá, amelyekre egyébként képtelenek lettünk volna. Alkalmazásuk történhet szállítmányozási és logisztikai, egészségügyi, diagnosztikai és anyagtudományi területen. és ezen iparágak hatékonyabbá válására jelentős hatást gyakorolhatnak.
 
-A kvantum-számítástechnikával történő optimalizálás olyan módon teszi lehetővé a szállítmányozás és a logisztika innovációját, ahogy a jelenlegi klasszikus rendszerek képtelenek lennének. A forgalom áramlásának optimalizálása csökkentheti a torlódást.  Az útvonaltervezés mellett számos más funkciót tölthet be, például egy repülőtéri kapu hozzárendelését, a csomagszállítást vagy a feladatütemezést.  Az anyagtudomány áttöréseinek köszönhetően az energia új formái, nagyobb teljesítményű akkumulátorok, valamint könnyebb és erősebb anyagok válnak elérhetővé. 
+A kvantum-számítástechnikával történő optimalizálás olyan módon teszi lehetővé a szállítmányozás és a logisztika innovációját, ahogy a jelenlegi klasszikus rendszerek képtelenek lennének.
+
+A forgalom áramlásának optimalizálása csökkentheti a torlódást.  Az útvonaltervezés mellett számos más funkciót tölthet be, például egy repülőtéri kapu hozzárendelését, a csomagszállítást vagy a feladatütemezést. Az anyagtudomány áttöréseinek köszönhetően az energia új formái, nagyobb teljesítményű akkumulátorok, valamint könnyebb és erősebb anyagok válnak elérhetővé.
 
 ## <a name="machine-learning"></a>Gépi tanulás
 
-Az általános számítástechnikában a numerikus számítások nagy része lineáris egyenletrendszerek megoldásából áll. Ez különösen igaz a gépi tanulás területén, ahol a legtöbb számítási költséget a hatalmas mátrixok inverzének kiszámítása okozza.
+A klasszikus számítástechnikában a numerikus számítások nagy része lineáris egyenletrendszerek megoldásából áll, különösen a gépi tanulás területén, ahol a legtöbb számítási költséget a hatalmas mátrixok inverzének kiszámítása okozza.
 
-Szerencsére létezik olyan kvantumalgoritmus, amellyel az általános számítástechnikához képest exponenciálisan gyorsabban oldhatjuk meg hozzávetőlegesen a rendszert. Ezáltal lényegesen gyorsabban oldható meg minden olyan probléma, amelyben lineáris egyenletrendszereket kell megoldani.
+Szerencsére létezik olyan kvantumalgoritmus, amellyel a klasszikus számítógépeknél exponenciálisan gyorsabban oldhatjuk meg hozzávetőlegesen a rendszert. Ezzel az algoritmussal lényegesen gyorsabban oldható meg minden olyan probléma, amelyben lineáris egyenletrendszereket kell megoldani.
 
 Az említett területeken felmerülő problémák megoldásai lehetővé teszik az energiaválság, a klímaváltozás és az élelmiszerhiány kezelését, valamint a személyes és precíz orvosi diagnózisok felállítását.
 
