@@ -7,11 +7,11 @@ summary: >-
   A 0 és `nIndices`közötti kódolást biztosító állapotok egységes összeosztását hozza létre.
 
 
-  Ez azt eredményezi, hogy ez az egységes $U $ a $0 $ és $M-$1 közötti összes számú államban egységes feladatot hoz létre, amely a \ket{0\cdots 0} $ értékű bemeneti állapottal rendelkezik. Más szóval, $ $ \begin{align} U\ket{0}= \frac{1}{\sqrt{M}}\sum_{j = 0} ^ {M-1} \ket{j}.
+  Ez azt eredményezi, hogy ez az egységes $U $ a $0 $ és $M-$1 közötti összes számú államban egységes feladatot hoz létre, amely a \ket{0\cdots 0} $ értékű bemeneti állapottal rendelkezik. Más szóval, $ $ \begin{align} U\ket{0}= \frac{1}{\sqrt{M}}\ sum_ {j = 0} ^ {M-1} \ket{j}.
 
   \end{align} $ $.
 examples: >-
-  Az alábbi példa a $ \frac{1}{\sqrt{6}} \sum_{j = 0} ^{5}\ket{j} $ értéket állítja elő $3 $ qubits.
+  A következő példa előkészíti a $ \frac{1}{\sqrt{6}} \ sum_ {j = 0} ^{5}\ket{j} $ értéket a $3 $ qubits.
 
 
   ```Q#

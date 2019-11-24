@@ -7,17 +7,17 @@ summary: >-
   Egy qubits-tömbön lévő Pauli-rotációs feltételt alkalmaz.
 
 
-  Ez a szorzási vezérlésű, $U $ értéket alkalmazza, amely a $ \theta_j $ szöget hajtja végre az egyszeres qubit Pauli-operátortól, $P $ értékkel, ha az $n $-qubit Number State $ \ket{j} $ értékkel van vezérelve.
+  Ez a szorzási vezérlésű, egységes művelet $U $, amely a $ \ theta_j $ szöget hajtja végre az qubit Pauli operátorral $P $ értékkel, ha az $n $-qubit Number State $ \ket{j} $ értékkel rendelkezik.
 
 
-  $U = \sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j}\otimes e ^ {i P \theta_j} $.
-remarks: a `coefficients` a $ \theta_j = $0,0 elemmel lesz feltöltve, ha kevesebb, mint $2 ^ n $ van megadva.
+  $U = \sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j}\otimes e ^ {i P \ theta_j} $.
+remarks: a `coefficients` a $ \ theta_j = $0,0 elemmel lesz feltöltve, ha kevesebb, mint $2 ^ n $ van megadva.
 syntax: 'operation MultiplexPauli (coefficients : Double[], pauli : Pauli, control : Microsoft.Quantum.Arithmetic.LittleEndian, target : Qubit) : Unit'
 input:
   content: '(coefficients : Double[], pauli : Pauli, control : Microsoft.Quantum.Arithmetic.LittleEndian, target : Qubit)'
   types:
   - name: coefficients
-    summary: Legfeljebb $2 ^ n $ együttható, $ \theta_j $. A $j $ th együttható a $ \ket{j} $ kódolású számú állapotot indexeli a kis endian formátumban.
+    summary: Legfeljebb $2 ^ n $ együttható, $ \ theta_j $. A $j $ th együttható a $ \ket{j} $ kódolású számú állapotot indexeli a kis endian formátumban.
     isArray: true
     isPrimitive: true
     uid: Double
@@ -29,7 +29,7 @@ input:
     summary: $n $-qubit-vezérlő regisztrálása, amely kis endian formátumban kódolja a szám állapotot $ \ket{j} $ értékre.
     uid: microsoft.quantum.arithmetic.littleendian
   - name: target
-    summary: Egyetlen qubit-regisztráció, amelyet a $e ^ {i P \theta_j} $ elforgat.
+    summary: Egyetlen qubit-regisztráció, amelyet $e ^ {i P \ theta_j} $ elforgat.
     isPrimitive: true
     uid: Qubit
 output:
