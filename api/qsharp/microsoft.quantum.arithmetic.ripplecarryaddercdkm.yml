@@ -6,7 +6,7 @@ namespace: Microsoft.Quantum.Arithmetic
 summary: >-
   Visszafordítható, helyi hullámos – két egész szám hozzáadását hajthatja végre.
 
-  A LittleEndian-ben `xs` és `ys`, valamint egy qubit-t tartalmazó két $n $ bites egész számnak megfelelően a művelet kiszámítja a két egész szám összegét, amelyekben az eredmény $n $ legkevésbé jelentős bitet tárolja `ys`, és a végrehajtás bit a xored qubit `carry`.
+  A LittleEndian-ben `xs` és `ys`, valamint egy qubit-t tartalmazó két $n $ bites egész számnak köszönhetően a művelet kiszámítja a két egész szám összegét, amelyekben az eredmény $n $ legkevésbé jelentős bitet tárolják `ys` és a végrehajtást végző bitet a qubit `carry`xored.
 remarks: Ez a művelet ugyanazokkal a funkciókkal rendelkezik, mint a RippleCarryAdderD, de $n $ helyett csak egy Ancilla-qubit használ.
 syntax: 'operation RippleCarryAdderCDKM (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, carry : Qubit) : Unit'
 references: >-

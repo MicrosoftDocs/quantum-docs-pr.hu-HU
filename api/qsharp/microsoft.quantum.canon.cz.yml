@@ -7,7 +7,7 @@ summary: >-
   A vezérelt-Z (CZ) kaput alkalmazza egy pár qubits.
 
 
-  $ $ \begin{align} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 1 & 0 \\\\ 0 & 0 & 0 &-1 \end{align} $ $ $, ahol a sorok és oszlopok a Quantum Concepts útmutatóban vannak rendszerezve.
+  $ $ \begin{align} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 1 & 0 \\\\ 0 & 0 & 0 &-1 \end{align}, $ $, ahol a sorok és oszlopok a Quantum Concepts útmutatóban vannak rendezve.
 remarks: >-
   Egyenértékű a következővel:
 

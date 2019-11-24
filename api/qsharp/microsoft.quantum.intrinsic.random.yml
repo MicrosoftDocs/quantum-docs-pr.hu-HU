@@ -21,7 +21,7 @@ input:
 output:
   content: Int
   types:
-  - summary: 'Egy egész szám $i $, a következő valószínűséggel: $ \Pr (i) = p_i/\sum_i p_i $, ahol a $p _i $ a `probs`$i $ th eleme.'
+  - summary: 'Egy egész szám $i $, a következő valószínűséggel: $ \Pr (i) = p_i/\ sum_i p_i $, ahol $p _i $ a $i `probs`$ th eleme.'
     isPrimitive: true
     uid: Int
 metadata:

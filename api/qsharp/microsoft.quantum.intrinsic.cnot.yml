@@ -7,7 +7,7 @@ summary: >-
   A vezérelt-NOT (CNEM) kaput alkalmazza egy qubits.
 
 
-  \begin{align} \operatorname{CNOT} \mathrel{: =} \begin{bmatrix} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 & 1 \\\\ 0 & 0 & 1 & 0 \end{bmatrix} , \end{align}
+  \begin{align} \operatorname{CNOT} \mathrel{: =} \begin{bmatrix} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 & 1 \\\\ 0 & 0 & 1 & 0 \end{bmatrix}, \end{align}
 
 
   a sorok és oszlopok sorrendjét a Quantum Concepts útmutatója tartalmazza.

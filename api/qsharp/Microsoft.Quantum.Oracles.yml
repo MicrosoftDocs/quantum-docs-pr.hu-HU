@@ -1,7 +1,7 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.oracles
 name: Microsoft.Quantum.Oracles
-summary: " # <a name=\"summary\"></a>Összefoglalás\n Ez a névterek felhasználó által definiált típusokat biztosítanak különféle Oracle-típusok kiépítéséhez a kvantum-algoritmusokban, például a fázisok becslése és az amplitúdó-erősítés alapján."
+summary: " # <a name=\"summary\"></a>Összegzés\n Ez a névterek felhasználó által definiált típusokat biztosítanak különféle Oracle-típusok kiépítéséhez a kvantum-algoritmusokban, például a fázisok becslése és az amplitúdó-erősítés alapján."
 functions:
 - uid: microsoft.quantum.oracles.deterministicstateoraclefromstateoracle
   summary: '`StateOracle` típusú Oracle-t konvertál `DeterministicStateOracle`re.'

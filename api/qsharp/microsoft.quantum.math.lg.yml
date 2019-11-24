@@ -15,7 +15,7 @@ input:
 output:
   content: Double
   types:
-  - summary: A Base-2 logaritmus $y = \log_2 (x) $, például $x = 2 ^ y $.
+  - summary: A Base-2 logaritmus $y = \ log_2 (x) $, például $x = 2 ^ y $.
     isPrimitive: true
     uid: Double
 metadata:

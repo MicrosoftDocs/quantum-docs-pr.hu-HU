@@ -23,7 +23,7 @@ input:
 output:
   content: Double[]
   types:
-  - summary: A $p $-Norm $\|x\|_p $ által normalizált tömb $x $.
+  - summary: A $p $-Norm $\|x\|_p $ $x által normalizált tömb.
     isArray: true
     isPrimitive: true
     uid: Double

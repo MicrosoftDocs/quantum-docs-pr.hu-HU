@@ -7,7 +7,7 @@ summary: >-
   A klasszikus találatok értékétől függően két egységes művelet egyikét alkalmazza.
 
 
-  Az eredmény `result`miatt a művelet `zeroOp` a `zeroInput`, ha a `result` `Zero`értékkel egyenlő, és `oneOp(oneInput)`re vonatkozik.
+  Az eredmény `result`miatt a művelet `zeroOp` a `zeroInput`, ha a `result` `Zero`értékkel egyenlő, és `oneOp(oneInput)`re vonatkozik.`result == One`
 syntax: "operation ApplyIfElseRCA (result : Result, (zeroOp : ('T => Unit is Adj + Ctl), zeroInput : 'T), (oneOp : ('U => Unit is Adj + Ctl), oneInput : 'U)) : Unit"
 input:
   content: "(result : Result, (zeroOp : ('T => Unit is Adj + Ctl), zeroInput : 'T), (oneOp : ('U => Unit is Adj + Ctl), oneInput : 'U))"

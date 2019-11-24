@@ -7,7 +7,7 @@ summary: Azt a függvényt adja vissza, amely leképezi a hiba-szindrómát a me
 remarks: >-
   Az $1 $ súlyozású összes hiba megismétlésével összesen $3 \ alkalommal 5 = 15 $ lehetséges, nem triviális tünetegyüttest kapunk.
 
-  Az identitással együtt a rendszer felépíti a hibát tartalmazó táblázatot és a megfelelő szindrómát. Az 5 qubit-kód esetében ezt a táblázatot a következő adja meg: $X\_1: (0, 0, 0, 1); X\_2: (1, 0, 0, 0); X\_3: (1, 1, 0, 0); X\_4: (0, 1, 1, 0); X\_5: (0, 0, 1, 1) $, $Z\_1: (1, 0, 1, 0); Z\_2: (0, 1, 0, 1); Z\_3: (0, 0, 1, 0); Z\_4: (1, 0, 0, 1); Z\_5: (0, 1, 0, 0) $ $Y _i $ beszerzésével, a $X _i $ és $Z _i $ szindrómák hozzáadásával. Vegye figyelembe, hogy a tábla keresésének helyreállítását úgy adja meg, hogy a bitvectors egész számmá (kis endian használatával) konvertálja.
+  Az identitással együtt a rendszer felépíti a hibát tartalmazó táblázatot és a megfelelő szindrómát. Az 5 qubit-kód esetében ezt a táblázatot a következő adja meg: $X\_1: (0, 0, 0, 1); X\_2: (1, 0, 0, 0); X\_3: (1, 1, 0, 0); X\_4: (0, 1, 1, 0); X\_5: (0, 0, 1, 1) $, $Z\_1: (1, 0, 1, 0); Z\_2: (0, 1, 0, 1); Z\_3: (0, 0, 1, 0); Z\_4: (1, 0, 0, 1); Z\_5: (0, 1, 0, 0) $, $Y _i $ beszerzése a $X _i $ és a $Z $ szindrómák hozzáadásával. Vegye figyelembe, hogy a tábla keresésének helyreállítását úgy adja meg, hogy a bitvectors egész számmá (kis endian használatával) konvertálja.
 syntax: 'function FiveQubitCodeRecoveryFn () : Microsoft.Quantum.ErrorCorrection.RecoveryFn'
 input:
   content: ()

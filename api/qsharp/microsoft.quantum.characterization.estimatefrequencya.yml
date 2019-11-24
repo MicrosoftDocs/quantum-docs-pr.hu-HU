@@ -46,7 +46,7 @@ input:
 output:
   content: Double
   types:
-  - summary: Az a gyakoriság, amellyel a $M (P (\ket{00 \cdots 0} \bra{00 \cdots 0}) $ értéket adja `Zero`vissza a \hat{p}, amely a nem elfogult binomiális kalkulátor $ \hat{p} = n\_{\uparrow}/n\_{\text{Measurements}} $, ahol $n\_{\ a felfelé mutató} $ érték a megfigyelt `Zero` találatok számát jelöli.
+  - summary: Az a gyakoriság, amellyel a $M (P (\ket{00 \cdots 0} \bra{00 \cdots 0}) $ értéket adja `Zero`vissza, amely a nem elfogult binomiális kalkulátor $ \hat{p} = n\_{\uparrow}/n\_{\text{Measurements}} $ \hat{p}, ahol $n\_{\uparrow} $ a megfigyelt `Zero` eredmények száma.
     isPrimitive: true
     uid: Double
 metadata:

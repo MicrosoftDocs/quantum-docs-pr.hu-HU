@@ -3,7 +3,7 @@ uid: microsoft.quantum.arithmetic.cascadecnot
 name: CascadeCNOT
 type: operation
 namespace: Microsoft.Quantum.Arithmetic
-summary: Egy lépcsőzetes CNEM-kaput valósít meg a szomszédos qubits egy adott qubit-regiszterben, kezdve a 0. pozícióban lévő qubit, amely az 1. pozícióban található, célként megadott qubit, majd az 1. pozícióban lévő qubit vezérlőelemként, a 2. pozícióban pedig a célként megadott qubit. stb., a `Length(register)-1` pozícióban lévő qubit végződik.
+summary: Egy lépcsőzetes CNEM-kaput valósít meg a szomszédos qubits egy adott qubit-regiszterben, amely a 0. pozícióban, az 1. pozícióban, a célként megadott qubit, majd az 1. pozícióban, a qubit pedig a qubit pozícióban, a célként megadottnál, a qubit pedig a célnak megfelelően `Length(register)-1` végződik.
 syntax: 'operation CascadeCNOT (register : Qubit[]) : Unit'
 input:
   content: '(register : Qubit[])'

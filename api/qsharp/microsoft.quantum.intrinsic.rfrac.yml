@@ -7,7 +7,7 @@ summary: >-
   A megadott Pauli-tengely rotációját alkalmazza egy dyadic-frakcióként megadott szögben.
 
 
-  \begin{align} R_ {\mu} (n, k) \mathrel{: =} e ^ {i \pi n \sigma_{\mu}/2 ^ k}, \end{align}, ahol $ \mu \in \{I, X, Y, Z\}$.
+  \begin{align} R_ {\mu} (n, k) \mathrel{: =} e ^ {i \pi n \ sigma_ {\mu}/2 ^ k}, \end{align}, ahol $ \mu \in \{I, X, Y, Z\}$.
 
 
   > [!WARNING]

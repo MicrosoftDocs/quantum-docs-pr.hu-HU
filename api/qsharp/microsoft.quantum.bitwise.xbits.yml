@@ -17,7 +17,7 @@ input:
 output:
   content: Int
   types:
-  - summary: Egy egész $x $, bináris ábrázolással $ (P_{62}\,P_{61}\,\dots\,p_0) $, ahol $p _i = $0, ha `paulis[i]` `PauliI` vagy `PauliZ`, valamint $p _i = $1, ha `paulis[i]` `PauliX` vagy `PauliY`.
+  - summary: Egy egész $x $, bináris ábrázolással $ (p_{62}\,p_{61}\,\dots\,p_0) $, ahol $p _i = $0, ha `paulis[i]` `PauliI` vagy `PauliZ`, és $p _i = $1, ha `paulis[i]` `PauliX` `PauliY`vagy.
     isPrimitive: true
     uid: Int
 seeAlso:
