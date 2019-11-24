@@ -6,7 +6,7 @@ namespace: Microsoft.Quantum.Arithmetic
 summary: >-
   Egy kaszkád CCNOT-kaput valósít meg, amely a két qubit-regiszter megfelelő BITS-nyilvántartásába van irányítva, amely az egyik regiszter következő qubit működik.
 
-  A (z) 0. pozícióban lévő qubits kezdve a CCNOT a rendszer a qubit 1. pozíciójában alkalmazza, majd az 1. pozíción a qubits a cél regiszter 2. pozíciójában, a qubit pedig a a cél qubit a pozícióban `Length(nQubits)-1`.
+  A (z) 0. pozícióban lévő qubits kezdve a CCNOT a rendszer a qubit 1. pozíciójában alkalmazza, majd az 1. pozíción a qubit a cél-regiszter 2. pozíciójában, a célként megadott qubit `Length(nQubits)-1`található művelettel végződik.
 remarks: A cél qubit-regisztrációnak egy qubit kell lennie, mint a többi regiszternél.
 syntax: 'operation CascadeCCNOT (register : Qubit[], targets : Qubit[]) : Unit'
 input:

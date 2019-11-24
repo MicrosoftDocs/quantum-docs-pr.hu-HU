@@ -7,7 +7,7 @@ summary: >-
   A cél qubits végrehajt egy vezérelt "AND ladder" műveletet.
 
 
-  Ez egy, az alábbi Térkép alapján, a számítási alapokra épülő vektorokra vonatkozik: $ $ \begin{align} \ket{x\_1, \dots, x\_n} \ket{y\_1, \dots, y\_{n-1}} \mapsto \ket{x\_1 , \dots, x\_n} \ket{y\_1 \oplus (x\_1 \land x\_2), \dots, y\_{n-1} \oplus (x\_1 \land x\_2 \land \cdots \land x\_{n-1}} , \end{align} $ $, ahol $ \ket{x\_1, \dots, x\_n} $ a `controls`számítási állapotára hivatkozik, és ahol a $ \ket{y\_1, \dots, y\_{n-1}} $ a `targets`számítási állapotára hivatkozik.
+  Ez egy, az alábbi Térkép alapján, a számítási alapokra épülő vektorokra vonatkozik: $ $ \begin{align} \ket{x\_1, \dots, x\_n} \ket{y\_1, \dots, y\_{n-1}} \mapsto \ket{x\_1, \dots, x\_n} \ket{y\_1 \oplus (x\_1 \land x\_2), \dots, y\_{n-1} \oplus (x\_1 \land x\_2 \land \cdots \land x\_{n-1}} , \end{align} $ $, ahol $ \ket{x\_1, \dots, x\_n} $ a `controls`számítási állapotára hivatkozik, és ahol a $ \ket{y\_1, \dots, y\_{n-1}} $ a `targets`számítási állapotára hivatkozik.
 remarks: >-
   - <xref:microsoft.quantum.canon.applymulticontrolledc> és <xref:microsoft.quantum.canon.applymulticontrolledca>részeként használatos.
 
