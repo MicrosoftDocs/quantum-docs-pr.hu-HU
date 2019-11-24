@@ -7,7 +7,7 @@ summary: >-
   Kiszámítja egy qubits-tömb paritását egy célként megadott qubit.
 
 
-  Ha a tömb kezdetben a $ \ket{q_0} \ket{q_1} \cdots \ket{Q_{\text{Target}}} $ állapotban van, a végleges állapotot a $ \ket{q_0} \ket{q_1 \oplus q_0} \cdots \ket{Q_{n-1} \oplus \cdots \oplus q_0 \oplus Q_ {\text{Target}}} $ értékkel adja meg.
+  Ha a tömb kezdetben a $ \ket{q_0} \ket{q_1} \cdots \ket{q_ {\text{Target}}} $, a végleges állapotot a $ \ket{q_0} \ket{q_1 \oplus q_0} \cdots \ket{q_ {n-1} \oplus \cdots \oplus q_0 \oplus q_ {\text{Target}}} $.
 remarks: >-
   A következők egyenértékűek:
 

@@ -7,7 +7,7 @@ summary: >-
   A két művelet miatt a azt állítja, hogy az összes bemeneti állapot esetében azonos módon működnek.
 
 
-  Ez az állítás a műveleteknek a $V _0 \otimes... \otimes V_ {n-1} $, ahol a $V _K $ egyike a (z) $ \ket{0}$, $ \ket{1}$, $ \ket{+} $ és $ \ket{i} $ (+ 1 eigenstate Pauli Y operátor) állapotának ellenőrzésével valósul meg.
+  Ezt az állítást úgy valósítja meg, hogy ellenőrzi a műveletek műveleteit az űrlap összes állapotában $V _0 \otimes... \otimes V_ {n-1} $, ahol a $V _k $ az egyik állam $ \ket{0}$, $ \ket{1}$, $ \ket{+} $ és $ \ket{i} $ (+ 1 eigenstate Pauli Y operátor).
 
 
   Ez az állítás $n $ qubits használ, és több hívást igényel a műveletekhez képest.

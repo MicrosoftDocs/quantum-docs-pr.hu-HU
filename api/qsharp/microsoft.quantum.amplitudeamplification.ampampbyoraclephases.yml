@@ -9,7 +9,7 @@ remarks: >-
 
   Feltételezzük, hogy a célként megadott állapotot a $ \ket{1}\_f $ érték jelöli.
 
-  Feltételezzük, hogy a \begin{align} A\ket{0}\_{f} \ket{0}\_s = \lambda\ket{1}\_f\ket {\ Text {Target}}\_s + \sqrt{1-| \lambda | ^ 2} \ket{0}\_f\cdots a legtöbb esetben a `flagQubit` és az `ancillaRegister` inicializálása a (z) $ \ket{0}\_{f} \ket{0}\_s $ \end{align}.
+  Feltételezzük, hogy a \begin{align} A\ket{0}\_{f} \ket{0}\_s = \lambda\ket{1}\_f\ket {\ Text {Target}}\_s + \sqrt{1-| \lambda | ^ 2} \ket{0}\_f\cdots, \end{align} a legtöbb esetben, `flagQubit` és `ancillaRegister` inicializálása a következő állapotban: $ \ket{0}\_{f} \ket{0}\_s $.
 syntax: 'function AmpAmpByOraclePhases (phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, stateOracle : Microsoft.Quantum.Oracles.StateOracle, idxFlagQubit : Int) : (Qubit[] => Unit is Adj + Ctl)'
 input:
   content: '(phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, stateOracle : Microsoft.Quantum.Oracles.StateOracle, idxFlagQubit : Int)'

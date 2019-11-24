@@ -1,7 +1,7 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.simulation
 name: Microsoft.Quantum.Simulation
-summary: " # <a name=\"summary\"></a>Összefoglalás\n Ez a névtér olyan függvényeket és műveleteket tartalmaz, amelyek koherens módon szimulálják a kvantum-rendszerek dinamikáját."
+summary: " # <a name=\"summary\"></a>Összegzés\n Ez a névtér olyan függvényeket és műveleteket tartalmaz, amelyek koherens módon szimulálják a kvantum-rendszerek dinamikáját."
 functions:
 - uid: microsoft.quantum.simulation.addgeneratorsystems
   summary: Két `GeneratorSystem`s hozzáadásával új `GeneratorSystem`hozhat létre.
@@ -10,13 +10,13 @@ functions:
     Egy `BlockEncoding`ba kódolja a fontos operátort.
 
 
-    Ezzel létrehoz egy `BlockEncoding` egységes $U = P\cdot V\cdot P ^ \dagger $-t, amely kódol egy operátort $H = \sum_{j} | \alpha_j | U_j $, amely a unitaries lineáris kombinációja. A $P $ általában egy olyan állapot-előkészítés, amely egységes, például $P \ket{0}\_a = \ sum_j\sqrt {\ alpha_j/\|\vec\alpha\|\_2} \ket{j}\_a $, és $V = \sum_{j}\ket{j}\bra{j}\_a\otimes U_ j $.
+    Ezzel létrehoz egy `BlockEncoding` egységes $U = P\cdot V\cdot P ^ \dagger $-t, amely kódol egy operátort $H = \ sum_ {j} | \ alpha_j | U_j $, amely a unitaries lineáris kombinációja. A $P $ általában egy olyan állapot-előkészítés, amely $P \ket{0}\_a = \ sum_j \sqrt{\ alpha_j/\|\vec\alpha\|\_2} \ket{j}\_a $, és $V = \ sum_ {j} \ket{j}\bra{j}\_a\otimes U_j $.
 - uid: microsoft.quantum.simulation.blockencodingreflectionbylcu
   summary: >-
     Egy `BlockEncodingReflection`ba kódolja a fontos operátort.
 
 
-    Ezzel létrehoz egy `BlockEncodingReflection` egységes $U = P\cdot V\cdot P ^ \dagger $-t, amely kódol egy operátort $H = \sum_{j} | \alpha_j | U_j $, amely a unitaries lineáris kombinációja. A $P $ általában egy olyan állapot-előkészítés, amely egységes, például $P \ket{0}\_a\sum_j\sqrt {\ alpha_j/\|\vec\alpha\|\_2} \ket{j}\_a $, és $V = \sum_{j}\ket{j}\bra{j}\_a\otimes U_ j $.
+    Ezzel létrehoz egy `BlockEncodingReflection` egységes $U = P\cdot V\cdot P ^ \dagger $-t, amely kódol egy operátort $H = \ sum_ {j} | \ alpha_j | U_j $, amely a unitaries lineáris kombinációja. A $P $ általában egy olyan állapot-előkészítés, amely egységes, például $P \ket{0}\_a \ sum_j \sqrt{\ alpha_j/\|\vec\alpha\|\_2} \ket{j}\_a $, és $V = \ sum_ {j} \ket{j}\bra{j}\_a\otimes U_j $.
 - uid: microsoft.quantum.simulation.blockencodingtoreflection
   summary: >-
     Egy `BlockEncoding` egy egyenértékű `BLockEncodingReflection`ra konvertál.
@@ -52,7 +52,7 @@ functions:
     Létrehoz egy blokk-Encoding egységes Hamilton.
 
 
-    A Hamilton $H = \sum_{j}\alpha_j P_j $ $P _j $ értékkel rendelkezik, amelyek mindegyike valódi együtthatóval ($ \alpha_j $) van leírva.
+    A Hamilton $H = \ sum_ {j} \ alpha_j P_j $ kifejezést $P _j $ értékkel rendelkező, az összes valós hatékonyságú $ \ alpha_j $ nevű összeg írja le.
 - uid: microsoft.quantum.simulation.paulicoefficientfromgenidx
   summary: Egy `GeneratorIndex`által leírt Pauli-kifejezés együtthatójának kibontása.
 - uid: microsoft.quantum.simulation.paulievolutionfunction
@@ -88,10 +88,10 @@ newtypes:
     Olyan egységes, amelyben a kamatot egy tetszőleges operátor kódolja a bal felső blokkban.
 
 
-    Ez azt a `BlockEncoding` egy egységes $U $, ahol egy tetszőleges operátor $H $ értékű, amely a rendszerregisztrálás `s` a rendszer-regisztrálásra jogosult, a \ket{0}_a $ kiegészítő állapotnak megfelelő bal felső blokkban van kódolva. az
+    Ez azt a `BlockEncoding` egy egységes $U $, ahol egy tetszőleges operátor $H $ értékű, amely a rendszerregisztrálás `s`t, a kiegészítő állapotnak megfelelő bal felső blokkban van kódolva, amely a \ket{0}_a $ értéknek felel meg. az
 
 
-    $ $ \begin{align} (\bra{0}_a \ otimes I_s) U (\ket{0}_a \ otimes I_s) = H \end{align} $ $.
+    $ $ \begin{align} (\bra{0}_a \otimes I_s) U (\ket{0}_a \otimes I_s) = H \end{align} $ $.
 - uid: microsoft.quantum.simulation.blockencodingreflection
   summary: Egy olyan `BlockEncoding` jelöl, amely egyben reflexió is.
 - uid: microsoft.quantum.simulation.evolutiongenerator
@@ -143,10 +143,10 @@ newtypes:
     Az óra-regisztráció által vezérelt `BlockEncoding` jelöl.
 
 
-    Ez azt eredményezi, hogy a `TimeDependentBlockEncoding` egy egységes $U $, amely a $ \ket{k}_D $ értékű állapotot használja az óra-regisztrációban `d` úgy, hogy egy tetszőleges operátor $H _K $-t, amely a rendszerregisztrálás `s`, a kisegítő állapotnak megfelelő, bal felső blokkban \ket @no __t_3_ _a $. az
+    Ez azt eredményezi, hogy a `TimeDependentBlockEncoding` egy egységes $U $, amely a $ \ket{k} _d $ értékű állapotot vezérli `d` úgy, hogy egy tetszőleges operátor $H _K a rendszerregisztrálás `s` a{0}a kiegészítő állapotnak megfelelő bal felső blokkban kódolja a $ \ket _a $ értéket. az
 
 
-    $ $ \begin{align} (\bra{0}\_a\otimes I_ {DS}) U (\ket{0}\_a\otimes I_ {DS}) = \sum_{k}\ket{k}\bra{k}\_d\otimes H_k.
+    $ $ \begin{align} (\bra{0}\_a\otimes I_ {DS}) U (\ket{0}\_a\otimes I_ {DS}) = \ sum_ {k} \ket{k}\bra{k}\_d\otimes H_k.
 
     \end{align} $ $.
 - uid: microsoft.quantum.simulation.timedependentgeneratorsystem

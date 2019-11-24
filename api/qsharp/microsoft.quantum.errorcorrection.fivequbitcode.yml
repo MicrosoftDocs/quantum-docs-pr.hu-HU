@@ -8,7 +8,7 @@ remarks: >-
   A kód a következő két dokumentumtól függetlenül található:
 
 
-  - C. h. Bennett, D. alvincenzo, J. A. Smolin és W. K. Wootters, "vegyes állapotú felakadás és kvantum-hibajavítás," leltár. Rev. A, 54 (1996) PP. 3824-3851; https://arxiv.org/abs/quant-ph/9604024 és
+  - C. H. Bennett, D. alvincenzo, J. A. Smolin és W. K. Wootters, "vegyes állapotú felakadás és kvantum-hibajavítás," leltár. Rev. A, 54 (1996) PP. 3824-3851; https://arxiv.org/abs/quant-ph/9604024 és
 
   - R. Leva, C. Miquel, J. P. Paz és W. H Zurek, "tökéletes kvantum-hibajavítási kód", "leltár. Rev. lett. 77 (1996) PP. 198-201; https://arxiv.org/abs/quant-ph/9602019
 syntax: 'function FiveQubitCode () : Microsoft.Quantum.ErrorCorrection.QECC'

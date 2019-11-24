@@ -1,7 +1,7 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.preparation
 name: Microsoft.Quantum.Preparation
-summary: " # <a name=\"summary\"></a>Összefoglalás\n Ez a névtér függvényeket és műveleteket tartalmaz a qubits tetszőleges kezdeti állapotba történő előkészítéséhez."
+summary: " # <a name=\"summary\"></a>Összegzés\n Ez a névtér függvényeket és műveleteket tartalmaz a qubits tetszőleges kezdeti állapotba történő előkészítéséhez."
 functions:
 - uid: microsoft.quantum.preparation.blochspherecoordinates
   summary: >-
@@ -14,7 +14,7 @@ functions:
     A Quantum ROM technikát használja egy adott sűrűségű mátrix ábrázolására.
 
 
-    A $N $ együtthatós $ \alpha_j $ értékkel megadott listával ez egy egységes $U $ értéket ad vissza, amely a Quantum-ROM technikát használja a \tilde\rho\sum_{j = 0} ^ {N-1} p_j\ket {j} \ melltartó {j} $ megtisztítására a sűrűségi mátrix $ \rho = \sum_{j = 0} ^ {N-1} \frac{| alpha_j |} {\sum_k | \alpha_k |} \ket{j}\bra{j} $. Ebben a közelítésben a $ \epsilon $ hiba például $ | p_j-\frac{| alpha_j |} {\sum_k | \alpha_k |} | \Le \epsilon/N $ és $\|\tilde\rho-\rho\| \Le \epsilon $. Más szóval, $ $ \begin{align} U\ket{0}^ {\lceil\log_2 N\rceil} \ ket{0}^ {m} = \sum_{j = 0} ^ {N-1} \sqrt{p_j} \ket{j}\ket{\text{Garbage}_j}.
+    A $N $ együtthatós $ \ alpha_j $ értékkel megadott listáról ez egy egységes $U $ értéket ad vissza, amely a Quantum-ROM technikát használja a \tilde\rho\ sum_ {j = 0} ^ {N-1} p_j \ket{j}\bra{j} $ megtisztításához a sűrűségi mátrix $ \rho = \ sum_ {j = 0} ^ {N-1} \frac{| alpha_j |} {\ sum_k | \ alpha_k |} \ket{j}\bra{j} $. Ebben a közelítésben a $ \epsilon $ hiba olyan, hogy $ | p_j-\frac{| alpha_j |} {\ sum_k | \ alpha_k |} | \Le \epsilon/N $ és $\|\tilde\rho-\rho\| \Le \epsilon $. Más szóval, $ $ \begin{align} U\ket{0}^ {\lceil\ log_2 N\rceil} \ ket{0}^ {m} = \ sum_ {j = 0} ^ {N-1} \sqrt{p_j} \ket{j}\ket{\text{Garbage} _j}.
 
     \end{align} $ $
 - uid: microsoft.quantum.preparation.quantumromqubitcount
@@ -24,10 +24,10 @@ functions:
     Egy olyan műveletet ad vissza, amely egy adott kvantum-állapotot készít elő.
 
 
-    A visszaadott művelet $U $ felkészít egy tetszőleges kvantum-állapotot ($ \ket{\psi} $) összetett együtthatókkal $r _j e ^ {i t_j} $ értéket a $n $-qubit számítási alapja $ \ket{0...0} $.
+    A visszaadott művelet $U $ felkészít egy tetszőleges kvantum-állapotot ($ \ket{\psi} $) összetett együtthatókkal $r _j e ^ {i t_j} $ értéket a $n $ qubit számítási alapból $ \ket{0...0} $ értékre.
 
 
-    Az U művelet az újonnan lefoglalt regisztrációnál $ $ \begin{align} U\ket {0... 0} = \ket{\psi} = \frac{\sum_{j = 0} ^ {2 ^ n-1} r_j e ^ {i t_j} \ket{j}}{\sqrt{\sum_{j = 0} ^ {2 ^ n-1} | r_j | ^ 2}}.
+    Az U egy újonnan lefoglalt regisztrációra vonatkozó műveletét $ $ \begin{align} U\ket {0... 0} = \ket{\psi} = \frac{\ sum_ {j = 0} ^ {2 ^ n-1} r_j e ^ {i t_j} \ket{j}}{\sqrt{\ sum_ {j = 0} ^ {2 ^ n-1} | r_j | ^ 2}}.
 
     \end{align} $ $
 - uid: microsoft.quantum.preparation.statepreparationpositivecoefficients
@@ -35,10 +35,10 @@ functions:
     Egy olyan műveletet ad vissza, amely előkészíti a megadott kvantum-állapotot.
 
 
-    A visszaadott művelet $U $ előkészít egy tetszőleges kvantum-állapotot ($ \ket{\psi} $) a $0-as számú pozitív együtthatóval a $n $-qubit számítási \ket{0...0} $ alapján.
+    A visszaadott művelet $U $ előkészít egy tetszőleges kvantum-állapotot ($ \ket{\psi} $) a következő pozitív együtthatókkal: $ \ alpha_j \ge $0 az $n $-qubit számítási alapja $ \ket{0...0} $.
 
 
-    Az U egy újonnan lefoglalt regisztrációra vonatkozó műveletét $ $ \begin{align} U \ket{0\cdots 0} = \ket{\psi} = \frac{\sum_{j = 0} ^ {2 ^ n-1} \alpha_j \ket{j}}{\sqrt{\sum_{j = 0} ^ {2 ^ n-1} | \alpha_j | ^ 2}} adja meg.
+    Az U művelet az újonnan lefoglalt regisztrációhoz $ $ \begin{align} U \ket{0\cdots 0} = \ket{\psi} = \frac{\ sum_ {j = 0} ^ {2 ^ n-1} \ alpha_j \ket{j}}{\sqrt{\ sum_ {j = 0} ^ {2 ^ n-1} | \ alpha_j | ^ 2}}.
 
     \end{align} $ $
 operations:
@@ -47,10 +47,10 @@ operations:
     Egy olyan műveletet ad vissza, amely egy adott kvantum-állapotot készít elő.
 
 
-    A visszaadott művelet $U $ felkészít egy tetszőleges kvantum-állapotot ($ \ket{\psi} $) összetett együtthatókkal $r _j e ^ {i t_j} $ értéket a $n $-qubit számítási alapja $ \ket{0...0} $.
+    A visszaadott művelet $U $ felkészít egy tetszőleges kvantum-állapotot ($ \ket{\psi} $) összetett együtthatókkal $r _j e ^ {i t_j} $ értéket a $n $ qubit számítási alapból $ \ket{0...0} $ értékre.
 
 
-    $ $ \begin{align} U\ket {0... 0} = \ket{\psi} = \frac{\sum_{j = 0} ^ {2 ^ n-1} r_j e ^ {i t_j} \ket{j}}{\sqrt{\sum_{j = 0} ^ {2 ^ n-1} | r_j | ^ 2}}.
+    $ $ \begin{align} U\ket {0... 0} = \ket{\psi} = \frac{\ sum_ {j = 0} ^ {2 ^ n-1} r_j e ^ {i t_j} \ket{j}}{\sqrt{\ sum_ {j = 0} ^ {2 ^ n-1} | r_j | ^ 2}}.
 
     \end{align} $ $
 - uid: microsoft.quantum.preparation.preparechoistate
@@ -66,7 +66,7 @@ operations:
     A páros két qubit-regisztrációt is összekever.
 
 
-    Ez azt eredményezi, hogy a két regisztráció során előkészíti a maximálisan összefoglalt állapotot ($ \frac{1}{\sqrt{2}} \left (\ket{00} + \ket{11} \right) $ a megfelelő regisztereken lévő egyes qubits között, feltételezve, hogy az egyes regisztrációk a $ \ket{0\-ben kezdődnek cdots 0} $ állapot.
+    Ez azt eredményezi, hogy a két regisztráció során előkészíti a maximálisan összefoglalt állapotot ($ \frac{1}{\sqrt{2}} \left (\ket{00} + \ket{11} \right) $ a megfelelő regisztereken lévő egyes qubits között, feltételezve, hogy minden regisztráció a $ \ket{0\cdots 0} $ állapottal kezdődik.
 - uid: microsoft.quantum.preparation.prepareidentity
   summary: >-
     A regisztrációt követően a rendszer felkészíti a regisztrációt a maximálisan vegyes állapotba.
@@ -89,13 +89,13 @@ operations:
     Qubit előkészítése a maximálisan kevert állapotban.
 
 
-    Előkészíti a megadott qubit a $ \boldone/$2 állapotban a depolarizációs csatorna $ $ \begin{align} \Omega (\rho) \mathrel{: =} \frac{1}{4} \sum_{\mu \in \{0, 1, 2, 3\}} \sigma\_{\mu} \rho \sigma\_{\mu} ^ {\ tőr}, \end{align} $ $, ahol $ \sigma\_i $ a $i $ th. Pauli operátor, ahol a $ \rho $ egy vegyes állapotot jelölő sűrűségű operátor.
+    Előkészíti a megadott qubit a $ \boldone/$2 állapotban a depolarizációs csatorna $ $ \begin{align} \Omega (\rho) \mathrel{alkalmazásával: =} \frac{1}{4} \ sum_ {\mu \in \{0, 1, 2, 3\}} \sigma\_{\mu} \rho \sigma\_{\mu} ^ {\dagger}, \end{align} $ $, ahol $ \sigma\_i $ a $i $ th Pauli operátor, és ahol a $ \rho $ egy vegyes állapotot képviselő sűrűségű operátor.
 - uid: microsoft.quantum.preparation.prepareuniformsuperposition
   summary: >-
     A 0 és `nIndices`közötti kódolást biztosító állapotok egységes összeosztását hozza létre.
 
 
-    Ez azt eredményezi, hogy ez az egységes $U $ a $0 $ és $M-$1 közötti összes számú államban egységes feladatot hoz létre, amely a \ket{0\cdots 0} $ értékű bemeneti állapottal rendelkezik. Más szóval, $ $ \begin{align} U\ket{0}= \frac{1}{\sqrt{M}}\sum_{j = 0} ^ {M-1} \ket{j}.
+    Ez azt eredményezi, hogy ez az egységes $U $ a $0 $ és $M-$1 közötti összes számú államban egységes feladatot hoz létre, amely a \ket{0\cdots 0} $ értékű bemeneti állapottal rendelkezik. Más szóval, $ $ \begin{align} U\ket{0}= \frac{1}{\sqrt{M}}\ sum_ {j = 0} ^ {M-1} \ket{j}.
 
     \end{align} $ $.
 metadata:

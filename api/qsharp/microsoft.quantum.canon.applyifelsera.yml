@@ -7,7 +7,7 @@ summary: >-
   Egy klasszikus eredmény értékétől függően két adjointable műveletet alkalmaz.
 
 
-  Az eredmény `result`miatt a művelet `zeroOp` a `zeroInput`, ha a `result` `Zero`értékkel egyenlő, és `oneOp(oneInput)`re vonatkozik.
+  Az eredmény `result`miatt a művelet `zeroOp` a `zeroInput`, ha a `result` `Zero`értékkel egyenlő, és `oneOp(oneInput)`re vonatkozik.`result == One`
 syntax: "operation ApplyIfElseRA (result : Result, (zeroOp : ('T => Unit is Adj), zeroInput : 'T), (oneOp : ('U => Unit is Adj), oneInput : 'U)) : Unit"
 input:
   content: "(result : Result, (zeroOp : ('T => Unit is Adj), zeroInput : 'T), (oneOp : ('U => Unit is Adj), oneInput : 'U))"

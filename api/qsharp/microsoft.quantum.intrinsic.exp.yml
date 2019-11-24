@@ -7,7 +7,7 @@ summary: >-
   Egy több qubit Pauli-operátor exponenciális értékének alkalmazása.
 
 
-  \begin{align} e ^ {i \theta [P_0 \otimes P_1 \cdots P_ {N-1}]}, \end{align}, ahol $P _i $ a $i $ th eleme `paulis`, és ahol $N = $`Length(paulis)`.
+  \begin{align} e ^ {i \theta [P_0 \otimes P_1 \cdots P_ {N-1}]}, \end{align}, ahol $P _i $ a $i $ th eleme, és ahol `paulis`= $ $N.`Length(paulis)`
 syntax: 'operation Exp (paulis : Pauli[], theta : Double, qubits : Qubit[]) : Unit'
 input:
   content: '(paulis : Pauli[], theta : Double, qubits : Qubit[])'

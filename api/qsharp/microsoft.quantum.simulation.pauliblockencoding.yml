@@ -7,8 +7,8 @@ summary: >-
   Létrehoz egy blokk-Encoding egységes Hamilton.
 
 
-  A Hamilton $H = \sum_{j}\alpha_j P_j $ $P _j $ értékkel rendelkezik, amelyek mindegyike valódi együtthatóval ($ \alpha_j $) van leírva.
-remarks: 'Ezt a rendszer a következő állapot előkészítésével és előkészítésével szerzi be: $ \ sum_ {j} \ SQRT {\ alpha_j/\ Alpha} \ ket {j} $, valamint egy szorzásra vezérelt, egységes <xref:microsoft.quantum.preparation.statepreparationpositivecoefficients> és <xref:microsoft.quantum.canon.multiplexoperationsfromgenerator>létrehozásával.'
+  A Hamilton $H = \ sum_ {j} \ alpha_j P_j $ kifejezést $P _j $ értékkel rendelkező, az összes valós hatékonyságú $ \ alpha_j $ nevű összeg írja le.
+remarks: Ezt a rendszer a $ \ sum_ {j} \sqrt{\ alpha_j/\alpha}\ket{j} $ állapotának előkészítésével és előkészítésével, valamint egy szorzásra vezérelt, egységes <xref:microsoft.quantum.preparation.statepreparationpositivecoefficients> és <xref:microsoft.quantum.canon.multiplexoperationsfromgenerator>létrehozásával szerzi be.
 syntax: 'function PauliBlockEncoding (generatorSystem : Microsoft.Quantum.Simulation.GeneratorSystem) : (Double, Microsoft.Quantum.Simulation.BlockEncodingReflection)'
 input:
   content: '(generatorSystem : Microsoft.Quantum.Simulation.GeneratorSystem)'
@@ -23,7 +23,7 @@ output:
       ## <a name="first-parameter"></a>Első paraméter
 
 
-      Az együtthatók egynormája $ \alpha = \sum_{j} | \alpha_j | $.
+      Az együtthatók egy normája: $ \alpha = \ sum_ {j} | \ alpha_j | $.
 
 
       ## <a name="second-parameter"></a>Második paraméter

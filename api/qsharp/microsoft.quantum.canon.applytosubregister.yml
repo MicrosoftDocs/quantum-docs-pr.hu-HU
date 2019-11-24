@@ -5,7 +5,7 @@ type: operation
 namespace: Microsoft.Quantum.Canon
 summary: Egy műveletet alkalmaz egy regiszter alnyilvántartásába, és az qubits egy tömb adja meg.
 examples: >-
-  Hozzon létre három qubit állapotot $ \frac{1}{\sqrt{2}} \ket{0}\_2 (\ket{0}\_1 \ ket{0}_3 + \ket{1}\_1 \ ket{1}_3) $ :
+  Hozzon létre három qubit állapotot $ \frac{1}{\sqrt{2}} \ket{0}\_2 (\ket{0}\_1 \ ket{0}_3 + \ket{1}\_1 \ ket{1}_3) $:
 
 
   ```qsharp

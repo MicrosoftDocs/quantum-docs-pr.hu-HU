@@ -16,7 +16,7 @@ input:
 output:
   content: Pauli[]
   types:
-  - summary: A Pauli-operátorok tömbje `paulis` `Pauli[]` ugyanolyan hosszú, mint `ints`, hogy `paulis[idxPauli]` egyenlő a `[PauliI, PauliX, PauliY, PauliZ]` által megadott elemmel.
+  - summary: A Pauli-operátorok tömbje `paulis` `Pauli[]` ugyanolyan hosszú, mint `ints`, hogy `paulis[idxPauli]` egyenlő a `[PauliI, PauliX, PauliY, PauliZ]` által megadott elemmel.`ints[idxPauli]`
     isArray: true
     isPrimitive: true
     uid: Pauli

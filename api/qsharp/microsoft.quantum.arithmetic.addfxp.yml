@@ -7,8 +7,8 @@ summary: >-
   Két, a kvantum-regiszterekben tárolt, rögzített ponttal rendelkező számot adja meg.
 
 
-  A $ \ket{f_1} $ és a $ \ket{f_2} $ állapotú két rögzített pontos regisztráció miatt a $ \ket{f_1} \ket{f_2} \mapsto \ket{f_1} \ket{f_1 + f_2} $ műveletet hajtja végre.
-remarks: A jelenlegi megvalósításhoz a két rögzített pontból kiszámított számnak azonos ponttal kell rendelkeznie a legkevésbé jelentős, azaz $n _i $ és $p _i $ értékkel egyenlőnek kell lennie.
+  A $ \ket{f_1} $ és a $ \ket{f_2} $ értékben megadott két rögzített pontos regiszter esetében a $ \ket{f_1} \ket{f_2} \mapsto \ket{f_1} \ket{f_1 + f_2} $ műveletet hajtja végre.
+remarks: A jelenlegi megvalósításhoz a két rögzített pontból származó számnak azonos ponttal kell rendelkeznie, mint a legkevésbé jelentős, azaz $n _i $ és a $p _i $ értéknek egyenlőnek kell lennie.
 syntax: 'operation AddFxP (fp1 : Microsoft.Quantum.Arithmetic.FixedPoint, fp2 : Microsoft.Quantum.Arithmetic.FixedPoint) : Unit'
 input:
   content: '(fp1 : Microsoft.Quantum.Arithmetic.FixedPoint, fp2 : Microsoft.Quantum.Arithmetic.FixedPoint)'

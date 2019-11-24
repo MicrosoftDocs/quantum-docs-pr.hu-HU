@@ -16,7 +16,7 @@ input:
 output:
   content: "'T[]"
   types:
-  - summary: Az elemeket tartalmazó tömb, `array[Length(array) - 1]`.. `array[0]` kérdésre adott válaszban foglalt lépéseket.
+  - summary: Az elemeket tartalmazó tömb, `array[Length(array) - 1]`.. `array[0]`.
     isArray: true
     uid: "'T"
     isLocal: true

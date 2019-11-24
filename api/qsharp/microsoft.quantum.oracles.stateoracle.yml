@@ -14,7 +14,7 @@ summary: >-
 
   - A rendszer regisztrálja $s $, amely a kívánt Quantum State $ \ket{\psi}\_s $ értéket fogja tárolni.
 remarks: >-
-  Ez az Oracle által definiált $ $ O\ket{0}\_{f} \ket{0}\_s = \lambda\ket{1}\_f\ket {\ PSI}\_s + \sqrt{1-| \lambda | ^ 2} \ket{0}\_f\cdots , a $ $ a számítás alapjául szolgáló állapot $ \ket{0}\_{f} \ket{0}\_s $, hogy hozza létre a cél állapotot $ \ket{\psi}\_s $ és amplitúdó $ \lambda $ alapján, amelyet a $ \ket{1}\_f $ megjelöl.
+  Ez az Oracle által meghatározott $ $ O\ket{0}\_{f} \ket{0}\_s = \lambda\ket{1}\_f\ket {\ PSI}\_s + \sqrt{1-| \lambda | ^ 2} \ket{0}\_f\cdots, $ $ a on számítási alapon kiszámított állapot $ \ket{0}\_{f} \ket{0}\_s $, hogy létrehozza a célként megadott állapotot $ \ket{\psi}\_s $ és amplitúdó $ \lambda $ alapján, a $ \ket{1}\_f $ jelöléssel.
 
   Az első paraméter a $ \ket{0}\_f $ qubit-regisztrációjának indexe. A második paraméter mindkét regisztert magában foglalja.
 syntax: newtype StateOracle = ((Int, Qubit[]) => Unit is Adj + Ctl);
