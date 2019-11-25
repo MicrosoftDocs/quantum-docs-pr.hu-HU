@@ -7,7 +7,7 @@ summary: >-
   Egy klasszikus bites értéktől függően két egységes művelet egyikét alkalmazza.
 
 
-  Egy kicsit `bit`adott a művelet `trueOp` a `trueInput` a `bit` `true`kor, és `falseOp(falseInput)` `bit` esetén alkalmazza.
+  Egy kicsit `bit`adott a művelet `trueOp` a `trueInput` a `bit` `true`kor, és `falseOp(falseInput)` `bit` esetén alkalmazza.`false`
 syntax: "operation ApplyIfElseBCA (bit : Bool, (trueOp : ('T => Unit is Adj + Ctl), trueInput : 'T), (falseOp : ('U => Unit is Adj + Ctl), falseInput : 'U)) : Unit"
 input:
   content: "(bit : Bool, (trueOp : ('T => Unit is Adj + Ctl), trueInput : 'T), (falseOp : ('U => Unit is Adj + Ctl), falseInput : 'U))"
