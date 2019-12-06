@@ -1,21 +1,21 @@
 ---
 title: 'Q # standard könyvtárak – alkalmazások | Microsoft Docs'
-description: 'Q # standard kódtárak'
+description: Szabványos Q#-kódtárak
 author: QuantumWriter
 uid: microsoft.quantum.libraries.applications
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: e6eca45dd67b3566340c2a2a4fded0f6e7c3c5c3
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: ef22460a5bca63ebaf32c0ba21984e103ec8ebdd
+ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73185171"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74864389"
 ---
 # <a name="applications"></a>Alkalmazások #
 
-## <a name="hamiltonian-simulation"></a>Hamilton szimuláció ##
+## <a name="hamiltonian-simulation"></a>Hamilton-szimuláció ##
 
 A kvantum-rendszerek szimulációja a kvantum-számítás legizgalmasabb alkalmazásai közé esik.
 A klasszikus számítógépeken a kvantummechanika szimulálása során felmerülő nehézségek általában az állapot-vektoros ábrázolás $N $ dimenzióval méretezhetők.
@@ -24,13 +24,13 @@ Mivel ez a képviselet exponenciálisan növekszik a $n $ qubits $N = 2 ^ n $ é
 A helyzet azonban nagyon eltérő lehet a kvantum hardveren. A kvantum-szimuláció leggyakoribb változata az idő-független Hamilton-szimulációs probléma. Itt az egyik a System Hamilton $H $, amely egy Hermitian mátrix, és néhány kezdeti Quantum State $ \ket{\psi (0)} $, amelyet a rendszer a kvantum-számítógépeken $n $ qubits alapján kódol. Mivel a bezárt rendszerekben a kvantum-állapotok a \begin{align} i\frac {d \ket{\psi (t)}} {d t} & = H \ket{\psi (t)}, \end{align} $ $, a cél az, hogy megvalósítsa az egységes idő-Evolution operátort, $U (t) = e ^ {-iHt} $ egy bizonyos rögzített időpontban $t $ , ahol a $ \ket{\psi (t)} = U (t) \ket{\psi (0)} $ megoldja a Schrödinger-egyenletet.
 Analogously az időfüggő Hamilton-szimulációs probléma ugyanazokat az egyenleteket oldja meg, de a $H (t) $ most már az idő függvénye.
 
-A Hamilton szimuláció a számos más kvantum-szimulációs probléma fő összetevője, és a Hamilton-szimulációs problémák megoldásai olyan algoritmusok, amelyek egy egyszerű kvantum-kapuk sorozatából álló sorozatot mutatnak be az egységes \tilde{U} $ Hiba: $\\| \tilde{U}-U (t)\\| a \Le \epsilon $ a [spektrális normában](xref:microsoft.quantum.concepts.matrix-advanced). Ezeknek az algoritmusoknak a bonyolultsága nagyon nagy mértékben függ attól, hogy egy kvantum-számítógép hogyan teszi elérhetővé a Hamilton leírását. Ha például a legrosszabb esetben, ha $H $-t $n $ qubits-ra, a $2 ^ n \times 2 ^ n $ számú listának kell megadnia, az egyiket az egyes mátrix-elemeknél, egyszerűen csak az adatok olvasása már exponenciális idő szükséges. A legjobb esetben feltételezhető, hogy egy olyan fekete dobozhoz fér hozzá, amely $O \ket{t}\ket{\psi (0)} = \ket{t}U (t) \ket{\psi (0)} $ triviálisan megoldja a problémát. Ezen bemeneti modellek egyike sem különösen érdekes – az előző, mivel nem jobb, mint a klasszikus megközelítés, és az utóbbi, mint a fekete doboz elrejti a megvalósításának primitívebb kapuit, ami exponenciális lehet a qubits számában.
+A Hamilton szimuláció a számos más kvantum-szimulációs probléma egyik fő összetevője, és a Hamilton-szimulációs problémák megoldásai olyan algoritmusok, amelyek egy egyszerű kvantum-kapuk sorozatát írják le, amely egy \tilde{U} $-es hibát eredményező, $\\| \tilde{U}-U (t)\\| a \Le \epsilon $ a [spektrális normában](xref:microsoft.quantum.concepts.matrix-advanced). Ezeknek az algoritmusoknak a bonyolultsága nagyon nagy mértékben függ attól, hogy egy kvantum-számítógép hogyan teszi elérhetővé a Hamilton leírását. Ha például a legrosszabb esetben, ha $H $-t $n $ qubits-ra, a $2 ^ n \times 2 ^ n $ számú listának kell megadnia, az egyiket az egyes mátrix-elemeknél, egyszerűen csak az adatok olvasása már exponenciális idő szükséges. A legjobb esetben feltételezhető, hogy egy olyan fekete dobozhoz fér hozzá, amely $O \ket{t}\ket{\psi (0)} = \ket{t}U (t) \ket{\psi (0)} $ triviálisan megoldja a problémát. Ezen bemeneti modellek egyike sem különösen érdekes – az előző, mivel nem jobb, mint a klasszikus megközelítés, és az utóbbi, mint a fekete doboz elrejti a megvalósításának primitívebb kapuit, ami exponenciális lehet a qubits számában.
 
 ### <a name="descriptions-of-hamiltonians"></a>A Hamiltonians leírása ###
 
 Ezért a bemenet formátumának további feltételezései szükségesek. Az érdekes Hamiltonians, például reális fizikai rendszerekre vagy érdekes számítási problémákra, valamint a kellően korlátozó bemeneti modellekre vonatkozó részletes egyensúlyt kell találni a bemeneti modellek között. a kvantum-számítógépen való hatékony megvalósításhoz. Számos nem triviális bemeneti modell található az irodalomban, és ezek a kvantumtól a klasszikusig terjedhetnek. 
 
-A Quantum input-modellek példái [alapján a minta-alapú Hamilton-szimulációk](http://www.nature.com/articles/s41534-017-0013-7) feketéket feltételeznek a kvantum-műveletekhez, amelyek a sűrűségi mátrix $ \rho $-es példányait hozzák létre, amelyek a Hamilton $H $. Az [egységes hozzáférési modellben](https://arxiv.org/abs/1202.5822) azt feltételezi, hogy a Hamilton a unitaries $ $ \begin{align} H & = \sum ^ {d-1}\_{j = 0} összegét adja vissza, amely egy\_j \hat{U}\_j, \end{align} $ $, ahol $a\_j > 0 $ és $ \hat{U}\_j $ unitaries. Ezt követően a rendszer feltételezi, hogy az egyiknek van fekete dobozhoz való hozzáférése az egységes Oracle $V = \sum ^ {d-1}\_{j = 0} \ket{j}\bra{j}\otimes \hat{U}\_j $, amely kiválasztja a kívánt $ \hat{U}\_j $, és az Oracle $A \ket{0}= \sum ^ {d-1}\_{ j = 0} \sqrt{a\_j/\ Sum ^ {d-1}\_{k = 0} \alpha\_j} \ket{j} $, amely Quantum State-kódolást hoz létre ezekkel az együtthatókkal. [Ritka Hamilton szimuláció](https://arxiv.org/abs/quant-ph/0301023)esetén az egyik azt feltételezi, hogy a Hamilton egy ritka mátrix, amely csak $d = \mathcal{O} (\Text{polylog} (N)) $ nem nulla értékű elemet tartalmaz minden sorban. Emellett az egyik feltételezi, hogy a hatékony kvantum-áramkörök megléte a nullától eltérő elemek helyét, valamint azok értékeit is kiadja. A Hamilton- [szimulációs algoritmusok](xref:microsoft.quantum.more-information) összetettségét a rendszer a fekete mezőkre vonatkozó lekérdezések száma alapján értékeli ki, és a primitív kapu összetettsége nagy mértékben függ a fekete dobozok megvalósításának nehéz feladataitól.
+A Quantum input-modellek példái [alapján a minta-alapú Hamilton-szimulációk](http://www.nature.com/articles/s41534-017-0013-7) feketéket feltételeznek a kvantum-műveletekhez, amelyek a sűrűségi mátrix $ \rho $-es példányait hozzák létre, amelyek a Hamilton $H $. Az [egységes hozzáférési modellben](https://arxiv.org/abs/1202.5822) az egyik azt feltételezi, hogy a Hamilton a unitaries $ $ \begin{align} H & = \sum ^ {d-1}\_{j = 0} egy\_j \hat{U}\_j, \end{align} $ $, ahol $a\_j > 0 $, és $ \hat{U}\_j $ unitaries. Ezt követően a rendszer feltételezi, hogy az egyiknek fekete-Box hozzáférése van az egységes Oracle $V = \sum ^ {d-1}\_{j = 0} \ket{j}\bra{j}\otimes \hat{U}\_j $, amely kiválasztja a kívánt $ \hat{U}\_j $, és az Oracle $A \ket{0}= \sum ^ {d-1}\_{j = 0} \sqrt{a\_j/\ Sum ^ {d-1}\_{k = 0} \alpha\_j} \ket{j} $, amely létrehoz egy kvantum-állapotot kódoló ezeket az együtthatókat. [Ritka Hamilton szimuláció](https://arxiv.org/abs/quant-ph/0301023)esetén az egyik azt feltételezi, hogy a Hamilton egy ritka mátrix, amely csak $d = \mathcal{O} (\Text{polylog} (N)) $ nem nulla értékű elemet tartalmaz minden sorban. Emellett az egyik feltételezi, hogy a hatékony kvantum-áramkörök megléte a nullától eltérő elemek helyét, valamint azok értékeit is kiadja. A Hamilton- [szimulációs algoritmusok](xref:microsoft.quantum.more-information) összetettségét a rendszer a fekete mezőkre vonatkozó lekérdezések száma alapján értékeli ki, és a primitív kapu összetettsége nagy mértékben függ a fekete dobozok megvalósításának nehéz feladataitól.
 
 > [!NOTE]
 > A Big-O jelölés általában az algoritmusok összetettségi skálázásának leírására szolgál. Adott két valós functions $f, g $, The Expression $g (x) = \mathcal{O} (f (x)) $ érték azt jelenti, hogy létezik egy abszolút pozitív állandó $x\_0, c > 0 $, hogy $g (x) \Le c f (x) $ az összes $x \ge x\_$0. 
@@ -45,21 +45,21 @@ A legalkalmasabb alkalmazások a kvantum-számítógépeken történő megvalós
 
 A kvantum-szimulációs algoritmus egy Hamilton egy adott leírását egy primitív kvantum-kapun alakítja át, amely teljes körű, becsült idő-evolúciót mutat a Hamilton szerint.
 
-Abban a különleges esetben, ha a Hamilton Hermitian-részekből áll, a Trotter-Suzuki dekompozíció egy különösen egyszerű és intuitív algoritmus, amely szimulálja a Hamiltonians, amely a Hermitian-összetevők összegére bomlik le. A család első sorrendű integrátora például $ $ \begin{align} U (t) & = \left (e ^ {-iH\_0 t/r} e ^ {-iH\_1 t/r} \cdots e ^ {-iH\_{d-1} t/r} \right) ^ {r} + \mathcal{O} (d ^ 2 \max_j\\| H\_j\\| ^ 2 t ^ 2/r), \end{align} $ $, $r d $ feltételekkel rendelkező termék használatával. 
+Abban a különleges esetben, ha a Hamilton Hermitian-részekből áll, a Trotter-Suzuki dekompozíció egy különösen egyszerű és intuitív algoritmus, amely szimulálja a Hamiltonians, amely a Hermitian-összetevők összegére bomlik le. A család első sorrendű integrátora például $ $ \begin{align} U (t) & = \left (e ^ {-iH\_0 t/r} e ^ {-iH\_1 t/r} \cdots e ^ {-iH\_{d-1} t/r} \right) ^ {r} + \mathcal{O} (d ^ 2 \ max_j\\| H\_j\\| ^ 2 t ^ 2/r), \end{align} $ $, $r d $ feltételekkel rendelkező termék használatával. 
 
 > [!TIP]
 > A Trotter-Suzuki szimulációs algoritmus alkalmazásait a minták tartalmazzák.
-> Ahhoz, hogy a Ising modell csak az egyes célszámítógépeken elérhető belső műveleteket használja, tekintse meg a [ **SimpleIsing** -mintát](https://github.com/Microsoft/Quantum/tree/master/Samples/src/SimpleIsing).
-> A Trotter-Suzuki Library Ising használó modell esetében tekintse meg a [ **IsingTrotter** mintát](https://github.com/Microsoft/Quantum/tree/master/Samples/src/IsingTrotterEvolution).
-> A Trotter-Suzuki Library vezérlési struktúrát használó molekuláris hidrogén esetében tekintse meg a [ **H2 szimulációs** mintát](https://github.com/Microsoft/Quantum/tree/master/Samples/src/H2SimulationCmdLine).
+> Ahhoz, hogy a Ising modell csak az egyes célszámítógépeken elérhető belső műveleteket használja, tekintse meg a [ **SimpleIsing** -mintát](https://github.com/microsoft/Quantum/blob/master/samples/simulation/ising/simple).
+> A Trotter-Suzuki Library Ising használó modell esetében tekintse meg a [ **IsingTrotter** mintát](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/trotter-evolution).
+> A Trotter-Suzuki Library vezérlési struktúrát használó molekuláris hidrogén esetében tekintse meg a [ **H2 szimulációs** mintát](https://github.com/microsoft/Quantum/tree/master/samples/simulation/h2/command-line).
 
-Sok esetben szeretnénk megvalósítani a szimulációs algoritmust, de nem érdeklik a megvalósításának részletei. Például: a második sorrendű integrátor körülbelül $ $ \begin{align} U (t) & = \left (e ^ {-iH\_0 t/2r} e ^ {-iH\_1 t/2r} \cdots e ^ {-iH\_{d-1} t/2r} e ^ {-iH\_{d-1} t/2r} \cdots e ^ {-iH\_1 t/2r} e ^ {- iH\_0 t/2r} \right) ^ {r} + \mathcal{O} (d ^ 3 \max_j\\| H\_j\\| ^ 3 t ^ 3/r ^ 2), \end{align} $ $ $2RD $ feltételt használó termékkel. A nagyobb megrendelések esetében még a feltételek és az optimalizált változatok is nagy mértékben nem triviális rendezést igényelhetnek az exponenciálisan. Más speciális algoritmusok is magukban foglalhatják a Ancilla qubits használatát a közbenső lépésekben. Így a szimulációs algoritmusokat a Canonban, felhasználó által definiált típusként csomagoljuk
+Sok esetben szeretnénk megvalósítani a szimulációs algoritmust, de nem érdeklik a megvalósításának részletei. Például: a második sorrendű integrátor körülbelül $ $ \begin{align} U (t) & = \left (e ^ {-iH\_0 t/2r} e ^ {-iH\_1 t/2r} \cdots e ^ {-iH\_{d-1} t/2r} e ^ {-iH\_{d-1} t/2r} \cdots e ^ {-iH\_1 t/2r} e ^ {-iH\_0 t/2r} \right) ^ {r} + \mathcal{O} (d ^ 3 \ max_j\\| H\_j\\| ^ 3 t ^ 3/r ^ 2), \end{align} $ $ $2RD $ feltételt használó termékkel. A nagyobb megrendelések esetében még a feltételek és az optimalizált változatok is nagy mértékben nem triviális rendezést igényelhetnek az exponenciálisan. Más speciális algoritmusok is magukban foglalhatják a Ancilla qubits használatát a közbenső lépésekben. Így a szimulációs algoritmusokat a Canonban, felhasználó által definiált típusként csomagoljuk
 
 ```qsharp
 newtype SimulationAlgorithm = ((Double, EvolutionGenerator, Qubit[]) => Unit is Adj + Ctl);
 ```
 
-Az első paraméter `Double` a szimuláció időpontja, a második paraméter `EvolutionGenerator`, amely az [adatstruktúrák](xref:microsoft.quantum.libraries.data-structures)dinamikus generátor-ábrázolási szakaszában szerepel, a egy időfüggetlen Hamilton, amely a a Hamilton egyes használati feltételeinek a kvantum-áramkör általi szimulálása. Az űrlap típusai megközelítik a (z) "^ {-iHt} $" egységes műveletet $e a harmadik paraméter `Qubit[]`, amely a szimulált rendszer kvantum-állapotának tárolására szolgáló bejegyzés. Az időfüggő esethez hasonlóan a felhasználó által definiált típust is definiáljuk `EvolutionSchedule` típussal, amely egy időfüggő Hamilton klasszikus leírása.
+Az első paraméter `Double` a szimuláció időpontja, a második paraméter `EvolutionGenerator`, amely az [adatstruktúrák](xref:microsoft.quantum.libraries.data-structures)dinamikus generátor-ábrázolási szakaszában szerepel, egy olyan időfüggetlen Hamilton klasszikus leírása, amely leírja, hogy a Hamilton egyes használati időszakait hogyan lehet szimulálni a kvantum-áramkör. Az űrlap típusai megközelítik a (z) "^ {-iHt} $" egységes műveletet $e a harmadik paraméter `Qubit[]`, amely a szimulált rendszer kvantum-állapotának tárolására szolgáló bejegyzés. Az időfüggő esethez hasonlóan a felhasználó által definiált típust is definiáljuk `EvolutionSchedule` típussal, amely egy időfüggő Hamilton klasszikus leírása.
 
 ```qsharp
 newtype TimeDependentSimulationAlgorithm = ((Double, EvolutionSchedule, Qubit[]) => Unit : Adjoint, Controlled);
@@ -83,13 +83,13 @@ function TimeDependentTrotterSimulationAlgorithm(
 ```
 
 > [!TIP]
-> A szimulációs függvénytár alkalmazásait a minták tartalmazzák. A Ising modellben `SimulationAlgorithm`használatával történő fázis-becsléshez tekintse meg a [ **IsingPhaseEstimation** mintát](https://github.com/Microsoft/Quantum/tree/master/Samples/src/IsingPhaseEstimation).
-> A Ising-modellben a adiabatic-állapot előkészítéséhez `TimeDependentSimulationAlgorithm`használatával tekintse meg a [ **AdiabaticIsing** mintát](https://github.com/Microsoft/Quantum/tree/master/Samples/src/AdiabaticIsing).
+> A szimulációs függvénytár alkalmazásait a minták tartalmazzák. A Ising modellben `SimulationAlgorithm`használatával történő fázis-becsléshez tekintse meg a [ **IsingPhaseEstimation** mintát](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/phase-estimation).
+> A Ising-modellben a adiabatic-állapot előkészítéséhez `TimeDependentSimulationAlgorithm`használatával tekintse meg a [ **AdiabaticIsing** mintát](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/adiabatic).
 
 
 ### <a name="adiabatic-state-preparation--phase-estimation"></a>Adiabatic állapot-előkészítés & fázisának becslése ###
 
-A Hamilton szimuláció egyik gyakori alkalmazása a adiabatic állapotának előkészítése. Itt az egyik a következő két Hamiltonians $H\_{\text{Start}} $ és $H\_{\text{End}} $, valamint egy Quantum State $ \ket{\psi (0)} $, amely a Start Hamilton $H\_{\text{Start}} $. A $H\_{\text{Start}} $ általában úgy van kiválasztva, hogy a $ \ket{\psi (0)} $-es verzió könnyen felkészíthető legyen egy számítási alapú állapotból $ \ket{0\cdots 0} $ értékre. A Hamiltonians között az időfüggő szimulációs probléma lassan való interpolációja miatt az idő függvényében a Befejezés nagy valószínűséggel a végső Hamilton $H\_{\text{End}} $. Bár a jó közelítések Hamilton a terepi állapotokra való felkészülést, így az időfüggő Hamilton szimulációs algoritmusok egy alrutinként, más, elméletileg eltérő megközelítések, például a változó kvantum eigensolver lehetséges.
+A Hamilton szimuláció egyik gyakori alkalmazása a adiabatic állapotának előkészítése. Itt az egyik a következő két Hamiltonians $H\_{\text{Start}} $ és $H\_{\text{End}} $, valamint egy Quantum State $ \ket{\psi (0)} $, amely a Start Hamilton $H\_{\text{Start}} $. A $H\_{\text{Start}} $ általában úgy van kiválasztva, hogy a $ \ket{\psi (0)} $-es verzió könnyen felkészíthető legyen egy számítási alapú állapotból $ \ket{0\cdots 0} $ értékre. Ezeknek a Hamiltonians az időfüggő szimulációs probléma eléggé lassan történő interpolációja révén a végső valószínűséggel a $H Hamilton\_{\text{End}} $ értékkel lehetséges, hogy a végén nagy valószínűséggel véges állapotú. Bár a jó közelítések Hamilton a terepi állapotokra való felkészülést, így az időfüggő Hamilton szimulációs algoritmusok egy alrutinként, más, elméletileg eltérő megközelítések, például a változó kvantum eigensolver lehetséges.
 
 Egy másik alkalmazás, amely mindenütt a Quantum kémiában található, megbecsüli a kémiai reakció közbenső lépéseit jelképező Hamiltonians. Egy ilyen séma például a adiabatic állapotának előkészítésére támaszkodhat a terepi állapot létrehozásához, majd időfüggetlen Hamilton szimulációt is használhat a fázis-becslési jellemzésben, hogy kinyerje ezt az energiát némi véges hibával, és a siker valószínűsége. 
 
@@ -128,13 +128,13 @@ operation AdiabaticStateEnergyEstimate(
 `nQubits` a kezdeti kvantum-állapot kódolásához használt qubits száma. `statePrepUnitary` előkészíti a kezdő állapotot a $ \ket{0\cdots 0} $ számítási alapból. `adiabaticUnitary` a adiabatic állapot-előkészítést megvalósító egységes művelet, például a `InterpolatedEvolution` függvénnyel előállított. `qpeUnitary` az az egységes művelet, amellyel a rendszer a fázisok becslését hajtja végre az eredményül kapott kvantum-állapot alapján. `phaseEstAlgorithm` a fázis becslési algoritmusa.
 
 > [!TIP]
-> A mintákban a adiabatic-állapot előkészítésének alkalmazásai szerepelnek. A Ising modell adiabatic állapot-előkészítésének manuális megvalósításával és az `AdiabaticEvolution` függvény használatával tekintse meg a [ **AdiabaticIsing** mintát](https://github.com/Microsoft/Quantum/tree/master/Samples/src/AdiabaticIsing).
-> A Ising modellben a fázisok becslése és a adiabatic állapotának előkészítéséhez tekintse meg a [ **IsingPhaseEstimation** mintát](https://github.com/Microsoft/Quantum/tree/master/Samples/src/IsingPhaseEstimation).
+> A mintákban a adiabatic-állapot előkészítésének alkalmazásai szerepelnek. A Ising modell adiabatic állapot-előkészítésének manuális megvalósításával és az `AdiabaticEvolution` függvény használatával tekintse meg a [ **AdiabaticIsing** mintát](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/adiabatic).
+> A Ising modellben a fázisok becslése és a adiabatic állapotának előkészítéséhez tekintse meg a [ **IsingPhaseEstimation** mintát](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/phase-estimation).
 
 > [!TIP]
-> A [molekuláris hidrogén szimulálása](https://github.com/Microsoft/Quantum/tree/master/Samples/src/H2SimulationCmdLine) egy érdekes és rövid minta. A [O'Malley et. Al](https://arxiv.org/abs/1512.06860) -ben jelentett modell és kísérleti eredmények. csak a Pauli-mátrixok szükségesek, és a formátum a $ \hat H = g\_{0}I\_0I\_1 + g\_1 {Z\_0} + g\_2 {Z\_1} + g\_3 {Z\_0} {Z\_1} + g\_4 {Y\_0} {Y\_1} + g\_5 {X\_0} {X\_1} $. Ez egy hatékony Hamilton, amely csak a 2 qubits-t igényli, ahol a $g $ konstansokat a két hidrogén atomok közötti távolságból számított $R $ értékre számítjuk. A Canon functions használatával a Paulis átalakítja a unitaries, majd rövid idő alatt kifejlődött a Trotter-Suzuki dekompozíció használatával. A adiabatic-állapot előkészítése nélkül hozható létre jó közelítés a $H _2 $ alapállapothoz, és így a rendszer közvetlenül a Canontól származó fázis-becslés használatával is megtalálhatja a terepi állapotot.
+> A [molekuláris hidrogén szimulálása](https://github.com/microsoft/Quantum/tree/master/samples/simulation/h2/command-line) egy érdekes és rövid minta. A [O'Malley et. Al](https://arxiv.org/abs/1512.06860) -ben jelentett modell és kísérleti eredmények. csak a Pauli-mátrixok szükségesek, és a formátum a $ \hat H = g\_{0}I\_0I\_1 + g\_1 {Z\_0} + g\_2 {Z\_1} + g\_3 {Z\_0} {Z\_1} + g\_4 {Y\_0} {Y\_1} + g\_5 {X\_0} {X\_1} $. Ez egy hatékony Hamilton, amely csak a 2 qubits-t igényli, ahol a $g $ konstansokat a két hidrogén atomok közötti távolságból számított $R $ értékre számítjuk. A Canon functions használatával a Paulis átalakítja a unitaries, majd rövid idő alatt kifejlődött a Trotter-Suzuki dekompozíció használatával. A adiabatic-állapot előkészítése nélkül hozható létre jó közelítés a $H _2 $ alapállapothoz, és így a rendszer közvetlenül a Canontól származó fázis-becslés használatával is megtalálhatja a terepi állapotot.
 
-## <a name="shors-algorithm"></a>Rövid algoritmusa ##
+## <a name="shors-algorithm"></a>Shor-algoritmus ##
 A rövid algoritmusa továbbra is a kvantum-számítástechnika egyik legjelentősebb folyamata marad, mivel ez azt mutatta, hogy a kvantum-számítógépek a fontos, jelenleg klasszikusan megoldhatatlan problémák megoldására használhatók.
 A rövid algoritmusa gyors megoldást kínál a nagy számokra a kvantum-számítógép, a *faktoring*nevű probléma használatával.
 A sok mai cryptosystems biztonsága azon a feltételezésen alapul, hogy nem létezik gyors algoritmus a faktoring szolgáltatáshoz.
@@ -151,7 +151,7 @@ Miután megismerte, hogyan működik a Quantum Fourier-transzformáció és a f�
 
 A két egész szám $a $ és $N $ között, ahol a $a < N $, az időszak megállapításának célját, más néven a sorrend megállapítását is, az a _sorrend_ , amely $r $ $a $ többtényezős $N $, ahol $r $ a legkevésbé pozitív egész számnak felel meg, például $a ^ r \equiv 1 \text{mod} N $.  
 
-Ha egy kvantum-számítógép használatával szeretné megkeresni a sorrendet, a következő egységes operátorra alkalmazott fázis-becslési algoritmust is használhatja $U _a $: $ $ U_a\ket {x} \equiv \ket{(AX) \text{mod} N}. $ $ a eigenvectors $ $U _a $ egész szám $s $ és $0 \ LEQ s \leq r-$1 , $ $ \ket{x_s} \equiv 1/\sqrt{r} \sum\_{k = 0} ^ {r-1} e ^ {\frac{-2\pi i SK} {r}} \ket{a ^ k\text {mod} N}, $ $ $U eigenstates _$ _a._
+Ha kvantum-számítógép használatával szeretné megkeresni a sorrendet, a következő egységes operátorra alkalmazott fázis-becslési algoritmust is használhatja $U _a $: $ $ U_a \ket{x} \equiv \ket{(AX) \text{mod} N}. $ $ a $U _a $ eigenvectors az egész $s $ és $0 \ LEQ s \leq r-$1, $ $ \ket{x_s} \equiv 1/\sqrt{r} \sum\_{k = 0} ^ {r-1} e ^ {\frac{-2\pi i SK} {r}} \ket{a ^ k\text {mod} N}, $ $ _eigenstates_ $U _a $.
 $U _a $ eigenvalues a $ $ U\_a \ket{x\_s} = e ^ {2 \ PI i s/r} \ket{x\_s}. $$
 
 A fázis becslése így a eigenvalues $e ^ {2 \ PI i s/r} $ értéket jeleníti meg, amelyből a $r $ a $s/r $-ből származó [folyamatos frakciók](https://en.wikipedia.org/wiki/Continued_fraction) használatával hatékonyan megtanult.
@@ -162,14 +162,14 @@ A kvantum-időszak megállapításához használt áramköri diagram a következ
 
 Itt $2n $ qubits inicializálva van a $ \ket{0}$ és a $n $ qubits értékre, amely a $ \ket{1}$-ra van inicializálva.
 Az olvasónak újra lehet tudnia, hogy miért lett inicializálva az eigenstates a (z) $ \ket{1}$ értékre.
-Mivel az egyik nem tudja, hogy a megrendelést $r $, nem tudjuk közvetlenül előkészíteni a $ \ket{x_s} $ állapotot.
+Mivel az egyik nem tudja, hogy a rendelés $r $, nem lehet ténylegesen előkészíteni a $ \ket{x_s} $ $ állapotot.
 Szerencsére kiderül, hogy a $1/\ SQRT {r} \sum\_{s = 0} ^ {r-1} \ket{x\_s} = \ket{1}$.
 Nem kell ténylegesen előkészíteni a $ \ket{x} $-t!
 Most előkészítheti $n $ qubits kvantum-regisztrációját a $ \ket{1}$ állapotban. 
 
 Az áramkör tartalmazza a QFT és a több vezérelt kaput.
 A QFT-kaput [korábban](xref:microsoft.quantum.libraries.standard.algorithms)ismertetjük.
-A vezérelt $U _a $ Gate Maps $ \ket{x} $ to $ \ket{(AX) \text{mod} N} $, ha a vezérlő qubit $ \ket{1}$, és Maps $ \ket{x} $ to $ \ket{x} $ máskülönben.
+A Control-$U _a $ Gate Maps $ \ket{x} $ to $ \ket{(AX) \text{mod} N} $, ha a vezérlő qubit $ \ket{1}$, és Maps $ \ket{x} $ to $ \ket{x} $ máskülönben.
 
 Ahhoz, hogy a $ (a ^ NX) \text{mod} N $-t lehessen elérni, egyszerűen alkalmazhatjuk a szabályozott $U _ {a ^ n} $-t, ahol a $a ^ n \text{mod} N $-t a kvantum-áramkörbe való csatlakoztatáshoz.  
 Az ilyen Moduláris aritmetika eléréséhez szükséges áramkörök leírását a [Quantum aritmetikai dokumentációja](./algorithms.md#arithmetic)tartalmazza, amely konkrétan egy moduláris hatványozására áramkört igényel az ellenőrzött $U\_{a ^ i} $ művelet megvalósításához.

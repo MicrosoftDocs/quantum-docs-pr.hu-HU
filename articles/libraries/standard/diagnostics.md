@@ -5,12 +5,12 @@ author: cgranade
 uid: microsoft.quantum.libraries.diagnostics
 ms.author: chgranad@microsoft.com
 ms.topic: article
-ms.openlocfilehash: b59f91b660281167eab182529b415b6d379e3d63
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: d5889b8d5a92801b0ada65f7a17c655c959fc57f
+ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/27/2019
-ms.locfileid: "73184491"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74864338"
 ---
 # <a name="diagnostics"></a>Diagnosztika #
 
@@ -42,7 +42,7 @@ A [teljes körű állapot-szimulátor](xref:microsoft.quantum.machines.full-stat
 
 ## <a name="facts-and-assertions"></a>Tények és kijelentések ##
 
-Ahogy azt a [tesztelési és hibakeresési](xref:microsoft.quantum.techniques.testing-and-debugging)művelet, az aláírással `Unit -> Unit` vagy `Unit => Unit`használatával végzett függvények vagy műveletek is meghívhatók *egységként*.
+Ahogy azt a [tesztelési és hibakeresési](xref:microsoft.quantum.techniques.testing-and-debugging)művelettel tárgyaljuk, az aláírással `Unit -> Unit` vagy `Unit => Unit`tal rendelkező függvények vagy műveletek *egységként*is jelölhetők.
 Az egyes egységek tesztelése általában egy kis kvantum-programból áll, valamint egy vagy több, a program helyességét ellenőrző feltételt.
 Ezek a feltételek akár _tények_formájában is megtekinthetők, amelyek bemutatják a bemenetek vagy a _bejelentések_értékeit, amelyek egy vagy több, bemenetként átadott qubits állapotának ellenőrzését jelzik.
 
@@ -109,7 +109,7 @@ A globális fázis miatt azonban választhatjuk, $a\_i = $0, így csak három va
 Ezért három olyan állítást kell megadnia, amelyek egymástól függetlenek, hogy az elvárt állapotot érvényesítsék.
 Ezt úgy teheti meg, hogy megkeresi a `Zero` megtartásának valószínűségét a $ \alpha $ és $ \beta $ értékkel megadott Pauli-mérések esetében, és mindegyiket egymástól függetlenül érvényesíti.
 A $x $, $y $, és a $z $ `Result` értékeket a Pauli $X $, $Y $ és $Z $ mérések esetében.
-Ezután használja a valószínűségi függvényt a kvantum-mérésekhez, \begin{align} \Pr (x = \texttt{Zero} | \alpha, \beta) & = \frac12 + a\_r b\_r + a\_i b\_i \\\\ \Pr (y = \texttt{Zero} | \alpha , \beta) & = \frac12 + a\_r b\_i-a\_i b\_r \\\\ \Pr (z = \texttt{Zero} | \alpha, \beta) & = \frac12\left (1 + a\_r ^ 2 + a\_i ^ 2 + b\_r ^ 2 + b\_^ 2 \right).
+Ezután használja a valószínűségi függvényt a kvantum-mérésekhez, \begin{align} \Pr (x = \texttt{Zero} | \alpha, \beta) & = \frac12 + a\_r b\_r + a\_i b\_i \\\\ \Pr (y = \texttt{Zero} | \alpha, \beta) & = \frac12 + a\_r b\_i-a\_i b\_r \\\\ \Pr (z = \texttt{Zero} | \alpha, \beta) & = \frac12\left (1 + a\_r ^ 2 + a\_i ^ 2 + b\_r ^ 2 + b\_^ 2 \right).
 \end{align}
 
 A <xref:microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance> művelet a következő típusú állításokat valósítja meg: $ \alpha $ és $ \beta $, <xref:microsoft.quantum.math.complex>típusú értékekként.
@@ -129,7 +129,7 @@ Ezeket a stratégiákat a Canon Operations <xref:microsoft.quantum.diagnostics.a
 
 > [!NOTE]
 > A fent tárgyalt hivatkozott állítás a [Choi – Jamiłkowski isomorphism](https://en.wikipedia.org/wiki/Channel-state_duality), egy matematikai keretrendszer alapján működik, amely a (z) $n $ qubits műveleteit a $2n $ qubits-ben összekevert állapotokra kapcsolja.
-> Különösen a $n $ qubits azonosító műveletét a rendszer a (z) $ \ket{\beta_{00}} \mathrel{: =} (\ket{00} + \ket{11})/\sqrt{2}$ adat$n $ példányban képviseli.
+> Különösen a $n $ qubits azonosító műveletét a rendszer a (z) $ \ket{\ beta_{00}} \mathrel{: =} (\ket{00} + \ket{11})/\sqrt{2}$ $n $ másolatával jelképezi.
 > A művelet <xref:microsoft.quantum.preparation.preparechoistate> implementálja ezt a isomorphism, és előkészít egy olyan állapotot, amely egy adott műveletet jelöl.
 
 Nagyjából ezeket a stratégiákat az idő – Space kompromisszum különbözteti meg.
@@ -146,7 +146,7 @@ Ezzel szemben a hivatkozott állítás pontosan egyszer hívja meg az egyes műv
 Mindkét teszt hasznos a kvantum-programok helyességének biztosításához.
 
 
-## <a name="further-reading"></a>További olvasnivalók ##
+## <a name="further-reading"></a>További információ ##
 
 - <xref:microsoft.quantum.techniques.testing-and-debugging>
 - <xref:microsoft.quantum.diagnostics>

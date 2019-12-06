@@ -6,12 +6,12 @@ uid: microsoft.quantum.libraries.error-correction
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 5aac40686ba9b45a51e0274a1828f2ff7cce6fc3
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: e1b78cf94ae0a043ad275d4cb06b230eafd7fc85
+ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/27/2019
-ms.locfileid: "73184440"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74863197"
 ---
 # <a name="error-correction"></a>Hibajavítás #
 
@@ -28,7 +28,7 @@ A kvantum beállításban láthatjuk, hogy a mérték problémás. A fenti kódo
 Hasznos, ha szeretné megtudni, hogyan általánosíthatja a hibajavítást a kvantum-esetre.
 Így tehát a $ \ket{\overline{0}} = \ket{000} = \ket{0} \otimes \ket{0} \otimes \ket{0}$, és hagyja $ \ket{\overline{1}} = \ket{111}$.
 Ezt követően a linearitás alapján meghatározjuk az összes bemenet ismétlődési kódját; például: $ \ket{\overline{+}} = (\ket{\overline{0}} + \ket{\overline{1}})/\sqrt{2} = (\ket{000} + \ket{111})/\sqrt{2}$.
-Különösen, ha egy kicsit flip hiba $X _1 $ művelet a középső qubit, azt látjuk, hogy mindkét ág esetében pontosan $X _1 $: $ $ \begin{align} X_1 \ket{\overline{+}} & = \frac{1}{\sqrt{2}} \left (X_1 \ket{000} + X_1 \ket @no__ t_3_ \right) \\\\ & = \frac{1}{\sqrt{2}} \left (\ket{010} + \ket{101} \right).
+Különösen a egy kicsit flip hiba $X _1 $ művelet a középső qubit, láthatjuk, hogy mindkét ág esetében pontosan $X _1 $: $ $ \begin{align} X_1 \ket{\overline{+}} & = \frac{1}{\sqrt{2}} \left (X_1 \ket{000} + X_1 \ket{111} \right) \\\\ & = \frac{1}{\sqrt{2}} \left (\ket{010} + \ket{101} \right).
 \end{align} $ $
 
 Ha szeretné megtudni, hogy miként azonosítható, hogy ez a helyzet a védelemre kerülő állapot mérése nélkül, hasznos, ha leírjuk, hogy milyen módon történik a különböző áttekintő hibák használata a logikai állapotokban:
@@ -42,15 +42,15 @@ Ha szeretné megtudni, hogy miként azonosítható, hogy ez a helyzet a védelem
 
 Ahhoz, hogy megvédje a kódoláshoz szükséges állapotot, meg kell tudni különböztetni a három hibát egymástól és a $ \boldone $ identitástól a $ \ket{\overline{0}} $ és a $ \ket{\overline{1}} $ érték megkülönböztetése nélkül.
 Ha például a $Z _0 $ értéket mérjük, akkor a No-Error esetben a $ \ket{\overline{0}} $ és a $ \ket{\overline{1}} $ értékhez egy másik eredményt kapunk, amely Összecsukja a kódolt állapotot.
-Másfelől érdemes megfontolni a $Z _0 Z_1 $ mérését, amely az első két bit paritását adja meg minden számítási alapon.
-Ne felejtse el, hogy a Pauli-operátorok minden mérése ellenőrzi, hogy a sajátérték a mért állapot megfelel-e, így a fenti táblázatban szereplő összes \ket{\psi} $ értéknél kiszámítjuk $Z _0 Z_1 \ket{\psi} $ értéket, hogy a $ \pm\ket{\psi} $ lekérése megtörténjen-e.
-Vegye figyelembe, hogy $Z _0 Z_1 \ket{000} = \ket{000}$, és a $Z _0 Z_1 \ket{111} = \ket{111}$, így azt a következtetést tartjuk, hogy ez a mérték ugyanaz, mint a kódolt állapotok esetében is.
-Másfelől $Z _0 Z_1 \ket{100} =-\ket{100}$ és $Z _0 Z_1 \ket{011} =-\ket{011}$, így a $Z _0 Z_1 $ mérés eredménye azt mutatja, hogy milyen hiba történt.
+Másfelől érdemes megfontolni $Z _0 Z_1 $ mérését, amely az első két bit paritását adja meg minden számítási alapon.
+Ne felejtse el, hogy a Pauli-operátorok minden mérése ellenőrzi, hogy a sajátérték a mért állapot megfelel-e, így a fenti táblázatban szereplő összes \ket{\psi} $ értéknél kiszámítjuk $Z _0 Z_1 \ket{\psi} $ értéket, hogy a $ \pm\ket{\psi} $ beszerzése megtörténjen-e.
+Vegye figyelembe, hogy $Z _0 Z_1 \ket{000} = \ket{000}$, és hogy $Z _0 Z_1 \ket{111} = \ket{111}$, így azt a következtetést tartjuk, hogy ez a mérték ugyanaz, mint a kódolt állapotok esetében is.
+Másfelől $Z _0 Z_1 \ket{100} =-\ket{100}$ és $Z _0 Z_1 \ket{011} =-\ket{011}$, így a $Z _0 Z_1 $ mérési eredménye azt mutatja be, hogy milyen hiba történt.
 
-Ennek kiemeléséhez ismételje meg a fenti táblázatot, de adja hozzá a $Z _0 Z_1 $ és a $Z _1 Z_2 $ mérés eredményét minden egyes sorban.
+Ennek kihangsúlyozása érdekében ismételje meg a fenti táblázatot, de adja hozzá a $Z _0 Z_1 $ és $Z _1 Z_2 $ mérésének eredményét minden egyes sorban.
 Az egyes mérések eredményeit a megfigyelt sajátérték ($ + $ vagy $-$) jelöléssel jelöljük, amely megfelel a Q # `Result` `Zero` és `One`értékének.
 
-| Hiba $E $ | $E \ket{\overline{0}} $ | $E \ket{\overline{1}} $ | $Z _0 Z_1 $ eredményének eredménye | $Z _1 Z_2 $ eredményének eredménye |
+| Hiba $E $ | $E \ket{\overline{0}} $ | $E \ket{\overline{1}} $ | $Z _0 eredménye Z_1 $ | $Z _1 eredménye Z_2 $ |
 | --- | --- | --- | --- | --- |
 | $ \boldone $ | $ \ket{000}$ | $ \ket{111}$ | $+$ | $+$ |
 | $X _0 $ | $ \ket{100}$ | $ \ket{011}$ | $-$ | $+$ |
@@ -67,7 +67,7 @@ Különösen hangsúlyozjuk, hogy a helyreállítás egy *klasszikus* következt
 > Hasonlóképpen, egy fázis-tükrözési művelet alkalmazása `Z` leképezi a $ \ket{\overline{1}} $ értéket a $-\ket{\overline{1}} $ értékre, és így a $ \ket{\overline{+}} $ \ket{\overline{-}} $-t fogja leképezni.
 > Általánosabban a kódok nagyobb számú hiba kezelésére és $Z $ hibák, valamint $X $ hibák kezelésére használhatók.
 
-A lényege a *stabilizátor formalitása*, amely leírja, hogy leírható a kvantum-hibajavítások olyan mérőszámai, amelyek az összes kód állapotával azonos módon működnek.
+A *stabilizátorok formalitásának*lényege, hogy betekintést nyerhetünk a kvantum-hibák kijavításának olyan mértékére, amely az összes kód állapotával azonos módon működik.
 A Q # Canon olyan keretrendszert biztosít, amely leírja a stabilizátor-kódok kódolását és dekódolását, valamint leírja, hogyan történik az egyik helyreállítás a hibákból.
 Ebben a szakaszban ezt a keretrendszert és annak alkalmazását néhány egyszerű kvantum-hiba – a kódok kijavítani.
 
@@ -117,6 +117,6 @@ using (scratch = Qubit[nScratch]) {
 }
 ```
 
-Ezt részletesebben is megvizsgáljuk a [bit flip Code-mintában](https://github.com/Microsoft/Quantum/tree/master/Samples/src/BitFlipCode).
+Ezt részletesebben is megvizsgáljuk a [bit flip Code-mintában](https://github.com/microsoft/Quantum/tree/master/samples/error-correction/bit-flip-code).
 
-A bit-flip code-on kívül a Q # Canon az [öt qubit tökéletes kód](https://arxiv.org/abs/1305.08)megvalósításával és a [Seven-qubit kóddal](https://arxiv.org/abs/quant-ph/9705052)van ellátva, amelyek közül mindkettő kiválaszthat egy tetszőleges, egyetlen qubit hibát.
+A bit-flip code-on kívül a Q # Canon az [öt qubit tökéletes kód](https://arxiv.org/abs/quant-ph/9602019)megvalósításával és a [Seven-qubit kóddal](https://arxiv.org/abs/quant-ph/9705052)van ellátva, amelyek közül mindkettő kiválaszthat egy tetszőleges, egyetlen qubit hibát.

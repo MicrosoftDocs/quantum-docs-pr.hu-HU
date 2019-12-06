@@ -5,18 +5,17 @@ author: QuantumWriter
 ms.author: Christopher.Granade@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 4677b0f9c4f64a9c1bc46d34e8a883dc006ba8f0
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: c079364f8808304e0132fa2a4226cd6400e81339
+ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73183301"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74863146"
 ---
 # <a name="going-further"></a>Folytatás #
 
 Most, hogy megismerte, hogyan írhat érdekes kvantum-programokat a Q #-ban, ez a szakasz továbbra is bevezet néhány fejlettebb témakört, amely hasznosnak bizonyulhat.
 
-<!-- Moved Debugging and Testing Quantum Programs section to a separate article -->
 
 ## <a name="generic-operations-and-functions"></a>Általános műveletek és függvények ##
 
@@ -24,7 +23,7 @@ Most, hogy megismerte, hogyan írhat érdekes kvantum-programokat a Q #-ban, ez 
 > Ez a szakasz azt feltételezi, hogy alapszintű ismerettel rendelkezik az [általános C# ](https://docs.microsoft.com/dotnet/csharp/programming-guide/generics/introduction-to-generics), az [általános F# ](https://docs.microsoft.com/dotnet/fsharp/language-reference/generics/), [ C++ a sablonok](https://docs.microsoft.com/cpp/cpp/templates-cpp)és a más nyelveken való metaprogramming hasonló megközelítésekben.
 
 Számos olyan függvény és művelet, amelyet érdemes lehet meghatározni, valójában nem támaszkodik a bemenetek típusaira, hanem csak egy másik függvény vagy művelet segítségével implicit módon használják a saját típusait.
-Tegyük fel például, hogy a *Térkép* fogalma számos funkcionális nyelvhez közös. a függvény $f (x) $, a $\{x_1, a x_2, a \dots, a x_n\}$, a Map pedig egy új gyűjteményt ad vissza a $\{f (x_1), f (x_2), \dots, f (x_n)\}$ értékkel.
+Tegyük fel például, hogy a *Térkép* fogalma számos funkcionális nyelvhez közös. az adott függvény $f (x) $ és Values $\{x_1, x_2, \dots, x_n\}$, a Map egy új gyűjteményt ad vissza,\{f (x_1), f (x_2), \dots, f (x_n)\}$.
 Ha ezt a Q #-ban szeretné megvalósítani, kihasználhatjuk, hogy a függvények első osztályúak legyenek.
 Tegyük fel, hogy egy gyors példát mutatunk a `Map`ra, ★ helyőrzőként használva, hogy milyen típusokra van szükségünk.
 
@@ -119,7 +118,7 @@ function Compose(outerFn : (B -> C), innerFn : (A -> B)) : (A -> C) {
 
 Itt pontosan meg kell határozni, hogy milyen `A`, `B`és `C`, ezért szigorúan korlátozza az új `Compose` funkció segédprogramját.
 Miután az összes, `Compose` csak `A`tól, `B`tól és `C`tól függ `innerFn` és `outerFn`*használatával* .
-Alternatív megoldásként hozzáadhatunk olyan típusú paramétereket `Compose`, amelyek azt jelzik, hogy *bármely* `A`, `B`és `C`esetében működik, feltéve, hogy ezek a paraméterek megegyeznek `innerFn` és `outerFn`által várttal. :
+Alternatív megoldásként hozzáadhatunk olyan típusú paramétereket `Compose`, amelyek azt jelzik, hogy *bármely* `A`, `B`és `C`esetében működik, feltéve, hogy ezek a paraméterek megfelelnek a `innerFn` és `outerFn`által vártnak:
 
 ```qsharp
 function ComposeImpl<'A, 'B, 'C>(outerFn : ('B -> 'C), innerFn : ('A -> 'B), input : 'A) : 'C {
@@ -178,6 +177,6 @@ is Adj + Ctl {
 }
 ```
 
-Vegye figyelembe, hogy a `With` combinator széles körben használható---a adjoint támogató műveletekre alkalmazható, például `WithA`---, amely a megfelelő programozási stílust eredményezi, mivel a vezérlőt csak `With`t érintő struktúrákhoz adja hozzá. továbbítja a vezérlést a belső műveletnek. További Megjegyzés: a művelet `body`án kívül a művelet `controlled` törzsének megvalósítását explicit módon adták meg, ahelyett, hogy egy `controlled auto` utasításhoz folyamodnak. Ennek az az oka, hogy tisztában vagyunk az áramkör struktúrájával, így egyszerűen hozzáadhat további vezérlőket, amelyek hasznosak a vezérlés hozzáadásához a `body`minden egyes kapuján. 
+Vegye figyelembe, hogy a `With` combinator széles körű használata---a adjoint támogató műveletekre alkalmazható, például `WithA`---, amely a megfelelő programozási stílust eredményezi, mivel a vezérlést a `With`t érintő struktúrákhoz adja hozzá. További Megjegyzés: a művelet `body`án kívül a művelet `controlled` törzsének megvalósítását explicit módon adták meg, ahelyett, hogy egy `controlled auto` utasításhoz folyamodnak. Ennek az az oka, hogy tisztában vagyunk az áramkör struktúrájával, így egyszerűen hozzáadhat további vezérlőket, amelyek hasznosak a vezérlés hozzáadásához a `body`minden egyes kapuján. 
 
 Ez a kód egy másik Canon-függvénnyel hasonlítható össze, `MultiControlledXClean`, amely ugyanazt a célt fogja elérni, mint egy szorzásra vezérelt `X` művelet megvalósítását, amely azonban több tiszta qubits használ a `using` mechanizmus használatával. 

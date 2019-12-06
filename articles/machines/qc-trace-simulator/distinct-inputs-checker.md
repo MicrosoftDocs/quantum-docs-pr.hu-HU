@@ -1,17 +1,17 @@
 ---
 title: Különböző bemenet-ellenőrök | Quantum Computer nyomkövetési szimulátor | Microsoft Docs
-description: A Quantum Computer Trace Simulator áttekintése
+description: A kvantumszámítógép nyomkövetési szimulátorának áttekintése
 author: vadym-kl
 ms.author: vadym@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.distinct-inputs
-ms.openlocfilehash: 0df28f6d74279db4678c3485a23a9341680eec52
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: ce3f156a84a4509781a74c9276b953c79670a756
+ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73184695"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74864304"
 ---
 # <a name="distinct-inputs-checker"></a>Különálló bemenet-ellenőrzési
 
@@ -28,7 +28,7 @@ operation DoBoth(q1 : Qubit, q2 : Qubit, op1 : (Qubit => Unit), op2 : (Qubit => 
 Amikor a felhasználó megkeresi ezt a programot, feltételezi, hogy a `op1` és `op2` meghívásának sorrendje nem számít, mert a `q1` és a `q2` különböző qubits és a különböző qubits-feladatokkal működő műveletek. Most Vegyünk példaként egy példát, ahol ezt a műveletet használják:
 
 ```qsharp
-operation DisctinctQubitCaptured2Test () : Unit {
+operation CapturedQubits () : Unit {
 
     using (q = Qubit[3]) {
         let op1 = CNOT(_, q[1]);

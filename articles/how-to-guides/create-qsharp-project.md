@@ -7,12 +7,12 @@ ms.date: 10/19/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.howto.createproject
-ms.openlocfilehash: b4bec5e7a174b7e2d588331dd2093c7b23a728b0
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.openlocfilehash: 10b1048501c2de055f5711fc0fdbc4bac76e8f77
+ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73444174"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74864406"
 ---
 # <a name="create-a-q-project-in-your-development-environment"></a>Q # projekt létrehozása a fejlesztői környezetben
 
@@ -99,15 +99,15 @@ Most már folytathatja a kvantum-program fejlesztését.
 
 1. Válassza a **cella** > a **cellák futtatása** lehetőséget a jegyzetfüzet futtatásához. `SayHello` hamarosan megjelennek a cella kimenetében:
 
-    ![Jupyter notebook-cella Q # kóddal](~/media/install-guide-jupyter.png)
+    ![Jupyter-notebookcella Q#-kóddal](~/media/install-guide-jupyter.png)
 
     Jupyter-jegyzetfüzetekben való futtatáskor a Q # kód le van fordítva, és a jegyzetfüzet a megtalált művelet (ek) nevét adja meg.
 
-1. Egy új cellában szimulálja a végrehajtást az imént létrehozott művelet kvantum-számítógépén a `%simulate` Magic használatával:
+1. Egy új cellában szimulálja a most létrehozott `%simulate`-művelet végrehajtását egy kvantumszámítógépen:
 
-    ![Jupyter notebook-cella%-os szimulálása varázslattal](~/media/install-guide-jupyter-simulate.png)
+    ![Jupyter-notebookcella %simulate használatával](~/media/install-guide-jupyter-simulate.png)
 
-    Ekkor meg kell jelennie a képernyőn kinyomtatott üzenetnek a meghívott művelet eredményével együtt (ebben az esetben üres).
+    A képernyőn megjelenik az üzenet a meghívott művelet eredményével együtt (ebben az esetben üresen).
 
 Mostantól további Q #-műveleteket is hozzáadhat a kvantum-fejlesztés folytatásához.
 
@@ -150,12 +150,14 @@ Most már folytathatja a kvantum-fejlesztést a Visual Studio használatával
 
     * Lépjen a **Nézet** -> **Parancskatalógus** lehetőséghez
     * Válassza a **Q #: új projekt létrehozása** lehetőséget
+    * **Önálló konzolos alkalmazás** kiválasztása
     * Lépjen arra a helyre a fájlrendszerben, ahol létre szeretné hozni az alkalmazást
     * A projekt elkészülte után kattintson az **Új projekt megnyitása...** gombra
 
 1. Futtassa az alkalmazást:
 
-    * Lépjen a **Hibakeresés** -> **Indítás hibakeresés nélkül** lehetőséghez
+    * Ugrás a **terminal** -> **új terminálra**
+    * Adja meg `dotnet run`
     * A következőnek szövegnek kell megjelennie a kimeneti ablakban: `Hello quantum world!`
 
 Most már folytathatja a kvantum-fejlesztést a Visual Studio Code használatával.

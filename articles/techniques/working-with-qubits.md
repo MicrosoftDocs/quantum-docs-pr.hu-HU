@@ -6,12 +6,12 @@ ms.author: Christopher.Granade@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.techniques.qubits
-ms.openlocfilehash: d1a8ccc9423a9a04e12bc98e3783790232b2f5d8
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 477b358c3eba58b62926b4e9094770c9741cac92
+ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73183471"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74864253"
 ---
 # <a name="working-with-qubits"></a>A qubits használata #
 
@@ -72,7 +72,7 @@ operation Example() : Unit {
 > [!TIP]
 > Később további kompakt módokat fogunk látni a művelet megírásához, amelyek nem igénylik a manuális flow-vezérlést.
 
-Olyan állapotokat is elő tudunk készíteni, mint a $ \ket{+} = \left (\ket{0} + \ket{1}\right)/\sqrt{2}$ és $ \ket{-} = \left (\ket{0}-\ket{1}\right)/\sqrt{2}$ a Hadamard átalakítás $H $ használatával , amelyet a belső művelet `H : (Qubit => Unit is Adj + Ctl)`a Q # képvisel:
+Az olyan állapotokat is elő lehet készíteni, mint például a $ \ket{+} = \left (\ket{0} + \ket{1}\right)/\sqrt{2}$ és a $ \ket{-} = \left (\ket{0}-\ket{1}\right)/\sqrt{2}$ a Hadamard átalakítás $H $, amelyet a belső művelet `H : (Qubit => Unit is Adj + Ctl)`képvisel a Q # által.
 
 ```qsharp
 operation PreparePlusMinusState(bitstring : Bool[], register : Qubit[]) : Unit {
@@ -90,7 +90,7 @@ operation PreparePlusMinusState(bitstring : Bool[], register : Qubit[]) : Unit {
 
 ## <a name="measurements"></a>Mérések ##
 
-Az olyan `Measure` művelettel, amely egy belső, nem önálló művelettel rendelkezik, kinyerheti a klasszikus adatokat egy `Qubit` típusú objektumból, és hozzárendelheti a klasszikus értéket, amelynek eredményeként a lefoglalt típus `Result`, ami azt jelzi, hogy az eredmény nem már a kvantum állapota. A `Measure` bemenete egy olyan Pauli-tengely a Bloch szférában, amely egy `Pauli` típusú (azaz például `PauliX`) és egy `Qubit`típusú objektum. 
+Az olyan `Measure` művelettel, amely egy belső, nem önálló művelettel rendelkezik, a klasszikus adatokat kinyerheti egy `Qubit` típusú objektumból, és olyan eredményként rendelhet hozzá klasszikus értéket, amelynek egy foglalt típusa `Result`, ami azt jelzi, hogy az eredmény már nem kvantum-állapot. A `Measure` bemenete egy olyan Pauli-tengely a Bloch szférában, amely egy `Pauli` típusú (azaz például `PauliX`) és egy `Qubit`típusú objektum. 
 
 Egy egyszerű példa a következő művelet, amely egy qubit hoz létre a $ \ket{0}$ állapotban, majd Hadamard-kaput ``H``, majd a `PauliZ` alapján méri az eredményt. 
 
@@ -129,7 +129,7 @@ operation AllMeasurementsZero (qs : Qubit[], pauli : Pauli) : Bool {
 }
 ```
 
-A Q # nyelv lehetővé teszi a klasszikus vezérlési folyamatok függőségeit a qubits mérési eredményein. Ez a funkció lehetővé teszi, hogy hatékony, valószínűséggel rendelkező minialkalmazásokat hozzon létre, amelyek csökkenthetik a számítási költségeket a unitaries megvalósításához. Így például könnyen megvalósítható a Q #-ban az úgynevezett *ismétlés* , amely olyan valószínűségi áramkörök, amelyek a *vártnál* alacsonyabb költségeket mutatnak az elemi kapuk szempontjából, de a valódi ár a tényleges futtatástól és a ténylegestől függ. különböző lehetséges ágak összehagyása. 
+A Q # nyelv lehetővé teszi a klasszikus vezérlési folyamatok függőségeit a qubits mérési eredményein. Ez a funkció lehetővé teszi, hogy hatékony, valószínűséggel rendelkező minialkalmazásokat hozzon létre, amelyek csökkenthetik a számítási költségeket a unitaries megvalósításához. Például egyszerűen megvalósítható a Q #-ban az úgynevezett *ismétlés* , amely olyan valószínűségi áramkörök, amelyek a *vártnál* alacsonyabb költségeket mutatnak az elemi kapuk szempontjából, de a valódi költségeket a tényleges futtatástól és a különböző lehetséges ágak tényleges elhagyása függ. 
 
 A REPEAT-ig-Success (RUS) minták megkönnyítése érdekében a Q # támogatja a szerkezetet
 ```qsharp
@@ -167,7 +167,7 @@ operation RUScircuit (qubit : Qubit) : Unit {
 
 Ez a példa egy változtatható változó használatát mutatja be `finished`, amely a teljes REPEAT-ig-javítás ciklus hatókörében van, és amely a hurok előtt inicializálva lesz, és a javítás lépésben frissül.
 
-Végül egy olyan RUS-mintát mutatunk be, amely a Quantum State $ \frac{1}{\sqrt{3}} \left (\sqrt{2}\ket{0}+ \ket{1}\right) $-t jeleníti meg, kezdve a $ \ket{+} $ állapottal. Lásd még: a [standard könyvtárhoz megadott Unit Testing minta](https://github.com/Microsoft/Quantum/blob/master/Samples/src/UnitTesting/RepeatUntilSuccessCircuits.qs): 
+Végül egy olyan RUS-mintát mutatunk be, amely a Quantum State $ \frac{1}{\sqrt{3}} \left (\sqrt{2}\ket{0}+ \ket{1}\right) $-t jeleníti meg, kezdve a $ \ket{+} $ állapottal. Lásd még: a [standard könyvtárhoz megadott Unit Testing minta](https://github.com/microsoft/Quantum/blob/master/samples/diagnostics/unit-testing/RepeatUntilSuccessCircuits.qs): 
 
 ```qsharp
 operation RepeatUntilSuccessStatePreparation( target : Qubit ) : Unit {
@@ -212,4 +212,4 @@ operation RepeatUntilSuccessStatePreparation( target : Qubit ) : Unit {
 }
 ```
  
-Az ebben a műveletben bemutatott jelentős programozott funkciók összetettebb `fixup` a hurokhoz, amely magában foglalja a kvantum-műveleteket, valamint a `AssertProb` utasítások használatát annak megállapítására, hogy a kvantum-állapot mérése milyen valószínűséggel történik a program. További információ a `Assert` és `AssertProb` utasításokról: [tesztelés és hibakeresés](xref:microsoft.quantum.techniques.testing-and-debugging) . 
+Az ebben a műveletben bemutatott jelentős programozott funkciók összetettebb `fixup` a hurokhoz, amely magában foglalja a kvantum-műveleteket, valamint a `AssertProb` utasítások használatát annak megállapítására, hogy a program bizonyos meghatározott pontjain a kvantum-állapot mérésének valószínűsége várható-e. További információ a `Assert` és `AssertProb` utasításokról: [tesztelés és hibakeresés](xref:microsoft.quantum.techniques.testing-and-debugging) . 

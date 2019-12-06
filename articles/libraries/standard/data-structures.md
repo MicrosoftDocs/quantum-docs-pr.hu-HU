@@ -6,12 +6,12 @@ uid: microsoft.quantum.libraries.data-structures
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: e8b28561f1aba37cb5bf41c6176386d19bfacf06
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 6eb47de84fdfbb9d35fdfc2988883f8e1cffa332
+ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/27/2019
-ms.locfileid: "73184508"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74864355"
 ---
 # <a name="data-structures-and-modeling"></a>Adatstruktúrák és-modellezés #
 
@@ -20,7 +20,7 @@ ms.locfileid: "73184508"
 A kvantum-fogalmakat jelképező, felhasználó által definiált típusokkal együtt a Canon a Quantum Systems vezérléséhez használt klasszikus adatokkal kapcsolatos műveleteket, funkciókat és típusokat is biztosít.
 A <xref:microsoft.quantum.arrays.reversed> függvény például bemenetként veszi át a tömböt, és fordított sorrendben adja vissza ugyanazt a tömböt.
 Ezt követően egy `Qubit[]` típusú tömbben lehet használni, hogy ne kelljen a felesleges $ \operatorname{SWAP} $ Gates-t alkalmazni, ha az egész számok kvantum-ábrázolásai között konvertálja őket.
-Hasonlóképpen láttuk az előző szakaszban, hogy az űrlap típusa `(Int, Int -> T)` hasznos lehet a véletlen hozzáférésű gyűjtemények ábrázolásához, így a <xref:microsoft.quantum.arrays.lookupfunction> függvény convienent módot biztosít az ilyen típusú típusok tömbből való összeállításához.
+Hasonlóképpen láttuk az előző szakaszban, hogy az űrlap típusa `(Int, Int -> T)` hasznos lehet a véletlen hozzáférésű gyűjtemények ábrázolásához, így a <xref:microsoft.quantum.arrays.lookupfunction> függvény kényelmes megoldást kínál az ilyen típusok tömb típusú létrehozásához.
 
 ### <a name="pairs"></a>Párok ###
 
@@ -31,7 +31,7 @@ let pair = (PauliZ, register); // type (Pauli, Qubit[])
 ApplyToEach(H, Snd(pair)); // No need to deconstruct to access the register.
 ```
 
-### <a name="arrays"></a>tömbök ###
+### <a name="arrays"></a>Tömbök ###
 
 A Canon számos funkciót biztosít a tömbök manipulálására.
 Ezek a függvények Type-paraméteres, így bármilyen Q # típusú tömbökkel használhatók.
@@ -73,11 +73,11 @@ Itt az Oracle kifejezés olyan tábla-kvantum-alrutint jelöl, amely qubits vég
 Ez az alrutin gyakran úgy gondolja, mint egy olyan kvantum-algoritmus bemenete, amely más paraméterek mellett is elfogadja az Oracle-t, és egy sor kvantum-műveletet alkalmaz, és a kvantum-alrutin hívását kezeli, mintha egy alapvető kapu lenne.
 Természetesen ahhoz, hogy a nagyobb algoritmus ténylegesen megvalósítható legyen, meg kell adni az Oracle-nek az alapvető kapuk konkrét összetételét, de az Oracle-t meghívó algoritmus megismeréséhez nincs szükség ilyen felbomlásra.
 A Q # esetében ezt az absztrakciót a művelet az első osztályú értékekkel jelöli, így a műveletek a kvantum-algoritmusok megvalósításához fekete dobozos módon adhatók át.
-Emellett a felhasználó által definiált típusok a különböző Oracle-adatábrázolások típusos biztonságos módon történő címkézésére szolgálnak, ami megnehezíti a különböző típusú fekete Box-műveletek véletlen összetételét.
+Emellett a felhasználó által definiált típusok a különböző Oracle-adatábrázolások típusos biztonságos módon történő címkézésére szolgálnak, így megnehezítik a különböző típusú fekete Box-műveletek véletlen kicsomagolását.
 
 Az ilyen Oracle-k számos különböző kontextusban jelennek meg, beleértve az olyan híres példákat is, mint például a a a megtalált [Keresés](https://en.wikipedia.org/wiki/Grover%27s_algorithm) és a Quantum szimulációs algoritmusok.
 Itt a csak két alkalmazáshoz szükséges Oracle-ket vesszük figyelembe: az amplitúdó erősítése és a fázisok becslése.
-Először az amplitúdó-erősítési Oracle-ket fogjuk megbeszélni, mielőtt proceding a becslést.
+Első lépésként megbeszéljük az amplitúdó-bővítési Oracle-ket.
 
 ### <a name="amplitude-amplification-oracles"></a>Amplitúdó-erősítés Oracles ###
 
@@ -94,7 +94,7 @@ Azt az első Oracle-t jelöljük, amelyre az amplitúdó-erősítéshez szüksé
 A célként megadott alterületet ($P _1 $) jelölő Oracle pontosan ugyanazt az űrlapot veszi fel.
 Minden állapothoz $ \ket{x} $ a célként megadott alterületen (azaz minden olyan állapot esetében, amelynek a kimenetét szeretné kiadni), $P _1 \ ket {x} =-\ket{x} $.
 Hasonlóképpen, az összes olyan állam esetében, amely nem a \ket{y} $ $P _1 \ ket {y} = \ket{y} $.
-Ezt a két reflexiót egyesítjük úgy, hogy olyan operátort alkotnak, amely az amplitúdó erősítésének egyetlen lépését adja meg, $Q =-P_0 P_1 $, ahol a teljes mínusz jel csak az ellenőrzött alkalmazások esetében fontos.
+Ezt a két reflexiót egyesítjük egy olyan operátor kialakításával, amely az amplitúdó erősítésének egyetlen lépését, $Q =-P_0 P_1 $ értéket adja meg, ahol a teljes mínusz jel csak az ellenőrzött alkalmazások esetében fontos.
 Az amplitúdó-erősítés ezután egy kezdeti állapotba kerül, amely a kezdeti alterületen található $ \ket{\psi} $, majd végrehajtja a $ \ket{\psi} \mapsto Q ^ m \ket{\psi} $ értéket.
 Az ilyen iterációk elvégzése garantálja, hogy ha az egyik kezdeti állapottal rendelkezik, amely átfedésben van a $ \sin ^ 2 (\theta) $ karakterrel a megjelölt területtel, akkor $m $ iteráció után az átfedés lesz $ \sin ^ 2 ([2m + 1] \theta) $.
 Ezért általában úgy szeretnénk kiválasztani $m $-t, hogy legyen egy ingyenes paraméter, például $ [2m + 1] \theta = \ pi/2 $; azonban az ilyen merev megoldások nem annyira fontosak az amplitúdó-erősítés bizonyos formáinál, például a rögzített pont amplitúdójának erősítése.
@@ -145,20 +145,20 @@ is Adj + Ctl {
 }
 ```
 
-Ezután összekapcsoljuk ezt a két Oracle-t, hogy a két állam és a determinisztikus módon átalakítása a $ \ket{+} ^ {\otimes n} $ \ket{0}$ értékkel együtt a Hadamard-kapuk számú rétegét használja, amely arányos a $ \sqrt{2 ^ n} $ értékkel (azaz $m \propto \sqrt{2 ^ n} $) a{0}\ket $ determinisztikus módon előkészítéséhez és a kezdeti állapot méréséhez, valamint a $0 $-os eredmény megtartásához képest, a nagyjából 2 ^ n $ réteget is el kell készíteni.
+Ezután összekapcsoljuk ezt a két Oracle-t, hogy a két állam és a determinisztikus módon közötti váltás a $ \ket{+} ^ {\otimes n} $ \ket{0}$ értékre történjen, amely több, a $ Hadamard ^ n} számú réteggel rendelkező \Sqrt{2. $ (IE $m \propto \sqrt{2 ^ n} $) és a nagyjából 2 ^ n $ rétegek, amelyek szükségesek a nem determinisztikus módon előkészíteni a $ \ket{0}$ állapotot a kezdeti állapot előkészítésével és mérésével, amíg meg nem történik a $0 $ megfigyelve.
 
 ### <a name="phase-estimation-oracles"></a>Fázisok becslése Oracles ###
 
 A fázisok becsléséhez az Oracles valamivel több természetesebb.
 A fokozatos becslés célja, hogy olyan alrutint tervezzen, amely képes egy egységes mátrix eigenvalues való mintavételre.
-Ez a módszer elengedhetetlen a kvantum-szimulációban, mert a kémia és az anyagi tudományok számos fizikai problémája miatt ezek a eigenvalues biztosítják a kvantum-rendszerek alapszintű energiáit, amelyek értékes információkat biztosítanak a következő fázis-diagramokról: anyagok és reakció dinamika a molekulák számára.
+Ez a módszer nem feltétlenül elengedhetetlen a Quantum szimulációs szolgáltatásban, mert a kémia és az anyagi tudományok számos fizikai problémája miatt ezek a eigenvalues a kvantum-rendszerek talajközeli energiáit biztosítják, amelyek értékes információkat biztosítanak a következő fázis-diagramokról: anyagok és reakció dinamika a molekulák számára.
 A fázisok becslésének minden íz-bemenetének egységesnek kell lennie.
 Ez az egységes szolgáltatás a két Oracle-típus egyikének megfelelően van leírva.
 
 > [!TIP]
 > Az alábbiakban ismertetett Oracle-típusok mindegyike szerepel a mintákban.
-> Ha többet szeretne megtudni a folyamatos lekérdezési Oracle-ról, tekintse meg a [ **PhaseEstimation** mintát](https://github.com/Microsoft/Quantum/tree/master/Samples/src/PhaseEstimation).
-> Ha többet szeretne megtudni a diszkrét lekérdezési Oracle-ról, tekintse meg a [ **IsingPhaseEstimation** mintát](https://github.com/Microsoft/Quantum/tree/master/Samples/src/IsingPhaseEstimation).
+> Ha többet szeretne megtudni a folyamatos lekérdezési Oracle-ról, tekintse meg a [ **PhaseEstimation** mintát](https://github.com/microsoft/Quantum/tree/master/samples/characterization/phase-estimation).
+> Ha többet szeretne megtudni a diszkrét lekérdezési Oracle-ról, tekintse meg a [ **IsingPhaseEstimation** mintát](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/phase-estimation).
 
 Az Oracle első típusa, amely egy különálló lekérdezési Oracle-t hív meg, és a felhasználó által definiált <xref:microsoft.quantum.oracles.discreteoracle>nek felel meg, egyszerűen egy egységes mátrixot foglal magában.
 Ha $U $ az az egységes, amelynek a eigenvalues szeretnénk megbecsülni, akkor az Oracle for $U $ egyszerűen egy olyan alrutinra vonatkozik, amely megvalósítja a $U $-t.
@@ -166,8 +166,8 @@ Előfordulhat például, hogy az $U $ értéket kell megadnia az amplitúdó-bec
 A mátrix eigenvalues felhasználható a kezdeti és a megcélzott állapotok, a $ \sin ^ 2 (\theta) $ közötti átfedés megbecslésére, amely a másodfokú módon kevesebb mintát használ, mint amennyit egyébként kellene.
 Ez a szakasz becslésének alkalmazásával keresi a következőt: a ($Q $, az amplitúdó-becslések monikere.
 Egy másik gyakori alkalmazás, amely a kvantum-metrológiaban széles körben használatos, egy kis elforgatási szöget eredményez.
-Más szóval azt szeretnénk, hogy a $ \theta $ értéket a $R _z (\theta) $ alakú, ismeretlen rotációs kapura becsüljük.
-Ilyen esetekben az az alrutin, amelyet a \theta $ értékkel való együttműködéshez szeretne használni a kapunál, a $ $ \begin{align} U & = R_z (\theta) \\\\ & = \begin{bmatrix} e ^ {-i \theta/2} & 0 \\\\ 0 & e ^ {i \ THÉTA/2} \end{bmatrix}.
+Más szóval a $ \theta $ értéket szeretnénk megbecsülni egy ismeretlen rotációs kapun $R _z (\theta) $ formában.
+Ilyen esetekben az az alrutin, amelyet a rendszer a következőhöz szeretne használni, hogy megismerje a $ \theta $-t a kapunál, $ $ \begin{align} U & = R_z (\theta) \\\\ & = \begin{bmatrix} e ^ {-i \theta/2} & 0 \\\\ 0 & e ^ {i \ THÉTA/2} \end{bmatrix}.
 \end{align} $ $
 
 A fázisok becslésében használt második Oracle a folyamatos lekérdezési Oracle, amelyet a <xref:microsoft.quantum.oracles.continuousoracle> típus képvisel.
@@ -185,8 +185,8 @@ Mivel a kvantum-szimulációs módszerek lehetővé teszik a töredékes evolúc
 Ez azért fontos, hogy a fázis-becslési algoritmusok alapján minden utolsó uncia hatékonyságot megnyomjon, mert lehetővé teszi számunkra, hogy pontosan olyan kísérletet válasszon, amely a legtöbbet a $E $; míg a különálló lekérdezéseken alapuló metódusoknak a kiegyezéssel kell rendelkezniük az algoritmusban található lekérdezések legjobb egész számának kiválasztásával.
 
 Ennek konkrét példája, ha nem a kapu elforgatási szögét, hanem egy forgó kvantum-rendszer feldolgozási gyakoriságát kívánja megbecsülni.
-Az ilyen kvantum-dinamika leírását a $U (t) = R_z (2 \ Omega t) $ for Evolution Time $t $ és Unknown Frequency $ \omega $.
-Ebben a kontextusban a $U (t) $ értéket szimulálhatja bármely $t $-hez egyetlen $R _z $ Gate használatával, és így nem kell korlátoznia magunkat, hogy csak a különálló lekérdezések legyenek az egységesek.
+Az ilyen kvantum-dinamika leírása $U (t) = R_z (2 \ Omega t) $ az Evolution Time $t $ és a $ \omega $ ismeretlen gyakorisággal.
+Ebben a kontextusban a $U (t) $ értéket szimulálhatja bármely $t $-hez egyetlen $R _z $ Gate használatával, és így nem kell korlátoznia magunkat arra, hogy csak a különálló lekérdezésekre korlátozódjon.
 Az ilyen folyamatos modell azt a tulajdonságot is tartalmazhatja, amelyet a $2 \ PI $-nál nagyobb gyakorisággal lehet megbecsülni a folyamatos lekérdezéseket használó fázis-becslési folyamatokból, a $t $ nem arányos értékekkel végrehajtott kísérletek eredményeiből derül ki.
 Így olyan problémákhoz, mint például az Oracle fázis-becsléshez kapcsolódó folyamatos lekérdezési modellek, nem csupán megfelelőek, de a diszkrét lekérdezési modell esetében is előnyösek.
 Ebben az esetben a Q # a lekérdezések mindkét formájára vonatkozik, és hagyja azt a felhasználónak, hogy eldöntse, hogy az igényeinek megfelelő fázis-becslési algoritmust és az elérhető Oracle-típust.
@@ -199,17 +199,17 @@ A dinamikus szimuláció elsődleges célja az, hogy az idő-evolúciós operát
 
 $ $ \begin{align} H & = \sum ^ {d-1} _ {j = 0} H_j, \end{align} $ $
 
-a kvantum-számítógépeken egyszerűen megvalósítható az egyes kifejezések időbeli alakulása. Ha például $H _j $ egy Pauli $X _1X_2 $ operátor, amely a qubit-`qubits`regisztráció 1. és 2. részében van, akkor a $t $-ig bármikor megvalósítható az Időváltozás, ha meghívja a művelet `Exp([PauliX,PauliX], t, qubits[1..2])`, amelynek aláírása `((Pauli[], Double, Qubit[]) => Unit is Adj + Ctl)`. Ahogy az a Hamilton szimulációban is szerepel, az egyik megoldás, hogy az $H $ értékkel közelítse meg az időbeli alakulást az egyszerűbb műveletek sorozatával.
+a kvantum-számítógépeken egyszerűen megvalósítható az egyes kifejezések időbeli alakulása. Ha például a $H _j $ egy Pauli $X _1X_2 $ operátor, amely a qubit-regisztráció 1. és 2. részében van, akkor a `qubits`$-ban minden alkalommal megvalósítható az Időváltozás, ha meghívja a művelet $t, amelynek aláírása `Exp([PauliX,PauliX], t, qubits[1..2])`. Ahogy az a Hamilton szimulációban is szerepel, az egyik megoldás, hogy az $H $ értékkel közelítse meg az időbeli alakulást az egyszerűbb műveletek sorozatával.
 
-$ $ \begin{align} U (t) & = \left (e ^ {-iH\_0 t/r} e ^ {-iH\_1 t/r} \cdots e ^ {-iH\_{d-1} t/r} \right) ^ {r} + \mathcal{O} (d ^ 2 \max_j \\| H\_j\\| ^ 2 t ^ 2/r), \end{align} $ $
+$ $ \begin{align} U (t) & = \left (e ^ {-iH\_0 t/r} e ^ {-iH\_1 t/r} \cdots e ^ {-iH\_{d-1} t/r} \right) ^ {r} + \mathcal{O} (d ^ 2 \ max_j \\| H\_j\\| ^ 2 t ^ 2/r), \end{align} $ $
 
 ahol az egész szám $r > $0 a közelítési hibát vezérli.
 
 A dinamikus generátor modellező könyvtára keretet biztosít a bonyolult generátorok szisztematikus kódolásához az egyszerűbb generátorok szempontjából. Ezt a leírást később átadhatják a szimulációs függvénytárnak, amely egy tetszőleges szimulációs algoritmussal valósítja meg a Time-Evolutiont, számos részletet pedig automatikusan elintéz.
 
 > [!TIP]
-> Az alább ismertetett dinamikus létrehozó függvénytárat a minták tartalmazzák. A Ising modellen alapuló példáért tekintse meg a [ **IsingGenerators** mintát](https://github.com/Microsoft/Quantum/tree/master/Samples/src/IsingGenerators).
-> A molekuláris hidrogénen alapuló példákért tekintse meg a [**H2SimulationCmdLine**](https://github.com/Microsoft/Quantum/tree/master/Samples/src/H2SimulationCmdLine) és a [**H2SimulationGUI**](https://github.com/Microsoft/Quantum/tree/master/Samples/src/H2SimulationGUI) mintákat.
+> Az alább ismertetett dinamikus létrehozó függvénytárat a minták tartalmazzák. A Ising modellen alapuló példáért tekintse meg a [ **IsingGenerators** mintát](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/generators).
+> A molekuláris hidrogénen alapuló példákért tekintse meg a [**H2SimulationCmdLine**](https://github.com/microsoft/Quantum/tree/master/samples/simulation/h2/command-line) és a [**H2SimulationGUI**](https://github.com/microsoft/Quantum/tree/master/samples/simulation/h2/gui) mintákat.
 
 ### <a name="complete-description-of-a-generator"></a>Generátor leírásának teljes leírása ###
 
@@ -225,7 +225,7 @@ A `GeneratorSystem` felhasználó által definiált típus a Hamilton klasszikus
 newtype GeneratorSystem = (Int, (Int -> GeneratorIndex));
 ```
 
-A rekord első eleme `Int` a Hamilton $d $ kifejezést tárolja, a második elem `(Int -> GeneratorIndex)` pedig egy függvény, amely egy egész szám típusú indexet térképez fel a $\{0, 1,..., d-1\}$ értékről egy `GeneratorIndex` felhasználó által definiált típusra, amely egyedileg azonosítja az egyes elemeket primitív kifejezés a Hamilton. Vegye figyelembe, hogy a Hamilton lévő feltételek gyűjteményének a tömb `GeneratorIndex[]`helyett függvényként való kifejezése lehetővé teszi a `GeneratorIndex` menet közbeni számítását, amely különösen akkor hasznos, ha nagy mennyiségű feltételt tartalmazó Hamiltonians van leírva.
+A rekord első elemének `Int` tárolja a Hamilton $d $ kifejezések számát, a második elem `(Int -> GeneratorIndex)` pedig egy olyan függvény, amely egy egész számú indexet képez le a $\{0, 1,..., d-1\}$ értéket egy `GeneratorIndex` felhasználó által definiált típusra, amely egyedileg azonosítja az egyes primitív kifejezéseket a Hamilton. Vegye figyelembe, hogy a Hamilton lévő feltételek gyűjteményének a tömb `GeneratorIndex[]`helyett függvényként való kifejezése lehetővé teszi a `GeneratorIndex` menet közbeni számítását, amely különösen akkor hasznos, ha nagy mennyiségű feltételt tartalmazó Hamiltonians van leírva.
 
 Alapvetően nem vezetünk be olyan konvenciót, amely alapján a `GeneratorIndex` által azonosított primitív feltételek könnyen szimulálható. Előfordulhat például, hogy az egyszerű feltételek a fentiekben említettek szerint Pauli-operátorok, de a kvantum-kémia szimulációjában gyakran használt megsemmisítési és Fermionic is lehetnek. Önmagában a `GeneratorIndex` értelmetlenek, mivel nem írja le, hogy az adott kifejezés milyen időpontot határozhat meg a kvantum-áramkörként.
 
@@ -244,7 +244,7 @@ $ $ \begin{align} H & = \sum ^ {d-1} _ {j = 0} a_j H_j, \end{align} $ $, ahol mi
 newtype GeneratorIndex = ((Int[], Double[]), Int[]);
 ```
 
-A kódolás során az első paraméter `Int[]` egy Pauli-karakterláncot határoz meg, ahol a $ \hat I\rightarrow $0, a $ \hat X\rightarrow $1, a $ \hat Y\rightarrow $2 és a $ \hat Z\rightarrow $3. A második paraméter `Double[]` a Pauli-karakterlánc együtthatóját tárolja a Hamilton. Vegye figyelembe, hogy a tömbnek csak az első eleme van használatban. A harmadik paraméter `Int[]` indexeli azt a qubits, amelyhez ez a Pauli-karakterlánc működik, és nem rendelkezhet duplikált elemekkel. Így a $0,4 \hat X_0 \hat Y_8\hat I_2\hat Z_1 $ Hamilton kifejezés a következőképpen jelenhet meg
+A kódolás során az első paraméter `Int[]` egy Pauli-karakterláncot határoz meg, ahol a $ \hat I\rightarrow $0, a $ \hat X\rightarrow $1, a $ \hat Y\rightarrow $2 és a $ \hat Z\rightarrow $3. A második paraméter `Double[]` a Pauli-karakterlánc együtthatóját tárolja a Hamilton. Vegye figyelembe, hogy a tömbnek csak az első eleme van használatban. A harmadik paraméter `Int[]` indexeli azt a qubits, amelyhez ez a Pauli-karakterlánc működik, és nem rendelkezhet duplikált elemekkel. Így a $0,4 \hat X_0 \hat Y_8 \hat I_2 \hat Z_1 $ Hamilton kifejezés a következőképpen jelenhet meg
 
 ```qsharp
 let generatorIndexExample = GeneratorIndex(([1,2,0,3], [0.4]]), [0,8,2,1]);

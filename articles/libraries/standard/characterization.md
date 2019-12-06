@@ -6,12 +6,12 @@ uid: microsoft.quantum.libraries.characterization
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: d77085aa8aa83c18858056bab1858d990efdb36e
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 1eb48da9d4ae2a730019e2707dcb2c69b998491e
+ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73185562"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74864372"
 ---
 # <a name="quantum-characterization-and-statistics"></a>Quantum jellemzés és statisztika #
 
@@ -30,7 +30,7 @@ Ezeknek a kódtáraknak ezért a klasszikus és a kvantum-adatok feldolgozását
 ## <a name="iterative-phase-estimation"></a>Iterációs fázis becslése ##
 
 A kvantummechanika a Quantum-jellemzés szempontjából való megtekintése hasznos alternatívát mutat a kvantum fázis becsléséhez.
-Ez azt eredményezi, hogy az $n $-qubit regisztrációjának előkészítése helyett a fázis bináris ábrázolását tartalmazza, mint a kvantum fázis becslése során, megtekintheti a fázisok becslését arra a folyamatra, amellyel a *klasszikus* ügynök beolvassa a kvantum-rendszerek tulajdonságait a következővel: mérések.
+Ez azt eredményezi, hogy ahelyett, hogy egy $n $-qubit regisztert kellene készítenie, amely a fázis bináris ábrázolását tartalmazza, mint a kvantum fázisok becslésében, megtekintheti a fázisok becslését arra a folyamatra, amellyel a *klasszikus* ügynök a kvantumrendszer tulajdonságait a mérések alapján tanulja meg.
 A "visszarúgás" fázis használatával a bejelentési művelet eredményeként a fekete dobozba tartozó műveletek egy ismeretlen szögbe való bekapcsolásához, de az elforgatást közvetlenül követő egyes lépésekben mért Ancilla qubit mérjük.
 Ennek az az előnye, hogy csak egyetlen további qubit van szükség a kvantum-esetekben ismertetett visszarúgások végrehajtásához, ahogy ezt követően a mérési eredmények fázisát is megismerheti egy iterációs módon.  
 Az alábbiakban javasolt módszerek mindegyike egy másik stratégiát használ a kísérletek tervezéséhez és a különböző adatfeldolgozási módszerekhez a fázis megismerése érdekében.  Ezek mindegyike egyedi előnnyel rendelkezik, és a szigorú hibákra, a képességekre, az előzetes információk bevezetésére, a hibák elmulasztására vagy a limitted klasszikus számítógépeken való futtatására van szükség.
@@ -39,7 +39,7 @@ Az iterációs fázisok becslésének megvitatásakor egy egységes $U $ érték
 Az [adatstruktúrákban](xref:microsoft.quantum.libraries.data-structures)található Oracle-k című szakaszban leírtak szerint a Q # canon a <xref:microsoft.quantum.oracles.discreteoracle> felhasználó által definiált típus alapján végzi el a műveleteket, `((Int, Qubit[]) => Unit : Adjoint, Controlled)`a rekord típusa határozza meg.
 Konkrétan, ha `U : DiscreteOracle`, `U(m)` implementálja $U ^ millió $ értéket `m : Int`.
 
-Ebben a definícióban az iterációs fázisok becslésének minden lépése a $ \ket{+} $ állapotú segédszolgáltatása-qubit előkészítésével jár, és a kezdeti állapot $ \ket{\phi} $, amelyet feltételezünk, hogy az $U (m) $ [eigenvector](xref:microsoft.quantum.concepts.matrix-advanced) , azaz $U (m) \ket{\phi} = e ^ {im\phi} \ket{\phi} $.  
+Ebben a definícióban az ismétlődő fázisok becslésének minden lépése a $ \ket{+} $ állapotú segédszolgáltatása-qubit előkészítésével jár, és a kezdeti állapot $ \ket{\phi} $, amelyet feltételezzük, az $U (m) $, azaz $U (m [) eigenvector =](xref:microsoft.quantum.concepts.matrix-advanced) e ^ {\ket{\phi}} \ ket {\ Phi} $.  
 A rendszer a `U(m)` vezérelt alkalmazását használja, amely előkészíti a $ \left (R\_1 (m \phi) \ket{+} \right) \ket{\phi} $ állapotot.
 Ahogy a Quantum Case esetében, az Oracle `U(m)` ellenőrzött alkalmazásának hatása pontosan ugyanaz, mint a $ \ket{+} $-on az ismeretlen fázisra vonatkozó $R _1 $ alkalmazásának hatása, így a $U $-re vonatkozó hatások ebben az egyszerűbb módon is leírható.
 Szükség esetén az algoritmus elforgatja a vezérlő qubit úgy, hogy $R _1 (-m\theta) $ érték beszerzésével beszerezze a következő állapotot: $ \ket{\psi} = \left (R\_1 (m [\phi-\theta]) \ket{+} \right) \ket{\phi} $ $.
@@ -47,17 +47,17 @@ A `U(m)` vezérlőelemként használt segédszolgáltatása-qubit $X $ alapon m�
 
 Ezen a ponton az iterációs fázis becslése által beszerzett `Result`i értékek fokozatos kiépítése a klasszikus statisztikai következtetési probléma.
 A $m $ értékének megkeresése, amely maximalizálja a szerzett adatokat, mivel a rögzített következtetési módszer miatt egyszerűen probléma van a statisztikában.
-Ezt úgy hangsúlyozzuk, hogy röviden leírja az iterációs fázisok becslését elméleti szinten a Bayes-as paraméter alapján, mielőtt továbblépne a Q # Canonban megadott statisztikai algoritmusok leírására a klasszikus következtetés megoldásához probléma.
+Ezt úgy hangsúlyozzuk, hogy röviden leírja az iterációs fázisok becslését elméleti szinten a Bayes-as paraméter alapján, mielőtt folytatná a Q # Canonban található statisztikai algoritmusok leírását a klasszikus következtetési probléma megoldásához.
 
 ### <a name="iterative-phase-estimation-without-eigenstates"></a>Iterációs fázis becslése Eigenstates nélkül ###
 
 Ha olyan bemeneti állapotot ad meg, amely nem eigenstate, azaz ha $U (m) \ket{\phi\_j} = e ^ {im\phi\_j} $, akkor a fázisok becslésének folyamata nem determinisztikus módon a kvantum-állapotot egyetlen energetikai eigenstate irányába.  A eigenstate végül az a eigenstate, amely legvalószínűbb a megfigyelt `Result`előállítása.
 
-A PE egyetlen lépése a következő, nem egységes átalakítást hajtja végre az állapot \begin{align} \sum_j \sqrt{\Pr (\phi\_j)} \ket{\phi\_j} \mapsto \sum\_j\frac {\ SQRT {\ PR (\phi\_j)} \sqrt{\Pr (\text{Result} | \ Phi\_j)} \ket{\phi\_j}} {\sqrt{\Pr (\phi\_j) \sum\_j \Pr (\text{Result} | \phi\_j)}}.
-\end{align}, mivel ez a folyamat több `Result` értékre van megismételve, a $ \prod_k\Pr (\text{Result}\_k | \phi\_j) $ maximális értékkel nem rendelkező eigenstates exponenciálisan le lesz tiltva.
+Pontosabban, a PE egyetlen lépése a következő, nem egységes átalakítást hajtja végre az állapot \begin{align} \ sum_j \sqrt{\Pr (\phi\_j)} \ket{\phi\_j} \mapsto \sum\_j\frac {\ SQRT {\ PR (\phi\_j)} \sqrt{\Pr (\text{Result} | \phi\_j)} \ket{\phi\_j}} {\sqrt{\Pr (\phi\_j) \sum\_j \Pr (\text{Result} | \phi\_j)}}.
+\end{align}, mivel ez a folyamat több `Result` értékre van megismételve, de a $ \ prod_k \Pr (\text{Result}\_k | \phi\_j) $ maximális értékkel nem rendelkező eigenstates exponenciálisan le lesz tiltva.
 Ennek eredményeképpen a következtetési folyamat általában egyetlen sajátérték rendelkező állapotokra lesz átszervezve, ha a kísérletek megfelelően vannak kiválasztva.
 
-A Bayes "tétel továbbra is azt sugallja, hogy a fázis becslésének eredményét a \begin{align} \frac{\sqrt{\Pr (\phi\_j)} \sqrt{\Pr (\text{Result} | \phi\_j)} formátumban kell megírni. \ket{\phi\_j}} {\sqrt{\Pr (\phi\_j) \sum\_j \Pr (\text{Result} | \phi\_j)}} = \sum_j \sqrt{\Pr (\phi\_j | \text{Result})} \ket{\phi\_j}.
+A Bayes "tétel továbbra is javasolja, hogy a fázis becslésének eredményét a \begin{align} \frac{\sqrt{\Pr (\phi\_j)} \sqrt{\Pr (\text{Result} | \phi\_j)} \ket{\phi\_j}} {\sqrt{\Pr (\phi\_j) \sum\_j \Pr (\text{Result} | \phi\_j)}} = \ sum_j \sqrt{\Pr (\phi\_j | \text{Result})} \ket{\phi\_j}.
 \end{align} itt $ \Pr (\phi\_j | \text{Result}) $ lehet értelmezendő, mivel a valószínűsége az, hogy az egyes hipotézisek az adott eigenstates kapcsolatban szerepelnek:
 
 1. a kvantum állapot ismerete a mérés előtt
@@ -71,7 +71,7 @@ Ennek az okának a becslése számos olyan kvantum-algoritmuson belül jelenik m
 ### <a name="bayesian-phase-estimation"></a>A Bayes fázis becslése ###
 
 > [!TIP]
-> A következő témakörben talál további információt a Bayes fázis becsléséről a gyakorlatban: [**PhaseEstimation**](https://github.com/Microsoft/Quantum/tree/master/Samples/src/PhaseEstimation) minta.
+> A következő témakörben talál további információt a Bayes fázis becsléséről a gyakorlatban: [**PhaseEstimation**](https://github.com/microsoft/Quantum/tree/master/samples/characterization/phase-estimation) minta.
 
 A Bayes-fázis becslésének ötlete egyszerű.
 A fázis-becslési protokollból gyűjti a mérési statisztikát, majd az eredményeket a Bayes-következtetéssel dolgozza fel, és megbecsüli a paramétert.
@@ -82,15 +82,15 @@ A metódusok elvi hátránya, hogy számítási feltételként kell megköveteln
 Ha meg szeretné tudni, hogyan működik ez a Bayes-féle következtetési folyamat, vegye figyelembe, hogy az egyetlen `Zero` eredmény feldolgozásának esete.
 Vegye figyelembe, hogy $X = \ket{+} \bra{+}-\ket{-}\bra{-}$, így a $ \ket{+} $ érték az egyetlen pozitív eigenstate, amely `Zero`nak megfelelő $X $.
 A [`PauliX` mérések](xref:microsoft.quantum.concepts.pauli) `Zero`ának valószínűsége az első qubit vonatkozóan, amely a $ \ket{\psi}\ket{\phi} $ bemeneti állapotot kapta, így \begin{Equation} \Pr (\texttt{Zero} | \psi) = \left | \braket{+ | \psi} \right | ^ 2.
-a \end{Equation} iterációs fázisának becslése esetén a $ \ket{\psi} = R_1 (m [\phi-\theta]) \ket{+} $ értéket kell kimutatni, például \begin{align} \Pr (\texttt{Zero} | \phi; m, \theta) & = \left | \braket{+ | R_1 (m [\phi-\theta]) | +} \right | ^ 2 \\\\ & = \left | \frac12 \left (\bra{0} + \bra{1} \right) \left (\ket{0} + e ^ {i m [\phi-\theta]} \ket{1} \right) \right | ^ 2 \\\\ & = \left | \frac{1 + e ^ {i m [\phi-\theta]}}{2} \right | ^ 2 \\\\ & = \cos ^ 2 (m [\phi-\theta]/2) \tag{★} \label{EQ: Phase-est-valószínűség}.
+\end{Equation} az ismétlődő fázisok becslése esetén a $ \ket{\psi} = R_1 (m [\phi-\theta]) \ket{+} $, például \begin{align} \Pr (\texttt{Zero} | \phi; m, \theta) & = \left | \braket{+ | R_1 (m [\phi-\theta]) | +} \right | ^ 2 \\\\ & = \left | \frac12 \left (\bra{0} + \bra{1} \right) \left (\ket{0} + e ^ {i m [\phi-\theta]} \ket{1} \right) \right | ^ 2 \\\\ & = \left | \frac{1 + e ^ {i m [\phi-\theta]}}{2} \right | ^ 2 \\\\ & = \cos ^ 2 (m [\phi-\theta]/2) \tag{★} \label{EQ: Phase-est-valószínűség}.
 a \end{align} az iterációs fázis becslése egy szinuszos függvény rezgő gyakoriságának megismerését jelenti, amely lehetővé teszi, hogy egy érmet a sinusoid által adott torzítással lehessen átadni.
 A hagyományos klasszikus terminológiát követve a $ \eqref{EQ: Phase-est-valószínűség} $ értéket hívjuk az iterációs fázis becslésének *valószínűségi függvényében* .
 
 Miután megfigyelte az iterációs fázis becsült valószínűségi függvényének `Result`ét, a Bayes szabályt használva megadhatja, hogy mit higgyünk a megfigyelés követésének fázisában.
-Konkrétan, \begin{Equation} \Pr (\phi | d) = \frac{\Pr (d | \phi) \Pr (\phi)} {\int \Pr (d | \phi) \Pr (\phi) {\mathrm d} \phi} \Pr (\phi), \end{Equation}, ahol $d \in \\{\texttt{Zero}, \texttt{One}\\} $ egy `Result`, és ahol $ \Pr (\phi) $ a $ \phi $-ra vonatkozó korábbi hiedelmek ismertetése.
+Konkrétan, \begin{Equation} \Pr (\phi | d) = \frac{\Pr (d | \phi) \Pr (\phi)} {\int \Pr (d | \phi) \Pr (\phi) {\mathrm d} \phi} \Pr (\phi), \end{Equation}, ahol $d \in \\{\texttt{Zero}, \texttt{One}\\} $ egy `Result`, és ahol $ \Pr (\phi) $ leírja a $ \phi $-vel kapcsolatos korábbi hiedelmeket
 Ekkor az iterációs fázis becslésének iterációs jellege egyértelművé válik, mivel a posterior Distribution $ \Pr (\phi | d) $ a bájtértékre a következő `Result`megfigyelését azonnal leírja.
 
-Ebben az eljárásban a klasszikus vezérlő által a \begin{Equation} \hat{\phi} \mathrel{: =} \expect [\phi | \text{Data}] = \int \phi \Pr (\phi | \text{Data}) {\mathrm d} \phi, \end{Equation}, where $ \ \hat{\phi} $ című fázist jelentheti. a (() {adat} $ szöveg a beszerzett `Result` összes értékének teljes rekordját jelenti.
+Ebben az eljárásban bármely ponton jelentést készíthetünk a klasszikus vezérlő által a \begin{Equation} \hat{\phi} \mathrel{: =} \expect [\phi | \text{Data}] = \int \phi \Pr (\phi | \text{Data}) {\mathrm d} \phi, \end{Equation}, ahol $ \text{Data} $ a kapott összes `Result` érték teljes \hat{\phi}.
 
 A Bayes-következtetések pontos megállapítása a gyakorlatban megoldhatatlan.
 Ehhez Képzelje el, hogy $n $-bit változót szeretne megtanulni $x $-ra.
@@ -104,12 +104,12 @@ A mérési eredményekből származó fázisok becsült *utólagos* újraépít�
 
 Egy ilyen példa egy hatékony klasszikus utólagos feldolgozási lépés a [robusztus fázis-becslési algoritmus](https://arxiv.org/abs/1502.02677), amely a fent említett aláírást és bemeneteket is megjeleníti. Ez azt feltételezi, hogy a bemeneti $U $ beviteli mezők `DiscreteOracle` típusként vannak becsomagolva, ezért csak az ellenőrzött $U $ értékre vonatkozó egész hatásköröket kérdezik le. Ha a `Qubit[]`-regisztráció bemeneti állapota egy eigenstate $U \ket{\psi} = e ^ {i\phi} \ ket {\ psi} $, a robusztus fázis-becslési algoritmus a becslés $ \hat{\phi}\in [-\pi, \pi) $ $ \phi $ értéket adja vissza `Double`ként.
 
-A robusztus fázisok becslésének legfontosabb funkciója, amelyet a legtöbb más hasznos változatban megosztanak, az, hogy a $ \hat{\phi} $ újraépítési minőség bizonyos értelemben Heisenberg korlátozott. Ez azt jelenti, hogy ha a valódi érték $ \hat{\phi} $ értéke a $ \sigma $, akkor a $ \sigma $ függvény fordítottan arányos – az ellenőrzött $U $-ra, azaz a $ \sigma = \mathcal{O} (1/Q) $ értékű $Q lekérdezések teljes számával arányosan. Az eltérés definíciója most a különböző becslési algoritmusok között változik. Bizonyos esetekben előfordulhat, hogy legalább $ \mathcal{O} (1) $ valószínűséggel, a becslési hiba $ | \hat{\phi}-\phi |\_\circ\le \sigma $ egy körkörös mértékben $ \circ $. A robusztus fázisok becsléséhez az eltérés pontosan a $ \sigma ^ 2 = \mathbb{E}\_\hat{\phi} [(\mod\_{2 \ PI} (\hat{\phi}-\phi + \pi)-\pi) ^ 2] $, ha az időszakos fázisokat egyetlen véges intervallumra (-\pi, \pi] $-ra csomagoljuk. Pontosabban, a robusztus fázisok becslésének szórása megfelel a $ $ \begin{align} 2,0 \pi/Q \Le \sigma \Le 2 \ pi/2 ^ {n} \Le 10.7 \ PI/Q, \end{align} $ $, ahol az alsó határ elérte a izomorf nagy $Q $ és a felső korlátot. a kötés a kis méretű minták esetében is garantált.  Vegye figyelembe, hogy a `bitsPrecision` bemenet által kiválasztott $n $, amely implicit módon meghatározza a $Q $ értéket.
+A robusztus fázisok becslésének legfontosabb funkciója, amelyet a legtöbb más hasznos változatban megosztanak, az, hogy a $ \hat{\phi} $ újraépítési minőség bizonyos értelemben Heisenberg korlátozott. Ez azt jelenti, hogy ha a valódi érték $ \hat{\phi} $ értéke a $ \sigma $, akkor a $ \sigma $ függvény fordítottan arányos – az ellenőrzött $U $-ra, azaz a $ \sigma = \mathcal{O} (1/Q) $ értékű $Q lekérdezések teljes számával arányosan. Az eltérés definíciója most a különböző becslési algoritmusok között változik. Bizonyos esetekben előfordulhat, hogy legalább $ \mathcal{O} (1) $ valószínűséggel, a becslési hiba $ | \hat{\phi}-\phi |\_\circ\le \sigma $ egy körkörös mértékben $ \circ $. A robusztus fázisok becsléséhez az eltérés pontosan a $ \sigma ^ 2 = \mathbb{E}\_\hat{\phi} [(\mod\_{2 \ PI} (\hat{\phi}-\phi + \pi)-\pi) ^ 2] $, ha az időszakos fázisokat egyetlen véges intervallumra (-\pi, \pi] $-ra csomagoljuk. Pontosabban, a robusztus fázisok becslésének szórása megfelel a $ $ \begin{align} 2,0 \pi/Q \Le \sigma \Le 2 \ pi/2 ^ {n} \Le 10.7 \ PI/Q, \end{align} $ $, ahol az alsó határ elérte a nagy $Q $ izomorf korlátot, és a felső határ garantált a kis méretű minták esetében is.  Vegye figyelembe, hogy a `bitsPrecision` bemenet által kiválasztott $n $, amely implicit módon meghatározza a $Q $ értéket.
 
 A további releváns részletek közé tartozik például a $1 $ Ancilla qubit, illetve az eljárás nem adaptív, azaz a kvantum-kísérletek szükséges sorozata független a köztes mérési eredményektől. Ebben és a közelgő példákban a fázis-becslési algoritmus kiválasztása fontos, az egyiknek a dokumentációra kell hivatkoznia, például a @"microsoft.quantum.canon.robustphaseestimation"ra és a hivatkozott kiadványokra a további információért és a megvalósításhoz.
 
 > [!TIP]
-> Számos minta van, ahol robusztus fázis-becslést használunk. A különböző fizikai rendszerek alapvető állapotának kinyeréséhez szükséges fázis-becsléshez tekintse meg a [ **H2-szimulációs** mintát](https://github.com/Microsoft/Quantum/tree/master/Samples/src/H2SimulationCmdLine), a [ **SimpleIsing** mintát](https://github.com/Microsoft/Quantum/tree/master/Samples/src/SimpleIsing)és a [ **Hubbard Model** mintát](https://github.com/Microsoft/Quantum/tree/master/Samples/src/HubbardSimulation).
+> Számos minta van, ahol robusztus fázis-becslést használunk. A különböző fizikai rendszerek alapvető állapotának kinyeréséhez szükséges fázis-becsléshez tekintse meg a [ **H2-szimulációs** mintát](https://github.com/microsoft/Quantum/tree/master/samples/simulation/h2/command-line), a [ **SimpleIsing** mintát](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/simple)és a [ **Hubbard Model** mintát](https://github.com/microsoft/Quantum/tree/master/samples/simulation/hubbard).
 
 
 ### <a name="continuous-oracles"></a>Folyamatos Oracle- ###
@@ -121,7 +121,7 @@ A [Stone-tétel](https://en.wikipedia.org/wiki/Stone%27s_theorem_on_one-paramete
 Egy eigenstate $ \ket{\phi} $ $H $-ból, amely $H \ket{\phi} = \phi \ket{\phi} $-t is eigenstate $U (t) $ az összes $t $, \begin{Equation} U (t) \ket{\phi} = e ^ {i \phi t} \ket{\phi}.
 \end{equation}
 
-A [Bayes fázis becslésének](#bayesian-phase-estimation) pontos elemzése is alkalmazható, és a valószínűségi függvény pontosan ugyanaz ennél az általános Oracle-modellnél: $ $ \Pr (\texttt{Zero} | \phi; t, \theta) = \cos ^ 2 \ Left (\frac{t [\phi-\theta]} @no__ t_1_ \right).
+A [Bayes fázis becslésének](#bayesian-phase-estimation) pontos elemzése is alkalmazható, és a valószínűségi függvény pontosan ugyanaz ennél az általános Oracle-modellnél: $ $ \Pr (\texttt{Zero} | \phi; t, \theta) = \cos ^ 2 \ Left (\frac{t [\phi-\theta]}{2}\right).
 $ $ Továbbá, ha $U $ egy dinamikus generátor szimulációja, mint a [Hamilton-szimuláció](xref:microsoft.quantum.libraries.applications#hamiltonian-simulation)esetében, akkor a $ \phi $ értéket használjuk energiaként.
 Így a folyamatos lekérdezésekkel a fázisok becslése lehetővé teszi, hogy megismerjük a molekulák, [anyagok](https://arxiv.org/abs/1510.03859) vagy [mezők elméletének](https://arxiv.org/abs/1111.3633v2) szimulált [energia-spektrumát](https://arxiv.org/abs/quant-ph/0604193)anélkül, hogy az $t
 

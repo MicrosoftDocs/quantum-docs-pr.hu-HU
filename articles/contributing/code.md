@@ -6,14 +6,14 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.code
-ms.openlocfilehash: cca50e6c63d4bb982aa5f0a59fc19d08ecbec508
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 3ff15a744bf15924564d5a8fee54f4fbce4c04ee
+ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73185902"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74864423"
 ---
-# <a name="contributing-code"></a>Közreműködő kód #
+# <a name="contributing-code"></a>Hozzájárulás a kódhoz #
 
 A hibák jelentése és a dokumentáció fejlesztése mellett a kód a Quantum Development Kit-hez való hozzájárulása is nagyon közvetlen módja lehet a vállalatoknak a kvantum-programozási Közösségben.
 A kód hozzájárulásával segíthet a problémák megoldásában, új példák megadásában, a meglévő kódtárak használatának megkönnyítésében, vagy akár teljesen új funkciók hozzáadásában is.
@@ -30,13 +30,14 @@ Ha elfogadjuk a kód bevonását, az a Quantum Development Kit részévé válik
 
 A Q # functions, Operations és felhasználó által definiált típusokat, amelyek a tárakat (például a canonot) a fejlesztés részeként automatikusan tesztelik a [**Microsoft/QuantumLibraries**](https://github.com/Microsoft/QuantumLibraries/) adattárban.
 Új lekéréses kérelem megnyitásakor – például az Azure- [folyamatok](https://azure.microsoft.com/services/devops/pipelines/) konfigurációjában – a lekéréses kérelem módosításai nem bontják le azokat a meglévő funkciókat, amelyekre a Quantum programozási Közösség függ.
-Ezek a tesztek a [Microsoft. Quantum. xUnit](https://www.nuget.org/packages/Microsoft.Quantum.Xunit/) csomag használatával íródnak, amely a Q # függvényeket és műveleteket teszteli a [xUnit](https://xunit.github.io/) -keretrendszer számára.
 
-A [`Standard/tests/Standard.Tests.csproj`](https://github.com/microsoft/QuantumLibraries/blob/master/Standard/tests/Standard.Tests.csproj) ezt a xUnit-integrációt használja a `Test`-ban végződő függvények vagy műveletek futtatásához.
-A következő függvény például annak biztosítására szolgál, hogy a <xref:microsoft.quantum.canon.fst> és a <xref:microsoft.quantum.canon.snd> függvény a megfelelő kimeneteket adja vissza egy reprezentatív példában.
+A legújabb Q # verziónál az Unit test a `@Test("QuantumSimulator")` attribútummal van definiálva. Az argumentum lehet "QuantumSimulator", "ToffoliSimulator", "TraceSimulator" vagy bármely teljesen minősített név, amely meghatározza a végrehajtási célt. Több, különböző végrehajtási célokat meghatározó attribútum is csatlakoztatható ugyanahhoz a meghívóhoz. A tesztek némelyike továbbra is az elavult [Microsoft. Quantum. xUnit](https://www.nuget.org/packages/Microsoft.Quantum.Xunit/) csomagot használja, amely az összes Q # funkciót és műveletet kiteszi `Test` a [xUnit](https://xunit.github.io/) -keretrendszerbe. Ez a csomag már nem szükséges az egységbeli tesztek definiálásához. 
+
+A következő függvény segítségével biztosítható, hogy a <xref:microsoft.quantum.canon.fst> és a <xref:microsoft.quantum.canon.snd> függvények a megfelelő kimeneteket adják vissza egy jellemző példában.
 Ha a `Fst` vagy `Snd` kimenete helytelen, a rendszer a `fail` utasítást használja, hogy a teszt sikertelen legyen.
 
 ```qsharp
+@Test("QuantumSimulator")
 function PairTest () : Unit {
     let pair = (12, PauliZ);
 
@@ -56,6 +57,7 @@ function PairTest () : Unit {
 A következő teszt például azt ellenőrzi, hogy a `H(q); X(q); H(q);`, ahogyan az <xref:microsoft.quantum.canon.applywith> meghívja a `Z(q)`.
 
 ```qsharp
+@Test("QuantumSimulator")
 operation WithTest () : Unit {
     let actual = ApplyWith(H, X, _);
     let expected = Z;
