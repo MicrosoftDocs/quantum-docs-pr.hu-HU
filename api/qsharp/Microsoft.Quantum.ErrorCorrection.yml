@@ -23,15 +23,9 @@ functions:
   summary: A qubits adott nyilvántartásába tartozó egy adott táblázat esetében ez a függvény egy `RecoveryFn` típusú objektumot ad vissza, amely tartalmazza az összes olyan információt, amely egy táblázatos keresési dekódolás végrehajtásához szükséges a Pauli-műveletek adott tömbje tekintetében.
 operations:
 - uid: microsoft.quantum.errorcorrection.bitflipdecoder
-  summary: >-
-    > [!WARNING]
-
-    > Elavult @"microsoft.quantum.errorcorrection.encodeintobitflipcode"használata.
+  summary: "\n> [!WARNING]\n> Elavult\n\nA BitFlipDecoder elavult. Ehelyett használja a @\"microsoft.quantum.errorcorrection.decodefrombitflipcode\".\nKérjük, használja a @\"microsoft.quantum.errorcorrection.encodeintobitflipcode\"."
 - uid: microsoft.quantum.errorcorrection.bitflipencoder
-  summary: >-
-    > [!WARNING]
-
-    > Elavult @"microsoft.quantum.errorcorrection.encodeintobitflipcode"használata.
+  summary: "\n> [!WARNING]\n> Elavult\n\nA BitFlipEncoder elavult. Ehelyett használja a @\"microsoft.quantum.errorcorrection.encodeintobitflipcode\".\nKérjük, használja a @\"microsoft.quantum.errorcorrection.encodeintobitflipcode\"."
 - uid: microsoft.quantum.errorcorrection.decodefrombitflipcode
   summary: 'Dekódolja a következőt: [3, 1, 3]/⟦ 3, 1, 1 ⟧ bit-flip code.'
 - uid: microsoft.quantum.errorcorrection.decodefromfivequbitcode
@@ -45,15 +39,9 @@ operations:
 - uid: microsoft.quantum.errorcorrection.encodeintosteanecode
   summary: Kódolási művelet, amely egy nem kódolt kvantum-regisztrációt képez le egy kódolt kvantum-regiszterbe a ⟦ 7, 1, 3 ⟧ Steane kvantum-kódjában.
 - uid: microsoft.quantum.errorcorrection.fivequbitcodedecoder
-  summary: >-
-    > [!WARNING]
-
-    > Elavult @"microsoft.quantum.errorcorrection.decodefromfivequbitcode"használata.
+  summary: "\n> [!WARNING]\n> Elavult\n\nA FiveQubitCodeDecoder elavult. Ehelyett használja a @\"microsoft.quantum.errorcorrection.decodefromfivequbitcode\".\nKérjük, használja a @\"microsoft.quantum.errorcorrection.decodefromfivequbitcode\"."
 - uid: microsoft.quantum.errorcorrection.fivequbitcodeencoder
-  summary: >-
-    > [!WARNING]
-
-    > Elavult @"microsoft.quantum.errorcorrection.encodeintofivequbitcode"használata.
+  summary: "\n> [!WARNING]\n> Elavult\n\nA FiveQubitCodeEncoder elavult. Ehelyett használja a @\"microsoft.quantum.errorcorrection.encodeintofivequbitcode\".\nKérjük, használja a @\"microsoft.quantum.errorcorrection.encodeintofivequbitcode\"."
 - uid: microsoft.quantum.errorcorrection.injectpi4yrotation
   summary: >-
     Egy π/4 rotációs műveletet hajt végre `Y`.
@@ -75,15 +63,9 @@ operations:
 - uid: microsoft.quantum.errorcorrection.recovercss
   summary: Egy `CSS` típus által leírt kvantum-kóddal hajtja végre a hibajavítások egy részét.
 - uid: microsoft.quantum.errorcorrection.steanecodedecoder
-  summary: >-
-    > [!WARNING]
-
-    > Elavult @"microsoft.quantum.errorcorrection.decodefromfivequbitcode"használata.
+  summary: "\n> [!WARNING]\n> Elavult\n\nA SteaneCodeDecoder elavult. Ehelyett használja a @\"microsoft.quantum.errorcorrection.decodefromsteanecode\".\nKérjük, használja a @\"microsoft.quantum.errorcorrection.decodefromfivequbitcode\"."
 - uid: microsoft.quantum.errorcorrection.steanecodeencoder
-  summary: >-
-    > [!WARNING]
-
-    > Elavult @"microsoft.quantum.errorcorrection.decodefromfivequbitcode"használata.
+  summary: "\n> [!WARNING]\n> Elavult\n\nA SteaneCodeEncoder elavult. Ehelyett használja a @\"microsoft.quantum.errorcorrection.encodeintosteanecode\".\nKérjük, használja a @\"microsoft.quantum.errorcorrection.decodefromfivequbitcode\"."
 newtypes:
 - uid: microsoft.quantum.errorcorrection.css
   summary: Egy Calderbank – rövid – Steane (CSS) kódot jelöl, amelyet a kódoló, a dekóder és a szindrómás mérési eljárásai határoznak meg `X` és `Z` hibák esetén.
@@ -110,9 +92,9 @@ newtypes:
 - uid: microsoft.quantum.errorcorrection.syndromemeasop
   summary: Egy olyan műveletet jelöl, amely egy hiba-javító kód blokkolásának mérésére szolgál.
 metadata:
-  ms.openlocfilehash: 6e1ef3ba9f22dac172e4edfb93bf1012e7bb21b4
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 2f72286018b39e2d51d6e0ffa6babf7ce350d976
+  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73056788"
+  ms.lasthandoff: 12/05/2019
+  ms.locfileid: "74858361"

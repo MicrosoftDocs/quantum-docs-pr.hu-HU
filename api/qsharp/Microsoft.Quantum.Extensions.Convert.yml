@@ -4,59 +4,29 @@ name: Microsoft.Quantum.Extensions.Convert
 summary: " # <a name=\"summary\"></a>Összefoglalás\n Ezek a System. functions által használt függvények. a .NET CLR olyan névterét alakítsa át, amelyek relevánsak a Q # Type rendszeren belül.\n\n # <a name=\"remarks\"></a>Megjegyzések\n Ha a függvény több verziója áll rendelkezésre a bool, az int és a Double típusok esetében, a megfelelő függvények a következő utótagot használják: B, I és D."
 functions:
 - uid: microsoft.quantum.extensions.convert.biginttobools
-  summary: >-
-    > [!WARNING]
-
-    > Elavult @"microsoft.quantum.convert.bigintasboolarray"használata.
+  summary: "\n> [!WARNING]\n> Elavult\n\nA BigIntToBools elavult. Ehelyett használja a @\"microsoft.quantum.convert.bigintasboolarray\".\nKérjük, használja a @\"microsoft.quantum.convert.bigintasboolarray\"."
 - uid: microsoft.quantum.extensions.convert.boolstobigint
-  summary: >-
-    > [!WARNING]
-
-    > Elavult @"microsoft.quantum.convert.boolarrayasbigint"használata.
+  summary: "\n> [!WARNING]\n> Elavult\n\nA BoolsToBigInt elavult. Ehelyett használja a @\"microsoft.quantum.convert.boolarrayasbigint\".\nKérjük, használja a @\"microsoft.quantum.convert.boolarrayasbigint\"."
 - uid: microsoft.quantum.extensions.convert.pauliarraytoint
-  summary: >-
-    > [!WARNING]
-
-    > Elavult @"microsoft.quantum.convert.pauliarrayasint"használata.
+  summary: "\n> [!WARNING]\n> Elavult\n\nA PauliArrayToInt elavult. Ehelyett használja a @\"microsoft.quantum.convert.pauliarrayasint\".\nKérjük, használja a @\"microsoft.quantum.convert.pauliarrayasint\"."
 - uid: microsoft.quantum.extensions.convert.tobigint
-  summary: >-
-    > [!WARNING]
-
-    > Elavult @"microsoft.quantum.convert.intasbigint"használata.
+  summary: "\n> [!WARNING]\n> Elavult\n\nA ToBigInt elavult. Ehelyett használja a @\"microsoft.quantum.convert.intasbigint\".\nKérjük, használja a @\"microsoft.quantum.convert.intasbigint\"."
 - uid: microsoft.quantum.extensions.convert.todouble
-  summary: >-
-    > [!WARNING]
-
-    > Elavult @"microsoft.quantum.convert.intasdouble"használata.
+  summary: "\n> [!WARNING]\n> Elavult\n\nA ToDouble elavult. Ehelyett használja a @\"microsoft.quantum.convert.intasdouble\".\nKérjük, használja a @\"microsoft.quantum.convert.intasdouble\"."
 - uid: microsoft.quantum.extensions.convert.tostringb
-  summary: >-
-    > [!WARNING]
-
-    > Elavult @"microsoft.quantum.convert.boolasstring"használata.
+  summary: "\n> [!WARNING]\n> Elavult\n\nA ToStringB elavult. Ehelyett használja a @\"microsoft.quantum.convert.boolasstring\".\nKérjük, használja a @\"microsoft.quantum.convert.boolasstring\"."
 - uid: microsoft.quantum.extensions.convert.tostringd
-  summary: >-
-    > [!WARNING]
-
-    > Elavult @"microsoft.quantum.convert.doubleasstring"használata.
+  summary: "\n> [!WARNING]\n> Elavult\n\nA ToStringD elavult. Ehelyett használja a @\"microsoft.quantum.convert.doubleasstring\".\nKérjük, használja a @\"microsoft.quantum.convert.doubleasstring\"."
 - uid: microsoft.quantum.extensions.convert.tostringdformat
-  summary: >-
-    > [!WARNING]
-
-    > Elavult @"microsoft.quantum.convert.doubleasstringwithformat"használata.
+  summary: "\n> [!WARNING]\n> Elavult\n\nA ToStringDFormat elavult. Ehelyett használja a @\"microsoft.quantum.convert.doubleasstringwithformat\".\nKérjük, használja a @\"microsoft.quantum.convert.doubleasstringwithformat\"."
 - uid: microsoft.quantum.extensions.convert.tostringi
-  summary: >-
-    > [!WARNING]
-
-    > Elavult @"microsoft.quantum.convert.intasstring"használata.
+  summary: "\n> [!WARNING]\n> Elavult\n\nA ToStringI elavult. Ehelyett használja a @\"microsoft.quantum.convert.intasstring\".\nKérjük, használja a @\"microsoft.quantum.convert.intasstring\"."
 - uid: microsoft.quantum.extensions.convert.tostringiformat
-  summary: >-
-    > [!WARNING]
-
-    > Elavult @"microsoft.quantum.convert.intasstringwithformat"használata.
+  summary: "\n> [!WARNING]\n> Elavult\n\nA ToStringIFormat elavult. Ehelyett használja a @\"microsoft.quantum.convert.intasstringwithformat\".\nKérjük, használja a @\"microsoft.quantum.convert.intasstringwithformat\"."
 metadata:
-  ms.openlocfilehash: 57f341ec6e8f82cfa9fc4bb958a580743a350218
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 372c58096cab091560ae6d3bebc165f09e201b9c
+  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73056490"
+  ms.lasthandoff: 12/05/2019
+  ms.locfileid: "74858309"
