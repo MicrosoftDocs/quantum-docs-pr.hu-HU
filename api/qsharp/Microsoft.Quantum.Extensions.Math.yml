@@ -3,189 +3,81 @@ uid: microsoft.quantum.extensions.math
 name: Microsoft.Quantum.Extensions.Math
 functions:
 - uid: microsoft.quantum.extensions.math.absb
-  summary: >-
-    > [!WARNING]
-
-    > Elavult @"microsoft.quantum.math.absl"használata.
+  summary: "\n> [!WARNING]\n> Elavult\n\nA AbsB elavult. Ehelyett használja a @\"microsoft.quantum.math.absl\".\nKérjük, használja a @\"microsoft.quantum.math.absl\"."
 - uid: microsoft.quantum.extensions.math.absd
-  summary: >-
-    > [!WARNING]
-
-    > Elavult @"microsoft.quantum.math.absd"használata.
+  summary: "\n> [!WARNING]\n> Elavult\n\nA AbsD elavult. Ehelyett használja a @\"microsoft.quantum.math.absd\".\nKérjük, használja a @\"microsoft.quantum.math.absd\"."
 - uid: microsoft.quantum.extensions.math.absi
-  summary: >-
-    > [!WARNING]
-
-    > Elavult @"microsoft.quantum.math.absi"használata.
+  summary: "\n> [!WARNING]\n> Elavult\n\nA AbsI elavult. Ehelyett használja a @\"microsoft.quantum.math.absi\".\nKérjük, használja a @\"microsoft.quantum.math.absi\"."
 - uid: microsoft.quantum.extensions.math.arccos
-  summary: >-
-    > [!WARNING]
-
-    > Elavult @"microsoft.quantum.math.arccos"használata.
+  summary: "\n> [!WARNING]\n> Elavult\n\nA ArcCos elavult. Ehelyett használja a @\"microsoft.quantum.math.arccos\".\nKérjük, használja a @\"microsoft.quantum.math.arccos\"."
 - uid: microsoft.quantum.extensions.math.arcsin
-  summary: >-
-    > [!WARNING]
-
-    > Elavult @"microsoft.quantum.math.arcsin"használata.
+  summary: "\n> [!WARNING]\n> Elavult\n\nA ArcSin elavult. Ehelyett használja a @\"microsoft.quantum.math.arcsin\".\nKérjük, használja a @\"microsoft.quantum.math.arcsin\"."
 - uid: microsoft.quantum.extensions.math.arctan
-  summary: >-
-    > [!WARNING]
-
-    > Elavult @"microsoft.quantum.math.arctan"használata.
+  summary: "\n> [!WARNING]\n> Elavult\n\nA ArcTan elavult. Ehelyett használja a @\"microsoft.quantum.math.arctan\".\nKérjük, használja a @\"microsoft.quantum.math.arctan\"."
 - uid: microsoft.quantum.extensions.math.arctan2
-  summary: >-
-    > [!WARNING]
-
-    > Elavult @"microsoft.quantum.math.arctan2"használata.
+  summary: "\n> [!WARNING]\n> Elavult\n\nA ArcTan2 elavult. Ehelyett használja a @\"microsoft.quantum.math.arctan2\".\nKérjük, használja a @\"microsoft.quantum.math.arctan2\"."
 - uid: microsoft.quantum.extensions.math.ceiling
-  summary: >-
-    > [!WARNING]
-
-    > Elavult @"microsoft.quantum.math.ceiling"használata.
+  summary: "\n> [!WARNING]\n> Elavult\n\nA felső határ elavult. Ehelyett használja a @\"microsoft.quantum.math.ceiling\".\nKérjük, használja a @\"microsoft.quantum.math.ceiling\"."
 - uid: microsoft.quantum.extensions.math.cos
-  summary: >-
-    > [!WARNING]
-
-    > Elavult @"microsoft.quantum.math.cos"használata.
+  summary: "\n> [!WARNING]\n> Elavult\n\nA cos elavult. Ehelyett használja a @\"microsoft.quantum.math.cos\".\nKérjük, használja a @\"microsoft.quantum.math.cos\"."
 - uid: microsoft.quantum.extensions.math.cosh
-  summary: >-
-    > [!WARNING]
-
-    > Elavult @"microsoft.quantum.math.cosh"használata.
+  summary: "\n> [!WARNING]\n> Elavult\n\nA COSH elavult. Ehelyett használja a @\"microsoft.quantum.math.cosh\".\nKérjük, használja a @\"microsoft.quantum.math.cosh\"."
 - uid: microsoft.quantum.extensions.math.divremb
-  summary: >-
-    > [!WARNING]
-
-    > Elavult @"microsoft.quantum.math.divreml"használata.
+  summary: "\n> [!WARNING]\n> Elavult\n\nA DivRemB elavult. Ehelyett használja a @\"microsoft.quantum.math.divreml\".\nKérjük, használja a @\"microsoft.quantum.math.divreml\"."
 - uid: microsoft.quantum.extensions.math.e
-  summary: >-
-    > [!WARNING]
-
-    > Elavult @"microsoft.quantum.math.e"használata.
+  summary: "\n> [!WARNING]\n> Elavult\n\nAz E elavult. Kérjük, használja a @\"microsoft.quantum.math.e\" .\nKérjük, használja a @\"microsoft.quantum.math.e\"."
 - uid: microsoft.quantum.extensions.math.expd
-  summary: >-
-    > [!WARNING]
-
-    > Elavult @"microsoft.quantum.math.expd"használata.
+  summary: "\n> [!WARNING]\n> Elavult\n\nA ExpD elavult. Ehelyett használja a @\"microsoft.quantum.math.expd\".\nKérjük, használja a @\"microsoft.quantum.math.expd\"."
 - uid: microsoft.quantum.extensions.math.floor
-  summary: >-
-    > [!WARNING]
-
-    > Elavult @"microsoft.quantum.math.floor"használata.
+  summary: "\n> [!WARNING]\n> Elavult\n\nA padló elavult. Ehelyett használja a @\"microsoft.quantum.math.floor\".\nKérjük, használja a @\"microsoft.quantum.math.floor\"."
 - uid: microsoft.quantum.extensions.math.ieeeremainder
-  summary: >-
-    > [!WARNING]
-
-    > Elavult @"microsoft.quantum.math.ieeeremainder"használata.
+  summary: "\n> [!WARNING]\n> Elavult\n\nA IEEERemainder elavult. Ehelyett használja a @\"microsoft.quantum.math.ieeeremainder\".\nKérjük, használja a @\"microsoft.quantum.math.ieeeremainder\"."
 - uid: microsoft.quantum.extensions.math.log
-  summary: >-
-    > [!WARNING]
-
-    > Elavult @"microsoft.quantum.math.log"használata.
+  summary: "\n> [!WARNING]\n> Elavult\n\nA napló elavult. Ehelyett használja a @\"microsoft.quantum.math.log\".\nKérjük, használja a @\"microsoft.quantum.math.log\"."
 - uid: microsoft.quantum.extensions.math.log10
-  summary: >-
-    > [!WARNING]
-
-    > Elavult @"microsoft.quantum.math.log10"használata.
+  summary: "\n> [!WARNING]\n> Elavult\n\nA Log10 elavult. Ehelyett használja a @\"microsoft.quantum.math.log10\".\nKérjük, használja a @\"microsoft.quantum.math.log10\"."
 - uid: microsoft.quantum.extensions.math.maxb
-  summary: >-
-    > [!WARNING]
-
-    > Elavult @"microsoft.quantum.math.maxl"használata.
+  summary: "\n> [!WARNING]\n> Elavult\n\nA MaxB elavult. Ehelyett használja a @\"microsoft.quantum.math.maxl\".\nKérjük, használja a @\"microsoft.quantum.math.maxl\"."
 - uid: microsoft.quantum.extensions.math.maxd
-  summary: >-
-    > [!WARNING]
-
-    > Elavult @"microsoft.quantum.math.maxd"használata.
+  summary: "\n> [!WARNING]\n> Elavult\n\nA MaxD elavult. Ehelyett használja a @\"microsoft.quantum.math.maxd\".\nKérjük, használja a @\"microsoft.quantum.math.maxd\"."
 - uid: microsoft.quantum.extensions.math.maxi
-  summary: >-
-    > [!WARNING]
-
-    > Elavult @"microsoft.quantum.math.maxi"használata.
+  summary: "\n> [!WARNING]\n> Elavult\n\nA MaxI elavult. Ehelyett használja a @\"microsoft.quantum.math.maxi\".\nKérjük, használja a @\"microsoft.quantum.math.maxi\"."
 - uid: microsoft.quantum.extensions.math.minb
-  summary: >-
-    > [!WARNING]
-
-    > Elavult @"microsoft.quantum.math.minl"használata.
+  summary: "\n> [!WARNING]\n> Elavult\n\nA MinB elavult. Ehelyett használja a @\"microsoft.quantum.math.minl\".\nKérjük, használja a @\"microsoft.quantum.math.minl\"."
 - uid: microsoft.quantum.extensions.math.mind
-  summary: >-
-    > [!WARNING]
-
-    > Elavult @"microsoft.quantum.math.mind"használata.
+  summary: "\n> [!WARNING]\n> Elavult\n\nAz elme elavult. Ehelyett használja a @\"microsoft.quantum.math.mind\".\nKérjük, használja a @\"microsoft.quantum.math.mind\"."
 - uid: microsoft.quantum.extensions.math.mini
-  summary: >-
-    > [!WARNING]
-
-    > Elavult @"microsoft.quantum.math.mini"használata.
+  summary: "\n> [!WARNING]\n> Elavult\n\nA MinI elavult. Ehelyett használja a @\"microsoft.quantum.math.mini\".\nKérjük, használja a @\"microsoft.quantum.math.mini\"."
 - uid: microsoft.quantum.extensions.math.modpowb
-  summary: >-
-    > [!WARNING]
-
-    > Elavult @"microsoft.quantum.math.modpowl"használata.
+  summary: "\n> [!WARNING]\n> Elavult\n\nA ModPowB elavult. Ehelyett használja a @\"microsoft.quantum.math.modpowl\".\nKérjük, használja a @\"microsoft.quantum.math.modpowl\"."
 - uid: microsoft.quantum.extensions.math.pi
-  summary: >-
-    > [!WARNING]
-
-    > Elavult @"microsoft.quantum.math.pi"használata.
+  summary: "\n> [!WARNING]\n> Elavult\n\nA PI elavult. Ehelyett használja a @\"microsoft.quantum.math.pi\".\nKérjük, használja a @\"microsoft.quantum.math.pi\"."
 - uid: microsoft.quantum.extensions.math.powd
-  summary: >-
-    > [!WARNING]
-
-    > Elavult @"microsoft.quantum.math.powd"használata.
+  summary: "\n> [!WARNING]\n> Elavult\n\nA PowD elavult. Ehelyett használja a @\"microsoft.quantum.math.powd\".\nKérjük, használja a @\"microsoft.quantum.math.powd\"."
 - uid: microsoft.quantum.extensions.math.round
-  summary: >-
-    > [!WARNING]
-
-    > Elavult @"microsoft.quantum.math.round"használata.
+  summary: "\n> [!WARNING]\n> Elavult\n\nA kör elavult. Ehelyett használja a @\"microsoft.quantum.math.round\".\nKérjük, használja a @\"microsoft.quantum.math.round\"."
 - uid: microsoft.quantum.extensions.math.signb
-  summary: >-
-    > [!WARNING]
-
-    > Elavult @"microsoft.quantum.math.signl"használata.
+  summary: "\n> [!WARNING]\n> Elavult\n\nA SignB elavult. Ehelyett használja a @\"microsoft.quantum.math.signl\".\nKérjük, használja a @\"microsoft.quantum.math.signl\"."
 - uid: microsoft.quantum.extensions.math.signd
-  summary: >-
-    > [!WARNING]
-
-    > Elavult @"microsoft.quantum.math.signd"használata.
+  summary: "\n> [!WARNING]\n> Elavult\n\nAz aláírás elavult. Ehelyett használja a @\"microsoft.quantum.math.signd\".\nKérjük, használja a @\"microsoft.quantum.math.signd\"."
 - uid: microsoft.quantum.extensions.math.signi
-  summary: >-
-    > [!WARNING]
-
-    > Elavult @"microsoft.quantum.math.signi"használata.
+  summary: "\n> [!WARNING]\n> Elavult\n\nA SignI elavult. Ehelyett használja a @\"microsoft.quantum.math.signi\".\nKérjük, használja a @\"microsoft.quantum.math.signi\"."
 - uid: microsoft.quantum.extensions.math.sin
-  summary: >-
-    > [!WARNING]
-
-    > Elavult @"microsoft.quantum.math.sin"használata.
+  summary: "\n> [!WARNING]\n> Elavult\n\nA bűn elavult. Ehelyett használja a @\"microsoft.quantum.math.sin\".\nKérjük, használja a @\"microsoft.quantum.math.sin\"."
 - uid: microsoft.quantum.extensions.math.sinh
-  summary: >-
-    > [!WARNING]
-
-    > Elavult @"microsoft.quantum.math.sinh"használata.
+  summary: "\n> [!WARNING]\n> Elavult\n\nA sinh elavult. Ehelyett használja a @\"microsoft.quantum.math.sinh\".\nKérjük, használja a @\"microsoft.quantum.math.sinh\"."
 - uid: microsoft.quantum.extensions.math.sqrt
-  summary: >-
-    > [!WARNING]
-
-    > Elavult @"microsoft.quantum.math.sqrt"használata.
+  summary: "\n> [!WARNING]\n> Elavult\n\nA SQRT elavult. Ehelyett használja a @\"microsoft.quantum.math.sqrt\".\nKérjük, használja a @\"microsoft.quantum.math.sqrt\"."
 - uid: microsoft.quantum.extensions.math.tan
-  summary: >-
-    > [!WARNING]
-
-    > Elavult @"microsoft.quantum.math.tan"használata.
+  summary: "\n> [!WARNING]\n> Elavult\n\nA tan elavult. Ehelyett használja a @\"microsoft.quantum.math.tan\".\nKérjük, használja a @\"microsoft.quantum.math.tan\"."
 - uid: microsoft.quantum.extensions.math.tanh
-  summary: >-
-    > [!WARNING]
-
-    > Elavult @"microsoft.quantum.math.tanh"használata.
+  summary: "\n> [!WARNING]\n> Elavult\n\nA tanh elavult. Ehelyett használja a @\"microsoft.quantum.math.tanh\".\nKérjük, használja a @\"microsoft.quantum.math.tanh\"."
 - uid: microsoft.quantum.extensions.math.truncate
-  summary: >-
-    > [!WARNING]
-
-    > Elavult @"microsoft.quantum.math.truncate"használata.
+  summary: "\n> [!WARNING]\n> Elavult\n\nA csonkítás elavult. Ehelyett használja a @\"microsoft.quantum.math.truncate\".\nKérjük, használja a @\"microsoft.quantum.math.truncate\"."
 metadata:
-  ms.openlocfilehash: a1a8cda192f7e95141eb2e34baa37ddaae4cb8c9
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 1eb20bd8834d2a34022ee503808fd26eccaf8c64
+  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73056332"
+  ms.lasthandoff: 12/05/2019
+  ms.locfileid: "74858836"

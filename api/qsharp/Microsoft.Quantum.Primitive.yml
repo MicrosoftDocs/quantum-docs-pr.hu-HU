@@ -3,150 +3,66 @@ uid: microsoft.quantum.primitive
 name: Microsoft.Quantum.Primitive
 functions:
 - uid: microsoft.quantum.primitive.message
-  summary: >-
-    > [!WARNING]
-
-    > Elavult @"microsoft.quantum.intrinsic.message"használata.
+  summary: "\n> [!WARNING]\n> Elavult\n\nAz üzenet elavult. Ehelyett használja a @\"microsoft.quantum.intrinsic.message\".\nKérjük, használja a @\"microsoft.quantum.intrinsic.message\"."
 operations:
 - uid: microsoft.quantum.primitive.assert
-  summary: >-
-    > [!WARNING]
-
-    > Elavult @"microsoft.quantum.intrinsic.assert"használata.
+  summary: "\n> [!WARNING]\n> Elavult\n\nA érvényesítés elavult. Ehelyett használja a @\"microsoft.quantum.intrinsic.assert\".\nKérjük, használja a @\"microsoft.quantum.intrinsic.assert\"."
 - uid: microsoft.quantum.primitive.assertprob
-  summary: >-
-    > [!WARNING]
-
-    > Elavult @"microsoft.quantum.intrinsic.assertprob"használata.
+  summary: "\n> [!WARNING]\n> Elavult\n\nA AssertProb elavult. Ehelyett használja a @\"microsoft.quantum.intrinsic.assertprob\".\nKérjük, használja a @\"microsoft.quantum.intrinsic.assertprob\"."
 - uid: microsoft.quantum.primitive.ccnot
-  summary: >-
-    > [!WARNING]
-
-    > Elavult @"microsoft.quantum.intrinsic.ccnot"használata.
+  summary: "\n> [!WARNING]\n> Elavult\n\nA CCNOT elavult. Ehelyett használja a @\"microsoft.quantum.intrinsic.ccnot\".\nKérjük, használja a @\"microsoft.quantum.intrinsic.ccnot\"."
 - uid: microsoft.quantum.primitive.cnot
-  summary: >-
-    > [!WARNING]
-
-    > Elavult @"microsoft.quantum.intrinsic.cnot"használata.
+  summary: "\n> [!WARNING]\n> Elavult\n\nA CNEM elavult. Ehelyett használja a @\"microsoft.quantum.intrinsic.cnot\".\nKérjük, használja a @\"microsoft.quantum.intrinsic.cnot\"."
 - uid: microsoft.quantum.primitive.exp
-  summary: >-
-    > [!WARNING]
-
-    > Elavult @"microsoft.quantum.intrinsic.exp"használata.
+  summary: "\n> [!WARNING]\n> Elavult\n\nAz exp elavult. Ehelyett használja a @\"microsoft.quantum.intrinsic.exp\".\nKérjük, használja a @\"microsoft.quantum.intrinsic.exp\"."
 - uid: microsoft.quantum.primitive.expfrac
-  summary: >-
-    > [!WARNING]
-
-    > Elavult @"microsoft.quantum.intrinsic.expfrac"használata.
+  summary: "\n> [!WARNING]\n> Elavult\n\nA ExpFrac elavult. Ehelyett használja a @\"microsoft.quantum.intrinsic.expfrac\".\nKérjük, használja a @\"microsoft.quantum.intrinsic.expfrac\"."
 - uid: microsoft.quantum.primitive.h
-  summary: >-
-    > [!WARNING]
-
-    > Elavult @"microsoft.quantum.intrinsic.h"használata.
+  summary: "\n> [!WARNING]\n> Elavult\n\nA H elavult. Ehelyett használja a @\"microsoft.quantum.intrinsic.h\".\nKérjük, használja a @\"microsoft.quantum.intrinsic.h\"."
 - uid: microsoft.quantum.primitive.i
-  summary: >-
-    > [!WARNING]
-
-    > Elavult @"microsoft.quantum.intrinsic.i"használata.
+  summary: "\n> [!WARNING]\n> Elavult\n\nElavult. Ehelyett használja a @\"microsoft.quantum.intrinsic.i\".\nKérjük, használja a @\"microsoft.quantum.intrinsic.i\"."
 - uid: microsoft.quantum.primitive.m
-  summary: >-
-    > [!WARNING]
-
-    > Elavult @"microsoft.quantum.intrinsic.m"használata.
+  summary: "\n> [!WARNING]\n> Elavult\n\nAz M elavult. Ehelyett használja a @\"microsoft.quantum.intrinsic.m\".\nKérjük, használja a @\"microsoft.quantum.intrinsic.m\"."
 - uid: microsoft.quantum.primitive.measure
-  summary: >-
-    > [!WARNING]
-
-    > Elavult @"microsoft.quantum.intrinsic.measure"használata.
+  summary: "\n> [!WARNING]\n> Elavult\n\nA mérték elavult. Ehelyett használja a @\"microsoft.quantum.intrinsic.measure\".\nKérjük, használja a @\"microsoft.quantum.intrinsic.measure\"."
 - uid: microsoft.quantum.primitive.multix
-  summary: >-
-    > [!WARNING]
-
-    > Elavult @"microsoft.quantum.canon.applytoeachca"használata.
+  summary: "\n> [!WARNING]\n> Elavult\n\nA MultiX elavult. Ehelyett használja a következőt: @ \"applytoeachca (x, _)\".\nKérjük, használja a @\"microsoft.quantum.canon.applytoeachca\"."
 - uid: microsoft.quantum.primitive.r
-  summary: >-
-    > [!WARNING]
-
-    > Elavult @"microsoft.quantum.intrinsic.r"használata.
+  summary: "\n> [!WARNING]\n> Elavult\n\nAz R elavult. Ehelyett használja a @\"microsoft.quantum.intrinsic.r\".\nKérjük, használja a @\"microsoft.quantum.intrinsic.r\"."
 - uid: microsoft.quantum.primitive.r1
-  summary: >-
-    > [!WARNING]
-
-    > Elavult @"microsoft.quantum.intrinsic.r1"használata.
+  summary: "\n> [!WARNING]\n> Elavult\n\nAz R1 elavult. Ehelyett használja a @\"microsoft.quantum.intrinsic.r1\".\nKérjük, használja a @\"microsoft.quantum.intrinsic.r1\"."
 - uid: microsoft.quantum.primitive.r1frac
-  summary: >-
-    > [!WARNING]
-
-    > Elavult @"microsoft.quantum.intrinsic.r1frac"használata.
+  summary: "\n> [!WARNING]\n> Elavult\n\nA R1Frac elavult. Ehelyett használja a @\"microsoft.quantum.intrinsic.r1frac\".\nKérjük, használja a @\"microsoft.quantum.intrinsic.r1frac\"."
 - uid: microsoft.quantum.primitive.random
-  summary: >-
-    > [!WARNING]
-
-    > Elavult @"microsoft.quantum.intrinsic.random"használata.
+  summary: "\n> [!WARNING]\n> Elavult\n\nA véletlenszerűség elavult. Ehelyett használja a @\"microsoft.quantum.intrinsic.random\".\nKérjük, használja a @\"microsoft.quantum.intrinsic.random\"."
 - uid: microsoft.quantum.primitive.reset
-  summary: >-
-    > [!WARNING]
-
-    > Elavult @"microsoft.quantum.intrinsic.reset"használata.
+  summary: "\n> [!WARNING]\n> Elavult\n\nAz Alaphelyzetbe állítás elavult. Ehelyett használja a @\"microsoft.quantum.intrinsic.reset\".\nKérjük, használja a @\"microsoft.quantum.intrinsic.reset\"."
 - uid: microsoft.quantum.primitive.resetall
-  summary: >-
-    > [!WARNING]
-
-    > Elavult @"microsoft.quantum.intrinsic.resetall"használata.
+  summary: "\n> [!WARNING]\n> Elavult\n\nA ResetAll elavult. Ehelyett használja a @\"microsoft.quantum.intrinsic.resetall\".\nKérjük, használja a @\"microsoft.quantum.intrinsic.resetall\"."
 - uid: microsoft.quantum.primitive.rfrac
-  summary: >-
-    > [!WARNING]
-
-    > Elavult @"microsoft.quantum.intrinsic.rfrac"használata.
+  summary: "\n> [!WARNING]\n> Elavult\n\nA RFrac elavult. Ehelyett használja a @\"microsoft.quantum.intrinsic.rfrac\".\nKérjük, használja a @\"microsoft.quantum.intrinsic.rfrac\"."
 - uid: microsoft.quantum.primitive.rx
-  summary: >-
-    > [!WARNING]
-
-    > Elavult @"microsoft.quantum.intrinsic.rx"használata.
+  summary: "\n> [!WARNING]\n> Elavult\n\nAz RX elavult. Ehelyett használja a @\"microsoft.quantum.intrinsic.rx\".\nKérjük, használja a @\"microsoft.quantum.intrinsic.rx\"."
 - uid: microsoft.quantum.primitive.ry
-  summary: >-
-    > [!WARNING]
-
-    > Elavult @"microsoft.quantum.intrinsic.ry"használata.
+  summary: "\n> [!WARNING]\n> Elavult\n\nA Ry elavult. Ehelyett használja a @\"microsoft.quantum.intrinsic.ry\".\nKérjük, használja a @\"microsoft.quantum.intrinsic.ry\"."
 - uid: microsoft.quantum.primitive.rz
-  summary: >-
-    > [!WARNING]
-
-    > Elavult @"microsoft.quantum.intrinsic.rz"használata.
+  summary: "\n> [!WARNING]\n> Elavult\n\nA rz már elavult. Ehelyett használja a @\"microsoft.quantum.intrinsic.rz\".\nKérjük, használja a @\"microsoft.quantum.intrinsic.rz\"."
 - uid: microsoft.quantum.primitive.s
-  summary: >-
-    > [!WARNING]
-
-    > Elavult @"microsoft.quantum.intrinsic.s"használata.
+  summary: "\n> [!WARNING]\n> Elavult\n\nAz S elavult. Ehelyett használja a @\"microsoft.quantum.intrinsic.s\".\nKérjük, használja a @\"microsoft.quantum.intrinsic.s\"."
 - uid: microsoft.quantum.primitive.swap
-  summary: >-
-    > [!WARNING]
-
-    > Elavult @"microsoft.quantum.intrinsic.swap"használata.
+  summary: "\n> [!WARNING]\n> Elavult\n\nA felcserélés elavult. Ehelyett használja a @\"microsoft.quantum.intrinsic.swap\".\nKérjük, használja a @\"microsoft.quantum.intrinsic.swap\"."
 - uid: microsoft.quantum.primitive.t
-  summary: >-
-    > [!WARNING]
-
-    > Elavult @"microsoft.quantum.intrinsic.t"használata.
+  summary: "\n> [!WARNING]\n> Elavult\n\nA T elavult. Ehelyett használja a @\"microsoft.quantum.intrinsic.t\".\nKérjük, használja a @\"microsoft.quantum.intrinsic.t\"."
 - uid: microsoft.quantum.primitive.x
-  summary: >-
-    > [!WARNING]
-
-    > Elavult @"microsoft.quantum.intrinsic.x"használata.
+  summary: "\n> [!WARNING]\n> Elavult\n\nAz X elavult. Ehelyett használja a @\"microsoft.quantum.intrinsic.x\".\nKérjük, használja a @\"microsoft.quantum.intrinsic.x\"."
 - uid: microsoft.quantum.primitive.y
-  summary: >-
-    > [!WARNING]
-
-    > Elavult @"microsoft.quantum.intrinsic.y"használata.
+  summary: "\n> [!WARNING]\n> Elavult\n\nAz Y elavult. Ehelyett használja a @\"microsoft.quantum.intrinsic.y\".\nKérjük, használja a @\"microsoft.quantum.intrinsic.y\"."
 - uid: microsoft.quantum.primitive.z
-  summary: >-
-    > [!WARNING]
-
-    > Elavult @"microsoft.quantum.intrinsic.z"használata.
+  summary: "\n> [!WARNING]\n> Elavult\n\nA Z elavult. Ehelyett használja a @\"microsoft.quantum.intrinsic.z\".\nKérjük, használja a @\"microsoft.quantum.intrinsic.z\"."
 metadata:
-  ms.openlocfilehash: 87dc52b15f7fb17c6e9c3c11ec04a91e775a36ef
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: d3eef5b065a00cee2b31ea1a99e8814b5ca11ae0
+  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73216033"
+  ms.lasthandoff: 12/05/2019
+  ms.locfileid: "74858241"

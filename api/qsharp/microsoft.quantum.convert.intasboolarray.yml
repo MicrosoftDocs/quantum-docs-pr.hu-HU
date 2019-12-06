@@ -4,7 +4,10 @@ name: IntAsBoolArray
 type: function
 namespace: Microsoft.Quantum.Convert
 summary: Egy pozitív egész szám bináris ábrázolását állítja elő a visszaadott tömb kis endian ábrázolásával.
-remarks: A bemeneti `number` legfeljebb 2 ^ {\texttt{BITS}}-$1 kell lennie.
+remarks: >-
+  A bemeneti `bits` 0 és 63 között kell lennie.
+
+  A bemeneti `number` 0 és $2 ^ {\texttt{BITS}}-$1 közé kell esnie.
 syntax: 'function IntAsBoolArray (number : Int, bits : Int) : Bool[]'
 input:
   content: '(number : Int, bits : Int)'
@@ -25,9 +28,9 @@ output:
     isPrimitive: true
     uid: Bool
 metadata:
-  ms.openlocfilehash: 5f9dcb138c24390f5abfec3e0b9b12263b6119d6
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: e75eede507f04178755e886258e7eb73a6cc3dce
+  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73220368"
+  ms.lasthandoff: 12/05/2019
+  ms.locfileid: "74858989"

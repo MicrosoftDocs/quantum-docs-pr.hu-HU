@@ -3,55 +3,25 @@ uid: microsoft.quantum.extensions.testing
 name: Microsoft.Quantum.Extensions.Testing
 operations:
 - uid: microsoft.quantum.extensions.testing.assertallzero
-  summary: >-
-    > [!WARNING]
-
-    > Elavult @"microsoft.quantum.diagnostics.assertallzero"használata.
+  summary: "\n> [!WARNING]\n> Elavult\n\nA AssertAllZero elavult. Ehelyett használja a @\"microsoft.quantum.diagnostics.assertallzero\".\nKérjük, használja a @\"microsoft.quantum.diagnostics.assertallzero\"."
 - uid: microsoft.quantum.extensions.testing.assertallzerotol
-  summary: >-
-    > [!WARNING]
-
-    > Elavult @"microsoft.quantum.diagnostics.assertallzerowithintolerance"használata.
+  summary: "\n> [!WARNING]\n> Elavult\n\nA AssertAllZeroTol elavult. Ehelyett használja a @\"microsoft.quantum.diagnostics.assertallzerowithintolerance\".\nKérjük, használja a @\"microsoft.quantum.diagnostics.assertallzerowithintolerance\"."
 - uid: microsoft.quantum.extensions.testing.assertoperationsequalinplace
-  summary: >-
-    > [!WARNING]
-
-    > Elavult @"microsoft.quantum.diagnostics.assertoperationsequalinplace"használata.
-
-    Vegye figyelembe, hogy a művelet argumentumai sorrendje megváltozott.
+  summary: "\n> [!WARNING]\n> Elavult\n\nA AssertOperationsEqualInPlace elavult. Ehelyett használja a @\"microsoft.quantum.diagnostics.assertoperationsequalinplace\".\nKérjük, használja a @\"microsoft.quantum.diagnostics.assertoperationsequalinplace\".\nVegye figyelembe, hogy a művelet argumentumai sorrendje megváltozott."
 - uid: microsoft.quantum.extensions.testing.assertoperationsequalinplacecompbasis
-  summary: >-
-    > [!WARNING]
-
-    > Elavult @"microsoft.quantum.diagnostics.assertoperationsequalinplaceCompBasis"használata.
-
-    Vegye figyelembe, hogy a művelet argumentumai sorrendje megváltozott.
+  summary: "\n> [!WARNING]\n> Elavult\n\nA AssertOperationsEqualInPlaceCompBasis elavult. Ehelyett használja a @\"microsoft.quantum.diagnostics.assertoperationsequalinplacecompbasis\".\nKérjük, használja a @\"microsoft.quantum.diagnostics.assertoperationsequalinplaceCompBasis\".\nVegye figyelembe, hogy a művelet argumentumai sorrendje megváltozott."
 - uid: microsoft.quantum.extensions.testing.assertoperationsequalreferenced
-  summary: >-
-    > [!WARNING]
-
-    > Elavult @"microsoft.quantum.diagnostics.assertoperationsequalreferenced"használata.
-
-    Vegye figyelembe, hogy a művelet argumentumai sorrendje megváltozott.
+  summary: "\n> [!WARNING]\n> Elavult\n\nA AssertOperationsEqualReferenced elavult. Ehelyett használja a @\"microsoft.quantum.diagnostics.assertoperationsequalreferenced\".\nKérjük, használja a @\"microsoft.quantum.diagnostics.assertoperationsequalreferenced\".\nVegye figyelembe, hogy a művelet argumentumai sorrendje megváltozott."
 - uid: microsoft.quantum.extensions.testing.assertqubit
-  summary: >-
-    > [!WARNING]
-
-    > Elavult @"microsoft.quantum.diagnostics.assertqubit"használata.
+  summary: "\n> [!WARNING]\n> Elavult\n\nA AssertQubit elavult. Ehelyett használja a @\"microsoft.quantum.diagnostics.assertqubit\".\nKérjük, használja a @\"microsoft.quantum.diagnostics.assertqubit\"."
 - uid: microsoft.quantum.extensions.testing.assertqubitstate
-  summary: >-
-    > [!WARNING]
-
-    > Elavult @"microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance"használata.
+  summary: "\n> [!WARNING]\n> Elavult\n\nA AssertQubitState elavult. Ehelyett használja a @\"microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance\".\nKérjük, használja a @\"microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance\"."
 - uid: microsoft.quantum.extensions.testing.assertqubittol
-  summary: >-
-    > [!WARNING]
-
-    > Elavult @"microsoft.quantum.diagnostics.assertqubitwithintolerance"használata.
+  summary: "\n> [!WARNING]\n> Elavult\n\nA AssertQubitTol elavult. Ehelyett használja a @\"microsoft.quantum.diagnostics.assertqubitwithintolerance\".\nKérjük, használja a @\"microsoft.quantum.diagnostics.assertqubitwithintolerance\"."
 metadata:
-  ms.openlocfilehash: 031bbd476ac37f113f9fb692ccd6fca916612ac3
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 0d06129c66f13c8c5ee9158ef6be41bf447791f9
+  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73210348"
+  ms.lasthandoff: 12/05/2019
+  ms.locfileid: "74858414"

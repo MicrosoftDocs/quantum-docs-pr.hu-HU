@@ -3,44 +3,23 @@ uid: microsoft.quantum.extensions.bitwise
 name: Microsoft.Quantum.Extensions.Bitwise
 functions:
 - uid: microsoft.quantum.extensions.bitwise.and
-  summary: >-
-    > [!WARNING]
-
-    > Elavult @"microsoft.quantum.bitwise.and"használata.
+  summary: "\n> [!WARNING]\n> Elavult\n\nÉs már elavult. Ehelyett használja a @\"microsoft.quantum.bitwise.and\".\nKérjük, használja a @\"microsoft.quantum.bitwise.and\"."
 - uid: microsoft.quantum.extensions.bitwise.not
-  summary: >-
-    > [!WARNING]
-
-    > Elavult @"microsoft.quantum.bitwise.not"használata.
+  summary: "\n> [!WARNING]\n> Elavult\n\nNem elavult. Ehelyett használja a @\"microsoft.quantum.bitwise.not\".\nKérjük, használja a @\"microsoft.quantum.bitwise.not\"."
 - uid: microsoft.quantum.extensions.bitwise.or
-  summary: >-
-    > [!WARNING]
-
-    > Elavult @"microsoft.quantum.bitwise.or"használata.
+  summary: "\n> [!WARNING]\n> Elavult\n\nVagy elavult. Ehelyett használja a @\"microsoft.quantum.bitwise.or\".\nKérjük, használja a @\"microsoft.quantum.bitwise.or\"."
 - uid: microsoft.quantum.extensions.bitwise.parity
-  summary: >-
-    > [!WARNING]
-
-    > Elavult @"microsoft.quantum.bitwise.parity"használata.
+  summary: "\n> [!WARNING]\n> Elavult\n\nA paritás elavult. Ehelyett használja a @\"microsoft.quantum.bitwise.parity\".\nKérjük, használja a @\"microsoft.quantum.bitwise.parity\"."
 - uid: microsoft.quantum.extensions.bitwise.xbits
-  summary: >-
-    > [!WARNING]
-
-    > Elavult @"microsoft.quantum.bitwise.xbits"használata.
+  summary: "\n> [!WARNING]\n> Elavult\n\nA XBits elavult. Ehelyett használja a @\"microsoft.quantum.bitwise.xbits\".\nKérjük, használja a @\"microsoft.quantum.bitwise.xbits\"."
 - uid: microsoft.quantum.extensions.bitwise.xor
-  summary: >-
-    > [!WARNING]
-
-    > Elavult @"microsoft.quantum.bitwise.xor"használata.
+  summary: "\n> [!WARNING]\n> Elavult\n\nA XOR elavult. Ehelyett használja a @\"microsoft.quantum.bitwise.xor\".\nKérjük, használja a @\"microsoft.quantum.bitwise.xor\"."
 - uid: microsoft.quantum.extensions.bitwise.zbits
-  summary: >-
-    > [!WARNING]
-
-    > Elavult @"microsoft.quantum.bitwise.zbits"használata.
+  summary: "\n> [!WARNING]\n> Elavult\n\nA ZBits elavult. Ehelyett használja a @\"microsoft.quantum.bitwise.zbits\".\nKérjük, használja a @\"microsoft.quantum.bitwise.zbits\"."
 metadata:
-  ms.openlocfilehash: ac63e91ec3fefe0002f14b1542eaa97456bd33aa
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 69399e7aa3c7173b1173f278a79046e639db71d6
+  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73056753"
+  ms.lasthandoff: 12/05/2019
+  ms.locfileid: "74858397"
