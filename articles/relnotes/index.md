@@ -6,12 +6,12 @@ ms.author: nakersha
 ms.date: 09/30/2019
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: 90fd8ad455702ef4f962e1b3291c650eb0afea2e
-ms.sourcegitcommit: 87dd450cea5bcac76a42f0bdc224bfae712efdde
+ms.openlocfilehash: c709f1eb130d37f930ffc4acc4bd663b8b8ba24a
+ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
 ms.translationtype: HT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 11/17/2019
-ms.locfileid: "74153320"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74863163"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>A Microsoft Quantum Development Kit kibocsátási megjegyzései
 
@@ -20,6 +20,18 @@ Ez a cikk információkat tartalmaz a Quantum Development Kit egyes verzióiról
 A telepítési utasításokat lásd a [telepítési útmutatóban](xref:microsoft.quantum.install).
 
 A frissítésre vonatkozó utasításokat lásd a [frissítési útmutatóban](xref:microsoft.quantum.update).
+
+## <a name="version-01019120501"></a>0\.10.1912.0501-es verzió
+
+*Kiadási dátum: 2019. december 5.*
+
+A verzió a következőket tartalmazza:
+
+- Új tesztelési attribútum a Q#-egységek teszteléséhez. A frissített API-dokumentáció [itt](https://docs.microsoft.com/qsharp/api/qsharp/microsoft.quantum.diagnostics.test), frissített tesztelési és hibakeresési útmutató pedig [itt](xref:microsoft.quantum.techniques.testing-and-debugging) tekinthető meg.
+- Híváslánc hozzáadva a Q#-program hibás végrehajtása esetére
+- Töréspontok támogatása a Visual Studio Code-ban az [OmniSharp C# Visual Studio Code-bővítmény](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp) frissítése révén
+
+A [kódtárak](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [fordítók](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [futtatókörnyezetek](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [minták](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed) és [Katák ](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed) lezárt lekéréses kérelmeinek teljes listáját itt tekintheti meg.  
 
 ## <a name="version-01019111607"></a>0\.10.1911.1607-es verzió
 
@@ -205,7 +217,7 @@ A verzió a következőket tartalmazza:
 
 - Hozzáadja a Jupyter Notebook támogatását, amely nagyszerű lehetőséget kínál a Q# megismerésére.  [Nézze meg az új Jupyter Notebook-mintákat, amelyekből megtudhatja, hogyan írhat saját jegyzetfüzeteket](xref:microsoft.quantum.install). 
 
-- Egész szám hozzáadására használható aritmetikai műveletet ad hozzá a Quantum Canon-kódtárhoz.  Ez a Jupyter-notebook [ismerteti az egész számok új összeadóinak használatát](https://github.com/Microsoft/Quantum/blob/master/Samples/src/Arithmetic/Adder%20Example.ipynb).
+- Egész szám hozzáadására használható aritmetikai műveletet ad hozzá a Quantum Canon-kódtárhoz.  Ez a Jupyter-notebook [ismerteti az egész számok új összeadóinak használatát](https://github.com/microsoft/Quantum/blob/master/samples/arithmetic/AdderExample.ipynb).
 
 - A közösség által jelentett DumpRegister probléma hibajavítása ([148.](https://github.com/Microsoft/Quantum/issues/148)).
 
