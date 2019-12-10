@@ -6,12 +6,12 @@ ms.author: nakersha
 ms.date: 10/22/2019
 ms.topic: article
 uid: microsoft.quantum.overview.qsharp
-ms.openlocfilehash: 3fd288439c7db7f939240b4388c9cdb114b6535c
-ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+ms.openlocfilehash: e04d72bafe390ff5c79af408db1d9400754b06ce
+ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
 ms.translationtype: HT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73529988"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74864287"
 ---
 # <a name="what-is-q"></a>Mi az a Q#?
 
@@ -25,12 +25,11 @@ A Q# programozási nyelv típusok, műveletek és logikai kifejezések intuitív
 
 A kvantum-számítástechnika korai időszakában az algoritmusokat még diagramként vizualizálták, hasonlóan a klasszikus számítástechnikában használt kapcsolási rajzokhoz.  Bár a körmodell sok éven át hasznosnak bizonyult a kvantum-számítástechnikai kutatásokban, a Microsoftnál úgy gondoljuk, hogy a fejlesztők túl tudnak lépni a kvantumkörökön, és a Q# segítségével arra is képesek lehetnek, hogy kvantumalgoritmusokat és -alkalmazásokat fejlesszenek ki. A Q# úgy lett kialakítva, hogy építkezzen a klasszikus szoftverfejlesztésből évtizedek alatt leszűrt tapasztalatokra, és magas szintű programnyelvi funkciókat adjon a kvantumfejlesztők kezébe, amelyek a kvantum-számítástechnikára vannak kiélezve.
 
-
 ## <a name="how-does-q-work"></a>Hogyan működik a Q#?
 
 A Q# egyik alapvető építőeleme a `Qubit` típus, amit nem lehet lemásolni vagy közvetlenül elérni, pontosan úgy, mint egy igazi qubitet. Ehelyett megmérhetjük, az eredményt pedig egy `Result` változóban tárolhatjuk, ami egy Q#-típus két lehetséges értékkel: `Zero` és `One`. Az ehhez hasonló konstrukciók garantálják, hogy az algoritmusok mindig tiszteletben tartják a kvantumfizika törvényeit, és megfelelően futnak a kvantumszámítógépeken és szimulátorokon.
 
-A Q# emellett olyan klasszikus logikai függvényeket is tartalmaz, mint a feltételes értékek vagy a hurkok, néhány apró részlettel egyetemben, amelyek gondoskodnak az összes kvantumszabály betartásáról. Ilyen például a hurkok végrehajtási módjának korlátozása, amellyel meg lehet győződni a kvantumműveletek szabályosságáról.
+A Q# emellett olyan klasszikus logikai függvényeket is tartalmaz, mint a feltételes értékek vagy a hurkok, néhány apró részlettel egyetemben, amelyek gondoskodnak az összes kvantumszabály betartásáról. Ilyen például a hurkok végrehajtási módjának korlátozása, amellyel biztosítható, hogy a csak determinisztikus klasszikus alrutinokra korlátozódó függvényekben ne lehessen kvantumműveleteket meghívni.
 
 A Q#-programok gyakran vannak párban egy C# vagy Python nyelven írt gazdaprogrammal, amely biztosítja a klasszikus és a kvantumkód megfelelő szervezettségét. Az olyan nyelvek támogatása mellett, mint a C# vagy a Python, a QDK Jupyter-notebook-támogatást is nyújt az IQ# Jupyter kernel révén.
 
