@@ -1,18 +1,19 @@
 ---
-title: Quantum Development Techniques – bevezetés | Microsoft Docs
-description: Quantum Development-technikák bemutatása
+title: 'Q # program áttekintése – Q # technikák | Microsoft Docs'
+description: 'Q # program áttekintése – Q # technikák'
 author: QuantumWriter
 ms.author: Christopher.Granade@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 702d23293a1c340ddd3d7032d0e05294345469b2
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+uid: microsoft.quantum.techniques.file-structure
+ms.openlocfilehash: e8f52e6b0d4382331665a8e845ef19a3a1beabf9
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73442560"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820827"
 ---
-# <a name="q-program-overview"></a>Q # program áttekintése
+# <a name="q-program-overview"></a>A Q#-beli programozás áttekintése
 
 A Q # egy méretezhető, több paradigma, tartományszintű programozási nyelv a kvantum-számítástechnika számára. A Q # egy Quantum programozási nyelv, amelynek segítségével leírható, hogy a rendszer hogyan hajtja végre az utasításokat a kvantum-gépeken. Azok a gépek, amelyek megcélozható a szimulátorok és a tényleges kvantum-hardver között. A Q # méretezhető: egyszerű bemutató programokat írhat, például a teleportot, amely néhány qubits fut, de támogatja a nagyméretű és kifinomult programok írását is, mint például az összetett molekulák szimulálása, amelyeknek több millió qubits kell lennie. Annak ellenére, hogy a nagyméretű fizikai gépek továbbra is a jövőben vannak, a Q # lehetővé teszi a programozók számára, hogy az összetett kvantum-algoritmusokat. Mi több, a Q # támogatja a különböző feladatokat, például a hibakeresést, a profilkészítést, az erőforrás-becslést és bizonyos speciális célú szimulációkat méretezhető módon. 
 

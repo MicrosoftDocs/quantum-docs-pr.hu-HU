@@ -1,17 +1,17 @@
 ---
 title: Mélységi számláló | Quantum Computer nyomkövetési szimulátor | Microsoft Docs
-description: A Quantum Computer Trace Simulator áttekintése
+description: A kvantumszámítógép nyomkövetési szimulátorának áttekintése
 author: vadym-kl
 ms.author: vadym@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.depth-counter
-ms.openlocfilehash: f5fcaa64e91290d377eeba597df2e307e187277c
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 07f927c794e2c62e53e4e053b5bc683d24bbed8d
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73184899"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820470"
 ---
 # <a name="depth-counter"></a>Mélységi számláló
 
@@ -20,12 +20,12 @@ A rendszer a kvantum-programban meghívott összes művelet mélységi számána
 
 Alapértelmezés szerint az összes művelet 0 mélységgel rendelkezik, kivéve az 1. mélységgel rendelkező T kaput. Ez azt jelenti, hogy alapértelmezés szerint a rendszer csak a T mélységű műveleteket számítja ki (ami gyakran kívánatos). Az összegyűjtött statisztikákat a rendszer az Operations Call gráf összes szélénél összesíti. 
 
-Most kiszámítjuk a <xref:microsoft.quantum.intrinsic.ccnot> művelet <xref:microsoft.quantum.intrinsic.t> mélységét. A következő Q # illesztőprogram-kódot fogjuk használni: 
+Most kiszámítjuk a <xref:microsoft.quantum.intrinsic.ccnot> művelet <xref:microsoft.quantum.intrinsic.t> mélységét. A következő Q # mintakód-kódot fogjuk használni:
 
 ```qsharp
-open Microsoft.Quantum.Primitive;
-operation CCNOTDriver() : Unit {
+open Microsoft.Quantum.Intrinsic;
 
+operation ApplySampleWithCCNOT() : Unit {
     using (qubits = Qubit[3]) {
         CCNOT(qubits[0], qubits[1], qubits[2]);
         T(qubits[0]);
@@ -35,7 +35,7 @@ operation CCNOTDriver() : Unit {
 
 ## <a name="using-depth-counter-within-a-c-program"></a>A C# mélység számláló használata programon belül
 
-Annak vizsgálatához, hogy `CCNOT` rendelkezik-e `T` 5. mélységtel, és `CCNOTDriver` `T` mélysége 6, a következő C# kódot használhatja:
+Annak vizsgálatához, hogy `CCNOT` rendelkezik-e `T` 5. mélységtel, és `ApplySampleWithCCNOT` `T` mélysége 6, a következő C# kódot használhatja:
 
 ```csharp 
 using Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators;
@@ -43,17 +43,17 @@ using System.Diagnostics;
 var config = new QCTraceSimulatorConfiguration();
 config.useDepthCounter = true;
 var sim = new QCTraceSimulator(config);
-var res = CCNOTDriver.Run(sim).Result;
+var res = ApplySampleWithCCNOT.Run(sim).Result;
 
-double tDepth = sim.GetMetric<Primitive.CCNOT, CCNOTDriver>(DepthCounter.Metrics.Depth);
-double tDepthAll = sim.GetMetric<CCNOTDriver>(DepthCounter.Metrics.Depth);
+double tDepth = sim.GetMetric<Intrinsic.CCNOT, ApplySampleWithCCNOT>(DepthCounter.Metrics.Depth);
+double tDepthAll = sim.GetMetric<ApplySampleWithCCNOT>(DepthCounter.Metrics.Depth);
 ```
 
-A program első része `CCNOTDriver`hajt végre. A második részben a `QCTraceSimulator.GetMetric` metódust használjuk a `CCNOT` és `CCNOTDriver``T` mélységének beszerzéséhez: 
+A program első része `ApplySampleWithCCNOT`hajt végre. A második részben a `QCTraceSimulator.GetMetric` metódust használjuk a `CCNOT` és `ApplySampleWithCCNOT``T` mélységének beszerzéséhez: 
 
 ```csharp
-double tDepth = sim.GetMetric<Primitive.CCNOT, CCNOTDriver>(DepthCounter.Metrics.Depth);
-double tDepthAll = sim.GetMetric<CCNOTDriver>(DepthCounter.Metrics.Depth);
+double tDepth = sim.GetMetric<Intrinsic.CCNOT, ApplySampleWithCCNOT>(DepthCounter.Metrics.Depth);
+double tDepthAll = sim.GetMetric<ApplySampleWithCCNOT>(DepthCounter.Metrics.Depth);
 ```
 
 Végezetül, a `Depth Counter` által gyűjtött összes statisztika CSV formátumban való kinyomtatásához a következőket tudjuk használni:

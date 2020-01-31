@@ -43,19 +43,9 @@ operations:
 - uid: microsoft.quantum.errorcorrection.fivequbitcodeencoder
   summary: "\n> [!WARNING]\n> Elavult\n\nA FiveQubitCodeEncoder elavult. Ehelyett használja a @\"microsoft.quantum.errorcorrection.encodeintofivequbitcode\".\nKérjük, használja a @\"microsoft.quantum.errorcorrection.encodeintofivequbitcode\"."
 - uid: microsoft.quantum.errorcorrection.injectpi4yrotation
-  summary: >-
-    Egy π/4 rotációs műveletet hajt végre `Y`.
-
-
-    Az elforgatás a mágikus állapot elfogyasztásával történik. Ez a példány a $ $ \begin{align} \cos\frac{\pi}{8} \ket{0} + \sin \frac{\pi}{8} \ket{1}.
-
-    \end{align} $ $
+  summary: Egyetlen qubit elforgatása a π/4 értékkel az Y tengelyen.
 - uid: microsoft.quantum.errorcorrection.knilldistill
-  summary: >-
-    Implementálja a Knill mágikus állapotának kimaradó algoritmusát.
-
-
-    Egy mágikus állapot ($ $ \begin{align} \cos\frac{\pi}{8} \ket{0} + \sin \frac{\pi}{8} \ket{1} \end{align}, $ $ megközelítőleg 15 hozzávetőleges példánya egy magasabb színvonalú másolatot eredményez.
+  summary: Implementálja a Knill mágikus állapotának kimaradó algoritmusát.
 - uid: microsoft.quantum.errorcorrection.measurestabilizergenerators
   summary: A stabilizátorok csoportjának adott készletét méri.
 - uid: microsoft.quantum.errorcorrection.recover
@@ -92,9 +82,9 @@ newtypes:
 - uid: microsoft.quantum.errorcorrection.syndromemeasop
   summary: Egy olyan műveletet jelöl, amely egy hiba-javító kód blokkolásának mérésére szolgál.
 metadata:
-  ms.openlocfilehash: 2f72286018b39e2d51d6e0ffa6babf7ce350d976
-  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+  ms.openlocfilehash: 0a149810314453e816c7754dd535b2f3bb7d8e58
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 12/05/2019
-  ms.locfileid: "74858361"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76870788"

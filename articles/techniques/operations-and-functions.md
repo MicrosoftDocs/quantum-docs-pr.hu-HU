@@ -1,17 +1,17 @@
 ---
-title: 'Q # technikák – műveletek és függvények | Microsoft Docs'
-description: 'Q # technikák – műveletek és függvények'
+title: 'Operations and functions – Q # technikák | Microsoft Docs'
+description: 'Operations and functions – Q # technikák'
 uid: microsoft.quantum.techniques.opsandfunctions
 author: QuantumWriter
 ms.author: Christopher.Granade@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 06da09dc9c6e0ba0331db6bc0cd3d2ddeb287113
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 1fca20bb44cc42008f7d25d2fc71a39b962525c2
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73183454"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820776"
 ---
 # <a name="q-operations-and-functions"></a>Q # műveletek és függvények
 
@@ -66,7 +66,7 @@ Ha egy művelet egy egységes átalakítást valósít meg, akkor megadható, ho
 Ezeknek a specializációknak a megléte a művelet aláírásának részeként deklarálható: `is Adj + Ctl` a következő példában. Ezután a fordító létrehozza a megfelelő implementációt minden ilyen implicit módon deklarált specializációhoz. 
 
 ```qsharp
-operation PrepareEntangledPair(here : Qubit, there : Qubit) : Unit {
+operation PrepareEntangledPair(here : Qubit, there : Qubit) : Unit
 is Adj + Ctl { // implies the existence of an adjoint, a controlled, and a controlled adjoint specialization
     H(here);
     CNOT(here, there);
@@ -111,7 +111,7 @@ is Ctl + Adj {
     controlled adjoint invert; 
 }
 ```
-A fenti példában a `adjoint invert;` azt jelzi, hogy a adjoint specializációt a törzs megvalósításának visszafordításával kell létrehozni, és `controlled adjoint invert;` azt jelzi, hogy a vezérelt adjoint-specializációt úgy kell létrehozni, hogy a megadott implementációját visszaállítja a irányított specializáció.
+A fenti példában a `adjoint invert;` azt jelzi, hogy a adjoint specializációt a törzs megvalósításának visszafordításával kell létrehozni, és a `controlled adjoint invert;` azt jelzi, hogy a vezérelt adjoint specializációt úgy kell létrehozni, hogy a vezérelt specializáció adott implementációját visszaállítja.
 
 Ennek további példáit láthatjuk a [magasabb rendű vezérlési folyamatokban](xref:microsoft.quantum.concepts.control-flow).
 
@@ -163,7 +163,7 @@ operation U(target : Qubit) : Unit {
 
 Minden alkalommal, amikor a `U` meghívása megtörtént, a `target`egy másik művelettel fog rendelkezni.
 A fordító nem tudja garantálni, hogy ha `adjoint auto` specializációs nyilatkozatot adott hozzá `U`hoz, akkor `U(target); Adjoint U(target);` identitásként viselkedik (azaz nem op).
-Ez sérti a [vektorokban és mátrixokban](xref:microsoft.quantum.concepts.vectors)megjelenő adjoint definícióját, amely lehetővé teszi, hogy egy adjoint-specializációt egy olyan műveletben engedélyezzen, amelybe a művelet <xref:microsoft.quantum.math.randomreal>, hogy megszegi a fordító által biztosított garanciákat ; <xref:microsoft.quantum.math.randomreal> olyan művelet, amelynek nem létezik adjoint vagy vezérelt verziója.
+Ez sérti a [vektorokban és mátrixokban](xref:microsoft.quantum.concepts.vectors)megjelenő adjoint definícióját, amely lehetővé teszi, hogy egy adjoint-specializációt egy olyan műveletben engedélyezzen, amelyben az általunk használt művelet <xref:microsoft.quantum.math.randomreal> a fordító által biztosított garanciák megbomlásával. <xref:microsoft.quantum.math.randomreal> olyan művelet, amelynek nem létezik adjoint vagy vezérelt verziója.
 
 Másfelől lehetővé teszi, hogy a függvényhívás, például a `Square` biztonságos legyen, abban az esetben, ha a fordító biztos lehet abban, hogy csak a bemenetet kell megőriznie `Square` a kimenet stabilitásának megőrzése érdekében.
 Így a lehető legtöbb klasszikus logikát elkülönítheti a functions szolgáltatásban, így a logika más funkciókban és műveletekben is felhasználható.

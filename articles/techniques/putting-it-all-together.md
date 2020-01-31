@@ -1,23 +1,23 @@
 ---
-title: 'Q # technikák – az összes összeállítása együtt | Microsoft Docs'
-description: 'Q # technikák – az összes összeállítása'
+title: 'Az összes együttes üzembe helyezése – Q # technikák | Microsoft Docs'
+description: 'Az összes egyesítése – Q # technikák'
 uid: microsoft.quantum.techniques.puttingittogether
 author: QuantumWriter
 ms.author: Christopher.Granade@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: f65b3e260f98a7a90da13b62edd6cc63d200f5af
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 3605826da159757d4b321dbf4ec6acd7f4e6be05
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73183267"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820164"
 ---
 # <a name="putting-it-all-together-teleportation"></a>Az összes egyesítése: teleportáció #
 Térjen vissza a [kvantum-áramkörökben](xref:microsoft.quantum.concepts.circuits)definiált teleportáció-kör példára. Ezt az eddig megtanult fogalmak szemléltetésére fogjuk használni. A Quantum teleportáció magyarázatát alább találja azok számára, akik nem ismerik az elméletet, majd a kód megvalósításának bemutatóját a Q #-ban. 
 
 ## <a name="quantum-teleportation-theory"></a>Quantum teleportáció: elmélet
-A kvantum-teleportáció olyan módszer, amely egy ismeretlen kvantum-állapot küldését teszi elérhetővé (amit "__üzenetnek__" nevezünk) egy adott helyen lévő qubit egy másik helyen lévő qubit (ezeket a qubits a "__here__" és a "__There__" kifejezéssel fogjuk megtekinteni. illetve). Az Dirac-jelölést használó vektorként az __üzenetet__ is képviseljük: 
+A kvantum-teleportáció olyan technika, amely egy ismeretlen kvantum-állapot küldését teszi elérhetővé (amit "__üzenetnek__" nevezünk) egy adott helyen lévő qubit egy másik helyen lévő qubit (ezt a qubits a "Here" és a "__here__"kifejezéssel tekintjük meg). Az Dirac-jelölést használó vektorként az __üzenetet__ is képviseljük: 
 
 $ $ \ket{\psi} = \alpha\ket{0} + \beta\ket{1} $ $
 
@@ -56,7 +56,7 @@ $ \ket{1}$  | $ \frac{1}{\sqrt{2}} (\ket{0}-\ket{1}) $
 
 Ha a Hadamard kaput a fenti kimenet minden egyes időszakának első qubit alkalmazza, a következő eredményt értjük:
 
-$ $ \frac{\alpha}{\sqrt{2}} (\frac{1}{\sqrt{2}} (\ket{0} + \ket{1})) \ket{00} + \frac{\alpha}{\sqrt{2}} (\frac{1}{\sqrt{2}} (\ket{0} + \ket{1})) \ket{11} + \frac{\beta}{ \sqrt{2}} (\frac{1}{\sqrt{2}} (\ket{0}-\ket{1})) \ket{10} + \frac{\beta}{\sqrt{2}} (\frac{1}{\sqrt{2}} (\ket{0}-\ket{1})) \ket{01} $ $
+$ $ \frac{\alpha}{\sqrt{2}} (\frac{1}{\sqrt{2}} (\ket{0} + \ket{1})) \ket{00} + \frac{\alpha}{\sqrt{2}} (\frac{1}{\sqrt{2}} (\ket{0} + \ket{1})) \ket{11} + \frac{\beta}{\sqrt{2}} (\frac{1}{\sqrt{2}} (\ket{0}-\ket{1})) \ket{10} + \frac{\beta}{\sqrt{2}} (\frac{1}{\sqrt{2}} (\ket{0}-\ket{1})) \ket{01} $ $
 
 Vegye figyelembe, hogy az egyes feltételek $2 \frac{1}{\sqrt{2}} $ tényezővel rendelkeznek. Ezeket az eredményeket a következő eredmény megadásával tudjuk megszorozni:
 
@@ -125,7 +125,7 @@ Szükség van egy qubit-`here` kiosztására is, amelyet egy `using` blokkmal é
 ```
 
 ### <a name="step-1-create-an-entangled-state"></a>1\. lépés: kusza állapot létrehozása
-Ezután az @"microsoft.quantum.primitive.h" és a @"microsoft.quantum.primitive.cnot" műveletekkel hozhatjuk létre a kusza párokat `here` és `there` között:
+Ezután az @"microsoft.quantum.intrinsic.h" és a @"microsoft.quantum.intrinsic.cnot" műveletekkel hozhatjuk létre a kusza párokat `here` és `there` között:
 
 ```qsharp
         H(here);
@@ -141,7 +141,7 @@ Ezt követően a következő $ \operatorname{CNOT} $ és $H $ Gates használatá
 ```
 
 ### <a name="step-3--4-measuring-and-interpreting-the-result"></a>3\. lépés & 4: az eredmény mérése és értelmezése
-Végül a @"microsoft.quantum.primitive.m" használatával hajtjuk végre a méréseket, és végrehajtjuk a szükséges kiindulási műveleteket a kívánt állapot eléréséhez, `if` utasítások szerint:
+Végül a @"microsoft.quantum.intrinsic.m" használatával hajtjuk végre a méréseket, és végrehajtjuk a szükséges kiindulási műveleteket a kívánt állapot eléréséhez, `if` utasítások szerint:
 
 ```qsharp
         // Measure out the entanglement

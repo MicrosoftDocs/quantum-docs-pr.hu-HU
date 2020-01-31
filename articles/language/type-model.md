@@ -1,17 +1,17 @@
 ---
 title: 'Q # Type Model | Microsoft Docs'
-description: 'Q # Type Model'
+description: A Q#-modelltípus
 author: QuantumWriter
 uid: microsoft.quantum.language.type-model
 ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 4e251053d1b8306bf8956314d8099e95c56bce55
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 0aabb144779da301b71ad215c8e975cc29b4dcce
+ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "73184746"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76871634"
 ---
 # <a name="the-type-model"></a>A típus modellje
 
@@ -120,7 +120,7 @@ Ezt a tulajdonságot egy különálló _rekord egyenértékűségének_nevezzük
 
 A Q #-fájlok meghatározhatnak egy olyan új névvel ellátott típust, amely bármely jogi típus egyetlen értékét tartalmazza.
 Bármely rekord típusú `T`deklarálhat egy új, felhasználó által definiált típust, amely az `newtype` utasítással `T` altípusa.
-A @"microsoft.quantum.canon" névtérben például az összetett számok felhasználó által definiált típusként vannak meghatározva:
+A @"microsoft.quantum.math" névtérben például az összetett számok felhasználó által definiált típusként vannak meghatározva:
 
 ```qsharp
 newtype Complex = (Double, Double);
@@ -141,7 +141,7 @@ newtype Nested = (Double, (ItemName : Int, String));
 Az elnevezett elemek előnye, hogy közvetlenül a hozzáférési operátor `::`keresztül érhetők el. 
 
 ```qsharp
-function Addition (c1 : Complex, c2 : Complex) : Complex {
+function ComplexAddition(c1 : Complex, c2 : Complex) : Complex {
     return Complex(c1::Re + c2::Re, c1::Im + c2::Im);
 }
 ```
@@ -151,7 +151,7 @@ A "kicsomagolás" operátor, `!`, lehetővé teszi a felhasználó által defini
 A "kicsomagolás" kifejezés típusa a felhasználó által definiált típus alapjául szolgáló típus. 
 
 ```qsharp
-function PrintMsg (value : Nested) : Unit {
+function PrintedMessage(value : Nested) : Unit {
     let (d, (_, str)) = value!;
     Message ($"{str}, value: {d}");
 }
@@ -227,7 +227,7 @@ Annak ellenére, hogy mindkét `Complex` és `Polar` egyaránt rendelkezik egy a
 ## <a name="operation-and-function-types"></a>Művelet és függvények típusai
 
 A Q # _művelet_ egy Quantum alrutin.
-Ez egy meghívásos rutin, amely kvantum-műveleteket tartalmaz.
+Vagyis meghívható rutinok, amelyek kvantumműveleteket tartalmaznak.
 
 A Q # _függvény_ egy kvantum-algoritmuson belül használt klasszikus alrutin.
 Előfordulhat, hogy klasszikus kódot tartalmaz, de nincs Quantum művelet.
@@ -286,27 +286,28 @@ A Q # contravariant típusparamétert a bemeneti típusok tekintetében: egy meg
 Ez a következő definíciók miatt:
 
 ```qsharp
-operation Invertible (qs : Qubit[]) : Unit 
+operation Invert(qubits : Qubit[]) : Unit 
 is Adj {...} 
-operation Unitary (qs : Qubit[]) : Unit 
+
+operation ApplyUnitary(qubits : Qubit[]) : Unit 
 is Adj + Ctl {...} 
 
-function ConjugateInvertibleWith (
-   inner: (Qubit[] => Unit is Adj),
-   outer : (Qubit[] => Unit is Adj))
+function ConjugateInvertWith(
+    inner : (Qubit[] => Unit is Adj),
+    outer : (Qubit[] => Unit is Adj))
 : (Qubit[] => Unit is Adj) {...}
 
-function ConjugateUnitaryWith (
-   inner: (Qubit[] => Unit is Adj + Ctl),
-   outer : (Qubit[] => Unit is Adj))
+function ConjugateUnitaryWith(
+    inner : (Qubit[] => Unit is Adj + Ctl),
+    outer : (Qubit[] => Unit is Adj))
 : (Qubit[] => Unit is Adj + Ctl) {...}
 ```
 
 a következők teljesülnek:
 
-- A művelet `ConjugateInvertibleWith` a `Invertible` vagy `Unitary``inner` argumentumával hívható meg.
-- A művelet `ConjugateUnitaryWith` hívható meg `Unitary``inner` argumentumával, de nem `Invertible`.
-- `(Qubit[] => Unit is Adj + Ctl)` típusú érték adható vissza `ConjugateInvertibleWith`ból.
+- A `ConjugateInvertWith` függvény a `Invert` vagy `ApplyUnitary``inner` argumentumával hívható meg.
+- A `ConjugateUnitaryWith` függvény a `ApplyUnitary``inner` argumentumával hívható meg, de nem `Invert`.
+- `(Qubit[] => Unit is Adj + Ctl)` típusú érték adható vissza `ConjugateInvertWith`ból.
 
 > [!IMPORTANT]
 > A Q # 0,3 jelentős eltérést mutat be a felhasználó által definiált típusok viselkedésében.
@@ -377,14 +378,12 @@ Ez a példa a Q # műveletre a [mérési](https://github.com/microsoft/Quantum/t
 ```qsharp
 /// # Summary
 /// Prepares a state and measures it in the Pauli-Z basis.
-operation MeasureOneQubit () : Result {
+operation MeasureOneQubit() : Result {
         mutable result = Zero;
 
         using (qubit = Qubit()) { // Allocate a qubit
             H(qubit);               // Use a quantum operation on that qubit
-
             set result = M(qubit);      // Measure the qubit
-
             if (result == One) {    // Reset the qubit so that it can be released
                 X(qubit);
             }
@@ -396,12 +395,11 @@ operation MeasureOneQubit () : Result {
 
 A függvényhez tartozó példa a [PhaseEstimation](https://github.com/microsoft/Quantum/tree/master/samples/characterization/phase-estimation) mintából származik. Tisztán klasszikus kódot tartalmaz. Láthatja, hogy a fenti példától eltérően a rendszer nem foglal le qubits, és nem használ Quantum műveletet.
 
-
 ```qsharp
 /// # Summary
 /// Given two arrays, returns a new array that is the pointwise product
 /// of each of the given arrays.
-function MultiplyPointwise (left : Double[], right : Double[]) : Double[] {
+function PointwiseProduct(left : Double[], right : Double[]) : Double[] {
     mutable product = new Double[Length(left)];
 
     for (idxElement in IndexRange(left)) {
@@ -417,7 +415,10 @@ Azt is megteheti, hogy a függvény átadja a qubits a feldolgozáshoz, ahogy az
 /// # Summary
 /// Translate MCT masks into multiple-controlled Toffoli gates (with single
 /// targets).
-function GateMasksToToffoliGates (qubits : Qubit[], masks : MCMTMask[]) : MCTGate[] {
+function GateMasksToToffoliGates(
+    qubits : Qubit[], 
+    masks : MCMTMask[]) 
+: MCTGate[] {
 
     mutable result = new MCTGate[0];
     let n = Length(qubits);

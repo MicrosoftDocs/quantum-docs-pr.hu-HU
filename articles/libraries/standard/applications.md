@@ -6,12 +6,12 @@ uid: microsoft.quantum.libraries.applications
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: ef22460a5bca63ebaf32c0ba21984e103ec8ebdd
-ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+ms.openlocfilehash: 3e629e095bd2ee492496066710ef6fd4e578a543
+ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74864389"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868968"
 ---
 # <a name="applications"></a>Alkalmazások #
 
@@ -69,15 +69,16 @@ Például a Trotter-Suzuki dekompozíciót a következő Canon függvények hasz
 
 ```qsharp
 function TrotterSimulationAlgorithm(
-    trotterStepSize: Double, 
-    trotterOrder: Int) 
-    : SimulationAlgorithm {
+    trotterStepSize : Double, 
+    trotterOrder : Int) 
+: SimulationAlgorithm {
     ...
 }
+
 function TimeDependentTrotterSimulationAlgorithm(
-    trotterStepSize: Double, 
-    trotterOrder: Int) 
-    : TimeDependentSimulationAlgorithm {
+    trotterStepSize : Double, 
+    trotterOrder : Int) 
+: TimeDependentSimulationAlgorithm {
     ...
 }
 ```
@@ -99,11 +100,11 @@ Az absztrakt szimulációs algoritmusok a felhasználó által definiált típus
 
 ```qsharp
 function InterpolatedEvolution(
-        interpolationTime: Double, 
-        evolutionGeneratorStart: EvolutionGenerator,
-        evolutionGeneratorEnd: EvolutionGenerator,
-        timeDependentSimulationAlgorithm: TimeDependentSimulationAlgorithm)
-        : (Qubit[] => Unit is Adj + Ctl) {
+        interpolationTime : Double, 
+        evolutionGeneratorStart : EvolutionGenerator,
+        evolutionGeneratorEnd : EvolutionGenerator,
+        timeDependentSimulationAlgorithm : TimeDependentSimulationAlgorithm)
+: (Qubit[] => Unit is Adj + Ctl) {
         ...
 }
  
@@ -114,13 +115,13 @@ Ez egy egységes műveletet ad vissza, amely megvalósítja a adiabatic-állapot
 Egy olyan hasznos műveletet is definiálunk, amely egy tipikus kvantum-kémiai kísérlet minden lépését automatikusan végrehajtja. Például a következők állnak rendelkezésre, amely visszaadja az adiabatic állapot-előkészítéssel előállított állapot becslését:
 
 ```qsharp
-operation AdiabaticStateEnergyEstimate( 
-    nQubits : Int, 
-    statePrepUnitary: (Qubit[] => Unit),
-    adiabaticUnitary: (Qubit[] => Unit),
+operation EstimateAdiabaticStateEnergy(
+    nQubits : Int,
+    statePrepUnitary : (Qubit[] => Unit),
+    adiabaticUnitary : (Qubit[] => Unit),
     qpeUnitary: (Qubit[] => Unit is Adj + Ctl),
-    phaseEstAlgorithm : ((DiscreteOracle, Qubit[]) => Double)) 
-    : Double {
+    phaseEstAlgorithm : ((DiscreteOracle, Qubit[]) => Double))
+: Double {
 ...
 }
 ```
@@ -174,7 +175,7 @@ A Control-$U _a $ Gate Maps $ \ket{x} $ to $ \ket{(AX) \text{mod} N} $, ha a vez
 Ahhoz, hogy a $ (a ^ NX) \text{mod} N $-t lehessen elérni, egyszerűen alkalmazhatjuk a szabályozott $U _ {a ^ n} $-t, ahol a $a ^ n \text{mod} N $-t a kvantum-áramkörbe való csatlakoztatáshoz.  
 Az ilyen Moduláris aritmetika eléréséhez szükséges áramkörök leírását a [Quantum aritmetikai dokumentációja](./algorithms.md#arithmetic)tartalmazza, amely konkrétan egy moduláris hatványozására áramkört igényel az ellenőrzött $U\_{a ^ i} $ művelet megvalósításához.
 
-Míg a fenti kör megfelel a [kvantum fázisok becslésének](xref:microsoft.quantum.characterization.quantumphaseestimation) , és explicit módon lehetővé teszi a megrendelés megtalálását, csökkentheti a szükséges qubits számát. Követheti a Beauregard metódusát, hogy megkeresse a [arXiv: Quant-pH/0205095v3](https://arxiv.org/pdf/quant-ph/0205095v3.pdf#page=8), vagy használja a Microsoft. Quantum. Canonban elérhető fázis-becslési rutinok egyikét. A [robusztus fázis becslése](xref:microsoft.quantum.characterization.robustphaseestimation) például egy extra qubit is használ.
+Míg a fenti kör megfelel a [kvantum fázisok becslésének](xref:microsoft.quantum.characterization.quantumphaseestimation) , és explicit módon lehetővé teszi a megrendelés megtalálását, csökkentheti a szükséges qubits számát. A Beauregard módszerét követve megtekintheti a [arXiv: Quant-pH/0205095v3](https://arxiv.org/pdf/quant-ph/0205095v3.pdf#page=8), illetve a Microsoft. Quantum. jellemzésben elérhető fázis-becslési rutinok egyikét. A [robusztus fázis becslése](xref:microsoft.quantum.characterization.robustphaseestimation) például egy extra qubit is használ.
  
 ### <a name="factoring"></a>Faktoring ###
 A faktoring célja, hogy meghatározza a $N $ egész szám két fő tényezőjét, ahol a $N $ egy $n $ bites szám.  

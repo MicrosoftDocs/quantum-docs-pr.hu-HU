@@ -1,0 +1,41 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.applymajorityinplace
+name: ApplyMajorityInPlace
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: >-
+  A qubit többségi műveletet a következő helyen alkalmazza a qubits-jegyzékben:.
+
+
+  Ez a művelet kiszámítja a többségi függvényt helyben, 3 qubits.
+
+
+  Ha a kimeneti qubit $z $ és a bemeneti qubits $x $ és $y $ értékre jelöli, a művelet a következő átalakítást hajtja végre: $ \ket{XYZ} \rightarrow \ket{x \oplus z} \ket{y \oplus z} \ket{\operatorname{MAJ} (x, y, z)} $.
+syntax: 'operation ApplyMajorityInPlace (output : Qubit, input : Qubit[]) : Unit'
+input:
+  content: '(output : Qubit, input : Qubit[])'
+  types:
+  - name: output
+    summary: Első bemeneti qubit. Vegye figyelembe, hogy a kimenet kiszámításának helye és tárolása ebben a qubit történik.
+    isPrimitive: true
+    uid: Qubit
+  - name: input
+    summary: Második és harmadik bemeneti qubits.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+metadata:
+  ms.openlocfilehash: 3ebe5c3b9c1ac8b4b667d0b02e234ac2fa14bd7b
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.translationtype: MT
+  ms.contentlocale: hu-HU
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76872818"

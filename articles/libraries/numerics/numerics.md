@@ -6,12 +6,12 @@ ms.author: thhaner
 ms.date: 5/14/2019
 ms.topic: article
 uid: microsoft.quantum.numerics.usage
-ms.openlocfilehash: 332781a4356015461426ee7640fd931a41450367
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: ca24ff60cd9ae5077c7f4bae0012fe1180d7e6d4
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73184610"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821031"
 ---
 # <a name="using-the-numerics-library"></a>A numerikus könyvtár használata
 
@@ -28,7 +28,7 @@ Ezen összetevők mindegyike egyetlen `open` utasítás használatával érhető
 open Microsoft.Quantum.Arithmetic;
 ```
 
-## <a name="types"></a>Típusú
+## <a name="types"></a>Típusok
 
 A numerikus könyvtár a következő típusokat támogatja
 
@@ -64,7 +64,7 @@ A fenti három típus mindegyikéhez számos művelet érhető el:
     - Kölcsönös (1/x)
     - Mérés (klasszikus dupla)
 
-Az egyes műveletekkel kapcsolatos további információkért és részletes dokumentációért tekintse meg a Q # Library dokumentációs dokumentumait a következő címen: [docs.microsoft.com](https://docs.microsoft.com/en-us/quantum)
+Az egyes műveletekkel kapcsolatos további információkért és részletes dokumentációért tekintse meg a Q # Library dokumentációs dokumentumait a következő címen: [docs.microsoft.com](https://docs.microsoft.com/quantum)
 
 ## <a name="sample-integer-addition"></a>Minta: egész szám hozzáadása
 
@@ -72,15 +72,14 @@ Alapszintű példaként vegye fontolóra a $ $ \ket x\ket y\mapsto \ket x\ket {x
 
 A Quantum Development Kit használatával ez a művelet a következőképpen alkalmazható:
 ```qsharp
-operation MyAdditionTest (xInt : Int, yInt : Int, n : Int) : Unit
-{
+operation TestMyAddition(xValue : Int, yValue : Int, n : Int) : Unit {
     using ((xQubits, yQubits) = (Qubit[n], Qubit[n]))
     {
         x = LittleEndian(xQubits); // define bit order
         y = LittleEndian(yQubits);
         
-        ApplyXorInPlace(xInt, x); // initialize values
-        ApplyXorInPlace(yInt, y);
+        ApplyXorInPlace(xValue, x); // initialize values
+        ApplyXorInPlace(yValue, y);
         
         AddI(x, y); // perform addition x+y into y
         
@@ -93,20 +92,20 @@ operation MyAdditionTest (xInt : Int, yInt : Int, n : Int) : Unit
 
 Ha olyan simított függvényeket szeretne kiértékelni, mint például a $ \sin (x) $ a kvantum-számítógépen, ahol a $x $ a Quantum `FixedPoint` száma, a Quantum Development Kit numerikus könyvtára biztosítja az operatív `EvaluatePolynomialFxP` és `Evaluate[Even/Odd]PolynomialFxP`.
 
-Az első, `EvaluatePolynomialFxP`lehetővé teszi, hogy kiértékelje a "$ P (x) = a_0 + a_1x + a_2x ^ 2 + \cdots + a_dx ^ d, $ $ $ alakú polinom-t, ahol $d $ azt jelzi, hogy milyen *mértékben*. Ehhez minden szükséges, hogy a polinom-`[a_0,..., a_d]` (típusú `Double[]`), a bemeneti `x : FixedPoint` és a kimeneti `y : FixedPoint` (kezdetben nulla):
+Az első, `EvaluatePolynomialFxP`lehetővé teszi, hogy kiértékelje a "$ P (x) = a_0 + a_1x + a_2x ^ 2 + \cdots + a_dx ^ d, $ $, ahol $d $ a *mértéket*. Ehhez minden szükséges, hogy a polinom-`[a_0,..., a_d]` (típusú `Double[]`), a bemeneti `x : FixedPoint` és a kimeneti `y : FixedPoint` (kezdetben nulla):
 ```qsharp
-EvaluatePolynomialFxP([1.0, 2.0], xFxP, yFxP);
+EvaluatePolynomialFxP([1.0, 2.0], x, y);
 ```
 Az eredmény, $P (x) = 1 + 2x $, `yFxP`lesz tárolva.
 
-A második, `EvaluateEvenPolynomialFxP`és a harmadik `EvaluateOddPolynomialFxP`a páros és páratlan függvények esetében is specializált. Ez a páros/páratlan függvény esetében $f (x) $ és $ $ P_ {even} (x) = a_0 + a_1 x ^ 2 + a_2 x ^ 4 + \cdots + a_d x ^ {2D}, a $ $ $f (x) $ megközelítő értéke $P _ {even} (x) $ vagy $P _ {odd} (x): = x\cdot P_ {even} (x) $ illetve.
+A második, `EvaluateEvenPolynomialFxP`és a harmadik `EvaluateOddPolynomialFxP`a páros és páratlan függvények esetében is specializált. Ez a páros/páratlan függvény esetében $f (x) $ és $ $ P_ {even} (x) = a_0 + a_1 x ^ 2 + a_2 x ^ 4 + \cdots + a_d x ^ {2D}, a $ $ $f (x) $ megközelítő értéke $P _ {even} (x) $ vagy $P _ {odd} (x): = x\cdot P_ {even} (x) $, ill.
 A Q #-ban ez a két eset a következőképpen kezelhető:
 ```qsharp
-EvaluateEvenPolynomialFxP([1.0, 2.0], xFxP, yFxP);
+EvaluateEvenPolynomialFxP([1.0, 2.0], x, y);
 ```
 amely kiértékeli $P _ {even} (x) = 1 + 2x ^ 2 $ értéket, és
 ```qsharp
-EvaluateOddPolynomialFxP([1.0, 2.0], xFxP, yFxP);
+EvaluateOddPolynomialFxP([1.0, 2.0], x, y);
 ```
 amely kiértékeli $P _ {odd} (x) = x + 2x ^ 3 $ értéket.
 

@@ -6,12 +6,12 @@ uid: microsoft.quantum.concepts.control-flow
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 5e865dbb48029724b6f507ecb63b85d10d80c9a7
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: ff73cef12a3b8c2a6559308dc244c7c2e865ba9f
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73185647"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820453"
 ---
 # <a name="higher-order-control-flow"></a>Magasabb rendű vezérlési folyamat #
 
@@ -52,9 +52,9 @@ A Q #-ban használhatjuk a <xref:microsoft.quantum.arrays.indexrange>t, hogy ezt
 ```qsharp
 /// # Summary
 /// Applies $H$ to all qubits in a register.
-operation HAll(register : Qubit[]) : Unit 
-is Adj + Ctl {
-
+operation ApplyHadamardToAll(
+    register : Qubit[])
+: Unit is Adj + Ctl {
     for (qubit in register) {
         H(qubit);
     }
@@ -108,9 +108,9 @@ A Canon által kínált vezérlési folyamatokat a rendszer bemenetként haszná
 Például a "^ {\dagger} $ $UVU minta rendkívül gyakori a kvantum-programozásban – úgy, hogy a Canon a műveletet <xref:microsoft.quantum.canon.applywith> a minta absztrakciója adja meg.
 Ez az absztrakció azt is lehetővé teszi, hogy hatékonyabb Compliation legyenek a áramkörök, mivel a sorozatban `U(qubit); V(qubit); Adjoint U(qubit);` nem kell az egyes `U`okra `Controlled`.
 Ha ezt szeretné látni, hagyja, hogy $c (U) $ legyen az egységes képviselő `Controlled U([control], target)`, és hagyja, hogy a $c (V) $ azonos módon legyen definiálva.
-Ezután egy tetszőleges állapothoz $ \ket{\psi} $, \begin{align} c (U) c (V) c (U) ^ \dagger \ket{1} \otimes \ket{\psi} & = \ket{1} \otimes (UVU ^ {\dagger} \ket{\psi}) \\\\ & = (\boldone \otimes U) (c (V)) (\boldone \otimes U ^ \dagger) \ ket{1} \otimes \ket{\psi}.
+Ezután egy tetszőleges állapothoz $ \ket{\psi} $, \begin{align} c (U) c (V) c (U) ^ \dagger \ket{1} \otimes \ket{\psi} & = \ket{1} \otimes (UVU ^ {\dagger} \ket{\psi}) \\\\ & = (\boldone \otimes U) (c (V)) (\boldone \otimes U ^ \dagger) \ket{1} \otimes \ket{\psi}.
 a \end{align} a `Controlled`definíciója szerint.
-Másrészről a \begin{align} c (U) c (V) c (U) ^ \dagger \ket{0} \otimes \ket{\psi} & = \ket{0} \otimes \ket{\psi} \\\\ & = \ket{0} \otimes (UU ^ \dagger \ket{\psi}) \\\\ & = (\boldone \otimes U) (c ( V)) (\boldone \otimes U ^ \dagger) \ket{0} \otimes \ket{\psi}.
+Másrészről a \begin{align} c (U) c (V) c (U) ^ \dagger \ket{0} \otimes \ket{\psi} & = \ket{0} \otimes \ket{\psi} \\\\ & = \ket{0} \otimes (UU ^ \dagger \ket{\psi}) \\\\ & = (\boldone \otimes U) (c (V)) (\boldone \otimes U ^ \dagger) \ket{0} \otimes \ket{\psi}.
 a \end{align} lineárisan következtetünk arra, hogy az összes bemeneti állapothoz így $U $-t is fel lehet venni.
 Vagyis $c (UVU ^ \dagger) = U c (V) U ^ \dagger $.
 Mivel a vezérlési műveletek általában költségesek lehetnek, az ellenőrzött változatok (például a `WithC` és a `WithCA`) segítségével csökkentheti az alkalmazandó vezérlő-kezelők számát.
@@ -123,30 +123,30 @@ Mivel a vezérlési műveletek általában költségesek lehetnek, az ellenőrz�
 >     ('T => Unit is Adj + Ctl), 'T) => Unit
 > ```
 
-Hasonlóképpen <xref:microsoft.quantum.canon.bind> olyan műveleteket hoz létre, amelyek más műveletek sorozatot alkalmaznak.
+Hasonlóképpen <xref:microsoft.quantum.canon.bound> olyan műveleteket hoz létre, amelyek más műveletek sorozatot alkalmaznak.
 Például a következők egyenértékűek:
 
 ```qsharp
 H(qubit); X(qubit);
-Bind([H, X], qubit);
+Bound([H, X], qubit);
 ```
 
 Az iterációs minták kombinálásával ez különösen hasznos lehet:
 
 ```qsharp
 // Bracket the quantum Fourier transform with $XH$ on each qubit.
-ApplyWith(ApplyToEach(Bind([H, X]), _), QFT, _);
+ApplyWith(ApplyToEach(Bound([H, X]), _), QFT, _);
 ```
 
 ### <a name="time-ordered-composition"></a>Idősorba rendezett összeállítás ###
 
 Továbbra is folytathatja a flow-szabályozást a részleges alkalmazás-és klasszikus függvények szempontjából, és a klasszikus folyamatok szabályozása szempontjából is elég kifinomult kvantum-fogalmakat modellez.
 Ez az analógia pontosan az a felismerés, hogy az egységes operátorok pontosan megfelelnek a hívási műveletek mellékhatásának, így az egységes operátorok bármely más, az egységes operátorok által meghatározott bontása megfelel egy adott adat létrehozásának. olyan klasszikus alrutinok hívási sorrendje, amelyek az adott egységes operátorként való műveletre vonatkozó utasításokat bocsátanak ki.
-Ebben a nézetben a `Bind` pontosan a mátrix termékének ábrázolását mutatja, mivel a `Bind([A, B])(target)` egyenértékű a `A(target); B(target);`, ami viszont a $BA $ értéknek megfelelő hívási sorrend.
+Ebben a nézetben a `Bound` pontosan a mátrix termékének ábrázolását mutatja, mivel a `Bound([A, B])(target)` egyenértékű a `A(target); B(target);`, ami viszont a $BA $ értéknek megfelelő hívási sorrend.
 
 Kifinomultabb példa a [Trotter – Suzuki bővítése](https://arxiv.org/abs/math-ph/0506007v1).
 Ahogy azt az [adatstruktúrák](xref:microsoft.quantum.libraries.data-structures)dinamikus generátoros ábrázolási szakasza is tárgyalja, a Trotter – Suzuki terjeszkedés különösen hasznos módszert kínál a mátrixok exponenciális kifejezésére.
-Például, ha a legalacsonyabb sorrendben alkalmazza a terjeszkedést, hogy minden operátornál $A $ és $B $, hogy $A = A ^ \dagger $ és $B = B ^ \dagger $, \begin{align} \tag{★} \label{EQ: Trotter-Suzuki-0} \exp (i [A + B] t) = \lim_{n\to\infty} \left (\exp (i A t/n) \exp (i B t/n ) \right) ^ n.
+Például, ha a legalacsonyabb sorrendben alkalmazza a terjeszkedést, az olyan operátorok esetében, $A $ és $B $, hogy $A = A ^ \dagger $ és $B = B ^ \dagger $, \begin{align} \tag{★} \label{EQ: Trotter-Suzuki-0} \exp (i [A + B] t) = \ lim_ {n\to\infty} \left (\exp (i A t/n) \exp (i B t/n) \right) ^ n.
 \end{align}, ez azt mondja, hogy a $A + B $ alatti állapotot hozzávetőlegesen $A $ és $B $ alatt fejlesztjük.
 Ha a $A $ alatt lévő evolúciót jelöli egy `A : (Double, Qubit[]) => Unit`, amely a következőt alkalmazza: $e ^ {i t A} $, akkor a Trotter – a Suzuki bővítése a hívási folyamatok átrendezése szempontjából egyértelművé válik.
 Konkrétan, egy olyan művelet `U : ((Int, Double, Qubit[]) => Unit is Adj + Ctl`, amely `A = U(0, _, _)` és `B = U(1, _, _)`egy olyan új műveletet határozhat meg, amely az űrlap `U` $t
@@ -183,12 +183,11 @@ Ezt a műveletet nem hívjuk közvetlenül, és így a név elejéhez hozzáadun
 
 ```qsharp
 operation _ControlledOnBitString(
-        bits : Bool[],
-        oracle: (Qubit[] => Unit is Adj + Ctl),
-        controlRegister : Qubit[],
-        targetRegister: Qubit[]) 
-: Unit 
-is Adj + Ctl {
+    bits : Bool[],
+    oracle: (Qubit[] => Unit is Adj + Ctl),
+    controlRegister : Qubit[],
+    targetRegister: Qubit[])
+: Unit is Adj + Ctl
 ```
 
 Vegye figyelembe, hogy egy `Bool` tömbként jelölt bitet használunk, amellyel megadhatjuk, hogy milyen feltételt kívánunk alkalmazni az általunk megadott művelet `oracle`.
@@ -201,6 +200,7 @@ Ezért alkalmazhatjuk $P = X ^ {s\_0} \otimes X ^ {s\_1} \otimes \cdots \otimes 
 Ez az építés pontosan `ApplyWith`, ezért az új művelet törzsét ennek megfelelően írjuk:
 
 ```qsharp
+{
     ApplyWithCA(
         ApplyPauliFromBitString(PauliX, false, bits, _),
         (Controlled oracle)(_, targetRegister),
@@ -219,8 +219,8 @@ Ezen a ponton megtehetjük, de valahogy nem teljesül, hogy az új művelet nem 
 
 ```qsharp
 function ControlledOnBitString(
-        bits : Bool[],
-        oracle: (Qubit[] => Unit is Adj + Ctl)) 
+    bits : Bool[],
+    oracle: (Qubit[] => Unit is Adj + Ctl))
 : ((Qubit[], Qubit[]) => Unit is Adj + Ctl) {
     return _ControlledOnBitString(bits, oracle, _, _);
 }

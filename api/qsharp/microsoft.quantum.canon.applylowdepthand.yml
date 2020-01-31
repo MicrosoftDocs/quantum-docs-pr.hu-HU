@@ -1,0 +1,45 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applylowdepthand
+name: ApplyLowDepthAnd
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  A megadott qubit csak akkor áll le, ha mindkét vezérlő qubits 1 állapotban van, a T-depth 1 értékkel, a adjoint művelet elvégzéséhez használja a mérést.
+
+
+  `target`, ha mindkét vezérlő 1, de azt feltételezi, hogy a `target` állapota 0.  A művelethez tartozik a T-Count 4, a T-depth 1, és egy Helper qubit szükséges, ezért érdemes lehet egy CCNOT-műveletnek lennie, ha a `target` neve 0.  A művelet adjoint a mérésen alapul, és nem igényel T-kaput, és nincs segítő qubit.
+syntax: 'operation ApplyLowDepthAnd (control1 : Qubit, control2 : Qubit, target : Qubit) : Unit'
+references: >-
+  - Cody Jones: "új konstrukciók a hibatűrő Toffoli kapuhoz", leltár. Rev. A 87, 022328, 2013 [arXiv: 1212.5069](https://arxiv.org/abs/1212.5069) Doi: 10.1103/PhysRevA. 87.022328
+
+  - Peter Selinger: "T-depthal One", leltár. Rev. A 87, 042302, 2013 [arXiv: 1210.0974](https://arxiv.org/abs/1210.0974) Doi: 10.1103/PhysRevA. 87.042302
+input:
+  content: '(control1 : Qubit, control2 : Qubit, target : Qubit)'
+  types:
+  - name: control1
+    summary: Első vezérlő qubit
+    isPrimitive: true
+    uid: Qubit
+  - name: control2
+    summary: Második vezérlő qubit
+    isPrimitive: true
+    uid: Qubit
+  - name: target
+    summary: Cél segédszolgáltatása qubit; a kötelező állapot 0
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+metadata:
+  ms.openlocfilehash: 060a4b2241f231a9d164bdcce2beb2a3315d96f9
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.translationtype: MT
+  ms.contentlocale: hu-HU
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76872937"

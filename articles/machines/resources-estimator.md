@@ -6,12 +6,12 @@ ms.author: anpaz@microsoft.com
 ms.date: 1/22/2019
 ms.topic: article
 uid: microsoft.quantum.machines.resources-estimator
-ms.openlocfilehash: 591e306b3001934bd81342a533e3f6ca25129781
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 960fda3dade7648f9cd24496c3a49fd11d6f807a
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73184984"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820861"
 ---
 # <a name="the-resourcesestimator-target-machine"></a>A ResourcesEstimator cél gépe
 
@@ -97,37 +97,37 @@ Az alábbi lista a `ResourcesEstimator`becsült mérőszámait sorolja fel:
 * __QubitClifford__: egy qubit-es Clifford-és Pauli-kapuk száma.
 * __Mérték__: a végrehajtott mérések száma.
 * __R__: a végrehajtott egyetlen qubit-forgatások száma, kivéve a T, Clifford és Pauli gateset.
-* __T__: a t-kapuk és a benne lévő konjugátumok száma, beleértve a t-kaput, a T_x = h. T. h és a T_y = a (z). t. a.
+* __T__: a t-kapuk és a benne lévő konjugátumok száma, beleértve a t-kaput, T_x = H. T. h, valamint T_y = a (z). t. a.
 * __Mélység__: a Q # művelet által végrehajtott kvantum-áramkör mélysége. Alapértelmezés szerint csak a T-Gates számítanak bele a mélységbe, a részletekért lásd a részletes [számlálót](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter) .
 * __Szélesség__: a Q # művelet végrehajtása során lefoglalt qubits maximális száma.
 * __BorrowedWidth__: a Q # műveletben kölcsönzött qubits maximális száma.
 
 
-## <a name="providing-the-probability-of-measurement-outcomes"></a>A mérési eredmények valószínűségének megadása
+## <a name="providing-the-probability-of-measurement-outcomes"></a>Mérési eredmények valószínűségének biztosítása
 
-a <xref:microsoft.quantum.primitive> névtérből származó <xref:microsoft.quantum.primitive.assertprob> használatával információt adhat meg egy mérték várható valószínűségéről a Q # program végrehajtásának elősegítése érdekében. A következő példa ezt szemlélteti:
+a <xref:microsoft.quantum.intrinsic> névtérből származó <xref:microsoft.quantum.intrinsic.assertprob> használatával információt adhat meg egy mérték várható valószínűségéről a Q # program végrehajtásának elősegítése érdekében. A következő példa ezt illusztrálja:
 
 ```qsharp
-operation Teleportation (source : Qubit, target : Qubit) : Unit {
+operation Teleport(source : Qubit, target : Qubit) : Unit {
 
-    using (ancilla = Qubit()) {
+    using (qubit = Qubit()) {
 
-        H(ancilla);
-        CNOT(ancilla, target);
+        H(q);
+        CNOT(qubit, target);
 
-        CNOT(source, ancilla);
+        CNOT(source, qubit);
         H(source);
 
         AssertProb([PauliZ], [source], Zero, 0.5, "Outcomes must be equally likely", 1e-5);
-        AssertProb([PauliZ], [ancilla], Zero, 0.5, "Outcomes must be equally likely", 1e-5);
+        AssertProb([PauliZ], [qubit], Zero, 0.5, "Outcomes must be equally likely", 1e-5);
 
         if (M(source) == One)  { Z(target); X(source); }
-        if (M(ancilla) == One) { X(target); X(ancilla); }
+        if (M(qubit) == One) { X(target); X(qubit); }
     }
 }
 ```
 
-Ha a `ResourcesEstimator` `AssertProb`, a rendszer rögzíti, hogy a mérési `PauliZ` a `source`, és `ancilla` a 0,5-as valószínűségű `Zero` eredményét kell adni. Amikor később végrehajtja `M`, megkeresi a kimeneteli valószínűségek rögzített értékeit, és `M` `Zero` vagy `One` értéket ad vissza a 0,5 valószínűséggel.
+Ha a `ResourcesEstimator` `AssertProb`, a rendszer rögzíti, hogy a mérési `PauliZ` a `source`, és `q` a 0,5-as valószínűségű `Zero` eredményét kell adni. Amikor később végrehajtja `M`, megkeresi a kimeneteli valószínűségek rögzített értékeit, és `M` `Zero` vagy `One` értéket ad vissza a 0,5 valószínűséggel.
 
 
 ## <a name="see-also"></a>Lásd még:

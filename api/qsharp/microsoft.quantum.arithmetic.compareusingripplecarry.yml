@@ -4,12 +4,14 @@ name: CompareUsingRippleCarry
 type: operation
 namespace: Microsoft.Quantum.Arithmetic
 summary: >-
-  Ezt az egységes tesztet akkor kell megtenni, ha két egész szám `x`, és `y` azonos méretű qubit-regiszterekben tárolja `x > y`. Ha az értéke TRUE (igaz), a rendszer XORed egy kimeneti qubit. Ellenkező esetben a 0 értéket XORed egy kimeneti qubit.
+  Ez a művelet azt ellenőrzi, hogy a qubits regisztere által képviselt egész szám nagyobb-e, mint egy másik egész szám, amely az eredmény XOR értékét egy kimeneti qubit alkalmazza.
 
 
-  Ez azt jelenti, hogy ez az egységes $U $ megfelel a következőnek: $ $ \begin{align} U\ket {x} \ ket {y} \ ket {z} = \ket{x}\ket{y}\ket{z\oplus (x > y)}.
+  Ha a rendszer két egész számot `x`, és `y` azonos méretű qubit-regiszterekben tárolja, akkor ez a művelet ellenőrzi, hogy megfelelnek-e a `x > y`nak. Ha az értéke TRUE (igaz), a rendszer XORed egy kimeneti qubit. Ellenkező esetben a 0 értéket XORed egy kimeneti qubit.
 
-  \end{align} $ $.
+  Más szóval ezt a műveletet az egységes $ $ \begin{align} U\ket {x} \ ket {y} \ ket {z} = \ket{x}\ket{y}\ket{z\oplus (x > y)} jelképezheti.
+
+  \end{align} $ $
 syntax: 'operation CompareUsingRippleCarry (x : Microsoft.Quantum.Arithmetic.LittleEndian, y : Microsoft.Quantum.Arithmetic.LittleEndian, output : Qubit) : Unit'
 references: '- Új kvantum-hullám – a carry addition Circuit Steven A. Cuccaro, Thomas G. Drapérier, Samuel A. Kutin, David Petra Moulton https://arxiv.org/abs/quant-ph/0410184'
 input:
@@ -34,9 +36,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: fa3db99da28f96e1cb42dd03e465440e015722fa
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 1ef346a9fd33859abffe9c30b14b5ea95068169d
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73221099"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76871124"

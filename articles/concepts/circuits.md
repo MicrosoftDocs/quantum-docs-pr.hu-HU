@@ -1,17 +1,17 @@
 ---
 title: Kvantum-áramkörök | Microsoft Docs
-description: Kvantum-áramkörök
+description: Kvantumkörök
 author: QuantumWriter
 uid: microsoft.quantum.concepts.circuits
 ms.author: nawiebe@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 7c2afa58fd70d893529cf794ae07df480466aaec
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: fe845aa0dde7c780ea6721dfe2559119e90b4aa5
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73210643"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820793"
 ---
 # <a name="quantum-circuits"></a>Kvantum-áramkörök
 Vegyünk egy pillanatra az egységes átalakítás $ \text{CNEM} _{01}(H\otimes 1) $ értéket.
@@ -39,7 +39,7 @@ Például a szimbólum
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
 ![](~/media/concepts_2.png)
 
-a [Hadamard](xref:microsoft.quantum.primitive.h) -kapu egy qubit-regiszteren működik.
+a [Hadamard](xref:microsoft.quantum.intrinsic.h) -kapu egy qubit-regiszteren működik.
 
 A Quantum Gates kronológiai sorrendben vannak rendezve a bal szélső kapuval, amelyet a kapu először alkalmaz a qubits.
 Más szóval, ha a vezetékeket a kvantum-állapot tárolásával ábrázolja, a vezetékek a diagram minden kapuján balról jobbra helyezik a kvantum-állapotot.
@@ -72,7 +72,7 @@ Ez azt jelenti, hogy a nagyméretű kvantum-algoritmusok adatforgalmával kapcso
 
 ## <a name="controlled-gates"></a>Vezérelt kapuk
 A multi-qubit Quantum Circuit-diagramokba beépített másik összeállítás vezérli.
-Egy olyan kvantum-vezérelt kapu művelete, amely a $ \Lambda (G) $ értéket jelöli, ahol egyetlen qubit érték vezérli $G $-t, a termék állapotára vonatkozó input $ \Lambda (G) következő példáját tekintheti meg (\alpha \ket{0} + \beta \ket{1}) \ket{\psi} = \alpha \ket{0} \ket{\psi} + \beta \ket{1} G\ket {\ psi} $.
+Egy olyan kvantum-vezérelt kapu művelete, amely a $ \Lambda (G) $ értéket jelöli, ahol egyetlen qubit érték vezérli $G $-t, az alábbi példa egy termék állapotba való bemenő adat: \Lambda (G) (\alpha \ket{0} + \beta \ket{1}) \ket{\psi} = \alpha \ket{0} \ket{\psi} + \beta \ket{1} G\ket {\ psi} $.
 Ez azt jelenti, hogy az ellenőrzött kapu $G $ értéket alkalmaz a $ \psi $-t tartalmazó regisztrációra, és csak akkor, ha a vezérlő qubit $1 $ értékű.
 Általánosságban leírjuk, hogy milyen ellenőrzött műveleteket kell elvégeznie az áramköri diagramokban
 
@@ -81,7 +81,7 @@ Ez azt jelenti, hogy az ellenőrzött kapu $G $ értéket alkalmaz a $ \psi $-t 
 ![](~/media/concepts_5.png)
 
 Itt a fekete kör azt a kvantum-bitet jelöli, amelyen a kapu vezérelhető, és a vertikális huzal azt jelöli, hogy a vezérlő qubit a $1 $ értéket veszi figyelembe.
-Azon speciális esetekben, ahol $G = X $ és $G = Z $ bevezetjük a következő jelölést a kapuk ellenőrzött verziójának leírásához (vegye figyelembe, hogy a vezérelt X Gate a [$CNOT $ Gate](xref:microsoft.quantum.primitive.cnot)):
+Azon speciális esetekben, ahol $G = X $ és $G = Z $ bevezetjük a következő jelölést a kapuk ellenőrzött verziójának leírásához (vegye figyelembe, hogy a vezérelt X Gate a [$CNOT $ Gate](xref:microsoft.quantum.intrinsic.cnot)):
 
 <!--- ![](.\media\6.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
@@ -106,7 +106,7 @@ Az ilyen alhálózatok például a következőkre hasonlítanak:
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
 ![mérési áramkör](~/media/concepts_7.png)
 
-A Q # erre a célra alkalmazza a [mérték kezelőjét](xref:microsoft.quantum.primitive.measure) .
+A Q # erre a célra alkalmazza a [mérték kezelőjét](xref:microsoft.quantum.intrinsic.measure) .
 További információt a [mérések című szakaszban](xref:microsoft.quantum.libraries.standard.prelude#measurements) talál.
 
 Hasonlóképpen, az aláramkör

@@ -7,26 +7,26 @@ summary: >-
   Egy Oracle-ből származó adott állapottal kapcsolatos reflexiót hoz létre.
 
 
-  Ha az Oracle $O $ típusú <xref:microsoft.quantum.oracles.deterministicstateoracle>, a függvény eredménye a $ \ket{\psi} $ állapotú, amely $O \ket{0} = \ket{\psi} $.
+  Mivel a determinstic állapot-előkészítési Oracle egy egységes Matrix $O $-t képvisel, a függvény eredménye egy Oracle, amely az Oracle $O $ által előkészített \ket{\psi} $ állapotot tükrözi. vagyis a $ \ket{\psi} $ állapotot, amely $O \ket{0} = \ket{\psi} $.
 syntax: 'function ReflectionOracleFromDeterministicStateOracle (oracle : Microsoft.Quantum.Oracles.DeterministicStateOracle) : Microsoft.Quantum.Oracles.ReflectionOracle'
 input:
   content: '(oracle : Microsoft.Quantum.Oracles.DeterministicStateOracle)'
   types:
   - name: oracle
-    summary: "\"DeterministicStateOracle\" típusú Oracle"
+    summary: Egy Oracle, amely előkészíti a $ \ket{\psi} $ állapotú példányokat.
     uid: microsoft.quantum.oracles.deterministicstateoracle
 output:
   content: Microsoft.Quantum.Oracles.ReflectionOracle
   types:
-  - summary: A $ \ket{\psi} $ állapotot tükröző `ReflectionOracle`.
+  - summary: Egy Oracle, amely a $ \ket{\psi} $ állapotot tükrözi.
     uid: microsoft.quantum.oracles.reflectionoracle
 seeAlso:
-- deterministicstateoracle
-- reflectionoracle
+- microsoft.quantum.oracles.deterministicstateoracle
+- microsoft.quantum.oracles.reflectionoracle
 metadata:
-  ms.openlocfilehash: c48c9259b4b3c122a8d7551db6d326ea523dd2a0
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 604c0dab70979e3f429b58168a969a7557e2a0de
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73050326"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76868934"

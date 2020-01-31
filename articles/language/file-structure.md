@@ -6,12 +6,12 @@ uid: microsoft.quantum.language.file-structure
 ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 40b2e7ddf5def6285250dffe130b152429dce1f8
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 364d353c55bda38f227456909755d13dc7e67080
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73185188"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821082"
 ---
 # <a name="file-structure"></a>Fájlstruktúra
 
@@ -84,7 +84,7 @@ A Q # forrásfájl tetszőleges számú műveletet meghatározhat.
 
 A művelet nevének a névtéren belül egyedinek kell lennie, és nem ütközhet a típus és a függvény nevével.
 
-A műveleti deklarációk a `operation`kulcsszóból állnak, amelyet a művelet nevét, a művelet argumentumait definiáló gépelt azonosító rekordot, egy kettőspont `:`, egy típus típusú jegyzetet határoznak meg, amely leírja a művelet eredményének típusát, opcionálisan a művelet jellemzőit, egy nyitott kapcsos zárójelet `{`, a műveleti deklaráció törzsét és egy záró zárójelet `}`.
+A műveleti deklarációk a `operation`kulcsszóból állnak, amelyet a művelet nevét, a művelethez tartozó argumentumokat definiáló típust, egy kettőspontot `:`, a művelet eredményének típusát leíró típusú jegyzetet, opcionálisan a művelet jellemzőinek leírását, egy nyitott kapcsos zárójel `{`, a műveleti nyilatkozat törzsét és egy záró zárójelet `}`.
 
 A műveleti nyilatkozat törzse az alapértelmezett implementációból vagy a specializációk listájából áll.
 Az alapértelmezett implementáció közvetlenül is megadható a deklarációban, ha csak az alapértelmezett szövegtörzs-specializáció megvalósítását explicit módon kell megadni.
@@ -138,7 +138,7 @@ is Ctl + Adj {
 }
 ```
 
-A fenti példában a `adjoint invert;` azt jelzi, hogy a adjoint specializációt a törzs megvalósításának visszafordításával kell létrehozni, és `controlled adjoint invert;` azt jelzi, hogy a vezérelt adjoint-specializációt úgy kell létrehozni, hogy a megadott implementációját visszaállítja a irányított specializáció.
+A fenti példában a `adjoint invert;` azt jelzi, hogy a adjoint specializációt a törzs megvalósításának visszafordításával kell létrehozni, és a `controlled adjoint invert;` azt jelzi, hogy a vezérelt adjoint specializációt úgy kell létrehozni, hogy a vezérelt specializáció adott implementációját visszaállítja.
 
 Ahhoz, hogy egy művelet támogassa a `Adjoint` és/vagy a `Controlled`-munkafolyamatot, a visszatérési típust szükségszerűen `Unit`kell lennie. 
 
@@ -187,12 +187,12 @@ A argumentumok listájában `...` a művelet egészének deklarált argumentumai
 Ha az alapértelmezett törzsön kívül egy vagy több specializációt is explicit módon kell deklarálni, akkor az alapértelmezett törzs megvalósítását megfelelő specializációs nyilatkozatba is kell becsomagolni:
 
 ```qsharp
-operation CountOnes(qs: Qubit[]) : Int {
+operation CountOnes(qubits: Qubit[]) : Int {
 
     body (...) // default body specialization
     {
         mutable n = 0;
-        for (q in qs) {
+        for (qubit in qubits) {
             set n += M(q) == One ? 1 | 0;
         }
         return n;
@@ -208,7 +208,7 @@ Adjoint nélküli műveletet kell megadnia. például a mérési műveletek nem 
 Egy művelet támogatja a `Adjoint`-kezelőt, ha a deklarációja egy adjoint-specializáció implicit vagy explicit deklarációját tartalmazza.
 A kifejezetten bejelentett, szabályozott adjoint specializáció egy adjoint specializáció létezését jelenti. 
 
-Olyan művelet esetében, amelynek a törzse ismétlődik, amíg a sikerességi hurkok, beállítja a kimutatásokat, a méréseket, a visszaküldési utasításokat vagy a más olyan műveletekre irányuló hívásokat, amelyek nem támogatják a `Adjoint`-indítót, automatikusan generál egy adjoint specializációt a `invert` vagy @no__ után a t_2_ direktíva nem lehetséges.
+Azon művelet esetében, amelynek a törzse a REPEAT-ig-Success hurkokat tartalmazza, állítson be utasítások, mérések, visszaküldési utasítások vagy más olyan műveletekre irányuló hívásokat, amelyek nem támogatják a `Adjoint`-adjoint, a `invert` vagy a `auto` direktíva után automatikusan generálja a rendszer-és a-irányelvet.
 
 ### <a name="controlled"></a>Ellenőrzött
 
@@ -236,7 +236,7 @@ Egy olyan művelet esetében, amelynek törzse olyan más műveletekre irányul�
 A művelet deklarációja olyan egyszerű lehet, mint a következő, amely meghatározza a primitív Pauli X műveletet:
 
 ```qsharp
-operation X (q : Qubit) : Unit
+operation X (qubit : Qubit) : Unit
 is Adj + Ctl {
     body intrinsic;
     adjoint self;
@@ -282,7 +282,7 @@ operation Teleport (source : Qubit, target : Qubit) : Unit {
 A függvények tisztán klasszikus rutinok a Q #-ban.
 A Q # forrásfájl tetszőleges számú funkciót meghatározhat.
 
-A függvények deklarációja a `function`kulcsszóból áll, amelyet a függvény neve, egy begépelt azonosító rekord, egy Type Megjegyzés, amely leírja a függvény visszatérési típusát, valamint egy olyan utasítási blokkot, amely leírja a függvény.
+A függvények deklarációja a `function`kulcsszóból áll, amelyet a függvény neve, egy begépelt azonosító rekord, egy Type Megjegyzés, amely leírja a függvény visszatérési típusát, valamint egy, a függvény megvalósítását ismertető utasítási blokkot.
 
 A függvényt definiáló utasítás blokkjának `{` és `}` kell lennie, mint bármely más utasítás blokkja.
 

@@ -1,26 +1,42 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.amplitudeamplification
 name: Microsoft.Quantum.AmplitudeAmplification
-summary: " # <a name=\"summary\"></a>Összegzés\n Ez a névtér olyan függvényeket és műveleteket tartalmaz, amelyek amplitúdó-erősítést végeznek.\n\n # <a name=\"description\"></a>Leírás\n Az amplitúdó-erősítés a részleges reflexiókkal a legáltalánosabb formája az amplitúdó-erősítésnek itt implementált.\n\n Ezt a művelet AmpAmpObliviousByReflectionPhases hívja meg.\n\n Ennek két regisztrálása van: `ancillaRegister` és `systemRegister`.\n\n Ez két Oracle-t fogad el a `ReflectionOracle` típusú reflexiók esetében, amelyek csak a `ancillaRegister` regiszterben működnek.\n\n Ez egy különleges Oracle-t fogad el, amely elfeledkezett a `ObliviousOracle` típusú amplitúdó-erősítésről, amely közösen működik mindkét regisztráción.\n\n A `ancillaRegister` bemeneti állapota feltételezhető, hogy az első reflexiós operátor egyedi $-$1 eigenstate van $I-2 \\ ket {s} \\ melltartó {s} $.\n\n A cél kvantum állapottal kapcsolatos reflexiók gyakran úgy vannak megvalósítva, hogy hozzáférést biztosítanak egy olyan Oracle-hez, amely felkészíti ezt az állapotot a $ \\ket{0\\cdots 0} $ számítási alapján.\n\n Ezen Oracle-eszközökre vonatkozó konvenciónk két regisztrációt igényel: egyetlen qubit `flagQubit` regisztráljon, és regisztrálja magát minden más számára a ancillaRegister-regisztrációban.\n\n A (z) `StateOracle` típusú Oracle mindkét regiszterben közösen működik, hogy létrehozza a (z) $ \\ket{1}$ által megjelölt cél állapotot a `flagQubit` regisztráljon egy valós amplitúdóval.\n\n Az adott jelző állapottal kapcsolatos reflexiós `ReflectionOracle`t a művelet `TargetStateReflectionOracle`hozza létre.\n\n A rendszer a bemeneti állapotról `ancillaRegister`re vonatkozó reflexiós `ReflectionOracle` hozza létre a lefordított StateOracle, majd a $ \\ket{0\\cdots 0} $ értéket tükrözi a ReflectionStart () használatával.\n\n A `DeterministicStateOracle` típusú Oracle a `qubitState` regisztrálja, hogy a cél állapotot pontosan a nem jelzővel hozza létre.\n\n a `AmpAmpObliviousByOraclePhases` a feledékenység amplitúdó-erősítésének egy verziója, amely a reflexiók helyett az Oracles `StateOracle` és `ObliviousOracle`t fogadja el.\n\n Vegye figyelembe, hogy az amplitúdó-erősítés egy különleges eset a feledékenység amplitúdójának erősítésében, ahol a `ObliviousOracle` az identitás operátora, és nincsenek rendszerszintű qubits, azaz `systemRegister` üresek.\n\n Ezt a művelet `AmpAmByReflectionPhases` és `AmpAmpByOraclePhases`használatával hívja meg.\n\n A részleges tükrözések szakaszait a következő függvény AmpAmpPhasesStandard:.\n\n Például a következő függőségek állnak fenn: AmpAmpByOracle-> AmpAmpByOraclePhases-> AmpAmpObliviousByOraclePhases-> AmpAmpObliviousByReflectionPhases."
+summary: " # <a name=\"summary\"></a>Összefoglalás\n Ez a névtér olyan függvényeket és műveleteket tartalmaz, amelyek amplitúdó-erősítést végeznek.\n\n # <a name=\"description\"></a>Leírás\n Az amplitúdó-erősítés a részleges reflexiókkal a legáltalánosabb formája az amplitúdó-erősítésnek itt implementált.\n\n Ezt a művelet AmpAmpObliviousByReflectionPhases hívja meg.\n\n Ennek két regisztrálása van: `ancillaRegister` és `systemRegister`.\n\n Ez két Oracle-t fogad el a `ReflectionOracle` típusú reflexiók esetében, amelyek csak a `ancillaRegister` regiszterben működnek.\n\n Ez egy különleges Oracle-t fogad el, amely elfeledkezett a `ObliviousOracle` típusú amplitúdó-erősítésről, amely közösen működik mindkét regisztráción.\n\n A `ancillaRegister` bemeneti állapota feltételezhető, hogy az első reflexiós operátor egyedi $-$1 eigenstate van $I-2 \\ ket {s} \\ melltartó {s} $.\n\n A cél kvantum állapottal kapcsolatos reflexiók gyakran úgy vannak megvalósítva, hogy hozzáférést biztosítanak egy olyan Oracle-hez, amely felkészíti ezt az állapotot a $ \\ket{0\\cdots 0} $ számítási alapján.\n\n Ezen Oracle-eszközökre vonatkozó konvenciónk két regisztrációt igényel: egyetlen qubit `flagQubit` regisztráljon, és regisztrálja magát minden más számára a ancillaRegister-regisztrációban.\n\n A (z) `StateOracle` típusú Oracle mindkét regiszterben közösen működik, hogy létrehozza a (z) $ \\ket{1}$ által megjelölt cél állapotot a `flagQubit` regisztráljon egy valós amplitúdóval.\n\n Az adott jelző állapottal kapcsolatos reflexiós `ReflectionOracle`t a művelet `TargetStateReflectionOracle`hozza létre.\n\n A rendszer a bemeneti állapotról `ancillaRegister`re vonatkozó reflexiós `ReflectionOracle` hozza létre a lefordított StateOracle, majd a $ \\ket{0\\cdots 0} $ értéket tükrözi a ReflectionStart () használatával.\n\n A `DeterministicStateOracle` típusú Oracle a `qubitState` regisztrálja, hogy a cél állapotot pontosan a nem jelzővel hozza létre.\n\n a `AmpAmpObliviousByOraclePhases` a feledékenység amplitúdó-erősítésének egy verziója, amely a reflexiók helyett az Oracles `StateOracle` és `ObliviousOracle`t fogadja el.\n\n Vegye figyelembe, hogy az amplitúdó-erősítés egy különleges eset a feledékenység amplitúdójának erősítésében, ahol a `ObliviousOracle` az identitás operátora, és nincsenek rendszerszintű qubits, azaz `systemRegister` üresek.\n\n Ezt a művelet `AmpAmByReflectionPhases` és `AmpAmpByOraclePhases`használatával hívja meg.\n\n A részleges tükrözések szakaszait a következő függvény AmpAmpPhasesStandard:.\n\n Például a következő függőségek állnak fenn: AmpAmpByOracle-> AmpAmpByOraclePhases-> AmpAmpObliviousByOraclePhases-> AmpAmpObliviousByReflectionPhases."
 functions:
 - uid: microsoft.quantum.amplitudeamplification.ampampbyoracle
-  summary: Standard amplitúdó-erősítési algoritmus
+  summary: "\n> [!WARNING]\n> Elavult\n\nA AmpAmpByOracle elavult. Ehelyett használja a @\"microsoft.quantum.amplitudeamplification.standardamplitudeamplification\".\nKérjük, használja a @\"microsoft.quantum.amplitudeamplification.standardamplitudeamplification\"."
 - uid: microsoft.quantum.amplitudeamplification.ampampbyoraclephases
-  summary: A részleges reflexiók esetében az amplitúdó erősítése Oracle-támogatással.
-- uid: microsoft.quantum.amplitudeamplification.ampampbyreflectionsphases
-  summary: Az amplitúdó erősítése részleges reflexiók használatával.
+  summary: "\n> [!WARNING]\n> Elavult\n\nA AmpAmpByOraclePhases elavult. Ehelyett használja a @\"microsoft.quantum.amplitudeamplification.amplitudeamplificationfromstatepreparation\".\nKérjük, használja a @\"microsoft.quantum.amplitudeamplification.amplitudeamplificationfromstatepreparation\"."
+- uid: microsoft.quantum.amplitudeamplification.ampampbyreflectionphases
+  summary: "\n> [!WARNING]\n> Elavult\n\nA AmpAmpByReflectionPhases elavult. Ehelyett használja a @\"microsoft.quantum.amplitudeamplification.amplitudeamplificationfrompartialreflections\".\nKérjük, használja a @\"microsoft.quantum.amplitudeamplification.amplitudeamplificationfrompartialreflections\"."
 - uid: microsoft.quantum.amplitudeamplification.ampampobliviousbyoraclephases
-  summary: A részleges reflexiók esetében az amplitúdó-erősítést az Oracles okozta.
+  summary: "\n> [!WARNING]\n> Elavult\n\nA AmpAmpObliviousByOraclePhases elavult. Ehelyett használja a @\"microsoft.quantum.amplitudeamplification.obliviousamplitudeamplificationfromstatepreparation\".\nKérjük, használja a @\"microsoft.quantum.amplitudeamplification.obliviousamplitudeamplificationfromstatepreparation\"."
 - uid: microsoft.quantum.amplitudeamplification.ampampobliviousbyreflectionphases
-  summary: Egy olyan egységes érték beolvasása, amely a következő részleges reflexiók megadásával a megfeledkezett az amplitúdó-erősítést valósítja meg:.
+  summary: "\n> [!WARNING]\n> Elavult\n\nA AmpAmpObliviousByReflectionPhases elavult. Ehelyett használja a @\"microsoft.quantum.amplitudeamplification.obliviousamplitudeamplificationfrompartialreflections\".\nKérjük, használja a @\"microsoft.quantum.amplitudeamplification.obliviousamplitudeamplificationfrompartialreflections\"."
 - uid: microsoft.quantum.amplitudeamplification.ampampphasesfixedpoint
-  summary: Kiszámítja a rögzített pont amplitúdó-erősítésének részleges reflexiós fázisait.
+  summary: "\n> [!WARNING]\n> Elavult\n\nA AmpAmpPhasesFixedPoint elavult. Ehelyett használja a @\"microsoft.quantum.amplitudeamplification.fixedpointreflectionphases\".\nKérjük, használja a @\"microsoft.quantum.amplitudeamplification.fixedpointreflectionphases\"."
 - uid: microsoft.quantum.amplitudeamplification.ampampphasesstandard
-  summary: Kiszámítja a standard amplitúdó-erősítés részleges reflexiós fázisait.
+  summary: "\n> [!WARNING]\n> Elavult\n\nA AmpAmpPhasesStandard elavult. Ehelyett használja a @\"microsoft.quantum.amplitudeamplification.standardreflectionphases\".\nKérjük, használja a @\"microsoft.quantum.amplitudeamplification.standardreflectionphases\"."
 - uid: microsoft.quantum.amplitudeamplification.ampamprotationtoreflectionphases
-  summary: Egy qubit elforgatásként megadott fázisokat alakít át részleges reflexiók megadott fázisokra.
+  summary: "\n> [!WARNING]\n> Elavult\n\nA AmpAmpRotationToReflectionPhases elavult. Ehelyett használja a @\"microsoft.quantum.amplitudeamplification.rotationphasesasreflectionphases\".\nKérjük, használja a @\"microsoft.quantum.amplitudeamplification.rotationphasesasreflectionphases\"."
+- uid: microsoft.quantum.amplitudeamplification.amplitudeamplificationfrompartialreflections
+  summary: Az amplitúdó erősítése részleges reflexiók használatával.
+- uid: microsoft.quantum.amplitudeamplification.amplitudeamplificationfromstatepreparation
+  summary: A részleges reflexiók esetében az amplitúdó erősítése Oracle-támogatással.
+- uid: microsoft.quantum.amplitudeamplification.fixedpointreflectionphases
+  summary: Kiszámítja a rögzített pont amplitúdó-erősítésének részleges reflexiós fázisait.
+- uid: microsoft.quantum.amplitudeamplification.obliviousamplitudeamplificationfrompartialreflections
+  summary: Egy olyan egységes érték beolvasása, amely a következő részleges reflexiók megadásával a megfeledkezett az amplitúdó-erősítést valósítja meg:.
+- uid: microsoft.quantum.amplitudeamplification.obliviousamplitudeamplificationfromstatepreparation
+  summary: A részleges reflexiók esetében az amplitúdó-erősítést az Oracles okozta.
 - uid: microsoft.quantum.amplitudeamplification.reflectionstart
   summary: Az All-Zero string | 0... 0 〉, amely a tipikus bemeneti állapot az amplitúdó erősítéséhez.
+- uid: microsoft.quantum.amplitudeamplification.rotationphasesasreflectionphases
+  summary: Egy qubit elforgatásként megadott fázisokat alakít át részleges reflexiók megadott fázisokra.
+- uid: microsoft.quantum.amplitudeamplification.standardamplitudeamplification
+  summary: Standard amplitúdó-erősítési algoritmus
+- uid: microsoft.quantum.amplitudeamplification.standardreflectionphases
+  summary: Kiszámítja a standard amplitúdó-erősítés részleges reflexiós fázisait.
 - uid: microsoft.quantum.amplitudeamplification.targetstatereflectionoracle
   summary: >-
     Egy `ReflectionOracle` hoz létre a megcélzott állapotról a jelző qubit egyedileg megjelölve.
@@ -29,16 +45,22 @@ functions:
     A célként megadott állapot egyetlen qubit van beállítva, és az összes többi 0: $ \ket{1}_f $.
 operations:
 - uid: microsoft.quantum.amplitudeamplification.ampamprusbyoracle
+  summary: "\n> [!WARNING]\n> Elavult\n\nA AmpAmpRUSByOracle elavult. Ehelyett használja a @\"microsoft.quantum.amplitudeamplification.applyfixedpointamplification\".\nKérjük, használja a @\"microsoft.quantum.amplitudeamplification.applyfixedpointamplification\"."
+- uid: microsoft.quantum.amplitudeamplification.applyamplitudeamplification
+  summary: Amplitúdó-erősítést alkalmaz egy adott regisztráción, a fázisok és az Oracle-alkalmazások adott készletének használatával, hogy tükrözze a kezdeti és a végső állapotot.
+- uid: microsoft.quantum.amplitudeamplification.applyfixedpointamplification
   summary: Rögzített pont amplitúdó-erősítési algoritmusa
+- uid: microsoft.quantum.amplitudeamplification.applyobliviousamplitudeamplification
+  summary: A részleges reflexiók megadásával megfeledkezett az amplitúdó-erősítésről.
 newtypes:
 - uid: microsoft.quantum.amplitudeamplification.reflectionphases
   summary: Az amplitúdó-erősítésben bekövetkező részleges reflexiók sorozatából álló fázisok.
 - uid: microsoft.quantum.amplitudeamplification.rotationphases
   summary: Egy qubit-Forgások sorozatának fázisai az amplitúdó-erősítésben.
 metadata:
-  ms.openlocfilehash: acec4d085e42811618228c8e120842dc400c50b4
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 7b6aec2bd2300a84550f92740e24f33ce243ea7c
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73057132"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76870382"

@@ -6,12 +6,12 @@ ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.glossary
-ms.openlocfilehash: ce15fee2be68d41f0b806be50320b562a749c3b7
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.openlocfilehash: 5c7f2c4a572f6194ee846f056016a25b8c5303a2
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73442552"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820759"
 ---
 # <a name="quantum-computing-glossary"></a>Quantum Computing – Szószedet
 
@@ -39,9 +39,8 @@ ms.locfileid: "73442552"
 |Prelúdium|Az egyes célszámítógépek által meghatározott primitív és klasszikus műveletek és függvények összessége, nem pedig a Q # szintjén.|
 |Quantum Circuit|A kvantum-számítógép programjának ábrázolása. További részletekért tekintse meg a <xref:microsoft.quantum.concepts.circuits> szakaszt.|
 |Kvantum állapota|A rendszer qubits ábrázolása. Ez általában egy összetett oszlop vektora. További információ: <xref:microsoft.quantum.concepts.vectors>. |
-|qubit|A Quantum Storage egysége. További részletekért tekintse meg a <xref:microsoft.quantum.concepts.qubit> szakaszt.|
+|Qubit|A Quantum Storage egysége. További részletekért tekintse meg a <xref:microsoft.quantum.concepts.qubit> szakaszt.|
 |Ismétlés a sikerig|A probabilistically által sikeresnek bizonyuló kvantum-algoritmus. Hiba esetén a rutin újra próbálkozik, amíg a művelet sikertelen lesz (vagy elérte a korlátot). |
-|Szoftveres verem|A klasszikus és a Quantum szoftver teljes készlete, valamint a kvantum-számítógép üzemeltetéséhez szükséges fordítóprogramok, szimulátorok és futtatókörnyezetek. További részletekért tekintse meg a <xref:microsoft.quantum.concepts.software-stack> szakaszt. |
 |Célszámítógép|Fordítási cél, amely egy absztrakt kvantum-programot csökkenti a hardver vagy a szimuláció irányába. Ez általában számos célra, például a kapu cseréjére, a hibajavítások kódolására, a geometriai elrendezésre és egyebekre vonatkozó újraírásokat tartalmaz.|
 |Rekord|Vesszővel tagolt típusok csoportosítva zárójelen keresztül. |
 |Felhasználó által definiált típus|Beépített vagy korábban definiált típusok gyűjteménye, amelyek egyetlen egységként is szerepelhetnek.|

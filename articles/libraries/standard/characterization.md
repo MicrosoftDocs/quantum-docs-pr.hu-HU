@@ -6,12 +6,12 @@ uid: microsoft.quantum.libraries.characterization
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 1eb48da9d4ae2a730019e2707dcb2c69b998491e
-ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+ms.openlocfilehash: 51124dc78feedf6d5c85fe224898e66a1c5ed459
+ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74864372"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76870349"
 ---
 # <a name="quantum-characterization-and-statistics"></a>Quantum jellemzés és statisztika #
 
@@ -39,11 +39,11 @@ Az iterációs fázisok becslésének megvitatásakor egy egységes $U $ érték
 Az [adatstruktúrákban](xref:microsoft.quantum.libraries.data-structures)található Oracle-k című szakaszban leírtak szerint a Q # canon a <xref:microsoft.quantum.oracles.discreteoracle> felhasználó által definiált típus alapján végzi el a műveleteket, `((Int, Qubit[]) => Unit : Adjoint, Controlled)`a rekord típusa határozza meg.
 Konkrétan, ha `U : DiscreteOracle`, `U(m)` implementálja $U ^ millió $ értéket `m : Int`.
 
-Ebben a definícióban az ismétlődő fázisok becslésének minden lépése a $ \ket{+} $ állapotú segédszolgáltatása-qubit előkészítésével jár, és a kezdeti állapot $ \ket{\phi} $, amelyet feltételezzük, az $U (m) $, azaz $U (m [) eigenvector =](xref:microsoft.quantum.concepts.matrix-advanced) e ^ {\ket{\phi}} \ ket {\ Phi} $.  
+Ennek a definíciónak a helyén az ismétlődő fázisok becslésének minden lépése a $ \ket{+} $ állapotú kiegészítő qubit előkészítésével jár együtt, a kezdeti állapot pedig az $ \ket{\phi} $, amelyet feltételezzük, [hogy az $U](xref:microsoft.quantum.concepts.matrix-advanced) (m) $, azaz $U (m) \ket{\phi} = e ^ {im\phi} \ ket {\ Phi} $.  
 A rendszer a `U(m)` vezérelt alkalmazását használja, amely előkészíti a $ \left (R\_1 (m \phi) \ket{+} \right) \ket{\phi} $ állapotot.
 Ahogy a Quantum Case esetében, az Oracle `U(m)` ellenőrzött alkalmazásának hatása pontosan ugyanaz, mint a $ \ket{+} $-on az ismeretlen fázisra vonatkozó $R _1 $ alkalmazásának hatása, így a $U $-re vonatkozó hatások ebben az egyszerűbb módon is leírható.
 Szükség esetén az algoritmus elforgatja a vezérlő qubit úgy, hogy $R _1 (-m\theta) $ érték beszerzésével beszerezze a következő állapotot: $ \ket{\psi} = \left (R\_1 (m [\phi-\theta]) \ket{+} \right) \ket{\phi} $ $.
-A `U(m)` vezérlőelemként használt segédszolgáltatása-qubit $X $ alapon mérjük, hogy egyetlen klasszikus `Result`szerezzen be.
+A `U(m)` vezérlőként használt kiegészítő qubit $X $ alapon mérhető, hogy egyetlen klasszikus `Result`szerezzen be.
 
 Ezen a ponton az iterációs fázis becslése által beszerzett `Result`i értékek fokozatos kiépítése a klasszikus statisztikai következtetési probléma.
 A $m $ értékének megkeresése, amely maximalizálja a szerzett adatokat, mivel a rögzített következtetési módszer miatt egyszerűen probléma van a statisztikában.
@@ -106,7 +106,7 @@ Egy ilyen példa egy hatékony klasszikus utólagos feldolgozási lépés a [rob
 
 A robusztus fázisok becslésének legfontosabb funkciója, amelyet a legtöbb más hasznos változatban megosztanak, az, hogy a $ \hat{\phi} $ újraépítési minőség bizonyos értelemben Heisenberg korlátozott. Ez azt jelenti, hogy ha a valódi érték $ \hat{\phi} $ értéke a $ \sigma $, akkor a $ \sigma $ függvény fordítottan arányos – az ellenőrzött $U $-ra, azaz a $ \sigma = \mathcal{O} (1/Q) $ értékű $Q lekérdezések teljes számával arányosan. Az eltérés definíciója most a különböző becslési algoritmusok között változik. Bizonyos esetekben előfordulhat, hogy legalább $ \mathcal{O} (1) $ valószínűséggel, a becslési hiba $ | \hat{\phi}-\phi |\_\circ\le \sigma $ egy körkörös mértékben $ \circ $. A robusztus fázisok becsléséhez az eltérés pontosan a $ \sigma ^ 2 = \mathbb{E}\_\hat{\phi} [(\mod\_{2 \ PI} (\hat{\phi}-\phi + \pi)-\pi) ^ 2] $, ha az időszakos fázisokat egyetlen véges intervallumra (-\pi, \pi] $-ra csomagoljuk. Pontosabban, a robusztus fázisok becslésének szórása megfelel a $ $ \begin{align} 2,0 \pi/Q \Le \sigma \Le 2 \ pi/2 ^ {n} \Le 10.7 \ PI/Q, \end{align} $ $, ahol az alsó határ elérte a nagy $Q $ izomorf korlátot, és a felső határ garantált a kis méretű minták esetében is.  Vegye figyelembe, hogy a `bitsPrecision` bemenet által kiválasztott $n $, amely implicit módon meghatározza a $Q $ értéket.
 
-A további releváns részletek közé tartozik például a $1 $ Ancilla qubit, illetve az eljárás nem adaptív, azaz a kvantum-kísérletek szükséges sorozata független a köztes mérési eredményektől. Ebben és a közelgő példákban a fázis-becslési algoritmus kiválasztása fontos, az egyiknek a dokumentációra kell hivatkoznia, például a @"microsoft.quantum.canon.robustphaseestimation"ra és a hivatkozott kiadványokra a további információért és a megvalósításhoz.
+A további releváns részletek közé tartozik például a $1 $ Ancilla qubit, illetve az eljárás nem adaptív, azaz a kvantum-kísérletek szükséges sorozata független a köztes mérési eredményektől. Ebben és a közelgő példákban a fázis-becslési algoritmus kiválasztása fontos, az egyiknek a dokumentációra kell hivatkoznia, például a @"microsoft.quantum.characterization.robustphaseestimation"ra és a hivatkozott kiadványokra a további információért és a megvalósításhoz.
 
 > [!TIP]
 > Számos minta van, ahol robusztus fázis-becslést használunk. A különböző fizikai rendszerek alapvető állapotának kinyeréséhez szükséges fázis-becsléshez tekintse meg a [ **H2-szimulációs** mintát](https://github.com/microsoft/Quantum/tree/master/samples/simulation/h2/command-line), a [ **SimpleIsing** mintát](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/simple)és a [ **Hubbard Model** mintát](https://github.com/microsoft/Quantum/tree/master/samples/simulation/hubbard).
@@ -154,25 +154,27 @@ A `bitsPrecision`-bemenet egyedi `RobustPhaseEstimation`, míg a `oracle` és a 
 
 ```qsharp
 operation H2EstimateEnergy(
-    idxBondLength : Int, 
+    idxBondLength : Int,
     trotterStepSize : Double,
-    phaseEstAlgorithm : ((DiscreteOracle, Qubit[]) => Double)) 
+    phaseEstAlgorithm : ((DiscreteOracle, Qubit[]) => Double))
 : Double
 ```
 
-Ezek a számtalan fázis-becslési algoritmusok különböző tulajdonságokra és bemeneti paraméterekre vannak optimalizálva, amelyeket érdemes értelmezni a célalkalmazás legmegfelelőbb választásához. Például egyes fázis-becslési algoritmusok adaptívak, ami azt jelenti, hogy a jövőbeli lépéseket a korábbi lépések mérési eredményei klasszikusan szabályozzák. Egyesek számára lehetővé kell tenni, hogy a fekete dobozos egységes Oracle-t tetszőleges valós hatáskörökkel exponentiate, mások pedig csak egész hatásköröket igényelnek, de csak a 2. számú, 2 \ PI $ adatmennyiséget tudják feloldani. Egyeseknek sok segédszolgáltatása-qubits van szükségük, és más is csak egy szükséges.
+Ezek a számtalan fázis-becslési algoritmusok különböző tulajdonságokra és bemeneti paraméterekre vannak optimalizálva, amelyeket érdemes értelmezni a célalkalmazás legmegfelelőbb választásához. Például egyes fázis-becslési algoritmusok adaptívak, ami azt jelenti, hogy a jövőbeli lépéseket a korábbi lépések mérési eredményei klasszikusan szabályozzák. Egyesek számára lehetővé kell tenni, hogy a fekete dobozos egységes Oracle-t tetszőleges valós hatáskörökkel exponentiate, mások pedig csak egész hatásköröket igényelnek, de csak a 2. számú, 2 \ PI $ adatmennyiséget tudják feloldani. Némelyikhez számos kiegészítő qubits szükséges, mások pedig csak egyet igényelnek.
 
 Hasonlóképpen, ha a véletlenszerű séta fázisának becslését használja, ugyanúgy, mint a canonhoz tartozó más algoritmusokkal:
 
 ```qsharp
-operation ExampleOracle(eigenphase : Double, time : Double, register : Qubit[]) : Unit
-is Adj + Ctl {
+operation ApplyExampleOracle(
+    eigenphase : Double,
+    time : Double,
+    register : Qubit[])
+: Unit is Adj + Ctl {
     Rz(2.0 * eigenphase * time, register[0]);
 }
 
-operation BayesianPhaseEstimationCanonSample(eigenphase : Double) : Double {
-
-    let oracle = ContinuousOracle(ExampleOracle(eigenphase, _, _));
+operation EstimateBayesianPhase(eigenphase : Double) : Double {
+    let oracle = ContinuousOracle(ApplyExampleOracle(eigenphase, _, _));
     using (eigenstate = Qubit()) {
         X(eigenstate);
         // The additional inputs here specify the mean and variance of the prior, the number of

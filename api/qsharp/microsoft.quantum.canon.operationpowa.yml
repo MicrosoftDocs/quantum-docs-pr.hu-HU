@@ -10,11 +10,11 @@ summary: >-
 
 
   Ez azt jelenti, hogy egy $U $ kaput jelképező művelet miatt egy új műveletet ad vissza $U ^ m $ a Power $m $-hoz.
-syntax: "function OperationPowA (oracle : ('T => Unit is Adj), power : Int) : ('T => Unit is Adj)"
+syntax: "function OperationPowA (op : ('T => Unit is Adj), power : Int) : ('T => Unit is Adj)"
 input:
-  content: "(oracle : ('T => Unit is Adj), power : Int)"
+  content: "(op : ('T => Unit is Adj), power : Int)"
   types:
-  - name: oracle
+  - name: op
     summary: A megismételni kívánt kaput jelző művelet $U $.
     isOperation: true
     input:
@@ -52,9 +52,9 @@ typeParameters:
 seeAlso:
 - microsoft.quantum.canon.operationpow
 metadata:
-  ms.openlocfilehash: 59f7ea68a9b6528e0f3dd116c98961280edd3229
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 4177a3004d730ca3045ad0935c05e4e829fd44d4
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73230840"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76871532"

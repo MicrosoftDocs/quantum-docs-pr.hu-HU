@@ -6,12 +6,12 @@ uid: microsoft.quantum.language.statements
 ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 5bcbee868c76aaf53d0b7969e6e634da62689aaa
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 9157cf3336ce0894816dbfbaf13ce0e712a6b096
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73184865"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821065"
 ---
 # <a name="statements-and-other-constructs"></a>Utasítások és egyéb szerkezetek
 
@@ -54,8 +54,7 @@ Példa:
 ///
 /// # See Also
 /// - Microsoft.Quantum.Intrinsic.H
-operation ApplyTwice<'T>(op : ('T => Unit), target : 'T) : Unit
-{
+operation ApplyTwice<'T>(op : ('T => Unit), target : 'T) : Unit {
     op(target);
     op(target);
 }
@@ -90,7 +89,6 @@ Ha a névtérben és a fájlban a `X.Y` rövid neve `Z` lett definiálva, akkor 
 
 ```qsharp
 namespace NS {
-
     open Microsoft.Quantum.Intrinsic; // opens the namespace
     open Microsoft.Quantum.Math as Math; // defines a short name for the namespace
 }
@@ -181,7 +179,7 @@ for (i in 1 .. 2 .. 10) {
 Hasonló utasítások érhetők el minden olyan bináris operátor esetében, amelyben a bal oldali oldal típusa megegyezik a kifejezés típusával. Ez például az értékek összegyűjtésének kényelmes módja:
 ```qsharp
 mutable results = new Result[0];
-for (q in qubits) {
+for (qubit in qubits) {
     set results += [M(q)];
     // ...
 }
@@ -193,7 +191,7 @@ Hasonló Összefűzés található a jobb oldali másolási és frissítési kif
 ```qsharp
 newtype Complex = (Re : Double, Im : Double);
 
-function AddAll (reals : Double[], ims : Double[]) : Complex[] {
+function ElementwisePlus(reals : Double[], ims : Double[]) : Complex[] {
     mutable res = Complex(0.,0.);
 
     for (r in reals) {
@@ -209,19 +207,17 @@ function AddAll (reals : Double[], ims : Double[]) : Complex[] {
 Tömbök esetén a szabványos kódtárak tartalmazzák a szükséges eszközöket számos gyakori tömb inicializálási és manipulációs igényéhez, így elkerülhető, hogy az első helyen ne kelljen frissíteni a tömb elemeit. Az Update-and-reassign utasítások szükség esetén alternatív megoldást nyújtanak:
 
 ```qsharp
-operation RandomInts(maxInt : Int, nrSamples : Int) : Int[] {
-
+operation GenerateRandomInts(max : Int, nSamples : Int) : Int[] {
     mutable samples = new Double[0];
-    for (i in 1 .. nrSamples) {
-        set samples += [RandomInt(maxInt)];
+    for (i in 1 .. nSamples) {
+        set samples += [RandomInt(max)];
     }
     return samples;
 }
 
-operation SampleUniformDistr(nrSamples : Int, prec : Int) : Double[] {
-
-    let normalization = 1. / IntAsDouble(prec);
-    mutable samples = RandomInts(prec, nrSamples);
+operation SampleUniformDistrbution(nSamples : Int, nSteps : Int) : Double[] {
+    let normalization = 1. / IntAsDouble(nSteps);
+    mutable samples = GenerateRandomInts(nSteps, nSamples);
     
     for (i in IndexRange(samples) {
         let value = IntAsDouble(samples[i]);
@@ -236,10 +232,9 @@ operation SampleUniformDistr(nrSamples : Int, prec : Int) : Double[] {
 
 A függvény
 ```qsharp
-function EmbedPauli (pauli : Pauli, location : Int, n : Int) : Pauli[]
-{
-    mutable pauliArray = new Pauli[n];
-    for (index in 0 .. n - 1) {
+function PauliEmbedding(pauli : Pauli, length : Int, location : Int) : Pauli[] {
+    mutable pauliArray = new Pauli[length];
+    for (index in 0 .. length - 1) {
         set pauliArray w/= index <- 
             index == location ? pauli | PauliI;
     }    
@@ -249,8 +244,8 @@ function EmbedPauli (pauli : Pauli, location : Int, n : Int) : Pauli[]
 például egyszerűen egyszerűsíthető a `Microsoft.Quantum.Arrays``ConstantArray` függvény, valamint egy másolási és frissítési kifejezés visszaadása:
 
 ```qsharp
-function EmbedPauli (pauli : Pauli, i : Int, n : Int) : Pauli[] {
-    return ConstantArray(n, PauliI) w/ i <- pauli;
+function PauliEmbedding(pauli : Pauli, length : Int, location : Int) : Pauli[] {
+    return ConstantArray(length, PauliI) w/ location <- pauli;
 }
 ```
 
@@ -330,8 +325,8 @@ Például:
 
 ```qsharp
 // ...
-for (qb in qubits) { // qubits contains a Qubit[]
-    H(qb);
+for (qubit in qubits) { // qubits contains a Qubit[]
+    H(qubit);
 }
 
 mutable results = new (Int, Results)[Length(qubits)];
@@ -359,13 +354,13 @@ A hurok törzse, állapota és kijavítása egyetlen hatókörnek tekintendő, �
 ```qsharp
 mutable iter = 1;
 repeat {
-    ProbabilisticCircuit(qs);
-    let success = ComputeSuccessIndicator(qs);
+    ProbabilisticCircuit(qubits);
+    let success = ComputeSuccessIndicator(qubits);
 }
 until (success || iter > maxIter)
 fixup {
     iter += 1;
-    ComputeCorrection(qs);
+    ComputeCorrection(qubits);
 }
 ```
 
@@ -374,25 +369,25 @@ Ha a feltétel igaz, az utasítás befejeződött; Ellenkező esetben a rendszer
 Vegye figyelembe, hogy a javítás végrehajtásának befejezése befejezi az utasítás hatókörét, így a törzs vagy a javítás során végrehajtott szimbólum-kötések nem érhetők el a későbbi ismétlődésekben.
 
 A következő kód például egy olyan valószínűségi áramkör, amely egy fontos rotációs kaput valósít meg $V _3 = (\boldone + 2 i Z)/\sqrt{5}$-T a Hadamard és a T Gates használatával.
-A hurok átlagosan 8/5 ismétlődéssel leáll.
+A hurok a $ \frac{8}{5}$ ismétlődések átlagában leáll.
 A részletekért lásd [ *: egyszeres qubit unitaries*](https://arxiv.org/abs/1311.1074) (Petrovics és Svore, 2014) nem determinisztikus bontása.
 
 ```qsharp
-using (anc = Qubit()) {
+using (qubit = Qubit()) {
     repeat {
-        H(anc);
-        T(anc);
-        CNOT(target,anc);
-        H(anc);
-        Adjoint T(anc);
-        H(anc);
-        T(anc);
-        H(anc);
-        CNOT(target,anc);
-        T(anc);
+        H(qubit);
+        T(qubit);
+        CNOT(target, qubit);
+        H(qubit);
+        Adjoint T(qubit);
+        H(qubit);
+        T(qubit);
+        H(qubit);
+        CNOT(target, qubit);
+        T(qubit);
         Z(target);
-        H(anc);
-        let result = M(anc);
+        H(qubit);
+        let result = M(qubit);
     } until (result == Zero);
 }
 ```
@@ -450,7 +445,7 @@ if (i == 1) {
 }
 ```
 
-### <a name="return"></a>visszatérési
+### <a name="return"></a>Visszatérési
 
 A Return utasítás egy művelet vagy függvény végrehajtását hajtja végre, és egy értéket ad vissza a hívónak.
 A kulcsszó `return`, majd a megfelelő típusú kifejezéssel, valamint egy pontosvesszővel végződik.
@@ -519,15 +514,15 @@ Az inicializálók egyetlen qubit érhetők el, amelyek `Qubit()`ként vannak me
 Például:
 
 ```qsharp
-using (q = Qubit()) {
+using (qubit = Qubit()) {
     // ...
 }
-using ((ancilla, qubits) = (Qubit(), Qubit[bits * 2 + 3])) {
+using ((auxiliary, qubits) = (Qubit(), Qubit[bits * 2 + 3])) {
     // ...
 }
 ```
 
-### <a name="dirty-qubits"></a>Piszkos qubits
+### <a name="borrowed-qubits"></a>Kölcsönzött qubits
 
 A `borrowing` utasítás az ideiglenes használatra szolgáló qubits beszerzésére szolgál. Az utasítás a `borrowing`kulcsszóból áll, amelyet egy nyitó zárójel `(`, egy kötés, egy záró zárójel `)`, valamint a qubits elérhetővé tételére szolgáló utasítás blokkja is tartalmaz.
 A kötés ugyanazokat a mintákat és szabályokat követi, mint egy `using` utasításban.
@@ -535,10 +530,10 @@ A kötés ugyanazokat a mintákat és szabályokat követi, mint egy `using` uta
 Például:
 
 ```qsharp
-borrowing (q = Qubit()) {
+borrowing (qubit = Qubit()) {
     // ...
 }
-borrowing ((ancilla, qubits) = (Qubit(), Qubit[bits * 2 + 3])) {
+borrowing ((auxiliary, qubits) = (Qubit(), Qubit[bits * 2 + 3])) {
     // ...
 }
 ```
@@ -547,8 +542,7 @@ A kölcsönzött qubits ismeretlen állapotban vannak, és az utasítás blokk v
 A hitelfelvevő vállalja, hogy a qubits ugyanabban az állapotban hagyja, mint amikor a kölcsönbe kerültek, azaz az utasítás blokkjának elején és végén lévő állapotuknak azonosnak kell lennie.
 Ez az állapot különösen nem feltétlenül klasszikus állapotban van, így a legtöbb esetben a hitelfelvételi hatókörök nem tartalmazhatnak mértékeket. 
 
-Az ilyen qubits gyakran "piszkos Ancilla" néven is ismertek.
-Tekintse meg a [*Toffoli-alapú többtényezős (qubits*](https://arxiv.org/abs/1611.07995) , Roetteler és Svore 2017) 2n + 2 használatával történő kiszámítását bemutató példát a piszkos Ancilla használatára.
+Tekintse meg a [*Toffoli-alapú Többtényezős 2017 (2n + 2) qubits a*](https://arxiv.org/abs/1611.07995) kölcsönzött Svore-használatra vonatkozó példát.
 
 A qubits hitelfelvételkor a rendszer először megpróbálja betölteni a kérést a használatban lévő qubits, de a `borrowing` utasítás törzsében nem érhetők el.
 Ha nincs elég ilyen qubits, akkor a kérés teljesítéséhez új qubits fog kiosztani.

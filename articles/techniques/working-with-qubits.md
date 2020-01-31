@@ -1,23 +1,23 @@
 ---
-title: A qubits használata | Microsoft Docs
-description: A qubits használata
+title: A qubits használata
+description: 'Qubits – Q # technikák használata'
 author: QuantumWriter
 ms.author: Christopher.Granade@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.techniques.qubits
-ms.openlocfilehash: 477b358c3eba58b62926b4e9094770c9741cac92
-ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+ms.openlocfilehash: dc6db93dadc37534aece9624fe516125d919f8cd
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74864253"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76819994"
 ---
-# <a name="working-with-qubits"></a>A qubits használata #
+# <a name="working-with-qubits"></a>A qubits használata
 
 A Q # nyelv számos különböző részén láthatjuk, hogy mi is a vastag, és látni fogjuk, hogyan használhatja a qubits magukat.
 
-## <a name="allocating-qubits"></a>Qubits foglalása ##
+## <a name="allocating-qubits"></a>Qubits foglalása
 
 Először is a Q #-ban használható qubit beszerzéséhez `using` blokkon belül *lefoglaljuk* a qubits:
 
@@ -33,9 +33,9 @@ A `using` blokk végén a blokk által lefoglalt összes qubits azonnal felszaba
 > [!WARNING]
 > A célszámítógépek azt várják, hogy a qubits a $ \ket{0}$ állapotban legyenek közvetlenül a felszabadítás előtt, hogy újra felhasználhatók legyenek, és elérhetők legyenek más `using`-blokkokhoz a kiosztáshoz.
 > Ha lehetséges, az egységes műveletekkel bármely lefoglalt qubits visszatérhet a $ \ket{0}$ értékre.
-> Ha szükséges, a @"microsoft.quantum.intrinsic.reset" művelet használható egy qubit mérésére, és a mérési eredmény használatával biztosíthatja, hogy a mért qubit visszaadja a $ \ket{0}$ értékre. Az ilyen mérések megsemmisítik a felakadás a fennmaradó qubits, és így befolyásolhatják a számítást. 
+> Ha szükséges, a @"microsoft.quantum.intrinsic.reset" művelet használható egy qubit mérésére, és a mérési eredmény használatával biztosíthatja, hogy a mért qubit visszaadja a $ \ket{0}$ értékre. Az ilyen mérések megsemmisítik a felakadás a fennmaradó qubits, és így befolyásolhatják a számítást.
 
-## <a name="intrinsic-operations"></a>Belső műveletek ##
+## <a name="intrinsic-operations"></a>Belső műveletek
 
 A foglalást követően a rendszer egy qubit továbbíthat a functions és a Operations szolgáltatásnak.
 Bizonyos értelemben ez azt eredményezi, hogy a Q # program egy qubit tud csinálni, mivel a végrehajtandó műveletek mindegyike műveletként van definiálva.
@@ -43,12 +43,11 @@ Ezek a műveletek részletesebben jelennek meg a [belső műveletekben és a fun
 
 Először is az qubit Pauli-operátorok $X $, $Y $ és $Z $ szerepelnek a Q # által a belső műveletek `X`, `Y`és `Z`között, amelyek mindegyike rendelkezik `(Qubit => Unit is Adj + Ctl)`típussal.
 A [belső műveletek és függvények](xref:microsoft.quantum.libraries.standard.prelude)című témakörben leírtak szerint a $X $, és így `X`, hogy egy kicsit flip művelet vagy nem kapu.
-Ez lehetővé teszi, hogy előkészítse a (z) $ \ket{s_0 s_1 \dots s_n} $ formátumú állapotokat néhány klasszikus bites sztring $s $ esetén:
+A `X` művelet lehetővé teszi, hogy előkészítse a (z) $ \ket{s_0 s_1 \dots s_n} $ formátumú állapotokat néhány klasszikus bites sztring $s $ esetén:
 
 ```qsharp
-operation PrepareBitString(bitstring : Bool[], register : Qubit[]) : Unit 
+operation PrepareBitString(bitstring : Bool[], register : Qubit[]) : Unit
 is Adj + Ctl {
-
     let nQubits = Length(register);
     for (idxQubit in 0..nQubits - 1) {
         if (bitstring[idxQubit]) {
@@ -57,14 +56,15 @@ is Adj + Ctl {
     }
 }
 
-operation Example() : Unit {
-
+operation RunExample() : Unit {
     using (register = Qubit[8]) {
         PrepareBitString(
             [true, true, false, false, true, false, false, true],
             register
         );
         // At this point, register now has the state |11001001〉.
+        // Resetting the qubits will allow us to deallocate them properly.
+        ResetAll(register);
     }
 }
 ```
@@ -76,7 +76,6 @@ Az olyan állapotokat is elő lehet készíteni, mint például a $ \ket{+} = \l
 
 ```qsharp
 operation PreparePlusMinusState(bitstring : Bool[], register : Qubit[]) : Unit {
-
     // First, get a computational basis state of the form
     // |s_0 s_1 ... s_n〉 by using PrepareBitString, above.
     PrepareBitString(bitstring, register);
@@ -88,40 +87,39 @@ operation PreparePlusMinusState(bitstring : Bool[], register : Qubit[]) : Unit {
 }
 ```
 
-## <a name="measurements"></a>Mérések ##
+## <a name="measurements"></a>Mérések
 
-Az olyan `Measure` művelettel, amely egy belső, nem önálló művelettel rendelkezik, a klasszikus adatokat kinyerheti egy `Qubit` típusú objektumból, és olyan eredményként rendelhet hozzá klasszikus értéket, amelynek egy foglalt típusa `Result`, ami azt jelzi, hogy az eredmény már nem kvantum-állapot. A `Measure` bemenete egy olyan Pauli-tengely a Bloch szférában, amely egy `Pauli` típusú (azaz például `PauliX`) és egy `Qubit`típusú objektum. 
+A beépített, nem egységes művelettel rendelkező `Measure` művelettel kinyerheti a klasszikus adatokat egy `Qubit` típusú objektumból, és hozzárendelheti a klasszikus értéket az eredményként, amely egy fenntartott típussal rendelkezik `Result`, ami azt jelzi, hogy az eredmény már nem Quantum állapot.
+A `Measure` bemenete a Bloch gömb egyik Pauli-tengelye, amelyet `Pauli` (például `PauliX`) típusú érték és `Qubit`típusú érték képvisel.
 
-Egy egyszerű példa a következő művelet, amely egy qubit hoz létre a $ \ket{0}$ állapotban, majd Hadamard-kaput ``H``, majd a `PauliZ` alapján méri az eredményt. 
+Egy egyszerű példa a következő művelet, amely egy qubit foglal le a $ \ket{0}$ állapotban, majd egy Hadamard műveletet alkalmaz `H`, és az eredményt `PauliZ` alapján méri.
 
 ```qsharp
-operation MeasurementOneQubit () : Result {
-
-    // The following using block creates a fresh qubit and initializes it 
+operation MeasureOneQubit() : Result {
+    // The following using block creates a fresh qubit and initializes it
     // in the |0〉 state.
     using (qubit = Qubit()) {
-        // We apply a Hadamard operation H to the state, thereby creating the 
-        // state 1/sqrt(2)(|0〉+|1〉). 
-        H(qubit); 
+        // We apply a Hadamard operation H to the state, thereby preparing the
+        // state 1 / sqrt(2) (|0〉 + |1〉).
+        H(qubit);
         // Now we measure the qubit in Z-basis.
         let result = M(qubit);
-        // As the qubit is now in an eigenstate of the measurement operator, 
-        // we reset the qubit before releasing it. 
-        if (result == One) { X(qubit); }   
-        // Finally, we return the result of the measurement. 
+        // As the qubit is now in an eigenstate of the measurement operator,
+        // we reset the qubit before releasing it.
+        if (result == One) { X(qubit); }
+        // Finally, we return the result of the measurement.
         return result;
     }
 }
 ```
 
-A következő művelet valamivel bonyolultabb példát ad vissza, amely visszaadja a logikai értéket, `true` ha egy `Qubit[]` típusú regiszterben lévő összes qubits állapota nulla, egy megadott Pauli-alapon mérve és `false` egyéb módon. 
+A következő művelet valamivel bonyolultabb példát ad vissza, amely visszaadja a logikai értéket, `true` ha a `Qubit[]` típusú regiszterben lévő összes qubits egy megadott Pauli-alapon mérve nulla állapotban van, és amely a `false`t adja vissza.
 
 ```qsharp
-operation AllMeasurementsZero (qs : Qubit[], pauli : Pauli) : Bool {
-
+operation MeasureIfAllQubitsAreZero(qubits : Qubit[], pauli : Pauli) : Bool {
     mutable value = true;
-    for (q in qs) {
-        if ( Measure([pauli], [q]) == One ) {
+    for (qubit in qubits) {
+        if (Measure([pauli], [qubit]) == One) {
             set value = false;
         }
     }
@@ -129,35 +127,40 @@ operation AllMeasurementsZero (qs : Qubit[], pauli : Pauli) : Bool {
 }
 ```
 
-A Q # nyelv lehetővé teszi a klasszikus vezérlési folyamatok függőségeit a qubits mérési eredményein. Ez a funkció lehetővé teszi, hogy hatékony, valószínűséggel rendelkező minialkalmazásokat hozzon létre, amelyek csökkenthetik a számítási költségeket a unitaries megvalósításához. Például egyszerűen megvalósítható a Q #-ban az úgynevezett *ismétlés* , amely olyan valószínűségi áramkörök, amelyek a *vártnál* alacsonyabb költségeket mutatnak az elemi kapuk szempontjából, de a valódi költségeket a tényleges futtatástól és a különböző lehetséges ágak tényleges elhagyása függ. 
+A Q # nyelv lehetővé teszi, hogy a klasszikus vezérlési folyamat a qubits mérési eredményeitől függ.
+Ez a funkció lehetővé teszi a hatékony valószínűségi minialkalmazások megvalósítását, ami csökkentheti a számítási költségeket a unitaries megvalósításához.
+A Q #-ban például könnyen megvalósítható az úgynevezett *REPEAT-ig-Success* (RUS) mintázat.
+Ezek az RUS-minták olyan valószínűségi programok, amelyek a *vártnál* alacsonyabb költségeket mutatnak az elemi kapuk szempontjából, de a valódi díjak a tényleges futtatástól és a különböző lehetséges elágazások tényleges elhagyása függnek.
 
 A REPEAT-ig-Success (RUS) minták megkönnyítése érdekében a Q # támogatja a szerkezetet
+
 ```qsharp
 repeat {
-    statementBlock1 
+    statementBlock1
 }
 until (expression)
 fixup {
     statementBlock2
 }
 ```
-ahol a `statementBlock1` és az `statementBlock2` nulla vagy több Q # utasítás, és `expression` bármely érvényes kifejezés, amely `Bool`típusú értékre van kiértékelve. Tipikus használati eset esetén a következő áramkör a (Z) $ (I + 2i Z){5}/\sqrt, a Bloch szférán belül egy irracionális tengely körüli rotációt valósít meg. Ez egy ismert RUS-minta használatával valósítható meg: 
+
+ahol a `statementBlock1` és az `statementBlock2` nulla vagy több Q # utasítás, és `expression` bármely érvényes kifejezés, amely `Bool`típusú értékre van kiértékelve.
+Tipikus használati eset esetén a következő Q # művelet elforgatást hajt végre a (Z) $ (I + 2i Z){5}/\sqrt, a Bloch szférában. Ez egy ismert RUS-minta használatával valósítható meg:
 
 ```qsharp
-operation RUScircuit (qubit : Qubit) : Unit {
-
-    using(ancillas = Qubit[2]) {
-        ApplyToEachA(H, ancillas);
+operation ApplyVRotationUsingRUS(qubit : Qubit) : Unit {
+    using (controls = Qubit[2]) {
+        ApplyToEachA(H, controls);
         mutable finished = false;
         repeat {
-            Controlled X(ancillas, qubit);
+            Controlled X(controls, qubit);
             S(qubit);
-            Controlled X(ancillas, qubit);
+            Controlled X(controls, qubit);
             Z(qubit);
         }
-        until(finished)
+        until (finished)
         fixup {
-            if AllMeasurementsZero(ancillas, Xpauli) {
+            if (MeasureIfAllQubitsAreZero(controls, PauliX)) {
                 set finished = true;
             }
         }
@@ -167,49 +170,53 @@ operation RUScircuit (qubit : Qubit) : Unit {
 
 Ez a példa egy változtatható változó használatát mutatja be `finished`, amely a teljes REPEAT-ig-javítás ciklus hatókörében van, és amely a hurok előtt inicializálva lesz, és a javítás lépésben frissül.
 
-Végül egy olyan RUS-mintát mutatunk be, amely a Quantum State $ \frac{1}{\sqrt{3}} \left (\sqrt{2}\ket{0}+ \ket{1}\right) $-t jeleníti meg, kezdve a $ \ket{+} $ állapottal. Lásd még: a [standard könyvtárhoz megadott Unit Testing minta](https://github.com/microsoft/Quantum/blob/master/samples/diagnostics/unit-testing/RepeatUntilSuccessCircuits.qs): 
+Végül egy olyan RUS-mintát mutatunk be, amely a Quantum State $ \frac{1}{\sqrt{3}} \left (\sqrt{2}\ket{0}+ \ket{1}\right) $-t jeleníti meg, kezdve a $ \ket{+} $ állapottal.
+Lásd még: a [standard könyvtárhoz megadott Unit Testing minta](https://github.com/microsoft/Quantum/blob/master/samples/diagnostics/unit-testing/RepeatUntilSuccessCircuits.qs):
 
 ```qsharp
-operation RepeatUntilSuccessStatePreparation( target : Qubit ) : Unit {
-
-    using( ancilla = Qubit() ) {
-        H(ancilla);
+operation PrepareStateUsingRUS(target : Qubit) : Unit {
+    using (auxiliary = Qubit()) {
+        H(auxiliary);
         repeat {
-            // We expect target and ancilla qubit to be in |+⟩ state.
-            AssertProb( 
-                [PauliX], [target], Zero, 1.0, 
+            // We expect the target and auxiliary qubits to each be in
+            // the |+⟩ state.
+            AssertProb(
+                [PauliX], [target], Zero, 1.0,
                 "target qubit should be in the |+⟩ state", 1e-10 );
-            AssertProb( 
-                [PauliX], [ancilla], Zero, 1.0,
-                "ancilla qubit should be in the |+⟩ state", 1e-10 );
-                
-            Adjoint T(ancilla);
-            CNOT(target, ancilla);
-            T(ancilla);
+            AssertProb(
+                [PauliX], [auxiliary], Zero, 1.0,
+                "auxiliary qubit should be in the |+⟩ state", 1e-10 );
 
-            // The probability of measuring |+⟩ state on ancilla is 3/4.
-            AssertProb( 
-                [PauliX], [ancilla], Zero, 3. / 4., 
-                "Error: the probability to measure |+⟩ in the first 
-                ancilla must be 3/4",
+            Adjoint T(auxiliary);
+            CNOT(target, auxiliary);
+            T(auxiliary);
+
+            // The probability of measuring |+⟩ state on the auxiliary qubit
+            // is 3/4.
+            AssertProb(
+                [PauliX], [auxiliary], Zero, 3. / 4.,
+                "Error: the probability to measure |+⟩ in the first
+                auxiliary must be 3/4",
                 1e-10);
 
-            // If we get measurement outcome Zero, we prepare the required state 
-            let outcome = Measure([PauliX], [ancilla]);
+            // If we get the measurement outcome Zero, we prepare the
+            // required state.
+            let outcome = Measure([PauliX], [auxiliary]);
         }
-        until( outcome == Zero )
+        until (outcome == Zero)
         fixup {
-            // Bring ancilla and target back to |+⟩ state
-            if( outcome == One ) {
-                Z(ancilla);
+            // Bring the auxiliary and target qubits back to |+⟩ state.
+            if (outcome == One) {
+                Z(auxiliary);
                 X(target);
                 H(target);
             }
         }
-        // Return ancilla back to Zero state
-        H(ancilla);
+        // Return the auxiliary qubit back to the Zero state.
+        H(auxiliary);
     }
 }
 ```
- 
-Az ebben a műveletben bemutatott jelentős programozott funkciók összetettebb `fixup` a hurokhoz, amely magában foglalja a kvantum-műveleteket, valamint a `AssertProb` utasítások használatát annak megállapítására, hogy a program bizonyos meghatározott pontjain a kvantum-állapot mérésének valószínűsége várható-e. További információ a `Assert` és `AssertProb` utasításokról: [tesztelés és hibakeresés](xref:microsoft.quantum.techniques.testing-and-debugging) . 
+
+A műveletben bemutatott jelentős programozott funkciók a hurok összetettebb `fixup` részét képezik, amely magában foglalja a kvantum-műveleteket, valamint a `AssertProb` utasítások használatát annak megállapítására, hogy a program bizonyos megadott pontjain a kvantum-állapot mérésének valószínűsége várható-e.
+További információ a [`Assert`](xref:microsoft.quantum.intrinsic.assert) és [`AssertProb`](xref:microsoft.quantum.intrinsic.assertprob) műveletekről: [tesztelés és hibakeresés](xref:microsoft.quantum.techniques.testing-and-debugging) .

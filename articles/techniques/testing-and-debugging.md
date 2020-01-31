@@ -1,17 +1,17 @@
 ---
-title: 'Q # technikák – tesztelés és hibakeresés | Microsoft Docs'
-description: 'Q # technikák – tesztelés és hibakeresés'
+title: 'Tesztelés és hibakeresés – Q # technikák | Microsoft Docs'
+description: 'Tesztelés és hibakeresés – Q # technikák'
 author: tcNickolas
 ms.author: mamykhai@microsoft.com
 uid: microsoft.quantum.techniques.testing-and-debugging
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: d352ffa315b654cfcf8991fa116465d3dad49f0a
-ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+ms.openlocfilehash: cfc71f08be0f190d9f5f4a48796e3d0ad06d6107
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74864270"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820113"
 ---
 # <a name="testing-and-debugging"></a>Tesztelés és hibakeresés
 
@@ -50,8 +50,8 @@ Kezdetben ez a fájl egy minta egység tesztelési `AllocateQubit` tartalmaz, am
     @Test("QuantumSimulator")
     operation AllocateQubit () : Unit {
 
-        using (q = Qubit()) {
-            Assert([PauliZ], [q], Zero, "Newly allocated qubit must be in the |0⟩ state.");
+        using (qubit = Qubit()) {
+            Assert([PauliZ], [qubit], Zero, "Newly allocated qubit must be in the |0⟩ state.");
         }
         
         Message("Test passed");
