@@ -7,35 +7,45 @@ ms.author: MSFT-alias-person-or-DL
 ms.date: 9/20/2019
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.techniques.intro
-ms.openlocfilehash: 5daeeaeb2ebfb4de8d819cac7352f48eade6d8bd
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: c1263edb75f903702ab3c16cec0443857150b662
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: HT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73035204"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820810"
 ---
-# <a name="quantum-development-techniques"></a><span data-ttu-id="e5158-104">Kvantumfejlesztési módszerek</span><span class="sxs-lookup"><span data-stu-id="e5158-104">Quantum Development Techniques</span></span>
+# <a name="quantum-development-techniques"></a><span data-ttu-id="fd068-104">Kvantumfejlesztési módszerek</span><span class="sxs-lookup"><span data-stu-id="fd068-104">Quantum Development Techniques</span></span>
+
+<span data-ttu-id="fd068-105">A dokumentáció ezen szakasza részletesen ismerteti a kvantumprogramok Q#-ban történő létrehozásakor alkalmazott alapvető fogalmakat, valamint az ezen programok hagyományos alkalmazásokból történő használatának módját.</span><span class="sxs-lookup"><span data-stu-id="fd068-105">This section of our documentation details the core concepts used to create quantum programs in Q#, and to interact with those programs from classical applications.</span></span>
+<span data-ttu-id="fd068-106">Feltételezzük a kvantum-számítástechnikai fogalmak *bizonyos mértékű* ismeretét, amelyeket például a [Kvantum-számítástechnikai fogalmak](xref:microsoft.quantum.concepts.intro) című cikkben ismertettünk, de nem szükséges szakértőnek lennie ahhoz, hogy hasznos információkat tudjon meg ezekből a szakaszokból.</span><span class="sxs-lookup"><span data-stu-id="fd068-106">We assume *some* knowledge of quantum computing concepts, like those described in [Quantum computing concepts](xref:microsoft.quantum.concepts.intro), but you need not be an expert in quantum computing to get a lot from these sections.</span></span>
+
+<span data-ttu-id="fd068-107">A szakaszok a következőket tartalmazzák.</span><span class="sxs-lookup"><span data-stu-id="fd068-107">Their contents are as follows.</span></span>
+
+- <span data-ttu-id="fd068-108">A [Q#-program áttekintése](xref:microsoft.quantum.techniques.file-structure) szakasz áttekintést nyújt a Q# programozási nyelv céljáról és funkciójáról.</span><span class="sxs-lookup"><span data-stu-id="fd068-108">[Q# program overview](xref:microsoft.quantum.techniques.file-structure) provides an overview of the purpose and functionality of the Q# programming language.</span></span> 
+    <span data-ttu-id="fd068-109">Ez leginkább azt tisztázza, hogy a Q# *nem* elsősorban a kvantummechanika szimulálását szolgáló nyelv – bár ezt a funkciót a teljes állapotú szimulátorunk biztosítja.</span><span class="sxs-lookup"><span data-stu-id="fd068-109">In particular, it clarifies how Q# is *not* a language for merely simulating quantum mechanics---though that functionality is of course provided by our full state simulator.</span></span> 
+    <span data-ttu-id="fd068-110">A Q# valójában a jövőbe tekintve lett tervezve, és a programjai azt írják le, hogyan *működik együtt* a klasszikus vezérlésű számítógép a qubitekkel.</span><span class="sxs-lookup"><span data-stu-id="fd068-110">Rather, Q# was designed with an eye on the future, and its programs describe how a classical control computer *interacts* with qubits.</span></span> 
+
+- <span data-ttu-id="fd068-111">A [Műveletek és a függvények](xref:microsoft.quantum.techniques.opsandfunctions) a Q# nyelv két hívható típusát részletezi: ezek a *műveletek*, amelyek magukba foglalják a qubitek és a kvantumrendszerek műveleteit, és a *függvények*, amelyek kizárólag a klasszikus információkkal működnek.</span><span class="sxs-lookup"><span data-stu-id="fd068-111">[Operations and functions](xref:microsoft.quantum.techniques.opsandfunctions) details the two callable types of the Q# language: *operations*, which include action on qubits and quantum systems; and *functions*, which strictly work with classical information.</span></span> 
+    <span data-ttu-id="fd068-112">A klasszikus és a kvantuminformáció párhuzamos használata nélkül a kvantum-számítástechnika továbbra is elérhetetlen marad.</span><span class="sxs-lookup"><span data-stu-id="fd068-112">Without both classical and quantum information working in tandem, quantum computing would remain out of reach.</span></span> 
+    <span data-ttu-id="fd068-113">Ez a szakasz ezen meghívható elemek meghatározását és használatát ismerteti a Q# programok átvitelvezérlésén belül.</span><span class="sxs-lookup"><span data-stu-id="fd068-113">This section describes how to define and use these callables within the control flow of a Q# program.</span></span>
+
+- <span data-ttu-id="fd068-114">A [Helyi változók](xref:microsoft.quantum.techniques.local-variables) szakasz a Q#-programokban lévő változók szerepét és hatékony kihasználását ismerteti.</span><span class="sxs-lookup"><span data-stu-id="fd068-114">[Local variables](xref:microsoft.quantum.techniques.local-variables) describes the role of variables within Q# programs and how to leverage them effectively.</span></span> 
+    <span data-ttu-id="fd068-115">Elsősorban a nem módosítható és módosítható változók közötti különbségről fog tanulni, illetve a hozzárendelésükről és az újbóli hozzárendelésükről.</span><span class="sxs-lookup"><span data-stu-id="fd068-115">In particular, you will learn the difference between immutable/mutable variables and how to assign/re-assign them.</span></span>
+
+- <span data-ttu-id="fd068-116">A [Munkavégzés qubitekkel](xref:microsoft.quantum.techniques.qubits) a Q# azon funkcióit ismerteti, amelyek az egyes qubitekhez és qubitrendszerekhez használhatók.</span><span class="sxs-lookup"><span data-stu-id="fd068-116">[Working with qubits](xref:microsoft.quantum.techniques.qubits) describes the features of Q# that you can use to address individual qubits and systems of qubits.</span></span> 
+    <span data-ttu-id="fd068-117">A szakasz kitér a kiosztásukra, a rajtuk végzett műveletekre és a mérésükre.</span><span class="sxs-lookup"><span data-stu-id="fd068-117">Specifically, that entails their allocation, performing operations on them, and ultimately their measurement.</span></span> 
+    <span data-ttu-id="fd068-118">Ráadásul elsajátíthat néhány hasznos átvitelvezérlési módszert is.</span><span class="sxs-lookup"><span data-stu-id="fd068-118">Additionally, you will learn some useful control flow techniques.</span></span>
+
+- <span data-ttu-id="fd068-119">A [Végső összeállítás](xref:microsoft.quantum.techniques.puttingittogether) szakaszban a fenti részekben ismertetett módszereket használva olyan programot hozhat létre, amely **kvantumteleportációt** hajt végre: két klasszikus bitet használva „teleportálja” egy qubit teljes állapotát egy másikba.</span><span class="sxs-lookup"><span data-stu-id="fd068-119">In [Putting it all together](xref:microsoft.quantum.techniques.puttingittogether), you will leverage the techniques from the sections above to create a program which performs **quantum teleportation**: using two classical bits to "teleport" the full state of one qubit onto another.</span></span>
+
+- <span data-ttu-id="fd068-120">A [Továbblépés](xref:microsoft.quantum.techniques.going-further) szakasz olyan gyakorlott felhasználóknak szóló módszereket mutat be, amelyek hasznosak lehetnek az összetettebb kvantumprogramozásra való áttérés során.</span><span class="sxs-lookup"><span data-stu-id="fd068-120">[Going further](xref:microsoft.quantum.techniques.going-further) introduces advanced techniques that can prove helpful as you move toward more complex quantum programming.</span></span> 
+    <span data-ttu-id="fd068-121">Kiemelten tárgyaljuk a *típusparaméteres* műveletek és függvények használatát a Q#-ban, amelyek lehetővé teszik a magasabb rendű átvitelvezérlést azáltal, hogy függetlenek maradnak a kimenet-/bemenettípusoktól, valamint qubiteket *kölcsönöznek*.</span><span class="sxs-lookup"><span data-stu-id="fd068-121">In particular, we discuss the use of *type-parameterized* operations and functions in Q#, which enable higher-order control flow by remaining agnostic to the specific types of their input/output, as well as *borrowing* qubits.</span></span> 
+    <span data-ttu-id="fd068-122">Az utóbbi eltér az alapszintű qubitkiosztástól abban, hogy egy Q#-művelet használhat „szabálytalan” qubiteket – olyan qubiteket, amelyeket nem feltétlenül inicializáltak ismert állapotba – a számítások támogatásához.</span><span class="sxs-lookup"><span data-stu-id="fd068-122">The latter differs from basic qubit allocation in that a Q# operation may use "dirty" qubits---qubits not necessarily initialized to a known state---to assist computations.</span></span>
+
+- <span data-ttu-id="fd068-123">A [Tesztelés és hibakeresés](xref:microsoft.quantum.techniques.testing-and-debugging) szakasz részletesen ismertet néhány módszert, amelyek segítségével meggyőződhet róla, hogy a kódja úgy működik, ahogyan kell.</span><span class="sxs-lookup"><span data-stu-id="fd068-123">[Testing and debugging](xref:microsoft.quantum.techniques.testing-and-debugging) details some techniques for making sure your code is doing what it is supposed to do.</span></span> 
+    <span data-ttu-id="fd068-124">A kvantuminformációk általános átlátszatlansága miatt egy kvantumprogram hibakereséséhez speciális módszerekre lehet szükség.</span><span class="sxs-lookup"><span data-stu-id="fd068-124">Due to the general opacity of quantum information, debugging a quantum program can require specialized techniques.</span></span> 
+    <span data-ttu-id="fd068-125">Szerencsére a Q# támogat számos, a programozok által alkalmazott klasszikus hibakeresési módszert, valamint kvantumspecifikus módszereket is.</span><span class="sxs-lookup"><span data-stu-id="fd068-125">Fortunately, Q# supports many of the classical debugging techniques programmers are used to, as well as those that are quantum-specific.</span></span> <span data-ttu-id="fd068-126">Ilyenek például az egységtesztek létrehozása/futtatása Q#-ban, a kódban szereplő értékekre és valószínűségekre vonatkozó *helyességi feltételek* beágyazása, valamint azok a `Dump` függvények, amelyek a célszámítógép állapotát adják vissza.</span><span class="sxs-lookup"><span data-stu-id="fd068-126">These include creating/running unit tests in Q#, embedding *assertions* on values and probabilities in your code, and the `Dump` functions which output the state of target machine.</span></span> 
+    <span data-ttu-id="fd068-127">Az utóbbi használható a teljes állapotú szimulátor mellett a számítások bizonyos részeinek hibakereséséhez, bizonyos kvantumkorlátozások (például a másolhatatlansági tétel) megkerülésével.</span><span class="sxs-lookup"><span data-stu-id="fd068-127">The latter can be used alongside our full state simulator to debug certain parts of computations by skirting some quantum limitations (e.g. the no-cloning theorem).</span></span>
+
 
 ![Kvantum](~/media/mobius_strip_preview.png)
-
-<span data-ttu-id="e5158-106">Ez a szakasz részletesen ismerteti a kvantumprogramok Q# használatával történő létrehozásakor alkalmazott alapvető fogalmakat, valamint az ezen programok hagyományos .NET-alkalmazásokból történő használatának módját.</span><span class="sxs-lookup"><span data-stu-id="e5158-106">This section details the core concepts used to create quantum programs in Q#, and to interact with those programs from classical .NET applications.</span></span>
-<span data-ttu-id="e5158-107">Ebben a szakaszban feltételezzük a kvantum-számítástechnikai fogalmak bizonyos mértékű ismeretét, amelyeket például a [Kvantum-számítástechnikai fogalmak](xref:microsoft.quantum.concepts.intro) című cikkben ismertettünk.</span><span class="sxs-lookup"><span data-stu-id="e5158-107">This section assumes some knowledge of quantum computing concepts like those described in [Quantum computing concepts](xref:microsoft.quantum.concepts.intro).</span></span>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
