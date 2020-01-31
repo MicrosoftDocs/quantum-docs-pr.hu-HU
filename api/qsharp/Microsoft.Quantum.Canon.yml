@@ -69,11 +69,7 @@ functions:
 
     A módosító `CA` azt jelzi, hogy a művelet ellenőrizhető és adjointable.
 - uid: microsoft.quantum.canon.compose
-  summary: >-
-    Két függvény összeállítását hozza létre.
-
-
-    Ez azt jelenti, hogy a két függvény $f $ és $g $, egy új függvényt ad vissza, amely az $f \circ g $ értéket jelképezi.
+  summary: Két függvény összeállítását adja vissza.
 - uid: microsoft.quantum.canon.conjugatedby
   summary: Az adott külső és belső műveletek olyan új műveletet adnak vissza, amely a belső műveletet a külső művelettel végzi.
 - uid: microsoft.quantum.canon.conjugatedbya
@@ -96,8 +92,10 @@ functions:
     Ez azt eredményezi, hogy a művelet két bemenettel rendelkezik, ez a függvény a curry isomorphism $f (x, y) \equiv f (x) (y) $-t alkalmazza egy olyan bemenet műveletének visszaadására, amely egy bemenet műveletét adja vissza.
 - uid: microsoft.quantum.canon.curryop
   summary: "\n> [!WARNING]\n> Elavult\n\nA CurryOp elavult. Ehelyett használja a @\"microsoft.quantum.canon.curriedop\".\nKérjük, használja a @\"microsoft.quantum.canon.curriedop\"."
-- uid: microsoft.quantum.canon.decomposeintotimestepsca
+- uid: microsoft.quantum.canon.decomposedintotimestepsca
   summary: Egy adott művelethez tartozó Trotter – Suzuki integrátort megvalósító műveletet ad vissza.
+- uid: microsoft.quantum.canon.decomposeintotimestepsca
+  summary: "\n> [!WARNING]\n> Elavult\n\nA DecomposeIntoTimeStepsCA elavult. Ehelyett használja a @\"microsoft.quantum.canon.decomposedintotimestepsca\"."
 - uid: microsoft.quantum.canon.delayed
   summary: Egy olyan műveletet ad vissza, amely a megadott argumentummal megadott műveletet alkalmazza.
 - uid: microsoft.quantum.canon.delayeda
@@ -238,17 +236,17 @@ functions:
 - uid: microsoft.quantum.canon.splitarray
   summary: "\n> [!WARNING]\n> Elavult\n\nA SplitArray elavult. Ehelyett használja a @\"microsoft.quantum.arrays.partitioned\".\nEhelyett használja a @\"Microsoft.Quantum.Arrays.Partitioned\"."
 - uid: microsoft.quantum.canon.stackcapacity
-  summary: Egy <xref:microsoft.quantum.canon.resultstack>kapacitásának beolvasása.
+  summary: "\n> [!WARNING]\n> Elavult\n\nA StackCapacity elavult."
 - uid: microsoft.quantum.canon.stacklength
-  summary: Egy <xref:microsoft.quantum.canon.resultstack>ban tárolt elemek számának beolvasása.
+  summary: "\n> [!WARNING]\n> Elavult\n\nA StackLength elavult."
 - uid: microsoft.quantum.canon.stacknew
-  summary: Létrehoz egy új, üres <xref:microsoft.quantum.canon.resultstack> a megadott kapacitással.
+  summary: "\n> [!WARNING]\n> Elavult\n\nA StackNew elavult."
 - uid: microsoft.quantum.canon.stackpeek
-  summary: Egy <xref:microsoft.quantum.canon.resultstack>legfelső elemét kérdezi le.
+  summary: "\n> [!WARNING]\n> Elavult\n\nA StackPeek elavult."
 - uid: microsoft.quantum.canon.stackpop
-  summary: Eltávolítja a legfelső elemet egy <xref:microsoft.quantum.canon.resultstack>ból.
+  summary: "\n> [!WARNING]\n> Elavult\n\nA StackPop elavult."
 - uid: microsoft.quantum.canon.stackpush
-  summary: Egy új elem leküldése egy <xref:microsoft.quantum.canon.resultstack>ra.
+  summary: "\n> [!WARNING]\n> Elavult\n\nA StackPush elavult."
 - uid: microsoft.quantum.canon.tooperation
   summary: "\n> [!WARNING]\n> Elavult\n\nA ToOperation elavult. Ehelyett használja a @\"microsoft.quantum.convert.functionasoperation\".\nKérjük, használja a @\"microsoft.quantum.convert.functionasoperation\"."
 - uid: microsoft.quantum.canon.transformedoperation
@@ -287,16 +285,18 @@ functions:
 - uid: microsoft.quantum.canon.weightonepaulis
   summary: Az összes Weight-1 Pauli operátor tömbjét adja vissza egy adott számú qubits.
 - uid: microsoft.quantum.canon.xor
-  summary: Ez kiszámítja a kizárólagos vagy a két bitet.
+  summary: "\n> [!WARNING]\n> Elavult\n\nA XOR elavult. Ehelyett használja a @\"microsoft.quantum.logical.xor\".\nKérjük, használja a @\"microsoft.quantum.logical.xor\"."
 operations:
 - uid: microsoft.quantum.canon.adiabaticstateenergyunitary
   summary: "\n> [!WARNING]\n> Elavult\n\nA AdiabaticStateEnergyUnitary elavult. Ehelyett használja a @\"microsoft.quantum.simulation.estimateenergywithadiabaticevolution\".\nKérjük, használja a @\"microsoft.quantum.simuilation.pnormalized\"."
 - uid: microsoft.quantum.canon.andladder
-  summary: >-
-    A cél qubits végrehajt egy vezérelt "AND ladder" műveletet.
-
-
-    Ez egy, az alábbi Térkép alapján, a számítási alapokra épülő vektorokra vonatkozik: $ $ \begin{align} \ket{x\_1, \dots, x\_n} \ket{y\_1, \dots, y\_{n-1}} \mapsto \ket{x\_1, \dots, x\_n} \ket{y\_1 \oplus (x\_1 \land x\_2), \dots, y\_{n-1} \oplus (x\_1 \land x\_2 \land \cdots \land x\_{n-1}} , \end{align} $ $, ahol $ \ket{x\_1, \dots, x\_n} $ a `controls`számítási állapotára hivatkozik, és ahol a $ \ket{y\_1, \dots, y\_{n-1}} $ a `targets`számítási állapotára hivatkozik.
+  summary: Felügyelt "és létra" műveletet hajt végre a célként megadott qubits regisztrálásakor.
+- uid: microsoft.quantum.canon.applyand
+  summary: A megadott qubit csak akkor áll le, ha mindkét vezérlő qubits 1 állapotban van, a adjoint művelet végrehajtásához használja a mérést.
+- uid: microsoft.quantum.canon.applycnotchain
+  summary: Kiszámítja a qubits-regisztráció paritását.
+- uid: microsoft.quantum.canon.applycnotchainwithtarget
+  summary: Kiszámítja egy qubits-tömb paritását egy célként megadott qubit.
 - uid: microsoft.quantum.canon.applydiagonalunitary
   summary: >-
     Összetett fázisokat alkalmaz a qubits regiszterének numerikus állapotára.
@@ -348,6 +348,8 @@ operations:
   summary: Egy, a klasszikus eredmény értékének nulla értékét alkalmazza.
 - uid: microsoft.quantum.canon.applyifzeroca
   summary: A klasszikus eredmény értékének nulla értékű, egységes műveletét alkalmazza.
+- uid: microsoft.quantum.canon.applylowdepthand
+  summary: A megadott qubit csak akkor áll le, ha mindkét vezérlő qubits 1 állapotban van, a T-depth 1 értékkel, a adjoint művelet elvégzéséhez használja a mérést.
 - uid: microsoft.quantum.canon.applymulticontrolledc
   summary: >-
     Egy megfelelően vezérelt művelet szorzás vezérelt verzióját alkalmazza.
@@ -528,7 +530,7 @@ operations:
 - uid: microsoft.quantum.canon.applywitha
   summary: A két művelet miatt a rendszer az egyiket a másikkal konjugáltként alkalmazza.
 - uid: microsoft.quantum.canon.applywithc
-  summary: ''
+  summary: A két művelet miatt a rendszer az egyiket a másikkal konjugáltként alkalmazza.
 - uid: microsoft.quantum.canon.applywithca
   summary: A két művelet miatt a rendszer az egyiket a másikkal konjugáltként alkalmazza.
 - uid: microsoft.quantum.canon.applywithinputtransformation
@@ -553,18 +555,12 @@ operations:
     Pontosabban azt állítja, hogy a $ \frac{e ^ {i t}} {\sqrt{2}} (e ^ {i\phi} \ ket{0} + e ^ {-i\phi} \ ket{1}) $ értékkel rendelkező Quantum állapot $ \phi $ értéke a várt értékkel rendelkezik.
 - uid: microsoft.quantum.canon.assertprobintbe
   summary: "\n> [!WARNING]\n> Elavult\n\nA AssertProbIntBE elavult. Ehelyett használja a következőt: @ \"assertprobint (stateindex, prob, bigendianaslittleendian (qubits), tolerancia)\".\nA művelet el lett távolítva."
+- uid: microsoft.quantum.canon.cascadecnot
+  summary: "\n> [!WARNING]\n> Elavult\n\nA CascadeCNOT elavult. Ehelyett használja a @\"microsoft.quantum.canon.applycnotchain\".\nKérjük, használja a @\"microsoft.quantum.canon.applycnotchain\"."
 - uid: microsoft.quantum.canon.cnotchain
-  summary: >-
-    Kiszámítja a qubits-tömb paritását.
-
-
-    A következő mintát követi: $ \ket{q_0} \ket{q_0 \oplus q_1} \ket{q_0 \oplus q_1 \oplus q_2} \cdots $.
+  summary: "\n> [!WARNING]\n> Elavult\n\nA CNOTChain elavult. Ehelyett használja a @\"microsoft.quantum.canon.applycnotchain\"."
 - uid: microsoft.quantum.canon.cnotchaintarget
-  summary: >-
-    Kiszámítja egy qubits-tömb paritását egy célként megadott qubit.
-
-
-    Ha a tömb kezdetben a $ \ket{q_0} \ket{q_1} \cdots \ket{q_ {\text{Target}}} $, a végleges állapotot a $ \ket{q_0} \ket{q_1 \oplus q_0} \cdots \ket{q_ {n-1} \oplus \cdots \oplus q_0 \oplus q_ {\text{Target}}} $.
+  summary: "\n> [!WARNING]\n> Elavult\n\nA CNOTChainTarget elavult. Ehelyett használja a @\"microsoft.quantum.canon.applycnotchainwithtarget\"."
 - uid: microsoft.quantum.canon.copymostsignificantbitle
   summary: "\n> [!WARNING]\n> Elavult\n\nA CopyMostSignificantBitLE elavult. Ehelyett használja a @\"microsoft.quantum.arithmetic.copymostsignificantbit\".\nKérjük, használja a @\"Microsoft.Quantum.Arithmetic.CopyMostSignificantBit\"."
 - uid: microsoft.quantum.canon.cx
@@ -604,6 +600,8 @@ operations:
     \begin{align} H_Y \mathrel{: =} \frac{1}{\sqrt{2}} \begin{bmatrix} 1 & 1 \\\\ i &-i \end{bmatrix}.
 
     \end{align}
+- uid: microsoft.quantum.canon.inplacemajority
+  summary: "\n> [!WARNING]\n> Elavult\n\nA InPlaceMajority elavult. Ehelyett használja a @\"microsoft.quantum.arithmetic.applymajorityinplace\".\nKérjük, használja a @\"microsoft.quantum.arithmetic.applymajorityinplace\"."
 - uid: microsoft.quantum.canon.inplacexorbe
   summary: "\n> [!WARNING]\n> Elavult\n\nA InPlaceXorBE elavult. Ehelyett használja a következőt: @ \"applyreversedopleca (applyxorinplace (Value, _), TARGET)\".\nA művelet el lett távolítva."
 - uid: microsoft.quantum.canon.inplacexorle
@@ -613,9 +611,9 @@ operations:
 - uid: microsoft.quantum.canon.integerincrementphasele
   summary: "\n> [!WARNING]\n> Elavult\n\nA IntegerIncrementPhaseLE elavult. Ehelyett használja a @\"microsoft.quantum.arithmetic.incrementphasebyinteger\".\nKérjük, használja a @\"Microsoft.Quantum.Arithmetic.IncrementPhaseByInteger\"."
 - uid: microsoft.quantum.canon.iteratethroughcartesianpower
-  summary: Megismétli a változót, azaz az ARR-t Descartes-szorzattal [0, Bound-1] × [0, kötött-1] × [0, Bound-1], és az op (ARR) hívásokat a Descartes-szorzat minden eleméhez.
+  summary: Végrehajt egy műveletet az egész tartomány Descartes-as teljesítményében lévő minden indexnél.
 - uid: microsoft.quantum.canon.iteratethroughcartesianproduct
-  summary: Megismétli egy változót, azaz `arr`egy Descartes terméken keresztül [0, határ [0]-1] × [0, határ [1]-1] × [0, határ [hossz (határ) – 1]-1] és az op (ARR) meghívása a Descartes termék minden eleméhez
+  summary: Végrehajt egy műveletet minden olyan indexnél, amely több tartomány Descartes-szorzatát tartalmazza.
 - uid: microsoft.quantum.canon.measureintegerbe
   summary: "\n> [!WARNING]\n> Elavult\n\nA MeasureIntegerBE elavult. Ehelyett használja a következőt: @ \"measureinteger (bigendianaslittleendian (TARGET))\".\nA művelet el lett távolítva."
 - uid: microsoft.quantum.canon.modularaddproductle
@@ -701,14 +699,11 @@ newtypes:
 - uid: microsoft.quantum.canon.ccnotop
   summary: A CCNOT-kapu aláírásának típusa
 - uid: microsoft.quantum.canon.resultstack
-  summary: >-
-    `Result` változók legutóbb bejelentkezett vereme.
-
-    A verem egy egész számból álló kapacitásból, egy verem-mutatóból és egy `Result` tömbből áll.
+  summary: "\n> [!WARNING]\n> Elavult\n\nA ResultStack elavult."
 metadata:
-  ms.openlocfilehash: 457d211ace716ddc09ebcd94c5cbc3c33b42d704
-  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+  ms.openlocfilehash: 8d54303daeb32281b1e531fce50443c132c14093
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 12/05/2019
-  ms.locfileid: "74858547"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76870724"

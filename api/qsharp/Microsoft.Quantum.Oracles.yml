@@ -1,7 +1,7 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.oracles
 name: Microsoft.Quantum.Oracles
-summary: " # <a name=\"summary\"></a>Összegzés\n Ez a névterek felhasználó által definiált típusokat biztosítanak különféle Oracle-típusok kiépítéséhez a kvantum-algoritmusokban, például a fázisok becslése és az amplitúdó-erősítés alapján."
+summary: " # <a name=\"summary\"></a>Összefoglalás\n Ez a névterek felhasználó által definiált típusokat biztosítanak különféle Oracle-típusok kiépítéséhez a kvantum-algoritmusokban, például a fázisok becslése és az amplitúdó-erősítés alapján."
 functions:
 - uid: microsoft.quantum.oracles.deterministicstateoraclefromstateoracle
   summary: '`StateOracle` típusú Oracle-t konvertál `DeterministicStateOracle`re.'
@@ -10,11 +10,7 @@ functions:
 - uid: microsoft.quantum.oracles.oracletodiscrete
   summary: Egy "Black-Box" Oracle-t jelképező művelet miatt egy diszkrét idejű Oracle-t ad vissza, amely a "fekete doboz" Oracle többször ismétlődik.
 - uid: microsoft.quantum.oracles.reflectionoraclefromdeterministicstateoracle
-  summary: >-
-    Egy Oracle-ből származó adott állapottal kapcsolatos reflexiót hoz létre.
-
-
-    Ha az Oracle $O $ típusú <xref:microsoft.quantum.oracles.deterministicstateoracle>, a függvény eredménye a $ \ket{\psi} $ állapotú, amely $O \ket{0} = \ket{\psi} $.
+  summary: Egy Oracle-ből származó adott állapottal kapcsolatos reflexiót hoz létre.
 - uid: microsoft.quantum.oracles.stateoraclefromdeterministicstateoracle
   summary: '`DeterministicStateOracle` típusú Oracle-t konvertál `StateOracle`re.'
 newtypes:
@@ -73,9 +69,9 @@ newtypes:
 
     - A rendszer regisztrálja $s $, amely a kívánt Quantum State $ \ket{\psi}\_s $ értéket fogja tárolni.
 metadata:
-  ms.openlocfilehash: 10eb2c7acebf805b955816abe2bf1cabb95ce059
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 7e582286b69563bc4baa856f5236e5c2bd292ae0
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73216101"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76870003"

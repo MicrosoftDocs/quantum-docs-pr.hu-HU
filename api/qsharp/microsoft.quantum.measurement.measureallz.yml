@@ -1,0 +1,32 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.measurement.measureallz
+name: MeasureAllZ
+type: operation
+namespace: Microsoft.Quantum.Measurement
+summary: >-
+  Közösen méri a qubits-regisztrációt a Pauli Z alapján.
+
+
+  A qubits regiszterét méri a $Z \otimes Z \otimes \cdots \otimes Z $ alapján, amely a teljes regiszter paritását jelképezi.
+syntax: 'operation MeasureAllZ (register : Qubit[]) : Result'
+input:
+  content: '(register : Qubit[])'
+  types:
+  - name: register
+    summary: A mérendő regisztráció.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Result
+  types:
+  - summary: A \otimes \cdots \otimes Z $ \otimes $Z mérésének eredménye.
+    isPrimitive: true
+    uid: Result
+metadata:
+  ms.openlocfilehash: a893d5b42ad39fce0f2a0516d1a99c8f03a0b37e
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.translationtype: MT
+  ms.contentlocale: hu-HU
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76872342"

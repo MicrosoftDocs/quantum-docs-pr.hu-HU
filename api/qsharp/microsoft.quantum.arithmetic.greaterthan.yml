@@ -3,7 +3,11 @@ uid: microsoft.quantum.arithmetic.greaterthan
 name: GreaterThan
 type: operation
 namespace: Microsoft.Quantum.Arithmetic
-summary: Szigorúan nagyobb, mint két egész szám összehasonlítása $x $ és $y $, a qubit-ben kódolva, az XS és az időpontot. Ha $x > y $, akkor az eredmény qubit lesz tükrözve, máskülönben megtartja az állapotát.
+summary: >-
+  Több mint összehasonlítást alkalmaz a qubit-regiszterbe kódolt két egész szám között, az összehasonlítás eredményétől függően a célként megadott qubit.
+
+
+  Szigorúan nagyobb, mint két egész szám összehasonlítása $x $ és $y $, a qubit-ben kódolva, az XS és az időpontot. Ha $x > y $, akkor az eredmény qubit lesz tükrözve, ellenkező esetben az eredmény qubit meg fogja őrizni az állapotát.
 remarks: A (z) $x-y = (x ' + y) ' $ értéket használja, ahol a "az egymást kiegészítő értéket jelöli.
 syntax: 'operation GreaterThan (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, result : Qubit) : Unit'
 references: >-
@@ -33,9 +37,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 6961a6a4f22d2290a264298a3be3b15f7bdb0ac7
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 062d892ad66b8ab41e8ad0bbd2fce6e1eaff0baa
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73214945"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76870852"

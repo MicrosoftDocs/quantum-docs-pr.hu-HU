@@ -1,7 +1,7 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.simulation
 name: Microsoft.Quantum.Simulation
-summary: " # <a name=\"summary\"></a>Összegzés\n Ez a névtér olyan függvényeket és műveleteket tartalmaz, amelyek koherens módon szimulálják a kvantum-rendszerek dinamikáját."
+summary: " # <a name=\"summary\"></a>Összefoglalás\n Ez a névtér olyan függvényeket és műveleteket tartalmaz, amelyek koherens módon szimulálják a kvantum-rendszerek dinamikáját."
 functions:
 - uid: microsoft.quantum.simulation.addgeneratorsystems
   summary: Két `GeneratorSystem`s hozzáadásával új `GeneratorSystem`hozhat létre.
@@ -62,11 +62,7 @@ functions:
 - uid: microsoft.quantum.simulation.paulistringfromgenidx
   summary: Kibontja a Pauli-karakterláncot és annak qubit-indexeit egy `GeneratorIndex`által leírt Pauli-kifejezésből.
 - uid: microsoft.quantum.simulation.quantumwalkbyqubitization
-  summary: >-
-    Egy `BlockEncodingReflection`t egy Quantum Walk-re alakít.
-
-
-    Ez egy olyan `BlockEncodingReflection` egységes $U $, amely egy operátort $H $ kamatot kódol, egy Quantum Walk $W $ értékre konvertálja, amely a $ \pm e ^ {\pm i\sin ^{-1}(H)} $ spektrumot tartalmazza.
+  summary: A blokk kódolású tükröződést egy Quantum walkre konvertálja.
 - uid: microsoft.quantum.simulation.sumgeneratorsystems
   summary: Több `GeneratorSystem`s hozzáadásával új GeneratorSystem hozhat létre.
 - uid: microsoft.quantum.simulation.timedependenttrottersimulationalgorithm
@@ -162,9 +158,9 @@ newtypes:
 - uid: microsoft.quantum.simulation.unitary
   summary: Egy egységes operátor alatt álló evolúciót jelöl.
 metadata:
-  ms.openlocfilehash: 05db213d04304a635e4e86e0f6c40f15bb81441a
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 967c27e6c5c8f475e54f7e9d4f3a14594fb04cc5
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73215880"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76869827"

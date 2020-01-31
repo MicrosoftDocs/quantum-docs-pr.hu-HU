@@ -1,0 +1,58 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.amplitudeamplification.obliviousamplitudeamplificationfromstatepreparation
+name: ObliviousAmplitudeAmplificationFromStatePreparation
+type: function
+namespace: Microsoft.Quantum.AmplitudeAmplification
+summary: A részleges reflexiók esetében az amplitúdó-erősítést az Oracles okozta.
+remarks: >-
+  Ez szigorúbb feltételeket ró a kisegítő kezdő és megcélzott állapotok formájára, mint a `AmpAmpObliviousByReflectionPhases`.
+
+  Feltételezi, hogy $A \ket{0}\_f\ket{0}\_a = \ket{\text{Start}}\_{fa} $ előkészíti a kiegészítő indítási állapotot a $ \ket{\text{Start}}\_{fa} $ értékről a $ \ket{0}\_f\ket{0}$ számítási alapból.
+
+  Feltételezzük, hogy a célként megadott állapotot a $ \ket{1}\_f $ érték jelöli.
+
+  Feltételezzük, hogy a \begin{align} O\ket {\ Text {Start}}\_{fa} \ket{\psi}\_s = \lambda\ket{1}\_f\ket {\ Text {Anything}}\_a\ket {\ Text {Target}}\_s U \ket{\psi}\_s + \sqrt{1-| \lambda | ^ 2} \ket{0}\_f\cdots, \end{align} egy egységes $U $.
+syntax: 'function ObliviousAmplitudeAmplificationFromStatePreparation (phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, startStateOracle : Microsoft.Quantum.Oracles.DeterministicStateOracle, signalOracle : Microsoft.Quantum.Oracles.ObliviousOracle, idxFlagQubit : Int) : ((Qubit[], Qubit[]) => Unit is Adj + Ctl)'
+input:
+  content: '(phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, startStateOracle : Microsoft.Quantum.Oracles.DeterministicStateOracle, signalOracle : Microsoft.Quantum.Oracles.ObliviousOracle, idxFlagQubit : Int)'
+  types:
+  - name: phases
+    summary: Részleges tükrözések fázisai
+    uid: microsoft.quantum.amplitudeamplification.reflectionphases
+  - name: startStateOracle
+    summary: Az egységes Oracle $A $, amely előkészíti a kiegészítő indítási állapotot
+    uid: microsoft.quantum.oracles.deterministicstateoracle
+  - name: signalOracle
+    summary: Egységes Oracle $O $ típusú `ObliviousOracle`, amely együttesen működik a kiegészítő és a rendszerregisztráción
+    uid: microsoft.quantum.oracles.obliviousoracle
+  - name: idxFlagQubit
+    summary: Index – qubit jelző regisztrálása
+    isPrimitive: true
+    uid: Int
+output:
+  content: ((Qubit[], Qubit[]) => Unit is Adj + Ctl)
+  types:
+  - summary: Egy művelet, amely a részleges reflexiók alapján elismeri az amplitúdó-erősítést.
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+    - Controlled
+metadata:
+  ms.openlocfilehash: fa44068c55a1bb92f8827095889f9c3b4d6f1011
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.translationtype: MT
+  ms.contentlocale: hu-HU
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76872444"
