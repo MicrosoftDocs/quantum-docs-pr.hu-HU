@@ -18,7 +18,7 @@
           href: overview/how-to-learn-quantum-computing.md
     - name: A Kvantum Katák megismerése
       href: intro-to-katas.md
-- name: Gyors útmutatók
+- name: Rövid útmutatók
   items:
     - name: Kvantum-véletlenszámgenerátor
       href: quickstarts/qrng.md
@@ -29,7 +29,15 @@
 - name: Útmutatók
   items:
     - name: A QDK telepítése
-      href: install-guide/index.md
+      items:
+        - name: A telepítés áttekintése
+          href: install-guide/index.md
+        - name: 'Q# + C#'
+          href: install-guide/csinstall.md
+        - name: 'Q# + Python'
+          href: install-guide/pyinstall.md
+        - name: 'Q# Jupyter-notebookok'
+          href: install-guide/qjupyter.md
     - name: A QDK frissítése
       href: install-guide/update.md
     - name: 'Q#-projekt létrehozása'

@@ -6,12 +6,12 @@ ms.author: nakersha
 ms.date: 09/30/2019
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: c709f1eb130d37f930ffc4acc4bd663b8b8ba24a
-ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+ms.openlocfilehash: c135dacb2fc305fa97874cb4abcf4e2ac489b9e4
+ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
 ms.translationtype: HT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74863163"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76871617"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>A Microsoft Quantum Development Kit kibocsátási megjegyzései
 
@@ -20,6 +20,19 @@ Ez a cikk információkat tartalmaz a Quantum Development Kit egyes verzióiról
 A telepítési utasításokat lásd a [telepítési útmutatóban](xref:microsoft.quantum.install).
 
 A frissítésre vonatkozó utasításokat lásd a [frissítési útmutatóban](xref:microsoft.quantum.update).
+
+## <a name="version-01020012831"></a>0\.10.2001.2831-es verzió
+
+*Kiadási dátum: 2020. január 29.*
+
+A verzió a következőket tartalmazza:
+
+- Új Microsoft.Quantum.SDK NuGet-csomag. További részletekért tekintse meg a [fontos fájlt](https://github.com/microsoft/qsharp-compiler/blob/master/src/QuantumSdk/README.md).
+- Mostantól támogatott a .NET Core 3.1 – erősen ajánlott a 3.1.100-s verzió telepítése, mert a korábbi .NET Core SDK-verziókkal való fejlesztés hibákat eredményezhet.
+- A Microsoft.Quantum.QsCompiler.Experimental alatt új fordítóprogram-transzformációk érhetők el
+- Új funkciók a kimeneti állapotú vektorok megjelenítéséhez az IQ#-ban HTML formátumban
+- Mostantól támogatott az EstimateFrequencyA a Microsoft.Quantum.Characterization névtérben a Hadamard-művelet és a SWAP tesztek esetében
+- Az AmplitudeAmplification névtér mostantól Q#-stílusútmutatót használ
 
 ## <a name="version-01019120501"></a>0\.10.1912.0501-es verzió
 
@@ -461,7 +474,7 @@ Vegye figyelembe, hogy a Microsoft.Quantum.Canon névtérben található RandomW
 
 ### <a name="known-issues"></a>Ismert problémák
 
-- A(z) `dotnet test` `--filter` beállítása nem működik megfelelően a Q#-ban írt tesztek esetén.
+- A(z) `dotnet test``--filter` beállítása nem működik megfelelően a Q#-ban írt tesztek esetén.
   Ennek eredményeképpen nem futtathatók egyéni egységtesztek a Visual Studio Code-ban. A(z) `dotnet test` használatát javasoljuk a parancssorban az összes teszt újbóli lefuttatásához.
 
 ## <a name="version-0118011707"></a>0\.1.1801.1707-es verzió
