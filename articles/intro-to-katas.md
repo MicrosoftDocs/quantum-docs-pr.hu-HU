@@ -6,12 +6,12 @@ ms.author: nakersha
 ms.date: 10/17/2019
 ms.topic: overview
 uid: microsoft.quantum.overview.katas
-ms.openlocfilehash: 7fb8dba2a10f9a983ebee52e394260bbdc0d2f9c
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.openlocfilehash: af54a2260147b8ca07919b241548aac85ed0d8a1
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: HT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73444140"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821099"
 ---
 # <a name="learn-quantum-computing-with-the-quantum-katas"></a>Ismerkedés a kvantum-számítástechnikával a Kvantum Katák segítségével
 
@@ -19,7 +19,7 @@ A [Kvantum Katák](https://github.com/Microsoft/QuantumKatas/) saját ütemben e
 
 ## <a name="learning-by-doing"></a>Gyakorlati tanulás
 
-Az ebben a projektben összegyűjtött oktatóanyagok és katák a gyakorlati tanulást hangsúlyozzák: programozási feladatokat nyújtanak különböző témakörökben, a legegyszerűbbektől az igen bonyolultakig. Minden feladatnál kódokat kell létrehoznia. Az első feladatokban előfordul, hogy csak egy sorra lesz szüksége, a későbbieknél viszont már akár hosszabb kódrészletekre is.
+Az ebben a projektben összegyűjtött oktatóanyagok és gyakorlatok a gyakorlati tanulást támogatják: különböző témaköröket érintő programozási feladatokat tartalmaznak, a legegyszerűbbektől az igen bonyolultakig. Minden feladatnál kódokat kell létrehoznia. Az első feladatokban előfordul, hogy csak egy sorra lesz szüksége, a későbbieknél viszont már akár hosszabb kódrészletekre is.
 
 A legfontosabb dolog, hogy a katák tartalmaznak tesztelési keretrendszereket is, amelyek összeállítják, lefuttatják és ellenőrzik a feladatok megoldásait. Ezáltal Ön azonnali visszajelzést kaphat a megoldását illetően, és újragondolhatja a megközelítését, ha az helytelen.
 
@@ -36,10 +36,12 @@ A Kvantum Katák a következő fő témakörökkel foglalkoznak. Javasoljuk, hog
 
 ### <a name="introduction-to-quantum-computing-concepts"></a>Bevezetés a kvantum-számítástechnikai fogalmakba
 
-* [Összetett aritmetika](https://github.com/microsoft/QuantumKatas/blob/master/tutorials/ComplexArithmetic):
-* [Lineáris algebra](https://github.com/microsoft/QuantumKatas/blob/master/tutorials/LinearAlgebra)
-* [A qubit fogalma](https://github.com/microsoft/QuantumKatas/blob/master/tutorials/Qubit)
-* [Egyqubites kvantumkapuk](https://github.com/microsoft/QuantumKatas/blob/master/tutorials/SingleQubitGates)
+* [Összetett aritmetika](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/ComplexArithmetic):
+* [Lineáris algebra](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/LinearAlgebra)
+* [A qubit fogalma](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/Qubit)
+* [Egyqubites kvantumkapuk](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/SingleQubitGates)
+* [Többqubites rendszerek](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/MultiQubitSystems)
+* [Többqubites kapuk](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/MultiQubitGates)
 
 ### <a name="quantum-computing-fundamentals"></a>Kvantum-számítástechnikai alapfogalmak
 
@@ -52,10 +54,10 @@ A Kvantum Katák a következő fő témakörökkel foglalkoznak. Javasoljuk, hog
 
 * [Kvantumteleportáció](https://github.com/microsoft/QuantumKatas/tree/master/Teleportation)
 * [Szupersűrű kódolás](https://github.com/microsoft/QuantumKatas/tree/master/SuperdenseCoding)
-* [A Deutsch–Jozsa-algoritmus](https://github.com/microsoft/QuantumKatas/blob/master/tutorials/DeutschJozsaAlgorithm)
+* [A Deutsch–Jozsa-algoritmus](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/ExploringDeutschJozsaAlgorithm)
 * [A Grover-féle keresőalgoritmus implementálása](https://github.com/microsoft/QuantumKatas/tree/master/GroversAlgorithm)
-* [A Grover-féle keresőalgoritmus általános tulajdonságai](https://github.com/microsoft/QuantumKatas/blob/master/tutorials/ExploringGroversAlgorithm)
-* Valós problémák megoldása a Grover-algoritmussal: [SAT-problémák](https://github.com/microsoft/QuantumKatas/blob/master/SolveSATWithGrover) és [gráfszínezési problémák](https://github.com/microsoft/QuantumKatas/blob/master/GraphColoring)
+* [A Grover-féle keresőalgoritmus általános tulajdonságai](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/ExploringGroversAlgorithm)
+* Valós problémák megoldása a Grover-algoritmussal: [SAT-problémák](https://github.com/microsoft/QuantumKatas/tree/master/SolveSATWithGrover) és [gráfszínezési problémák](https://github.com/microsoft/QuantumKatas/tree/master/GraphColoring)
 
 ### <a name="protocols-and-libraries"></a>Protokollok és kódtárak
 
@@ -66,8 +68,8 @@ A Kvantum Katák a következő fő témakörökkel foglalkoznak. Javasoljuk, hog
 
 ### <a name="entanglement-games"></a>Összefonódási játékok
 
-* [CHSH játék](https://github.com/microsoft/QuantumKatas/blob/master/CHSHGame)
-* [GHZ játék](https://github.com/microsoft/QuantumKatas/blob/master/GHZGame)
+* [CHSH játék](https://github.com/microsoft/QuantumKatas/tree/master/CHSHGame)
+* [GHZ játék](https://github.com/microsoft/QuantumKatas/tree/master/GHZGame)
 * [A Mermin–Peres-féle bűvös négyzetek játéka](https://github.com/microsoft/QuantumKatas/tree/master/MagicSquareGame)
 
 ## <a name="resources"></a>További források

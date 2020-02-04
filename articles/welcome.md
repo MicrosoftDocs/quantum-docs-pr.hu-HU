@@ -6,16 +6,18 @@ author: natke
 ms.author: nakersha
 ms.date: 10/23/2019
 ms.topic: overview
-ms.openlocfilehash: 8fb3b7181632bd6f2b562735546adbf4b461a1b6
-ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+ms.openlocfilehash: 4308bf7e0e48e5735419fab836e479641455e9a5
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: HT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73530019"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76819927"
 ---
 # <a name="get-started-with-the-quantum-development-kit-qdk"></a>Bevezetés a Quantum Development Kit (QDK) használatába
 
-Üdvözli a Microsoft Quantum Development Kit!  Itt minden eszközt megtalál, amire csak szüksége van a Q#-val végzett kvantumprogramozáshoz.  A Q#-ra épülő kvantum-számítástechnika megismeréséhez útmutatásként szolgál ez az első lépéseket ismertető útmutató, amelyet útikalauzként használhatnak azok, akik el szeretnének kezdeni kvantumprogramokat írni, valamint azok, akik még nem állnak készen a programozásra, de többet szeretnének megtudni a Q#-ról és a kvantumprogramozásról.
+Üdvözli a Microsoft Quantum Development Kit!  Itt minden eszközt megtalál, amire csak szüksége van a Q#-val végzett kvantumprogramozáshoz.  A Q#-ra épülő kvantum-számítástechnika megismerésében segít ez az első lépéseket ismertető útmutató, amelyet útikalauzként használhatnak azok, akik el szeretnének kezdeni kvantumprogramokat írni, valamint azok, akik még nem állnak készen a programozásra, de többet szeretnének megtudni a Q#-ról és a kvantumprogramozásról. 
+
+Ha készen áll a programozásra, [telepítse most a QDK-t](xref:microsoft.quantum.install).
 
 ## <a name="questions-about-quantum-computing"></a>Kérdések a kvantum-számítástechnikáról
 
@@ -54,9 +56,8 @@ A fenti első lépésekkel kapcsolatos útmutatók és cikkek a programozókat �
 * Tekintse át [Q#-példáinkat](https://docs.microsoft.com/samples/browse/?languages=qsharp), és fedezze fel, milyen problémákat oldhat meg a kvantum-számítástechnika segítségével.
 
 * Fejlesszen ki programokat egy helyi gépen az Ön által választott programozói nyelven és fejlesztői környezetben:
-  * Fejlesztés a [Pythonnal](xref:microsoft.quantum.install#develop-with-python)
-  * Fejlesztés a [Visual Studióval](xref:microsoft.quantum.install#develop-with-c-on-windows-using-visual-studio)
-  * Fejlesztés a [Visual Studio Code-dal](xref:microsoft.quantum.install#develop-with-c-using-visual-studio-code)
-  * Fejlesztés a [Jupyter Notebookkal](xref:microsoft.quantum.install#develop-with-jupyter-notebooks)
+  * Fejlesztés [Q# + Python használatával](xref:microsoft.quantum.install.python)
+  * Fejlesztés [Q# + C# használatával](xref:microsoft.quantum.install.cs)
+  * Fejlesztés [Q# Jupyter-notebookokkal](xref:microsoft.quantum.install.jupyter)
 
 * Legyen része a Microsoft Quantum közösségének, és járuljon hozzá a [QDK](xref:microsoft.quantum.contributing) nyílt forráskódú projekthez.
