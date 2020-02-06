@@ -6,12 +6,12 @@ uid: microsoft.quantum.libraries.characterization
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 51124dc78feedf6d5c85fe224898e66a1c5ed459
-ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+ms.openlocfilehash: 0c347113339a77e9eaf63dc0967c320f8b063a0e
+ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76870349"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77036253"
 ---
 # <a name="quantum-characterization-and-statistics"></a>Quantum jellemzés és statisztika #
 
@@ -88,7 +88,7 @@ A hagyományos klasszikus terminológiát követve a $ \eqref{EQ: Phase-est-val�
 
 Miután megfigyelte az iterációs fázis becsült valószínűségi függvényének `Result`ét, a Bayes szabályt használva megadhatja, hogy mit higgyünk a megfigyelés követésének fázisában.
 Konkrétan, \begin{Equation} \Pr (\phi | d) = \frac{\Pr (d | \phi) \Pr (\phi)} {\int \Pr (d | \phi) \Pr (\phi) {\mathrm d} \phi} \Pr (\phi), \end{Equation}, ahol $d \in \\{\texttt{Zero}, \texttt{One}\\} $ egy `Result`, és ahol $ \Pr (\phi) $ leírja a $ \phi $-vel kapcsolatos korábbi hiedelmeket
-Ekkor az iterációs fázis becslésének iterációs jellege egyértelművé válik, mivel a posterior Distribution $ \Pr (\phi | d) $ a bájtértékre a következő `Result`megfigyelését azonnal leírja.
+Ekkor az iterációs fázis becslésének iterációs jellege egyértelművé válik, mivel a posterior Distribution $ \Pr (\phi | d) $ a következő `Result`megfigyelését követően azonnal leírja a hitét.
 
 Ebben az eljárásban bármely ponton jelentést készíthetünk a klasszikus vezérlő által a \begin{Equation} \hat{\phi} \mathrel{: =} \expect [\phi | \text{Data}] = \int \phi \Pr (\phi | \text{Data}) {\mathrm d} \phi, \end{Equation}, ahol $ \text{Data} $ a kapott összes `Result` érték teljes \hat{\phi}.
 

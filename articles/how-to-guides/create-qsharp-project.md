@@ -7,12 +7,12 @@ ms.date: 10/19/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.howto.createproject
-ms.openlocfilehash: 5fa32f14291fa2070b49e4bb3b720cbf31ee614b
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: c093284f1ea33b72d4d264992b0ba6bf6bc72782
+ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76819892"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77036440"
 ---
 # <a name="create-a-q-project-in-your-development-environment"></a>Q # projekt létrehozása a fejlesztői környezetben
 
@@ -36,7 +36,7 @@ Válassza ki a fejlesztési környezetét és nyelvét az alábbi fejezetekben:
 
 1. Hozzon létre egy mappát a projekt számára, és navigáljon a mappára
 
-1. Hozzon létre egy `Operation.qs`nevű Q # fájlt, és adja hozzá a Q # kódját. Példa:
+1. Hozzon létre egy `Operation.qs`nevű Q # fájlt, és adja hozzá a Q # kódját. Például:
 
     ```qsharp
     namespace HelloWorld {
@@ -50,7 +50,7 @@ Válassza ki a fejlesztési környezetét és nyelvét az alábbi fejezetekben:
     }
     ```
 
-1. Hozzon létre egy `host.py` nevű Python-gazdagépet a Q # művelet meghívásához. Példa:
+1. Hozzon létre egy `host.py` nevű Python-gazdagépet a Q # művelet meghívásához. Például:
 
     ```python
     import qsharp
@@ -87,7 +87,7 @@ Most már folytathatja a kvantum-program fejlesztését.
     jupyter notebook
     ```
 
-1. Lépjen a parancssorban megjelenített URL-címre. Például: [http://localhost:8888/?token=c790a52ba54f0cf77465c3c8983d776348285b0280d91b85 ]
+1. Lépjen a parancssorban megjelenített URL-címre. Például: [http://localhost:8888/?token=c790a52ba54f0cf77465c3c8983d776348285b0280d91b85]
 
 1. Megjelenik egy Jupyter lap a böngészőben. A **Files (fájlok** ) lapon válassza az **új** > **q #** lehetőséget, hogy Jupyter-jegyzetfüzetet hozzon létre a q # kernel használatával. Adja hozzá a következő kódot az első jegyzetfüzet-cellához:
 
@@ -173,7 +173,7 @@ Most már folytathatja a kvantum-fejlesztést a Visual Studio Code használatáv
 
 1. Új alkalmazás létrehozása
 
-    ```bash
+    ```dotnetcli
     dotnet new console -lang Q# -o <project name>
     ```
 
@@ -187,7 +187,7 @@ Most már folytathatja a kvantum-fejlesztést a Visual Studio Code használatáv
 
 1. Az alkalmazás futtatása
 
-    ```bash
+    ```dotnetcli
     dotnet run
     ```
 
@@ -195,6 +195,6 @@ Most már folytathatja a kvantum-fejlesztést a Visual Studio Code használatáv
 
 Most folytassa a kvantum-fejlesztést a parancssori eszközök használatával.
 
-## <a name="whats-next"></a>Vajon mi a következő lépés?
+## <a name="whats-next"></a>A következő lépések
 
 Most, hogy létrehozott egy projektet az előnyben részesített környezetben, folytathatja a kvantum-fejlesztést.

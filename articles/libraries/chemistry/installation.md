@@ -6,12 +6,12 @@ ms.author: gulow
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.chemistry.concepts.installation
-ms.openlocfilehash: fd43c783fa82c7219e143a57759919606fdd197f
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: de13d1814821c612ed74a347dc8ffb5881063576
+ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73184202"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77036474"
 ---
 # <a name="chemistry-library-installation-and-validation"></a>Kémiai könyvtárak telepítése és érvényesítése
 
@@ -51,18 +51,18 @@ További részletekért tekintse meg a [Package Manager konzol útmutatóját](h
 
 **Parancssor vagy Visual Studio code:** Ha a parancssort saját vagy a Visual Studio Code-ból szeretné használni, a `dotnet` paranccsal adhat hozzá NuGet-csomagot a projekthez:
 
-```bash
+```dotnetcli
 dotnet add package Microsoft.Quantum.Chemistry
 ```
 
 ## <a name="verifying-your-installation"></a>A telepítés ellenőrzése 
 
 A Quantum Development Kit többi részéhez hasonlóan a kvantum-kémia könyvtára számos teljesen dokumentált mintát tartalmaz, amelyek segítségével gyorsan megkezdheti a működést.
-Ha tesztelni szeretné a telepítést ezen minták használatával, akkor a [fő minták tárházát](https://github.com/Microsoft/Quantum), majd futtassa az egyik mintát.  Például a [`MolecularHydrogen`](https://github.com/Microsoft/Quantum/tree/master/Chemistry/MolecularHydrogen) minta futtatásához:
+Ha tesztelni szeretné a telepítést ezen minták használatával, akkor a [fő minták tárházát](https://github.com/Microsoft/Quantum), majd futtassa az egyik mintát.  Például a [`MolecularHydrogen`](https://github.com/microsoft/Quantum/tree/master/samples/chemistry/MolecularHydrogen) minta futtatásához:
 
 ```bash
 git clone https://github.com/Microsoft/Quantum.git
-cd Quantum/Chemistry/MolecularHydrogen
+cd Quantum/samples/chemistry/MolecularHydrogen
 dotnet run
 ```
 
@@ -78,11 +78,11 @@ Az energia szintjeinek becslésével kapcsolatos további információkért lás
 
 A MolecularHydrogen minta manuálisan konfigurált molekuláris bemeneti adatokat használ.  Habár ez a kis példák esetében is jó, a kvantum-kémia méretének Hamiltonians millió vagy több milliárd kifejezéssel kell rendelkeznie. A skálázható számítási kémia csomagok által generált Hamiltonians túl nagyok a kézzel történő importáláshoz. 
 
-A Quantum Development Kit-hez készült Quantum kémiai könyvtár úgy lett kialakítva, hogy jól használható legyen a számítási kémia csomagjaival, a legtöbb esetben a környezeti molekuláris tudományok laboratóriuma által fejlesztett [**NWChem**](http://www.nwchem-sw.org/) számítási kémia platform ( EMSL) a Pacific Northwest nemzeti laboratóriumában.
+A Quantum Development Kit-hez készült Quantum kémiai könyvtár úgy lett kialakítva, hogy jól használható legyen a számítási kémia csomagjaival, leginkább a [**NWChem**](http://www.nwchem-sw.org/) számítási kémia platformját, amelyet a környezeti molekuláris tudományok laboratóriuma (EMSL) fejlesztett ki a csendes-óceáni országos laboratóriumban.
 A `Microsoft.Quantum.Chemistry` csomag különösen a [Broombridge-sémában](xref:microsoft.quantum.libraries.chemistry.schema.broombridge)képviselt Quantum kémia-szimulációs problémák példányainak betöltésére szolgáló eszközöket biztosít, amelyeket a NWChem legújabb verziói is támogatnak.
 
 A NWChem és a Quantum Development Kit együttes használatának megkezdéséhez a következő módszerek egyikét javasoljuk:
-- Ismerkedjen meg a [IntegralData/YAML-](https://github.com/Microsoft/Quantum/tree/master/Chemistry/IntegralData/YAML)ben a mintákhoz megadott meglévő Broombridge-fájlok használatával.
+- Ismerkedjen meg a [IntegralData/YAML-](https://github.com/microsoft/Quantum/tree/master/samples/chemistry/IntegralData/YAML)ben a mintákhoz megadott meglévő Broombridge-fájlok használatával.
 - Használja a [EMSL Arrows Builder-t a Microsoft Quantum Development Kit](https://arrows.emsl.pnnl.gov/api/qsharp_chem) webalapú NWChem, amely új, Broombridge formátumú molekuláris bemeneti fájlok létrehozását eredményezi.  
 - Használja a PNNL által biztosított [Docker-rendszerképet](https://hub.docker.com/r/nwchemorg/nwchem-qc/) a NWChem futtatásához, vagy
 - [Fordítsa](http://www.nwchem-sw.org/index.php/Compiling_NWChem) le a NWChem a platformhoz.
@@ -90,9 +90,10 @@ A NWChem és a Quantum Development Kit együttes használatának megkezdéséhez
 Tekintse meg a [NWChem teljes körű](xref:microsoft.quantum.chemistry.examples.endtoend) ismertetését a NWChem és a kémiai modellek használatáról a Quantum fejlesztés Kit kémiai könyvtárának elemzéséhez.
 
 ### <a name="getting-started-using-broombridge-files-provided-with-the-samples"></a>A mintákhoz megadott Broombridge-fájlok használatának első lépései
-A [IntegralData/YAML](https://github.com/Microsoft/Quantum/tree/master/Chemistry/IntegralData/YAML) mappa a Quantum Development Kit Samples adattárában a Broombridge-formázott molekula-adatfájlok szerepelnek.  
 
-Egyszerű példaként használja a kémia könyvtár mintát, a [GetGateCount](https://github.com/Microsoft/Quantum/tree/master/Chemistry/GetGateCount) a Hamilton betöltéséhez az egyik Broombridge-fájlból, és hajtsa végre a Quantum szimulációs algorigthms a Gate becsléseit:
+A [IntegralData/YAML](https://github.com/microsoft/Quantum/tree/master/samples/chemistry/IntegralData/YAML) mappa a Quantum Development Kit Samples adattárában a Broombridge-formázott molekula-adatfájlok szerepelnek.  
+
+Egyszerű példaként használja a kémia könyvtár mintát, a [GetGateCount](https://github.com/microsoft/Quantum/tree/master/samples/chemistry/GetGateCount) a Hamilton betöltéséhez az egyik Broombridge-fájlból, és hajtsa végre a Quantum szimulációs algorigthms a Gate becsléseit:
 
 ```bash
 cd Quantum/Chemistry/GetGateCount
@@ -171,5 +172,3 @@ További információ a PowerShell beépített súgó funkciójának használat�
 Convert-NWChemToBroombridge -?
 Get-Help Convert-NWChemToBroombridge -Full
 ```
-
-

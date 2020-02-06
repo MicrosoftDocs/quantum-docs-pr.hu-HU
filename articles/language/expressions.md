@@ -6,12 +6,12 @@ ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.language.expressions
-ms.openlocfilehash: 09d493df4e1178fee1f7a5946cfda2f411111006
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 83fe697aa07a8ab28bd64437c8f5746bc5893b27
+ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73185205"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77036313"
 ---
 # <a name="expressions"></a>Kifejezések
 
@@ -61,7 +61,7 @@ Ebben az esetben a második paraméternek 32 bitesnek kell lennie; Ha nem, a ren
 
 A két egész vagy nagy egész szám típusú kifejezés esetében egy új egész vagy Big Integer kifejezés is létrehozható a `%` (modulus), a `&&&` (bitenkénti és), a `|||` (bitenkénti vagy), vagy a `^^^` (bitenkénti XOR) operátorok használatával.
 
-A bal oldali egész szám vagy nagy egész szám kifejezés, a jobb oldalon pedig egy egész szám kifejezés, a `<<<` (aritmetikai bal SHIFT) vagy `>>>` (aritmetikai jobbra váltás) operátorok használhatók egy új kifejezés létrehozásához, amely ugyanolyan típusú, mint a bal oldali kifejezés.
+A bal oldali egész szám vagy nagy egész szám kifejezés, a jobb oldalon pedig egy egész szám kifejezés, a `<<<` (aritmetikai bal SHIFT) vagy `>>>` (aritmetikai jobbra váltás) operátorok használhatók a bal oldali kifejezéssel megegyező típusú új kifejezés létrehozásához.
 
 A második paraméternek (a eltolási mennyiségnek) vagy a SHIFT műveletnek nullánál nagyobbnak vagy azzal egyenlőnek kell lennie. a negatív eltolású összegek viselkedése nincs meghatározva.
 A eltolási művelet eltolási értékének a 32 bit-be is illeszkednie kell. Ha nem, a rendszer futásidejű hibát jelez.
@@ -73,7 +73,7 @@ Ez azt okozhatja, hogy az egyik lépés balra vagy jobbra való eltolása pontos
 
 Az egész szám és az egész számú modulus ugyanazt a viselkedést C#követi, mint a negatív számok.
 Ez azt eredményezi, hogy a `a % b` mindig ugyanazzal a jellel fog rendelkezni, mint `a`, és a `b * (a / b) + a % b` mindig egyenlő lesz `a`.
-Példa:
+Például:
 
  `A` | `B` | `A / B` | `A % B`
 ---------|----------|---------|---------
@@ -94,9 +94,9 @@ Adott egész szám vagy nagy egész szám kifejezés esetén az azonos típusú 
 A két `Bool` literális érték `true` és `false`.
 
 Az azonos primitív típus két kifejezése miatt a `==` és a `!=` bináris operátorok is használhatók `Bool` kifejezés létrehozásához.
-A kifejezés akkor igaz, ha a két kifejezés (ill. nem) egyenlő.
+A kifejezés akkor igaz, ha a két kifejezés egyenlő, és hamis, ha nem.
 
-A felhasználó által definiált típusok értéke nem hasonlítható össze, csak az értékeiket lehet összehasonlítani. Például:
+A felhasználó által definiált típusok értéke nem hasonlítható össze, csak a nem burkolt értékeket lehet összehasonlítani. Például a "kicsomagolás" operátor használatával `!` (a [Q # Type Model lapon](xref:microsoft.quantum.language.type-model#user-defined-types)magyarázva)
 
 ```qsharp
 newtype WrappedInt = Int;     // Yes, this is a contrived example
@@ -112,7 +112,7 @@ A két qubits állapota nem hasonlítható össze, nem érhető el, nem mérhet�
 A `Double` értékek egyenlőségének összehasonlítása a kerekítési hatások miatt félrevezető lehet.
 Például `49.0 * (1.0/49.0) != 1.0`.
 
-A két numerikus kifejezés miatt a bináris operátorok `>`, `<`, `>=`és `<=` használhatók olyan új logikai kifejezés létrehozásához, amely igaz, ha az első kifejezés nagyobb, mint, kisebb, mint, nagyobb vagy egyenlő , vagy kisebb vagy egyenlő, mint a második kifejezés.
+A két numerikus kifejezés miatt a bináris operátorok `>`, `<`, `>=`és `<=` használhatók olyan új logikai kifejezés létrehozásához, amely igaz, ha az első kifejezés nagyobb, mint, kisebb, mint, nagyobb vagy egyenlő, vagy a második kifejezésnél kisebb vagy azzal egyenlő.
 
 A két logikai kifejezés miatt a `and` és `or` bináris operátorok egy olyan új logikai kifejezés létrehozásához használhatók, amely igaz, ha a két kifejezés mindkét (ill. vagy mindkettő) értéke igaz.
 
@@ -229,7 +229,7 @@ Ez általában szükségtelen, mivel a Q # fordítóprogram a tényleges típuso
 A részleges alkalmazáshoz szükséges (lásd alább), ha egy Type-paraméteres argumentum nincs megadva.
 Időnként hasznos lehet, ha a különböző felállókkal rendelkező műveletek átadása meghívásos támogatással történik.
 
-Ha például `Func` rendelkezik aláírással `('T1, 'T2, 'T1) -> 'T2`, `Op1` és `Op2` rendelkezik aláírási `(Qubit[] => Unit is Adj)`, és `Op3` aláírása `(Qubit[] => Unit)`, hogy meghívja `Func` az első argumentumként, `Op1` a második és `Op3` a harmadikként:
+Ha például `Func` rendelkezik aláírással `('T1, 'T2, 'T1) -> 'T2`, `Op1` és `Op2` rendelkezik aláírási `(Qubit[] => Unit is Adj)`, és `Op3` aláírása `(Qubit[] => Unit)`, hogy meghívja `Func` az `Op1` az első argumentumként, `Op2` a másodikként, és `Op3` a harmadikként:
 
 ```qsharp
 let combinedOp = Func<(Qubit[] => Unit), (Qubit[] => Unit is Adj)>(Op1, Op2, Op3);
@@ -306,7 +306,7 @@ A `!` operátor magasabb prioritású, mint az összes többi operátor, amely n
 
 A `!` operátor elsőbbsége egy olyan hatással van, amely esetleg nem nyilvánvaló.
 Ha egy függvény vagy művelet egy értéket ad vissza, amelyet a rendszer kicsomagol, a függvény vagy a művelet hívását zárójelek közé kell foglalni, hogy az argumentum rekordja a kicsomagolás helyett a híváshoz kapcsolódjon.
-Példa:
+Például:
 
 ```qsharp
 let f = (Foo(arg))!;    // Calls Foo(arg), then unwraps the result
@@ -347,7 +347,7 @@ A qubits vagy callables tartalmazó tömböket megfelelően kell inicializálni 
 
 Az egyes típusok alapértelmezett értékei a következők:
 
-Type (Típus) | Alapértelmezett
+Típus | Alapértelmezett
 ---------|----------
  `Int` | `0`
  `BigInt` | `0L`
@@ -491,7 +491,7 @@ Az operátorok elsőbbségi sorrendben, a legmagasabbtól a legalacsonyabbig:
 Művelet | Aritása | Leírás | Operandusok típusai
 ---------|----------|---------|---------------
  záró `!` | Unáris | Kicsomagolása | Bármely felhasználó által definiált típus
- `-`, `~~~`, `not` | Unáris | Numerikus negatív, bitenkénti komplement, logikai tagadás | `Int`, `BigInt` vagy `Double` `-`, `Int` vagy `BigInt` esetében `~~~``Bool`
+ `-`, `~~~`, `not` | Unáris | Numerikus negatív, bitenkénti komplement, logikai tagadás | `Int`, `BigInt` vagy `Double` `-`, `Int` vagy `BigInt` esetében `~~~``Bool``not`
  `^` | Bináris | Egész számú Power | `Int` vagy `BigInt` az alaphoz, `Int` a kitevőhöz
  `/`, `*`, `%` | Bináris | Osztás, szorzás, egész szám modulusa | `Int`, `BigInt` vagy `Double` `/` és `*`, `Int` vagy `BigInt` számára `%`
  `+`, `-` | Bináris | Hozzáadás vagy karakterlánc és tömb összefűzése, kivonás | `Int`, `BigInt` vagy `Double`, továbbá `String` vagy bármely tömb típusa `+`

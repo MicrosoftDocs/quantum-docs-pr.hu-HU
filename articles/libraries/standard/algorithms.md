@@ -6,12 +6,12 @@ ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.libraries.standard.algorithms
-ms.openlocfilehash: 91f65b05c83367c2d2ece93212369dc448d8c2a8
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 1c45808207a2020f603448eba05900cdc40b4916
+ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821014"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77036355"
 ---
 # <a name="quantum-algorithms"></a>Quantum algoritmusok #
 
@@ -48,7 +48,8 @@ Emellett a *Quantum Fourier-transzformáció* (QFT) hatékonysága messze felül
 
 A QFT hozzávetőleges általánosításával biztosítjuk a <xref:microsoft.quantum.canon.approximateqft> műveletet, amely lehetővé teszi a további optimalizálást olyan metszések esetében, amelyek nem feltétlenül szükségesek a kívánt algoritmus pontosságához.
 A hozzávetőleges QFT működéséhez a dyadic $Z $-forgási művelet <xref:microsoft.quantum.intrinsic.rfrac> és a <xref:microsoft.quantum.intrinsic.h> művelet szükséges.
-A bemenet és a kimenet a big endian kódolásban (a legalacsonyabb bit/qubit a bal oldalon van), ugyanaz, mint a [két pont jelölése](xref:microsoft.quantum.concepts.dirac).
+A bemenet és a kimenet a big endian kódolásban---, azaz az `0` indexet tartalmazó qubit a bináris egész számok bal szélső (legmagasabb) részében kódolva.
+Ez a [két](xref:microsoft.quantum.concepts.dirac)pontra van igazítva, mivel a $ \ket{100}$ állapotú három qubits regisztrálása megfelel a $ \ket{1}$ állapotú $q _0 $ értéknek, míg a $q _1 $ és a $q _2 $ érték a $ \ket{0}$ állapotban van.
 A (z) $a $ közelítési paraméter meghatározza a $Z $-Forgások, azaz $a \in [0.. n] $ metszési szintjét.
 Ebben az esetben minden $Z $-Forgások $2 \ pi/2 ^ k $, ahol $k > a $ el lett távolítva a QFT áramkörből.
 Ismert, hogy $k \ge \ log_2 (n) + \ log_2 (1/\epsilon) + $3. egy kötve $\\| \operatorname{QFT} – \operatorname{AQFT} \\| < \epsilon $.
@@ -56,7 +57,7 @@ Itt $\\| \cdot\\| $ az operátori norma, amely ebben az esetben a legnagyobb [sa
 
 ## <a name="arithmetic"></a>Aritmetikai ##
 
-Csakúgy, mint az aritmetika a klasszikus számítástechnika központi szerepét játssza, elengedhetetlen a kvantum-számítástechnika terén is.  Az algoritmusok, például a rövid faktoring algoritmus, a Quantum szimulációs módszerek, valamint számos oracular-algoritmus koherens aritmetikai műveletekre támaszkodnak.  Az aritmetikai folyamatok többsége a Quantum vipera-áramkörökre épül.  A legegyszerűbb kiegészítés egy klasszikus input $b $, és hozzáadja az értéket egy olyan kvantum-állapothoz, amely egy egész $ \ket{a} $ számot tárol.  Matematikailag, a kiegészítőkre (amit a $ \operatorname{Add} (b) $ for klasszikus input $b $ esetében jelölünk
+Csakúgy, mint a aritmetika a klasszikus számítástechnika központi szerepét játssza, a kvantum-számítástechnika is nélkülözhetetlen.  Az algoritmusok, például a rövid faktoring algoritmus, a Quantum szimulációs módszerek, valamint számos oracular-algoritmus koherens aritmetikai műveletekre támaszkodnak.  Az aritmetikai folyamatok többsége a Quantum vipera-áramkörökre épül.  A legegyszerűbb kiegészítés egy klasszikus input $b $, és hozzáadja az értéket egy olyan kvantum-állapothoz, amely egy egész $ \ket{a} $ számot tárol.  Matematikailag, a kiegészítőkre (amit a $ \operatorname{Add} (b) $ for klasszikus input $b $ esetében jelölünk
 
 $ $ \operatorname{Add} (b) \ket{a} = \ket{a + b}.
 $ $ Ez az alapszintű kiegészítési áramkör nagyobb a növekménynél, mint a kiegészítőkre.

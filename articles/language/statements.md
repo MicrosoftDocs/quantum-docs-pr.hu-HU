@@ -6,12 +6,12 @@ uid: microsoft.quantum.language.statements
 ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 9157cf3336ce0894816dbfbaf13ce0e712a6b096
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 9a6f5d53ec21090d0c13f4369e0270d264cd1e9b
+ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821065"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77036491"
 ---
 # <a name="statements-and-other-constructs"></a>Utasítások és egyéb szerkezetek
 
@@ -29,7 +29,7 @@ Ebben az esetben a tartalmuk a definiált vagy felhasználó által definiált, 
 A Markdown bővítmény a műveletekre, a függvényekre és a felhasználó által definiált típusokra mutató hivatkozásokat tartalmazhatja a Q #-ban a `@"<ref target>"`használatával, ahol a `<ref target>` a hivatkozott kód objektum teljesen minősített nevével helyettesíti.
 Szükség esetén a dokumentációs motor további Markdown-bővítményeket is támogat.
 
-Példa:
+Például:
 
 ```qsharp
 /// # Summary
@@ -191,7 +191,7 @@ Hasonló Összefűzés található a jobb oldali másolási és frissítési kif
 ```qsharp
 newtype Complex = (Re : Double, Im : Double);
 
-function ElementwisePlus(reals : Double[], ims : Double[]) : Complex[] {
+function ComplexSum(reals : Double[], ims : Double[]) : Complex[] {
     mutable res = Complex(0.,0.);
 
     for (r in reals) {
