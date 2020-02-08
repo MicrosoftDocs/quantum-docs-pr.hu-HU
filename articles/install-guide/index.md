@@ -6,12 +6,12 @@ ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install
-ms.openlocfilehash: b209f0b600d973c3870c66060e1b484ec519322f
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 0e9dd1c74316eeb1fa7bbbf657d2e78231ee4294
+ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
 ms.translationtype: HT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76820708"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77036508"
 ---
 # <a name="install-the-microsoft-quantum-development-kit-qdk"></a>A Microsoft Quantum Development Kit (QDK) telepítése
 
@@ -19,7 +19,7 @@ Ismerje meg a Microsoft Quantum Development Kit (QDK) telepítésének módját,
 
 - a Q# programozási nyelv
 - kódtárak, amelyek összetett funkciókat választanak el a Q#-ban
-- API-k Pythonhoz és .NET-nyelvekhez (például: C#, F# és VB.NET) a Q#-ban írt kvantumprogramok futtatásához
+- Pythonhoz és .NET-nyelvekhez (C#, F# és VB.NET) készült API-k a Q#-ban írt kvantumprogramok futtatásához
 - a fejlesztést megkönnyítő eszközök
 
 A Q#-programok gyakran vannak párban egy .NET-nyelven (legtöbbször C#-ban) vagy Pythonban írt gazdaprogrammal. Ez lehetővé teszi, hogy a kvantumműveleteket egy klasszikus programból hívjuk meg.
