@@ -1,122 +1,96 @@
 ### YamlMime:Landing
-title: Microsoft Quantum Development Kit
-summary: Ismerje meg a Microsoft Quantum Development Kit és a Q# használatát, amely a kvantumalgoritmusok programozásának nyelve.
+title: Microsoft Quantum-dokumentáció
+summary: Ismerje meg a Microsoft Quantum Developer Kit és a Q# használatát, amely a kvantumalgoritmusok nyelve. Ismerje meg a kulcsfontosságú fogalmakat, és írja meg az első kvantumprogramját.
 metadata:
-  title: Microsoft Quantum Development Kit – Q# API-referencia
-  description: Ismerje meg a Microsoft Quantum Development Kit és a Q# használatát, amely a kvantumalgoritmusok programozásának nyelve. Ismerje meg a kulcsfontosságú fogalmakat, és írja meg az első kvantumprogramját.  Fedezze fel a QDK gazdag eszközeit és kódtárait.
+  title: Microsoft Quantum-dokumentáció – Q# API-referencia
+  description: Ismerje meg a Microsoft Quantum Development Kit és a Q# használatát, amely a kvantumprogramozás nyelve. Ismerje meg a kulcsfontosságú fogalmakat, és írja meg az első kvantumprogramját.  Fedezze fel a QDK gazdag eszközeit és kódtárait.
   ms.prod: quantum
   ms.topic: landing-page
   ms.collection: collection
   author: cjgronlund
   ms.author: cgronlun
   ms.date: 10/21/2019
-  ms.openlocfilehash: 53ee7b0a1ba7a83fb943f18afd27b5c699f848b2
-  ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+  ms.openlocfilehash: a39b230bc3b740afd23f0050b9c45df6094bea4e
+  ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
   ms.translationtype: HT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76820725"
+  ms.lasthandoff: 02/06/2020
+  ms.locfileid: "77036576"
 landingContent:
 - title: A Microsoft Quantum használatának első lépései
   linkLists:
   - linkListType: overview
     links:
-    - text: Öt kérdés a kvantum-számítástechnikáról
+    - text: A Quantum Development Kit
       url: welcome.md
-  - linkListType: get-started
+  - linkListType: learn
+    links:
+    - text: Mi az a kvantum-számítástechnika?
+      url: overview/what-is-quantum-computing.md
+    - text: Mire képesek a kvantumszámítógépek?
+      url: overview/quantum-computers.md
+    - text: Miért érdemes kvantum-számítástechnikát tanulni?
+      url: overview/why-learn-quantum-computing.md
+    - text: Mi az a Q#?
+      url: overview/what-is-qsharp.md
+    - text: Hogyan tudhatok meg többet a kvantum-számítástechnikáról?
+      url: overview/how-to-learn-quantum-computing.md
+- title: A Quantum Development Kit beszerzése
+  linkLists:
+  - linkListType: download
+    links:
+    - text: A QDK telepítése
+      url: install-guide/index.md
+    - text: A QDK frissítése
+      url: install-guide/update.md
+- title: Rövid útmutatók
+  linkLists:
+  - linkListType: quickstart
     links:
     - text: Kvantum-véletlenszámgenerátor készítése
       url: quickstarts/qrng.md
     - text: Kvantumalapok Q# nyelven
       url: quickstart.md
-    - text: Hatásos kvantumprogramok készítése a Q#-pal
+    - text: 'Kvantumgyorsítás: A keresési Grover-algoritmus'
       url: quickstarts/search.md
-    - text: A vegyészet legnagyobb kihívásainak megoldása
-      url: https://cloudblogs.microsoft.com/quantum/2018/12/04/simulating-nature-with-the-new-microsoft-quantum-development-kit-chemistry-library/
-  - linkListType: learn
-    links:
-    - text: A Kvantum Katák megismerése
-      url: intro-to-katas.md
-    - text: Böngészés a Q#-minták között
-      url: https://docs.microsoft.com/samples/browse/?languages=qsharp
-- title: Fejlesztés Q#-pal és Pythonnal vagy Jupyter-notebookokkal
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: A Python telepítése
-      url: install-guide/pyinstall.md
-    - text: A Jupyter telepítése
-      url: install-guide/qjupyter.md
-  - linkListType: how-to-guide
-    links:
-    - text: Q#-minták Pythonnal
-      url: https://docs.microsoft.com/samples/browse/?languages=python&products=qdk
-    - text: Q# Jupyter-notebook teleportálása
-      url: https://docs.microsoft.com/samples/microsoft/quantum/quantum-teleportation/
-    - text: Q# Jupyter-notebookok készítése
-      url: https://docs.microsoft.com/samples/microsoft/quantum/intro-to-qsharp-jupyter/
-- title: Q#-fejlesztőkörnyezetek
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: A Visual Studio telepítése
-      url: install-guide/csinstall.md
-    - text: A Visual Studio Code telepítése
-      url: install-guide/csinstall.md
-- title: Q#-minták
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: Három egyszerű algoritmus
-      url: https://docs.microsoft.com/samples/microsoft/quantum/simple-quantum-algorithms
-    - text: Keresés Grover algoritmusával
-      url: https://docs.microsoft.com/samples/microsoft/quantum/searching-with-grovers-algorithm
-    - text: Kvantumteleportáció
-      url: https://docs.microsoft.com/samples/microsoft/quantum/quantum-teleportation/
-    - text: Az összes minta
-      url: https://docs.microsoft.com/samples/browse/?languages=qsharp
-- title: Q# nyelv és fejlesztési módszerek
-  linkLists:
-  - linkListType: learn
-    links:
-    - text: Bevezetés a Q# nyelvbe
-      url: language/index.md
-  - linkListType: how-to-guide
-    links:
-    - text: Kvantumszimulátorok és gazdaalkalmazások
-      url: machines/index.md
-  - linkListType: how-to-guide
-    links:
-    - text: A Q#-beli programozás áttekintése
-      url: techniques/file-structure.md
-    - text: Műveletek és függvények
-      url: techniques/operations-and-functions.md
-    - text: Helyi változók
-      url: techniques/local-variables.md
-    - text: Munkavégzés qubitekkel
-      url: techniques/working-with-qubits.md
-    - text: 'Összeállítás: Teleportáció'
-      url: techniques/putting-it-all-together.md
 - title: Kvantum-számítástechnikai fogalmak
   linkLists:
   - linkListType: concept
     links:
     - text: Kvantum-számítástechnikai fogalmak
       url: concepts/index.md
-    - text: Szószedet
-      url: Glossary.md
-- title: Q#-algoritmusok és -alkalmazások
+- title: Q# programozási nyelv
   linkLists:
-  - linkListType: reference
+  - linkListType: learn
     links:
-    - text: Amplitúdó-erősítés
-      url: libraries/standard/algorithms.md
-    - text: Kvantumfázisbecslés
-      url: libraries/standard/algorithms.md#quantum-phase-estimation
-    - text: Shor-algoritmus
-      url: libraries/standard/applications.md#shors-algorithm
-    - text: Hamilton-szimuláció
-      url: libraries/standard/applications.md
+    - text: Bevezetés a Q# nyelvbe
+      url: language/index.md
+    - text: Q#-alapú fejlesztési módszerek
+      url: techniques/index.md
+- title: Célgépek
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Kvantumszimulátorok és gazdaalkalmazások
+      url: machines/index.md
+  - linkListType: architecture
+    links:
+    - text: Teljes körű funkciókkal rendelkező szimulátor
+      url: machines/full-state-simulator.md
+    - text: Erőforrásbecslő
+      url: machines/resources-estimator.md
+    - text: Nyomkövetési szimulátor
+      url: machines/qc-trace-simulator/index.md
+    - text: Toffoli-szimulátor
+      url: machines/toffoli-simulator.md
+- title: Q# – tanulási forrásanyagok
+  linkLists:
+  - linkListType: learn
+    links:
+    - text: A Kvantum Katák megismerése
+      url: intro-to-katas.md
+    - text: Q#-kódminták tallózása
+      url: https://docs.microsoft.com/samples/browse/?languages=qsharp
 - title: Q#-kódtárak
   linkLists:
   - linkListType: reference
@@ -129,14 +103,18 @@ landingContent:
       url: libraries/chemistry/index.md
     - text: Kémiai fogalmak
       url: libraries/chemistry/concepts/quantum-dynamics.md
-  - linkListType: how-to-guide
+- title: Q#-algoritmusok és -alkalmazások (a standard kódtárakból)
+  linkLists:
+  - linkListType: reference
     links:
-    - text: Numerikus Q#-minták
-      url: libraries/numerics/numerics.md
-    - text: Kémiai Q#-példák
-      url: libraries/chemistry/samples/index.md
-    - text: Végponttól végpontig az NWChem-mel
-      url: libraries/chemistry/samples/end-to-end.md
+    - text: Amplitúdó-erősítés
+      url: libraries/standard/algorithms.md
+    - text: Kvantumfázisbecslés
+      url: libraries/standard/algorithms.md#quantum-phase-estimation
+    - text: Shor-algoritmus
+      url: libraries/standard/applications.md#shors-algorithm
+    - text: Hamilton-szimuláció
+      url: libraries/standard/applications.md
 - title: Közösség és hozzájárulás
   linkLists:
   - linkListType: how-to-guide

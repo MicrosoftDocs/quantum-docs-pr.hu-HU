@@ -16,17 +16,7 @@
           href: overview/what-is-qsharp.md
         - name: Ismerkedés a kvantum-számítástechnikával
           href: overview/how-to-learn-quantum-computing.md
-    - name: A Kvantum Katák megismerése
-      href: intro-to-katas.md
-- name: Rövid útmutatók
-  items:
-    - name: Kvantum-véletlenszámgenerátor
-      href: quickstarts/qrng.md
-    - name: 'Kvantumalapok Q# nyelven'
-      href: quickstart.md
-    - name: A keresési Grover-algoritmus implementálása
-      href: quickstarts/search.md
-- name: Útmutatók
+- name: Telepítés és frissítés
   items:
     - name: A QDK telepítése
       items:
@@ -40,8 +30,14 @@
           href: install-guide/qjupyter.md
     - name: A QDK frissítése
       href: install-guide/update.md
-    - name: 'Q#-projekt létrehozása'
-      href: how-to-guides/create-qsharp-project.md
+- name: Rövid útmutatók
+  items:
+    - name: Kvantum-véletlenszámgenerátor
+      href: quickstarts/qrng.md
+    - name: 'Kvantumalapok Q# nyelven'
+      href: quickstart.md
+    - name: A keresési Grover-algoritmus implementálása
+      href: quickstarts/search.md
 - name: Alapelvek
   items:
     - name: Kvantumfejlesztési módszerek
@@ -52,21 +48,31 @@
       href: language/toc.yml
     - name: 'Q#-kódtárak'
       href: libraries/toc.yml
-    - name: Kvantum-számítástechnikai fogalmak
-      href: concepts/toc.yml
     - name: Kvantumszimulátorok és erőforrásbecslők
       href: machines/toc.yml
+    - name: Kvantum-számítástechnikai fogalmak
+      href: concepts/toc.yml
+- name: Útmutatók
+  items:
+    - name: 'Q#-projekt létrehozása'
+      href: how-to-guides/create-qsharp-project.md
+- name: 'Q# – tanulási forrásanyagok'
+  items:
+    - name: A Kvantum Katák megismerése
+      href: intro-to-katas.md
+    - name: 'Q#-minták'
+      href: 'https://docs.microsoft.com/en-us/samples/browse/?languages=qsharp'
 - name: További források
   items:
+    - name: Szószedet
+      href: Glossary.md
+    - name: További információ
+      href: for-more-info.md
     - name: QDK – Kibocsátási megjegyzések
       topicHref: relnotes/index.md
       href: relnotes/toc.yml
     - name: Hozzájárulás a QDK-hoz
       href: contributing/toc.yml
       topicHref: contributing/index.md
-    - name: Szószedet
-      href: Glossary.md
-    - name: További tudnivalók
-      href: for-more-info.md
     - name: Licenc
       href: license.md
