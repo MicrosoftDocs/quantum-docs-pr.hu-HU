@@ -6,12 +6,12 @@ ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.cs
-ms.openlocfilehash: 1fd829c684502092bb7491b0f46b5f690320c941
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 7803846279f230f5fc0ee8424bd39be735a650ca
+ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76831018"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77036287"
 ---
 # <a name="develop-with-q--c"></a>Fejlesztés a Q # +C#
 
@@ -23,7 +23,7 @@ A Q # a .NET-nyelvekkel jól játszható – konkrétan C#. Ezt a párosítást 
 - [Q # + C# Visual Studio Code használata (Windows, Linux és Mac)](#VSC)
 - [Q # + C# a `dotnet` parancssori eszköz használata](#command)
 
-## Fejlesztés a Q # + C# használatával a Visual Studióval<a name="VS"></a>
+## Fejlesztés a Q # + C# használatával a Visual Studióval <a name="VS"></a>
 
 A Visual Studio sokoldalú környezetet kínál a Q # programok fejlesztéséhez. A Q # Visual Studio bővítmény a Q # fájlokhoz és projektekhez tartozó sablonokat, valamint a szintaxis kiemelését, a kód befejezését és az IntelliSense támogatását tartalmazza.
 
@@ -59,7 +59,7 @@ A Visual Studio sokoldalú környezetet kínál a Q # programok fejlesztéséhez
 > [!NOTE]
 > * Ha egy Visual Studio-megoldásban több projekt is található, a megoldásban foglalt összes projektnek a megoldás mappájában vagy valamelyik almappájában kell lennie.  
 
-## Fejlesztés a Q # + C# eszközzel a Visual Studio Code használatával<a name="VSC"></a>
+## Fejlesztés a Q # + C# eszközzel a Visual Studio Code használatával <a name="VSC"></a>
 
 A Visual Studio Code (VS Code) sokoldalú környezetet kínál a Q # programok fejlesztéséhez Windows, Linux és Mac rendszereken.  A Q # VS Code bővítmény támogatja a Q # szintaxis kiemelését, a kód befejezését és a Q # kódrészleteket.
 
@@ -101,7 +101,7 @@ A Visual Studio Code (VS Code) sokoldalú környezetet kínál a Q # programok f
 > [!NOTE]
 > * A Visual Studio Code-bővítmény jelenleg nem támogatja a több gyökérmappával rendelkező munkaterületeket. Ha egy VS Code-munkaterületen belül több projekt is található, az összes projektnek azonos gyökérmappában kell lennie.
 
-## Fejlesztés a Q # + C# használatával a `dotnet` parancssori eszközzel<a name="command"></a>
+## Fejlesztés a Q # + C# használatával a `dotnet` parancssori eszközzel <a name="command"></a>
 
 Természetesen a parancssorból is egyszerűen összeállíthat és futtathat Q#-programokat, ha telepíti a .NET Core SDK-t és a QDK-projektsablonokat. 
 
@@ -111,7 +111,7 @@ Természetesen a parancssorból is egyszerűen összeállíthat és futtathat Q#
 
 1. Telepítse a .NET-hez tartozó Quantum-projektsablonokat
 
-    ```bash
+    ```dotnetcli
     dotnet new -i Microsoft.Quantum.ProjectTemplates
     ```
 
@@ -121,8 +121,8 @@ Természetesen a parancssorból is egyszerűen összeállíthat és futtathat Q#
 
     - Új alkalmazás létrehozása
 
-       ```bash
-       dotnet new console -lang Q# -o runSayHello
+       ```dotnetcli
+       dotnet new console -lang "Q#" -o runSayHello
        ```
 
     - Lépjen az új alkalmazás könyvtárához
@@ -135,13 +135,13 @@ Természetesen a parancssorból is egyszerűen összeállíthat és futtathat Q#
 
     - Az alkalmazás futtatása
 
-        ```bash
+        ```dotnetcli
         dotnet run
         ```
 
         A következő kimenetnek kell megjelennie: `Hello quantum world!`
 
     
-## <a name="whats-next"></a>Vajon mi a következő lépés?
+## <a name="whats-next"></a>A következő lépések
 
 Most, hogy a választott környezetben telepítette a Quantum Development Kitet, megírhatja és futtathatja [az első kvantumprogramját](xref:microsoft.quantum.write-program).
