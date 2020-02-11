@@ -6,58 +6,77 @@ author: natke
 ms.author: nakersha
 ms.date: 10/23/2019
 ms.topic: overview
-ms.openlocfilehash: 4308bf7e0e48e5735419fab836e479641455e9a5
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 066981e3e2fb468c1ff2a4cf4d3e7cff057772ab
+ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
 ms.translationtype: HT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76819927"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77036338"
 ---
 # <a name="get-started-with-the-quantum-development-kit-qdk"></a>Bevezetés a Quantum Development Kit (QDK) használatába
 
-Üdvözli a Microsoft Quantum Development Kit!  Itt minden eszközt megtalál, amire csak szüksége van a Q#-val végzett kvantumprogramozáshoz.  A Q#-ra épülő kvantum-számítástechnika megismerésében segít ez az első lépéseket ismertető útmutató, amelyet útikalauzként használhatnak azok, akik el szeretnének kezdeni kvantumprogramokat írni, valamint azok, akik még nem állnak készen a programozásra, de többet szeretnének megtudni a Q#-ról és a kvantumprogramozásról. 
+Üdvözli a Microsoft Quantum Development Kit!  
+A QDK tartalmazza az összes olyan eszközt, amely a kvantumprogramok létrehozásához és a Q#-val való kísérletezéshez szükséges. A Q# egy olyan programozási nyelv, amely kifejezetten a kvantumalkalmazások fejlesztéséhez készült. 
 
-Ha készen áll a programozásra, [telepítse most a QDK-t](xref:microsoft.quantum.install).
+A [QDK telepítési útmutatója](xref:microsoft.quantum.install) segítségével azonnal nekivághat.
+Miután a rendszer végigvezette Önt a Quantum Development Kit Windows, Linux vagy macOS rendszerre való telepítésén, lehetősége lesz saját kvantumprogramokat írni.
 
-## <a name="questions-about-quantum-computing"></a>Kérdések a kvantum-számítástechnikáról
+Ha még nem áll teljesen készen a kódolás megkezdésére, de szeretne többet megtudni a kvantum-számítástechnikáról és a Q#-ról, akkor is érdemes elolvasnia ezt a cikket, hogy képet kaphasson a rendelkezésére álló erőforrásokról. Az [Öt kérdés a kvantum-számítástechnikáról](#five-questions-about-quantum-computing) című szakaszban található hivatkozások segítenek megtalálni, amit keres.
 
-Rövid cikkek sorozatával kezdjük, amelyek összefoglalják a _kvantum-számítástechnikával kapcsolatosan felmerülő kérdéseket_. Ezek a rövid cikkek gyors áttekintést adnak a kvantum-számítástechnikáról azoknak, akik csak most kezdtek el érdeklődni a témakör iránt.
+## <a name="get-started-programming"></a>A programozás első lépései
 
-[Mi az a kvantum-számítástechnika?](xref:microsoft.quantum.overview.what)
+A Quantum Development Kit sokféle módszert kínál a Q# használatával történő kvantumprogramozás elsajátítására.
+A kvantumprogramozás gyors megkezdéséhez érdemes kipróbálni a *gyorsútmutatóinkat*:
 
-[Mire képesek a kvantumszámítógépek?](xref:microsoft.quantum.overview.computers)
+* A [kvantum-véletlenszámgenerátor](xref:microsoft.quantum.quickstarts.qrng) egy „Q# Hello World” jellegű alkalmazás, amely röviden ismerteti a kvantumprogramozási fogalmakat, miközben lehetővé teszi egy kvantumalkalmazás elkészítését és futtatását mindössze néhány perc alatt.
+* A [kvantumalapokat a Q# nyelven keresztül](xref:microsoft.quantum.write-program) ismertető útmutató végigvezeti Önt egy olyan Q#-program megírásán, amely során megismerkedhet a kvantumprogramozás alapvető fogalmaival. 
+    Ha még nem áll készen a programozásra, akkor is követheti az útmutatót a QDK telepítése nélkül, hogy áttekintést kapjon a Q# programozási nyelvről és a kvantum-számítástechnika alapvető fogalmairól.
+* A [Grover keresési algoritmusa](xref:microsoft.quantum.quickstarts.search) példaként bemutat egy olyan Q#-programot, amellyel megtapasztalhatja, hogyan lehet a Q# segítségével olyan kvantumalgoritmusokat összeállítani, amelyek absztrahálják az alacsonyabb szintű kvantumműveleteket. 
+    Ez a gyorsútmutató végigvezeti Önt a program különböző programozási környezetekben történő összeállításán (Python-környezetben, .NET nyelvi környezetben, Visual Studióval vagy Visual Studio Code-dal).
 
-[Miért érdemes kvantum-számítástechnikát tanulni?](xref:microsoft.quantum.overview.why)
+### <a name="learning-further"></a>További ismeretszerzés
+* Ha szeretne mélyebben elmerülni a Q#-val történő programozásban, tekintse meg a [Kvantum Katákat](https://github.com/Microsoft/QuantumKatas), az egyéni ütemben végezhető, Q# nyelven alapuló programozási gyakorlatok gyűjteményét, amelyek részletesebb kvantumprogramozási ismereteket nyújtanak.
+    A katák nagy része Q# Notebook formájában is elérhető. 
+* [Mintaadattárunk](https://github.com/Microsoft/Quantum) többféle példát tartalmaz a kvantumprogramok Q#-val történő létrehozására. E minták többsége a nyílt forráskódú [kvantumkódtáraink](https://github.com/Microsoft/QuantumLibraries) használatával készült, beleértve [standard](xref:microsoft.quantum.libraries.standard.intro) és [vegyészeti](xref:microsoft.quantum.chemistry.concepts.intro) kódtárainkat (ezekről bővebben alább olvashat).
 
-[Mi az a Q#?](xref:microsoft.quantum.overview.qsharp)
+## <a name="five-questions-about-quantum-computing"></a>Öt kérdés a kvantum-számítástechnikáról
 
-## <a name="how-to-learn-quantum-computing-with-q"></a>Ismerkedés a kvantum-számítástechnikával Q# nyelven
+Tisztában vagyunk azzal, hogy mindez elsőre túl nagy feladatnak tűnhet, ha még csak most ismerkedik a kvantumfejlesztéssel. A források a kvantum-számítástechnika megismerésének első lépéseihez nyújtanak segítséget. Biztosak vagyunk abban, hogy ezeknek a rövid cikkeknek a segítségével azonnal megjön a kedve a programozáshoz.
+* [Mi az a kvantum-számítástechnika?](xref:microsoft.quantum.overview.what)
+* [Mire képesek a kvantumszámítógépek?](xref:microsoft.quantum.overview.computers)
+* [Miért érdemes kvantum-számítástechnikát tanulni?](xref:microsoft.quantum.overview.why)
+* [Mi az a Q#?](xref:microsoft.quantum.overview.qsharp)
+* [Ismerkedés a kvantum-számítástechnikával Q# nyelven](xref:microsoft.quantum.overview.learn)
 
-A Q# és a Quantum Development Kit olyan eszközöket biztosít, amelyekkel képes lehet a számítástechnika legnagyobb kihívásait megoldó kvantum-számítástechnikai programok kifejlesztésére.
+## <a name="quantum-development-kit-documentation"></a>A Quantum Development Kit dokumentációja
 
-Az ötödik kérdés esetében,  amely _a kvantum-számítástechnika a Q# nyelven keresztül történő megismerésével kapcsolatos_, az alábbi áttekintésekkel kezdjük:
+A jelen dokumentáció az alábbi további témaköröket tartalmazza.
 
-* a [kvantum-véletlenszámgenerátorok](xref:microsoft.quantum.quickstarts.qrng) készítésével kapcsolatos első lépésekről szóló útmutató, amely végigvezeti Önt a QDK telepítésén és az első Q#-program megírásán, valamint rövid áttekintést nyújt a kvantumfogalmakról. A véletlenszám-generátor egy „Q# Hello World” stílusú alkalmazás, amellyel néhány perc alatt elkészíthet és futtathat egy kvantumalkalmazást.
+### <a name="using-q"></a>A Q# használata
+* A [Kvantumfejlesztési technikák](xref:microsoft.quantum.techniques.intro) szakasz a kvantumprogramok Q# használatával történő létrehozásakor alkalmazott alapvető fogalmakat ismerteti. A témakörök a fájlstruktúrákkal, a műveletekkel és a függvényekkel, valamint a qubitek használatával kapcsolatosak, továbbá néhány haladó témakört is érintenek.
+* A [Q# nyelvi referencia](xref:microsoft.quantum.language.intro) részletesen ismerteti a Q# nyelvet, beleértve a típusmodellt, a kifejezéseket, az utasításokat és a fordító használatát.
+* A [Kvantumszimulátorok és gazdaalkalmazások](xref:microsoft.quantum.machines) szakasz a kvantumalgoritmusok végrehajtását, az elérhető kvantumgépeket és a nem Q# nyelvű illesztők kvantumprogramhoz való megírását ismerteti.
 
-* a [Q# nyelven keresztül a kvantumalapokat](xref:microsoft.quantum.write-program) ismertető útmutató, amely végigvezeti Önt egy olyan Q#-program megírásán, amely során megismerkedhet a kvantumprogramozás alapvető fogalmaival. Ha még nem áll készen a programozásra, akkor is követheti az útmutatót a QDK telepítése nélkül, hogy áttekintést kapjon a Q# programozási nyelvről és a kvantum-számítástechnika alapvető fogalmairól.
+### <a name="q-libraries"></a>Q#-kódtárak
+* A [Szabványos Q#-kódtárak](xref:microsoft.quantum.libraries.standard.intro) szakasz a klasszikus nyelvvezérlési követelményt és a Q#-kvantumalgoritmusokat egyaránt támogató műveleteket és függvényeket ismerteti. 
+    A témakörök az átvitelvezérléssel, az adatstruktúrákkal, a hibajavítással, a teszteléssel és a hibakereséssel foglalkoznak. 
+* A [Vegyészeti Q#-kódtár](xref:microsoft.quantum.chemistry.concepts.intro) szakasz a kvantumkémia-szimulációt – a kvantum-számítástechnika egyik legfontosabb alkalmazási területét – támogató műveleteket és függvényeket ismerteti. A témakörök többek között a Hamilton-operátorok dinamikájának szimulálásával és a kvantumfázisbecsléssel foglalkoznak.
+* A [Numerikus Q#-kódtár](xref:microsoft.quantum.numerics.intro) szakasz az összetett aritmetikai függvények kifejezését támogató műveleteket és függvényeket ismerteti a célgépek natív műveletei szempontjából.
+* A [Q#-kódtárreferencia](xref:microsoft.quantum.standardlibsintro) szakasz kódtárentitásokkal kapcsolatos referenciainformációkat tartalmaz névtér szerint.
 
-* A [Grover-keresést](xref:microsoft.quantum.quickstarts.search) ismertető bevezető útmutató példaként bemutat egy olyan Q#-programot, amellyel megtapasztalhatja, hogyan lehet a Q# segítségével olyan kvantumalgoritmusokat összeállítani, amelyek absztrahálják az alacsonyabb szintű kvantumműveleteket.  A Grover-kereséssel kapcsolatos gyorsútmutató végigvezeti Önt a program különböző programozási környezetekben történő összeállításán (Python-környezetben, .NET nyelvi környezetben, Visual Studióval vagy Visual Studio Code-dal).
+### <a name="general-quantum-computing"></a>Általános kvantum-számítástechnika
+* A [Kvantum-számítástechnikai fogalmak](xref:microsoft.quantum.concepts.intro) szakasz olyan témaköröket tartalmaz, mint a lineáris algebra relevanciája a kvantum-számítástechnika szempontjából, a qubitek természete és használata, a kvantumkörök olvasása és így tovább.
+* A [Kvantum-számítástechnikai szószedet](xref:microsoft.quantum.glossary) egy olyan szószedet, amely a kvantum-számítástechnikára és a programfejlesztésre jellemző legfontosabb kifejezéseket tartalmazza. 
+    Ha ez a terület új az Ön számára, hasznos referencia lehet a dokumentáció olvasása során.
+* A [További olvasnivalók](xref:microsoft.quantum.more-information) olyan speciálisan kiválasztott referenciákat tartalmaznak, amelyekkel részletesebben is megismerheti a kvantum-számítástechnikai témaköröket.
 
-* egy [videó](https://www.microsoft.com/videoplayer/embed/RE2JOJf), amely további információkkal szolgál a kvantumprogramok Q#-kódtárakkal történő létrehozásával kapcsolatban.  A QDK a Q# standard és numerikus kódtárát alkalmazza, amelyeknek hatékony számítástechnikai absztrakciói segítik az ilyen megoldások kifejlesztését. A Quantum Chemistry Library is a rendelkezésére áll majd, egy Q#-kódtár a vegyi folyamatok kvantumszintű modellezésére.
+### <a name="additional-info"></a>További információ
+* [A Microsoft Quantum Development Kit kibocsátási megjegyzései](xref:microsoft.quantum.relnotes).
 
-## <a name="next-steps"></a>További lépések
 
-A fenti első lépésekkel kapcsolatos útmutatók és cikkek a programozókat és a nem programozókat is bevezetik a kvantum-számítástechnika és a Q# rejtelmeibe.  A kvantumszámítógépek Q# segítségével történő programozásával kapcsolatos további információk:
+## <a name="be-a-part-of-the-q-open-source-community"></a>Legyen része a Q# nyílt forráskódú közösségének
+A Quantum Development Kit egy nyílt forráskódú fejlesztőkészlet, amelynek segítségével a fejlesztők szélesebb körben is hozzáférhetővé tehetik a kvantum-számítástechnikát annak érdekében, hogy mind együtt dolgozhassunk a világ legsürgetőbb problémáinak megoldásán.  A nyílt forráskódú szoftverekre igényt tartó tudományos intézmények képesek lesznek alkalmazni a Q#-t a kvantumtanuláshoz és -fejlesztéshez. A fejlesztőkészlet nyílt forráskódúvá tételének köszönhetően a fejlesztők és az ágazati szakértők javításokkal és ötletekkel járulhatnak hozzá a kódon keresztül a kvantum-számítástechnikához.
 
-* Az [Ismerkedés a kvantum-számítástechnikával Q# nyelven](xref:microsoft.quantum.overview.learn) című cikk útmutatást nyújt a Q# nyelvű kvantum-számítástechnikai fogalmak megismerésével kapcsolatban.
+Fontos a Quantum Development Kittel kapcsolatos visszajelzése, részvétele és hozzájárulása.  A Quantum Development Kit forrásaival kapcsolatos további információért, visszajelzés küldéséhez, valamint annak megismeréséhez, hogy miként vehet részt a döntéshozatalban, illetve járulhat hozzá ehhez a növekvő kvantumfejlesztési platformhoz, tekintse meg a [Hozzájárulás a Quantum Development Kithez](xref:microsoft.quantum.contributing) című szakaszt.
 
-* Sajátítsa el a kvantumprogramozást a [saját ütemben elvégezhető Quantum Katákkal](https://aka.ms/try-quantum-katas). Ez egy rövid gyakorlófeladatokból álló sorozat, amely megtanítja a Q#-programozás és a kvantum-számítástechnika rejtelmeire.
-
-* Tekintse át [Q#-példáinkat](https://docs.microsoft.com/samples/browse/?languages=qsharp), és fedezze fel, milyen problémákat oldhat meg a kvantum-számítástechnika segítségével.
-
-* Fejlesszen ki programokat egy helyi gépen az Ön által választott programozói nyelven és fejlesztői környezetben:
-  * Fejlesztés [Q# + Python használatával](xref:microsoft.quantum.install.python)
-  * Fejlesztés [Q# + C# használatával](xref:microsoft.quantum.install.cs)
-  * Fejlesztés [Q# Jupyter-notebookokkal](xref:microsoft.quantum.install.jupyter)
-
-* Legyen része a Microsoft Quantum közösségének, és járuljon hozzá a [QDK](xref:microsoft.quantum.contributing) nyílt forráskódú projekthez.
+A Microsoft kvantum-számítástechnikai kezdeményezésével kapcsolatos általánosabb információért tekintse meg a [Microsoft Quantum](https://www.microsoft.com/en-us/quantum/) oldalát.
