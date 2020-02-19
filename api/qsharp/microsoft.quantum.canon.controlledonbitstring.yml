@@ -3,18 +3,73 @@ uid: microsoft.quantum.canon.controlledonbitstring
 name: ControlledOnBitString
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: Egy egységes operátort ad vissza, amely egy Oracle-t alkalmaz a cél-tételjegyzékben, ha a vezérlő regisztrálása állapot egy megadott bit-maszknak felel meg.
+summary: >-
+  Egy egységes operátort ad vissza, amely egy Oracle-t alkalmaz a cél-tételjegyzékben, ha a vezérlő regisztrálása állapot egy megadott bit-maszknak felel meg.
+
+
+  Ennek a függvénynek a kimenete egy egységes átalakítás $U $, amely \begin{align} U \ket{b_0 b_1 \cdots b_ {n-1}} \ket{\psi} = \ket{b_0 b_1 \cdots b_ {n-1}} \otimes \begin{Cases} V \ket{\psi} & \textrm{if} (b_0 b_1 \cdots b_ {n-1}) = \texttt{BITS} \\\\ \ket{\psi} & \textrm{otherwise} \end{Cases}, \end{align}, ahol a $V $ egy egységes átalakítás, amely a `oracle` művelet műveletét jelöli.
+remarks: >-
+  A `bits` és a `controlRegister` hosszának egyenlőnek kell lennie.
+
+
+  Egy logikai tömb `bits` és egy egységes művelet `oracle`a függvény kimenete egy olyan művelet, amely a következő lépéseket hajtja végre:
+
+
+  * alkalmazza a `X` műveletet a `bits``false` elemének megfelelő vezérlő-tételjegyzék minden qubit.
+
+  * `Controlled oracle` alkalmazása a vezérlő és a cél regiszterekre;
+
+  * alkalmazzon egy `X` műveletet a vezérlési regiszter minden olyan qubit, amely megfelel a `bits` `false` elemének, hogy visszaadja a vezérlő regisztrálását az eredeti állapotába.
+
+
+  A `Controlled`-felállónak a `ControlledOnBitString` egy speciális esete, ahol a `bits` `[true, ..., true]`egyenlő.
+examples: >-
+  A következő kódrészletek egyenértékűek:
+
+
+  ```qsharp
+
+  (ControlledOnBitString(bits, oracle))(controlRegister, targetRegister);
+
+  ```
+
+
+  és
+
+
+  ```qsharp
+
+  within {
+      ApplyPauliFromBitString(PauliX, false, bits, controlRegister);
+  } apply {
+      Controlled oracle(controlRegister, targetRegister);
+  }
+
+  ```
+
+
+  A következő kód előkészít egy állapotot: $ \frac{1}{2}(\ket{00}-\ket{01} + \ket{10} + \ket{11}) $:
+
+
+  ```qsharp
+
+  using (register = Qubit[2]) {
+      ApplyToEach(H, register);
+      (ControlledOnBitString([false], Z))(register[0..0], register[1]);
+  }
+
+  ```
 syntax: "function ControlledOnBitString (bits : Bool[], oracle : ('T => Unit is Adj + Ctl)) : ((Qubit[], 'T) => Unit is Adj + Ctl)"
 input:
   content: "(bits : Bool[], oracle : ('T => Unit is Adj + Ctl))"
   types:
   - name: bits
-    summary: Logikai tömb.
+    summary: Az a kis sztring, amely az adott egységes operátort vezérli.
     isArray: true
     isPrimitive: true
     uid: Bool
   - name: oracle
-    summary: Egységes operátor.
+    summary: A cél-regisztráción alkalmazandó egységes operátor.
     isOperation: true
     input:
       types:
@@ -47,9 +102,9 @@ output:
     - Adjoint
     - Controlled
 metadata:
-  ms.openlocfilehash: 1abe0f1abcbab06aa9821c52878cf85b03d2c592
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: dde246a6eb0cf5e278cd079ff52c3a0b0ff71120
+  ms.sourcegitcommit: b7e205aaa7fa1ca9f0daa163e46154945f4bc965
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73227389"
+  ms.lasthandoff: 02/18/2020
+  ms.locfileid: "77441052"
