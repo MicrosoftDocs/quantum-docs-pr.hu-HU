@@ -6,12 +6,12 @@ ms.author: nakersha
 ms.date: 09/30/2019
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: c135dacb2fc305fa97874cb4abcf4e2ac489b9e4
-ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+ms.openlocfilehash: be1eff8127be9fb024a1dc2de3ec82952ac2dc2b
+ms.sourcegitcommit: b7e205aaa7fa1ca9f0daa163e46154945f4bc965
 ms.translationtype: HT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76871617"
+ms.lasthandoff: 02/18/2020
+ms.locfileid: "77441031"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>A Microsoft Quantum Development Kit kibocsátási megjegyzései
 
@@ -21,13 +21,14 @@ A telepítési utasításokat lásd a [telepítési útmutatóban](xref:microsof
 
 A frissítésre vonatkozó utasításokat lásd a [frissítési útmutatóban](xref:microsoft.quantum.update).
 
+
 ## <a name="version-01020012831"></a>0\.10.2001.2831-es verzió
 
 *Kiadási dátum: 2020. január 29.*
 
 A verzió a következőket tartalmazza:
 
-- Új Microsoft.Quantum.SDK NuGet-csomag. További részletekért tekintse meg a [fontos fájlt](https://github.com/microsoft/qsharp-compiler/blob/master/src/QuantumSdk/README.md).
+- Új Microsoft.Quantum.SDK NuGet-csomag
 - Mostantól támogatott a .NET Core 3.1 – erősen ajánlott a 3.1.100-s verzió telepítése, mert a korábbi .NET Core SDK-verziókkal való fejlesztés hibákat eredményezhet.
 - A Microsoft.Quantum.QsCompiler.Experimental alatt új fordítóprogram-transzformációk érhetők el
 - Új funkciók a kimeneti állapotú vektorok megjelenítéséhez az IQ#-ban HTML formátumban
