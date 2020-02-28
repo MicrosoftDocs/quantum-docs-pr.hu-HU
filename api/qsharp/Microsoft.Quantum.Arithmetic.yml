@@ -1,7 +1,7 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.arithmetic
 name: Microsoft.Quantum.Arithmetic
-summary: " # <a name=\"summary\"></a>Összefoglalás\n Ez a névtér a következetes számítástechnikai aritmetikai funkcióit és műveleteit tartalmazza."
+summary: " # <a name=\"summary\"></a>Összegzés\n Ez a névtér a következetes számítástechnikai aritmetikai funkcióit és műveleteit tartalmazza."
 functions:
 - uid: microsoft.quantum.arithmetic.bigendianaslittleendian
   summary: '`BigEndian` qubit-regisztrációt konvertál egy `LittleEndian` qubit-regisztrációra a qubit megfordításával.'
@@ -139,6 +139,8 @@ operations:
   summary: Az aláírt egész szám `xs` az aláírt egész szám `ys` és az eredmény `result`ben való tárolása, amelyeknek kezdetben nullának kell lennie.
 - uid: microsoft.quantum.arithmetic.preparefxp
   summary: A kvantum rögzített pont számának inicializálása klasszikus állandó értékre.
+- uid: microsoft.quantum.arithmetic.reflectaboutinteger
+  summary: Egy adott klasszikus egész számra vonatkozó kvantum-regisztert tükröz.
 - uid: microsoft.quantum.arithmetic.ripplecarryaddercdkm
   summary: Visszafordítható, helyi hullámos – két egész szám hozzáadását hajthatja végre.
 - uid: microsoft.quantum.arithmetic.ripplecarryadderd
@@ -177,9 +179,9 @@ newtypes:
 - uid: microsoft.quantum.arithmetic.signedlittleendian
   summary: 'A kis endian tárolt aláírt egész számok típusa (lásd: LittleEndian).'
 metadata:
-  ms.openlocfilehash: f4bdca1f7b6339079cd1e13cfafc2de4e592901a
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: 905bac104c15881be6b2e600bd090ff650d63e0e
+  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76870442"
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77904553"

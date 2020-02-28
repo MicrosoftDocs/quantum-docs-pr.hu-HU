@@ -81,7 +81,7 @@ functions:
 - uid: microsoft.quantum.canon.continuedfractionconvergent
   summary: "\n> [!WARNING]\n> Elavult\n\nA ContinuedFractionConvergent elavult. Ehelyett használja a @\"microsoft.quantum.math.continuedfractionconvergenti\".\nKérjük, használja a @\"microsoft.quantum.math.continuedfractionconvergenti\"."
 - uid: microsoft.quantum.canon.controlledonbitstring
-  summary: Egy egységes operátort ad vissza, amely egy Oracle-t alkalmaz a cél-tételjegyzékben, ha a vezérlő regisztrálása állapot egy megadott bit-maszknak felel meg.
+  summary: Egy olyan egységes műveletet ad vissza, amely egy Oracle-t alkalmaz a cél-tételjegyzékben, ha a vezérlő regisztrálása állapot egy megadott bit-maszknak felel meg.
 - uid: microsoft.quantum.canon.controlledonint
   summary: Egy olyan egységes operátort ad vissza, amely egy Oracle-t alkalmaz a cél-tételjegyzékben, ha a vezérlő regisztrálása állapot egy megadott pozitív egész számnak felel meg.
 - uid: microsoft.quantum.canon.curriedop
@@ -298,14 +298,7 @@ operations:
 - uid: microsoft.quantum.canon.applycnotchainwithtarget
   summary: Kiszámítja egy qubits-tömb paritását egy célként megadott qubit.
 - uid: microsoft.quantum.canon.applydiagonalunitary
-  summary: >-
-    Összetett fázisokat alkalmaz a qubits regiszterének numerikus állapotára.
-
-
-    Ez azt valósítja meg, hogy a (z) $U $ átlós, egységes műveletet implementálja, amely egy összetett fázist alkalmaz $e ^ {i \ theta_j} $ a $n $-qubit Number State $ \ket{j} $ értékre.
-
-
-    $U = \sum ^ {2 ^ n-1} _ {j = 0} e ^ {i \ theta_j} \ket{j}\bra{j} $.
+  summary: Összetett fázisokat alkalmaz a qubits regiszterének numerikus állapotára.
 - uid: microsoft.quantum.canon.applyfermionicswap
   summary: A Fermionic-csere alkalmazása.
 - uid: microsoft.quantum.canon.applyif
@@ -440,6 +433,14 @@ operations:
     Egyetlen qubit műveletet alkalmaz a tételjegyzék minden indexelt elemére.
 
     A módosító `CA` azt jelzi, hogy az qubit művelet adjointable és ellenőrizhető.
+- uid: microsoft.quantum.canon.applytoelement
+  summary: Egy műveletet alkalmaz egy tömb egy adott elemére.
+- uid: microsoft.quantum.canon.applytoelementa
+  summary: Egy műveletet alkalmaz egy tömb egy adott elemére.
+- uid: microsoft.quantum.canon.applytoelementc
+  summary: Egy műveletet alkalmaz egy tömb egy adott elemére.
+- uid: microsoft.quantum.canon.applytoelementca
+  summary: Egy műveletet alkalmaz egy tömb egy adott elemére.
 - uid: microsoft.quantum.canon.applytofirstqubit
   summary: Egy műveletet alkalmaz a regisztráció első qubit.
 - uid: microsoft.quantum.canon.applytofirstqubita
@@ -541,6 +542,12 @@ operations:
   summary: Egy olyan művelet, amely egy bizonyos bemenetet fogad el, egy olyan függvényt ad vissza, amely kompatibilis a művelettel, és a függvény bemenete a művelettel a művelet által várt űrlapra alakítja át a bemenetet.
 - uid: microsoft.quantum.canon.applywithinputtransformationca
   summary: Egy olyan művelet, amely egy bizonyos bemenetet fogad el, egy olyan függvényt ad vissza, amely kompatibilis a művelettel, és a függvény bemenete a művelettel a művelet által várt űrlapra alakítja át a bemenetet.
+- uid: microsoft.quantum.canon.approximatelyapplydiagonalunitary
+  summary: Összetett fázisokat alkalmaz a qubits regiszterének numerikus állapotára, és lerövidíti a kis forgási szögeket egy adott tolerancia alapján.
+- uid: microsoft.quantum.canon.approximatelymultiplexpauli
+  summary: Egy qubits tömbön alkalmazza a Pauli rotációs feltételt, amely egy adott tűréshatárnak megfelelően lerövidíti a kisméretű rotációs szögeket.
+- uid: microsoft.quantum.canon.approximatelymultiplexz
+  summary: Egy qubits tömbön alkalmazza a Pauli Z rotációs feltételt, amely egy adott tűréshatárnak megfelelően lerövidíti a kisméretű rotációs szögeket.
 - uid: microsoft.quantum.canon.approximateqft
   summary: Alkalmazza a becsült kvantum Fourier-transzformációt (AQFT) a kvantum-regiszterre.
 - uid: microsoft.quantum.canon.asserthighestbit
@@ -648,23 +655,9 @@ operations:
 
     $U = \sum ^ {N-1} _ {j = 0} \ket{j}\bra{j}\otimes V_j $.
 - uid: microsoft.quantum.canon.multiplexpauli
-  summary: >-
-    Egy qubits-tömbön lévő Pauli-rotációs feltételt alkalmaz.
-
-
-    Ez a szorzási vezérlésű, egységes művelet $U $, amely a $ \ theta_j $ szöget hajtja végre az qubit Pauli operátorral $P $ értékkel, ha az $n $-qubit Number State $ \ket{j} $ értékkel rendelkezik.
-
-
-    $U = \sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j}\otimes e ^ {i P \ theta_j} $.
+  summary: Egy qubits-tömbön lévő Pauli-rotációs feltételt alkalmaz.
 - uid: microsoft.quantum.canon.multiplexz
-  summary: >-
-    Egy qubits tömbön alkalmazza a Pauli Z rotációs feltételt.
-
-
-    Ez a szorzási vezérlésű, egységes művelet $U $, amely a $ \ theta_j $ szöget hajtja végre az qubit Pauli operátorral $Z $ értékkel, ha az $n $-qubit Number State $ \ket{j} $ értékkel rendelkezik.
-
-
-    $U = \sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j}\otimes e ^ {i Z \ theta_j} $.
+  summary: Egy qubits tömbön alkalmazza a Pauli Z rotációs feltételt.
 - uid: microsoft.quantum.canon.noop
   summary: Végrehajtja az Identity műveletet (No-op) egy argumentumon.
 - uid: microsoft.quantum.canon.permutequbits
@@ -701,9 +694,9 @@ newtypes:
 - uid: microsoft.quantum.canon.resultstack
   summary: "\n> [!WARNING]\n> Elavult\n\nA ResultStack elavult."
 metadata:
-  ms.openlocfilehash: 8d54303daeb32281b1e531fce50443c132c14093
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: db3466b0e6fe493393f75bea85f9c91e2f56ec67
+  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76870724"
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77905624"

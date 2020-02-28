@@ -1,0 +1,32 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.machinelearning.sampled
+name: Sampled
+type: function
+namespace: Microsoft.Quantum.MachineLearning
+summary: Egy adott tömböt használ a megadott ütemterv alapján.
+syntax: "function Sampled (schedule : Microsoft.Quantum.MachineLearning.SamplingSchedule, values : 'T[]) : 'T[]"
+input:
+  content: "(schedule : Microsoft.Quantum.MachineLearning.SamplingSchedule, values : 'T[])"
+  types:
+  - name: schedule
+    summary: A mintavételi értékekben használandó ütemterv.
+    uid: microsoft.quantum.machinelearning.samplingschedule
+  - name: values
+    summary: A mintavételhez használandó értékek tömbje.
+    isArray: true
+    uid: "'T"
+    isLocal: true
+output:
+  content: "'T[]"
+  types:
+  - summary: Elemek tömbje az értékek közül, az adott ütemterv alapján.
+    isArray: true
+    uid: "'T"
+    isLocal: true
+metadata:
+  ms.openlocfilehash: 6b6693f43e2684f3195c2f7ddbeb0268759020db
+  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.translationtype: MT
+  ms.contentlocale: hu-HU
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77908599"

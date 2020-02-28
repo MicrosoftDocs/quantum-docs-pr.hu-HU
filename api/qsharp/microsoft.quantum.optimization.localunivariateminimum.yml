@@ -1,0 +1,47 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.optimization.localunivariateminimum
+name: LocalUnivariateMinimum
+type: function
+namespace: Microsoft.Quantum.Optimization
+summary: Egy univariate függvényhez tartozó helyi minimális értéket adja vissza, amely egy aranysárga intervallumos keresés használatával történik.
+syntax: 'function LocalUnivariateMinimum (fn : (Double -> Double), bounds : (Double, Double), tolerance : Double) : Microsoft.Quantum.Optimization.UnivariateOptimizationResult'
+input:
+  content: '(fn : (Double -> Double), bounds : (Double, Double), tolerance : Double)'
+  types:
+  - name: fn
+    summary: A univariate függvényt a lehető legkisebbre kell állítani.
+    isFunction: true
+    input:
+      types:
+      - isPrimitive: true
+        uid: Double
+    output:
+      types:
+      - isPrimitive: true
+        uid: Double
+  - name: bounds
+    summary: Az az időköz, amelyben a helyi minimumot meg kell találni.
+    types:
+    - isPrimitive: true
+      uid: Double
+    - isPrimitive: true
+      uid: Double
+  - name: tolerance
+    summary: >-
+      A függvény bemenetének pontossága.
+
+      A helyi Optima-keresés folytatódni fog, amíg az intervallum nem kisebb a tűréshatárnál.
+    isPrimitive: true
+    uid: Double
+output:
+  content: Microsoft.Quantum.Optimization.UnivariateOptimizationResult
+  types:
+  - summary: Az adott függvény helyi Optima, amely a megadott határokon belül található.
+    uid: microsoft.quantum.optimization.univariateoptimizationresult
+metadata:
+  ms.openlocfilehash: a93eed007d3720b38529b56d6b9b235869a37eee
+  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.translationtype: MT
+  ms.contentlocale: hu-HU
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77909007"

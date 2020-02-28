@@ -1,7 +1,7 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.logical
 name: Microsoft.Quantum.Logical
-summary: " # <a name=\"summary\"></a>Összefoglalás\n A logikai kifejezések és a logikai logika használatának függvényeit tartalmazza."
+summary: " # <a name=\"summary\"></a>Összegzés\n A logikai kifejezések és a logikai logika használatának függvényeit tartalmazza."
 functions:
 - uid: microsoft.quantum.logical.and
   summary: Két érték logikai együttesét adja vissza.
@@ -45,6 +45,8 @@ functions:
   summary: Igaz értéket ad vissza, és csak akkor, ha egy szám kisebb vagy egyenlő, mint egy másik szám.
 - uid: microsoft.quantum.logical.lessthanorequall
   summary: Igaz értéket ad vissza, és csak akkor, ha egy szám kisebb vagy egyenlő, mint egy másik szám.
+- uid: microsoft.quantum.logical.nearlyequald
+  summary: Igaz értéket ad vissza, ha két bemenet közel egyenlő (azaz a 1e-12 tűréshatáron belül).
 - uid: microsoft.quantum.logical.not
   summary: Egy érték logikai tagadását adja vissza.
 - uid: microsoft.quantum.logical.notequalb
@@ -61,14 +63,16 @@ functions:
   summary: Igaz értéket ad vissza, és csak akkor, ha két bemenet nem egyenlő.
 - uid: microsoft.quantum.logical.notequalr
   summary: Igaz értéket ad vissza, és csak akkor, ha két bemenet nem egyenlő.
+- uid: microsoft.quantum.logical.notnearlyequald
+  summary: Igaz értéket ad vissza, ha két bemenet közel nem egyenlő (azaz nem a 1e-12 tűréshatáron belül van).
 - uid: microsoft.quantum.logical.or
   summary: Két érték logikai kiválasztását adja vissza.
 - uid: microsoft.quantum.logical.xor
   summary: Két érték logikai kizárólagos kivonását adja vissza.
 metadata:
-  ms.openlocfilehash: 12f462356dfe7ae4bf7c60110e71a9928bc8c178
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 356a31be888d7ed3a96e219f8f7b31151179d3eb
+  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73056278"
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77905896"

@@ -1,12 +1,14 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.arrays
 name: Microsoft.Quantum.Arrays
-summary: " # <a name=\"summary\"></a>Összefoglalás\n Ez a névtér az adattömbök létrehozására és módosítására szolgáló függvényeket tartalmaz."
+summary: " # <a name=\"summary\"></a>Összegzés\n Ez a névtér az adattömbök létrehozására és módosítására szolgáló függvényeket tartalmaz."
 functions:
 - uid: microsoft.quantum.arrays.all
   summary: Egy tömböt és egy predikátumot adott meg, amely a tömb elemeihez van meghatározva, és ellenőrzi, hogy a tömb összes eleme megfelel-e a predikátumnak.
 - uid: microsoft.quantum.arrays.any
   summary: A tömb elemeihez megadott tömb és predikátum alapján a rendszer ellenőrzi, hogy a tömb legalább egy eleme megfelel-e a predikátumnak.
+- uid: microsoft.quantum.arrays.chunks
+  summary: Tömb felosztása több, egyenlő hosszúságú részre.
 - uid: microsoft.quantum.arrays.constantarray
   summary: Egy adott hosszúságú tömböt hoz létre a megadott értékkel egyenlő összes elemmel.
 - uid: microsoft.quantum.arrays.enumerated
@@ -23,6 +25,8 @@ functions:
   summary: Egy olyan tömb első elemének első indexét adja vissza, amely megfelel egy adott predikátumnak. Ha nem létezik ilyen elem, a a-1 értéket adja vissza.
 - uid: microsoft.quantum.arrays.indexrange
   summary: Egy tömb esetében az adott tömb indexei között egy tartományt ad vissza, amely a for ciklusban használható.
+- uid: microsoft.quantum.arrays.isempty
+  summary: Igaz értéket ad vissza, és csak akkor, ha egy tömb üres.
 - uid: microsoft.quantum.arrays.lookupfunction
   summary: A tömb adott értéke egy olyan függvényt ad vissza, amely a tömb elemeit adja vissza.
 - uid: microsoft.quantum.arrays.mapped
@@ -51,6 +55,8 @@ functions:
   summary: A tömb utolsó elemét adja vissza.
 - uid: microsoft.quantum.arrays.tuplearrayasnestedarray
   summary: Egy beágyazott tömbbe bekapcsolja a 2 – rekordok listáját.
+- uid: microsoft.quantum.arrays.where
+  summary: Egy predikátum és egy tömb miatt a tömb azon indexeit adja vissza, amelyekben a predikátum igaz.
 - uid: microsoft.quantum.arrays.zip
   summary: Az adott két tömb a párok új tömbjét adja vissza, így minden pár tartalmaz egy elemet az eredeti tömbből.
 - uid: microsoft.quantum.arrays.zip3
@@ -61,9 +67,9 @@ operations:
 - uid: microsoft.quantum.arrays.foreach
   summary: Egy tömb és egy olyan művelet, amely a tömb elemeihez van meghatározva, egy új tömböt ad vissza, amely a művelet alatt található eredeti tömb képéből áll.
 metadata:
-  ms.openlocfilehash: 12835bef2608d979809027cb9a271f2cda864b10
-  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+  ms.openlocfilehash: 5cbe8e172fda72d1016b407656c75457526651aa
+  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 12/05/2019
-  ms.locfileid: "74858870"
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77905590"
