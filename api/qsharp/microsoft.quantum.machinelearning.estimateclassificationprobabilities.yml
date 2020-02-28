@@ -1,0 +1,42 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.machinelearning.estimateclassificationprobabilities
+name: EstimateClassificationProbabilities
+type: operation
+namespace: Microsoft.Quantum.MachineLearning
+summary: Egy minta és egy szekvenciális osztályozó alapján a minták besorolási valószínűségét az egyes mintákon az osztályozó kimenetének ismételt mérésével becsüli meg.
+syntax: 'operation EstimateClassificationProbabilities (tolerance : Double, model : Microsoft.Quantum.MachineLearning.SequentialModel, samples : Double[][], nMeasurements : Int) : Double[]'
+input:
+  content: '(tolerance : Double, model : Microsoft.Quantum.MachineLearning.SequentialModel, samples : Double[][], nMeasurements : Int)'
+  types:
+  - name: tolerance
+    summary: Az a tűréshatár, amely lehetővé teszi a minta kódolását az állapot-előkészítési műveletben.
+    isPrimitive: true
+    uid: Double
+  - name: model
+    summary: Az adott minták besorolási valószínűségének becslésére szolgáló szekvenciális modell.
+    uid: microsoft.quantum.machinelearning.sequentialmodel
+  - name: samples
+    summary: A besorolni kívánt mintákhoz tartozó szolgáltatás-vektorok tömbje.
+    isArray: true
+    types:
+    - isArray: true
+      isPrimitive: true
+      uid: Double
+  - name: nMeasurements
+    summary: A besorolási valószínűség becslése során használandó measusrements száma.
+    isPrimitive: true
+    uid: Int
+output:
+  content: Double[]
+  types:
+  - summary: Az egyes minták besorolási valószínűségére vonatkozó becslések egy tömbje.
+    isArray: true
+    isPrimitive: true
+    uid: Double
+metadata:
+  ms.openlocfilehash: 83f3e35d0ef60d7925f8d62727d40d202220b851
+  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.translationtype: MT
+  ms.contentlocale: hu-HU
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77908667"

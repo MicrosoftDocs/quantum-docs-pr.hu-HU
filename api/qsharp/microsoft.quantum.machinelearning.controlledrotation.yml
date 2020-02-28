@@ -1,0 +1,32 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.machinelearning.controlledrotation
+name: ControlledRotation
+type: newtype
+namespace: Microsoft.Quantum.MachineLearning
+summary: Egy vezérelt rotációt mutat be a cél és a vezérlési indexek, a rotációs tengely és az index között a modell paraméterének vektora alapján.
+remarks: >-
+  A nem vezérelt rotációk a `ControlIndices` beállításával állíthatók be az indexek üres sorába, `new Int[0]`.
+
+
+  ### <a name="examples"></a>Példák
+
+  Az alábbiakban a regiszter első qubit $X $ tengelyére, a második qubit való vezérlésre, valamint a soros modell negyedik paramétere által megadott szögre vonatkozik:
+
+
+  ```Q#
+
+  let controlledRotation = ControlledRotation(
+      (0, [1]),
+      PauliX,
+      3
+  )
+
+  ```
+syntax: newtype ControlledRotation = ((Int, Int[]), Pauli, Int);
+metadata:
+  ms.openlocfilehash: b09588e77a43be10493184d4e3b8bbe7a0025ce6
+  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.translationtype: MT
+  ms.contentlocale: hu-HU
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77909517"

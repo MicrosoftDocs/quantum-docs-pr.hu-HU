@@ -1,10 +1,10 @@
 ### YamlMime:QSharpType
-uid: microsoft.quantum.canon.multiplexpauli
-name: MultiplexPauli
+uid: microsoft.quantum.canon.approximatelymultiplexpauli
+name: ApproximatelyMultiplexPauli
 type: operation
 namespace: Microsoft.Quantum.Canon
 summary: >-
-  Egy qubits-tömbön lévő Pauli-rotációs feltételt alkalmaz.
+  Egy qubits tömbön alkalmazza a Pauli rotációs feltételt, amely egy adott tűréshatárnak megfelelően lerövidíti a kisméretű rotációs szögeket.
 
 
   Ez egy szorzásra vezérelt, egységes műveletet alkalmaz, amely a $ \ theta_j $ szöget hajtja végre az qubit Pauli-operátoron $P $ értékkel, ha az $n $-qubit számú állapot $ \ket{j} $ értékkel van vezérelve.
@@ -19,10 +19,14 @@ summary: >-
 
   ##
 remarks: a `coefficients` a $ \ theta_j = $0,0 elemmel lesz feltöltve, ha kevesebb, mint $2 ^ n $ van megadva.
-syntax: 'operation MultiplexPauli (coefficients : Double[], pauli : Pauli, control : Microsoft.Quantum.Arithmetic.LittleEndian, target : Qubit) : Unit'
+syntax: 'operation ApproximatelyMultiplexPauli (tolerance : Double, coefficients : Double[], pauli : Pauli, control : Microsoft.Quantum.Arithmetic.LittleEndian, target : Qubit) : Unit'
 input:
-  content: '(coefficients : Double[], pauli : Pauli, control : Microsoft.Quantum.Arithmetic.LittleEndian, target : Qubit)'
+  content: '(tolerance : Double, coefficients : Double[], pauli : Pauli, control : Microsoft.Quantum.Arithmetic.LittleEndian, target : Qubit)'
   types:
+  - name: tolerance
+    summary: Az a tűréshatár, amely alatt a kis együtthatók csonkítva vannak.
+    isPrimitive: true
+    uid: Double
   - name: coefficients
     summary: Legfeljebb $2 ^ n $ együttható, $ \ theta_j $. A $j $ th együttható a $ \ket{j} $ kódolású számú állapotot indexeli a kis endian formátumban.
     isArray: true
@@ -48,11 +52,11 @@ functors:
 - Adjoint
 - Controlled
 seeAlso:
-- approximatelymultiplexpauli
+- multiplexpauli
 metadata:
-  ms.openlocfilehash: 7c30159a7774b407d7574018028b53e8c72f8d0a
+  ms.openlocfilehash: e3b828de03845724fc1cad78babfff0c01b8ae24
   ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
   ms.translationtype: MT
   ms.contentlocale: hu-HU
   ms.lasthandoff: 02/28/2020
-  ms.locfileid: "77906576"
+  ms.locfileid: "77907936"

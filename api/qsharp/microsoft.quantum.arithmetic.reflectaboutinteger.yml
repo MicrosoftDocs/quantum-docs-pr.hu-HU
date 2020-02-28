@@ -1,0 +1,36 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.reflectaboutinteger
+name: ReflectAboutInteger
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: >-
+  Egy adott klasszikus egész számra vonatkozó kvantum-regisztert tükröz.
+
+
+  A kvantum-regisztráció eredetileg a következő állapotban van: $ \ sum_i \ alpha_i \ket{i} $, ahol az egyes $ \ket{i} $ egy egész $i $ értéket jelképező állapot, amely az adott egész szám ($ \ket{j} $, $ $ \ sum_i (-1) ^ {\ delta_ {ij}} \alpha _i \ket{i} $ $
+remarks: Ez a művelet helyben, a további segédszolgáltatása-qubits explicit kiosztása nélkül valósítható meg.
+syntax: 'operation ReflectAboutInteger (index : Int, reg : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
+input:
+  content: '(index : Int, reg : Microsoft.Quantum.Arithmetic.LittleEndian)'
+  types:
+  - name: index
+    summary: A klasszikus egész szám indexeli a kiinduló állapotot.
+    isPrimitive: true
+    uid: Int
+  - name: reg
+    uid: microsoft.quantum.arithmetic.littleendian
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+metadata:
+  ms.openlocfilehash: 4a76b08b8d8b7b70a63a615f8e69e26cd4df7129
+  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.translationtype: MT
+  ms.contentlocale: hu-HU
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77908259"

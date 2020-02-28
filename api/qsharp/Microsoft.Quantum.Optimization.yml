@@ -1,0 +1,17 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.optimization
+name: Microsoft.Quantum.Optimization
+summary: " # <a name=\"summary\"></a>Összegzés\n Függvényeket és optimalizálásokat tartalmaz a minimumok megkereséséhez."
+functions:
+- uid: microsoft.quantum.optimization.localunivariateminimum
+  summary: Egy univariate függvényhez tartozó helyi minimális értéket adja vissza, amely egy aranysárga intervallumos keresés használatával történik.
+newtypes:
+- uid: microsoft.quantum.optimization.univariateoptimizationresult
+  summary: Egy univariate függvény optimalizálásának eredményét jelöli.
+metadata:
+  ms.openlocfilehash: 4cbb867e974056e311725f161c445cfb06bf5c4c
+  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.translationtype: MT
+  ms.contentlocale: hu-HU
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77908276"
