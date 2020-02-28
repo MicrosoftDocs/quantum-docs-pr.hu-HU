@@ -1,4 +1,4 @@
-- name: Referencia
+- name: API-referencia
   items:
     - name: 'Q#-kódtárak'
       href: qsharp/toc.yml

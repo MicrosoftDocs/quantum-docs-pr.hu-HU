@@ -1,5 +1,3 @@
-- name: OSS-licencelés
-  href: licensing.md
 - name: A bevezetés
   href: prelude.md
 - name: Klasszikus matematika
@@ -20,3 +18,5 @@
   href: error-correction.md
 - name: Alkalmazások
   href: applications.md
+- name: OSS-licencelés
+  href: licensing.md
