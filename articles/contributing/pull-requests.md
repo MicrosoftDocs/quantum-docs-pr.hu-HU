@@ -1,17 +1,17 @@
 ---
-title: Lekéréses kérelmek megnyitása | Microsoft Docs
-description: Lekéréses kérelmek megnyitása
+title: Lekéréses kérelmek megnyitása
+description: Megtudhatja, hogyan küldhet el egy GitHub-lekéréses kérelmet, ha készen áll a kód vagy a dokumentáció Microsoft Quantum Development Kithoz való hozzájárulására.
 author: cgranade
 ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.pulls
-ms.openlocfilehash: d70a0a0319d14cfdae4910b897733d77b236f2f9
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: a4373a65688893c95e0475356c8f6fca0912f8c5
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73183726"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907460"
 ---
 # <a name="opening-pull-requests"></a>Lekéréses kérelmek megnyitása #
 
@@ -42,19 +42,19 @@ Gyakran olyan diagramokat rajzolunk, amelyekben a véglegesíti a korábbi végl
 Tegyük fel, hogy egy `feature`nevű _ág_ egy hozzájárulását indította el.
 A **Microsoft/Quantum** elágazása a következőhöz hasonló módon jelenhet meg:
 
-![](~/media/git-workflow-step0.png)
+![Egy működő ág a GitHubban](~/media/git-workflow-step0.png)
 
 Ha a változtatásokat a helyi tárházban végzi el, a változtatásokat egy másik adattárból is lekérheti, hogy felvegyen egy felfelé irányuló _változást._
 
-![](~/media/git-workflow-step1.png)
+![A felsőbb rétegbeli tárház változásainak húzása és egyesítése](~/media/git-workflow-step1.png)
 
 A lekéréses kérelmek ugyanúgy működnek, de fordított sorrendben: Ha lekéréses kérelmet nyit meg, a felsőbb rétegbeli tárházat kéri a hozzájárulásának lekérésére.
 
-![](~/media/git-workflow-step2.png)
+![A módosítások visszahívásának kérése az eredeti tárházba](~/media/git-workflow-step2.png)
 
 Amikor megnyit egy lekéréses kérelmet a Tárházak egyikére, a GitHub lehetőséget nyújt a Közösség más tagjai számára, hogy megtekintsék a módosítások összegzését, a rájuk vonatkozó észrevételeket, valamint javaslatokat tesznek a még jobb hozzájárulás biztosításához.
 
-![](~/media/pull-request-header.png)
+![Képernyőkép egy lekéréses kérelemről a GitHubon](~/media/pull-request-header.png)
 
 Ezzel a folyamattal a GitHub funkcióinak használatával javíthatja a hozzájárulásokat, és kiváló minőségű terméket tarthat fenn a Quantum programozási Közösség számára.
 

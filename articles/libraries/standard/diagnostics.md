@@ -1,16 +1,16 @@
 ---
-title: 'Q # standard könyvtárak – diagnosztika | Microsoft Docs'
-description: 'Q # standard könyvtárak – diagnosztika'
+title: 'Diagnosztika a Q # standard könyvtárakban'
+description: 'Ismerje meg, hogy milyen diagnosztikai funkciókkal és műveletekkel lehet elsajátítani a kvantum-programok hibáit vagy hibáit a Q # standard kódtárakban.'
 author: cgranade
 uid: microsoft.quantum.libraries.diagnostics
 ms.author: chgranad@microsoft.com
 ms.topic: article
-ms.openlocfilehash: 67ec6780d8cbbda7223d46026a9df97cebc92b33
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: ba2f248327bb3db4ee895f8e65ea31c17e42b5f4
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76820980"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906236"
 ---
 # <a name="diagnostics"></a>Diagnosztika #
 

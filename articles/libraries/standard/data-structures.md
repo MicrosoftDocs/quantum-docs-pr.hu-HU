@@ -1,17 +1,17 @@
 ---
-title: 'Q # standard könyvtárak – adatstruktúrák | Microsoft Docs'
-description: 'Q # standard könyvtárak – adatstruktúrák'
+title: 'Adatstruktúrák a Q # standard könyvtárakban'
+description: 'Ismerje meg az adatstruktúrákat, az Oracle-ket és a dinamikus generátorokat a Microsoft Q # standard könyvtáraiban.'
 author: QuantumWriter
 uid: microsoft.quantum.libraries.data-structures
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 6eb47de84fdfbb9d35fdfc2988883f8e1cffa332
-ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+ms.openlocfilehash: 46ac6794d1e21e111aa1d98e11a6f83194f8d54e
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74864355"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907783"
 ---
 # <a name="data-structures-and-modeling"></a>Adatstruktúrák és-modellezés #
 
@@ -199,7 +199,7 @@ A dinamikus szimuláció elsődleges célja az, hogy az idő-evolúciós operát
 
 $ $ \begin{align} H & = \sum ^ {d-1} _ {j = 0} H_j, \end{align} $ $
 
-a kvantum-számítógépeken egyszerűen megvalósítható az egyes kifejezések időbeli alakulása. Ha például a $H _j $ egy Pauli $X _1X_2 $ operátor, amely a qubit-regisztráció 1. és 2. részében van, akkor a `qubits`$-ban minden alkalommal megvalósítható az Időváltozás, ha meghívja a művelet $t, amelynek aláírása `Exp([PauliX,PauliX], t, qubits[1..2])`. Ahogy az a Hamilton szimulációban is szerepel, az egyik megoldás, hogy az $H $ értékkel közelítse meg az időbeli alakulást az egyszerűbb műveletek sorozatával.
+a kvantum-számítógépeken egyszerűen megvalósítható az egyes kifejezések időbeli alakulása. Ha például a $H _j $ egy Pauli $X _1X_2 $ operátor, amely a qubit-regisztráció 1. és 2. részében van, akkor a `qubits`$-ban minden alkalommal megvalósítható az Időváltozás, ha meghívja a művelet $t, amelynek aláírása `Exp([PauliX,PauliX], t, qubits[1..2])`.`((Pauli[], Double, Qubit[]) => Unit is Adj + Ctl)` Ahogy az a Hamilton szimulációban is szerepel, az egyik megoldás, hogy az $H $ értékkel közelítse meg az időbeli alakulást az egyszerűbb műveletek sorozatával.
 
 $ $ \begin{align} U (t) & = \left (e ^ {-iH\_0 t/r} e ^ {-iH\_1 t/r} \cdots e ^ {-iH\_{d-1} t/r} \right) ^ {r} + \mathcal{O} (d ^ 2 \ max_j \\| H\_j\\| ^ 2 t ^ 2/r), \end{align} $ $
 

@@ -1,17 +1,17 @@
 ---
-title: Speciális mátrix-fogalmak | Microsoft Docs
-description: Speciális mátrix-fogalmak
+title: Speciális mátrixfogalmak
+description: Ismerje meg a eigenvectors, a eigenvalues és a mátrix exponenciális adatait, a kvantum-algoritmusok leírására és szimulálására szolgáló alapvető eszközöket.
 author: QuantumWriter
 uid: microsoft.quantum.concepts.matrix-advanced
 ms.author: nawiebe@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: f87b3bcd19d2f98fea2a9724a280781a78c4cbb9
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: a83911e01ad758bbcb7f701000fd58b4f1c91cd2
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73183760"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907579"
 ---
 # <a name="advanced-matrix-concepts"></a>Speciális mátrix-fogalmak #
 
@@ -32,14 +32,14 @@ $$
 
 A vektorok
 
-$ $ \begin{bmatrix}1 \\\\ 0 \\\\ 0 \end{bmatrix}, \begin{bmatrix}0 \\\\ 1 \\\\ 0 \ End {bmatrix} és \begin{bmatrix}0 \\\\ 0 \\\\ 1 \ Befejezés {bmatrix} $ $
+$ $ \begin{bmatrix}1 \\\\ 0 \\\\ 0 \end{bmatrix}, \begin{bmatrix}0 \\\\ 1 \\\\ 0 \ End {bmatrix} és \begin{bmatrix}0 \\\\ 0 \\\\ 1 \ End {bmatrix} $ $
 
 Ennek a mátrixnak a eigenvectors a eigenvalues $d _1 $, $d _2 $ és $d _3 $. Ha $d _1 $, $d _2 $, és $d _3 $ egyedi számú, akkor ezek a vektorok (és azok többszörösei) az egyetlen eigenvectors a mátrix $D $. Az átlós mátrixok esetében általában könnyen olvasható a eigenvalues és a eigenvectors. A eigenvalues az átlóban megjelenő számok, a hozzájuk tartozó eigenvectors pedig az egység vektorok, amelyek egy bejegyzése $1 $, a fennmaradó bejegyzések pedig $0 $ értékűek.
 
-Vegye figyelembe a fenti példában, hogy a $D $ eigenvectors a $3 $-dimenziós vektorok alapjául szolgál. Az alap olyan vektorok halmaza, amelyekben a vektorok lineáris kombinációként is írhatók. Explicit módon, $v _1 $, $v _2 $ és $v _3 $ Form, ha bármely vektor $v $ írható $v = a_1 v_1 + a_2 v_2 + a_3 v_3 $ értékkel $a _1 $, $a _2 $ és $a _3 $ esetében.
+Vegye figyelembe a fenti példában, hogy a $D $ eigenvectors a $3 $-dimenziós vektorok alapjául szolgál. Az alap olyan vektorok halmaza, amelyekben a vektorok lineáris kombinációként is írhatók. Explicit módon $v _1 $, $v _2 $ és a $v _3 $ Form, ha bármely vektor $v $ $v = a_1 v_1 + a_2 v_2 + a_3 v_3 $ értékkel $a _1 $, $a _2 $ és $a _3 $.
 
 Ne felejtse el, hogy egy Hermitian mátrix (más néven önadjoint) egy összetett négyzetes mátrix, amely a saját összetett konjugátumával egyenlő, míg az egységes mátrix egy olyan összetett négyzetes mátrix, amelynek inverze egyenlő a komplex konjugátummal.
-A Hermitian és az egységes mátrixok esetében, amelyek lényegében csak egyetlen, a Quantum Computing-ben észlelt mátrixok, egy általános eredmény az úgynevezett [*spektrális tétel*](https://en.wikipedia.org/wiki/Spectral_theorem), amely az alábbiakat állítja be: bármely Hermitian vagy egységes Matrix $M $ esetén létezik az egységes $U $ például, hogy $M = U ^ \dagger D U $ egy átlós mátrixhoz $D $. Továbbá a $D $ átlós bejegyzései a $M $ eigenvalues lesznek.
+A Hermitian és az egységes mátrixok esetében, amelyek lényegében csak a kvantum-számítástechnikaben észlelt mátrixok, egy általános eredmény a [*spektrális tétel*](https://en.wikipedia.org/wiki/Spectral_theorem), amely a következőket állítja be: minden Hermitian vagy egységes mátrix $M $ esetén létezik egy egységes $U $, amely $M = u ^ \Dagger D u $ egy átlós mátrix $D $ értéknél. Továbbá a $D $ átlós bejegyzései a $M $ eigenvalues lesznek.
 
 Már tudjuk, hogyan kell kiszámítani egy átlós mátrix $D $ eigenvalues és eigenvectors. Ennek a tételnek a használatával tudjuk, hogy ha $v $ eigenvector $D $ sajátérték $c $, azaz $Dv = CV $, akkor $U ^ \dagger v $ lesz $M $ sajátérték $c $-eigenvector. Ennek az az oka, hogy
 

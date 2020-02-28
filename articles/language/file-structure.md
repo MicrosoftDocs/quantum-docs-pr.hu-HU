@@ -1,17 +1,17 @@
 ---
-title: Fájl szerkezete | Microsoft Docs
-description: 'Q # fájl szerkezete'
+title: 'Q # fájl szerkezete'
+description: 'Megtudhatja, hogyan strukturálhatja a névtereket, a műveleteket, a függvényeket és a felhasználó által definiált típusú deklarációkat a Q # programokban és könyvtárakban.'
 author: QuantumWriter
 uid: microsoft.quantum.language.file-structure
 ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 364d353c55bda38f227456909755d13dc7e67080
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: b4bb7d4d70677dbd5d921a9f68313760499a56a1
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821082"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907392"
 ---
 # <a name="file-structure"></a>Fájlstruktúra
 
@@ -66,7 +66,7 @@ Különösen, ha az alapul szolgáló típusok azonosak, a felhasználó által 
 
 A felhasználó által definiált típusú deklaráció a kulcsszó `newtype`, majd a felhasználó által definiált típus neve, egy `=`, egy érvényes típus-specifikáció és egy megszakítási pontosvessző.
 
-Példa:
+Például:
 
 ```qsharp
 newtype PairOfInts = (Int, Int);

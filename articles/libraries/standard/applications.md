@@ -1,17 +1,17 @@
 ---
-title: 'Q # standard könyvtárak – alkalmazások | Microsoft Docs'
-description: Szabványos Q#-kódtárak
+title: 'Alkalmazások a Q # standard könyvtárakban'
+description: Ismerkedjen meg a Quantum Computing – Hamilton szimuláció és a rövid keresési algoritmusának két alapvető alkalmazásával.
 author: QuantumWriter
 uid: microsoft.quantum.libraries.applications
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 3e629e095bd2ee492496066710ef6fd4e578a543
-ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+ms.openlocfilehash: b7c46b634c6d691c067c0dd995301395408c85ca
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76868968"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907222"
 ---
 # <a name="applications"></a>Alkalmazások #
 
@@ -159,7 +159,7 @@ A fázis becslése így a eigenvalues $e ^ {2 \ PI i s/r} $ értéket jeleníti 
 
 A kvantum-időszak megállapításához használt áramköri diagram a következő:
 
-![](./../../media/QPE.svg)
+![A kvantum-időszak megkeresésének áramköri diagramja](./../../media/QPE.svg)
 
 Itt $2n $ qubits inicializálva van a $ \ket{0}$ és a $n $ qubits értékre, amely a $ \ket{1}$-ra van inicializálva.
 Az olvasónak újra lehet tudnia, hogy miért lett inicializálva az eigenstates a (z) $ \ket{1}$ értékre.

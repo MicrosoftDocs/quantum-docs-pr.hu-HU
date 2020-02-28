@@ -1,24 +1,24 @@
 ---
-title: 'Q # Style útmutató | Microsoft Docs'
-description: 'Q # Style útmutató'
+title: 'Microsoft Q # Style útmutató'
+description: 'A Q # programok és könyvtárak elnevezési, bemeneti, dokumentációs és formázási konvencióinak megismerése.'
 author: cgranade
 ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.style
-ms.openlocfilehash: 4050e2ee9e516aed7a8ba1398792562926808ee0
-ms.sourcegitcommit: c93fea5980d1d46fbda1e7c7153831b9337134bf
+ms.openlocfilehash: 3c8e432378ec563a197a5b87000c3e90cadb8e18
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73463326"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907443"
 ---
 # <a name="q-style-guide"></a>Q # Style útmutató #
 ## <a name="general-conventions"></a>Általános konvenciók ##
 
 Az ebben az útmutatóban javasolt konvenciók célja, hogy a Q # könnyebben olvasható és értelmezhető programokat és kódtárakat segítse.
 
-## <a name="guidance"></a>Segédletek
+## <a name="guidance"></a>Útmutatás
 
 Javasoljuk, hogy:
 
@@ -49,7 +49,7 @@ Ez a különbségtétel azt sugallja, hogy az Operations és a függvények neve
 > Ebből a szemszögből a felhasználó által definiált típusok neveként kell nevezni, hogy mind a típus, mind a konstruktor függvény konzisztens névvel rendelkezzen.
 
 Ahol ésszerű, győződjön meg arról, hogy a műveleti nevek olyan műveletekkel kezdődnek, amelyek egyértelműen jelzik a művelet által végrehajtott hatást.
-Példa:
+Például:
 
 - `MeasureInteger`
 - `EstimateEnergy`
@@ -62,12 +62,12 @@ Ebben az esetben más műveletek is hasznosak lehetnek, mint a `IterateThroughCa
 
 | Művelet | Várt hatás |
 | ---- | ------ |
-| Jelentkezés | A bemenetként megadott műveletet nevezzük |
+| Alkalmaz | A bemenetként megadott műveletet nevezzük |
 | Assert | A lehetséges kvantum-mérés eredményével kapcsolatos hipotézist egy szimulátor ellenőrzi |
 | Becslés | Egy klasszikus értéket ad vissza, amely egy vagy több mérésből álló becslést jelöl. |
 | Measure | A rendszer elvégzi a kvantum-mérést, és annak eredményét visszaadja a felhasználónak |
-| Előkészületek | A qubits adott regisztrálása egy adott állapotba van inicializálva |
-| Minta | Egy klasszikus értéket ad vissza véletlenszerűen egy bizonyos eloszlásból |
+| Előkészítés | A qubits adott regisztrálása egy adott állapotba van inicializálva |
+| Sample | Egy klasszikus értéket ad vissza véletlenszerűen egy bizonyos eloszlásból |
 
 A függvények esetében javasoljuk, hogy kerülje a műveletek használatát a közös nevek mellett (lásd az alábbi, a földrajzi nevekkel kapcsolatos útmutatót) vagy a mellékneveket:
 
@@ -80,7 +80,7 @@ A `ControlledOnInt` például a "vezérlő" művelet "vezérlőelem" kifejezés�
 Ennek a névnek a további előnye, hogy a beépített `Controlled`-inaktívnak megfelelő szemantikai feltételnek felel meg, ahogy azt az alábbiakban tárgyaljuk.
 Hasonlóképpen, az _ügynökök_ nevei a függvények és a UDT nevéből is felhasználhatók a műveleti nevekből, ahogy a neve `Encoder` a `Encode`hoz szorosan társított UDT esetében.
 
-# <a name="guidancetabguidance"></a>[Útmutatás](#tab/guidance)
+# <a name="guidance"></a>[Útmutatás](#tab/guidance)
 
 Javasoljuk, hogy:
 
@@ -91,9 +91,9 @@ Javasoljuk, hogy:
 - Az összes helyi változó esetében a `pascalCase` erős preferencia használatával `CamelCase`, `snake_case`vagy `ANGRY_CASE`. Különösen ügyeljen arra, hogy a helyi változók kisbetűkkel kezdődjön.
 - Az aláhúzások használatának elkerülése a függvények és a műveletek neveiben `_` Ha további hierarchiára van szükség, használja a névtereket és a névterek aliasait.
 
-# <a name="examplestabexamples"></a>[Példák](#tab/examples)
+# <a name="examples"></a>[Példák](#tab/examples)
 
-|   | Név | Leírás |
+|   | Name (Név) | Leírás |
 |---|------|-------------|
 | ☑ | `operation ReflectAboutStart` | A művelet hatásának jelzéséhez törölje a műveletet ("tükrözze"). |
 | ☒ | <s>`operation XRotation`</s> | A főnévi kifejezés a művelet helyett a függvényt javasolja. |
@@ -132,7 +132,7 @@ is Adj + Ctl {
 }
 ```
 
-# <a name="guidancetabguidance"></a>[Útmutatás](#tab/guidance)
+# <a name="guidance"></a>[Útmutatás](#tab/guidance)
 
 Javasoljuk, hogy:
 
@@ -141,9 +141,9 @@ Javasoljuk, hogy:
 - Rövid (kétbetűs) betűszók és nagybetűk használata.
 - A hosszabb (három vagy több betűs) betűszók és a nagybetűk használatát `CamelCase` használhatja.
 
-# <a name="examplestabexamples"></a>[Példák](#tab/examples)
+# <a name="examples"></a>[Példák](#tab/examples)
 
-|   | Név | Leírás |
+|   | Name (Név) | Leírás |
 |---|------|-------------|
 | ☑ | `X` | Jól ismert Gyorsírás a "$X $ átalakítás alkalmazása" |
 | ☑ | `CNOT` | Jól értelmezhető Gyorsírás a "vezérelt – nem" |
@@ -168,17 +168,17 @@ Ezért azt javasoljuk, hogy ha ésszerű, a fogalmakat leíró általános nevek
 Ebben az esetben az "Fredkin" és a "Toffoli" műveletet gyakran nevezik a tudományos irodalomban, de a Q # elsődlegesen a `CSWAP` és `CCNOT`.
 Az API-dokumentációs megjegyzések mindkét esetben a megfelelő neveken alapuló szinonimákat biztosítanak az összes megfelelő hivatkozással együtt.
 
-Ez a beállítás különösen fontos, mivel a megfelelő főnevek bizonyos használata mindig szükséges – a Q # a számos klasszikus nyelv által meghatározott hagyományt követi, és a `Bool` típusokra hivatkozik a logikai logikára, amely a tiszteletben megnevezett George Boole-től.
+Ez a beállítás különösen fontos, mivel a megfelelő főnevek bizonyos használata mindig szükséges: a Q # a számos klasszikus nyelv által meghatározott hagyományt követi, és a logikai logikára hivatkozó `Bool` típusokra hivatkozik, amely a George Boole tiszteletben tartásával van elnevezve.
 Ehhez hasonló módon kell elnevezni néhány kvantum-fogalmat, például a Q # nyelvhez beépített `Pauli` típust.
 A megfelelő főnevek használatának minimalizálása, ha az ilyen használat nem alapvető fontosságú, csökkentik annak a hatását, hogy a megfelelő földrajzi nevek ne legyenek ésszerűen elkerülhetők.
 
-# <a name="guidancetabguidance"></a>[Útmutatás](#tab/guidance) 
+# <a name="guidance"></a>[Útmutatás](#tab/guidance) 
 
 Javasoljuk, hogy:
 
 - Kerülje a nevekben a megfelelő nevek használatát.
 
-# <a name="examplestabexamples"></a>[Példák](#tab/examples)
+# <a name="examples"></a>[Példák](#tab/examples)
 
 ***
 
@@ -188,19 +188,19 @@ Mivel a Q # egy erősen és statikusan beírt nyelv, az egyik típusú érték c
 Ez ellentétben áll azokkal a nyelvekkel, amelyek lehetővé teszik, hogy az értékek implicit módon módosítsák a típusokat (pl.: Type Promotion) vagy a casting használatával.
 Ennek eredményeképpen az átalakítási függvények fontos szerepet játszanak a Q # könyvtár fejlesztésében, és az elnevezéssel kapcsolatban leggyakrabban felmerülő döntések egyikét alkotják.
 Azonban ez azt jelzi, hogy mivel a Type konverziók mindig _determinisztikus_, a függvények is megírhatók, ezért a fenti tanács alá tartoznak.
-Különösen azt javasoljuk, hogy az átalakítási függvények soha ne legyenek elnevezve műveleteknek (pl.: `ConvertToX`) vagy a határozószók előírási kifejezéseknek (`ToX`), hanem a forrás-és a rendeltetési típust jelző, melléknévi (`XAsY`).
+Különösen azt javasoljuk, hogy a Type Conversion functions soha ne legyen elnevezve műveletként (pl.: `ConvertToX`) vagy a határozószók előírási kifejezésekkel (`ToX`), hanem a forrás-és a rendeltetési típusokat (`XAsY`) jelző, melléknévi előírási kifejezéseknek kell nevezni.
 A típus átalakítási függvények neveiben szereplő tömb típusok listázásakor ajánlott a Gyorsírás `Arr`.
 A kivételes körülmények korlátozásával azt javasoljuk, hogy az összes típus-átalakítási függvényt `As` használatával lehessen elnevezni, hogy gyorsan azonosíthatóak legyenek.
 
-# <a name="guidancetabguidance"></a>[Útmutatás](#tab/guidance)
+# <a name="guidance"></a>[Útmutatás](#tab/guidance)
 
 Javasoljuk, hogy:
 
 - Ha egy függvény `X` típusú értéket konvertál `Y`típusú értékre, használja a `AsY` vagy a `XAsY`nevet.
 
-# <a name="examplestabexamples"></a>[Példák](#tab/examples)
+# <a name="examples"></a>[Példák](#tab/examples)
 
-|   | Név | Leírás |
+|   | Name (Név) | Leírás |
 |---|------|-------------|
 | ☒ | <s>`ToDouble`</s> | A "to" utasítás a művelethez tartozó kifejezést eredményez, és nem függvényt jelez. |
 | ☒ | <s>`AsDouble`</s> | A bemeneti típus nem egyértelmű a függvény nevéből. |
@@ -215,15 +215,15 @@ Sok esetben a név kifejezetten a belső könyvtárakhoz vagy projektekhez való
 Hasznos lehet egyértelműen jelezni, hogy ez a helyzet az elnevezési függvények és műveletek esetében, hogy a csak belső kódok véletlen függőségei legyenek egyértelműek.
 Ha egy művelet vagy függvény nem közvetlen használatra készült, hanem egy, a részleges alkalmazás által elvégezhető egyező meghívónak kell használnia, érdemes lehet olyan nevet használni, amely a részben alkalmazott hívható `_`.
 
-# <a name="guidancetabguidance"></a>[Útmutatás](#tab/guidance)
+# <a name="guidance"></a>[Útmutatás](#tab/guidance)
 
 Javasoljuk, hogy:
 
 - Ha egy függvény, művelet vagy felhasználó által definiált típus nem része a Q # függvénytárának vagy programjának a nyilvános API-nak, akkor győződjön meg arról, hogy a neve kezdő aláhúzással (`_`) kezdődik.
 
-# <a name="examplestabexamples"></a>[Példák](#tab/examples)
+# <a name="examples"></a>[Példák](#tab/examples)
 
-|   | Név | Leírás |
+|   | Name (Név) | Leírás |
 |---|------|-------------|
 | ☒ | <s>`ApplyDecomposedOperation_`</s> | Az aláhúzás `_` nem szerepelhet a név végén. |
 | ☑ | `_ApplyDecomposedOperation` | Az aláhúzás `_` az elején egyértelműen azt jelzi, hogy ez a művelet csak belső használatra szolgál. |
@@ -244,14 +244,14 @@ Ezek a csoportok megkülönböztetni ugyanazt a legfelső szintű nevet, majd eg
 | `D` | A bemenet vagy bemenet típusa `Double` |
 | `L` | A bemenet vagy bemenet típusa `BigInt` |
 
-# <a name="guidancetabguidance"></a>[Útmutatás](#tab/guidance)
+# <a name="guidance"></a>[Útmutatás](#tab/guidance)
 
 Javasoljuk, hogy:
 
 - Ha egy függvény vagy művelet nem kapcsolódik hasonló funkciókhoz vagy műveletekhez a bemenetek típusai és a nem megfelelő működésének támogatásával, ne használjon utótagot.
 - Ha egy függvény vagy művelet bármely hasonló függvényhez vagy művelethez kapcsolódik, és a bemenetek típusai és az azokon lévők is támogatják, a változatok megkülönböztetéséhez használja a fenti táblázatban szereplő utótagokat.
 
-# <a name="examplestabexamples"></a>[Példák](#tab/examples)
+# <a name="examples"></a>[Példák](#tab/examples)
 
 ***
 
@@ -261,7 +261,7 @@ Egy függvény vagy művelet Q # kódjának fő célja, hogy könnyen olvasható
 Hasonlóképpen, a bemenetek és a Type argumentumok neveinek kell megadniuk, hogy a rendszer hogyan használja a függvényt vagy az argumentumot.
 
 
-# <a name="guidancetabguidance"></a>[Útmutatás](#tab/guidance)
+# <a name="guidance"></a>[Útmutatás](#tab/guidance)
 
 Javasoljuk, hogy:
 
@@ -276,7 +276,7 @@ Javasoljuk, hogy:
   Különösen érdemes elkerülni az egybetűs változók nevének indexként való használatát. legalább a `idx`t kell használnia.
 - A tömbök hosszának tárolására használt változóknak `n` kell kezdődnie, és a következőnek kell lennie: (például `nThings`).
 
-# <a name="examplestabexamples"></a>[Példák](#tab/examples)
+# <a name="examples"></a>[Példák](#tab/examples)
 
 ***
 
@@ -285,7 +285,7 @@ Javasoljuk, hogy:
 A felhasználó által definiált típusok elnevezett elemeinek `CamelCase`nak kell lenniük, még a UDT konstruktorok bemenetében is.
 Ez segít az elnevezett elemek egyértelmű elkülönítésében a helyileg hatókörön belüli változókra mutató hivatkozásokon, ha a hozzáférési jelölést (például: `callable::Apply`) vagy a másolás és frissítés jelölését (`set arr w/= Data <- newData`) használja.
 
-# <a name="guidancetabguidance"></a>[Útmutatás](#tab/guidance)
+# <a name="guidance"></a>[Útmutatás](#tab/guidance)
 
 Javasoljuk, hogy:
 
@@ -294,7 +294,7 @@ Javasoljuk, hogy:
 - A műveleteknek nem feloldható megnevezett elemeknek főnévi kifejezéseknek kell lenniük.
 - A műveleteket UDT egy `Apply` nevű, egyetlen névvel ellátott elemnek kell definiálni.
 
-# <a name="examplestabexamples"></a>[Példák](#tab/examples)
+# <a name="examples"></a>[Példák](#tab/examples)
 
 |   | Részlet | Leírás |
 |---|---------|-------------|
@@ -342,7 +342,7 @@ A kis-és nagybetűk minimálisra csökkentése érdekében egyes függvények �
 A `ControlledOnInt<'T>` például `(Int, ('T => Unit is Adj + Ctl)) => ((Qubit[], 'T) => Unit is Adj + Ctl)`típust tartalmaz, így a `ControlledOnInt<Qubit[]>(5, _)` például a `Controlled`-kezelőhöz hasonlóan viselkedik, de a vezérlő regisztrálása a \ket{5} = \ket{101}$ állapotot jelöli.
 Így a fejlesztő azt várja, hogy a `ControlledOnInt` helyezze át a meghívót az utolsó értékre, és hogy az eredményül kapott művelet ugyanolyan sorrendben legyen, mint a bemeneti `(Qubit[], 'T)`---, ahogyan az a `Controlled`-futtató kimenete.
 
-# <a name="guidancetabguidance"></a>[Útmutatás](#tab/guidance)
+# <a name="guidance"></a>[Útmutatás](#tab/guidance)
 
 Javasoljuk, hogy:
 
@@ -350,7 +350,7 @@ Javasoljuk, hogy:
 - Beépített feladatokkal konzisztens bemeneti sorrendek használata.
 - Helyezzen minden klasszikus bemenetet a kvantum-bevitel előtt.
 
-# <a name="examplestabexamples"></a>[Példák](#tab/examples)
+# <a name="examples"></a>[Példák](#tab/examples)
 
 ***
 
@@ -358,7 +358,7 @@ Javasoljuk, hogy:
 
 A Q # nyelv lehetővé teszi a dokumentáció csatolását a műveletekhez, a függvényekhez és a felhasználó által definiált típusokhoz a speciálisan formázott dokumentációs megjegyzések használatával.
 A Triple-perjel (`///`) által megjelenített megjegyzések olyan kis [DocFX-stílusú Markdown-](https://dotnet.github.io/docfx/spec/docfx_flavored_markdown.html) dokumentumok, amelyek az egyes műveletek, függvények és felhasználó által definiált típusok, valamint a várt bemeneti adatok céljának leírására használhatók.
-A Quantum Development Kit által biztosított fordító kibontja ezeket a megjegyzéseket, és felhasználja őket a https://docs.microsoft.com/quantum hoz hasonló dokumentációk videótartalmakban.
+A Quantum Development Kit által biztosított fordító kibontja ezeket a megjegyzéseket, és felhasználja őket a https://docs.microsoft.com/quantumhoz hasonló dokumentációk videótartalmakban.
 Hasonlóképpen, a Quantum Development Kit által biztosított nyelvi kiszolgáló ezeket a megjegyzéseket használja, hogy segítséget nyújtson a felhasználóknak a Q # kódjában lévő szimbólumok fölé helyezve.
 A dokumentációs megjegyzések használata így segítheti a felhasználókat a kód értelmezésében azáltal, hogy a jelen dokumentum többi konvenciója alapján nem könnyen elérhetővé tett részletekre vonatkozó hasznos hivatkozást biztosítanak.
 
@@ -368,13 +368,13 @@ A dokumentációs megjegyzések használata így segítheti a felhasználókat a
 
 Ahhoz, hogy hatékonyan használhassa ezt a funkciót a felhasználók számára, javasoljuk, hogy a dokumentációs megjegyzések írásakor ne feledje el néhány dolgot.
 
-# <a name="guidancetabguidance"></a>[Útmutatás](#tab/guidance)
+# <a name="guidance"></a>[Útmutatás](#tab/guidance)
 
 Javasoljuk, hogy:
 
 - Minden nyilvános funkciót, műveletet és felhasználó által definiált típust közvetlenül a dokumentációs Megjegyzés előtt kell megadni.
 - Az egyes dokumentációs megjegyzéseknek legalább a következő részeket kell tartalmazniuk:
-    - Összefoglalás
+    - Összegzés
     - Input (Bemenet)
     - Kimenet (ha van ilyen)
 - Győződjön meg arról, hogy minden összefoglaló két mondat vagy kevesebb. Ha további helyiségre van szükség, adjon meg egy `# Description` szakaszt közvetlenül a `# Summary` után, a teljes részletességgel.
@@ -388,7 +388,7 @@ Javasoljuk, hogy:
 - Ha egy művelet vagy függvény más műveletekhez vagy függvényekhez kapcsolódik, és az esetlegesen előforduló változatok vannak, akkor a `# See Also` szakaszban található felsorolásjelként sorolja fel a többi változatot.
 - Hagyjon üres megjegyzést a Level-1 (`/// #`) szakaszban, de ne hagyjon üres vonalat a 2. szintű (`/// ##`) szakaszban.
 
-# <a name="examplestabexamples"></a>[Példák](#tab/examples)
+# <a name="examples"></a>[Példák](#tab/examples)
 
 #### <a name=""></a>☑ ####
 
@@ -434,7 +434,7 @@ A természet szerinti formázási szabályok általában némileg önkényesak �
 Ugyanakkor javasolt a formázási konvenciók egységes csoportjának fenntartása a közreműködők csoportjain belül, és különösen a nagy Q # projektekhez, például a Quantum Development Kit-hoz.
 Ezek a szabályok automatikusan alkalmazhatók a Q # fordítóprogrammal integrált formázó eszköz használatával.
 
-# <a name="guidancetabguidance"></a>[Útmutatás](#tab/guidance) 
+# <a name="guidance"></a>[Útmutatás](#tab/guidance) 
 
 Javasoljuk, hogy:
 
@@ -451,7 +451,7 @@ Javasoljuk, hogy:
 - Ne használjon szóközt a függvény, a művelet vagy a UDT neve után, vagy a `@` az attribútum deklarációjában.
 - Minden attribútum deklarációjának saját sorban kell lennie.
 
-# <a name="examplestabexamples"></a>[Példák](#tab/examples)
+# <a name="examples"></a>[Példák](#tab/examples)
 
 |   | Részlet | Leírás |
 |---|---------|-------------|

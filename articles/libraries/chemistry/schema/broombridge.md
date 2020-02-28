@@ -1,16 +1,17 @@
 ---
 title: Broombridge – Quantum kémia séma
+description: A Broombridge Quantum kémia sémájának áttekintése, amely a Microsoft Quantum Development Kit a valós kémiai problémák modellezésére szolgál.
 author: martinro
 ms.author: martinro@microsoft.com
 ms.date: 10/17/2018
 ms.topic: article
 uid: microsoft.quantum.libraries.chemistry.schema.broombridge
-ms.openlocfilehash: c2a7636d0b3f07419e3312e04da5d811229ad854
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: a746b63055bb1b2c1168b89993a7459ca9597f86
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73185324"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907817"
 ---
 # <a name="broombridge-quantum-chemistry-schema"></a>Broombridge Quantum kémia-séma # 
 
@@ -23,9 +24,8 @@ Az YAML-alapú Broombridge strukturált, ember által olvasható és emberi mód
 - A terep és az izgatott állapotok létrehozási folyamatokkal jeleníthetők meg.
 - Az energia felső és alsó határa megadható.
 
-Az adatformátum könnyen létrehozható a NWChem-ből: számos különböző módszer érhető el, amely a NWChem teljes telepítésének a része, amely a kémia-fedélzetek, például az [itt](https://github.com/nwchemgit/nwchem/tree/master/QA/chem_library_tests) megadott, valamint a Futtatás során a kimenet Broombridge futtatására szolgál. a NWchem képe, amely Broombridge létrehozásához is használható a kémia-pakliból. Végül egy vizuális módszer a számítási kémia gyors megkezdéséhez anélkül, hogy bármilyen kémiai szoftvert kellene telepítenie, a [EMSL Arrows](https://arrows.emsl.pnnl.gov/api/qsharp_chem) felülete NWChem. 
+Az adatformátum könnyen létrehozható a NWChem-ből: számos különböző módszer érhető el, amely a NWChem teljes telepítéséről a kémia-fedélzetek, például az [itt](https://github.com/nwchemgit/nwchem/tree/master/QA/chem_library_tests) megadott, a Futtatás részeként kimeneti Broombridge, a NWChem Docker-rendszerképén keresztül is használható, amely a kémia-Fedélzetekről Broombridge hozható létre. Végül egy vizuális módszer a számítási kémia gyors megkezdéséhez anélkül, hogy bármilyen kémiai szoftvert kellene telepítenie, a [EMSL Arrows](https://arrows.emsl.pnnl.gov/api/qsharp_chem) felülete NWChem. 
 
-Magas szinten a NWChem és a Microsoft Quantum Development Kit közötti interakció a következőképpen jeleníthető meg: ![kémiai verem](~/media/broombridge.png) a kék árnyékolt mező a Broombridge sémát jelöli, a különböző szürke árnyékolt dobozok más belső a valós kémiai problémák alapján a számítási kémia számára a kvantum-algoritmusok ábrázolására és feldolgozására kiválasztott adatábrázolások. 
+Magas szinten a NWChem és a Microsoft Quantum Development Kit közötti interakció az alábbiak szerint jeleníthető meg: ![kémiai verem](~/media/broombridge.png) a kék árnyékolt mező a Broombridge sémát jelöli, a különböző szürke árnyékolt dobozok más belső adatábrázolásokat jelentenek, amelyek a számítási kémia számára a kvantummechanika és a valós kémiai problémák alapján döntöttek. 
 
 [Itt](https://github.com/microsoft/Quantum/tree/master/Chemistry/IntegralData/YAML)több, a Broombridge sémával meghatározott kémiai ábrázolás is elérhető.
-

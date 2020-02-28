@@ -1,17 +1,17 @@
 ---
-title: 'Q # standard könyvtárak – Prelude | Microsoft Docs'
-description: 'Q # standard könyvtárak – bevezetés'
+title: Belső műveletek és függvények a QDK
+description: Ismerje meg a QDK belső műveleteit és funkcióit, beleértve a klasszikus funkciókat, valamint az egységes, rotációs és mérési műveleteket.
 author: QuantumWriter
 uid: microsoft.quantum.libraries.standard.prelude
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: dddb3d4a5ebcdca16da41a5ae5520d98ea900a7f
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: b1c26c632f36b6c254d940a89b13638f7592ab80
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73183233"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907205"
 ---
 # <a name="the-prelude"></a>A bevezetés #
 
@@ -27,7 +27,7 @@ A standard könyvtárban definiált belső műveletek nagyjából a különböz�
 - A méréseket végrehajtó műveletek.
 
 Mivel a Clifford + $T $ Gate készlet [univerzális](xref:microsoft.quantum.concepts.multiple-qubits) a kvantum-számítástechnika számára, ezek a műveletek elegendőek ahhoz, hogy nagyjából implementálják a elhanyagolható mértékben kis hibán belüli kvantum-algoritmusokat.
-A Q # lehetővé teszi, hogy a programozók a single qubit egységes és CNEM Gate könyvtárán belül is működjenek. Ez a kódtár sokkal könnyebben gondolkodik, mert nem igényli, hogy a programozó közvetlenül fejezzék ki a Clifford + $T $ dekompozíciót, és mivel igen hatékony módszerek léteznek egyetlen qubit-unitaries a Clifford és a $T $ gatesbe való fordításához (lásd [itt](xref:microsoft.quantum.more-information) További információ:.
+A Q # lehetővé teszi, hogy a programozók a single qubit egységes és CNEM Gate könyvtárán belül is működjenek. Ez a kódtár sokkal könnyebben gondolkodik, mert nem igényli, hogy a programozó közvetlenül fejezzék ki a Clifford + $T $ dekompozíciót, és mivel igen hatékony módszerek léteznek az egyetlen qubit-unitaries a Clifford és a $T $ gatesbe való fordításához (további információt [itt](xref:microsoft.quantum.more-information) talál).
 
 Ha lehetséges, a qubits-ben a bevezetés során meghatározott műveletek lehetővé teszik a `Controlled` változat alkalmazását, például hogy a célszámítógép végrehajtja a megfelelő dekompozíciót.
 
@@ -101,12 +101,12 @@ Aláírási `(Qubit => Unit is Adj + Ctl)`rendelkezik, és az egységes qubit fe
 A fenti Pauli és Clifford műveleteken kívül a Q # Prelude számos módszert kínál a Forgások kifejezésére.
 Az [qubit műveletekben](xref:microsoft.quantum.concepts.qubit#single-qubit-operations)leírtak szerint az elforgatási képesség kritikus fontosságú a kvantum-algoritmusok számára.
 
-Kezdjük azzal, hogy a $H $ és a $T $ Gates használatával bármilyen egyetlen qubit műveletet kifejezzük, ahol a $H $ a Hadamard művelet, és ahol a \begin{Equation} T \mathrel{: =} \begin{bmatrix} 1 & 0 \\\\% FIXME: ez jelenleg a quad back-T használja fel ütés Hack.
+Kezdjük azzal, hogy a $H $ és a $T $ Gates használatával bármilyen egyetlen qubit műveletet kifejezzük, ahol a $H $ a Hadamard művelet, és ahol a \begin{Equation} T \mathrel{: =} \begin{bmatrix} 1 & 0 \\\\% FIXME: ez jelenleg a quad back Hack-T használja.
 0 & e ^ {i \pi/4} \end{bmatrix} \end{Equation} ez a <xref:microsoft.quantum.intrinsic.s> művelet négyzet gyökere, például $T ^ 2 = S $.
 A $T $ Gate a <xref:microsoft.quantum.intrinsic.t> művelettel van megvalósítva, és aláírási `(Qubit => Unit is Adj + Ctl)`rendelkezik, amely azt jelzi, hogy ez egy egységes művelet egyetlen qubit.
 
 Annak ellenére, hogy ez elvileg elegendő ahhoz, hogy bármilyen tetszőleges qubit műveletet le lehessen írni, a különböző célszámítógépek hatékonyabb ábrázolással rendelkezhetnek a Pauli-operátorokkal kapcsolatos rotációs műveletekhez, például a bevezetés számos különféle módszert tartalmaz a convienently ilyen elfordulások kifejezése.
-A legalapvetőbb ilyen a <xref:microsoft.quantum.intrinsic.r> művelet, amely egy megadott Pauli-tengely, \begin{Equation} R (\sigma, \phi) \mathrel{: =} \exp (-i \phi \sigma/2), \end{Equation}, ahol a $ \sigma $ egy Pauli operátor, $ \phi $ egy szög, és ahol $ a \exp $ a mátrix exponenciális értéket jelöli.
+A legalapvetőbb ilyen a <xref:microsoft.quantum.intrinsic.r> művelet, amely egy megadott Pauli-tengely, \begin{Equation} R (\sigma, \phi) \mathrel{: =} \exp (-i \phi \sigma/2), \end{Equation}, ahol a $ \sigma $ egy Pauli operátor, $ \phi $ egy szög, és ahol $ \exp $ a mátrix exponenciális értéket jelöli.
 Aláírási `((Pauli, Double, Qubit) => Unit is Adj + Ctl)`rendelkezik, ahol a bemenet első két része a $ \sigma $ és a $ \phi $ klasszikus argumentumokat jelöli, amelyek az egységes operátor $R (\sigma, \phi) $ értékének megadásához szükségesek.
 Részben alkalmazhatjuk a $ \sigma $ és a $ \phi $ értéket egy olyan művelet beszerzéséhez, amelynek a típusa egyetlen qubit egységes.
 Például `R(PauliZ, PI() / 4, _)` típusa `(Qubit => Unit is Adj + Ctl)`.
@@ -155,7 +155,7 @@ Alább látható egy példa egy rotációs műveletre (az ebben az esetben a Pau
 
 A fenti qubit műveletek mellett a Prelude számos több qubit műveletet is meghatároz.
 
-Először is a <xref:microsoft.quantum.intrinsic.cnot> művelet elvégzi a standard szintű vezérlésű`NOT` kaput, a \begin{Equation} \operatorname{CNOT} \mathrel{: =} \begin{bmatrix} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 & 1 \\\\ 0 & 0 & 1 & 0 \end{bmatrix}.
+Először is a <xref:microsoft.quantum.intrinsic.cnot> művelet elvégzi a szabványos vezérelt`NOT` kaput, a \begin{Equation} \operatorname{CNOT} \mathrel{: =} \begin{bmatrix} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 & 1 \\\\ 0 & 0 & 1 & 0 \end{bmatrix}.
 \end{Equation} aláírási `((Qubit, Qubit) => Unit is Adj + Ctl)`, ami azt jelenti, hogy a $ \operatorname{CNOT} $ unitarily két önálló qubits.
 `CNOT(q1, q2)` ugyanaz, mint `(Controlled X)([q1], q2)`.
 Mivel a `Controlled`-kezelő lehetővé teszi a regisztrációt, a tömb literál `[q1]` használatával jelezheti, hogy csak az egyetlen vezérlőt szeretnénk használni.
@@ -176,7 +176,7 @@ Ez azt is megvalósítja, hogy implementálja az egységes mátrix \begin{Equati
 > A vezérelt SWAP-kapu, más néven a Fredkin-kapu, elég erős ahhoz, hogy tartalmazza az összes klasszikus számítást.
 
 Végül a Prelude két műveletet biztosít a több qubit Pauli-operátorok exponenciális ábrázolásához.
-A <xref:microsoft.quantum.intrinsic.exp> művelet elvégzi a rotációs (Pauli) mátrixok alapján elforgatást, amelyet a többszörös qubit egységes \begin{Equation} \operatorname{Exp} (\vec{\sigma}, \phi) \mathrel{: =} \exp\left (i \phi \sigma_0 \otimes \sigma_1 \otimes \ cdots \otimes \sigma_n \right), \end{Equation}, ahol a $ \vec{\sigma} = (\sigma_0, \sigma_1, \dots, \sigma_n) $ az egyetlen qubit Pauli-operátorok sorozata, ahol a $ \phi $ egy szög.
+A <xref:microsoft.quantum.intrinsic.exp> művelet elforgatást hajt végre a Pauli-mátrixok egy tízes szorzata alapján. a többszörös qubit egységes \begin{Equation} \operatorname{Exp} (\vec{\sigma}, \phi) \mathrel{: =} \exp\left (i \phi \ sigma_0 \otimes \ sigma_1 \otimes \cdots \otimes \ sigma_n \right), a \end{Equation}, ahol a $ \vec{\sigma} = (\ sigma_0, \ sigma_1, \dots, \ sigma_n) $ az egyetlen qubit Pauli-operátorok sorozata, és ahol a $ \phi $ egy szög.
 A `Exp` forgás a $ \vec{\sigma} $ értéket jelöli `Pauli` elemek tömbje, például aláírási `((Pauli[], Double, Qubit[]) => Unit is Adj + Ctl)`.
 
 A <xref:microsoft.quantum.intrinsic.expfrac> művelet ugyanazt a rotációs műveletet hajtja végre, a fentebb tárgyalt dyadic-frakciós jelölés használatával.
@@ -204,7 +204,7 @@ Ha a Pauli tömb és a qubit tömb eltérő hosszúságú, akkor a művelet sike
 Vegye figyelembe, hogy a közös mérések nem egyeznek meg egyenként a qubit mérésével.
 Tegyük fel például, hogy a $ \ket{11} = \ket{1} \otimes \ket{1} = X\otimes X \ket{00}$ értéket adja meg.
 A $Z _0 $ és a $Z _1 $ mérése egyenként történik, $r _0 = $1 és $r _1 = $1.
-A $Z _0 Z_1 $ mérésével azonban egyetlen eredményt kapunk, $r _ {\textrm{Joint}} = $0, ami azt jelenti, hogy a $ \ket{11}$ párosítása pozitív.
+$Z _0 Z_1 $ mérésével azonban egyetlen eredmény $r _ {\textrm{Joint}} = $0, amely azt jelenti, hogy a $ \ket{11}$ párosítása pozitív.
 Másképpen fogalmazva, $ (-1) ^ {r_0 + r_1} = (-1) ^ r_ {\textrm{Joint}}) $.
 Kritikus fontosságú, mivel *csak* a mértékből Tanuljuk meg a paritást, a 2 2 – qubit állapotú pozitív paritás, a $ \ket{00}$ és a $ \ket{11}$ közötti kapcsolatban szereplő kvantum-információk megmaradnak.
 Ezt a tulajdonságot később kell megtekinteni, ahogy a hibajavításról van szó.

@@ -1,22 +1,22 @@
 ---
-title: Symmetries | Microsoft Docs
-description: Symmetries a molekuláris szerves fogalmi docs
+title: Symmetries
+description: 'A Q # OrbitalIntegral típus használatának megismerése a molekuláris symmetries enumerálásához.'
 author: nathanwiebe2
 ms.author: nawiebe
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.symmetries
-ms.openlocfilehash: 041d600bc8d65e7d67f5fe7d61a69426fb42ffbc
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.openlocfilehash: b7e7b79af17af544c4a784eff08500498afc9f67
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73442391"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77904468"
 ---
 # <a name="symmetries-of-molecular-integrals"></a>Symmetries
 
-A Coulomb-Hamilton, amely az [elektronikus rendszerek kvantum-modelljeiben](xref:microsoft.quantum.chemistry.concepts.quantummodels)megadott Hamilton, amely az elektronok és az atommagok közötti interakciót mutatja be, számos olyan symmetries eredményez, amely a következő lehet: a Hamilton feltételeinek tömörítése.
-Általánosságban elmondható, hogy ha nem készül további feltételezés a $ \psi_j $ függvénnyel kapcsolatban, akkor csak a \begin{Equation} h_ {pqrs} = h_ {qpsr}, \tag{★} \label{EQ: hpqrs} \end{Equation} lehet, amely azonnal látható a [Quantum models in Az elektronikus rendszerek](xref:microsoft.quantum.chemistry.concepts.quantummodels) abban az esetben, ha az értékek változatlanok maradnak, ha a $p, a q $ és a $r, s $ megváltozása nem változik.
+A Coulomb-Hamilton, amely az [elektronikus rendszerek kvantum-modelljeiben](xref:microsoft.quantum.chemistry.concepts.quantummodels)megadott Hamilton, amely az egymással és az atommagokkal együttesen kommunikáló elektronokat mutatja be, számos olyan symmetries eredményez, amely felhasználható a Hamilton feltételeinek tömörítésére.
+Általánosságban elmondható, hogy a "$ \ psi_j $" függvényre vonatkozó további feltételezések nem teljesülnek, ezért csak a \begin{Equation} h_ {pqrs} = h_ {qpsr}, \tag{★} \label{EQ: hpqrs} \end{Equation}, amely az [elektronikus rendszerek kvantum-modelljeinek](xref:microsoft.quantum.chemistry.concepts.quantummodels) szerves részéből azonnal megtekinthető, hogy az értékek megegyeznek abban az esetben, ha a $p, a q $ és a $r, s $ nem változik.
 
 Ha feltételezzük, hogy a spin-orbits valós értékű (a Gauss orbitális alapértékek esetében), akkor a \begin{Equation} h_ {pqrs} = h_ {qpsr} = h_ {srqp} = h_ {rspq} = h_ {rqps} = h_ {psrq} = h_ {SPQR} = h_ {qrsp} .\tag {★} \label{EQ: hpqrsreal} \end{ egyenlet} az ilyen feltételezések miatt a fenti symmetries használatával csökkentheti a Hamilton mátrix-elemeinek a $8 $ értékkel való tárolásához szükséges adatokat. Bár ez így is lehetővé teszi az adatimportálást, valamivel nagyobb kihívást jelent.
 Szerencsére a Hamilton szimulációs függvénytár olyan alrutinokkal rendelkezik, amelyek az [LIQUI $ | \rangle $](https://www.microsoft.com/en-us/research/project/language-integrated-quantum-operations-liqui/) vagy közvetlenül a [NWChem](http://www.nwchem-sw.org/index.php/Main_Page)-ből származó integrált fájlok importálására használhatók.

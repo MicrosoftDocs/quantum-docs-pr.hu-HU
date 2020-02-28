@@ -1,19 +1,19 @@
 ---
-title: Korrelált wavefunctions | Microsoft Docs
-description: Quantum Dynamics – elméleti dokumentumok
+title: Korrelált hullámfüggvények
+description: Ismerje meg a wavefunctions dinamikus és nem dinamikus korrelációit a Microsoft Quantum kémia Library használatával.
 author: guanghaolow
 ms.author: gulow@microsoft.com
 ms.date: 05/28/2019
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.multireference
-ms.openlocfilehash: 0b14f373d31c5b63e313e07810daf62d9195b1d3
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 005ef86382ca72969b06a4206cab01f3845718e2
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73184032"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77904434"
 ---
-# <a name="correlated-wavefunctions"></a>Korrelált wavefunctions
+# <a name="correlated-wavefunctions"></a>Korrelált hullámfüggvények
 
 Számos rendszer esetében, különösen az egyensúlyi geometria közelében, a [Hartree – Fock](xref:microsoft.quantum.chemistry.concepts.hartreefock) Theory a molekuláris tulajdonságok minőségi leírását egy egytényezős hivatkozási állapottal biztosítja. A mennyiségi pontosság elérése érdekében azonban az egyiknek a korrelációs hatásokat is figyelembe kell vennie. 
 
@@ -24,9 +24,9 @@ Ez szükségessé teszi a meghatározó tényezők felhelyezését, és példát
 A kémiai könyvtár lehetővé teszi, hogy megadják a nulladik Order wavefunction a Többhivatkozásos probléma számára, amely meghatározza a meghatározó tényezőket. Ez a megközelítés, amely ritka Többhivatkozásos wavefunctions hív meg, akkor lép életbe, amikor csak néhány összetevő elegendő a Felfekvés megadásához. A függvénytár egy olyan módszert is biztosít, amely dinamikus korrelációkat tartalmaz egy, az általánosított, különálló fürtön keresztüli Ansatz. Emellett olyan kvantum-áramköröket is létrehoz, amelyek létrehozza ezeket az állapotokat a kvantum-számítógépeken. Ezek az állapotok a [Broombridge sémában](xref:microsoft.quantum.libraries.chemistry.schema.broombridge)adhatók meg, és ezen állapotok manuális megadására is lehetőséget biztosítunk a kémia könyvtárán keresztül.
 
 ## <a name="sparse-multi-reference-wavefunction"></a>Ritka multi-Reference wavefunction
-A többszörös hivatkozási állapot $ \ket{\psi_{\rm {MCSCF}}} $ lehet explicit módon megadható $N $-Electron Slater determininants lineáris kombinációjával.
-\begin{align} \ket{\psi_{\rm {MCSCF}}} \propto \sum_{i_1 < i_2 < \cdots < i_N} \lambda_{i_1, i_2, \cdots, i_N} a ^ \dagger_{i_1}a ^ \dagger_{i_2}\cdots a ^ \dagger_{i_N}\ket{0}.
-\end{align} például a \propto (0,1 a ^ \dagger_1a ^ \dagger_2a ^ \dagger_6-0,2 a ^ \dagger_2a ^ \dagger_1a ^ \dagger_5) \ket{0}$ a következő módon adható meg a kémiai könyvtárban.
+A többszörös hivatkozási állapot $ \ket{\ psi_ {\rm {MCSCF}}} $ lehet explicit módon megadható $N $-Electron Slater determininants lineáris kombinációjával.
+\begin{align} \ket{\ psi_ {\rm {MCSCF}}} \propto \ sum_ {i_1 < i_2 < \cdots < i_N} \ lambda_ {i_1, i_2, \cdots, i_N} a ^ \ dagger_ {i_1} a ^ \ dagger_ {i_2} \cdots a ^ \ dagger_ {i_N} \ket{0}.
+\end{align} például a következő állapotot: $ \propto (0,1 a ^ \ dagger_1a ^ \ dagger_2a ^ \ dagger_6-0,2 egy ^ \ dagger_2a ^ \ dagger_1a ^ \ dagger_5) \ket{0}$ a következők szerint adható meg a kémiai könyvtárban.
 ```csharp
 // Create a list of tuples where the first item of each 
 // tuple are indices to the creation operators acting on the
@@ -42,18 +42,18 @@ var wavefunction = new FermionWavefunction<int>(superposition);
 Ha csak néhány összetevőt kell megadnia, akkor ez a feltételhez tartozó összetevők explicit ábrázolása is érvényes. Az egyiknek kerülnie kell ezt az ábrázolást, ha sok összetevő szükséges a kívánt állapot pontos rögzítéséhez. Ennek az az oka, hogy ez az állapot a kvantum-számítógépeken felkészíti a Quantum Circuit-t, amely legalább lineárisan méretezi a Felskálázási összetevők számát, és a legtöbb esetben a többhelyes amplitúdók egy-egy normáját.
 
 ## <a name="unitary-coupled-cluster-wavefunction"></a>Egyszintű – fürt wavefunction
-A kémikusi könyvtár használatával is megadható a wavefunction $ \ket{\psi_{\rm {UCC}}} $ alhalmaza. Ebben az esetben egyetlen meghatározó hivatkozási állapottal rendelkezünk, mondjuk: $ \ket{\psi_{\rm{SCF}}} $. Az egységes és a fürt wavefunction összetevői implicit módon vannak megadva a hivatkozási állapotot kezelő egységes operátoron keresztül.
-Ez az egységes operátor általában $e ^ {T-T ^ \dagger} $ néven íródott, ahol a $T-T ^ \dagger $ a Hermitian-fürt operátora. Így \begin{align} \ket{\psi_{\rm {UCC}}} = e ^ {T-T ^ \dagger}\ket{\psi_{\rm{SCF}}}.
+A kémikusi függvénytár használatával a psi_ \ket{\ {\rm {UCC}}} $ wavefunction is megadható. Ebben az esetben egyetlen meghatározó hivatkozási állapottal rendelkezünk, mondjuk: $ \ket{\ psi_ {\rm{SCF}}} $. Az egységes és a fürt wavefunction összetevői implicit módon vannak megadva a hivatkozási állapotot kezelő egységes operátoron keresztül.
+Ez az egységes operátor általában $e ^ {T-T ^ \dagger} $ néven íródott, ahol a $T-T ^ \dagger $ a Hermitian-fürt operátora. Így \begin{align} \ket{\ psi_ {\rm {UCC}}} = e ^ {T-T ^ \dagger}\ket{\ psi_ {\rm{SCF}}}.
 \end{align}
 
-Az is gyakori, hogy a $T = T_1 + T_2 + \cdots $ csomópontot részekre darabolják, ahol $T _j $ $j $-Body kifejezéseket tartalmaz. Az általánosított és a fürtök elméletében az egytörzsű fürt operátora (Singles) \begin{align} T_1 = \sum_{pq}t ^ {p} _ {q} a ^ \dagger_p a_q, \end{align}
+Az is gyakori, hogy a $T = T_1 + T_2 + \cdots $ csomópontot részekre darabolják, ahol minden rész $T _j $ tartalmaz $j $-Body kifejezést. Az általánosított és a fürtök elméletében az egytörzsű fürt operátora (Singles) \begin{align} T_1 = \ sum_ {pq} T ^ {p} _ {q} a ^ \ dagger_p a_q, \end{align}
 
-a kéttörzsű fürt operátora (Double) a következő: \begin{align} T_2 = \sum_{pqrs}t ^ {pq} _ {RS} a ^ \dagger_p a ^ \dagger_q a_r a_s.
+a kéttörzsű fürt operátora (Double) a következő: \begin{align} T_2 = \ sum_ {pqrs} T ^ {pq} _ {RS} a ^ \ dagger_p a ^ \ dagger_q a_r a_s.
 \end{align}
 
 A magasabb rendű feltételek (triplák, négyszeresek stb.) lehetségesek, de a kémia könyvtára jelenleg nem támogatja őket.
 
-Tegyük fel például, hogy $ \ket{\psi_{\rm{SCF}}} = a ^ \dagger_1 a ^ \dagger_2\ket{0}$, és hagyja $T = 0,123 a ^ \dagger_0 a_1 + 0,456 a ^ \dagger_0a ^ \dagger_3 a_1-0,789 a ^ a_2 ^ \dagger_3a \dagger_2 a_1 $. Ezt az állapotot az alábbi módon hozza létre a kémiai könyvtárban.
+Tegyük fel például, hogy $ \ket{\ psi_ {\rm{SCF}}} = a ^ \ dagger_1 a ^ \ dagger_2 \ket{0}$, és hagyja $T = 0,123 egy ^ \ dagger_0 a_1 + 0,456 a ^ \ dagger_0a ^ \ dagger_3 a_1 a_2-0,789 a ^ \ dagger_3a ^ \ dagger_2 a_1 a_0 $. Ezt az állapotot az alábbi módon hozza létre a kémiai könyvtárban.
 ```csharp
 // Create a list of indices of the creation operators
 // for the single-reference state
@@ -77,7 +77,7 @@ var clusterOperator = new[]
 var wavefunction = new FermionWavefunction<int>(reference, clusterOperator);
 ```
 
-A spin convervation explicit módon is megadható, ehelyett `SpinOrbital` indexeket ad meg az egész szám típusú indexek helyett. Tegyük fel például, hogy $ \ket{\psi_{\rm{SCF}}} = a ^ \dagger_{1, \uparrow} a ^ \dagger_{2, \downarrow}\ket{0}$, és hagyja $T = 0,123 a ^ \dagger_{0, \uparrow} Kajzinger Marian {1, \uparrow} + 0,456 a ^ \dagger_{0, \uparrow} a ^ \dagger_{3, \downarrow} Kajzinger Marian {1, \uparrow} Kajzinger Marian {2, \ DOWNARROW}-0,789 egy ^ \dagger_{3, \uparrow} a ^ \dagger_{2, \uparrow} Kajzinger Marian {1, \uparrow} Kajzinger Marian {0, \uparrow} $ be spin convserving. Ezt az állapotot az alábbi módon hozza létre a kémiai könyvtárban.
+A spin convervation explicit módon is megadható, ehelyett `SpinOrbital` indexeket ad meg az egész szám típusú indexek helyett. Tegyük fel például, hogy $ \ket{\ psi_ {\rm{SCF}}} = a ^ \ dagger_ {1, \uparrow} a ^ \ dagger_ {2, \downarrow}\ket{0}$, és hagyja $T = 0,123 a ^ \ dagger_ {0, \uparrow} a_ {1, \uparrow} + 0,456 a ^ \ dagger_ {0, \uparrow} a ^ \ dagger_ {3, \downarrow} a_ {1, \uparrow} a_ {2, \downarrow}-0,789 a ^ \ dagger_ {3, \uparrow} a ^ \ dagger_ {2, \uparrow} a_ {1, \uparrow} a_ {0, \uparrow} $ be spin convserving. Ezt az állapotot az alábbi módon hozza létre a kémiai könyvtárban.
 ```csharp
 // Create a list of indices of the creation operators
 // for the single-reference state

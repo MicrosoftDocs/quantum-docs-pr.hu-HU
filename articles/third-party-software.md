@@ -1,18 +1,18 @@
 ---
-title: Microsoft Quantum Development Kit Third Party Software | Microsoft Docs
-description: Microsoft Quantum Development Kit Third Party Software
+title: Microsoft Quantum Development Kit Third Party Software
+description: Microsoft Quantum Development Kit harmadik féltől származó szoftverekkel kapcsolatos megjegyzések és információk.
 services: service-name-with-dashes-AZURE-ONLY
 keywords: Ne adjon hozzá kulcsszavakat és ne szerkessze azokat a keresőoptimalizálást végző szakemberrel való egyeztetés nélkül.
 author: QuantumWriter
 ms.author: MSFT-alias-person-or-DL
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
-ms.openlocfilehash: 85bade791c0744d6636d60fe4f7c9b8f7749c7c6
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 84d83bf65b3c01a630d98210a5ac3fe322fa501f
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73184372"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906814"
 ---
 # <a name="third-party-software-notices-and-information"></a>HARMADIK FÉLTŐL SZÁRMAZÓ SZOFTVEREKKEL KAPCSOLATOS MEGJEGYZÉSEK ÉS INFORMÁCIÓK
 
@@ -20,7 +20,7 @@ Ez a fájl az alább felsorolt projektekkel (harmadik féltől származó IP-cí
 
 1. YamlDotNet. aláírt 4.2.2-es verzió (https://www.nuget.org/packages/YamlDotNet.Signed/4.2.2)
 2. xUnit. Runner. VisualStudio 2.3.1 (https://www.nuget.org/packages/xunit.runner.visualstudio/2.3.1)
-3. xUnit. Runner. Console 2.3.1 (https://www.nuget.org/packages/xunit.runner.console/2.3.1 )
+3. xUnit. Runner. Console 2.3.1 (https://www.nuget.org/packages/xunit.runner.console/2.3.1)
 4. xUnit. bővíthetőség. végrehajtás 2.3.1 (https://www.nuget.org/packages/xunit.extensibility.execution/2.3.1)
 5. xUnit. bővíthetőség. Core 2.3.1 (https://www.nuget.org/packages/xunit.extensibility.core/2.3.1)
 6. xUnit. Core 2.3.1 (https://www.nuget.org/packages/xunit.core/2.3.1)
@@ -39,7 +39,7 @@ Ez a fájl az alább felsorolt projektekkel (harmadik féltől származó IP-cí
 ---------------------------------------
 Copyright (c) 2008, 2009, 2010, 2011, 2012, 2013, 2014 Antoine Aubry és közreműködők
 
-Az engedélyt a szoftver egy példányának és a kapcsolódó dokumentációs fájloknak (a "szoftvereknek") a szoftverre korlátozás nélkül kell megadnia, beleértve a használati, a másolási, a módosítási, az egyesítési és a nem korlátozó jogokat. a szoftver példányainak közzététele, terjesztése, allicencbe adása és/vagy értékesítése, valamint annak engedélyezése, hogy a szoftver mely személyeknek van berendezve, az alábbi feltételek teljesülése esetén:
+A jelen szoftver és a kapcsolódó dokumentációs fájlok (a "szoftver") másolatának beszerzéséhez ingyenesen biztosítjuk az engedélyt. Ha korlátozás nélkül szeretné kezelni a szoftvereket, beleértve a használati jogot, a másolást, a módosítást, az egyesítést, a közzétételt, a terjesztést, a licencek kiosztását és/vagy a szoftver példányainak értékesítését, valamint annak engedélyezését, hogy a szoftver mely személyeknek van berendezve, a következő feltételek vonatkoznak rá:
 
 A fenti szerzői jogi nyilatkozat és ez az engedély a szoftver összes példányában vagy jelentős részében szerepel.
 
@@ -166,7 +166,7 @@ Microsoft nyilvános licenc (MS-PL)
 
 Ez a licenc a kapcsolódó szoftver használatát szabályozza. Ha a szoftvert használja, elfogadja ezt a licencet. Ha nem fogadja el a licencet, ne használja a szoftvert.
 
-1. Definíciók
+1. Meghatározások
 
 A "reprodukálása", a "reprodukció", a "származtatott művek" és a "terjesztés" kifejezéseknek ugyanezt a jelentését kell megadniuk az USA szerzői jogi törvényei szerint.
 
@@ -180,7 +180,7 @@ A "licencelt szabadalmak" olyan közreműködő szabadalmi jogcímek, amelyek k�
 
 (A) szerzői jogi támogatás – a licenc feltételei, beleértve a 3. szakaszban foglalt licencfeltételeket és korlátozásokat, az egyes közreműködők nem kizárólagos, globális, jogdíjmentes szerzői licencet biztosítanak a hozzájárulásuk visszavonásához, a származtatott termékek előkészítéséhez együttműködik a hozzájárulásával, és terjesztheti a hozzá tartozó hozzájárulást, illetve a létrehozott származtatott munkákat.
 
-(B) szabadalmi támogatás – a licenc feltételeitől függően, beleértve a 3. szakasz licencfeltételeket és korlátozásait, minden közreműködő nem kizárólagos, globális, jogdíjmentes licencet biztosít a licenccel rendelkező szabadalmak alapján, a szoftverben vagy a származékos termékben való közreműködés során a szoftverben vagy a származtatott alkalmazásban való hozzájárulása nem használható fel, importálható és/vagy egyéb módon.
+(B) szabadalmi támogatás – a licenc feltételeitől függően a 3. szakaszban foglalt licencfeltételeket és korlátozásokat is beleértve, az egyes közreműködők nem kizárólagos, globális, jogdíjmentes licencet biztosítanak a licenccel rendelkező szabadalmaik számára, hogy a szoftverben vagy más származékos termékben való hozzájárulását a szoftverben vagy a származékos alkalmazásban a szoftverben vagy a származtatott szolgáltatásban.
 
 3. Feltételek és korlátozások
 
@@ -192,7 +192,7 @@ A "licencelt szabadalmak" olyan közreműködő szabadalmi jogcímek, amelyek k�
 
 (D) Ha a szoftver bármely részét a forráskód űrlapon terjeszti ki, ezt a licencet csak akkor hajthatja végre, ha a licenc teljes másolatát tartalmazza a disztribúcióban. Ha a szoftver bármely részét lefordított vagy Object Code űrlapon terjeszti ki, akkor csak ezt a licencet tartalmazó licenc alatt teheti meg.
 
-(E) a szoftver licenccel rendelkezik. A szoftver használatából származó kockázatokat Ön viseli. A közreműködők nem biztosítanak kifejezett szavatosságot, garanciát vagy feltételt. A helyi törvények szerint további fogyasztói jogokkal is rendelkezhet, amelyeket ez a licenc nem tud megváltoztatni. A helyi törvények által megengedett mértékig a közreműködők kizárják a eladhatóságra, az adott célra való alkalmasságra és a nem jogsértésre vonatkozó garanciákat.
+(E) a szoftver licenccel rendelkezik. A használat kockázatát Ön viseli. A közreműködők nem biztosítanak kifejezett szavatosságot, garanciát vagy feltételt. A helyi törvények szerint további fogyasztói jogokkal is rendelkezhet, amelyeket ez a licenc nem tud megváltoztatni. A helyi törvények által megengedett mértékig a közreműködők kizárják a eladhatóságra, az adott célra való alkalmasságra és a nem jogsértésre vonatkozó garanciákat.
 
 ## <a name="fsharpcore-notices-and-information"></a>FSharp. Core-megjegyzések és információk
 ---------------------------------------
@@ -201,7 +201,7 @@ Az MIT licenc (MIT)
 Copyright (c) Microsoft Corporation.
 Minden jog fenntartva.
 
-Az engedélyt a szoftver egy példányának és a kapcsolódó dokumentációs fájloknak (a "szoftvereknek") a szoftverre korlátozás nélkül kell megadnia, beleértve a használati, a másolási, a módosítási, az egyesítési és a nem korlátozó jogokat. a szoftver példányainak közzététele, terjesztése, allicencbe adása és/vagy értékesítése, valamint annak engedélyezése, hogy a szoftver mely személyeknek van berendezve, az alábbi feltételek teljesülése esetén:
+A jelen szoftver és a kapcsolódó dokumentációs fájlok (a "szoftver") másolatának beszerzéséhez ingyenesen biztosítjuk az engedélyt. Ha korlátozás nélkül szeretné kezelni a szoftvereket, beleértve a használati jogot, a másolást, a módosítást, az egyesítést, a közzétételt, a terjesztést, a licencek kiosztását és/vagy a szoftver példányainak értékesítését, valamint annak engedélyezését, hogy a szoftver mely személyeknek van berendezve, a következő feltételek vonatkoznak rá:
 
 A fenti szerzői jogi nyilatkozat és ez az engedély a szoftver összes példányában vagy jelentős részében szerepel.
 
@@ -213,7 +213,7 @@ Az MIT licenc (MIT)
 
 Copyright (c) 2013 Tomas Petricek
 
-Az engedélyt a szoftver egy példányának és a kapcsolódó dokumentációs fájloknak (a "szoftvereknek") a szoftverre korlátozás nélkül kell megadnia, beleértve a használati, a másolási, a módosítási, az egyesítési és a nem korlátozó jogokat. a szoftver példányainak közzététele, terjesztése, allicencbe adása és/vagy értékesítése, valamint annak engedélyezése, hogy a szoftver mely személyeknek van berendezve, az alábbi feltételek teljesülése esetén:
+A jelen szoftver és a kapcsolódó dokumentációs fájlok (a "szoftver") másolatának beszerzéséhez ingyenesen biztosítjuk az engedélyt. Ha korlátozás nélkül szeretné kezelni a szoftvereket, beleértve a használati jogot, a másolást, a módosítást, az egyesítést, a közzétételt, a terjesztést, a licencek kiosztását és/vagy a szoftver példányainak értékesítését, valamint annak engedélyezését, hogy a szoftver mely személyeknek van berendezve, a következő feltételek vonatkoznak rá:
 
 A fenti szerzői jogi nyilatkozat és ez az engedély a szoftver összes példányában vagy jelentős részében szerepel.
 
@@ -226,7 +226,7 @@ Az MIT licenc (MIT)
 
 Copyright (c) 2012 Øystein Bjorke
 
-Az engedélyt a szoftver egy példányának és a kapcsolódó dokumentációs fájloknak (a "szoftvereknek") a szoftverre korlátozás nélkül kell megadnia, beleértve a használati, a másolási, a módosítási, az egyesítési és a nem korlátozó jogokat. a szoftver példányainak közzététele, terjesztése, allicencbe adása és/vagy értékesítése, valamint annak engedélyezése, hogy a szoftver mely személyeknek van berendezve, az alábbi feltételek teljesülése esetén:
+A jelen szoftver és a kapcsolódó dokumentációs fájlok (a "szoftver") másolatának beszerzéséhez ingyenesen biztosítjuk az engedélyt. Ha korlátozás nélkül szeretné kezelni a szoftvereket, beleértve a használati jogot, a másolást, a módosítást, az egyesítést, a közzétételt, a terjesztést, a licencek kiosztását és/vagy a szoftver példányainak értékesítését, valamint annak engedélyezését, hogy a szoftver mely személyeknek van berendezve, a következő feltételek vonatkoznak rá:
 
 A fenti szerzői jogi nyilatkozat és ez az engedély a szoftver összes példányában vagy jelentős részében szerepel.
 
@@ -252,7 +252,7 @@ Az MIT licenc (MIT)
 
 Copyright (c) 2016 Eirik Tsarpalis
 
-Az engedélyt a szoftver egy példányának és a kapcsolódó dokumentációs fájloknak (a "szoftvereknek") a szoftverre korlátozás nélkül kell megadnia, beleértve a használati, a másolási, a módosítási, az egyesítési és a nem korlátozó jogokat. a szoftver példányainak közzététele, terjesztése, allicencbe adása és/vagy értékesítése, valamint annak engedélyezése, hogy a szoftver mely személyeknek van berendezve, az alábbi feltételek teljesülése esetén:
+A jelen szoftver és a kapcsolódó dokumentációs fájlok (a "szoftver") másolatának beszerzéséhez ingyenesen biztosítjuk az engedélyt. Ha korlátozás nélkül szeretné kezelni a szoftvereket, beleértve a használati jogot, a másolást, a módosítást, az egyesítést, a közzétételt, a terjesztést, a licencek kiosztását és/vagy a szoftver példányainak értékesítését, valamint annak engedélyezését, hogy a szoftver mely személyeknek van berendezve, a következő feltételek vonatkoznak rá:
 
 A fenti szerzői jogi nyilatkozat és ez az engedély a szoftver összes példányában vagy jelentős részében szerepel.
 

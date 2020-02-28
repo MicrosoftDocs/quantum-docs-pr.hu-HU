@@ -1,17 +1,17 @@
 ---
-title: Közreműködő dokumentáció | Microsoft Docs
-description: Közreműködő dokumentáció
+title: Közreműködő dokumentáció a Microsoft QDK
+description: Ismerje meg, Hogyan járulhat hozzá a koncepcionális vagy API-tartalmakhoz a Microsoft Quantum dokumentációs készletében.
 author: cgranade
 ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.docs
-ms.openlocfilehash: 1e24dd859c0b75a161f4f3c7151e2eec227075a2
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: d244a7841b4093031d6225230a6cbefb22cc6a39
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73183675"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77904893"
 ---
 # <a name="improving-documentation"></a>A dokumentáció fejlesztése #
 
@@ -24,8 +24,8 @@ Hasonlóképpen fogadjuk el a [MathJax](https://www.mathjax.org/) -függvénytá
 
 Így a dokumentáció minden formája némileg eltér a részletektől:
 
-- A **koncepcionális dokumentáció** a https://docs.microsoft.com/quantum közzétett cikkekből áll, amelyek a Quantum Computing alapjaiból ismertetik az adatcsere formátumának technikai specifikációit. Ezek a cikkek a [DocFX-stílusú Markdown (DFM)](https://dotnet.github.io/docfx/spec/docfx_flavored_markdown.html), a gazdag dokumentációs készletek létrehozásához használt Markdown-változatok.
-- Az **API-hivatkozás** az egyes Q # függvényekhez, műveletekhez és felhasználó által definiált típusokhoz tartozó lapok összessége, https://docs.microsoft.com/qsharp/api/ közzétéve. Ezek az oldalak dokumentálják az összes meghívható bemenetet és műveletet, valamint példákat és további információkra mutató hivatkozásokat. Az API-referenciát a rendszer automatikusan Kinyeri a kis DFM-dokumentumokból a Q # forráskódban az egyes verziók részeként.
+- A **koncepcionális dokumentáció** a https://docs.microsoft.com/quantumközzétett cikkekből áll, amelyek a Quantum Computing alapjaiból ismertetik az adatcsere formátumának technikai specifikációit. Ezek a cikkek a [DocFX-stílusú Markdown (DFM)](https://dotnet.github.io/docfx/spec/docfx_flavored_markdown.html), a gazdag dokumentációs készletek létrehozásához használt Markdown-változatok.
+- Az **API-hivatkozás** az egyes Q # függvényekhez, műveletekhez és felhasználó által definiált típusokhoz tartozó lapok összessége, https://docs.microsoft.com/qsharp/api/közzétéve. Ezek az oldalak dokumentálják az összes meghívható bemenetet és műveletet, valamint példákat és további információkra mutató hivatkozásokat. Az API-referenciát a rendszer automatikusan Kinyeri a kis DFM-dokumentumokból a Q # forráskódban az egyes verziók részeként.
 - Az egyes mintákhoz és Kata-hoz tartozó **README<!---->. MD** fájlok azt írják le, hogyan használható a minta vagy a Kata, mit takar, és hogyan kapcsolódik a többihez a Quantum Development Kit-hez. Ezek a fájlok a GitHub-stílusú [Markdown (GFM)](https://github.github.com/gfm/)használatával íródnak, amely egy egyszerűbb alternatíva a DFM, amely a dokumentáció közvetlen csatolásához használható a kódokhoz.
 
 ## <a name="contributing-to-the-conceptual-documentation"></a>A fogalmi dokumentációhoz való hozzájárulás ##
@@ -45,48 +45,85 @@ Részletesebben ismertetjük a lekéréses kérelmeket, de most van néhány dol
 
 Az API-referenciák fejlesztésének elősegítése érdekében célszerű a lekéréses kérelmeket közvetlenül a dokumentált kódban megnyitni.
 Minden függvény, művelet vagy felhasználó által definiált típus támogatja a dokumentációs megjegyzést (`///` `//`helyett).
-A Quantum Development Kit minden kiadásának fordításakor ezek a megjegyzések az API-referenciák előállítására szolgálnak https://docs.microsoft.com/qsharp/api/ ban, beleértve az egyes meghívásos bemenetek és kimenetek adatait, valamint az egyes meghívásos feltételezéseket és példákat a használatuk módjára.
+A Quantum Development Kit minden kiadásának fordításakor ezek a megjegyzések az API-referenciák előállítására szolgálnak https://docs.microsoft.com/qsharp/api/ban, beleértve az egyes meghívásos bemenetek és kimenetek adatait, valamint az egyes meghívásos feltételezéseket és példákat a használatuk módjára.
 
 > [!IMPORTANT]
 > Győződjön meg arról, hogy nem módosítja manuálisan a generált API-dokumentációt, mivel ezeket a fájlokat a rendszer felülírja az egyes új kiadásokkal.
 > Értékeljük a Közösséghez való hozzájárulását, és azt szeretnénk, hogy a módosítások továbbra is a kiadás után is elérhetők legyenek a felhasználók számára.
 
-Vegyünk például egy műveletet `PrepareTrialState(angles : Double[], register : Qubit[]) : Unit`.
-A dokumentációs megjegyzéseknek segíteniük kell a felhasználótól a `angles`értelmezését, hogy a művelet hogyan feltételezi `register`kezdeti állapotát, milyen hatással van a `register`re, és így tovább.
+Vegyük például a következő függvényt: `ControlledOnBitString<'T> (bits : Bool[], oracle : ('T => Unit is Adj + Ctl)) : ((Qubit[], 'T) => Unit is Adj + Ctl)`.
+A dokumentációs megjegyzéseknek segíteniük kell a felhasználótól a `bits` és a `oracle` értelmezését, valamint a függvényt.
 Ezek a különböző információk a Q # Compiler számára a dokumentációs Megjegyzés speciális elnevezett Markdown szakaszában adhatók meg.
-A `PrepareTrialState`például a következőhöz hasonló módon írhat:
+A `ControlledOnBitString`például a következőhöz hasonló módon írhat:
 
 ```qsharp
-/// # Summary
-/// Given a register of qubits, prepares them in a trial state by rotating each
-/// independently.
-///
-/// # Description
-/// This operation prepares the input register by performing a
-/// $Y$ rotation on each qubit by an angle given in `angles`.
-///
-/// # Input
-/// ## angles
-/// An array of parameters
-/// ## register
-/// A register of qubits initially in the $\ket{00\cdots0}$ state.
-///
-/// # Example
-/// To prepare an equal superposition $\ket{++\cdots+}$ over all input qubits:
-/// ```qsharp
-/// PrepareTrialState(ConstantArray(Length(register), PI() / 2.0), register);
-/// ```
-///
-/// # Remarks
-/// This operation is generally useful in the inner loop of an optimization
-/// algorithm.
-///
-/// # See Also
-/// - Microsoft.Quantum.Intrinsic.Ry
-operation PrepareTrialState(angles : Double[], register : Qubit[]) : Unit {
-    // ...
-}
+ /// # Summary
+ /// Returns a unitary operation that applies an oracle on the target register if the 
+ /// control register state corresponds to a specified bit mask.
+ ///
+ /// # Description
+ /// The output of this function is an operation that can be represented by a
+ /// unitary transformation $U$ such that
+ /// \begin{align}
+ ///     U \ket{b_0 b_1 \cdots b_{n - 1}} \ket{\psi} = \ket{b_0 b_1 \cdots b_{n-1}} \otimes
+ ///     \begin{cases}
+ ///         V \ket{\psi} & \textrm{if} (b_0 b_1 \cdots b_{n - 1}) = \texttt{bits} \\\\
+ ///         \ket{\psi} & \textrm{otherwise}
+ ///     \end{cases},
+ /// \end{align}
+ /// where $V$ is a unitary transformation that represents the action of the
+ /// `oracle` operation.
+ ///
+ /// # Input
+ /// ## bits
+ /// The bit string to control the given unitary operation on.
+ /// ## oracle
+ /// The unitary operation to be applied on the target register.
+ ///
+ /// # Output
+ /// A unitary operation that applies `oracle` on the target register if the control 
+ /// register state corresponds to the bit mask `bits`.
+ ///
+ /// # Remarks
+ /// The length of `bits` and `controlRegister` must be equal.
+ ///
+ /// Given a Boolean array `bits` and a unitary operation `oracle`, the output of this function
+ /// is an operation that performs the following steps:
+ /// * apply an `X` operation to each qubit of the control register that corresponds to `false` 
+ /// element of the `bits`;
+ /// * apply `Controlled oracle` to the control and target registers;
+ /// * apply an `X` operation to each qubit of the control register that corresponds to `false` 
+ /// element of the `bits` again to return the control register to the original state.
+ ///
+ /// The output of the `Controlled` functor is a special case of `ControlledOnBitString` where `bits` is equal to `[true, ..., true]`.
+ ///
+ /// # Example
+ /// The following code snippets are equivalent:
+ /// ```qsharp
+ /// (ControlledOnBitString(bits, oracle))(controlRegister, targetRegister);
+ /// ```
+ /// and
+ /// ```qsharp
+ /// within {
+ ///     ApplyPauliFromBitString(PauliX, false, bits, controlRegister);
+ /// } apply {
+ ///     Controlled oracle(controlRegister, targetRegister);
+ /// }
+ /// ```
+ ///
+ /// The following code prepares a state $\frac{1}{2}(\ket{00} - \ket{01} + \ket{10} + \ket{11})$:
+ /// ```qsharp
+ /// using (register = Qubit[2]) {
+ ///     ApplyToEach(H, register);
+ ///     (ControlledOnBitString([false], Z))(register[0..0], register[1]);
+ /// }
+ /// ```
+ function ControlledOnBitString<'T> (bits : Bool[], oracle : ('T => Unit is Adj + Ctl)) : ((Qubit[], 'T) => Unit is Adj + Ctl)
+ {
+     return ControlledOnBitStringImpl(bits, oracle, _, _);
+ }
 ```
+A fenti kód renderelt verzióját a [`ControlledOnBitString` függvény API-dokumentációjában](xref:microsoft.quantum.canon.controlledonbitstring)tekintheti meg.
 
 A dokumentáció írásának általános gyakorlata mellett az API-dokumentációs megjegyzések írásakor a következő szempontokat is segít megőrizni:
 

@@ -1,17 +1,17 @@
 ---
-title: Az energia szintjére vonatkozó becslések beszerzése | Microsoft Docs
-description: Az energia szintjének becslése – dokumentumok beszerzése
+title: Energiaszint-becslések lekérése
+description: 'Haladjon végig a Q # programon, amely a molekuláris hidrogén energia szintjének értékeit becsüli meg.'
 author: guanghaolow
 ms.author: gulow
 ms.date: 10/23/2018
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.examples.energyestimate
-ms.openlocfilehash: 0fd457b152083af364d924502c18bc0813e34b83
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.openlocfilehash: 3242d8c6dc6fad2bd99055027dd7ce4ec3510ff4
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73442574"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907307"
 ---
 # <a name="obtaining-energy-level-estimates"></a>Energiaszint-becslések lekérése
 Az energia szintjeinek becslése a Quantum kémiájának egyik fő alkalmazása. Itt felvázoljuk, hogy ez hogyan hajtható végre a molekuláris hidrogén kanonikus példáján. Az ebben a szakaszban hivatkozott minta `MolecularHydrogen` a kémia Samples repositoryban. A kimenetet ábrázoló vizualizációs példa a `MolecularHydrogenGUI` bemutató.

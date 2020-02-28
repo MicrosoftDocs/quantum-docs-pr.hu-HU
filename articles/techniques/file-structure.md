@@ -1,17 +1,17 @@
 ---
-title: 'Q # program áttekintése – Q # technikák | Microsoft Docs'
-description: 'Q # program áttekintése – Q # technikák'
+title: A Q#-beli programozás áttekintése
+description: Megtudhatja a kvantum-programok alapvető szerkezetét, valamint azt, hogy a Quantum állapotok átalakítását hogyan ábrázolja.
 author: QuantumWriter
 ms.author: Christopher.Granade@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.techniques.file-structure
-ms.openlocfilehash: e8f52e6b0d4382331665a8e845ef19a3a1beabf9
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 5c75bb5499efac2c49cbfc4555fd15b3e072181c
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76820827"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907698"
 ---
 # <a name="q-program-overview"></a>A Q#-beli programozás áttekintése
 

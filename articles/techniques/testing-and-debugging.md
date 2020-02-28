@@ -1,17 +1,17 @@
 ---
-title: 'Tesztelés és hibakeresés – Q # technikák | Microsoft Docs'
-description: 'Tesztelés és hibakeresés – Q # technikák'
+title: 'Q # programok tesztelése és hibakeresése'
+description: Megtudhatja, hogyan használhatók az egységes tesztek, a tények és a kijelentések, valamint a kvantum-programok tesztelésére és hibakeresésére szolgáló függvények.
 author: tcNickolas
 ms.author: mamykhai@microsoft.com
 uid: microsoft.quantum.techniques.testing-and-debugging
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: cfc71f08be0f190d9f5f4a48796e3d0ad06d6107
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 3df8df8defabcc9cc87d59f543f425c882b001e0
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76820113"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907681"
 ---
 # <a name="testing-and-debugging"></a>Tesztelés és hibakeresés
 
@@ -27,12 +27,12 @@ A Q # támogatja az egységnyi tesztek létrehozását a kvantum-programokhoz, a
 
 ### <a name="creating-a-test-project"></a>Tesztelési projekt létrehozása
 
-#### <a name="visual-studio-2019tabtabid-vs2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
+#### <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
 
 Nyissa meg a Visual Studio 2019 alkalmazást. Lépjen a `File` menüre, és válassza a `New` > `Project...`lehetőséget.
 A jobb felső sarokban keresse meg a `Q#`, majd válassza ki a `Q# Test Project` sablont.
 
-#### <a name="command-line--visual-studio-codetabtabid-vscode"></a>[Parancssor / Visual Studio Code](#tab/tabid-vscode)
+#### <a name="command-line--visual-studio-code"></a>[Parancssor / Visual Studio Code](#tab/tabid-vscode)
 
 A kedvenc parancssorában futtassa a következő parancsot:
 ```bash
@@ -71,7 +71,7 @@ A Q # Compiler a "QuantumSimulator", a "ToffoliSimulator" és a "ResourcesEstima
 
 ### <a name="running-q-unit-tests"></a>Q # egység tesztek futtatása
 
-#### <a name="visual-studio-2019tabtabid-vs2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
+#### <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
 
 Egyszeri egyszeri megoldás beállítása esetén lépjen `Test` menüre, és válassza `Test Settings` > `Default Processor Architecture` > `X64`.
 
@@ -81,7 +81,7 @@ Egyszeri egyszeri megoldás beállítása esetén lépjen `Test` menüre, és v�
 
 Hozza létre a projektet, lépjen a `Test` menüre, és válassza a `Windows` > `Test Explorer`lehetőséget. a `AllocateQubit` megjelennek a `Not Run Tests` csoportban lévő tesztek listájában. Válassza ki `Run All` vagy futtassa ezt az egyéni tesztet, és adja meg a következőt.
 
-#### <a name="command-line--visual-studio-codetabtabid-vscode"></a>[Parancssor / Visual Studio Code](#tab/tabid-vscode)
+#### <a name="command-line--visual-studio-code"></a>[Parancssor / Visual Studio Code](#tab/tabid-vscode)
 
 A tesztek futtatásához navigáljon a projekt mappájához (a `Tests.csproj`tartalmazó mappához), és hajtsa végre a következő parancsot:
 
@@ -123,29 +123,29 @@ $ dotnet test --filter "Name=AllocateQubit"
 
 A belső függvény <xref:microsoft.quantum.intrinsic.message> típusa `(String -> Unit)`, és lehetővé teszi a diagnosztikai üzenetek létrehozását.
 
-#### <a name="visual-studio-2019tabtabid-vs2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
+#### <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
 
 Miután futtatott egy tesztet a test Explorerben, és rákattint a tesztre, megjelenik egy panel, amely a teszt végrehajtásával kapcsolatos információkat tartalmazza: az átadott/sikertelen állapot, az eltelt idő és a "kimenet" hivatkozás. Ha a kimenet hivatkozásra kattint, a teszt kimenete új ablakban fog megnyílni.
 
 ![teszt kimenete](~/media/unit-test-output.png)
 
-#### <a name="command-line--visual-studio-codetabtabid-vscode"></a>[Parancssor / Visual Studio Code](#tab/tabid-vscode)
+#### <a name="command-line--visual-studio-code"></a>[Parancssor / Visual Studio Code](#tab/tabid-vscode)
 
 Az egyes tesztek Pass/Fail állapotának kinyomtatását a konzolon `dotnet test`.
 A sikertelen tesztek esetén a kimenetek a konzolon is kinyomtathatók a hiba diagnosztizálásához.
 
 ***
 
-## <a name="assertions"></a>Állításokat
+## <a name="facts-and-assertions"></a>Tények és kijelentések
 
 Mivel a Q # függvények nem rendelkeznek _logikai_ mellékhatással, az olyan függvények végrehajtásának _egyéb_ következményei, amelyek kimeneti típusa az üres rekord `()` a q # programon belül soha nem figyelhető meg.
 Vagyis a célszámítógép úgy is dönthet, hogy nem hajt végre olyan függvényt, amely `()`t ad vissza, és ezzel garantálja, hogy ez a mulasztás nem módosítja a következő Q # kód viselkedését.
-Ez lehetővé teszi a függvények visszaadását `()` egy hasznos eszközként, amely az állításokat és a hibakeresési logikát a Q # programokba ágyazza be. 
+Ez lehetővé teszi, hogy a függvények `()` (például `Unit`) visszaadják az állításokat és a hibakeresési logikát a Q # programokba. 
 
-Ugyanezt a logikát alkalmazhatja az érvényesítések megvalósítására is. Vegyünk egy egyszerű példát:
+Vegyünk egy egyszerű példát:
 
 ```qsharp
-function AssertPositive(value : Double) : Unit 
+function PositivityFact(value : Double) : Unit 
 {
     if (value <= 0) 
     {
@@ -156,11 +156,31 @@ function AssertPositive(value : Double) : Unit
 
 Itt a kulcsszó `fail` azt jelzi, hogy a számítás nem folytatódhat, kivételt kell kiemelni a Q # programot futtató célszámítógépen.
 Definíció szerint az ilyen típusú hibák nem figyelhetők meg a Q #-on belül, mert egy `fail` utasítás elérésekor nem fut további Q # kód.
-Így ha folytatjuk a `AssertPositive`meghívását, biztos lehet abban, hogy a bemenete pozitív volt.
+Így ha folytatjuk a `PositivityFact`meghívását, biztos lehet abban, hogy a bemenete pozitív volt.
+
+Vegye figyelembe, hogy a <xref:microsoft.quantum.diagnostics> névtér [`Fact`](xref:microsoft.quantum.diagnostics.fact) funkciójának használatával ugyanaz a viselkedés valósítható meg, mint a `PositivityFact`:
+
+```qsharp
+    Fact(value <= 0, "Expected a positive number.");
+```
+
+Az egyéb *kijelentéseket*a tényekhez hasonlóan használják, de a célszámítógép állapotától függően változhatnak. Ennek megfelelően a műveletekként vannak definiálva, míg a tények függvényekként vannak definiálva (mint fent).
+A különbségtétel megértéséhez vegye figyelembe, hogy a következők valamelyikét kell használnia egy állításon belül:
+
+```qsharp
+operation AssertQubitsAreAvailable() : Unit
+{
+     Fact(GetQubitsAvailableToUse() > 0, "No qubits were actually available");
+}
+```
+
+Itt a művelet <xref:microsoft.quantum.environment.getqubitsavailabletouse> használjuk a rendelkezésre álló qubits számának visszaküldéséhez.
+Mivel ez egyértelműen a program globális állapotától és a végrehajtási környezettől függ, a `AssertQubitsAreAvailable` definíciójának is egy műveletnek kell lennie.
+Ezt a globális állapotot azonban használhatja arra, hogy egyszerű `Bool` értéket adjon meg bemenetként a `Fact` függvénynek.
 
 Ezen ötletek kiépítésekor [a bevezetés](xref:microsoft.quantum.libraries.standard.prelude) két különösen hasznos állítást kínál, <xref:microsoft.quantum.intrinsic.assert> és <xref:microsoft.quantum.intrinsic.assertprob> mind a modellként, mind a `()`. Ezek a kijelentések mindegyike egy olyan Pauli-operátort mutat be, amely egy adott érdeklődési mérőszámot, egy olyan kvantum-regisztrációt, amelyre a mérést végzi, valamint egy feltételezett eredményt.
 A szimulációval működő célszámítógépeken nem köti [a nem klónozási tétel](https://en.wikipedia.org/wiki/No-cloning_theorem), és elvégezheti az ilyen méréseket anélkül, hogy megzavarja volna az ilyen állításokra adott regisztrációt.
-A szimulátor ezután a fenti `AssertPositive` függvényhez hasonlóan megszakítja a számítást, ha a feltételezett eredmény nem figyelhető meg a gyakorlatban:
+A szimulátor ezután a fenti `PositivityFact` függvényhez hasonlóan megszakítja a számítást, ha a feltételezett eredmény nem figyelhető meg a gyakorlatban:
 
 ```qsharp
 using (register = Qubit()) 
@@ -265,7 +285,7 @@ Az alábbi példák a gyakori állapotok `DumpMachine` mutatják be:
   > A qubit azonosítója futásidőben van hozzárendelve, és nem szükségszerűen igazodik azzal a sorrendtel, ahogy a qubit le lett foglalva, vagy a qubit-regisztráción belüli pozíciója.
 
 
-#### <a name="visual-studio-2019tabtabid-vs2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
+#### <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
 
   > [!TIP]
   > Létrehozhat egy qubit-azonosítót a Visual Studióban, ha egy töréspontot helyez el a kódban, és megvizsgál egy qubit változó értékét, például:
@@ -274,7 +294,7 @@ Az alábbi példák a gyakori állapotok `DumpMachine` mutatják be:
   >
   > a (z) `register2` indextel `0` qubit azonosító =`3`, az index `1` azonosítójú qubit azonosítója =`2`.
 
-#### <a name="command-line--visual-studio-codetabtabid-vscode"></a>[Parancssor / Visual Studio Code](#tab/tabid-vscode)
+#### <a name="command-line--visual-studio-code"></a>[Parancssor / Visual Studio Code](#tab/tabid-vscode)
 
   > [!TIP]
   > Qubit-azonosítót a <xref:microsoft.quantum.intrinsic.message> függvénnyel talál, és átadhatja a qubit változót az üzenetben, például:

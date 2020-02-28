@@ -1,17 +1,17 @@
 ---
-title: Mélységi számláló | Quantum Computer nyomkövetési szimulátor | Microsoft Docs
-description: A kvantumszámítógép nyomkövetési szimulátorának áttekintése
+title: Mélységi számláló
+description: Ismerje meg a Microsoft QDK mélységi számlálóját, amely összefoglalja a kvantum-programban meghívott összes művelet mélységét.
 author: vadym-kl
 ms.author: vadym@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.depth-counter
-ms.openlocfilehash: 07f927c794e2c62e53e4e053b5bc683d24bbed8d
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: d532a9f512b8c87d83d62ed26e3bb67e1b6f668b
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76820470"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906100"
 ---
 # <a name="depth-counter"></a>Mélységi számláló
 
@@ -37,7 +37,7 @@ operation ApplySampleWithCCNOT() : Unit {
 
 Annak vizsgálatához, hogy `CCNOT` rendelkezik-e `T` 5. mélységtel, és `ApplySampleWithCCNOT` `T` mélysége 6, a következő C# kódot használhatja:
 
-```csharp 
+```csharp
 using Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators;
 using System.Diagnostics;
 var config = new QCTraceSimulatorConfiguration();
@@ -61,6 +61,6 @@ Végezetül, a `Depth Counter` által gyűjtött összes statisztika CSV formát
 string csvSummary = sim.ToCSV()[MetricsCountersNames.depthCounter];
 ```
 
-## <a name="see-also"></a>Lásd még: ##
+## <a name="see-also"></a>Lásd még ##
 
 - A Quantum Computer [trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro) áttekintése.

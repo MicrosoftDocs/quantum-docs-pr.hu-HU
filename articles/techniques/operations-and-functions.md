@@ -1,17 +1,17 @@
 ---
-title: 'Operations and functions – Q # technikák | Microsoft Docs'
-description: 'Operations and functions – Q # technikák'
+title: 'Q # műveletek és függvények'
+description: 'Ismerje meg a Q # műveleteit és funkcióit, valamint azt, hogy ezek hogyan lesznek alkalmazva a Quantum programban.'
 uid: microsoft.quantum.techniques.opsandfunctions
 author: QuantumWriter
 ms.author: Christopher.Granade@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 1fca20bb44cc42008f7d25d2fc71a39b962525c2
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 43f0cf2da192a607e514d0c7de57a9bdd067faf7
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76820776"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907664"
 ---
 # <a name="q-operations-and-functions"></a>Q # műveletek és függvények
 
@@ -231,7 +231,7 @@ operation ApplyTwice(op : (Qubit => Unit), target : Qubit) : Unit {
 
 Ebben a példában a `(Qubit => Unit)` típusban megjelenő `=>` nyíl azt jelzi, hogy a beviteli mező `op` egy olyan művelet, amely a `Qubit` típusként adja meg a bemenetet, és a kimenetként üres rekordot hoz létre.
 Ezen túlmenően a művelet típusának jellemzőit is megadjuk, amely tartalmazza azokat az információkat, amelyek támogatottak.
-Egy `(Qubit => Unit)` típusú művelet sem a `Adjoint`, sem a `Controlled`-kezelőt is támogatja. Ha azt szeretnénk jelezni, hogy az adott típusú műveletnek támogatnia kell például az `Adjoint`-t, akkor azt adjointable kell bejelenteni. Ez a típushoz tartozó jegyzet `is Adj` használatával végezhető el. Hasonlóképpen `(Qubit => Unit is Ctl)` azt is jelzi, hogy az adott típusú művelet támogatja a `Controlled`-munkafolyamatot. Ezt részletesebben is megvizsgáljuk, amikor a [types in Q #] (xref: Microsoft. Quantum. Language. Type-Model) általánosságban tárgyaljuk.
+Egy `(Qubit => Unit)` típusú művelet sem a `Adjoint`, sem a `Controlled`-kezelőt is támogatja. Ha azt szeretnénk jelezni, hogy az adott típusú műveletnek támogatnia kell például az `Adjoint`-t, akkor azt adjointable kell bejelenteni. Ez a típushoz tartozó jegyzet `is Adj` használatával végezhető el. Hasonlóképpen `(Qubit => Unit is Ctl)` azt is jelzi, hogy az adott típusú művelet támogatja a `Controlled`-munkafolyamatot. Ezt tovább fogjuk feltárni, amikor [a Q #](xref:microsoft.quantum.language.type-model) általánosabban tárgyalt típusokról beszélünk.
 
 Most Kiemeljük, hogy a kimenetek részeként is visszaadhatjuk a műveleteket, így a klasszikus feltételes logika valamilyen módon elkülöníthető klasszikus függvényként, amely egy művelet formájában egy kvantum-program leírását adja vissza.
 Egyszerű példaként tekintse meg a teleportálás példáját, amelyben a kétbites klasszikus üzenetet fogadó fél az üzenetet arra használja, hogy dekódolja a qubit a megfelelő teleportált állapotba.

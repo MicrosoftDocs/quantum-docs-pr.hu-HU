@@ -1,17 +1,17 @@
 ---
-title: Dirac-jelölés | Microsoft Docs
-description: Dirac jelölése
+title: Dirac-jelölés
+description: Ismerje meg, hogyan használhatja a Dirac jelölést a kvantum állapotok, valamint a kvantum-műveletek szimulálása érdekében.
 author: QuantumWriter
 uid: microsoft.quantum.concepts.dirac
 ms.author: nawiebe@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 33d964d079c94bd947e35d2c09516b29df1bba11
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 204e56cc97fe28f9c52dcfb882aadec7e09bb2dc
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "73184763"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907562"
 ---
 # <a name="dirac-notation"></a>Dirac jelölése
 
@@ -36,7 +36,7 @@ $$
 
 A következő jelölést gyakran használják olyan állapotok leírására, amelyek a Hadamard-kapunak a $ \ket{0}$ és $ \ket{1}$ értékre való alkalmazásából erednek (amelyek megfelelnek a Bloch szférában a $ + x $ és a $-x $ utasításban szereplő egység-vektoroknak):
 
-$ $ \frac{1}{\sqrt{2}} \begin{bmatrix} 1 \\\\ 1 \end{bmatrix} = H\ket{0} = \ket{+}, \qquad \frac{1}{\sqrt{2}} \begin{bmatrix} 1 \\\\-1 \end{bmatrix} = H\ket{1} = \ket{-} .
+$ $ \frac{1}{\sqrt{2}} \begin{bmatrix} 1 \\\\ 1 \end{bmatrix} = H\ket{0} = \ket{+}, \qquad \frac{1}{\sqrt{2}} \begin{bmatrix} 1 \\\\-1 \end{bmatrix} = H\ket{1} = \ket{-}.
 $$
 
 Ezek az állapotok a Dirac-jelöléssel is bővíthetők a $ \ket{0}$ és a $ \ket{1}$ összegű összegek alapján:
@@ -62,7 +62,7 @@ $ $ \big | \braket{1 | \psi}\big | ^ 2 = \left | \frac{3}{5}\braket{1 | 1} + \fr
 ### <a name="tensor-product-notation"></a>Tenser termék jelölése
 A Dirac-jelölés magában foglalja az implicit tenser termék struktúráját is.  Ez azért fontos, mert a kvantum-számítástechnika esetében a két, nem korrelált kvantum-regiszter által ismertetett állapot-vektor a két állapotú vektor kétszintű terméke.  A tensing termék szerkezetének tömör leírása vagy ennek hiánya létfontosságú, ha meg szeretné magyarázni a kvantum-számításokat.  A tenser-termék szerkezete azt feltételezi, hogy a $ \psi \otimes \phi $ értéket írhatjuk bármely két kvantum-állapotú vektorhoz ($ \phi $ és $ \psi $ as $ \ket{\psi} \ket{\phi} $), időnként kifejezetten $ \ket{\psi} \otimes \ket{\phi} $-ként írt \otimes a vektorok között szükségtelen.  Például a nulla állapotba inicializált két qubits állapotot a következő adja meg:
 
-$ $ \begin{bmatrix} 1 \\\\ 0 \\\\ 0 \\\\ 0 \end{bmatrix} = \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} \otimes \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} = \ket{0} \ otimes \ket{0}= \ket{0} \ket{0}.
+$ $ \begin{bmatrix} 1 \\\\ 0 \\\\ 0 \\\\ 0 \end{bmatrix} = \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} \otimes \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} = \ket{0} \otimes \ket{0}= \ket{0} \ket{0}.
 $$
 
 Hasonlóképpen, a $ \ket{p} $ for Integer $p $ érték azt a kvantum-állapotot jelöli, amely bináris formátumban kódolja az egész $p $ értéket.  Ha például a $5 $ számot egy aláíratlan bináris kódolással szeretnénk kifejezni, akkor a következőhöz hasonló módon fejezzük ki:
@@ -78,7 +78,7 @@ $$
 ### <a name="example-describing-superposition-with-dirac-notation"></a>Példa: a Dirac-jelöléssel való Felfekvés leírása
 Egy másik példa arra, hogy miként használhatja a Dirac-jelölést a kvantum-állapot leírására, vegye figyelembe a következő egyenértékű módokat olyan kvantum-állapot írásához, amely egyenlő arányban van az összes lehetséges $n $ karakternél.
 
-$ $ H ^ {\otimes n} \ket{0} = \frac{1}{2 ^ {n/2}} \sum_{j = 0} ^ {2 ^ n-1} \ket{j} = \ket{+} ^ {\otimes n}.
+$ $ H ^ {\otimes n} \ket{0} = \frac{1}{2 ^ {n/2}} \ sum_ {j = 0} ^ {2 ^ n-1} \ket{j} = \ket{+} ^ {\otimes n}.
 $$
 
 Itt is csoda, hogy az összeg a $0 $ és a 2 ^ {n} – $1 közötti értékről $n $ BITS-re esik.  Először is vegye figyelembe, hogy 2 ^ {n} $ különböző konfiguráció van, amelyek $n $ BITS-t is igénybe vehetnek.  Ezt úgy tekintheti meg, hogy egy bit $2 $ értéket vehet igénybe, de két bit $4 $ értéket és így tovább. Általánosságban véve ez azt jelenti, hogy 2 ^ n $ különböző lehetséges bit sztring van, de a legnagyobb érték bármelyikük 1 \ cdots 1 = 2 ^ n-$1, így ez az összeg felső korlátja.
@@ -93,7 +93,7 @@ Ez azt jelenti, hogy a Dirac-jelöléssel terjesztheti a tízes termék jelölé
 
 A melltartó-vektorok hasonló konvenciót követnek a két vektorhoz.  Például az $ \bra{\psi}\bra{\phi} $ vektor felel meg az állapot Vector $ \psi ^ \dagger \otimes \phi ^ \dagger = (\psi\otimes \phi) ^ \dagger $ értékkel. Ha a \ket{\psi} $ \alpha $ a $ \ket{0} + \beta \ket{1}$, akkor a vektor melltartó vektoros verziója $ \bra{\psi} = \ket{\psi} ^ \dagger = (\bra{0}\alpha ^ * + \bra{1}\beta ^ *) $.
 
-Tegyük fel például, hogy szeretnénk kiszámítani a következő állapot mérésének valószínűségét: $ \ket{\psi} = \frac{3}{5} \ket{1} + \frac{4}{5} \ket{0}$ Quantum program használatával, amely az állapotok méréséhez $ \ket{+} $ vagy $ \ket értéket használ.{-}$. Ezt követően a valószínűsége annak, hogy az eszköz kimenete legyen, hogy az állapot $ \ket{-}$ 
+Tegyük fel például, hogy szeretnénk kiszámítani a következő állapot mérésének valószínűségét: $ \ket{\psi} = \frac{3}{5} \ket{1} + \frac{4}{5} \ket{0}$ a Quantum program használatával, hogy az állapotok mérése $ \ket{+} $ vagy $ \ket{-}$ értékű legyen. Ezt követően a valószínűsége annak, hogy az eszköz kimenete legyen, hogy az állapot $ \ket{-}$ 
 
 $ $ | \braket{-| \psi} | ^ 2 = \left | \frac{1}{\sqrt{2}} (\bra{0}-\bra{1}) (\frac{3}{5} \ket{1} + \frac{4}{5} \ket{0}) \right | ^ 2 = \left |-\frac{3}{5 \ SQRT{2}} + \frac{4}{5 \ SQRT{2}} \right | ^ 2 = \frac{1}{50}. $ $
 
@@ -102,7 +102,7 @@ Az a tény, hogy a negatív előjel jelenik meg a valószínűség kiszámítás
 ## <a name="ketbra-or-outer-product"></a>ketbra vagy külső termék
 A Dirac jelölésének utolsó eleme a *ketbra* vagy külső termék.  A külső termék a $ \ket{\psi} \bra{\phi} $ Dirac, és más néven ketbras, mivel a melltartó és a kulcsfontosságú alaptechnológiák a brakets ellentétes sorrendben történnek.  A külső termék a mátrix szorzásán keresztül van definiálva, mint $ \ket{\psi} \bra{\phi} = \psi \phi ^ \dagger $ a Quantum State vectors $ \psi $ és $ \phi $ esetében.  Ennek a jelölésnek a legegyszerűbb és vitathatatlan leggyakoribb példája a következő
 
-$ $ \ket{0} \bra{0} = \begin{bmatrix}1\\\\ 0 \end{bmatrix}\begin{bmatrix}1 & 0 \end{bmatrix} = \begin{bmatrix}1 & 0\\\\ 0 & 0 \ End {bmatrix} \qquad \ket{1} \bra{1} = \begin{bmatrix}0\\\\ 1 \end{bmatrix}\begin{bmatrix}0 & 1 \end{bmatrix} = \begin{bmatrix}0 & 0\\\\ 0 & 1 \ End {bmatrix}.
+$ $ \ket{0} \bra{0} = \begin{bmatrix}1\\\\ 0 \end{bmatrix}\begin{bmatrix}1 & 0 \end{bmatrix} = \begin{bmatrix}1 & 0\\\\ 0 & 0 \ Befejezés {bmatrix} \qquad \ket{1} \bra{1} = \begin{bmatrix}0\\\\ 1 \end{bmatrix}\begin{bmatrix}0 & 1 \end{bmatrix} = \begin{bmatrix}0 & 0\\\\ 0 & 1 \ End {bmatrix}.
 $$
 
 A Ketbras gyakran nevezik kivetítőknek, mert a kvantum-állapotot egy rögzített értékre tervezik.  Mivel ezek a műveletek nem egységesek (és nem is őrzik meg a vektorok normáját), nem meglepő, hogy a kvantum-számítógép nem tud determinisztikus módon alkalmazni.  A kivetítők azonban szép munkát végeznek, amely leírja, hogy milyen műveletet végeznek a mérések kvantum-állapotban.  Ha például a $ \ket{\psi} $ értéket a $0 $ értékre mérjük, akkor az eredményül kapott átalakítás azt eredményezi, hogy az állapot a mérés eredményeképpen megtapasztalható.
@@ -132,7 +132,7 @@ $$
 
 Ezt követően láthatjuk, hogy ez összhangban van a multiqubit-állapotok oszlop-vektoros jelöléssel való használatának valószínűségével kapcsolatos megbeszélésekkel:
 
-$ $ P (\text{First qubit = 1}) = \psi ^ \dagger (e\_{10}e\_{10}^ \dagger + e\_{11}e\_{11}^ \dagger) \psi = | e\_{10}^ \dagger \psi | ^ 2 + | e\_{11}^ \ tőr \psi | ^ 2, $ $
+$ $ P (\text{First qubit = 1}) = \psi ^ \dagger (e\_{10}e\_{10}^ \dagger + e\_{11}e\_{11}^ \dagger) \psi = | e\_{10}^ \dagger \psi | ^ 2 + | e\_{11}^ \dagger \psi | ^ 2, $ $
 
 amely megfelel a többszörös qubit mérési vitának.  Ennek az eredménynek az általánosítása a többtényezős qubit esetében azonban valamivel egyszerűbb, ha Dirac-jelölést használ, mint az oszlop-vektoros jelölés, és teljesen egyenértékű a korábbi kezeléssel.
 
@@ -146,4 +146,3 @@ Az érdekelt olvasó számára javasoljuk, hogy olvassa el a [További tudnival�
 
 ## <a name="q-gate-sequences-equivalent-to-quantum-states"></a>A Q # Gate a Quantum állapotokkal egyenértékű részei
 Az utolsó pont a kvantum-jelöléssel és a Q # programozási nyelvvel ér véget: a dokumentum kezdetén azt is említettük, hogy a kvantum-állapot a kvantum-számítástechnikai adatok alapvető tárgya.  Ekkor meglepőnek tűnhet, hogy a Q #-ban nincs a kvantum állapot fogalma.  Ehelyett az összes állapotot csak az előkészítéséhez használt műveletek írják le.  Az előző példa egy kiváló illusztráció.  Ahelyett, hogy egységes, a regiszterben lévő összes kvantum bites sztringre kifejezzék, az eredményt a $H ^ {\otimes n} \ket{0}$ értékkel láthatjuk.  Ennek az állapotnak az exponenciálisan rövidebb leírása nem csupán az előnye, hogy klasszikusan indokolja, de az algoritmus megvalósításához szükséges műveleteket is tömören definiálja.  Emiatt a Q # úgy van kialakítva, hogy a Quantum állapot helyett Gate-sorozatot bocsát ki. elméleti szinten azonban a két perspektíva egyenértékű.
-

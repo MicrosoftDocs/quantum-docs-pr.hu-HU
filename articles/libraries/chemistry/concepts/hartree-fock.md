@@ -1,17 +1,17 @@
 ---
-title: Hartree – Fock elmélet | Microsoft Docs
-description: Hartree – Fock Theory-dokumentáció
+title: Hartree – Fock elmélet
+description: Ismerje meg a Hartree – Fock elméletet, amely egy egyszerű módszer a Quantum Systems kezdeti állapotának összeállításához.
 author: nathanwiebe2
 ms.author: nawiebe@microsoft.com
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.hartreefock
-ms.openlocfilehash: e73111ae710e11ca6730581b8be711cf32783677
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 6fa63cbe13fe98565ffb42b56f3ade86720cedb3
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73184100"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77904451"
 ---
 # <a name="hartreefock-theory"></a>Hartree – Fock elmélet
 
@@ -22,10 +22,10 @@ A mennyiségeket, például a terepi állapotot, megtudhatja.
 Ha például a $ \ket{\psi} $ értéke tiszta Quantum állapot, akkor a \begin{Equation} E = \bra{\psi} \hat{H} \ket{\psi} \end{Equation} megadja azt a középértéket, amelyet a rendszer adott állapotban tartalmaz.
 A terület állapota ezután az az állapot, amely a legkisebb értéket adja meg. Ennek eredményeképpen egy olyan állapotot kell kiválasztania, amely a lehető legpontosabban van a valódi alapállapothoz képest, és a közvetlen (a variációs eigensolvers-ben végzett) vagy a fázis becslése alapján alapvetően fontos az energia becsléséhez.
 
-Hartree – a Fock elmélete egyszerű módszert kínál a kvantum-rendszerek kezdeti állapotának összeállítására. Egyetlen Slater-meghatározó megközelítést eredményez a kvantumrendszer állapotának meghatározásához. Ebből a célból megtalál egy rotációs területet a Fock belül, amely lekicsinyíti a terepi állapotot. Különösen $N $ elektronok rendszeréhez a metódus végrehajtja az elforgatás \begin{Equation} \prod_{j = 0} ^ {N-1} a ^ \dagger_j \ket{0} \mapsto \prod_{j = 0} ^ {N-1} e ^ {u} a ^ \dagger_j e ^ {-u} \ket{0}\defeq\prod_{j = 0} ^ {N-1} \widetilde{a} ^ \dagger _j \ket{0}, \end{Equation} Hermitian (például $u =-u ^ \dagger $) mátrix $u = \sum_{pq} u_ {pq} a ^ \dagger_p a_q $. Meg kell jegyezni, hogy a mátrix $u $ az orbitális forgásokat jelöli, a $ \widetilde{a} ^ \dagger_j $ és a $ \widetilde{a}_j $ pedig a Hartree – Fock molekuláris spin-orbits típusú elektronok létrehozási és megsemmisítési operátorait képviseli.
+Hartree – a Fock elmélete egyszerű módszert kínál a kvantum-rendszerek kezdeti állapotának összeállítására. Egyetlen Slater-meghatározó megközelítést eredményez a kvantumrendszer állapotának meghatározásához. Ebből a célból megtalál egy rotációs területet a Fock belül, amely lekicsinyíti a terepi állapotot. $N $ elektronok rendszeréhez a metódus végrehajtja az elforgatási \begin{Equation} \ prod_ {j = 0} ^ {N-1} a ^ \ dagger_j \ket{0} \mapsto \ prod_ {j = 0} ^ {N-1} e ^ {u} a ^ \ dagger_j e ^ {-u} \ket{0}\defeq\ prod_ {j = 0} ^ {N-1} \widetilde{a} ^ \ dagger_j \ket{0}, \end{Equation} egy Hermitian (azaz $u =-u ^ \dagger $) mátrix $u = \ sum_ {pq} u_ {pq} a ^ \ dagger_p a_q $. Érdemes megjegyezni, hogy a $u $ mátrix az orbitális forgásokat jelöli, a $ \widetilde{a} ^ \ dagger_j $ és a $ \widetilde{a} _j $ érték pedig a Hartree – Fock molekuláris spin-orbits típusú elektronok létrehozási és megsemmisítési operátorait jelöli.
 
 
-A mátrix $u $-t a rendszer a várt energia minimalizálására optimalizálta a \bra{0} \prod_{j = 0} ^ {N-1} \widetilde{a}\_j H \prod\_{k = 0} ^ {N-1} \widetilde{a} ^ \dagger_k\ket{0}$. Habár előfordulhat, hogy az ilyen optimalizálási problémák általánosságban nehézkesek, a gyakorlatban a Hartree – Fock algoritmus igyekszik gyorsan konvergálni az optimalizálási probléma közel optimális megoldásához, különösen az egyensúlyi geometriákban lévő zárt rendszerhéjú molekulák esetében. Ezeket az állapotokat a `FermionWavefunction` objektum példányának is megadhatjuk. Például a következő állapot $a ^ \dagger_{1}a ^ \dagger_{2}^ \dagger_{6}\ket{0}$ a kémiai könyvtárban a következőképpen történik.
+Ezt követően a mátrix $u $ értékre van optimalizálva, hogy csökkentse a várt energia \bra{0} \ prod_ {j = 0} ^ {N-1} \widetilde{a}\_j H \prod\_{k = 0} ^ {N-1} \widetilde{a} ^ \ dagger_k \ket{0}$. Habár előfordulhat, hogy az ilyen optimalizálási problémák általánosságban nehézkesek, a gyakorlatban a Hartree – Fock algoritmus igyekszik gyorsan konvergálni az optimalizálási probléma közel optimális megoldásához, különösen az egyensúlyi geometriákban lévő zárt rendszerhéjú molekulák esetében. Ezeket az állapotokat a `FermionWavefunction` objektum példányának is megadhatjuk. Például a következő állapot $a ^ \ dagger_{1}^ \ dagger_{2}egy ^ \ dagger_{6}\ket{0}$ példánya a kémiai könyvtárban a következőképpen történik.
 ```csharp
 // Create a list of integer indices of the creation operators
 var indices = new[] { 1, 2, 6 };

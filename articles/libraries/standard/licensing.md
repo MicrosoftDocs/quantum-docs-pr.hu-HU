@@ -1,22 +1,22 @@
 ---
-title: OSS licencelés
-description: 'Q # standard könyvtárak – licencelés és közreműködés'
+title: A QDK nyílt forráskódú licencelése
+description: 'Ismerje meg a Microsoft Q # standard kódtárak használatának és a hozzájuk való hozzájárulásnak a licencét, valamint a licencelést és a hozzájárulást.'
 author: martinro
 ms.author: martinro@microsoft.com
 ms.date: 2/16/2018
 ms.topic: article
 uid: microsoft.quantum.libraries.licensing
-ms.openlocfilehash: 35e55f6741e5dcc79724f80f31d89937696d8554
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 4bc0fb7fbeb4a71b891619218905d509e50911c9
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73184389"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906202"
 ---
-# <a name="licensing"></a>Licencelés #
+# <a name="licensing"></a>Licencek #
 
 A Quantum Development Kit olyan nyílt forráskódú függvények és műveletek széles választékát biztosítja, amelyek licence az [mit licenc](https://github.com/Microsoft/Quantum/blob/master/LICENSE.txt)alá tartozik.
-A cél gépek között hordozható standard könyvtár egyes részei a GitHubon található [Microsoft/QuantumLibraries](https://github.com/Microsoft/QuantumLibraries) adattárból, más könyvtárakkal, például a és más könyvtárakkal, például a [Quantum kémia könyvtárral szerezhetők be. ](xref:microsoft.quantum.chemistry.concepts.intro).
+A cél gépek között hordozható standard könyvtár részei a GitHubon futó [Microsoft/QuantumLibraries](https://github.com/Microsoft/QuantumLibraries) adattárból, más könyvtárakkal, például a (z) és más könyvtárakkal, például a [Quantum kémia könyvtárral](xref:microsoft.quantum.chemistry.concepts.intro)szerezhetők be.
 
 A Microsoft Quantum Development Kit olyan speciális függvénytár-funkciókat és műveleteket is biztosít, amelyek a [Microsoft kutatási licence](https://github.com/Microsoft/Quantum-NC/blob/master/LICENSE)keretében licenccel rendelkeznek.
 Ezek a GitHubon található [Microsoft/Quantum-NC](https://github.com/microsoft/quantum-nc) adattárból szerezhetők be.

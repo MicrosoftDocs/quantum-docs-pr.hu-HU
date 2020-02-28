@@ -1,17 +1,17 @@
 ---
-title: 'Az összes együttes üzembe helyezése – Q # technikák | Microsoft Docs'
-description: 'Az összes egyesítése – Q # technikák'
+title: 'Q # technikák – az összes összeállítása'
+description: 'Haladjon végig egy alapszintű Q # programban, amely a kvantum-teleportáció mutatja be.'
 uid: microsoft.quantum.techniques.puttingittogether
 author: QuantumWriter
 ms.author: Christopher.Granade@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 3605826da159757d4b321dbf4ec6acd7f4e6be05
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 6c988f77ef6e433945dbf21dfb41204c74bdda3e
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76820164"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906831"
 ---
 # <a name="putting-it-all-together-teleportation"></a>Az összes egyesítése: teleportáció #
 Térjen vissza a [kvantum-áramkörökben](xref:microsoft.quantum.concepts.circuits)definiált teleportáció-kör példára. Ezt az eddig megtanult fogalmak szemléltetésére fogjuk használni. A Quantum teleportáció magyarázatát alább találja azok számára, akik nem ismerik az elméletet, majd a kód megvalósításának bemutatóját a Q #-ban. 
@@ -94,7 +94,7 @@ Be kell szereznie a __qubit ebbe az__ állapotba, hogy a kapott állapot legyen 
 
 Ha a mérés és az első qubit értéke 1, a rendszer a Z kaput alkalmazza. Ha mérjük, és a második qubit értéke 1, a rendszer nem alkalmaz egy kaput.
 
-### <a name="summary"></a>Összefoglalás
+### <a name="summary"></a>Összegzés
 Alább látható egy szöveges könyvből álló kvantum-kör, amely megvalósítja a teleportáció. Balról jobbra haladva a következőt láthatja:
 - 1\. lépés: a __Hadamard-kapu__ és a cnem-kapu alkalmazásával összekeverhető __itt__ .
 - 2\. lépés: az __üzenet__ elküldése egy cnem-kapuval és egy Hadamard-kapuval.

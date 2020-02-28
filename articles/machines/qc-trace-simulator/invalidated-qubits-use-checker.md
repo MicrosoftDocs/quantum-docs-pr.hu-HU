@@ -1,17 +1,17 @@
 ---
-title: Érvénytelenített qubits-használat ellenőrzője | Quantum Computer nyomkövetési szimulátor | Microsoft Docs
-description: A kvantumszámítógép nyomkövetési szimulátorának áttekintése
+title: Érvénytelenített qubithasználat ellenőrzője
+description: 'Ismerje meg a Microsoft QDK érvénytelenített qubits használatát ellenőrző eszközt, amely ellenőrzi a Q # kódját a potenciálisan érvénytelen qubits.'
 author: vadym-kl
 ms.author: vadym@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.invalidated-qubits
-ms.openlocfilehash: 093937346488725eacb69ef7da6affde764ec5c1
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: e2bbb12448e27f28db030a0084302fb24f46f26b
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76820878"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907069"
 ---
 # <a name="invalidated-qubits-use-checker"></a>Érvénytelenített qubits-ellenőrző használata
 
@@ -58,6 +58,6 @@ namespace Quantum.MyProgram
 
 Az osztály `QCTraceSimulatorConfiguration` a kvantum-számítógép nyomkövetési szimulátorjának konfigurációját tárolja, és a `QCTraceSimulator` konstruktor argumentumként is elérhető. Ha a `useInvalidatedQubitsUseChecker` értéke TRUE (igaz), akkor a `Invalidated Qubits Use Checker` engedélyezve van. További részletekért tekintse meg a [QCTraceSimulator](https://docs.microsoft.com/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator) és a [QCTraceSimulatorConfiguration](https://docs.microsoft.com/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration) API-dokumentációját.
 
-## <a name="see-also"></a>Lásd még: ##
+## <a name="see-also"></a>Lásd még ##
 
 - A Quantum Computer [trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro) áttekintése.
