@@ -6,12 +6,12 @@ ms.author: chgranad@microsoft.com
 ms.date: 10/19/2019
 ms.topic: article
 uid: microsoft.quantum.quickstarts.search
-ms.openlocfilehash: c1fd578fdb3d56a7b48972e6ccc9b1605047fe36
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 0e64fcd56929fa33397c45bf1b2e99bf687eca6f
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: HT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76820351"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906950"
 ---
 # <a name="quickstart-implement-grovers-search-algorithm-in-q"></a>Gyorsútmutató: A keresési Grover-algoritmus implementálása Q#-ban
 
@@ -43,7 +43,7 @@ A fokozatos növekedések száma kevesebb, mint a lista tételeinek száma. Grov
 
 1. Az új projektjében adja a következő kódot az `Operations.qs` fájlhoz:
 
-    :::code language="qsharp" source="~/quantum/samples/algorithms/simple-grover/SimpleGrover.qs" range="4-23" highlight="5,27":::
+    :::code language="qsharp" source="~/quantum/samples/algorithms/simple-grover/SimpleGrover.qs" range="4-40":::
 
 1. A keresendő lista meghatározásához hozzon létre egy új fájlt `Reflections.qs` néven, és illessze be a következő kódot:
 
@@ -53,7 +53,7 @@ A fokozatos növekedések száma kevesebb, mint a lista tételeinek száma. Grov
 
 1. Ezután futtassa új Q#-programját a `ReflectAboutMarked` által jelölt tétel megtalálásához.
 
-    ### <a name="python-with-visual-studio-code-or-the-command-linetabtabid-python"></a>[Python a Visual Studio Code-dal vagy a parancssorból](#tab/tabid-python)
+    ### <a name="python-with-visual-studio-code-or-the-command-line"></a>[Python a Visual Studio Code-dal vagy a parancssorból](#tab/tabid-python)
 
     Mentse `host.py`-ként a következő kódot az új Q#-program Pythonból történő futtatásához:
 
@@ -71,7 +71,7 @@ A fokozatos növekedések száma kevesebb, mint a lista tételeinek száma. Grov
     [0, 1, 0, 1, 0]
     ```
 
-    ### <a name="c-with-visual-studio-code-or-the-command-linetabtabid-csharp"></a>[C# a Visual Studio Code-dal vagy a parancssorból](#tab/tabid-csharp)
+    ### <a name="c-with-visual-studio-code-or-the-command-line"></a>[C# a Visual Studio Code-dal vagy a parancssorból](#tab/tabid-csharp)
 
     Adja hozzá a következő C#-kódot a `Driver.cs` fájlhoz, hogy futtatni tudja az új Q#-programot a C#-ből:
 
@@ -90,7 +90,7 @@ A fokozatos növekedések száma kevesebb, mint a lista tételeinek száma. Grov
     Press any key to continue...
     ```
 
-    ### <a name="c-with-visual-studio-2019tabtabid-vs2019"></a>[C# a Visual Studio 2019-cel](#tab/tabid-vs2019)
+    ### <a name="c-with-visual-studio-2019"></a>[C# a Visual Studio 2019-cel](#tab/tabid-vs2019)
 
     A Visual Studióban adja hozzá a következő C#-kódot a `Driver.cs` fájlhoz, hogy futtatni tudja az új Q#-programot a C#-ból:
 

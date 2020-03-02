@@ -6,12 +6,12 @@ ms.author: nakersha
 ms.date: 10/07/2019
 ms.topic: tutorial
 uid: microsoft.quantum.write-program
-ms.openlocfilehash: 30135fa8a123e52a92b7187218f9980ba3cdbd2d
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.openlocfilehash: 8d3b2d7c8da39a961f4eedcc5989ad3a1e134ade
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: HT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73442207"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906729"
 ---
 # <a name="quantum-basics-with-q"></a>Kvantumalapok Q# nyelven
 
@@ -30,7 +30,7 @@ A leírást a QDK telepítése nélkül is követheti, hogy áttekintést kapjon
 
 ## <a name="demonstrating-qubit-behavior-with-q"></a>A qubitek viselkedésének szemléltetése a Q# segítségével
 
-Emlékezzen vissza a [qubit egyszerű definíciójára](xref:microsoft.quantum.overview.what#the-qubit).  Míg a hagyományos bit egyetlen bináris értéket hordoz, ami 0 vagy 1 lehet, a qubit állapota egyszerre lehet a 0 és az 1 érték közötti **szuperpozícióban**.  Alapjában véve a qubit úgy képzelhető el, mint egy térbeli irány (más néven vektor).  A qubitek bármilyen lehetséges irányba mutathatnak. A két **klasszikus állapot** az a két irány, amelyek a 0 érték mérésének 100%-os esélyét és az 1 érték mérésének 100%-os esélyét jelentik.  Ennek a megjelenítésnek a formálisabb vizualizációja a [Bloch-gömb](/quantum/concepts/the-qubit?view=qsharp-preview#visualizing-qubits-and-transformations-using-the-bloch-sphere).
+Emlékezzen vissza a [qubit egyszerű definíciójára](xref:microsoft.quantum.overview.what#the-qubit).  Míg a hagyományos bit egyetlen bináris értéket hordoz, ami 0 vagy 1 lehet, a qubit állapota egyszerre lehet a 0 és az 1 érték közötti **szuperpozícióban**.  Alapjában véve a qubit úgy képzelhető el, mint egy térbeli irány (más néven vektor).  A qubitek bármilyen lehetséges irányba mutathatnak. A két **klasszikus állapot** az a két irány, amelyek a 0 érték mérésének 100%-os esélyét és az 1 érték mérésének 100%-os esélyét jelentik.  Ennek a megjelenítésnek a formálisabb vizualizációja a [Bloch-gömb](/quantum/concepts/the-qubit#visualizing-qubits-and-transformations-using-the-bloch-sphere).
 
 
 A mérés ténye egy bináris eredményt ad, és megváltoztatja a qubit állapotát. A mérés egy bináris eredményt ad, amely 0 vagy 1 lehet.  A qubit a szuperpozícióból (amely bármilyen irányú lehet) az egyik klasszikus állapotba kerül.  Ezt követően ugyanannak a mérésnek a megismétlése – ha időközben nem végeztünk el semmilyen más műveletet – ugyanazt a bináris eredményt adja.  
@@ -39,14 +39,14 @@ Több qubit **össze is fonható**. Ha az összefonódott qubitek egyikéről m�
 
 Most már készen állunk annak szemléltetésére, hogy a Q# hogyan fejezi ki ezt a viselkedést.  A lehető legegyszerűbb programmal kezd, és azt építi fel a kvantum-szuperpozíció és a kvantum-összefonódás bemutatásához.
 
-## <a name="setup"></a>Beállítás
+## <a name="setup"></a>Telepítés
 
 A Microsoft Quantum Development Kittel fejlesztett alkalmazások két részből állnak:
 
 1. Egy vagy több kvantumalgoritmusból, amelyek a Q# kvantumprogramozási nyelvvel lettek implementálva.
 1. Egy gazdaprogramból, amely a Pythonhoz vagy C#-hoz hasonló programozási nyelven van implementálva, és amely a fő belépési pontként szolgál, valamint Q#-műveleteket hív meg egy kvantumalgoritmus végrehajtásához.
 
-#### <a name="pythontabtabid-python"></a>[Python](#tab/tabid-python)
+#### <a name="python"></a>[Python](#tab/tabid-python)
 
 1. Válasszon egy helyet az alkalmazásnak
 
@@ -54,7 +54,7 @@ A Microsoft Quantum Development Kittel fejlesztett alkalmazások két részből 
 
 1. Hozzon létre egy `host.py` nevű fájlt. Ez a fájl fogja tartalmazni a Python-gazdakódot.
 
-#### <a name="c-command-linetabtabid-csharp"></a>[C#-parancssor](#tab/tabid-csharp)
+#### <a name="c-command-line"></a>[C#-parancssor](#tab/tabid-csharp)
 
 1. Új Q#-projekt létrehozása:
 
@@ -71,7 +71,7 @@ A Microsoft Quantum Development Kittel fejlesztett alkalmazások két részből 
     mv Operation.qs Bell.qs
     ```
 
-#### <a name="visual-studiotabtabid-vs2019"></a>[Visual Studio](#tab/tabid-vs2019)
+#### <a name="visual-studio"></a>[Visual Studio](#tab/tabid-vs2019)
 
 1. Új projekt létrehozása
 
@@ -177,7 +177,7 @@ A `using` utasítás szintén a Q# nyelvre jellemző. Ezzel foglalhatók le qubi
 
 ## <a name="create-the-host-application-code"></a>A gazdaalkalmazás kódjának létrehozása
 
-#### <a name="pythontabtabid-python"></a>[Python](#tab/tabid-python)
+#### <a name="python"></a>[Python](#tab/tabid-python)
 
 1. Nyissa meg a `host.py` fájlt, és adja hozzá a következő kódot:
 
@@ -195,7 +195,7 @@ A `using` utasítás szintén a Q# nyelvre jellemző. Ezzel foglalhatók le qubi
       print(f'Init:{i: <4} 0s={num_zeros: <4} 1s={num_ones: <4}')
     ```
 
-#### <a name="ctabtabid-csharp"></a>[C#](#tab/tabid-csharp)
+#### <a name="c"></a>[C#](#tab/tabid-csharp)
 
 1. Cserélje le a `Driver.cs` fájl tartalmát a következő kódra:
 
@@ -237,7 +237,7 @@ A `using` utasítás szintén a Q# nyelvre jellemző. Ezzel foglalhatók le qubi
 
 ### <a name="about-the-host-application-code"></a>A gazdaalkalmazás kódjának ismertetése
 
-#### <a name="pythontabtabid-python"></a>[Python](#tab/tabid-python)
+#### <a name="python"></a>[Python](#tab/tabid-python)
 
 A Python-gazdaalkalmazás három részből áll:
 
@@ -245,7 +245,7 @@ A Python-gazdaalkalmazás három részből áll:
 * A kvantumalgoritmus futtatása az importált Q#-művelet `simulate()` metódusának meghívásával.
 * A művelet eredményének feldolgozása. A példában a `res` kapja a művelet eredményét. Itt az eredmény a nullák (`num_zeros`) és egyesek (`num_ones`) szimulátor által mért számának a rekordja. A rekordot két mezőre bontjuk, és kiíratjuk az eredményeket.
 
-#### <a name="ctabtabid-csharp"></a>[C#](#tab/tabid-csharp)
+#### <a name="c"></a>[C#](#tab/tabid-csharp)
 
 A C#-gazdaalkalmazás négy részből áll:
 
@@ -260,7 +260,7 @@ A C#-gazdaalkalmazás négy részből áll:
 
 ## <a name="build-and-run"></a>Buildelés és futtatás
 
-#### <a name="pythontabtabid-python"></a>[Python](#tab/tabid-python)
+#### <a name="python"></a>[Python](#tab/tabid-python)
 
 1. A terminálon futtassa a következő parancsot:
 
@@ -277,7 +277,7 @@ Init:0    0s=1000 1s=0
 Init:1    0s=0    1s=1000
 ```
 
-#### <a name="command-line--visual-studio-codetabtabid-csharp"></a>[Parancssor / Visual Studio Code](#tab/tabid-csharp)
+#### <a name="command-line--visual-studio-code"></a>[Parancssor / Visual Studio Code](#tab/tabid-csharp)
 
 1. A terminálon futtassa a következőt:
 
@@ -299,7 +299,7 @@ Init:One  0s=0    1s=1000
 Press any key to continue...
 ```
 
-#### <a name="visual-studiotabtabid-vs2019"></a>[Visual Studio](#tab/tabid-vs2019)
+#### <a name="visual-studio"></a>[Visual Studio](#tab/tabid-vs2019)
 
 1. Csak nyomja le az `F5` billentyűt, és a program létrejön és fut!
 
@@ -445,7 +445,7 @@ Ha ezt lefuttatjuk, akkor pontosan ugyanazt a fifti-fifti eredményt fogjuk kapn
 
 Az új visszaadott érték (`agree`) minden olyan alkalmat nyomon követ, amikor az első qubit mérési eredménye megegyezik a második kvantumbitével. A gazdaalkalmazást is ennek megfelelően kell frissíteni:
 
-#### <a name="pythontabtabid-python"></a>[Python](#tab/tabid-python)
+#### <a name="python"></a>[Python](#tab/tabid-python)
 
 ```python
 import qsharp
@@ -461,7 +461,7 @@ for i in initials:
     print(f'Init:{i: <4} 0s={num_zeros: <4} 1s={num_ones: <4} agree={agree: <4}')
 ```
 
-#### <a name="ctabtabid-csharp"></a>[C#](#tab/tabid-csharp)
+#### <a name="c"></a>[C#](#tab/tabid-csharp)
 
 ```csharp
             using (var qsim = new QuantumSimulator())
