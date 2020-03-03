@@ -1,16 +1,17 @@
 ---
-title: A Quantum Development Kit kódtárai | Microsoft Docs
+title: Quantum Development Kit-kódtárak
+description: A Microsoft Quantum Development Kitben található standard, kémiai és numerikus kódtárak áttekintése
 author: cgranade
 ms.author: chgranad@microsoft.com
 ms.date: 10/17/2018
 ms.topic: article
 uid: microsoft.quantum.libraries
-ms.openlocfilehash: 7b51945a8aaf937856441cdb10e8a024bf816f88
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.openlocfilehash: 89612aaa5c11e1a5e0d418256e96366953fdd3fe
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: HT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73442427"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906406"
 ---
 # <a name="overview-of-q-libraries"></a>A Q#-kódtárak áttekintése
 A Quantum Development Kit számos olyan kódtárat tartalmaz, melyek megkönnyítik a kvantumalkalmazások Q# nyelven történő fejlesztését.
@@ -20,4 +21,4 @@ A dokumentáció e szakaszában ismertetjük ezeket a kódtárakat és a program
 - [**A kvantumkémiai kódtár**](xref:microsoft.quantum.chemistry.concepts.intro): Ez a szakasz ismerteti a kvantumkémiai kódtárat, amely egy adatmodellt biztosít a fermion Hamilton-operátorok és a kvantumszimulációs műveletek jelölésének, valamint az ezekhez kapcsolódó függvényeknek a betöltéséhez.
 - [**A kvantumnumerikus kódtár**](xref:microsoft.quantum.numerics.intro): Ez a szakasz ismerteti a kvantumnumerikus kódtárat, amely számos matematikai függvény implementációját biztosítja. A kódtár támogatja az egész számos (előjeles és előjel nélküli) és a fixpontos jelöléseket.
 
-A kódtárak forrásanyagai és kódmintái a GitHubon elérhetők. További információért lásd még a [licenceléssel](xref:microsoft.quantum.libraries.licensing) foglalkozó szakaszt. Érdemes megjegyezni, hogy a kódtárakhoz referenciacsomagok („bináris fájlok”) is elérhetők, amelyek újabb módot kínálnak a kódtárak a projektekben való felhasználására. Ezeket a [nuget](https://nuget.org) használatával lehet kényelmesen beszerezni.  
+A kódtárak forrásanyagai és kódmintái a GitHubon elérhetők. További információért lásd még a [licenceléssel](xref:microsoft.quantum.libraries.licensing) foglalkozó szakaszt. Érdemes megjegyezni, hogy a kódtárakhoz referenciacsomagok („bináris fájlok”) is elérhetők, amelyek újabb módot kínálnak a kódtárak a projektekben való felhasználására. Ezeket a [nuget](https://nuget.org) használatával lehet kényelmesen beszerezni.

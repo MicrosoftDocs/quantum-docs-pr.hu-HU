@@ -1,18 +1,18 @@
 ---
-title: Kvantumfejlesztési módszerek | Microsoft Docs
-description: Kvantumfejlesztési módszerek
+title: Kvantumfejlesztési módszerek
+description: Megismerheti a Q#-programfejlesztés alapjait, műveleteket, függvényeket, változókat és qubiteket használhat, és létrehozhat egy egyszerű kvantumprogramot.
 keywords: Ne adjon hozzá kulcsszavakat és ne szerkessze azokat a keresőoptimalizálást végző szakemberrel való egyeztetés nélkül.
 author: QuantumWriter
 ms.author: MSFT-alias-person-or-DL
 ms.date: 9/20/2019
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.techniques.intro
-ms.openlocfilehash: c1263edb75f903702ab3c16cec0443857150b662
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: e5b7fbde18afbc0333d89f70c5e4596848e30f4f
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: HT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76820810"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907715"
 ---
 # <a name="quantum-development-techniques"></a>Kvantumfejlesztési módszerek
 

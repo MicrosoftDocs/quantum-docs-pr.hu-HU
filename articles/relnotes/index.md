@@ -1,17 +1,17 @@
 ---
 title: A Quantum Development Kit előzetes verziójának kibocsátási megjegyzései
-description: A Quantum Development Kit előzetes verziójának kibocsátási megjegyzései
+description: Ismerje meg a Microsoft Quantum Development Kit előzetes verziójának legújabb frissítéseit.
 author: natke
 ms.author: nakersha
 ms.date: 09/30/2019
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: be1eff8127be9fb024a1dc2de3ec82952ac2dc2b
-ms.sourcegitcommit: b7e205aaa7fa1ca9f0daa163e46154945f4bc965
+ms.openlocfilehash: f4bc69e5b14833dea0d61106a9eb368d7d7f5663
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: HT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 02/18/2020
-ms.locfileid: "77441031"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906933"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>A Microsoft Quantum Development Kit kibocsátási megjegyzései
 
@@ -22,18 +22,32 @@ A telepítési utasításokat lásd a [telepítési útmutatóban](xref:microsof
 A frissítésre vonatkozó utasításokat lásd a [frissítési útmutatóban](xref:microsoft.quantum.update).
 
 
+## <a name="version-01020022610"></a>0\.10.2002.2610-es verzió
+
+*Kiadási dátum: 2020. február 27.*
+
+A verzió a következőket tartalmazza:
+
+- Új Kvantum gépi tanulási kódtár – további információért látogasson el a [QML-dokumentációk oldalára](https://docs.microsoft.com/quantum/libraries/machine-learning/?view=qsharp-preview)
+- IQ#-hibajavítások, melyek akár 10–20-szoros teljesítménynövekedést eredményeznek a NuGet-csomagok betöltésekor
+
+A [kódtárak](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [fordítók](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [futtatókörnyezetek](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [minták](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed) és [Katák ](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed) lezárt lekéréses kérelmeinek teljes listáját itt tekintheti meg.  
+
 ## <a name="version-01020012831"></a>0\.10.2001.2831-es verzió
 
 *Kiadási dátum: 2020. január 29.*
 
 A verzió a következőket tartalmazza:
 
-- Új Microsoft.Quantum.SDK NuGet-csomag
+- Új Microsoft.Quantum.SDK NuGet-csomag, amely lecseréli a Microsoft.Quantum. Development.Kit NuGet-csomagot új projektek létrehozásakor. A Microsoft.Quantum.Development.Kit NuGet-csomag továbbra is támogatott a meglévő projektek esetében. 
+- A Q#-fordítóprogram-bővítmények támogatása az új Microsoft.Quantum.SDK NuGet-csomag által – további információért tekintse meg a [GitHubon elérhető dokumentációt](https://github.com/microsoft/qsharp-compiler/tree/master/src/QuantumSdk#extending-the-q-compiler), a [mintafordítóprogram-bővítményeket](https://github.com/microsoft/qsharp-compiler/tree/master/examples/CompilerExtensions) és a [Q# fejlesztői blogját](https://devblogs.microsoft.com/qsharp/extending-the-q-compiler/)
 - Mostantól támogatott a .NET Core 3.1 – erősen ajánlott a 3.1.100-s verzió telepítése, mert a korábbi .NET Core SDK-verziókkal való fejlesztés hibákat eredményezhet.
 - A Microsoft.Quantum.QsCompiler.Experimental alatt új fordítóprogram-transzformációk érhetők el
 - Új funkciók a kimeneti állapotú vektorok megjelenítéséhez az IQ#-ban HTML formátumban
 - Mostantól támogatott az EstimateFrequencyA a Microsoft.Quantum.Characterization névtérben a Hadamard-művelet és a SWAP tesztek esetében
 - Az AmplitudeAmplification névtér mostantól Q#-stílusútmutatót használ
+
+A [kódtárak](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [fordítók](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [futtatókörnyezetek](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [minták](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed) és [Katák ](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed) lezárt lekéréses kérelmeinek teljes listáját itt tekintheti meg.  
 
 ## <a name="version-01019120501"></a>0\.10.1912.0501-es verzió
 
