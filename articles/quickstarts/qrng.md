@@ -6,12 +6,12 @@ ms.author: megbrow@microsoft.com
 ms.date: 10/25/2019
 ms.topic: article
 uid: microsoft.quantum.quickstarts.qrng
-ms.openlocfilehash: d1ad2c1153814e2fa19a38307b2c668c77eae4e3
-ms.sourcegitcommit: b7e205aaa7fa1ca9f0daa163e46154945f4bc965
+ms.openlocfilehash: b9c8592b1296a7de1b9ad5d0538ad1972ec25e31
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: HT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 02/18/2020
-ms.locfileid: "77441076"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906984"
 ---
 # <a name="quickstart-implement-a-quantum-random-number-generator-in-q"></a>Gyorsútmutató: Kvantum-véletlenszámgenerátor implementálása a Q#-ban
 A Q#-ban írt kvantumalgoritmusok egyik egyszerű példája egy kvantum-véletlenszámgenerátor. Ez az algoritmus a kvantummechanika természetét használja ki egy véletlen szám előállításához. 
@@ -44,17 +44,18 @@ A `Qubit` lefoglalásának feloldásakor kifejezetten vissza kell állítani a `
 
 A Bloch-gömbön az északi pólus a **0** klasszikus értéket jelöli, a déli pólus pedig az **1** klasszikus értéket. Minden szuperpozíció megadható a gömb egyik pontjaként (ezt a nyíl jelzi). Minél közelebb van a nyíl hegye a pólushoz, annál nagyobb a valószínűsége, hogy a qubit a mérésekor a pólushoz hozzárendelt klasszikus értékkel esik egybe. Az alábbi ábrán például a piros nyíllal jelölt qubitállapot esetében nagyobb a valószínűsége a **0** értéknek, ha megmérjük.
 
-<img src="~/media/qrng-Bloch.png" width="175">
+<img src="~/media/qrng-Bloch.png" width="175" alt="A qubit state with a high probability of measuring zero">
 
 Ennek az ábrának a segítségével vizualizálhatjuk a kód működését:
 
 * Először is egy **0** állapotban inicializált qubittel kezdünk, és a `H` alkalmazásával létrehozunk egy szuperpozíciót, amelyben a **0** és az **1** valószínűsége egyenlő.
 
-<img src="~/media/qrng-H.png" width="450">
+<img src="~/media/qrng-H.png" width="450" alt="Preparing a qubit in superposition">
+
 
 * Ezután megmérjük a qubitet, és mentjük a kimenetet:
 
-<img src="~/media/qrng-meas.png" width="450">
+<img src="~/media/qrng-meas.png" width="450" alt="Measuring a qubit and saving the output">
 
 A mérés eredménye teljesen véletlen, tehát egy véletlen bitből kaptuk meg. Ezt a műveletet többször is meghívhatjuk egész számok létrehozásához. Ha például háromszor hívjuk meg a műveletet, hogy három véletlen bitet kapjunk, véletlen hárombites számokat hozhatunk létre (tehát egy 0 és 7 közötti véletlen számot).
 
