@@ -6,27 +6,27 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.code
-ms.openlocfilehash: 1882e640dacf3987745ed225fef18636726f70a8
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: edc52dc4434e91258bece28812fd76b66329c6f9
+ms.sourcegitcommit: d61b388651351e5abd4bfe7a672e88b84a6697f8
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77907477"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79022457"
 ---
-# <a name="contributing-code"></a>Hozzájárulás a kódhoz #
+# <a name="contributing-code"></a>Hozzájárulás a kódhoz
 
 A hibák jelentése és a dokumentáció fejlesztése mellett a kód a Quantum Development Kit-hez való hozzájárulása is nagyon közvetlen módja lehet a vállalatoknak a kvantum-programozási Közösségben.
 A kód hozzájárulásával segíthet a problémák megoldásában, új példák megadásában, a meglévő kódtárak használatának megkönnyítésében, vagy akár teljesen új funkciók hozzáadásában is.
 
 Ebben az útmutatóban részletesen ismertetjük, hogy mi a teendő, ha áttekintjük a lekéréses kérelmeket, hogy a lehető legjobb segítséget nyújtson.
 
-## <a name="what-we-look-for"></a>Mit keresünk ##
+## <a name="what-we-look-for"></a>Mit keresünk
 
 Az ideális kód hozzájárulása a Quantum Development Kit-adattár meglévő munkája alapján javítja ki a problémákat, kibővítheti a meglévő funkciókat, vagy hozzáadhat új szolgáltatásokat, amelyek egy adattár hatókörén belül találhatók.
 Ha elfogadjuk a kód bevonását, az a Quantum Development Kit részévé válik, így az új funkciók ugyanúgy lesznek felszabadítva, karbantartva és kifejlesztve, mint a Quantum Development Kit többi része.
 Így hasznos lehet, ha a hozzájárulás által hozzáadott funkciók jól teszteltek és dokumentálva vannak.
 
-### <a name="unit-tests"></a>Egység tesztek ###
+### <a name="unit-tests"></a>Egység tesztek
 
 A Q # functions, Operations és felhasználó által definiált típusokat, amelyek a tárakat (például a canonot) a fejlesztés részeként automatikusan tesztelik a [**Microsoft/QuantumLibraries**](https://github.com/Microsoft/QuantumLibraries/) adattárban.
 Új lekéréses kérelem megnyitásakor – például az Azure- [folyamatok](https://azure.microsoft.com/services/devops/pipelines/) konfigurációjában – a lekéréses kérelem módosításai nem bontják le azokat a meglévő funkciókat, amelyekre a Quantum programozási Közösség függ.
@@ -56,7 +56,7 @@ function PairTest () : Unit {
 Összetettebb feltételek ellenőrizhetők a szabványos könyvtárak útmutatójának [tesztelés szakaszában](xref:microsoft.quantum.libraries.diagnostics) található módszerek használatával.
 A következő teszt például azt ellenőrzi, hogy a `H(q); X(q); H(q);`, ahogyan az <xref:microsoft.quantum.canon.applywith> meghívja a `Z(q)`.
 
-```qsharp
+```Q#
 @Test("QuantumSimulator")
 operation TestApplyWith() : Unit {
     let actual = ApplyWith(H, X, _);
@@ -79,7 +79,8 @@ A helyszíni tesztek a Visual Studio test Explorer vagy a `dotnet test` paranccs
 
 ### Citations and References ### -->
 
-## <a name="when-well-reject-a-pull-request"></a>Ha elutasítja a lekéréses kérelmet ##
+
+## <a name="when-well-reject-a-pull-request"></a>Ha elutasítja a lekéréses kérelmet
 
 Időnként elutasítja a hozzájárulás lekérését.
 Ha ez történik, ez nem jelenti azt, hogy rossz, mert számos oka lehet annak, hogy nem tudjuk elfogadni az adott hozzájárulást.
@@ -98,10 +99,15 @@ Végül a [Microsoft nyílt forráskódjának viselkedési szabályzatában](htt
 Szeretnénk biztosítani, hogy a hozzájárulások a teljes kvantum-számítástechnikai Közösséget, a jelenlegi csodálatos sokféleségben és a jövőben is kiszolgálják, ahogy az egyre nagyobb mértékben növekszik.
 Nagyra értékeljük segítségét ennek a célnak a megvalósításában.
 
-## <a name="next-steps"></a>Következő lépések ##
+## <a name="next-steps"></a>Következő lépések
 
 Köszönjük, hogy a Quantum Development Kit nagyszerű erőforrást biztosít a teljes kvantum-programozási Közösség számára!
 További információért folytassa a következő útmutatóval a Q # Style-on.
 
 > [!div class="nextstepaction"]
 > [A Q # Style irányelvek ismertetése](xref:microsoft.quantum.contributing.style)
+
+Attól függően, hogy milyen kóddal járul hozzá, lehet, hogy további szempontokat is figyelembe kell vennie, amelyek segítségével a lehető legtöbb jót teheti a Közösségnek.
+
+> [!div class="nextstepaction"]
+> [További tudnivalók a közreműködő mintákról](xref:microsoft.quantum.contributing.samples)

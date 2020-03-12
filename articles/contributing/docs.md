@@ -6,14 +6,14 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.docs
-ms.openlocfilehash: d244a7841b4093031d6225230a6cbefb22cc6a39
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: ed5ab5df9de5d71ccd922cd430cf15779806dd6a
+ms.sourcegitcommit: d61b388651351e5abd4bfe7a672e88b84a6697f8
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77904893"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79022630"
 ---
-# <a name="improving-documentation"></a>A dokumentáció fejlesztése #
+# <a name="improving-documentation"></a>A dokumentáció fejlesztése
 
 A Quantum Development Kit dokumentációja számos különböző formát vesz igénybe, így az információk könnyen elérhetők a kvantum-fejlesztők számára.
 
@@ -28,7 +28,7 @@ Hasonlóképpen fogadjuk el a [MathJax](https://www.mathjax.org/) -függvénytá
 - Az **API-hivatkozás** az egyes Q # függvényekhez, műveletekhez és felhasználó által definiált típusokhoz tartozó lapok összessége, https://docs.microsoft.com/qsharp/api/közzétéve. Ezek az oldalak dokumentálják az összes meghívható bemenetet és műveletet, valamint példákat és további információkra mutató hivatkozásokat. Az API-referenciát a rendszer automatikusan Kinyeri a kis DFM-dokumentumokból a Q # forráskódban az egyes verziók részeként.
 - Az egyes mintákhoz és Kata-hoz tartozó **README<!---->. MD** fájlok azt írják le, hogyan használható a minta vagy a Kata, mit takar, és hogyan kapcsolódik a többihez a Quantum Development Kit-hez. Ezek a fájlok a GitHub-stílusú [Markdown (GFM)](https://github.github.com/gfm/)használatával íródnak, amely egy egyszerűbb alternatíva a DFM, amely a dokumentáció közvetlen csatolásához használható a kódokhoz.
 
-## <a name="contributing-to-the-conceptual-documentation"></a>A fogalmi dokumentációhoz való hozzájárulás ##
+## <a name="contributing-to-the-conceptual-documentation"></a>A fogalmi dokumentációhoz való hozzájárulás
 
 A koncepcionális vagy a README dokumentációjának fejlesztéséhez, majd egy lekéréses kérelemmel kezdődik a [**MicrosoftDocs/Quantum-docs-PR**](https://github.com/MicrosoftDocs/quantum-docs-pr/
 ), a [**Microsoft/Quantum**](https://github.com/Microsoft/Quantum)vagy a [**Microsoft/QuantumKatas**](https://github.com/Microsoft/QuantumKatas), a megfelelő módon.
@@ -41,7 +41,18 @@ Részletesebben ismertetjük a lekéréses kérelmeket, de most van néhány dol
 - A kvantum-programozási Közösség számos tagja tudományos kutató, és elsősorban a Közösséghez való hozzájárulásuk alapján ismerik fel őket. Amellett, hogy az olvasóknak további anyagokat is találnak, érdemes megadnia, hogy az oktatási segédanyagok, például a dokumentumok, a megbeszélések, a blogbejegyzések és a szoftveres eszközök megfelelően adják meg az oktatási közreműködőket, hogy a lehető legjobb munkát használják a Közösség fejlesztéséhez.
 - A Quantum programozási Közösség egy széles körű és csodálatosan sokszínű Közösség. A harmadik féltől származó példákban (például: "Ha egy felhasználó...,...") a nem a Belefoglalás helyett a nemek közötti különbségeket is használhatja. Ha a személyek neve szerepel az idézetek és a hivatkozások között, és a nem ASCII-karakterek megfelelő bevonása a Közösség sokféleségét szolgálja ki a tagjainak tiszteletben tartásával. Hasonlóképpen, az angol nyelv számos szavát gyakran gyűlölködő módon használják, például hogy a technikai dokumentációban való használatuk az egyes olvasóknak és a Közösségnek is kárt okozhat.
 
-## <a name="contributing-to-the-api-references"></a>Hozzájárulás az API-hivatkozásokhoz ##
+### <a name="referencing-sample-code-from-conceptual-articles"></a>Mintául szolgáló kód hivatkozása a koncepcionális cikkekből
+
+Ha a [Samples adattárból](https://github.com/Microsoft/Quantum)szeretne kódot foglalni, ezt egy speciális, DocFX-stílusú Markdown paranccsal teheti meg:
+
+```markdown
+:::code language="qsharp" source="~/quantum/samples/algorithms/chsh-game/Game.qs" range="4-8":::
+```
+
+Ez a parancs a [`chsh-game` mintából a`Game.qs` fájl](https://github.com/microsoft/Quantum/blob/master/samples/algorithms/chsh-game/Game.qs)4 – 8. sorát importálja, megjelölve őket Q # kódként a szintaxis kiemelésének céljára.
+Ezzel a paranccsal elkerülhető a kód duplikálása a koncepcionális cikkek és a minták tárháza között, így a dokumentációban található mintakód mindig a lehető legnaprakészebb.
+
+## <a name="contributing-to-the-api-references"></a>Hozzájárulás az API-hivatkozásokhoz
 
 Az API-referenciák fejlesztésének elősegítése érdekében célszerű a lekéréses kérelmeket közvetlenül a dokumentált kódban megnyitni.
 Minden függvény, művelet vagy felhasználó által definiált típus támogatja a dokumentációs megjegyzést (`///` `//`helyett).
@@ -123,6 +134,7 @@ A `ControlledOnBitString`például a következőhöz hasonló módon írhat:
      return ControlledOnBitStringImpl(bits, oracle, _, _);
  }
 ```
+
 A fenti kód renderelt verzióját a [`ControlledOnBitString` függvény API-dokumentációjában](xref:microsoft.quantum.canon.controlledonbitstring)tekintheti meg.
 
 A dokumentáció írásának általános gyakorlata mellett az API-dokumentációs megjegyzések írásakor a következő szempontokat is segít megőrizni:

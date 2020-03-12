@@ -5,16 +5,16 @@ author: cgranade
 ms.author: chgranad@microsoft.com
 ms.date: 10/23/2018
 uid: microsoft.quantum.chemistry.examples.endtoend
-ms.openlocfilehash: 545ade99859f2a9939477fb18604921f70a5d9aa
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: 7605676e05ee352e47791657eeaafceef5dbb493
+ms.sourcegitcommit: d61b388651351e5abd4bfe7a672e88b84a6697f8
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77906508"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79022495"
 ---
 # <a name="end-to-end-with-nwchem"></a>Végponttól végpontig az NWChem-mel #
 
-Ezen az oldalon egy példát láthatunk a kvantum-kémia szimulációjának lekérésére, amely egy [NWChem](http://www.nwchem-sw.org/index.php/Main_Page) bemeneti pakliból indul.
+Ebből a cikkből megtudhatja, hogyan számítja ki a Quantum kémia szimulációját a [NWChem](http://www.nwchem-sw.org/index.php/Main_Page) bemeneti paklitól kezdődően.
 Mielőtt folytatná a példát, ellenőrizze, hogy telepítette-e a Docker-t a [telepítési és érvényesítési útmutatót](xref:microsoft.quantum.chemistry.concepts.installation)követve.
 
 További információk:
@@ -62,7 +62,7 @@ Get-Command -Module InvokeNWChem
 ```
 
 Ezután importáljuk a **GetGateCount** mintával megadott `Get-GateCount` parancsot.
-A részletekért tekintse meg a [minta utasításait](https://github.com/Microsoft/Quantum/tree/master/Chemistry/GetGateCount).
+A részletekért tekintse meg a [minta utasításait](https://github.com/Microsoft/Quantum/tree/master/samples/chemistry/GetGateCount).
 Ezután futtassa a következőt, a `<runtime>` az operációs rendszertől függően `win10-x64`, `osx-x64`vagy `linux-x64`.
 
 ```powershell
@@ -112,7 +112,7 @@ set tce:qelb  9
 
 ## <a name="producing-and-consuming-broombridge-output-from-nwchem"></a>Broombridge-kimenet létrehozása és elkészítése a NWChem-ből ##
 
-Most már mindent meg kell Broombridge-dokumentumok létrehozásához és felhasználásához.
+Most már mindent megtalál, amire szüksége lehet a Broombridge-dokumentumok létrehozásához és felhasználásához.
 A NWChem futtatásához és a `h4_sto6g_0.000.nw` bemeneti paklihoz tartozó Broombridge-dokumentum létrehozásához futtassa a `Convert-NWChemToBroombridge`:
 
 > [!NOTE]
@@ -164,7 +164,7 @@ Itt számos dolgot tehet:
 - Különböző előre definiált bemeneti paklikat próbálhat ki, például a `h4_sto6g_alpha.nw``alpha` paraméterének megváltoztatásával 
 - A NWChem-paklik közvetlen szerkesztésével próbálja meg módosítani a paklikat, például `STO-nG` modelleket a n, különböző 
 - Próbáljon ki más előre definiált NWChem bemeneti paklikat, amelyek elérhetők a következő helyen: `nwchem/qa/chem_library_tests`,
-- Próbálja ki a NWChem-ból generált, előre definiált Broombridge YAML-teljesítménymutatókat, amelyek a [Microsoft/Quantum adattár](https://github.com/Microsoft/Quantum/tree/master/Chemistry/IntegralData/YAML)részeként érhetők el. Ezek a referenciaértékek a következők: 
+- Próbálja ki a NWChem-ból generált, előre definiált Broombridge YAML-teljesítménymutatókat, amelyek a [Microsoft/Quantum adattár](https://github.com/Microsoft/Quantum/tree/master/samples/chemistry/IntegralData/YAML)részeként érhetők el. Ezek a referenciaértékek a következők: 
     - kis molekulák, például molekuláris hidrogén (H2), berillium (be), lítium-hidrid (LiH),
     - nagyobb molekulák, mint például az ózon (O3), a béta-karotin, a citozin és sok más. 
 - Próbálja ki a grafikus előtér- [EMSL nyilait](https://arrows.emsl.pnnl.gov/api/qsharp_chem) , amelyek egy felületet biztosítanak a Microsoft Quantum Development Kithoz. 

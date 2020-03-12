@@ -6,12 +6,12 @@ uid: microsoft.quantum.concepts.circuits
 ms.author: nawiebe@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 8ba4648f1837065d15957a01ab4ca8dd2d490a42
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: 80d9df00159090768ea442e519c34043a99b050c
+ms.sourcegitcommit: d61b388651351e5abd4bfe7a672e88b84a6697f8
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77905148"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79022752"
 ---
 # <a name="quantum-circuits"></a>Kvantum-áramkörök
 Vegyünk egy pillanatra az egységes átalakítás $ \text{CNEM} _{01}(H\otimes 1) $ értéket.
@@ -24,7 +24,7 @@ A maximálisan kusza kvantum-állapot előkészítésének áramköri diagramja 
 
 <!--- ![](.\media\1.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-![áramköri diagram egy maximálisan kusza qubit állapothoz](~/media/Concepts1.png)
+![áramköri diagram egy maximálisan kusza qubit állapothoz](~/media/1.svg)
 
 ## <a name="quantum-circuit-diagram-conventions"></a>A Quantum Circuit diagram konvenciói
 A kvantum-műveletek vizuális nyelve könnyebben emészthető, mint a kvantum-kör kifejezésére vonatkozó konvenciók megismerése.
@@ -37,7 +37,7 @@ Például a szimbólum
 
 <!--- ![](.\media\2.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-![szimbólum egy qubit-regiszterben működő Hadamard-művelethez](~/media/concepts_2.png)
+![szimbólum egy qubit-regiszterben működő Hadamard-művelethez](~/media/2.svg)
 
 egy qubit-regisztráción alapuló [Hadamard](xref:microsoft.quantum.intrinsic.h) művelet.
 
@@ -47,7 +47,7 @@ Azaz
 
 <!--- ![](.\media\3.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-a Quantum Gates ![diagramja balról jobbra](~/media/concepts_3.png)
+a Quantum Gates ![diagramja balról jobbra](~/media/3.svg)
 
 az egységes mátrix $CBA $.
 A mátrix szorzása engedelmeskedik a szemközti konvenciónak: a jobb oldali mátrix először van alkalmazva. A Quantum Circuit-diagramoknál azonban először a bal szélső kaput alkalmazza a rendszer.
@@ -65,7 +65,7 @@ Példaként meghatározhatunk egy kétqubites, egységes műveletet $B $-t a $ (
 
 <!--- ![](.\media\4.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-két qubit-alapú, egységes művelet ![i áramköri diagramja](~/media/concepts_4.png)
+két qubit-alapú, egységes művelet ![i áramköri diagramja](~/media/4.svg)
 
 $B $-t úgy is megtekintheti, mintha egy qubit-regisztráción alapuló művelettel rendelkezik, és nem 2 1-qubit regisztrálja az áramkört használó környezettől függően. Az absztrakt áramköri diagramok leghasznosabb tulajdonsága az, hogy lehetővé teszik, hogy a bonyolult kvantum-algoritmusokat magas szinten írják le anélkül, hogy le kellene őket állítani az alapvető kapuk számára.
 Ez azt jelenti, hogy a nagyméretű kvantum-algoritmusok adatforgalmával kapcsolatban nem kell megismernie az algoritmus működésével kapcsolatos összes alrutin részleteit.
@@ -78,14 +78,14 @@ Ez azt jelenti, hogy az ellenőrzött kapu $G $ értéket alkalmaz a $ \psi $-t 
 
 <!--- ![](.\media\5.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-![áramköri diagram egy megfelelően vezérelt kapu](~/media/concepts_5.png)
+![áramköri diagram egy megfelelően vezérelt kapu](~/media/5.svg)
 
 Itt a fekete kör azt a kvantum-bitet jelöli, amelyen a kapu vezérelhető, és a vertikális huzal azt jelöli, hogy a vezérlő qubit a $1 $ értéket veszi figyelembe.
 Azon speciális esetekben, ahol $G = X $ és $G = Z $ bevezetjük a következő jelölést a kapuk ellenőrzött verziójának leírásához (vegye figyelembe, hogy a vezérelt X Gate a [$CNOT $ Gate](xref:microsoft.quantum.intrinsic.cnot)):
 
 <!--- ![](.\media\6.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-![áramköri diagram az ellenőrzött kapuk különleges eseteihez](~/media/concepts_6.png)
+![áramköri diagram az ellenőrzött kapuk különleges eseteihez](~/media/6.svg)
 
 A Q # olyan metódusokat biztosít, amelyek automatikusan előállítják egy művelet ellenőrzött verzióját, amely elmenti a programozótól, hogy ezeket a műveleteket manuálisan kell megadnia. Alább látható egy példa:
 
@@ -104,7 +104,7 @@ Az ilyen alhálózatok például a következőkre hasonlítanak:
 
 <!--- ![](.\media\7.svg) ---->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-mérési műveletet jelölő ![szimbólum](~/media/concepts_7.png)
+mérési műveletet jelölő ![szimbólum](~/media/7.svg)
 
 A Q # erre a célra alkalmazza a [mérték kezelőjét](xref:microsoft.quantum.intrinsic.measure) .
 További információt a [mérések című szakaszban](xref:microsoft.quantum.libraries.standard.prelude#measurements) talál.
@@ -113,7 +113,7 @@ Hasonlóképpen, az aláramkör
 
 <!--- ![](.\media\8.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-ellenőrzött műveletet jelképező ![áramköri diagram](~/media/concepts_8.png)
+ellenőrzött műveletet jelképező ![áramköri diagram](~/media/8.svg)
 
 egy klasszikusan vezérelt kaput biztosít, ahol a $G $ a klasszikus vezérlési bit értéke $1 $.
 
@@ -125,4 +125,4 @@ Erre azért van szükség, hogy a protokoll a Quantum Mechanics törvényeinek m
 A kvantum-teleportáció áramkört az alábbi szakasz ismerteti. az áramkör megjegyzésekkel ellátott verzióját is megadja, hogy bemutassa a kvantum-áramkör beolvasásának módját.
 
 <!--- ![](.\media\tp2.svg){ width=50% } --->
-![kvantum-teleportáció áramkör](~/media/concepts_tp2.png)
+![kvantum-teleportáció áramkör](~/media/tp2.svg)
