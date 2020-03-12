@@ -1,9 +1,14 @@
 - name: API-referencia
   items:
+    - name: API-referencia
+      href: index.md
     - name: 'Q#-kódtárak'
+      topicHref: qsharp/index.md
       href: qsharp/toc.yml
     - name: .NET-kódtárak
       items:
+        - name: .NET-kódtárak
+          href: dot-net-libraries.md
         - name: Nyomkövetési szimulátor
           href: 'https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators'
         - name: Kvantumkémia
