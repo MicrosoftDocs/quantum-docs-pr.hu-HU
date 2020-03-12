@@ -6,14 +6,14 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing
-ms.openlocfilehash: 63c6f90a511c7bd14435b2e593af0d8615c18519
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: cf913a09395f0694a51645ec8f91171e5b1555c3
+ms.sourcegitcommit: d61b388651351e5abd4bfe7a672e88b84a6697f8
 ms.translationtype: HT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77904876"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79022476"
 ---
-# <a name="contributing-to-the-quantum-development-kit"></a>Hozzájárulás a Quantum Development Kithez #
+# <a name="contributing-to-the-quantum-development-kit"></a>Hozzájárulás a Quantum Development Kithez
 
 A Quantum Development Kit több, mint a kvantumprogramok írásához szükséges eszközök gyűjteménye.
 Egy nagy közösséghez tartozik, ahol az emberek felfedezhetik a kvantum-számítástechnikát, kutatást végezhetnek a kvantum-algoritmusokkal, új alkalmazásokat fejleszthetnek a kvantumeszközökre, és egyéb módokon használhatják ki a kvantumprogramozásban rejlő lehetőségeket.
@@ -23,7 +23,7 @@ Nagyon hálásak vagyunk az Önök közreműködéséért, és azért is, hogy e
 
 Ebben az útmutatóban néhány tanácsot adunk arról, hogy miként teheti hozzájárulását a lehető leghasznosabbá a szélesebb értelemben vett kvantumprogramozási közösség számára.
 
-## <a name="building-community"></a>A közösség kiépítése ##
+## <a name="building-community"></a>A közösség kiépítése
 
 A közreműködés kapcsán mindig észben kell tartani, hogy milyen közösségről is van szó.
 Azáltal, hogy tiszteletteljesen és professzionálisan kezeli a kvantumprogramozási közösség és a szélesebb értelemben vett közösség többi tagját, segít abban, hogy a lehető legjobb és legbarátságosabb közösséget teremtsük meg.
@@ -31,7 +31,7 @@ Azáltal, hogy tiszteletteljesen és professzionálisan kezeli a kvantumprogramo
 Ennek elősegítése érdekében minden Quantum Development Kit-projekt a [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/) hatálya alá esik.
 További információért tekintse át a [viselkedési szabályzat GYIK dokumentumát](https://opensource.microsoft.com/codeofconduct/faq/), illetve további kérdések vagy megjegyzések esetén írjon az [opencode@microsoft.com](mailto:opencode@microsoft.com) e-mail-címre.
 
-## <a name="what-kinds-of-contributions-help-the-community"></a>Milyen típusú hozzájárulások hasznosak a közösség számára? ##
+## <a name="what-kinds-of-contributions-help-the-community"></a>Milyen típusú hozzájárulások hasznosak a közösség számára?
 
 Számos különböző módon lehet a kvantumprogramozási közösség segítségére a hozzájárulásai révén.
 Ebben az útmutatóban három olyan módszert mutatunk be, amelyek különösen hasznosak a Quantum Development Kit kapcsán.
@@ -45,7 +45,7 @@ Ez azonban egyáltalán nem egy kimerítő lista – ezért arra biztatjuk, hogy
 Ezek a különböző típusú hozzájárulások rendkívül értékesek, és nagyon hálásak vagyunk értük.
 Az útmutató további részében a különböző típusú hozzájárulási módokhoz adunk javaslatokat.
 
-## <a name="where-do-contributions-go"></a>Hova kerülnek a hozzájárulások? ##
+## <a name="where-do-contributions-go"></a>Hova kerülnek a hozzájárulások?
 
 A Quantum Development Kit számos különböző részből áll, amelyek együtt hozzák létre a kvantumprogramok írását elősegítő platformot.
 Ezek a különböző részek mindegyike különböző adattárakba tartozik, így rögtön az elején érdemes tisztázni, hogy az adott hozzájárulás hova való leginkább.
@@ -66,7 +66,7 @@ Vannak még további speciálisabb adattárak, amelyek a Quantum Development Kit
 - [**msr-quarc/qsharp.sty**](https://github.com/msr-quarc/qsharp.sty): LaTeX formázási támogatás a Q#-szintaxishoz.
 - [**msr-quarc/intern-workshop-2019**](https://github.com/msr-quarc/intern-workshop-2019): IQ#-jegyzetfüzet a 2019-es gyakornoki műhely keretében bemutatott Deutsch–Jozsa-oktatóanyaghoz.
 
-## <a name="next-steps"></a>További lépések ##
+## <a name="next-steps"></a>További lépések
 
 Köszönjük, hogy a Quantum Development Kit közösségének tagja! izgatottan várjuk a közreműködését!
 Amennyiben többet szeretne megtudni a hozzájárulásokról, olvassa el a következő útmutatók egyikét.
