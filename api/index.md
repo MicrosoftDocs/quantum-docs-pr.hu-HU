@@ -6,20 +6,19 @@ author: natke
 ms.author: nakersha
 ms.date: 09/04/2019
 ms.topic: landing-page
-ms.openlocfilehash: 25a53e1cb8577761ef89cdcf2cfcddc509093f86
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 5975b0caf0fc73ad18fbd8a1e7c82a2333161da2
+ms.sourcegitcommit: d61b388651351e5abd4bfe7a672e88b84a6697f8
 ms.translationtype: HT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73056969"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79022515"
 ---
-# <a name="q-standard-libraries"></a>Szabványos Q#-kódtárak #
+# <a name="q-api-reference"></a>Q# – API-referencia #
 
-A Q#-t számos olyan hasznos művelet, függvény és felhasználó által definiált típus támogatja, amelyek együttesen a Q# *szabványos kódtárát* alkotják.
-A szabványos Q#-kódtár két fő részre oszlik:
+Ez az API-referencia magában foglalja a szabványos Q#-kódtárat, valamint az arra épülő három további kódtárat – a kémiai, numerikus és gépi tanulási kódtárat. A Q#-hoz .NET- és Python-kódtárak érhetőek el.
 
-- **A bevezetés**: a célszámítógép és a fordító részeként meghatározott műveletek és függvények, jellemzően a klasszikus natív .NET-kódban.
-  Általánosságban elmondható, hogy a különböző célszámítógépek a bevezetés különböző implementációit alkalmazzák az egyes rendszereknek megfelelően.
-- **A kánon**: a Q#-ban definiált műveletek és függvények, amelyek a bevezetésben meghatározott logikára épülnek.
-  A kánon implementálása a célszámítógépektől függetlenül mindig ugyanúgy zajlik.
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+- [Q#-kódtárak](xref:microsoft.quantum.qsharplibintro)
+- [.NET-kódtárak](xref:microsoft.quantum.dotnetlibsintro)
+- [Python-kódtárak](https://docs.microsoft.com/python/qsharp)
+
+Tovább információk a Q#-kódtárakról: <xref:microsoft.quantum.libraries>.
