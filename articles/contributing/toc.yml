@@ -6,5 +6,9 @@
   href: pull-requests.md
 - name: Hozzájárulás a kódhoz
   href: code.md
+- name: Hozzájárulás a példákhoz
+  href: samples.md
 - name: Stílusútmutató
   href: style-guide.md
+- name: API-tervezési alapelvek
+  href: api-design-principles.md
