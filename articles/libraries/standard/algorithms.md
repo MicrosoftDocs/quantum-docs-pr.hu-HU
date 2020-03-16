@@ -6,12 +6,12 @@ ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.libraries.standard.algorithms
-ms.openlocfilehash: aaa9ddf47e5ea35e7e57b9828db082889d0e6adf
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: 8b8a9019e8bc419f42b0c6f7558354d19a157917
+ms.sourcegitcommit: d61b388651351e5abd4bfe7a672e88b84a6697f8
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77907239"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79402850"
 ---
 # <a name="quantum-algorithms"></a>Quantum algoritmusok #
 
@@ -77,9 +77,9 @@ $ $ Ha definiáljuk a $ $ \ket{\phi\_k (a)} = \frac{1}{\sqrt{2}} \left (\ket{0} 
 $ $ A kiegészítés végrehajtásának elérési útja akkor válik világossá, miután megfigyelte, hogy a bemenetek összege $ $ \ket{a + b} = \operatorname{QFT} ^{-1}\ket{\phi\_1 (a + b)} \otimes \cdots \otimes \ket{\phi\_n (a + b)}.
 $ $ A $b $ és a $a $ közötti egész szám, amely a dekompozíció egyes qubits a $b $ as vezérlőkkel rendelkező bitek használatával felügyelt fázisú rotációs műveleteket végez.
 
-Ez a bővítés tovább egyszerűsíthető azáltal, hogy bármely Integer $j $ és valós szám $x $, $e ^ {i2\pi (x + j)} = e ^ {i2\pi x} $.  Ennek az az oka, hogy ha egy körben elforgat $360 ^ {\circ} $ fok ($ 2 \ PI $ radián) értéket, akkor a végén pontosan megkezdheti a kezdeti lépéseket.  A ($e ^ {i2\pi x} $ $x $ értékének egyetlen fontos része, ezért $x $ töredékes részét képezi.  Pontosabban, ha az űrlap bináris bővítése $x = y +0. x\_0x\_2 \ ldots x\_n $, $e ^ {i2\pi x} = e ^ {i2\pi (0. x\_0x\_2 \ ldots x\_{n-1})} $ és így $ $ \ket{\phi\_k (a + b)} = \frac{1}{\sqrt{2}} \left (\ket{0} + e ^ {i2\pi [a/2 ^ k +0. b\_k\ldots b\_1]} \ket{1} \right). $ $ Ez azt jelenti, hogy ha elvégezjük a hozzáadást a következő lépésekkel: a $ \ket{a} $ Fourier-transzformáció kibővítésének tenser-tényezői, ha a Forgások száma $k $ értékkel csökken.  Ez jelentősen csökkenti a kiegészítésben szükséges kvantum-kapuk számát.  A Fourier-transzformációt, a fázisok hozzáadását és az inverz Fourier-transzformáció lépéseit jelöljük, amelyek a \operatorname{QFT} ^{-1} \left (\phi\\\!\operatorname{ADD}\right) \operatorname{QFT} $. Alább látható egy olyan kvantum-áramkör, amely ezt az egyszerűsítést használja a teljes folyamat megvalósításához.
+Ez a bővítés tovább egyszerűsíthető azáltal, hogy bármely Integer $j $ és valós szám $x $, $e ^ {i2\pi (x + j)} = e ^ {i2\pi x} $.  Ennek az az oka, hogy ha egy körben elforgat $360 ^ {\circ} $ fok ($ 2 \ PI $ radián) értéket, akkor a végén pontosan megkezdheti a kezdeti lépéseket.  A ($e ^ {i2\pi x} $ $x $ értékének egyetlen fontos része, ezért $x $ töredékes részét képezi.  Pontosabban, ha az űrlap bináris bővítése $x = y +0. x\_0x\_2 \ ldots x\_n $, $e ^ {i2\pi x} = e ^ {i2\pi (0. x\_0x\_2 \ ldots x\_{n-1})} $ és így $ $ \ket{\phi\_k (a + b)} = \frac{1}{\sqrt{2}} \left (\ket{0} + e ^ {i2\pi [a/2 ^ k +0. b\_k\ldots b\_1]} \ket{1} \right). $ $ Ez azt jelenti, hogy ha elvégezjük a hozzáadást úgy, hogy növeli a több tízezer tényezőt a $ \ket{a} $ Fourier-átalakításának növekedésével, akkor a a Forgások száma $k $ értékkel csökken.  Ez jelentősen csökkenti a kiegészítésben szükséges kvantum-kapuk számát.  A Fourier-transzformációt, a fázisok hozzáadását és az inverz Fourier-transzformáció lépéseit jelöljük, amelyek a \operatorname{QFT} ^{-1} \left (\phi\\\!\operatorname{ADD}\right) \operatorname{QFT} $. Alább látható egy olyan kvantum-áramkör, amely ezt az egyszerűsítést használja a teljes folyamat megvalósításához.
 
-![Az áramköri diagramként látható drapéria-kiegészítés](~/media/draper.png)
+![Az áramköri diagramként látható drapéria-kiegészítés](~/media/draper.svg)
 
 Az áramkörben lévő minden ellenőrzött $e ^ {I2 \ PI/k} $ Gate a szabályozott fázisú kapura utal.  Az ilyen kapuk rendelkeznek a tulajdonsággal, amely azon qubits, amelyeken a művelet, $ \ket{00}\mapsto \ket{00}$, de $ \ket{11}\mapsto e ^ {I2 \ PI/k} \ ket{11}$.  Ez az áramkör lehetővé teszi a hozzáadást további qubits nélkül, a bemenetek és a kimenetek tárolásához szükséges beállítások mellett.
 
@@ -92,7 +92,7 @@ $$
 
 A Beauregard kiegészítőkre a drapéria kiegészítőkre, vagy pontosabban $ \phi\\\!\operatorname{ADD} $-t használ, hogy $a $ és $b $ értéket vegyen fel a fázisba.  Ezután ugyanazzal a művelettel azonosítja, hogy a $a + b < N $ $N $ kivonásával és tesztelésével, ha $a + b-N < 0 $.  Az áramkör ezt az információt egy kiegészítő qubit tárolja, majd hozzáadja $N $ vissza a regisztrációt, ha $a + b < N $.  Ezt követően a kiegészítő bit kiszámításával zárul le (ez a lépés szükséges annak biztosításához, hogy a Ancilla a kiegészítés meghívása után is kiosztható legyen).  Az alábbi, a Beauregard-kiegészítőkre vonatkozó áramkört adja meg.
 
-![A Beauregard-kiegészítőkre áramköri diagramként jelenik meg](~/media/beau.png)
+![A Beauregard-kiegészítőkre áramköri diagramként jelenik meg](~/media/beau.svg)
 
 Itt a Gate $ \Phi\\\!\operatorname{ADD} $ a $ \Phi\\\!\operatorname{ADD} $ értéket veszi át, azzal a különbséggel, hogy ebben a kontextusban a bemenet klasszikus, nem pedig a Quantum.  Ez lehetővé teszi, hogy a $ \Phi\\\!\operatorname{ADD} $ által vezérelt fázisok lecserélve legyenek a fázisokra, amelyek ezután kevesebb műveletre fordíthatók le, hogy csökkentsék a qubits számát és a kiegészítéshez szükséges kapuk számát.
 
@@ -111,7 +111,7 @@ Másképpen fogalmazva, a $V $ alkalmazásának hatása pontosan ugyanaz, mint a
 Így a vita további részében a $R _1 (\phi) $ kifejezéssel megbeszéljük a fázisok becslését, amelyet az úgynevezett *fázis-visszarúgás*használatával implementálunk.
 
 Mivel a vezérlés és a cél regisztrálása a folyamat után nem látható, a $ \ket{\phi} $ értéket újra felhasználhatjuk a $U ^ $2 ellenőrzött alkalmazásának céljára, hogy előkészítsünk egy második vezérlőelem-qubit a _1 (2 \phi) \ket{+} $ $R állapotban.
-Így továbbra is beszerezhetjük a \begin{align} \ket{\psi} & = \ sum_ {j = 0} ^ n R_1 (2 ^ j \phi) \ket{+} \\\\ & \propto \ bigotimes_ {j = 0} ^ {n} \left (\ket{0} + \exp (i 2 ^ {j} \phi) \ket{1}\right) \\\\ & \propto \ sum_ {k = 0} ^ {2 ^ n-1} \exp (i \phi k) \ket{k} \end{align}, ahol a $n $ a szükséges bitek száma. és hol használták a ${} \propto {}$ értéket, jelezve, hogy letiltottuk a $ 1/\sqrt{2 ^ n} $.
+Így továbbra is beszerezhetjük a \begin{align} \ket{\psi} & = \ sum_ {j = 0} ^ n R_1 (2 ^ j \phi) \ket{+} \\\\ & \propto \ bigotimes_ {j = 0} ^ {n} \left (\ket{0} + \exp (i 2 ^ {j} \phi) \ket{1}\right) \\\\ & \propto \ sum_ {k = 0} ^ {2 ^ n-1} \exp (i \phi k) \ket{k} \end{align}, ahol a $n $ a szükséges bitek száma. és hogy hol használták a ${} \propto {}$ értéket, jelezve, hogy letiltottuk a $1/\sqrt normalizálás tényezőjét {2 ^ n} $.
 
 Ha feltételezzük, hogy a $ \phi = 2 \pi p/2 ^ k $ értéket egy egész szám $p $ értékre, akkor ezt a következőt ismerjük fel: $ \ket{\psi} = \operatorname{QFT} \ket{p_0 p_1 \dots p_n} $, ahol $p _j $ a $j ^ {\textrm{th}} $ bit of $2 \pi \phi $.
 A Quantum Fourier-transzformáció adjoint alkalmazásával ezért a rendszer kvantum-állapotként kódolja a fázis bináris ábrázolását.
