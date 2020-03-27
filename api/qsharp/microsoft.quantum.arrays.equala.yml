@@ -1,0 +1,76 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.equala
+name: EqualA
+type: function
+namespace: Microsoft.Quantum.Arrays
+summary: Adott típusú két tömb, valamint egy, a tömbök elemeihez definiált predikátum is ellenőrzi, hogy a tömbök egyenlőek-e.
+remarks: >-
+  Ez a függvény általános típusokhoz van definiálva; azaz, ha két tömb `'T[]` és egy függvény `equal: ('T, 'T) -> Bool`, akkor a függvény `Bool` értéket ad vissza, amely jelzi, hogy a tömbök egyenlőek-e.
+
+  Ha két tömbnek egyenlőnek kell lennie, akkor egyenlőnek kell lennie, és a tömbök azonos helyein lévő elemeknek egyenlőnek kell lenniük.
+examples: >-
+  A következő kód ellenőrzi, hogy a tömbök különböző párjai egyenlőek-e:
+
+
+  ```qsharp
+
+  open Microsoft.Quantum.Arrays;
+
+  open Microsoft.Quantum.Logical;
+
+
+  function EqualADemo() : Unit {
+      let equalArrays = EqualA(EqualI, [2, 3, 4], [2, 3, 4]);
+      let differentLength = EqualA(EqualD, [2.0, 3.0, 4.0], [2.0, 3.0]);
+      let differentElements = EqualA(EqualR, [One, Zero], [One, One]);
+      Message($"Equal arrays are {equalArrays ? "equal" | "not equal"}");
+      Message($"Arrays of different length are {differentLength ? "equal" | "not equal"}");
+      Message($"Arrays of the same length with different elements are {differentElements ? "equal" | "not equal"}");
+  }
+
+  ```
+syntax: "function EqualA (equal : (('T, 'T) -> Bool), array1 : 'T[], array2 : 'T[]) : Bool"
+input:
+  content: "(equal : (('T, 'T) -> Bool), array1 : 'T[], array2 : 'T[])"
+  types:
+  - name: equal
+    isFunction: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Bool
+  - name: array1
+    summary: Az elsőként összehasonlítható tömb.
+    isArray: true
+    uid: "'T"
+    isLocal: true
+  - name: array2
+    summary: Az összehasonlítandó második tömb.
+    isArray: true
+    uid: "'T"
+    isLocal: true
+output:
+  content: Bool
+  types:
+  - summary: >-
+      Az érték `true`, ha és csak akkor, ha a `array1` és a `array2` egyenlő.
+
+      Azaz ha mindkét tömb azonos hosszúságú, és az összes elem `equal`szerint van meghatározva.
+    isPrimitive: true
+    uid: Bool
+typeParameters:
+- uid: "'T"
+  summary: Az egyes tömbök elemeinek típusa.
+metadata:
+  ms.openlocfilehash: 466078fa243e2f394fa42dff15845ae5f1cd73df
+  ms.sourcegitcommit: a0e50c5f07841b99204c068cf5b5ec8ed087ffea
+  ms.translationtype: MT
+  ms.contentlocale: hu-HU
+  ms.lasthandoff: 03/26/2020
+  ms.locfileid: "80321606"
