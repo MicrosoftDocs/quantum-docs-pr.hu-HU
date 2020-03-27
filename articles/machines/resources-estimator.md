@@ -6,17 +6,17 @@ ms.author: anpaz@microsoft.com
 ms.date: 1/22/2019
 ms.topic: article
 uid: microsoft.quantum.machines.resources-estimator
-ms.openlocfilehash: 37c901e5a861f0e8a10cdc911ad1d84ddd3e6e00
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: 51186134e9279727fec212cdce84f69493aaa656
+ms.sourcegitcommit: a0e50c5f07841b99204c068cf5b5ec8ed087ffea
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77907052"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80320810"
 ---
 # <a name="the-resourcesestimator-target-machine"></a>A ResourcesEstimator cél gépe
 
 Ahogy a név is jelenti, a `ResourcesEstimator` a Q # művelet egy kvantum-számítógépen való futtatásához szükséges erőforrásokat becsüli meg.
-Ezt úgy hajtja végre, hogy végrehajtja a kvantum-műveletet anélkül, hogy ténylegesen szimulálja a kvantum-számítógép állapotát; Ebből kifolyólag megbecsülheti a Q # olyan műveleteinek erőforrásait, amelyek több ezer qubits használnak.
+Ezt úgy hajtja végre, hogy végrehajtja a kvantum-műveletet anélkül, hogy ténylegesen szimulálja a kvantum-számítógép állapotát; Emiatt megbecsülheti a Q # olyan műveleteinek erőforrásait, amelyek több ezer qubits használnak, ha a kód klasszikus része ésszerű időn belül futtatható.
 
 ## <a name="usage"></a>Használat
 

@@ -6,12 +6,12 @@ ms.author: nawiebe@microsoft.com
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.simulationalgorithms
-ms.openlocfilehash: e3ce76f5ddcca497adb519eece959c9dd5dec92f
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: 5dad4e4a77eea99e72eb2efac52eec61ebbdb21c
+ms.sourcegitcommit: a0e50c5f07841b99204c068cf5b5ec8ed087ffea
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77904638"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80320707"
 ---
 # <a name="simulating-hamiltonian-dynamics"></a>Hamilton Dynamics szimulálása
 
@@ -28,14 +28,14 @@ Vegye figyelembe, hogy ha $e ^ {-i H t} $ volt, akkor a közelítésben szerepl�
 Ez a hiba azért fordul elő, mert $e ^ {-iHt} $ egy operátor exponenciális, és ennek eredményeként hiba történt a képlet használatakor, mert a $H _j $ feltételek nem ingázik (*azaz*$H _j H_k \ne H_k H_j $-t).
 
 Ha $t $ nagy, a Trotter – Suzuki-képletek továbbra is használhatók a dinamika pontos szimulálása érdekében, ha a rövid időre lépésekre bontja a folyamatot.
-$R $ legyen az időbeli evolúció lépéseinek száma.
-Ezután a $ $ e ^ {-i \ sum_ {j = 1} ^ m H_j t} = \left (\ prod_ {j = 1} ^ m e ^ {-iH_j t/r} \ right) ^ r + O (m ^ 2 t $ $, ami azt jelenti, hogy ha $r $ skála $m ^ 2 t ^ 2/\ epszilon $, akkor a hiba a legfeljebb $ \epsilon $ értékre tehető bármely $ \epsilon > 0 $ esetében.
+$R $ legyen az időbeli evolúció lépéseinek száma, így minden alkalommal, amikor az/r $ $t időt futtat. Ezután a $ $ e ^ {-i \ sum_ {j = 1} ^ m H_j t} = \left (\ prod_ {j = 1} ^ m e ^ {-iH_j t/r} \ right) ^ r + O (m ^ 2 t $ $, ami azt jelenti, hogy ha $r $ skála $m ^ 2 t ^ 2/\ epszilon $, akkor a hiba a legfeljebb $ \epsilon $ értékre tehető bármely $ \epsilon > 0 $ esetében.
 
 A pontosabb közelítések úgy hozhatók létre, hogy az operátorok egy sorozatot állítanak össze, így a hibák megszakadnak.
-A legegyszerűbb ilyen képlet, a szimmetrikus Trotter-képlet vagy a furcsa felosztása a következő formát veszi: $ $ U_1 (t) = \ prod_ {j = 1} ^ m e ^ {-iH_j t/2} \ prod_ {j = m} ^ 1 e ^ {-iH_j t} = e ^ {-iHt} + O (m ^ 3 t ^ 3) $ $, amely a $ \epsilon $-nál kevesebbet tehet elérhetővé bármely $ \epsilon > 0 $ értékre, ha a $r $ értéket szeretné méretezni a következővel: $m ^ {3/2} t ^ {3/2}/\sqrt {\ epszilon} $.
+A legegyszerűbb ilyen képlet, a második sorrend Trotter-Suzuki képlete, az űrlap $ $ U_2 (t) = \left (\ prod_ {j = 1} ^ {m} e ^ {-iH_j t/2r} \ prod_ {j = m} ^ 1 e ^ {-iH_j t/2r} \ right) ^ r = e ^ {-iHt} + O (m ^ 3 t ^ 3/r ^ 2), $ $ a hiba, amelynek elvégzése a $ \epsilon $-nál kevesebb, mint $ \epsilon > 0 $, ha $r $ értéket kíván méretezni a következővel: $m ^ {3/2} t ^ {3/2}/\sqrt {\ epszilon} $.
 
-A magasabb rendű Trotter képletek a $U _1 $ alapján is létrehozhatók.
-A legegyszerűbb a következő negyedik sorrendi képlet, eredetileg a Suzuki: $ $ U_2 (t) = U_1 ^ 2 (s_1t) U_1 ([1-4s_1] t) U_1 ^ 2 (s_1 t) = e ^ {-iHt} + O (m ^ 5T ^ 5), $ $, ahol $s _1 = (4-4 ^ {1/3}) ^{-1}$.
+Még magasabb rendű képletek, pontosabban ($ 2k $) a $k > 0 $ megrendelése is kiépíthető rekurzív módon: $ $ U_ {2k} (t) = [U_ {2k-2} (s_k\~ t)] ^ 2 U_ {2k-2} ([1-4s_k] t) [U_ {2k-2} (s_k\~ t)] ^ 2 = e ^ {-iHt} + O ((m t) ^ {2k + 1}/r ^ {2k}), $ $, ahol $s _k = (4 – 4 ^ {1/(2k-1)}) ^{-1}$.
+
+A legegyszerűbb a következő negyedik Order ($k = $2) képlet, amelyet eredetileg a Suzuki: $ $ U_4 (t) = [U_2 (s_2\~ t)] ^ 2 U_2 ([1-4s_2] t) [U_2 (s_2\~ t)] ^ 2 = e ^ {-iHt} + O (m ^ 5T ^ 5/r ^ 4), $ $, ahol $s _2 = (4-4 ^ {1/3}) ^{-1}$.
 Általánosságban elmondható, hogy az önkényesen magas rendű képletek hasonlóan összeállíthatók; azonban a bonyolultabb integrátorok használata során felmerülő költségek gyakran meghaladják a legtöbb gyakorlati probléma esetén a negyedik sorrendet meghaladó előnyöket.
 
 Ahhoz, hogy a fenti stratégiák működjenek, meg kell adni egy metódust a $e ^ {-iH_j t} $ széles osztályának szimulálása érdekében.

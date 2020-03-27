@@ -6,12 +6,12 @@ uid: microsoft.quantum.concepts.multiple-qubits
 ms.author: nawiebe@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 2fa227c823cd87df9c799c043c699e4ce818b8e3
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: 239073b7e7edafc49bc65cb60c9f45cf0af83dbe
+ms.sourcegitcommit: a0e50c5f07841b99204c068cf5b5ec8ed087ffea
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77907545"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80320891"
 ---
 # <a name="multiple-qubits"></a>Több qubits
 
@@ -27,7 +27,7 @@ Ezek az eszközök feltétlenül szükségesek ahhoz, hogy megértsék a Q # Cod
 
 ## <a name="representing-two-qubits"></a>Két qubits képvisel
 Az egy-és qubit állapot közötti fő különbség az, hogy a két qubit állapot nem két dimenziós, hanem négy dimenziós.
-Ennek az az oka, hogy a kétqubitos állapotok számítási alapjait az egy qubit-állapotú transzeurópai termékek alkotják.  Például \begin{align} 00 \equiv \begin{bmatrix}1 \\\\ 0 \end{bmatrix}\otimes \begin{bmatrix}1 \\\\ 0 \end{bmatrix} & = \begin{bmatrix}1 \\\\ 0\\\\ 0\\\\ 0 \end{bmatrix}, \qquad 01 \equiv \begin{bmatrix}1 \\\\ 0 \end{bmatrix}\otimes \begin{bmatrix}0 \\\\ 1 \end{bmatrix} = \begin{bmatrix}0 \\\\ 1\\\\ 0\\\\ 0 \end{bmatrix},\\\\ 10 \equiv \begin{bmatrix}0 \\\\ 1 \end{bmatrix}\otimes \begin{bmatrix}1 \\\\ 0 \end{bmatrix} & = \begin{bmatrix}0 \\\\ 0\\\\ 1\\\\ 0 \end{bmatrix}, \qquad 11 \equiv \begin{bmatrix}0 \\\\ 1 \end{bmatrix}\otimes \begin{bmatrix}0 \\\\ 1 \end{bmatrix} = \begin{bmatrix}0 \\\\ 0\\\\ 0 @no__ t_40_ \\ 1 \end{bmatrix}.\\
+Ennek az az oka, hogy a kétqubitos állapotok számítási alapjait az egy qubit-állapotú transzeurópai termékek alkotják.  Például a \begin{align} 00 \equiv \begin{bmatrix}1 \\\\ 0 \end{bmatrix}\otimes \begin{bmatrix}1 \\\\ 0 \end{bmatrix} & = \begin{bmatrix}1 \\\\ 0\\\\ 0\\\\ 0 \end{bmatrix}, \qquad 01 \equiv \begin{bmatrix}1 \\\\ 0 \end{bmatrix}\otimes \begin{bmatrix}0 \\\\ 1 \end{bmatrix} = \begin{bmatrix}0 \\\\ 1\\\\ 0\\\\ 0 \end{bmatrix} ,\\\\ 10 \equiv \begin{bmatrix}0 \\\\ 1 \end{bmatrix}\otimes \begin{bmatrix}1 \\\\ 0 \end{bmatrix} & = \begin{bmatrix}0 \\\\ 0\\\\ 1\\\\ 0 \end{bmatrix}, \qquad 11 \equiv \begin{bmatrix}0 \\\\ 1 \end{bmatrix}\otimes \begin{bmatrix}0 \\\\ \end{bmatrix} = \begin{bmatrix}0 \\\\ 0\\\\ 0\\\\ 1 \end{bmatrix}.
 \end{align}
 
 Könnyen megtekinthető, hogy a $n $ qubits kvantum-állapota az adott konstrukció alapján a $2 ^ n $ dimenzió egy egységnyi vektora.  A vektor
@@ -59,13 +59,16 @@ $$
 
 Az is lehetséges, hogy csak egy qubit kell mérni egy qubit kvantum-állapotból. Azokban az esetekben, amikor csak az egyik qubits méri, a mérés hatása finoman eltérő, mert a teljes állapot nem a számítási alapú állapotba van csukva, hanem csak egy alrendszerre van összecsukva.  Más szóval, ebben az esetben, ha csak egy qubit kell mérnie, csak az alrendszerek egyikét csukja össze, de nem mindegyiket.  
 
-Ennek megtekintéséhez érdemes megfontolni a következő állapot első qubit mérését, amely a Hadamard-transzformáció $H $ két qubits való alkalmazásával jön létre, kezdetben a "0" állapotra van állítva: $ $ H ^ {\otimes 2} \left (\begin{bmatrix}1 \\\\ 0 \end{bmatrix}\otimes \begin{bmatrix}1 \\\\ 0 \end{bmatrix} \right) = \frac{1}{2}\begin{bmatrix}1 & 1 & 1 & 1 \\\\ 1 &-1 & 1 &-1 \\\\ 1 & 1 &-1 &-1 \\\\ 1 &- 1 &-1 & 1 \end{bmatrix}\begin{bmatrix}1\\\\ 0\\\\ 0\\\\ 0 \ End {bmatrix} = \frac{1}{2}\begin{bmatrix}1\\\\ 1\\\\ 1\\\\ 1 \ End {bmatrix} \mapsto \begin{Cases}\text{outcome} = 0 & \frac{1}{\sqrt{2}} \begin{bmatrix}1\\\\ 1\\\\ 0\\\\ 0 \end{bmatrix}\\\\ \text{outcome} = 1 & \frac{1}{\sqrt{2}} \begin{bmatrix}0\\\\ 0\\\\ 1\\\\ 1 \end{bmatrix}\\\\ \end{Cases}.
+Ennek megtekintéséhez érdemes megfontolni a következő állapot első qubit mérését, amely a Hadamard-transzformáció $H $ két qubits való alkalmazásával jön létre, kezdetben a "0" állapotra van állítva: $ $ H ^ {\otimes 2} \left (\begin{bmatrix}1 \\\\ 0 \end{bmatrix}\otimes \begin{bmatrix}1 \\\\ 0 \end{bmatrix} \right) = \frac{1}{2}\begin{bmatrix}1 & 1 & 1 & 1 \\\\ 1 &-1 & 1 &-1 \\\\ 1 & 1 \ 1 &-1 & \\1 \\-1 &-1 & 1 \ End {bmatrix} \begin{bmatrix}1\\\\ 0\\\\ 0\\\\ 0 \ Befejezés {bmatrix} = \frac{1}{2}\begin{bmatrix}1\\\\ 1\\\\ 1\\\\ 1 \ End {bmatrix} \mapsto \begin{Cases}\text{outcome} = 0 & \frac{1}{\sqrt{2}} \begin{bmatrix}1\\\\ 1\\\\ 0\\\\ 0 \end{bmatrix}\\\\ \text{outcome} = 1 & \frac{1}{\sqrt{2}} \begin{bmatrix}0\\\\ 0\\\\ 1\\\\ 1 \end{bmatrix}\\\\ \end{Cases}.
 $ $ Mindkét eredmény 50%-os valószínűséggel rendelkezik.  Az eredmény a 50%-os valószínűsége annak, hogy mindkét eszköz esetében a kezdeti kvantum-állapot vektora invariáns a $0 $ és $1 $ értékkel az első qubit.
 
-Az első vagy második qubit mérésére szolgáló matematikai szabály egyszerű.  Ha hagyjuk, hogy $e _k $ legyen a $k ^ {\rm th} $ számítási alap vektor, és hagyja, $S $ legyen az összes $e _k $ érték, hogy a szóban forgó qubit $1 $ értéket vesz igénybe $k $ érték esetén.  Ha például érdekli az első qubit mérése, akkor $S $ $e _2 \ EQUIV $10 és $e _3 \ EQUIV $11.  Hasonlóképpen, ha érdeklik a második qubit $S $ $e _1 \ EQUIV $1 és $e _3 \equiv $11.  Ezt követően a kiválasztott qubit $1 $ értékre való mérésének valószínűsége az állapot Vector $ \psi $
+Az első vagy második qubit mérésére szolgáló matematikai szabály egyszerű.  Ha hagyjuk, hogy $e _k $ legyen a $k ^ {\rm th} $ számítási alap vektor, és hagyja, $S $ legyen az összes $e _k $ érték, hogy a szóban forgó qubit $1 $ értéket vesz igénybe $k $ érték esetén.  Ha például érdekli az első qubit mérése, akkor $S $ $e _1 \ EQUIV $10 és $e _3 \ EQUIV $11.  Hasonlóképpen, ha érdeklik a második qubit $S $ $e _2 \ EQUIV $1 és $e _3 \equiv $11.  Ezt követően a kiválasztott qubit $1 $ értékre való mérésének valószínűsége az állapot Vector $ \psi $
 
 $ $ P (\text{outcome} = 1) = \ sum_ {e_k \text{a set} S} \psi ^ \dagger e_k e_k ^ \dagger \psi.
 $$
+
+> [!NOTE]
+> Ebben a dokumentumban a kis endian formátumot használjuk a számítási alap címkézéséhez. Kis endian formátumban a legkevésbé jelentős bitek jönnek először. Például a kis endian formátumú négy számot a BITS 001 karakterlánca jelöli.
 
 Mivel az egyes qubit-mérések csak $0 $ vagy $1 $ értéket adhatnak meg, a $0 $ mérés valószínűsége egyszerűen $1-P (\text{outcome} = 1) $.  Ezért csak explicit módon adunk meg egy képletet a $1 $ mérés valószínűségére.
 
@@ -79,7 +82,7 @@ Az óvatos olvasónak nem kell aggódnia, hogy mi történik, ha a mérték val�
 
 Ha a \psi $ értéket a fent megadott egységes állapotú vektorba vesszük, és érdeklik az első qubit mérése, akkor 
 
-$ $ P (\text{Measurement az első qubit} = 1) = (\psi ^ \dagger e_2) (e_2 ^ \dagger \psi) + (\psi ^ \dagger e_3) (e_3 ^ \dagger \psi) = | e_2 ^ \dagger \psi | ^ 2 + | e_3 ^ \dagger \psi | ^ 2.
+$ $ P (\text{Measurement az első qubit} = 1) = (\psi ^ \dagger e_1) (e_1 ^ \dagger \psi) + (\psi ^ \dagger e_3) (e_3 ^ \dagger \psi) = | e_1 ^ \dagger \psi | ^ 2 + | e_3 ^ \dagger \psi | ^ 2.
 $$
 
 Vegye figyelembe, hogy ez csak azon két valószínűség összege, amelyek várhatóan a $10 $ és a $11 $ eredmény méréséhez szükségesek voltak a qubits.
@@ -90,12 +93,13 @@ $$
 
 amely tökéletesen illeszkedik a mi intuíciónk számára, hogy a valószínűség legyen.  Ehhez hasonlóan az állapot is írható
 
-$ $ \frac{\frac{e_2}{2}+ \frac{e_3}{2}} {\sqrt{\frac{1}{2}}} = \frac{1}{\sqrt{2}} \begin{bmatrix} 0\\\\ 0\\\\ 1\\\\ 1 \ End {bmatrix} $ $
+$ $ \frac{\frac{e_1}{2}+ \frac{e_3}{2}} {\sqrt{\frac{1}{2}}} = \frac{1}{\sqrt{2}} \begin{bmatrix} 0\\\\ 0\\\\ 1\\\\ 1 \ End {bmatrix} $ $
 
 ismét az intuíciónk alapján.
 
 ## <a name="two-qubit-operations"></a>Két Qubit művelet
-Ahogy az egyetlen qubit esetében is, az egységes átalakítás a qubits-on érvényes művelet. Általánosságban elmondható, hogy a $n $ qubits egy egységes átalakítása egy mátrix $U $2 ^ n \times 2 ^ n $ (azaz 2 ^ n $ méretű vektorokra van kialakítva), például $U ^{-1} = U ^ \dagger $. Például a CNEM (vezérelt-NOT) Gate egy gyakran használt két qubit-kapu, amelyet a következő egységes mátrix képvisel:
+Ahogy az egyetlen qubit esetében is, az egységes átalakítás a qubits-on érvényes művelet. Általánosságban elmondható, hogy a $n $ qubits egy egységes átalakítása egy mátrix $U $2 ^ n \times 2 ^ n $ (azaz 2 ^ n $ méretű vektorokra van kialakítva), például $U ^{-1} = U ^ \dagger $.
+Például a CNEM (vezérelt-NOT) Gate egy gyakran használt két qubit-kapu, amelyet a következő egységes mátrix képvisel:
 
 $ $ \operatorname{CNOT} = \begin{bmatrix} 1 \ 0 \ 0 \ 0 \\\\ 0 \ 1 \ 0 \ 0 \\\\ 0 \ 0 \ 0 \ 1 \\\\ 0 \ 0 \ 1 \ 0 \end{bmatrix} $ $
 
