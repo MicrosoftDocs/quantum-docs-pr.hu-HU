@@ -7,10 +7,10 @@ ms.date: 10/22/2019
 ms.topic: article
 uid: microsoft.quantum.overview.what
 ms.openlocfilehash: 668df50882272bfa56541f178e2f4d5fb35efcf5
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.sourcegitcommit: 7d350db4b5e766cd243633aee7d0a839b6274bd6
 ms.translationtype: HT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/16/2020
 ms.locfileid: "77906780"
 ---
 # <a name="what-is-quantum-computing"></a>Mi az a kvantum-számítástechnika?
@@ -67,7 +67,7 @@ A Microsoft kvantumprogramja azért egyedi, mert a valódi kvantumhatás biztos�
 
 A nyílt forráskódú Quantum Development Kit (QDK) azzal a céllal készült, hogy a kvantumprogramozást és az algoritmusfejlesztést szélesebb körben tegye hozzáférhetővé. Magas szintű programnyelvünk, a Q# a kvantumprogramozás kihívásait veszi célba.  A Q# nyelvet egy olyan magas szintű, kvantumközpontú programozási nyelvnek terveztük, amely az algoritmus- és alkalmazásfejlesztésre koncentrál. A Q#-fordító egy olyan szoftverkészlet része, amely lehetővé teszi a kvantumalgoritmus lefordítását a kvantumszámítógép primitív műveleteinek szintjére.  Bizonyos mértékig (kvantumbitekben mérve) a kvantum-számítástechnika egy hagyományos számítógépen is szimulálható. A szimuláció alkalmazásával már ma hozzáfoghat a kvantumprogramok írásához, amelyek a jövő kvantumhardverjén futhatnak majd.  A Q#-hoz mintákat, kódtárakat és tanulási gyakorlatokat is mellékeltünk, hogy minél könnyebben kezdhesse meg már ma a kvantumprogramozást. 
 
-## <a name="next-steps"></a>További lépések
+## <a name="next-steps"></a>Következő lépések
 
 * [Mire képesek a kvantumszámítógépek?](xref:microsoft.quantum.overview.computers)
 * [Bevezetés a Microsoft Quantum Development Kit használatába](xref:microsoft.quantum.welcome)

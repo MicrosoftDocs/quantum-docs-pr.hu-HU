@@ -7,10 +7,10 @@ ms.date: 10/22/2019
 ms.topic: article
 uid: microsoft.quantum.overview.qsharp
 ms.openlocfilehash: a4bf21887e34ac85f75e5e0b9a033138464fd09d
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.sourcegitcommit: 7d350db4b5e766cd243633aee7d0a839b6274bd6
 ms.translationtype: HT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/16/2020
 ms.locfileid: "77907001"
 ---
 # <a name="what-are-q-and-the-qdk"></a>Mi az a Q# és a QDK?
@@ -69,7 +69,7 @@ A Q#-program végrehajtásának szimulálása a teljes állapotú kvantumszimul�
 
 A Q# szépsége az, hogy a programokat elég egyszer megírni, majd kvantumszimulátorokon való futtatásukkal elvégezhető a hibakeresésük, valamint különböző kvantumszámítógépek hardverén is futtathatók.  Ahogy a kvantumszámítógépek fejlődnek, és új kvantumszámítógépek válnak elérhetővé, a Q# nyelven írt teljesítménytesztelési programok futtathatók a hardverteljesítmény ellenőrzése és az eredmények összehasonlítása céljából.  
 
-## <a name="next-steps"></a>További lépések
+## <a name="next-steps"></a>Következő lépések
 
 * [Hogyan tudhatok meg többet a kvantum-számítástechnikáról?](xref:microsoft.quantum.overview.learn)
 * [Bevezetés a Microsoft Quantum Development Kit használatába](xref:microsoft.quantum.welcome)

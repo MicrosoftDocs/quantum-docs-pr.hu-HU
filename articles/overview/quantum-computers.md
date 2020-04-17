@@ -7,10 +7,10 @@ ms.date: 10/23/2019
 ms.topic: article
 uid: microsoft.quantum.overview.computers
 ms.openlocfilehash: 9d8ba90a504f298f9465ebf564c43625a4d43168
-ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+ms.sourcegitcommit: 7d350db4b5e766cd243633aee7d0a839b6274bd6
 ms.translationtype: HT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 04/16/2020
 ms.locfileid: "73529953"
 ---
 # <a name="what-can-a-quantum-computer-do"></a>Mire képesek a kvantumszámítógépek?
@@ -59,7 +59,7 @@ A kvantum által ihletett algoritmusok implementációja hagyományos szoftverek
 
 A kvantum által ihletett algoritmusokat az orvosi kutatásokban használják, például a mágnesesrezonancia-vizsgálatok (MRI) pontosságának javításához. Kvantum által ihletett számítástechnikát használnak az MRI-gépek konfigurációjának adott betegségek felismerését célzó optimalizálásához.
 
-## <a name="next-steps"></a>További lépések
+## <a name="next-steps"></a>Következő lépések
 
 * [Miért érdemes kvantum-számítástechnikát tanulnom?](xref:microsoft.quantum.overview.why)
 * [Bevezetés a Microsoft Quantum Development Kit használatába](xref:microsoft.quantum.welcome)
