@@ -6,12 +6,12 @@ ms.author: nakersha
 ms.date: 09/30/2019
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: 4fbb740568ff6cdc99e4f6a813802ed8d4234ab4
-ms.sourcegitcommit: 9d1c045cf1a2c3e19030cb38dbc7496dbd24ab58
+ms.openlocfilehash: 7a080f82e586f06d40e9d793ee05932db4c3ccef
+ms.sourcegitcommit: 7d350db4b5e766cd243633aee7d0a839b6274bd6
 ms.translationtype: HT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81269386"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81481413"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>A Microsoft Quantum Development Kit kibocsátási megjegyzései
 
@@ -28,7 +28,7 @@ A frissítésre vonatkozó utasításokat lásd a [frissítési útmutatóban](x
 
 A verzió a következőket tartalmazza:
 
-- A hozzáférés-módosítók új támogatása a Q#-ban. További információ: [Fájlszerkezetek](xref:microsoft.quantum.language.file-structure)
+- A hozzáférés-módosítók új támogatása a Q#-ban. További információ: [Fájlszerkezetek](xref:microsoft.quantum.language.file-structure#internal-declarations)
 - A .NET Core SDK 3.1-es verziójára frissítve
 
 A [kódtárak](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [fordítók](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [futtatókörnyezetek](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [minták](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed) és [Katák ](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed) lezárt lekéréses kérelmeinek teljes listáját itt tekintheti meg.  
