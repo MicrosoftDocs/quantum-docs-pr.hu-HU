@@ -1,147 +1,147 @@
 ---
-title: 'Q # technikák – az összes összeállítása'
-description: 'Haladjon végig egy alapszintű Q # programban, amely a kvantum-teleportáció mutatja be.'
+title: Q# technikák - Az egész összerakása
+description: Végigvezet egy alapvető Q# programon, amely bemutatja a kvantum teleportációt.
 uid: microsoft.quantum.techniques.puttingittogether
 author: QuantumWriter
 ms.author: Christopher.Granade@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 6c988f77ef6e433945dbf21dfb41204c74bdda3e
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: 4bd91699017e4c1acd9f4449b8a65e39bd07878e
+ms.sourcegitcommit: b6b8459eb654040f1e19f66411b29fc9e48e95c9
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77906831"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82030565"
 ---
-# <a name="putting-it-all-together-teleportation"></a>Az összes egyesítése: teleportáció #
-Térjen vissza a [kvantum-áramkörökben](xref:microsoft.quantum.concepts.circuits)definiált teleportáció-kör példára. Ezt az eddig megtanult fogalmak szemléltetésére fogjuk használni. A Quantum teleportáció magyarázatát alább találja azok számára, akik nem ismerik az elméletet, majd a kód megvalósításának bemutatóját a Q #-ban. 
+# <a name="putting-it-all-together-teleportation"></a>Elhelyezés ez minden együtt: Teleportáció #
+Térjünk vissza a Quantum Circuits-ben meghatározott teleportációs áramkör [példájához.](xref:microsoft.quantum.concepts.circuits) Ezt fogjuk használni, hogy bemutassuk az eddig megtanult fogalmakat. A kvantum teleportáció magyarázata az alábbiakban található azok számára, akik nem ismerik az elméletet, majd a q#-ban a kódimplementáció forgatókönyve. 
 
-## <a name="quantum-teleportation-theory"></a>Quantum teleportáció: elmélet
-A kvantum-teleportáció olyan technika, amely egy ismeretlen kvantum-állapot küldését teszi elérhetővé (amit "__üzenetnek__" nevezünk) egy adott helyen lévő qubit egy másik helyen lévő qubit (ezt a qubits a "Here" és a "__here__"kifejezéssel tekintjük meg). Az Dirac-jelölést használó vektorként az __üzenetet__ is képviseljük: 
+## <a name="quantum-teleportation-theory"></a>Quantum Teleportáció: Elmélet
+Quantum teleportáció egy olyan technika küldésére ismeretlen kvantum állapot (amit majd hivatkozni, mint a "__üzenet__") egy qubit az egyik helyen, hogy a qubit egy másik helyen (majd hivatkozni ezeket a qubitek a "__itt__" és "__ott__", illetve). Üzenetünket __message__ vektorként tudjuk ábrázolni dirac jelöléssel: 
 
-$ $ \ket{\psi} = \alpha\ket{0} + \beta\ket{1} $ $
+$$ \ket{\psi} = \alpha\ket{0} +{1} \beta\ket $$
 
-Az __üzenet__ qubit ismeretlen a számunkra, mert nem tudjuk a $ \alpha $ és a $ \beta $ értékeit.
+Az __üzenet__ qubit állapota ismeretlen számunkra, mivel nem tudjuk az értékeket $\alpha$ és $\beta$.
 
-### <a name="step-1-create-an-entangled-state"></a>1\. lépés: kusza állapot létrehozása
-Ahhoz, hogy el lehessen küldeni az __üzenetet__ , a qubit __itt__ kell összekeverni __a qubit.__ Ez egy Hadamard-kapu, majd egy CNEM-kapu után érhető el. Nézzük meg a kapu műveletei mögötti matematikai műveleteket.
+### <a name="step-1-create-an-entangled-state"></a>1. lépés: Kusza állapot létrehozása
+Annak érdekében, hogy küldje el az __üzenetet__ van szükségünk a qubit __itt__ kell kusza a qubit __ott__. Ez egy Hadamard kapu alkalmazásával érhető el, amelyet egy CNOT kapu követ. Nézzük meg a matekmögötti kapuműveleteket.
 
-A qubits __itt__ és a $ \ket{0}$ __állapotban is__ megkezdődik. A qubits összekeverve a következő állapotban vannak:
+Kezdjük a qubits __itt-ott__ mind a{0}$ ket $ állapotban. __there__ Miután entangling ezek a qubits, ezek az állam:
 
-$ $ \ket{\phi ^ +} = \frac{1}{\sqrt{2}} (\ket{00} + \ket{11}) $ $
+$$ \ket{\phi^+} ={1}\frac{2}{\sqrt{00} }(\ket + \ket{11}) $$
 
-### <a name="step-2-send-the-message"></a>2\. lépés: az üzenet elküldése
-Az __üzenet__ elküldéséhez először alkalmazzon egy cnem-kaput az __üzenet__ qubit, és __itt__ qubit bemenetként (az __üzenet__ qubit, amely a vezérlő __, a qubit pedig a cél__ qubit, ebben a példányban). Ezt a bemeneti állapotot lehet írni:
+### <a name="step-2-send-the-message"></a>2. lépés: Az üzenet elküldése
+Az __üzenet__ elküldéséhez először egy CNOT kaput alkalmazunk a qubit __üzenettel__ és __itt__ qubit bemenetként (az __üzenet__ qubit a vezérlő és az __itt__ qubit a cél qubit, ebben az esetben). Ez a bemeneti állapot írható:
 
-$ $ \ket{\psi}\ket{\phi ^ +} = (\alpha\ket{0} + \beta\ket{1}) (\frac{1}{\sqrt{2}} (\ket{00} + \ket{11})) $ $
+{0} $$ \ket{\psi}\ket{\phi^+} = (\alpha\ket +{1}\beta\ket{1})(\frac {\sqrt{2})(\ket{00} + \ket{11})) $$
 
-Ez a következőre bővül:
+Ez a következőkre terjed ki:
 
-$ $ \ket{\psi}\ket{\phi ^ +} = \frac{\alpha}{\sqrt{2}} \ket{000} + \frac{\alpha}{\sqrt{2}} \ket{011} + \frac{\beta}{\sqrt{2}} \ket{100} + \frac{\beta}{\sqrt{2}} \ket{111} $ $
+$${2}\ket{\psi}\ket{\phi^+} = \frac{\alpha}{\sqrt{000} }\ket + \frac{\alpha}{\sqrt{2}}\ket{011} {2}{100} {2}{111} +\frac{\beta}{\sqrt $!
 
-Emlékeztetőként a CNEM-kapu megfordítja a cél qubit, amikor a vezérlő qubit értéke 1. Így például a $ \ket{000}$ bemenet nem változik, mert az első qubit (a vezérlő) 0. Azonban tegyük fel, hogy az első qubit 1 – például a $ \ket{100}$ bemenet. Ebben az esetben a kimenet a $ \ket{110}$, mivel a második qubit (a cél) a CNEM-kapu tükrözött.
+Emlékeztetőül: a CNOT kapu megfordítja a cél qubitet, ha a vezérlő qubit 1. Így például a $\ket{000}$ bemenetnem eredményez változást, mivel az első qubit (a vezérlő) 0. Azonban, hogy egy esetben, ahol az első qubit 1{100}- például egy bemeneti $\ket $. Ebben az esetben a kimenet{110}$\ket $, mivel a második qubit (a cél) a CNOT kapuval van tükrözve.
 
-Most nézzük meg a kimenetet, ha a CNEM kapu a fenti bemeneten működött. Az eredmény a következőket eredményezi:
+Nézzük most úgy a kimenet, ha a CNOT kapu járt el a mi bemenet felett. Az eredmény:
 
-$ $ \frac{\alpha}{\sqrt{2}} \ket{000} + \frac{\alpha}{\sqrt{2}} \ket{011} + \frac{\beta}{\sqrt{2}} \ket{110} + \frac{\beta}{\sqrt{2}} \ket{101} $ $
+{2}$$ \frac{\alpha}{\sqrt }\ket{000} + \frac{\alpha}{\sqrt{2}}\ket{011} + \frac{\beta}{\sqrt{2}}\ket{110} + \frac{\beta}{\sqrt{2}}\ket{101} $$
 
-Az __üzenet__ elküldésének következő lépése egy Hadamard-kapu alkalmazása az __üzenet__ qubit (ez az egyes kifejezések első qubit). 
+A következő lépés, hogy küldje el az __üzenetet,__ hogy alkalmazza a Hadamard kapu az __üzenet__ qubit (ez az első qubit minden kifejezés). 
 
-Emlékeztetőként a Hadamard Gate a következő műveleteket végzi el:
+Emlékeztetőül, a Hadamard kapu a következőket teszi:
 
 Input (Bemenet) | Kimenet
 ---------------------------| ---------------------------------------------------------------
-$ \ket{0}$  | $ \frac{1}{\sqrt{2}} (\ket{0} + \ket{1}) $
-$ \ket{1}$  | $ \frac{1}{\sqrt{2}} (\ket{0}-\ket{1}) $
+$\ket{0}$  | $\frac{1}{\sqrt{2}}(\ket{0} {1}+ \ket )$
+$\ket{1}$  | $\frac{1}{\sqrt{2}}(\ket{0} {1}- \ket )$
 
-Ha a Hadamard kaput a fenti kimenet minden egyes időszakának első qubit alkalmazza, a következő eredményt értjük:
+Ha a Hadamard kaput a fenti kimenetminden egyes ciklusának első qubit-jára alkalmazzuk, a következő eredményt kapjuk:
 
-$ $ \frac{\alpha}{\sqrt{2}} (\frac{1}{\sqrt{2}} (\ket{0} + \ket{1})) \ket{00} + \frac{\alpha}{\sqrt{2}} (\frac{1}{\sqrt{2}} (\ket{0} + \ket{1})) \ket{11} + \frac{\beta}{\sqrt{2}} (\frac{1}{\sqrt{2}} (\ket{0}-\ket{1})) \ket{10} + \frac{\beta}{\sqrt{2}} (\frac{1}{\sqrt{2}} (\ket{0}-\ket{1})) \ket{01} $ $
+$${2}\frac{\alpha}{\sqrt }(\frac{1}{\sqrt{2}{0} }(\ket + \ket{1})\ket{00} +{2}\frac{\alpha}{\sqrt }(\frac{0} {1}{11} {2}{1}{2}{0} {1}{10} {2}{1}{2}{0} {1}{01} {1}{\sqrt{2}}(\ket + \ket )\ket + \frac{\beta}{\sqrt }(\frac {\sqrt }(\ket - \ket )\ket + \frac{\beta}{\sqrt }(\frac {\sqrt }(\ket - \ket ))\ket $$
 
-Vegye figyelembe, hogy az egyes feltételek $2 \frac{1}{\sqrt{2}} $ tényezővel rendelkeznek. Ezeket az eredményeket a következő eredmény megadásával tudjuk megszorozni:
+Ne feledje, hogy minden{1}kifejezésnek két{2}$\frac {\sqrt }$ tényezője van. Tudjuk szorozni ezeket ki, amely a következő eredményt:
 
-$ $ \frac{\alpha}{2}(\ket{0} + \ket{1}) \ket{00} + \frac{\alpha}{2}(\ket{0} + \ket{1}) \ket{11} + \frac{\beta}{2}(\ket{0}-\ket{1}) \ket{10} + \frac{\beta}{2}(\ket{0}-\ket{1}) \ket{01} $ $
+$${2}\frac{\alpha} (\ket{0} {1}+ \ket )\ket{00} +{2}\frac{\alpha} (\ket{0} +{1}\ket )\ket{0} {1}{10} {2}{0} {1}{01} {11} + \frac{\beta}{2}(\ket - \ket )\ket + \frac{\beta} (\ket - \ket )\ket $$
 
-A $ \frac{1}{2}$ Factor az egyes kifejezések esetében közös, így most már a zárójeleken kívül is elhelyezhetők:
+A $\frac{1}{2}$ tényező minden egyes kifejezésnél gyakori, így most már a zárójelen kívül rekedhetünk:
 
-$ $ \frac{1}{2}\big [\alpha (\ket{0} + \ket{1}) \ket{00} + \alpha (\ket{0} + \ket{1}) \ket{11} + \beta (\ket{0}-\ket{1}) \ket{10} + \beta (\ket{0}-\ket{1}) \ket{01}\big] $ $
+{1}{2}$$ \frac{0} \big[\alpha(\ket{1}+ \ket )\ket{00} {0} + \alpha(\ket + \ket{1})\ket{11} + \beta(\ket{0} -{1}\ket )\ket{10} \beta(\ket - \ket -{0} \ket - \ket ) \ket{1}{01}
 
-Ezután a zárójeleket a következő kifejezésekkel szorozva adhatja meg:
+Ezután szorozzuk ki a zárójelben minden kifejezés, amely:
 
-$ $ \frac{1}{2}\big [\alpha\ket{000} + \alpha\ket{100} + \alpha\ket{011} + \alpha\ket{111} + \beta\ket{010}-\beta\ket{110} + \beta\ket{001}-\beta\ket{101}\big] $ $
+$${1}{2}\frac \big[\alfa\ket{000} +{100} \alpha\ket{011} + \alpha\ket +{111} \alpha\ket + \beta\ket{001} {101}{010} - \beta\ket{110} + \beta\ket - \beta\ket - \beta\ket - \beta\ket \beta\ket \beta\ket \big] $$
 
-### <a name="step-3-measure-the-result"></a>3\. lépés: az eredmény mérése
+### <a name="step-3-measure-the-result"></a>3. lépés: Az eredmény mérése
 
-Mivel __itt__ van, és __nincs__ összekeverve, a mérések __itt__ is hatással __lesznek.__ Ha mérjük az első és a második qubit (__üzenet__ és __itt__), megtudhatjuk, __milyen állapotban van a-__ ben, a felakadás ezen tulajdonsága miatt. 
+Mivel __here__ __itt-ott,__ hogy kusza, minden mérés __itt__ hatással lesz az állam __ott__. Ha mérjük az első és a második qubit __(üzenet__ és __itt)__ meg tudjuk tanulni, milyen állapotban __van,__ mivel ez a tulajdonság a kuszaság. 
 
-* Ha méri és lekéri a 00 értéket, a rendszer összecsukja az eredményt, így csak a feltételek konzisztensek. Ez a $ \alpha\ket{000} + \beta\ket{001}$. Ez a $ \ket{00}(\alpha\ket{0} + \beta\ket{1}) $ értékre állítható át. Ezért ha az első és második qubit 00-ra mérjük, __tudjuk, hogy__a harmadik qubit a következő állapotban van: $ (\alpha\ket{0} + \beta\ket{1}) $.
-* Ha a rendszer kiértékeli és beolvassa az eredmény 01 értéket, a rendszer összecsukja az eredményt, így csak a feltételek konzisztensek. Ez a $ \alpha\ket{011} + \beta\ket{010}$. Ez a $ \ket{01}(\alpha\ket{1} + \beta\ket{0}) $ értékre állítható át. Ezért ha az első és második qubit 01-re mérjük, __tudjuk, hogy__a harmadik qubit a következő állapotban van: $ (\alpha\ket{1} + \beta\ket{0}) $.
-* Ha mérjük és megkapjuk a 10. eredményt, a rendszer összeomlik, és csak az ezzel az eredménnyel konzisztens kifejezéseket hagyja. Ez a $ \alpha\ket{100}-\beta\ket{101}$. Ezt a $ \ket{10}(\alpha\ket{0}-\beta\ket{1}) $ értékre lehet átvenni. Ezért __, ha__az első és második qubit 10 értékre mérjük, tudjuk, hogy a harmadik qubit a következő állapotban van: $ (\alpha\ket{0}-\beta\ket{1}) $.
-* Ha mérjük és beolvasjuk a 11. eredményt, a rendszer Összecsukja a feltételt, és csak az ezzel az eredménnyel konzisztens kifejezéseket hagyja. Ez a $ \alpha\ket{111}-\beta\ket{110}$. Ezt a $ \ket{11}(\alpha\ket{1}-\beta\ket{0}) $ értékre lehet átvenni. Ezért ha az első és második qubit 11-re mérjük, __tudjuk, hogy__a harmadik qubit a következő állapotban van: $ (\alpha\ket{1}-\beta\ket{0}) $.
+* Ha mérjük, és kap egy eredmény 00, a szuperpozíció összeomlik, így csak feltételek összhangban ezzel az eredménnyel. Ez $\alpha\ket{000} +\beta\ket{001}$. Ez $\ket{00}(\alpha\ket{0} +\beta\ket{1})$-ra refactorálható. Ezért ha mérjük az első és a második qubit, hogy 00, tudjuk, hogy a harmadik{0} qubit,{1} __ott__van az állam $(\alpha\ket +\beta\ket )$.
+* Ha mérjük, és kap egy eredmény 01, a szuperpozíció összeomlik, így csak feltételek összhangban ezzel az eredménnyel. Ez $\alpha\ket{011} +\beta\ket{010}$. Ez $\ket{01}(\alpha\ket{1} +\beta\ket{0})$-ra refactorálható. Ezért, ha mérjük az első és a második qubit, hogy 01, tudjuk, hogy a{1} harmadik qubit,{0} __ott__van az állam $(\alpha\ket +\beta\ket )$.
+* Ha mérjük, és kap egy eredményt 10, a szuperpozíció összeomlik, így csak feltételek összhangban ezzel az eredménnyel. Ez $\alpha\ket{100} -\beta\ket{101}$. Ez $\ket{10}(\alpha\ket{0} -\beta\ket{1})$-ra refactorálható. Ezért ha az első és a második qubit 10-es, akkor tudjuk, hogy a harmadik qubit, __ott__van az állam $(\alpha\ket{0} -\beta\ket{1})$.
+* Ha mérjük, és kap egy eredményt 11, a szuperpozíció összeomlik, így csak feltételek összhangban ezzel az eredménnyel. Ez $\alpha\ket{111} -\beta\ket{110}$. Ez $\ket{11}(\alpha\ket{1} -\beta\ket{0})$-ra refactorálható. Ezért ha az első és a második qubit 11-es, akkor tudjuk, hogy a harmadik qubit, __ott__van az állam $(\alpha\ket{1} -\beta\ket{0})$.
 
-### <a name="step-4-interpret-the-result"></a>4\. lépés: az eredmény értelmezése
+### <a name="step-4-interpret-the-result"></a>4. lépés: Az eredmény értelmezése
 
-Emlékeztetőként az eredetileg elküldeni kívánt __üzenet__ a következő volt:
+Emlékeztetőül, az eredeti __üzenetet__ akartunk küldeni volt:
 
-$ $ \ket{\psi} = \alpha\ket{0} + \beta\ket{1} $ $
+$$ \ket{\psi} = \alpha\ket{0} +{1} \beta\ket $$
 
-Be kell szereznie a __qubit ebbe az__ állapotba, hogy a kapott állapot legyen a kívánt érték. 
+Be kell juttatnunk __a__ qubit-et ebbe az állapotba, hogy a kapott állam az, amit szántak. 
 
-* Ha a mért érték a 00, a harmadik qubit pedig a következő __állapotban van:__ $ (\alpha\ket{0} + \beta\ket{1}) $. Mivel ez a kívánt __üzenet__, nincs szükség módosításra.
-* Ha a mért érték a 01, akkor a harmadik qubit a (\alpha\ket{1} + \beta\ket{0}) $ __állapotban van.__ Ez eltér a kívánt __üzenettől__, de a nem kapu alkalmazása a kívánt állapotot adja meg (\alpha\ket{0} + \beta\ket{1}) $.
-* Ha a mért érték 10, akkor a harmadik qubit a (\alpha\ket{0}-\beta\ket{1}) $ __állapotban van.__ Ez eltér a kívánt __üzenettől__, azonban a Z-kapu alkalmazása a kívánt állapotot adja meg (\alpha\ket{0} + \beta\ket{1}) $.
-* Ha a mért érték 11, akkor a harmadik qubit a (\alpha\ket{1}-\beta\ket{0}) $ __állapotban van.__ Ez különbözik a kívánt __üzenettől__, de a nem kaput, majd egy Z kapun a kívánt állapotot ($ (\alpha\ket{0} + \beta\ket{1}) $ értéket adja meg nekünk.
+* Ha mértük, és kapott egy eredmény 00, __there__akkor a harmadik qubit, ott{0} van az{1}állam $(\alpha\ket +\beta\ket )$. Mivel ez a kívánt __üzenet,__ nincs szükség változtatásra.
+* Ha mértük, és kapott egy eredmény 01, __there__akkor a harmadik qubit, ott{1} van az{0}állam $(\alpha\ket +\beta\ket )$. Ez eltér a tervezett __üzenettől,__ azonban a NOT kapu alkalmazása megadja a{0} kívánt állapotot{1}$(\alpha\ket +\beta\ket )$.
+* Ha mértük, és kapott egy eredmény 10, __there__akkor a harmadik qubit, ott{0} van az{1}állam $(\alpha\ket -\beta\ket )$. Ez eltér a tervezett __üzenettől,__ azonban a Z kapu alkalmazása megadja a{0} kívánt állapotot{1}$(\alpha\ket +\beta\ket )$.
+* Ha mértük, és kapott egy eredmény 11, __there__akkor a harmadik qubit, ott{1} van az{0}állam $(\alpha\ket -\beta\ket )$. Ez eltér a tervezett __üzenettől,__ azonban a NOT kapu, majd a Z kapu alkalmazása{0} megadja nekünk{1}a kívánt állapotot $(\alpha\ket +\beta\ket )$.
 
-Ha a mérés és az első qubit értéke 1, a rendszer a Z kaput alkalmazza. Ha mérjük, és a második qubit értéke 1, a rendszer nem alkalmaz egy kaput.
+Összefoglalva, ha mérjük, és az első qubit 1, a Z kapu kerül alkalmazásra. Ha mérjük, és a második qubit 1, a NOT kapu kerül alkalmazásra.
 
-### <a name="summary"></a>Összegzés
-Alább látható egy szöveges könyvből álló kvantum-kör, amely megvalósítja a teleportáció. Balról jobbra haladva a következőt láthatja:
-- 1\. lépés: a __Hadamard-kapu__ és a cnem-kapu alkalmazásával összekeverhető __itt__ .
-- 2\. lépés: az __üzenet__ elküldése egy cnem-kapuval és egy Hadamard-kapuval.
-- 3\. lépés: az első és a második qubits, az __üzenet__ és az __itt__mért érték mérése.
-- 4\. lépés: nem kapu vagy Z kapu alkalmazása a 3. lépésben mért mértéktől függően.
+### <a name="summary"></a>Összefoglalás
+Az alábbiakban egy tankönyv kvantumáramkör látható, amely megvalósítja a teleportálást. Balról jobbra haladva látható:
+- 1. lépés: Entangling __itt-ott__ alkalmazásával Hadamard kapu és CNOT kapu. __here__
+- 2. lépés: Az __üzenet__ elküldése egy CNOT kapu és egy Hadamard kapu segítségével.
+- 3. lépés: Az első és a második qubit, __üzenet__ és __itt__mérése .
+- 4. lépés: NOT vagy Z kapu alkalmazása a 3.
 
-!["Teleport (msg: Qubit, ott: Qubit): egység"](~/media/teleportation.svg)
+!["Teleport(msg : Qubit, ott: Qubit) : Egység"](~/media/teleportation.svg)
 
-## <a name="quantum-teleportation-code"></a>Quantum teleportáció: kód
+## <a name="quantum-teleportation-code"></a>Quantum Teleportáció: Kód
 
-A Quantum teleportáció:
+Megvan a kvantum teleportáció áramköre:
 
-!["Teleport (msg: Qubit, ott: Qubit): egység"](~/media/teleportation.svg)
+!["Teleport(msg : Qubit, ott: Qubit) : Egység"](~/media/teleportation.svg)
 
-Most már lefordíthatja az ebben a kvantum-áramkörben lévő lépéseket Q #-ra.
+Most már letudjuk fordítani a kvantumáramkör minden egyes lépését Q#-ra.
 
-### <a name="step-0-definition"></a>0\. lépés: definíció
-A teleportálás elvégzése után tudnunk kell, hogy milyen __üzenetet__ szeretnénk elküldeni, és hová szeretnénk elküldeni (__ott__). Éppen ezért egy új, az argumentumként megadott teleport-művelet definiálásával kezdjük, `msg` és `there`:
+### <a name="step-0-definition"></a>0. lépés: Meghatározás
+Amikor végzünk teleportáció, tudnunk kell az __üzenetet__ szeretnénk küldeni, és ahol szeretnénk küldeni __(ott__). Ezért kezdjük egy új teleport művelet meghatározásával, amely két qubitet `msg` `there`kap érvként, és:
 
 ```qsharp
 operation Teleport(msg : Qubit, there : Qubit) : Unit {
 ```
 
-Szükség van egy qubit-`here` kiosztására is, amelyet egy `using` blokkmal érhetünk el:
+Azt is meg kell `here` kiosztani a `using` qubit, amit elérni egy blokk:
 
 ```qsharp
     using (here = Qubit()) {
 ```
 
-### <a name="step-1-create-an-entangled-state"></a>1\. lépés: kusza állapot létrehozása
-Ezután az @"microsoft.quantum.intrinsic.h" és a @"microsoft.quantum.intrinsic.cnot" műveletekkel hozhatjuk létre a kusza párokat `here` és `there` között:
+### <a name="step-1-create-an-entangled-state"></a>1. lépés: Kusza állapot létrehozása
+Ezután létrehozhatjuk a kusza pár @"microsoft.quantum.intrinsic.h" @"microsoft.quantum.intrinsic.cnot" között `here` és `there` a műveletek segítségével:
 
 ```qsharp
         H(here);
         CNOT(here, there);
 ```
 
-### <a name="step-2-send-the-message"></a>2\. lépés: az üzenet elküldése
-Ezt követően a következő $ \operatorname{CNOT} $ és $H $ Gates használatával helyezheti át az üzenet qubit:
+### <a name="step-2-send-the-message"></a>2. lépés: Az üzenet elküldése
+Ezután a következő $\operatorname{CNOT}$ és $H$ kapukat használjuk az üzenet qubit áthelyezéséhez:
 
 ```qsharp
         CNOT(msg, here);
         H(msg);
 ```
 
-### <a name="step-3--4-measuring-and-interpreting-the-result"></a>3\. lépés & 4: az eredmény mérése és értelmezése
-Végül a @"microsoft.quantum.intrinsic.m" használatával hajtjuk végre a méréseket, és végrehajtjuk a szükséges kiindulási műveleteket a kívánt állapot eléréséhez, `if` utasítások szerint:
+### <a name="step-3--4-measuring-and-interpreting-the-result"></a>3. & 4.
+Végül, használjuk, @"microsoft.quantum.intrinsic.m" hogy végre a méréseket, és elvégzi a szükséges kapu `if` műveleteket, hogy a kívánt állapot, amint azt a nyilatkozatok:
 
 ```qsharp
         // Measure out the entanglement
@@ -149,9 +149,16 @@ Végül a @"microsoft.quantum.intrinsic.m" használatával hajtjuk végre a mér
         if (M(here) == One) { X(there); }
 ```
 
-Ez befejezi a teleportáló operátor definícióját, így felszabadítjuk `here`, befejezve a törzset, és befejezjük a műveletet.
+### <a name="step-5-restarting-the-qubit-register"></a>5. lépés: A qubit regiszter újraindítása
+
+Végén minden Q # művelet van szükségünk, hogy hagyja, hogy{0}a qubits az állam $\ket $. @"microsoft.quantum.intrinsic.reset" Használhatjuk, hogy indítsa újra az összes qubits a nulla állapot, és ez befejezi a műveletet.
 
 ```qsharp
+        Reset(msg);
+        Reset(here);
+        Reset(there);
     }
 }
 ```
+
+
