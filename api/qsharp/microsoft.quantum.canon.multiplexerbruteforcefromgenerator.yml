@@ -4,7 +4,7 @@ name: MultiplexerBruteForceFromGenerator
 type: function
 namespace: Microsoft.Quantum.Canon
 summary: >-
-  Egy szorzásra vezérelt, egységes műveletet ad vissza $U $, amely egy egységes $V _j $-t alkalmaz, ha n-qubit számú \ket{j} $.
+  Egy szorzásra vezérelt, egységes műveletet ad vissza, $U $, amely egy egységes $V _j $ értéket alkalmaz, ha n-qubit számú \ket{j} $.
 
 
   $U = \sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j}\otimes V_j $.
@@ -13,7 +13,7 @@ input:
   content: '(unitaryGenerator : (Int, (Int -> (Qubit[] => Unit is Adj + Ctl))))'
   types:
   - name: unitaryGenerator
-    summary: Egy olyan rekord, amelyben az első elem `Int` a unitaries száma $N $, a második elem `(Int -> ('T => () is Adj + Ctl))` egy függvény, amely egy egész $j $ értéket vesz igénybe $ [0, N-1] $ értékben, és az egységes művelet $V _j $ értéket adja eredményül.
+    summary: Egy rekord, amelyben az első `Int` elem a unitaries $N $, a második elem `(Int -> ('T => () is Adj + Ctl))` pedig egy függvény, amely egy egész $j $ értéket vesz igénybe $ [0, N-1] $ értékben, és az egységes művelet $V _j $ értéket adja eredményül.
     types:
     - isPrimitive: true
       uid: Int
@@ -40,7 +40,7 @@ input:
 output:
   content: ((Microsoft.Quantum.Arithmetic.LittleEndian, Qubit[]) => Unit is Adj + Ctl)
   types:
-  - summary: Egy szorzásra vezérelt, egységes művelet $U $, amely `unitaryGenerator`által leírt unitaries alkalmaz.
+  - summary: Egy szorzásra vezérelt, egységes művelet $U $, amely a által `unitaryGenerator`ismertetett unitaries alkalmazza.
     isOperation: true
     input:
       types:
@@ -58,9 +58,9 @@ output:
 seeAlso:
 - microsoft.quantum.canon.multiplexerbruteforcefromgenerator
 metadata:
-  ms.openlocfilehash: 3a5fc9e4b21f14833f28513ad66baa20a4df3de4
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: cfd415245dd96508b015f8d6fa3dfe0c90fa9c0e
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73222731"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82678859"

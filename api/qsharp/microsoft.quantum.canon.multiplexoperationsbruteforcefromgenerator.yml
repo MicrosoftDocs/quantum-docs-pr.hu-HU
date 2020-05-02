@@ -8,13 +8,13 @@ summary: >-
 
 
   $U = \sum ^ {N-1} _ {j = 0} \ket{j}\bra{j}\otimes V_j $.
-remarks: a `coefficients` az azonosító elemek kitöltésével lesznek feltöltve, ha kevesebb, mint $2 ^ n $ van megadva. Ez a verzió közvetlenül az n vezérelt, egységes operátorok használatával valósítható meg.
+remarks: '`coefficients`Ha kevesebb, mint $2 ^ n $ érték van megadva, akkor az azonosító elemek kitöltése megtörténik. Ez a verzió közvetlenül az n vezérelt, egységes operátorok használatával valósítható meg.'
 syntax: "operation MultiplexOperationsBruteForceFromGenerator (unitaryGenerator : (Int, (Int -> ('T => Unit is Adj + Ctl))), index : Microsoft.Quantum.Arithmetic.LittleEndian, target : 'T) : Unit"
 input:
   content: "(unitaryGenerator : (Int, (Int -> ('T => Unit is Adj + Ctl))), index : Microsoft.Quantum.Arithmetic.LittleEndian, target : 'T)"
   types:
   - name: unitaryGenerator
-    summary: Egy rekord, amelyben az első elem `Int` a unitaries száma $N $, a második elem pedig `(Int -> ('T => () is Adj + Ctl))` egy függvény, amely egy egész $j $ értéket vesz igénybe $ [0, N-1] $ értékben, és az egységes művelet $V _j $ értéket adja eredményül.
+    summary: Egy rekord, amelyben az első `Int` elem a unitaries $N $, a második elem `(Int -> ('T => () is Adj + Ctl))` pedig egy függvény, amely egy egész $j $ értéket vesz igénybe $ [0, N-1] $ értékben, és az egységes művelet $V _j $ értéket adja eredményül.
     types:
     - isPrimitive: true
       uid: Int
@@ -53,9 +53,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: a010fc41e76c09f064fdb7a0fa890efcfd8a41f8
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: ea435831323b0e117027005fa8007c87ab3f2575
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73225162"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82678802"
