@@ -34,7 +34,7 @@ input:
 output:
   content: (('T, 'U) => Unit is Ctl)
   types:
-  - summary: Egy új művelet `op`, hogy `op(t, u)` egyenértékű a `(curriedOp(t))(u)`.
+  - summary: Egy olyan új `op` művelet, `op(t, u)` amely egyenértékű a `(curriedOp(t))(u)`következővel:.
     isOperation: true
     input:
       types:
@@ -56,9 +56,9 @@ typeParameters:
 seeAlso:
 - microsoft.quantum.canon.uncurryop
 metadata:
-  ms.openlocfilehash: 2808ad1be091f98185ca9b218d2df6065c15a143
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 763ea81f9a459a358d9a41e177697eb6bf2ca307
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73216951"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82677977"

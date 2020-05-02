@@ -4,7 +4,7 @@ name: AssertOperationsEqualInPlaceCompBasis
 type: operation
 namespace: Microsoft.Quantum.Diagnostics
 summary: >-
-  Ellenőrzi, hogy a művelet `givenU` egyenlő-e a művelet `expectedU` a megadott bemeneti mérettel, ha a műveletek műveletét csak a vektorokon, a számítási alap alapján ellenőrzi.
+  Ellenőrzi, hogy a `givenU` művelet egyenlő-e a `expectedU` művelettel a megadott bemeneti méreten azáltal, hogy a műveletek műveletét csak a vektorokon végzi el a számítások alapján.
 
   Ez egy szükséges, de nem elégséges, a két unitaries egyenlőségének feltétele.
 syntax: 'operation AssertOperationsEqualInPlaceCompBasis (nQubits : Int, givenU : (Qubit[] => Unit), expectedU : (Qubit[] => Unit is Adj)) : Unit'
@@ -12,7 +12,7 @@ input:
   content: '(nQubits : Int, givenU : (Qubit[] => Unit), expectedU : (Qubit[] => Unit is Adj))'
   types:
   - name: nQubits
-    summary: Azon qubits száma, $n $, amelyeken a műveletek `givenU` és `expectedU` működnek.
+    summary: Azon qubits száma, $n $, amelyeken `givenU` a `expectedU` műveletek és működnek.
     isPrimitive: true
     uid: Int
   - name: givenU
@@ -28,7 +28,7 @@ input:
       - isPrimitive: true
         uid: Unit
   - name: expectedU
-    summary: $N $ qubits való hivatkozás, amelyet `givenU` kell összehasonlítani.
+    summary: A (z) $n $ qubits `givenU` hivatkozási művelete, amelyet össze kell hasonlítani.
     isOperation: true
     input:
       types:
@@ -47,9 +47,9 @@ output:
   - isPrimitive: true
     uid: Unit
 metadata:
-  ms.openlocfilehash: 5841b6dc60047c051b38305c177f54d3eb84e087
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: c3a98dee80b9e41ea3c27e1e52c3046751307912
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73066557"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82677278"

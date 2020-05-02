@@ -5,7 +5,7 @@ type: operation
 namespace: Microsoft.Quantum.Characterization
 summary: Megméri az Identity operátort a qubits-regisztrációban.
 remarks: >-
-  Mivel a $ \boldone $ csak a $1 $ sajátérték, és nem rendelkezik negatív sajátérték, a művelet mindig visszaadja `Zero`, amely a sajátérték $ + 1 = (-1) ^ 0 $ értéknek felel meg, és nem okoz összeomlást `register`.
+  Mivel a $ \boldone $ csak a $1 $ sajátérték, és nem rendelkezik negatív sajátérték, ez a művelet mindig visszatér, `Zero`amely a sajátérték $ + 1 = (-1) ^ 0 $ értéknek felel meg, és nem okozza az állapot összeomlását `register`.
 
 
   Önmagában ez a művelet nem hasznos, de a Process tomográfia környezetében hasznos, mivel információt nyújt a kvantum-folyamat nyomon követésének megőrzéséről.
@@ -27,9 +27,9 @@ output:
     isPrimitive: true
     uid: Result
 metadata:
-  ms.openlocfilehash: fcfe08d4ae7a192074b90b7b45fffbcb5944e7ff
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 28dd3655c883c02b798e6e4cdf39c70100c6535b
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73229123"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82677640"

@@ -3,7 +3,7 @@ uid: microsoft.quantum.chemistry.jordanwigner.jordanwignerblockencodinggenerator
 name: JordanWignerBlockEncodingGeneratorSystem
 type: function
 namespace: Microsoft.Quantum.Chemistry.JordanWigner
-summary: '`JWOptimizedHTerms` által leírt Hamilton alakít át egy, a Pauli `GeneratorIndex`kifejezésben kifejezett `GeneratorSystem`ra.'
+summary: A által `JWOptimizedHTerms` ismertetett Hamilton a Pauli `GeneratorSystem` `GeneratorIndex`kifejezésben kifejezett értékre alakítja át.
 syntax: 'function JordanWignerBlockEncodingGeneratorSystem (data : Microsoft.Quantum.Chemistry.JordanWigner.JWOptimizedHTerms) : Microsoft.Quantum.Simulation.GeneratorSystem'
 input:
   content: '(data : Microsoft.Quantum.Chemistry.JordanWigner.JWOptimizedHTerms)'
@@ -14,12 +14,12 @@ input:
 output:
   content: Microsoft.Quantum.Simulation.GeneratorSystem
   types:
-  - summary: A Hamilton `GeneratorSystem`ként való megjelenítése.
+  - summary: A Hamilton megjelenítése mint `GeneratorSystem`.
     uid: microsoft.quantum.simulation.generatorsystem
 metadata:
-  ms.openlocfilehash: f63434d0a3414faf3fbe1882680411bc0a5e6443
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: cf17f51bf5a5ec72157036e8154d4079f2d04ba0
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73228800"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82677502"

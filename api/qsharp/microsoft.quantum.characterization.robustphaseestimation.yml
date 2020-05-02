@@ -3,10 +3,10 @@ uid: microsoft.quantum.characterization.robustphaseestimation
 name: RobustPhaseEstimation
 type: operation
 namespace: Microsoft.Quantum.Characterization
-summary: Elvégzi a robusztus, nem ismétlődő kvantum-értékelési algoritmust egy adott Oracle-`U` és-eigenstate esetében, és egyetlen valós értékű becslést nyújt a fázisról a Heisenberg korláton belüli variancia-skálázással.
+summary: Elvégzi a robusztus, nem ismétlődő kvantum-értékelési algoritmust egy adott Oracle `U` -és eigenstate esetében, és egyetlen valós értékű becslést nyújt a fázisról a Heisenberg korláton belüli variancia-méretezéssel.
 remarks: A nagyszámú lekérdezés korlátozása esetén a Cramer-Rao a becslések szórásának csökkenését a $ \phi $ kielégíti a $ \sigma \ge 2 \pi/\text{# of lekérdezések} $ értékkel.
 syntax: 'operation RobustPhaseEstimation (bitsPrecision : Int, oracle : Microsoft.Quantum.Oracles.DiscreteOracle, targetState : Qubit[]) : Double'
-references: '- Univerzális Qubit kapu robusztus kalibrálása a robusztus fázis-becsléssel Shelby Kimmel, Guang felfüggeszti Hao Low, Theodore J. Yoder https://arxiv.org/abs/1502.02677'
+references: '- Univerzális Qubit kapu robusztus kalibrálása a robusztus fázis-becsléssel Shelby Kimmel, Guang felfüggeszti Hao Low, Theodore J. Yoderhttps://arxiv.org/abs/1502.02677'
 input:
   content: '(bitsPrecision : Int, oracle : Microsoft.Quantum.Oracles.DiscreteOracle, targetState : Qubit[])'
   types:
@@ -28,9 +28,9 @@ output:
   - isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: 169a828036fbe84f49e5d87399319d14a9584051
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 5fa87e4da621871685501d58fa4a70b172f973b7
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73229055"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82677602"
