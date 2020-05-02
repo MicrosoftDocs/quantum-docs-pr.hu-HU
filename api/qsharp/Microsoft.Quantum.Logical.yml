@@ -1,7 +1,7 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.logical
 name: Microsoft.Quantum.Logical
-summary: " # <a name=\"summary\"></a>Összegzés\n A logikai kifejezések és a logikai logika használatának függvényeit tartalmazza."
+summary: " # <a name=\"summary\"></a>Összefoglalás\n A logikai kifejezések és a logikai logika használatának függvényeit tartalmazza."
 functions:
 - uid: microsoft.quantum.logical.and
   summary: Két érték logikai együttesét adja vissza.
@@ -70,9 +70,9 @@ functions:
 - uid: microsoft.quantum.logical.xor
   summary: Két érték logikai kizárólagos kivonását adja vissza.
 metadata:
-  ms.openlocfilehash: 356a31be888d7ed3a96e219f8f7b31151179d3eb
-  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.openlocfilehash: ece9d3bcc41697efa07101844c0693edfc4bec89
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 02/28/2020
-  ms.locfileid: "77905896"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82673205"

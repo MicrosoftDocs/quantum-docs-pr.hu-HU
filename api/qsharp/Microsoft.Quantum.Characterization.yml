@@ -8,9 +8,9 @@ operations:
 - uid: microsoft.quantum.characterization.discretephaseestimationiteration
   summary: Egy iterációs (klasszikusan vezérelt) fázis-értékelési algoritmus egyszeri ismétlését hajtja végre egy egységes Oracle egész számú erejével.
 - uid: microsoft.quantum.characterization.estimatefrequency
-  summary: Az előkészítés és a mérés alapján a rendszer a megadott számú kísérlet végrehajtásával becsüli meg, hogy a mérték milyen gyakorisággal sikeres (`Zero`).
+  summary: Az előkészítés és a mérés miatt a rendszer a megadott számú próbaverzió elvégzésével megbecsüli a gyakoriságot, amellyel a mérték sikeres (visszatérési `Zero`).
 - uid: microsoft.quantum.characterization.estimatefrequencya
-  summary: A adjointable és a mérést követően a rendszer a megadott számú kísérlet végrehajtásával becsüli meg, hogy a mérték milyen gyakorisággal sikeres (`Zero`).
+  summary: A adjointable és a mérést követően a rendszer a megadott számú próbaverzió elvégzésével megbecsüli `Zero`a gyakoriságot, amellyel a mérték sikeres (visszaadott) értékkel rendelkezik.
 - uid: microsoft.quantum.characterization.estimateimagoverlapbetweenstates
   summary: A két művelet, amely az egyes állapotok előkészítését végzi, a megbecsüli az egyes műveletek által előkészített állapotok közötti átfedés képzeletbeli részét.
 - uid: microsoft.quantum.characterization.estimateoverlapbetweenstates
@@ -18,19 +18,19 @@ operations:
 - uid: microsoft.quantum.characterization.estimaterealoverlapbetweenstates
   summary: A két művelet, amely az egyes állapotok előkészítését végzi, az egyes műveletek által előkészített állapotok közötti átfedés valódi részét becsüli meg.
 - uid: microsoft.quantum.characterization.measureallz
-  summary: "\n> [!WARNING]\n> Elavult\n\nA MeasureAllZ elavult. Ehelyett használja a @\"microsoft.quantum.measurement.measureallz\".\nKérjük, használja a @\"microsoft.quantum.measurement.measureAllZ\"."
+  summary: "\n> [!WARNING]\n> Elavult\n\nA MeasureAllZ elavult. Használja @\"microsoft.quantum.measurement.measureallz\" helyette.\nKérjük, @\"microsoft.quantum.measurement.measureAllZ\"használja."
 - uid: microsoft.quantum.characterization.measureidentity
   summary: Megméri az Identity operátort a qubits-regisztrációban.
 - uid: microsoft.quantum.characterization.quantumphaseestimation
-  summary: Végrehajtja az adott Oracle-`U` és `targetState`kvantum fázisának becslési algoritmusát, és a fázist egy nagy endian kvantum-regiszterbe olvassa.
+  summary: Végrehajtja a kvantum fázis becslési algoritmusát egy `U` adott `targetState`Oracle esetében, és beolvassa a fázist egy nagy endian kvantum-regisztrációba.
 - uid: microsoft.quantum.characterization.robustphaseestimation
-  summary: Elvégzi a robusztus, nem ismétlődő kvantum-értékelési algoritmust egy adott Oracle-`U` és-eigenstate esetében, és egyetlen valós értékű becslést nyújt a fázisról a Heisenberg korláton belüli variancia-skálázással.
+  summary: Elvégzi a robusztus, nem ismétlődő kvantum-értékelési algoritmust egy adott Oracle `U` -és eigenstate esetében, és egyetlen valós értékű becslést nyújt a fázisról a Heisenberg korláton belüli variancia-méretezéssel.
 - uid: microsoft.quantum.characterization.singlequbitprocesstomographymeasurement
   summary: Egy qubit-alapú Process tomográfia-mérést hajt végre Pauli alapon, egy adott érdeklődési csatornán keresztül.
 metadata:
-  ms.openlocfilehash: ff2bee3d5885c4b83a7ba17eeaf578c226dbbf20
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: 2ae4ee28cf6e87a3fde1f8107194760c388b462c
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76870681"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82673361"

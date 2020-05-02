@@ -13,7 +13,7 @@ summary: >-
 
 
   Feltételezzük, hogy $N $, $x $ értéke pozitív, és a teljesítmény nem negatív.
-remarks: A `power`ban lévő BITS számával arányos időt vesz igénybe, nem maga a `power`.
+remarks: Időt vesz igénybe a bitek számával `power`, nem pedig `power` magával.
 syntax: 'function ExpModL (expBase : BigInt, power : BigInt, modulus : BigInt) : BigInt'
 input:
   content: '(expBase : BigInt, power : BigInt, modulus : BigInt)'
@@ -33,9 +33,9 @@ output:
   - isPrimitive: true
     uid: BigInt
 metadata:
-  ms.openlocfilehash: c314b3b34a1abf253dd9af205f766fad14abea49
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: f694fa792e8aee5846ce6ec2393287eb64aca44d
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73233050"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82673869"

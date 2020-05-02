@@ -14,14 +14,14 @@ summary: >-
 
   - A rendszer regisztrálja $s $, amely a kívánt Quantum State $ \ket{\psi}\_s $ értéket fogja tárolni.
 remarks: >-
-  Ez az Oracle által meghatározott $ $ O\ket{0}\_{f} \ket{0}\_s = \lambda\ket{1}\_f\ket {\ PSI}\_s + \sqrt{1-| \lambda | ^ 2} \ket{0}\_f\cdots, $ $ a on számítási alapon kiszámított állapot $ \ket{0}\_{f} \ket{0}\_s $, hogy létrehozza a célként megadott állapotot $ \ket{\psi}\_s $ és amplitúdó $ \lambda $ alapján, a $ \ket{1}\_f $ jelöléssel.
+  Ez az Oracle által meghatározott $ ${0}\_O\ket {f}{0}\_\ket s ={1}\_\lambda\ket f\ket {\ PSI\_} s + \sqrt{1-| \lambda | ^ 2}{0}\_\ket f\cdots, $ $ a számítás alapjául szolgáló állapot ${0}\_\ket {{0}\_f} \ket s $, hogy létrehozta a cél állapot $ \ket{\psi}\_s $ és amplitúdó $ \lambda $ értéket a $ \ket{1}\_f $ jelöléssel.
 
-  Az első paraméter a $ \ket{0}\_f $ qubit-regisztrációjának indexe. A második paraméter mindkét regisztert magában foglalja.
+  Az első paraméter egy index a $ \ket{0}\_f $ qubit-regisztrációhoz. A második paraméter mindkét regisztert magában foglalja.
 syntax: newtype StateOracle = ((Int, Qubit[]) => Unit is Adj + Ctl);
 metadata:
-  ms.openlocfilehash: 1faa47c21e43355ed036498adf4e823ff3f8a0e4
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: fe7ced83927d709bcc6fe82d8866b221446c7d73
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73067220"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82673487"

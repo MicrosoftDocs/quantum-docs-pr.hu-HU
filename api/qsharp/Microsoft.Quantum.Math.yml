@@ -3,9 +3,9 @@ uid: microsoft.quantum.math
 name: Microsoft.Quantum.Math
 functions:
 - uid: microsoft.quantum.math.abscomplex
-  summary: Egy összetett számú típusú `Complex`abszolút értékét adja vissza.
+  summary: Egy összetett számú típus `Complex`abszolút értékét adja vissza.
 - uid: microsoft.quantum.math.abscomplexpolar
-  summary: Egy összetett számú típusú `ComplexPolar`abszolút értékét adja vissza.
+  summary: Egy összetett számú típus `ComplexPolar`abszolút értékét adja vissza.
 - uid: microsoft.quantum.math.absd
   summary: Egy dupla pontosságú lebegőpontos szám abszolút értékét adja vissza.
 - uid: microsoft.quantum.math.absi
@@ -13,9 +13,9 @@ functions:
 - uid: microsoft.quantum.math.absl
   summary: Egy nagy egész szám abszolút értékét adja vissza.
 - uid: microsoft.quantum.math.abssquaredcomplex
-  summary: Egy összetett számú, `Complex`típusú, négyzetes abszolút értéket ad vissza.
+  summary: Egy komplex számú típus `Complex`négyzetes abszolút értékét adja vissza.
 - uid: microsoft.quantum.math.abssquaredcomplexpolar
-  summary: Egy összetett számú, `ComplexPolar`típusú, négyzetes abszolút értéket ad vissza.
+  summary: Egy komplex számú típus `ComplexPolar`négyzetes abszolút értékét adja vissza.
 - uid: microsoft.quantum.math.arccos
   summary: Azt a szöget adja vissza, amelynek koszinusza a megadott szám.
 - uid: microsoft.quantum.math.arccosh
@@ -31,35 +31,35 @@ functions:
 - uid: microsoft.quantum.math.arctanh
   summary: Egy szám inverz hiperbolikus tangensét számítja ki.
 - uid: microsoft.quantum.math.argcomplex
-  summary: Egy `Complex`típusú összetett szám fázisát adja vissza.
+  summary: Egy összetett számú típus `Complex`fázisát adja vissza.
 - uid: microsoft.quantum.math.argcomplexpolar
-  summary: Egy `ComplexPolar`típusú összetett szám fázisát adja vissza.
+  summary: Egy összetett számú típus `ComplexPolar`fázisát adja vissza.
 - uid: microsoft.quantum.math.bitsizei
   summary: >-
-    Ha nem negatív egész szám `a`, a visszaadja a `a`ábrázolásához szükséges bitek számát.
+    A nem negatív egész szám `a`esetén a a jelölőhöz `a`szükséges bitek számát adja vissza.
 
 
     Vagyis a legkisebb $n $ értéket adja vissza, amely $a < 2 ^ n $.
 - uid: microsoft.quantum.math.bitsizel
   summary: >-
-    Ha nem negatív egész szám `a`, a visszaadja a `a`ábrázolásához szükséges bitek számát.
+    A nem negatív egész szám `a`esetén a a jelölőhöz `a`szükséges bitek számát adja vissza.
 
 
     Vagyis a legkisebb $n $ értéket adja vissza, amely $a < 2 ^ n $.
 - uid: microsoft.quantum.math.ceiling
   summary: A megadott számnál nagyobb vagy azzal egyenlő legkisebb egész számot adja vissza.
 - uid: microsoft.quantum.math.complexascomplexpolar
-  summary: Komplex számú típusú `Complex` konvertálása összetett típusúra `ComplexPolar`.
+  summary: Komplex `Complex` számú típust alakít át összetett típusúra `ComplexPolar`.
 - uid: microsoft.quantum.math.complexpolarascomplex
-  summary: Komplex számú típusú `ComplexPolar` konvertálása összetett típusúra `Complex`.
+  summary: Komplex `ComplexPolar` számú típust alakít át összetett típusúra `Complex`.
 - uid: microsoft.quantum.math.complexpolartocomplex
-  summary: "\n> [!WARNING]\n> Elavult\n\nA ComplexPolarToComplex elavult. Ehelyett használja a @\"microsoft.quantum.math.complexpolarascomplex\"."
+  summary: "\n> [!WARNING]\n> Elavult\n\nA ComplexPolarToComplex elavult. Használja @\"microsoft.quantum.math.complexpolarascomplex\" helyette."
 - uid: microsoft.quantum.math.complextocomplexpolar
-  summary: "\n> [!WARNING]\n> Elavult\n\nA ComplexToComplexPolar elavult. Ehelyett használja a @\"microsoft.quantum.math.complexascomplexpolar\"."
+  summary: "\n> [!WARNING]\n> Elavult\n\nA ComplexToComplexPolar elavult. Használja @\"microsoft.quantum.math.complexascomplexpolar\" helyette."
 - uid: microsoft.quantum.math.continuedfractionconvergenti
-  summary: Megkeresi az `fraction` legközelebb lévő, a nevezővel megegyező, kisebb vagy egyenlő `denominatorBound`
+  summary: Megkeresi a legközelebb `fraction` lévő, kisebb vagy egyenlő nevezőből álló nevezőt`denominatorBound`
 - uid: microsoft.quantum.math.continuedfractionconvergentl
-  summary: Megkeresi az `fraction` legközelebb lévő, a nevezővel megegyező, kisebb vagy egyenlő `denominatorBound`
+  summary: Megkeresi a legközelebb `fraction` lévő, kisebb vagy egyenlő nevezőből álló nevezőt`denominatorBound`
 - uid: microsoft.quantum.math.cos
   summary: A megadott szög koszinuszát adja vissza.
 - uid: microsoft.quantum.math.cosh
@@ -145,9 +145,9 @@ functions:
 - uid: microsoft.quantum.math.modpowl
   summary: Moduláris osztást végez egy másik szám hatványára emelt számon.
 - uid: microsoft.quantum.math.modulusi
-  summary: Kiszámítja `value` adatosztási `modulus`kanonikus maradékát.
+  summary: Kiszámítja a `value` többrészes `modulus`adatmennyiség kanonikus maradékát.
 - uid: microsoft.quantum.math.modulusl
-  summary: Kiszámítja `value` adatosztási `modulus`kanonikus maradékát.
+  summary: Kiszámítja a `value` többrészes `modulus`adatmennyiség kanonikus maradékát.
 - uid: microsoft.quantum.math.negationc
   summary: Egy bemenet egyoperandusú tagadását adja vissza.
 - uid: microsoft.quantum.math.negationcp
@@ -174,16 +174,16 @@ functions:
   summary: Két bemenet összegét adja vissza.
 - uid: microsoft.quantum.math.pnorm
   summary: >-
-    `Double`s vektorának `L(p)`i normáját adja vissza.
+    Az `L(p)` `Double`s vektorának normáját adja vissza.
 
 
-    Ez azt eredményezi, hogy egy `Double[]`típusú tömb $x $ értékkel tér vissza $p $-Norm $\|x\|\_p = (\ sum_ {j} | x_j | ^ {p}) ^ {1/p} $.
+    Ez azt eredményezi, hogy egy tömb $x $ `Double[]`típusú, ez a következőt adja vissza:\|$p\|\_$-norm $ x p = (\ sum_ {j} | x_j | ^ {p}) ^ {1/p} $.
 - uid: microsoft.quantum.math.pnormalized
   summary: >-
-    `Double`s vektorának normalizálása a `L(p)` normában.
+    Normalizálja az `Double`s-vektort a `L(p)` normában.
 
 
-    Ez azt eredményezi, hogy a tömb $x $ típusú `Double[]`, amely egy olyan tömböt ad vissza, amelyben az összes elem az $p $-Norm $\|x\|_p $ értékre van osztva.
+    Ez azt eredményezi, hogy egy Array $x $ `Double[]`típusú tömbben olyan tömböt ad vissza, amelyben az összes elem a $p $-norm\|$\|x _p $ értékkel van elosztva.
 - uid: microsoft.quantum.math.powc
   summary: Egy megadott hatványra emelt számot ad vissza.
 - uid: microsoft.quantum.math.powcp
@@ -230,7 +230,7 @@ functions:
   summary: Egy szám szerves részét számítja ki.
 newtypes:
 - uid: microsoft.quantum.math.bigfraction
-  summary: A `p/q`űrlap racionális számát jelöli. Az egész `p` a rekord első eleme, és a `q` a rekord második eleme.
+  summary: Az űrlap `p/q`racionális számát jelöli. Az `p` egész szám a rekord első eleme, `q` amely a rekord második eleme.
 - uid: microsoft.quantum.math.complex
   summary: >-
     Egy összetett számot képvisel a valódi és a képzeletbeli összetevők alapján.
@@ -243,8 +243,8 @@ newtypes:
 
     Egy összetett szám poláris ábrázolása $c = r e ^ {i t} $.
 - uid: microsoft.quantum.math.fraction
-  summary: A `p/q`űrlap racionális számát jelöli. Az egész `p` a rekord első eleme, és a `q` a rekord második eleme.
-summary: " # <a name=\"summary\"></a>Összegzés\n Ez a névtér klasszikus matematikai függvényeket és adattípusokat tartalmaz."
+  summary: Az űrlap `p/q`racionális számát jelöli. Az `p` egész szám a rekord első eleme, `q` amely a rekord második eleme.
+summary: " # <a name=\"summary\"></a>Összefoglalás\n Ez a névtér klasszikus matematikai függvényeket és adattípusokat tartalmaz."
 operations:
 - uid: microsoft.quantum.math.randomint
   summary: Egy, a nullánál nagyobb vagy azzal egyenlő, és a megadott felső határértéknél kisebb, egyforma, véletlenszerűen kiválasztott véletlenszerű egész számot hoz létre.
@@ -255,9 +255,9 @@ operations:
 - uid: microsoft.quantum.math.randomsinglequbitpauli
   summary: A qubit Pauli-operátorok egyikét adja vissza egységesen véletlenszerűen.
 metadata:
-  ms.openlocfilehash: 03a0eba2101d3a20b393b7f685ac463b1abcd727
-  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.openlocfilehash: 2ad787a0d29e98e25c733d1fdcf0a79fcc8c2803
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 02/28/2020
-  ms.locfileid: "77905828"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82673162"

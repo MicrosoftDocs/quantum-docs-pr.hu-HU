@@ -3,13 +3,13 @@ uid: microsoft.quantum.extensions.diagnostics
 name: Microsoft.Quantum.Extensions.Diagnostics
 functions:
 - uid: microsoft.quantum.extensions.diagnostics.dumpmachine
-  summary: "\n> [!WARNING]\n> Elavult\n\nA DumpMachine elavult. Ehelyett használja a @\"microsoft.quantum.diagnostics.dumpmachine\".\nKérjük, használja a @\"microsoft.quantum.diagnostics.dumpmachine\"."
+  summary: "\n> [!WARNING]\n> Elavult\n\nA DumpMachine elavult. Használja @\"microsoft.quantum.diagnostics.dumpmachine\" helyette.\nKérjük, @\"microsoft.quantum.diagnostics.dumpmachine\"használja."
 - uid: microsoft.quantum.extensions.diagnostics.dumpregister
-  summary: "\n> [!WARNING]\n> Elavult\n\nA DumpRegister elavult. Ehelyett használja a @\"microsoft.quantum.diagnostics.dumpregister\".\nKérjük, használja a @\"microsoft.quantum.diagnostics.dumpregister\"."
+  summary: "\n> [!WARNING]\n> Elavult\n\nA DumpRegister elavult. Használja @\"microsoft.quantum.diagnostics.dumpregister\" helyette.\nKérjük, @\"microsoft.quantum.diagnostics.dumpregister\"használja."
 metadata:
-  ms.openlocfilehash: 71f997adf7dbca7e45250652032237c07f1354e5
-  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+  ms.openlocfilehash: dcd10bf143cd50e937cb6ad0d81f15247401c2b8
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 12/05/2019
-  ms.locfileid: "74858292"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82673269"
