@@ -4,14 +4,14 @@ name: JordanWignerEncodingData
 type: newtype
 namespace: Microsoft.Quantum.Chemistry.JordanWigner
 summary: >-
-  Az átadott C# adatok formátuma a következőre: Q #, amely a Hamilton-szimuláció összes adatát képviseli.
+  A C# és a Q # között átadott adatok formátuma, amely a Hamilton-szimuláció összes adatát képviseli.
 
   A megjelenített adatmennyiség jelentését az azt fogadó algoritmus határozza meg.
 syntax: newtype JordanWignerEncodingData = (Int, Microsoft.Quantum.Chemistry.JordanWigner.JWOptimizedHTerms, (Int, Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerInputState[]), Double);
 metadata:
-  ms.openlocfilehash: 9e0dd700be01f80b2e0414c7a67b5a72836e5ba5
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: ab47c3c5075b884576c0c5d0f18c252f94c472e2
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73228715"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82667490"
