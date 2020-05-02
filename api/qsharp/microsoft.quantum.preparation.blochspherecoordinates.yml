@@ -7,21 +7,21 @@ summary: >-
   Kiszámítja a Bloch gömb koordinátáit egy qubit állapothoz.
 
 
-  Az qubit-állapotot jelölő két összetett szám $a 0, a1 $, amely a Bloch szférán belüli számításokat, például $a 0 \ket{0} + a1 \ket{1} = r e ^ {it} (e ^ {-i \phi/2}\cos{(\ THÉTA/2)} \ket{0}+ e ^ {i \phi/2}\sin{(\ THÉTA/2)} \ket{1}) $ értéket adja meg.
+  Az qubit-állapotot jelölő két összetett szám $a 0, a1 $, amely a Bloch szférán belüli számításokat mutatja be, így{0} $a 0 \ket{1} + a1 \ket = r e ^ {it} (e ^ {-i \phi/2}\cos{(\ THÉTA/2{0})} \ket + e ^ {i \phi/2}\sin{(\ THÉTA/2{1})} \ket) $.
 syntax: 'function BlochSphereCoordinates (a0 : Microsoft.Quantum.Math.ComplexPolar, a1 : Microsoft.Quantum.Math.ComplexPolar) : (Microsoft.Quantum.Math.ComplexPolar, Double, Double)'
 input:
   content: '(a0 : Microsoft.Quantum.Math.ComplexPolar, a1 : Microsoft.Quantum.Math.ComplexPolar)'
   types:
   - name: a0
-    summary: Összetett együttható a $ \ket{0}$ állapottal.
+    summary: A \ket{0}$ állapotú összetett együttható.
     uid: microsoft.quantum.math.complexpolar
   - name: a1
-    summary: Összetett együttható a $ \ket{1}$ állapottal.
+    summary: A \ket{1}$ állapotú összetett együttható.
     uid: microsoft.quantum.math.complexpolar
 output:
   content: (Microsoft.Quantum.Math.ComplexPolar, Double, Double)
   types:
-  - summary: '`(ComplexPolar(r, t), phi, theta)`tartalmazó rekord.'
+  - summary: Egy rekordot tartalmazó `(ComplexPolar(r, t), phi, theta)`rekord.
     types:
     - uid: microsoft.quantum.math.complexpolar
     - isPrimitive: true
@@ -29,9 +29,9 @@ output:
     - isPrimitive: true
       uid: Double
 metadata:
-  ms.openlocfilehash: fc9dbef764c9d95de2183b9b093e00f20dfb0697
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 98d543849be177941a0c346c1de6b5b6930e783e
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73228137"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82683224"
