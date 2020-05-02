@@ -12,17 +12,17 @@ output:
   content: Int
   types:
   - summary: >-
-      Egy `using`-utasításban foglalható qubits száma.
+      Egy `using` utasításban lefoglalt qubits száma.
 
-      Ha a használt célszámítógép nem adja meg ezeket az adatokat, akkor a rendszer `-1` visszaadja.
+      Ha a használt célszámítógép nem adja meg ezeket az adatokat, akkor `-1` a rendszer visszaadja.
     isPrimitive: true
     uid: Int
 seeAlso:
 - getqubitsavailabletoborrow
 metadata:
-  ms.openlocfilehash: 1cb1331aa26ec9755a9e379336f46387b61bb0ae
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 82d8c27064cbb234b32707aa31fb0869f66ce23c
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73230466"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82682399"

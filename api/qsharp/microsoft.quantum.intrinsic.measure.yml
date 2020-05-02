@@ -7,9 +7,9 @@ summary: >-
   Egy vagy több qubits közös mérését hajtja végre a megadott Pauli-alapokon.
 
 
-  A kimenet eredményét a következő eloszlás adja meg: \begin{align} \Pr (\texttt{Zero} | \ket{\psi}) = \frac12 \braket{\psi \mid | \left (\boldone + P_0 \otimes P_1 \otimes \cdots \otimes P_ {N-1} \right) \mid | \psi}, \end{align}, ahol a $P _i $ a $i $ th eleme @no__ t_0_, és hol $N = \texttt{Length} (\texttt{bases}) $.
+  A kimenet eredményét a következő eloszlás adja meg: \begin{align} \Pr (\texttt{Zero} | \ket{\psi}) = \frac12 \braket{\psi \mid | \left (\boldone + P_0 \otimes P_1 \otimes \cdots \otimes P_ {N-1} \right) \mid | \psi}, \end{align}, ahol $P _i $ a $i $ th eleme `bases`, és ahol $N = \texttt{length} (\texttt{bases}) $.
 
-  Ez azt eredményezi, hogy a mérés egy `Result` $d $ értéket ad vissza, hogy a megfigyelt sajátérték értéke $ (-1) ^ d $.
+  Ez azt eredményezi, hogy `Result` a mérés egy $d $ értéket ad vissza, hogy a megfigyelt mérési hatás sajátérték értéke $ (-1) ^ d $.
 remarks: Ha az alap tömb és a qubit tömb eltérő hosszúságú, akkor a művelet sikertelen lesz.
 syntax: 'operation Measure (bases : Pauli[], qubits : Qubit[]) : Result'
 input:
@@ -28,13 +28,13 @@ input:
 output:
   content: Result
   types:
-  - summary: '`Zero`, hogy megfigyelhető-e a $ + $1 sajátérték, és `One`, hogy a $-$1 sajátérték meg van-e figyelve.'
+  - summary: '`Zero`Ha a $ + $1 sajátérték meg van figyelve `One` , és ha a $-$1 sajátérték meg van figyelve.'
     isPrimitive: true
     uid: Result
 metadata:
-  ms.openlocfilehash: 65390f851d82eb579d89072dc770f3ce077ce515
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: a2f89d1eea48ac0a4dab7e35ef661d89a40ae84a
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73234104"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82682850"
