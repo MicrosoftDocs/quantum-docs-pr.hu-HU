@@ -7,10 +7,10 @@ summary: >-
   Egy bitenkénti műveletet alkalmaz egy klasszikus egész szám és egy olyan egész szám között, amelyet a qubits regisztere képvisel.
 
 
-  `X` műveleteket alkalmaz a qubits egy kis endian-regisztráción egy egész számon belül 1 bit alapján.
+  A `X` qubits egy kis endian-regisztráción alapuló műveleteket alkalmaz egy egész számban 1 bit alapján.
 
 
-  Tegyük fel, hogy az a `value` jelöli meg, és hagyja, hogy y legyen egy előjel nélküli egész szám `target`ban, majd `InPlaceXorLE` végrehajtja a következő Térkép által megadott műveletet: $ \ket{y}\rightarrow \ket{y\oplus a} $, ahol a $ \oplus $ a bitenkénti kizárólagos vagy operátor.
+  `value` Tegyük fel `target`, hogy az a és az y legyen előjel nélküli egész szám, amely a következő Térkép által megadott műveletet `InPlaceXorLE` hajtja végre: $ \ket{y}\rightarrow \ket{y\oplus a} $, ahol a $ \oplus $ a bitenkénti kizárólagos vagy operátor.
 syntax: 'operation ApplyXorInPlace (value : Int, target : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 input:
   content: '(value : Int, target : Microsoft.Quantum.Arithmetic.LittleEndian)'
@@ -20,7 +20,7 @@ input:
     isPrimitive: true
     uid: Int
   - name: target
-    summary: Egy kvantum-regiszter, amely a `value` kis endian kódolásban való tárolásához használatos.
+    summary: Olyan kvantum-regiszter, amely kis endian `value` kódolásban való tárolásra szolgál.
     uid: microsoft.quantum.arithmetic.littleendian
 output:
   content: Unit
@@ -31,9 +31,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 9d3d837d92537cc5d51a80e8e1c83c230b7acc28
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: 27568274d343242f3b3bd0eef8de6e48d546de1f
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76871175"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82679918"

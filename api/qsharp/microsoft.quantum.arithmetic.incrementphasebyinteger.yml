@@ -7,7 +7,7 @@ summary: >-
   Megnöveli egy előjel nélküli kvantum-regisztrációt egy klasszikus egész számmal, fázisok forgása alapján.
 
 
-  Tegyük fel, hogy `target` kódol egy előjel nélküli egész $x $-endian kódolásban, és a `increment` $a $ értékkel egyenlő.
+  Tegyük `target` fel, hogy az előjel nélküli egész $x $ endian kódolásban kódolja, és `increment` a $a $ értékkel egyenlő.
 
   Ezt követően ez a művelet megvalósítja az egységes $ \ket{x} \mapsto \ket{x + a} $ értéket, ahol a Hozzáadás a maradékot a 2. számú ^ n $, ahol a $n = \texttt{Length (TARGET!)} $.
 remarks: >-
@@ -21,7 +21,7 @@ input:
   content: '(increment : Int, target : Microsoft.Quantum.Arithmetic.PhaseLittleEndian)'
   types:
   - name: increment
-    summary: Az egész szám, amellyel a `target` növekszik.
+    summary: Az az egész szám, `target` amelynek a értéke növekszik.
     isPrimitive: true
     uid: Int
   - name: target
@@ -39,9 +39,9 @@ seeAlso:
 - incrementbyintegerbe
 - incrementbyintegerle
 metadata:
-  ms.openlocfilehash: 379e643826ca54e123c8b855f4bba48a9d79a137
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 2893d432b4043bbacb425f3ae42cbbdd3d4dc225
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73219042"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82679519"
