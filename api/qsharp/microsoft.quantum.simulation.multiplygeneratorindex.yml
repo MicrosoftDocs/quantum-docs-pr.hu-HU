@@ -3,7 +3,7 @@ uid: microsoft.quantum.simulation.multiplygeneratorindex
 name: MultiplyGeneratorIndex
 type: function
 namespace: Microsoft.Quantum.Simulation
-summary: Összeszorozza az együtthatót egy `GeneratorIndex`ban.
+summary: A együtthatót szorozza meg a `GeneratorIndex`-ben.
 examples: >-
   ```qsharp
 
@@ -23,19 +23,19 @@ input:
     isPrimitive: true
     uid: Double
   - name: generatorIndex
-    summary: A megszorozni kívánt `GeneratorIndex`.
+    summary: A `GeneratorIndex` megszorozva.
     uid: microsoft.quantum.simulation.generatorindex
 output:
   content: Microsoft.Quantum.Simulation.GeneratorIndex
   types:
-  - summary: Egy olyan `GeneratorIndex`, amely egy olyan kifejezést jelöl, amelynek a faktora nagyobb, mint `multiplier`.
+  - summary: Egy `GeneratorIndex` olyan kifejezést jelöl, amelynek a faktora `multiplier` nagyobb.
     uid: microsoft.quantum.simulation.generatorindex
 seeAlso:
 - microsoft.quantum.canon.generatorindex
 metadata:
-  ms.openlocfilehash: a417f41110f95a82e76038680ba76502aae84bd4
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 37a7981f62881e1b8f1a6874508df87c042c6382
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73226233"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82682578"

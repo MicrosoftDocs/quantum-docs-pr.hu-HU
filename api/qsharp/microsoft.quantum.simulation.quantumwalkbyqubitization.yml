@@ -7,9 +7,9 @@ summary: >-
   A blokk kódolású tükröződést egy Quantum walkre konvertálja.
 
 
-  Egy olyan `BlockEncodingReflection`, amely egy egységes $U $-t képvisel, amely egy operátort $H $ kamatot kódol, egy Quantum Walk $W $ értéket tartalmaz, amely a $ \pm e ^ {\pm i\sin ^{-1}(H)} $ spektrumot tartalmazza.
+  Egy olyan `BlockEncodingReflection` egységes $U $ által képviselt, amely egyes operátorok $H $ kamatot kódol, egy quantum Walk $W $ értéket tartalmaz, amely a $ \pm e ^ {\pm i\sin ^{-1}(H)} $ spektrumát tartalmazza.
 syntax: 'function QuantumWalkByQubitization (blockEncoding : Microsoft.Quantum.Simulation.BlockEncodingReflection) : ((Qubit[], Qubit[]) => Unit is Adj + Ctl)'
-references: '- Hamilton szimuláció a Qubitization Guang felfüggeszti Hao Low, Isaac L. https://arxiv.org/abs/1610.06546'
+references: '- Hamilton szimuláció a Qubitization Guang felfüggeszti Hao Low, Isaac L. ahttps://arxiv.org/abs/1610.06546'
 input:
   content: '(blockEncoding : Microsoft.Quantum.Simulation.BlockEncodingReflection)'
   types:
@@ -18,7 +18,7 @@ input:
 output:
   content: ((Qubit[], Qubit[]) => Unit is Adj + Ctl)
   types:
-  - summary: A (z) $W $ `a` és `s`, amely blokkolja a $H $ kódolást, és a $ \pm e ^ {\pm i\sin ^{-1}(H)} $ spektrumot tartalmazza.
+  - summary: Egy Quantum Walk $W $, amely a regisztereken közösen működik, `a` és `s` blokkolja a kódolást $H $, és tartalmazza a $ \pm e ^ {\Pm i\sin ^{-1}(H)} $ spektrumát.
     isOperation: true
     input:
       types:
@@ -39,9 +39,9 @@ seeAlso:
 - microsoft.quantum.canon.blockencoding
 - microsoft.quantum.canon.blockencodingreflection
 metadata:
-  ms.openlocfilehash: aed748abe8f3468da0cc772606afc4f577c4abeb
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: e2a6c0469b730140b8584e8cff2aad2d68254793
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76869151"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82682500"

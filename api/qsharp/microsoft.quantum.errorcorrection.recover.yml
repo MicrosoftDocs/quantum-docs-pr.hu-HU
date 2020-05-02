@@ -3,7 +3,7 @@ uid: microsoft.quantum.errorcorrection.recover
 name: Recover
 type: operation
 namespace: Microsoft.Quantum.ErrorCorrection
-summary: Egy `QECC` típus által leírt kvantum-kóddal hajtja végre a hibajavítások egy részét.
+summary: Egy adott `QECC` típus által leírt kvantum-kóddal hajtja végre a hibajavítások egy szakaszát.
 syntax: 'operation Recover (code : Microsoft.Quantum.ErrorCorrection.QECC, fn : Microsoft.Quantum.ErrorCorrection.RecoveryFn, logicalRegister : Microsoft.Quantum.ErrorCorrection.LogicalRegister) : Unit'
 input:
   content: '(code : Microsoft.Quantum.ErrorCorrection.QECC, fn : Microsoft.Quantum.ErrorCorrection.RecoveryFn, logicalRegister : Microsoft.Quantum.ErrorCorrection.LogicalRegister)'
@@ -12,7 +12,7 @@ input:
     summary: Kvantum-hiba – a `QECC` típusként csomagolt kód kijavítani a kvantum-adatok kódolását és dekódolását, valamint a hiba-szindrómák mérésének módját.
     uid: microsoft.quantum.errorcorrection.qecc
   - name: fn
-    summary: Egy `RecoveryFn`, amely az észlelt hibát javító `Pauli[]` műveletekhez rendeli a hibákat.
+    summary: A `RecoveryFn` az észlelt hibát javító műveletekkel `Pauli[]` leképezi az egyes hibákat.
     uid: microsoft.quantum.errorcorrection.recoveryfn
   - name: logicalRegister
     summary: Olyan qubits tömbje, amelyben a stabilizátor kódja van meghatározva.
@@ -27,9 +27,9 @@ seeAlso:
 - microsoft.quantum.canon.recoveryfn
 - microsoft.quantum.canon.logicalregister
 metadata:
-  ms.openlocfilehash: baaa5862dd189a04667081d762900931e6b5e766
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 2a873e06c20bf62c998b1096d862d26ff89aa134
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73220351"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82682292"

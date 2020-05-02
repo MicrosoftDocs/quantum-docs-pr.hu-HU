@@ -9,7 +9,7 @@ input:
   content: '(qSharpData : Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerEncodingData, trotterStepSize : Double, trotterOrder : Int)'
   types:
   - name: qSharpData
-    summary: A Hamilton `JordanWignerEncodingData` formátuma írja le.
+    summary: A Hamilton formátum `JordanWignerEncodingData` szerint van leírva.
     uid: microsoft.quantum.chemistry.jordanwigner.jordanwignerencodingdata
   - name: trotterStepSize
     summary: A Trotter-integrátor lépésének mérete.
@@ -22,7 +22,7 @@ input:
 output:
   content: (Int, (Double, (Qubit[] => Unit is Adj + Ctl)))
   types:
-  - summary: 'Az a rekord, ahol a: `Int` a lefoglalt qubits száma, `Double` `1.0/trotterStepSize`, és a művelet a Trotter lépés.'
+  - summary: 'Egy rekord, ahol `Int` a: a lefoglalt `Double` `1.0/trotterStepSize`qubits száma, a művelet pedig a Trotter lépés.'
     types:
     - isPrimitive: true
       uid: Int
@@ -43,9 +43,9 @@ output:
         - Adjoint
         - Controlled
 metadata:
-  ms.openlocfilehash: f8fe25db9eac627649601b1526e4c81eb13d9b99
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: defa30f488d64991bea7e005d18b9eafeb99f05a
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73066132"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82683105"
