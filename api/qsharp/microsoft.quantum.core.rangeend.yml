@@ -5,7 +5,7 @@ type: function
 namespace: Microsoft.Quantum.Core
 summary: A megadott tartomány meghatározott záró értékét adja vissza, amely nem feltétlenül a sorrend utolsó eleme.
 remarks: >-
-  A Range kifejezés első eleme `start`, a második elem `start+step`, a harmadik elem pedig `start+step+step`, stb., amíg `end` át nem telik.
+  A Range kifejezés első eleme a `start`, a második elem `start+step`, a harmadik elem `start+step+step`stb., amíg `end` át nem telik.
 
 
   Vegye figyelembe, hogy egy tartomány meghatározott záró értéke különbözhet a tartomány által meghatározott utolsó elemtől. például egy 0. tartományban. 2.. 5 az utolsó elem 4, a záró érték pedig 5.
@@ -23,9 +23,9 @@ output:
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: c7436046b6be7d4d0801471ecc6c78e36421e54a
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 85e9006f73cd5f7b5a78b57148cbd7ad5b764878
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73066642"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82657642"

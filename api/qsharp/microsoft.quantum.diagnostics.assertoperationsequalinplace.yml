@@ -7,17 +7,17 @@ summary: >-
   A két művelet miatt a azt állítja, hogy az összes bemeneti állapot esetében azonos módon működnek.
 
 
-  Ezt az állítást úgy valósítja meg, hogy ellenőrzi a műveletek műveleteit az űrlap összes állapotában $V _0 \otimes... \otimes V_ {n-1} $, ahol a $V _k $ az egyik állam $ \ket{0}$, $ \ket{1}$, $ \ket{+} $ és $ \ket{i} $ (+ 1 eigenstate Pauli Y operátor).
+  Ez az állítás a műveleteknek a (z) $V _0 \otimes... \otimes V_ {n-1} $, ahol a $V _K $ egyike a (z) $ \ket{0}$, $ \ket{1}$, $ \ket{+} $ és $ \ket{i} $ (+ 1 eigenstate Pauli Y operátor) állapotának ellenőrzésével valósul meg.
 
 
   Ez az állítás $n $ qubits használ, és több hívást igényel a műveletekhez képest.
 syntax: 'operation AssertOperationsEqualInPlace (nQubits : Int, givenU : (Qubit[] => Unit), expectedU : (Qubit[] => Unit is Adj)) : Unit'
-references: 'A $ \ket{0}$, a $ \ket{1}$, a $ \ket{+} $ és a $ \ket{i} $ állapotú Államok alapja a következő: [ *i. L., M. A. Nielsen* ](https://arxiv.org/abs/quant-ph/9610001).'
+references: 'A $ \ket{0}$, $ \ket{1}$, $ \ket{+} $ és $ \ket{i} $ állapotú Államok alapja a következő: [ *i. L., M. A. Nielsen* ](https://arxiv.org/abs/quant-ph/9610001).'
 input:
   content: '(nQubits : Int, givenU : (Qubit[] => Unit), expectedU : (Qubit[] => Unit is Adj))'
   types:
   - name: nQubits
-    summary: Azon qubits száma, $n $, amelyeken a műveletek `givenU` és `expectedU` működnek.
+    summary: Azon qubits száma, $n $, amelyeken `givenU` a `expectedU` műveletek és működnek.
     isPrimitive: true
     uid: Int
   - name: givenU
@@ -33,7 +33,7 @@ input:
       - isPrimitive: true
         uid: Unit
   - name: expectedU
-    summary: $N $ qubits való hivatkozás, amelyet `givenU` kell összehasonlítani.
+    summary: A (z) $n $ qubits `givenU` hivatkozási művelete, amelyet össze kell hasonlítani.
     isOperation: true
     input:
       types:
@@ -54,9 +54,9 @@ output:
 seeAlso:
 - assertoperationsequalreferenced
 metadata:
-  ms.openlocfilehash: a6c58f51bbc30f3917457d4137afb083533519fe
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 007bb4b3dedd5a95fc464608fe8160784b02341b
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73225757"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82657020"
