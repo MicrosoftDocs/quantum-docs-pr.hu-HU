@@ -39,9 +39,9 @@ functors:
 seeAlso:
 - microsoft.quantum.canon.applytofirstqubit
 metadata:
-  ms.openlocfilehash: 21246e0f9c9d27609107ad27c341851a15af5ede
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: b97af9b9801a359238bd83c68b99d12ba8f6218b
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73213483"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82669567"
