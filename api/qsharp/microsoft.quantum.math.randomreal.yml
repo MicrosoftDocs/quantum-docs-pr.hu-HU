@@ -4,7 +4,7 @@ name: RandomReal
 type: operation
 namespace: Microsoft.Quantum.Math
 summary: Egy véletlenszerű valós számot ad vissza, amely nullánál nagyobb vagy egyenlő, és kevesebb mint egy.
-remarks: Ez a függvény meghívja a <xref:microsoft.quantum.intrinsic.random>t, így a véletlenszerűség a `Random`megvalósítástól függ.
+remarks: Ez a függvény <xref:microsoft.quantum.intrinsic.random>meghívja, hogy a véletlenszerűség a megvalósítástól függ `Random`.
 syntax: 'operation RandomReal (bitsRandom : Int) : Double'
 input:
   content: '(bitsRandom : Int)'
@@ -24,9 +24,9 @@ output:
   - isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: c0780e0b8771c74a04145d5dce70d47dfefafa0e
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: b3974f5b12f8d49cc7920021caad98f6e2f3a60c
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73219960"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82681527"

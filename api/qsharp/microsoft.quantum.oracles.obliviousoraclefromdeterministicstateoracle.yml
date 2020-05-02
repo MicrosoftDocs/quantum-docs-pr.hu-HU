@@ -3,16 +3,16 @@ uid: microsoft.quantum.oracles.obliviousoraclefromdeterministicstateoracle
 name: ObliviousOracleFromDeterministicStateOracle
 type: function
 namespace: Microsoft.Quantum.Oracles
-summary: Az Oracles `DeterministicStateOracle` és `ObliviousOracle`kombinálása.
+summary: Egyesíti az Oracle `DeterministicStateOracle` -ket `ObliviousOracle`és a-t.
 syntax: 'function ObliviousOracleFromDeterministicStateOracle (ancillaOracle : Microsoft.Quantum.Oracles.DeterministicStateOracle, signalOracle : Microsoft.Quantum.Oracles.ObliviousOracle) : Microsoft.Quantum.Oracles.ObliviousOracle'
 input:
   content: '(ancillaOracle : Microsoft.Quantum.Oracles.DeterministicStateOracle, signalOracle : Microsoft.Quantum.Oracles.ObliviousOracle)'
   types:
   - name: ancillaOracle
-    summary: Egy állapot-előkészítési Oracle $A $ típusú `DeterministicStateOracle` a regisztráció $a $.
+    summary: Olyan állapot-előkészítési Oracle $A $ `DeterministicStateOracle` , amely a (z) $a $ regiszterben működik.
     uid: microsoft.quantum.oracles.deterministicstateoracle
   - name: signalOracle
-    summary: $U $ típusú Oracle-`ObliviousOracle`, amely közösen működik a Register $a, s $-ben.
+    summary: Egy Oracle $U $ típusú, `ObliviousOracle` amely a Register $a, s $ címen közösen működik.
     uid: microsoft.quantum.oracles.obliviousoracle
 output:
   content: Microsoft.Quantum.Oracles.ObliviousOracle
@@ -23,9 +23,9 @@ seeAlso:
 - microsoft.quantum.canon.deterministicstateoracle
 - microsoft.quantum.canon.obliviousoracle
 metadata:
-  ms.openlocfilehash: 2fc80a583ef8990b0a9043e4847d926f37b48b77
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 036d89ed2a9b3a0db2637964e4fabec7352a67d9
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73231010"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82681246"

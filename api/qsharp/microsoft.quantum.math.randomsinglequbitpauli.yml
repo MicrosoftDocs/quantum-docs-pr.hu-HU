@@ -4,7 +4,7 @@ name: RandomSingleQubitPauli
 type: operation
 namespace: Microsoft.Quantum.Math
 summary: A qubit Pauli-operátorok egyikét adja vissza egységesen véletlenszerűen.
-remarks: Ez a függvény meghívja a <xref:microsoft.quantum.intrinsic.random>t, így a véletlenszerűség a `Random`megvalósítástól függ.
+remarks: Ez a függvény <xref:microsoft.quantum.intrinsic.random>meghívja, hogy a véletlenszerűség a megvalósítástól függ `Random`.
 syntax: 'operation RandomSingleQubitPauli () : Pauli'
 input:
   content: ()
@@ -12,13 +12,13 @@ input:
 output:
   content: Pauli
   types:
-  - summary: '`Pauli` operátor, amely a `[PauliI, PauliX, PauliY, PauliZ]`egyike.'
+  - summary: Egy `Pauli` operátor, amely az egyik `[PauliI, PauliX, PauliY, PauliZ]`.
     isPrimitive: true
     uid: Pauli
 metadata:
-  ms.openlocfilehash: 564e6c78859d5f74e0fc4ca9c5467e806742b7b2
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: e0065244d20a9f9c6850a23625ecc3bbb73ace0f
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73219943"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82681512"
