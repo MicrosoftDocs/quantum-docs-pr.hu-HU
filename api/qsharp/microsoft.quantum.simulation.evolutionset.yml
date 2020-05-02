@@ -7,12 +7,12 @@ summary: >-
   Egy olyan kaput jelöl, amely könnyen megvalósítható és használható a szimulációs algoritmusok megvalósításához.
 
 
-  A készletben lévő elemeket egy <xref:microsoft.quantum.simulation.generatorindex>indexeli, és az egyes készleteket `GeneratorIndex`-<xref:microsoft.quantum.simulation.evolutionunitary>függvény írja le, amely egy valós szám által megadott időt jelképező művelet.
+  A készletben lévő elemeket az a <xref:microsoft.quantum.simulation.generatorindex>indexeli, és az egyes készleteket a-tól `GeneratorIndex` származó <xref:microsoft.quantum.simulation.evolutionunitary>függvények írják le, amelyek az időt jelképező valós számmal rendelkező műveletek.
 syntax: newtype EvolutionSet = (Microsoft.Quantum.Simulation.GeneratorIndex -> Microsoft.Quantum.Simulation.EvolutionUnitary);
 metadata:
-  ms.openlocfilehash: 2e3e717ca219f5e575f750a32f640215142b170c
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 0db782c1909c6121078f251f34bbffd5b49a4d8e
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73211086"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82687006"

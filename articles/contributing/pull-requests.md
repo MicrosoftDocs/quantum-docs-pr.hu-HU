@@ -6,12 +6,12 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.pulls
-ms.openlocfilehash: a4373a65688893c95e0475356c8f6fca0912f8c5
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: 82af3b5123588cc06882f746ffcb0402ad3f0f2e
+ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77907460"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82686853"
 ---
 # <a name="opening-pull-requests"></a>Lekéréses kérelmek megnyitása #
 
@@ -39,7 +39,7 @@ A fentiek elmondása esetén hasznos lehet néhány percet kipróbálni a **lek�
 A git használatakor a módosítások _véglegesítve_ jelennek meg, amely leírja, hogyan kapcsolódnak ezek a változások a tárház állapotához a módosítások előtt.
 Gyakran olyan diagramokat rajzolunk, amelyekben a véglegesíti a korábbi véglegesítés során felnyíló körökkel.
 
-Tegyük fel, hogy egy `feature`nevű _ág_ egy hozzájárulását indította el.
+Tegyük fel, hogy elindított egy _branch_ hozzájárulást `feature`egy nevű ágban.
 A **Microsoft/Quantum** elágazása a következőhöz hasonló módon jelenhet meg:
 
 ![Egy működő ág a GitHubban](~/media/git-workflow-step0.png)
@@ -60,9 +60,9 @@ Ezzel a folyamattal a GitHub funkcióinak használatával javíthatja a hozzáj�
 
 ## <a name="how-to-make-a-pull-request"></a>Lekéréses kérelem készítése ##
 
-A lekéréses kérelmeknek két fő módja van.
-Az olyan kisebb módosítások esetén, amelyek csak egyetlen fájlt érintenek, a GitHub webes felülete lekéréses kérelem teljes online elvégzésére használható.
-Bonyolultabb hozzájárulások esetén a helyi számítógép általában könnyebben használható a lekéréses kérelmek előkészítéséhez.
+A lekéréses kérelmeknek két fő módja van.  
+Az olyan kisebb módosítások esetén, amelyek csak egyetlen fájlt érintenek, a GitHub webes felülete lekéréses kérelem teljes online elvégzésére használható. Egyszerűen navigáljon a szerkeszteni kívánt fájlhoz, és használja a szerkesztési ikont.  
+Bonyolultabb hozzájárulások esetén a rendszer leggyakrabban megkönnyíti a tárház klónozását a helyi számítógépre, hogy először előkészítse a lekéréses kérelmeket.
 
 <!--
 ### Using the Web Interface ###
@@ -84,7 +84,7 @@ This way, you can edit your personal fork to your heart's content before making 
 
 -->
 
-## <a name="next-steps"></a>Következő lépések ##
+## <a name="next-steps"></a>További lépések ##
 
 Gratulálunk a git használatával, hogy segítse a Quantum Development Kit közösségét!
 Ha többet szeretne megtudni a kód beszerzéséről, folytassa az alábbi útmutatóval.
