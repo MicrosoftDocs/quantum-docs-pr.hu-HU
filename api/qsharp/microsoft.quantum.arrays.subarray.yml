@@ -5,14 +5,14 @@ type: function
 namespace: Microsoft.Quantum.Arrays
 summary: Egy tömböt és egy listát hoz létre, és létrehoz egy új tömböt az eredeti tömb elemeiből, amelyek megfelelnek az adott helyeknek.
 remarks: >-
-  A függvény általános típusokhoz van definiálva, azaz, ha a tömb `'T[]` és az altömbt meghatározó helyszínek listáját `Int[]`.
+  A függvény általános típusokhoz van definiálva, azaz, ha van egy tömb `'T[]` , és az altömbet `Int[]` meghatározó helyszínek listája.
 
   Az altömb felépítése azon alapul, hogy az adott tömb új, részletes másolatát hozza létre a hivatkozások fenntartása mellett.
 
 
-  Ha `Length(indices) < Length(array)`, a függvény `array`egy részhalmazát fogja visszaadni. Másfelől, ha `indices` ismétlődő elemeket tartalmaz, a `array` a megfelelő elemeit is megismétli.
+  Ha `Length(indices) < Length(array)`ez a függvény a következő részhalmazát fogja `array`visszaadni:. Másfelől, ha `indices` ismétlődő elemeket tartalmaz, a megfelelő elemek `array` is megismétlődnek.
 
-  Ha a `indices` és a `array` azonos hosszúságú, akkor ez a függvény `array`permutációt biztosít.
+  Ha `indices` a `array` és az azonos hosszúságú, akkor ez a függvény a `array`következő funkciókat biztosítja:.
 syntax: "function Subarray (indices : Int[], array : 'T[]) : 'T[]"
 input:
   content: "(indices : Int[], array : 'T[])"
@@ -23,24 +23,24 @@ input:
     isPrimitive: true
     uid: Int
   - name: array
-    summary: Elemek tömbje `'T`fölé.
+    summary: Elemek tömbje `'T`.
     isArray: true
     uid: "'T"
     isLocal: true
 output:
   content: "'T[]"
   types:
-  - summary: Olyan elemek tömbje `out`, amelyek indexei megfelelnek az altömbnek, például `out[idx] == array[indices[idx]]`.
+  - summary: Olyan elemek `out` tömbje, amelyek indexei az altömbnek felelnek meg, `out[idx] == array[indices[idx]]`például:.
     isArray: true
     uid: "'T"
     isLocal: true
 typeParameters:
 - uid: "'T"
-  summary: '`array` elemek típusa'
+  summary: Az `array` elemek típusa.
 metadata:
-  ms.openlocfilehash: 1590e5c24dad56db8c6a0f5dc433bf060d8ac175
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 2740a39d1b7c1c56aed4f9107c65d339c5fb4c1a
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73217852"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82675112"

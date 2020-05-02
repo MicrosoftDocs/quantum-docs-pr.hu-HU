@@ -7,11 +7,11 @@ summary: >-
   Azt állítja, hogy a kvantum-regiszter adott állapotának valószínűsége a várt érték.
 
 
-  Adott $n $-qubit Quantum State $ \ket{\psi} = \sum ^ {2 ^ n-1} _ {j = 0} \alpha_j \ket{j} $, azt állítja, hogy a várt érték: $ | \alpha_j | ^ 2 $, amelynek állapota $ \ket{j} $ indexelt $j $.
+  Adott egy $n $-qubit Quantum State $ \ket{\psi} = \sum ^ {2 ^ n-1} _ {j = 0} \ alpha_j \ket{j} $, azt állítja, hogy a $ | \ alpha_j | ^ 2 $ a (z) $j $ indexelt állapotú $ \ket{j} $ indexben a várt érték szerepel.
 examples: >-
-  Tegyük fel, hogy a `qubits` regisztrálja a 3 qubit Quantum State $ \ket{\psi} = \ SQRT {1/8} \ ket{0}+ \ SQRT {7/8} \ ket{6}$ értéket a little endian formátumban.
+  Tegyük fel `qubits` , hogy a regisztráció egy 3 qubit Quantum State $ \ket{\psi} = \ SQRT {1/8} \ ket{0}+ \ SQRT {7/8} \ ket{6}$ értékű, kis endian formátumban kódolja.
 
-  Ez azt jelenti, hogy a szám állapota $ \ket{0}\equiv\ket{0}\ket{0}\ket{0}$ és $ \ket{6}\equiv\ket{0}\ket{1}\ket{1}$. Ezután a következő érvényesítések sikeresek lesznek:
+  Ez azt jelenti, hogy a szám állapota{0}${0}\ket{0}\equiv\ket{0}\ket \ket $ és{6}${0}\ket{1}\equiv\ket{1}\ket \ket $. Ezután a következő érvényesítések sikeresek lesznek:
 
 
   - `AssertProbInt(0,0.125,qubits,10e-10);`
@@ -22,11 +22,11 @@ input:
   content: '(stateIndex : Int, expected : Double, qubits : Microsoft.Quantum.Arithmetic.LittleEndian, tolerance : Double)'
   types:
   - name: stateIndex
-    summary: Egy `LittleEndian`-regisztráció által reprezentált $ \ket{j} $ állapotú $j $ index.
+    summary: Egy `LittleEndian` regiszter által jelzett, $ \ket{j} $ állapotú $ $j $ index.
     isPrimitive: true
     uid: Int
   - name: expected
-    summary: 'A várt érték: $ | \alpha_j | ^ 2 $.'
+    summary: 'A várt érték: $ | \ alpha_j | ^ 2 $.'
     isPrimitive: true
     uid: Double
   - name: qubits
@@ -42,9 +42,9 @@ output:
   - isPrimitive: true
     uid: Unit
 metadata:
-  ms.openlocfilehash: 183f1252ba555c10e7011eea98a5cc98fae4495a
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 247dcb78921bfe5df96c56b74e251d0413cfab3d
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73221439"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82675251"

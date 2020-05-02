@@ -4,7 +4,7 @@ name: CControlledCA
 type: function
 namespace: Microsoft.Quantum.Canon
 summary: >-
-  A művelet op esetében egy új műveletet ad vissza, amely az op-t alkalmazza, ha a klasszikus vezérlőelem-bit igaz. Ha `false`, semmi nem történik.
+  A művelet op esetében egy új műveletet ad vissza, amely az op-t alkalmazza, ha a klasszikus vezérlőelem-bit igaz. Ha `false`nem történik semmi.
 
   A módosító `CA` azt jelzi, hogy a művelet ellenőrizhető és adjointable.
 syntax: "function CControlledCA (op : ('T => Unit is Ctl + Adj)) : ((Bool, 'T) => Unit is Ctl + Adj)"
@@ -49,9 +49,9 @@ typeParameters:
 seeAlso:
 - microsoft.quantum.canon.ccontrolled
 metadata:
-  ms.openlocfilehash: 918146c6f167050490d3a9047cf75dc66236b004
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: a0a30761119d661d759f585d4ce4f6a4e7b30f94
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73068070"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82675867"
