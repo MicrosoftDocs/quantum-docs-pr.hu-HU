@@ -4,7 +4,7 @@ name: TargetStateReflectionOracle
 type: function
 namespace: Microsoft.Quantum.AmplitudeAmplification
 summary: >-
-  Egy `ReflectionOracle` hoz létre a megcélzott állapotról a jelző qubit egyedileg megjelölve.
+  `ReflectionOracle` A megcélzott állapotot a jelző qubit egyedileg megjelölve hozza létre.
 
 
   A célként megadott állapot egyetlen qubit van beállítva, és az összes többi 0: $ \ket{1}_f $.
@@ -19,14 +19,14 @@ input:
 output:
   content: Microsoft.Quantum.Oracles.ReflectionOracle
   types:
-  - summary: '`ReflectionOracle`, amely a $ \ket{1}_f $ által jelölt állapotot tükrözi.'
+  - summary: A `ReflectionOracle` , amely a $ \ket{1}_f $ által jelölt állapotot tükrözi.
     uid: microsoft.quantum.oracles.reflectionoracle
 seeAlso:
 - microsoft.quantum.canon.reflectionoracle
 metadata:
-  ms.openlocfilehash: c86011664da3f59bc978641b0aefcca5a50d3b1a
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 6f398f2c9122769dd6f83fd002d311c0b55db158
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73215438"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82672923"

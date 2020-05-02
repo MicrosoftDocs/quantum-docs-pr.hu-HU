@@ -7,7 +7,7 @@ summary: >-
   A klasszikus eredmény értékének nulla értékű, egységes műveletét alkalmazza.
 
 
-  A művelet `op` és az eredmény `result``op` a `target`ra vonatkozik, ha `result` `Zero`. Ha `One`, semmi nem történik a `target`.
+  A művelet `op` és az eredmény megadott értéke `result` `op` az `target` if `result` értékre vonatkozik. `Zero` Ha `One`semmi nem történik a `target`következővel:.
 
   Az utótag `CA` azt jelzi, hogy az alkalmazni kívánt művelet egységes (ellenőrizhető és adjointable).
 syntax: "operation ApplyIfZeroCA (result : Result, (op : ('T => Unit is Adj + Ctl), target : 'T)) : Unit"
@@ -52,9 +52,9 @@ seeAlso:
 - microsoft.quantum.canon.applyifzeroa
 - microsoft.quantum.canon.applyifzeroca
 metadata:
-  ms.openlocfilehash: 9ec05f688c3895b2d68fc3f4717401e127fbe641
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 64e35b2fc198e7c3df862681e8c16870399f58c7
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73213602"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82672575"
