@@ -3,13 +3,13 @@ uid: microsoft.quantum.oracles.deterministicstateoraclefromstateoracle
 name: DeterministicStateOracleFromStateOracle
 type: function
 namespace: Microsoft.Quantum.Oracles
-summary: '`StateOracle` típusú Oracle-t konvertál `DeterministicStateOracle`re.'
+summary: Egy típusú `StateOracle` Oracle-t `DeterministicStateOracle`konvertál.
 syntax: 'function DeterministicStateOracleFromStateOracle (idxFlagQubit : Int, stateOracle : Microsoft.Quantum.Oracles.StateOracle) : Microsoft.Quantum.Oracles.DeterministicStateOracle'
 input:
   content: '(idxFlagQubit : Int, stateOracle : Microsoft.Quantum.Oracles.StateOracle)'
   types:
   - name: idxFlagQubit
-    summary: 'A `stateOracle` $A $ qubit jelző indexe, amely kifejezetten két regiszterre vonatkozik: a jelző $f $ és a System $s $, például $A \ket{0}\_f\ket {\ PSI}\_s $.'
+    summary: 'A `stateOracle` $A $ qubit jelző indexe, amely explicit módon két regiszteren alapul: a jelző $f $ és a rendszer $s $, például $A \ket{0}\_f\ket {\ PSI}\_s $.'
     isPrimitive: true
     uid: Int
   - name: stateOracle
@@ -18,15 +18,15 @@ input:
 output:
   content: Microsoft.Quantum.Oracles.DeterministicStateOracle
   types:
-  - summary: 'Ugyanez az állapot-előkészítési Oracle $A $, de mostantól `DeterministicStateOracle`típusú, ezért olyan regisztrálást végez, ahol a $a, s $ nem explicit módon külön, például:  $A \ket{0\psi}\_{as} $.'
+  - summary: 'Ugyanez az állapot-előkészítési Oracle $A $, de mostantól `DeterministicStateOracle`egy olyan regisztrációt végez, ahol $a, s $ nem explicit módon elkülönítve, például:  $A \ket{0\psi}\_{as} $.'
     uid: microsoft.quantum.oracles.deterministicstateoracle
 seeAlso:
 - microsoft.quantum.canon.stateoracle
 - microsoft.quantum.canon.deterministicstateoracle
 metadata:
-  ms.openlocfilehash: 5eda40115d4d4ca7b4187f76b5e0807695913407
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: cf6ddc1f1baff27c986f36d944e67192958a0d3f
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73231095"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82681284"

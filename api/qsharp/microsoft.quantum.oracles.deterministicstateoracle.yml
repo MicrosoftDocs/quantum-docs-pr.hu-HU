@@ -10,16 +10,16 @@ summary: >-
   Az Oracle $O $ értékre való bemenet a következő:
 
 
-  - A regisztráció, amely a kívánt Quantum State $ \ket{\psi}\_s $ értéket fogja tárolni.
+  - Az a regisztráció, amely a kívánt Quantum State $ \ket{\psi}\_s $ értéket fogja tárolni.
 remarks: >-
-  Ez a $O \ket{0}= \ket{\psi} $ által definiált Oracle a (z) $ \ket{\psi} $ állapotú, számítási alapon kiszámított{0}\ket $ $ értékkel hozza létre.
+  Ez a $O \ket{0}= \ket{\psi} $ által definiált Oracle a számítási alapon kiszámított $ \ket{0}$ értékkel hozza létre a $ \ket{\psi} $ értékű állapotot.
 
   Az első paraméter a $ \ket{\psi} $ qubit-regisztrációja.
 syntax: newtype DeterministicStateOracle = (Qubit[] => Unit is Adj + Ctl);
 metadata:
-  ms.openlocfilehash: bc10b84502866d1f5e19b28e77e54c1b10d01b28
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 35d4b0243fac954c483a81ae1cccb46b44759ca0
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73231129"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82681309"
