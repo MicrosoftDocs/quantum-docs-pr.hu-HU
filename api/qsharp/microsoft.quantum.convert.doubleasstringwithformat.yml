@@ -4,7 +4,7 @@ name: DoubleAsStringWithFormat
 type: function
 namespace: Microsoft.Quantum.Convert
 summary: Egy adott kétszeres pontosságú lebegőpontos számot alakít át egy egyenértékű karakterlánc-ábrázolásra a megadott formátum használatával.
-remarks: 'További részletekért lásd: [ C# Double. tostring](https://docs.microsoft.com/dotnet/api/system.double.tostring?view=netframework-4.7.1#System_Double_ToString_System_String_) .'
+remarks: További részletekért lásd a [C# Double. tostring](https://docs.microsoft.com/dotnet/api/system.double.tostring?view=netframework-4.7.1#System_Double_ToString_System_String_) című témakört.
 syntax: 'function DoubleAsStringWithFormat (a : Double, fmt : String) : String'
 input:
   content: '(a : Double, fmt : String)'
@@ -21,9 +21,9 @@ output:
   - isPrimitive: true
     uid: String
 metadata:
-  ms.openlocfilehash: 77ee195da86e00c017c7eca184a00d7fdf31f592
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 7e1f1df7f43b2595345594dbfbddf7734f1cb709
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73233679"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82659954"
