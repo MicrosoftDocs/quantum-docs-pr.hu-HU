@@ -1,147 +1,101 @@
 ---
-title: 'Fejlesztés a Q # +C#'
+title: Fejlesztés Q# + C# használatával
 author: natke
 ms.author: nakersha
 ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.cs
-ms.openlocfilehash: 7803846279f230f5fc0ee8424bd39be735a650ca
-ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
+ms.openlocfilehash: 5bcb036b0b32e64d43f90e9a068d9dcc237890ba
+ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 02/06/2020
-ms.locfileid: "77036287"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82680165"
 ---
-# <a name="develop-with-q--c"></a>Fejlesztés a Q # +C#
+# <a name="using-q-with-c-and-f"></a>Q # használata C\# és F használatával\#
 
-Telepítse a QDK a Q C# # műveletek hívására szolgáló gazdagép-programok fejlesztéséhez.
+A Q # a .NET nyelvekkel, például a C# és az F # használatával készült.
+Ebben az útmutatóban bemutatjuk, hogyan használható a Q # egy .NET nyelven írt gazda program használatával.
 
-A Q # a .NET-nyelvekkel jól játszható – konkrétan C#. Ezt a párosítást különböző fejlesztői környezetekben használhatja:
+## <a name="prerequisites"></a>Előfeltételek
 
-- [Q # + C# a Visual Studióval (Windows)](#VS)
-- [Q # + C# Visual Studio Code használata (Windows, Linux és Mac)](#VSC)
-- [Q # + C# a `dotnet` parancssori eszköz használata](#command)
+- Telepítse a Quantum Development Kit [-t a Q # parancssori projektjeivel való használatra](xref:microsoft.quantum.install.standalone).
 
-## Fejlesztés a Q # + C# használatával a Visual Studióval <a name="VS"></a>
+## <a name="creating-a-q-library-and-a-net-host"></a>Q # könyvtár és egy .NET-gazdagép létrehozása
 
-A Visual Studio sokoldalú környezetet kínál a Q # programok fejlesztéséhez. A Q # Visual Studio bővítmény a Q # fájlokhoz és projektekhez tartozó sablonokat, valamint a szintaxis kiemelését, a kód befejezését és az IntelliSense támogatását tartalmazza.
+Első lépésként hozzon létre projekteket a Q # Library-hez, illetve a .NET-gazdagéphez, amely a Q # Library-ben meghatározott műveleteket és függvényeket hívja meg.
 
+### <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
 
-1. Előfeltételek
+- Új Q # könyvtár létrehozása
+  - Ugrás a **fájl** -> **új** -> **projektre**
+  - Írja be a "Q #" kifejezést a keresőmezőbe
+  - **Q # könyvtár** kiválasztása
+  - Válassza a **tovább** lehetőséget
+  - A könyvtár nevének és helyének kiválasztása
+  - Győződjön meg arról, hogy a "Project és a megoldás elhelyezése ugyanabban a címtárban" nincs **bejelölve**
+  - **Létrehozás** kiválasztása
+- Új C# vagy F # gazda program létrehozása
+  - Nyissa meg a **fájl** → **új** → **projekt**
+  - A "Console app (.NET Core") "kiválasztása C# vagy F esetén #
+  - Válassza a **tovább** lehetőséget
+  - A *megoldás*területen válassza a "Hozzáadás a megoldáshoz" lehetőséget.
+  - Válassza ki a gazda program nevét
+  - **Létrehozás** kiválasztása
 
-    - [Visual Studio](https://visualstudio.microsoft.com/downloads/) 16.3, a .NET Core platformfüggetlen fejlesztési tevékenységprofil engedélyezésével
+### <a name="visual-studio-code-or-command-line"></a>[Visual Studio Code vagy Command Line](#tab/tabid-cmdline)
 
-1. Telepítse a Q# Visual Studio-bővítményt
+- Új Q # könyvtár létrehozása
 
-    - Töltse le és telepítse a [Visual Studio bővítményt](https://marketplace.visualstudio.com/items?itemName=quantum.DevKit)
+  ```dotnetcli
+  dotnet new classlib -lang Q# -o quantum
+  ```
 
-1. Ellenőrizze a telepítést egy `Hello World`-alkalmazás létrehozásával
+- Új C# vagy F # konzol projekt létrehozása
 
-    - Hozzon létre egy új Q#-alkalmazást
+  ```dotnetcli
+  dotnet new console -lang C# -o host  
+  ```
 
-        - Lépjen a **Fájl** -> **Új** -> **Projekt** lehetőséghez
-        - A keresőmezőbe írja be a következőt: `Q#`
-        - Válassza a **Q#-alkalmazás** elemet
-        - Kattintson a **Tovább** gombra.
-        - Válassza ki az alkalmazás nevét és helyét
-        - Kattintson a **Létrehozás** elemre.
+- Adja hozzá a Q # Library-t a gazda program hivatkozásához
 
-    - Vizsgálja meg a projektet
+  ```dotnetcli
+  cd host
+  dotnet add reference ../quantum/quantum.csproj
+  ```
 
-        Látni fogja, hogy két fájl jött létre: `Driver.cs`, amely a C#-gazdaalkalmazás, valamint `Operation.qs`, amely egy Q#-program, amely üzenetek a konzolon való megjelenítésének egyszerű műveletét definiálja.
+- Választható Megoldás létrehozása mindkét projekthez
 
-    - Az alkalmazás futtatása
+  ```dotnetcli
+  dotnet new sln -n quantum-dotnet
+  dotnet sln quantum-dotnet.sln add ./quantum/quantum.csproj
+  dotnet sln quantum-dotnet.sln add ./host/host.csproj
+  ```
 
-        - Válassza a **Hibakeresés** -> **Indítás hibakeresés nélkül** lehetőséget
-        - Látni fogja, hogy a következő szöveg jelenik meg a konzolablakban: `Hello quantum world!`.
+***
 
-> [!NOTE]
-> * Ha egy Visual Studio-megoldásban több projekt is található, a megoldásban foglalt összes projektnek a megoldás mappájában vagy valamelyik almappájában kell lennie.  
+## <a name="calling-into-q-from-net"></a>A Q # hívása a .NET-ről
 
-## Fejlesztés a Q # + C# eszközzel a Visual Studio Code használatával <a name="VSC"></a>
+Miután beállította a projekteket a fenti utasítások követése után, meghívhatja a Q #-t a .NET-konzol alkalmazásából.
+A Q # Compiler minden Q # művelethez és függvényhez hoz létre .NET-osztályokat, amelyek lehetővé teszik a kvantum-programok futtatását szimulátoron.
 
-A Visual Studio Code (VS Code) sokoldalú környezetet kínál a Q # programok fejlesztéséhez Windows, Linux és Mac rendszereken.  A Q # VS Code bővítmény támogatja a Q # szintaxis kiemelését, a kód befejezését és a Q # kódrészleteket.
+A .net-es [együttműködési minta](https://github.com/microsoft/Quantum/tree/master/samples/interoperability/dotnet) például egy Q # művelet következő példáját tartalmazza:
 
-1. Előfeltételek
+:::code language="qsharp" source="~/quantum/samples/interoperability/dotnet/qsharp/Operations.qs" range="67-75":::
 
-   - [VS Code](https://code.visualstudio.com/download)
-   - [.NET Core SDK 3,1 vagy újabb](https://www.microsoft.com/net/download)
+Ha ezt a műveletet a .NET-keretrendszerben szeretné meghívni egy kvantum- `Run` szimulátoron, `RunAlgorithm` használhatja a Q # compiler által generált .net-osztály metódusát:
 
-1. Telepítse a Quantum VS Code-bővítményt
+### <a name="c"></a>[C #](#tab/tabid-csharp)
 
-    - Telepítse a [VS Code-bővítményt](https://marketplace.visualstudio.com/items?itemName=quantum.quantum-devkit-vscode)
+:::code language="csharp" source="~/quantum/samples/interoperability/dotnet/csharp/Host.cs" range="4-":::
 
-1. Telepítse a Quantum-projektsablonokat:
+### <a name="f"></a>[F#](#tab/tabid-fsharp)
 
-   - Lépjen a **Nézet** -> **Parancskatalógus** lehetőséghez
-   - Válassza a **Q #: Project-sablonok telepítése lehetőséget.**
+:::code language="fsharp" source="~/quantum/samples/interoperability/dotnet/fsharp/Host.fs" range="4-":::
 
-    Sikeresen telepítette a Quantum Development Kitet, amelyet mostantól felhasználhat az alkalmazásaiban és kódtáraiban.
-
-1. Ellenőrizze a telepítést egy `Hello World`-alkalmazás létrehozásával
-
-    - Hozzon létre egy új projektet:
-
-        - Lépjen a **Nézet** -> **Parancskatalógus** lehetőséghez
-        - Válassza a **Q #: új projekt létrehozása** lehetőséget
-        - **Önálló konzolos alkalmazás** kiválasztása
-        - Lépjen arra a helyre a fájlrendszerben, ahol létre szeretné hozni az alkalmazást
-        - A projekt elkészülte után kattintson az **Új projekt megnyitása...** gombra
-
-    - Ha még nincs telepítve a C# vs Code bővítmény, egy előugró ablak jelenik meg. Telepítse a bővítményt. 
-
-    - Futtassa az alkalmazást:
-
-        - Ugrás a **terminal** -> **új terminálra**
-        - Adja meg `dotnet run`
-        - A következőnek szövegnek kell megjelennie a kimeneti ablakban: `Hello quantum world!`
-
-
-> [!NOTE]
-> * A Visual Studio Code-bővítmény jelenleg nem támogatja a több gyökérmappával rendelkező munkaterületeket. Ha egy VS Code-munkaterületen belül több projekt is található, az összes projektnek azonos gyökérmappában kell lennie.
-
-## Fejlesztés a Q # + C# használatával a `dotnet` parancssori eszközzel <a name="command"></a>
-
-Természetesen a parancssorból is egyszerűen összeállíthat és futtathat Q#-programokat, ha telepíti a .NET Core SDK-t és a QDK-projektsablonokat. 
-
-1. Előfeltételek
-
-    - [.NET Core SDK 3,1 vagy újabb](https://www.microsoft.com/net/download)
-
-1. Telepítse a .NET-hez tartozó Quantum-projektsablonokat
-
-    ```dotnetcli
-    dotnet new -i Microsoft.Quantum.ProjectTemplates
-    ```
-
-    Sikeresen telepítette a Quantum Development Kitet, amelyet mostantól felhasználhat az alkalmazásaiban és kódtáraiban.
-
-1. Ellenőrizze a telepítést egy `Hello World`-alkalmazás létrehozásával
-
-    - Új alkalmazás létrehozása
-
-       ```dotnetcli
-       dotnet new console -lang "Q#" -o runSayHello
-       ```
-
-    - Lépjen az új alkalmazás könyvtárához
-
-       ```bash
-       cd runSayHello
-       ```
-
-    Látni fogja, hogy az alkalmazás projektfájljai mellett két fájl jött létre: egy Q#-fájl (`Operation.qs`) és egy C#-gazdafájl (`Driver.cs`).
-
-    - Az alkalmazás futtatása
-
-        ```dotnetcli
-        dotnet run
-        ```
-
-        A következő kimenetnek kell megjelennie: `Hello quantum world!`
-
+***
     
 ## <a name="whats-next"></a>A következő lépések
 
-Most, hogy a választott környezetben telepítette a Quantum Development Kitet, megírhatja és futtathatja [az első kvantumprogramját](xref:microsoft.quantum.write-program).
+Most, hogy már beállította a Quantum Development Kit-t mind a Q # parancssori programokhoz, mind a .NET-tel való együttműködéshez, megírhatja és futtathatja [az első kvantum-programot](xref:microsoft.quantum.write-program).

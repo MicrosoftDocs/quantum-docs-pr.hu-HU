@@ -4,7 +4,7 @@ name: XBits
 type: function
 namespace: Microsoft.Quantum.Bitwise
 summary: Egy olyan egész számot ad vissza, amely a Pauli-operátorok tömbje X biteit jelképezi.
-remarks: A függvény eldönti, hogy `paulis` tömb hossza nagyobb-e, mint 63.
+remarks: A függvény eldönti, hogy a `paulis` tömb hossza nagyobb-e, mint 63.
 syntax: 'function XBits (paulis : Pauli[]) : Int'
 input:
   content: '(paulis : Pauli[])'
@@ -17,15 +17,15 @@ input:
 output:
   content: Int
   types:
-  - summary: Egy egész $x $, bináris ábrázolással $ (p_{62}\,p_{61}\,\dots\,p_0) $, ahol $p _i = $0, ha `paulis[i]` `PauliI` vagy `PauliZ`, és $p _i = $1, ha `paulis[i]` `PauliX` `PauliY`vagy.
+  - summary: Egy egész $x $, bináris ábrázolással $ ({62}\,P_{61}\,P_\,\dots p_0) $, ahol $p _i = $0 `paulis[i]` , `PauliI` ha `PauliZ` az vagy, és ahol $p _i `paulis[i]` = `PauliX` $1 `PauliY`, ha a vagy a.
     isPrimitive: true
     uid: Int
 seeAlso:
 - zbits
 metadata:
-  ms.openlocfilehash: 9319e664aaa7af3ea500bd5bee78c09a92d9573b
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 0dccf94d895984b3661790b44f10455fce35331d
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73217733"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82680569"

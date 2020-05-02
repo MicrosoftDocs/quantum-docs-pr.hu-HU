@@ -6,8 +6,8 @@ namespace: Microsoft.Quantum.Bitwise
 summary: >-
   Két egész szám bitenkénti kizárólagos vagy (XOR) értékét adja vissza.
 
-  Ez ugyanazokat a számításokat hajtja végre, mint a beépített `^^^` operátor.
-remarks: További részletekért tekintse meg a [ C# ^ operátort](https://docs.microsoft.com/dotnet/csharp/language-reference/operators/xor-operator) .
+  Ez ugyanazokat a számításokat hajtja végre, `^^^` mint a beépített operátor.
+remarks: További részletekért tekintse meg a [C# ^ operátort](https://docs.microsoft.com/dotnet/csharp/language-reference/operators/xor-operator) .
 examples: >-
   ```qsharp
 
@@ -34,9 +34,9 @@ output:
   - isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: 5521b9fa4838261e44554de39704c0adbb45f8ed
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 8b7da5a00592a071617d775d71fb7f07931cf299
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73213840"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82680562"

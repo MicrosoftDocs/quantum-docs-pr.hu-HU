@@ -4,13 +4,13 @@ name: ForEach
 type: operation
 namespace: Microsoft.Quantum.Arrays
 summary: Egy tömb és egy olyan művelet, amely a tömb elemeihez van meghatározva, egy új tömböt ad vissza, amely a művelet alatt található eredeti tömb képéből áll.
-remarks: "A művelet általános típusokhoz van meghatározva, azaz, amikor egy tömb `'T[]` és egy művelettel `action : 'T -> 'U` a tömb elemeit leképezheti, és `'U[]`típusú új tömböt hozhat létre."
+remarks: "A művelet általános típusokhoz van definiálva, azaz `'T[]` `action : 'T -> 'U` a tömb elemeinek leképezhetők, illetve egy új típusú `'U[]`tömb létrehozásához."
 syntax: "operation ForEach (action : ('T => 'U), array : 'T[]) : 'U[]"
 input:
   content: "(action : ('T => 'U), array : 'T[])"
   types:
   - name: action
-    summary: "`'T`ról `'U` művelet, amely az egyes elemekre vonatkozik."
+    summary: Az összes elemre `'U` alkalmazott művelet `'T` .
     isOperation: true
     input:
       types:
@@ -21,26 +21,26 @@ input:
       - uid: "'U"
         isLocal: true
   - name: array
-    summary: Elemek tömbje `'T`fölé.
+    summary: Elemek tömbje `'T`.
     isArray: true
     uid: "'T"
     isLocal: true
 output:
   content: "'U[]"
   types:
-  - summary: A `action` művelet által leképezett elemek tömb-`'U[]`.
+  - summary: A `action` művelet `'U[]` által leképezett elemek tömbje.
     isArray: true
     uid: "'U"
     isLocal: true
 typeParameters:
 - uid: "'T"
-  summary: '`array` elemek típusa'
+  summary: Az `array` elemek típusa.
 - uid: "'U"
   summary: A `action` művelet eredményének típusa.
 metadata:
-  ms.openlocfilehash: 6f61c37fb7a62bcbcfe91768725173e9a919e987
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: af4b6b469017e4cee581a9bdd96ef6171d9b1deb
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76871022"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82681042"

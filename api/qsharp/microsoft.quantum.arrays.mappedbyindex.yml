@@ -28,7 +28,7 @@ input:
   content: "(mapper : ((Int, 'T) -> 'U), array : 'T[])"
   types:
   - name: mapper
-    summary: Az elemek és a hozzájuk tartozó indexek hozzárendelésére szolgáló `(Int, 'T)` függvény `'U`.
+    summary: A- `'U` ből `(Int, 'T)` származó függvény, amely az elemek és az indexek hozzárendelésére szolgál.
     isFunction: true
     input:
       types:
@@ -41,28 +41,28 @@ input:
       - uid: "'U"
         isLocal: true
   - name: array
-    summary: Elemek tömbje `'T`fölé.
+    summary: Elemek tömbje `'T`.
     isArray: true
     uid: "'T"
     isLocal: true
 output:
   content: "'U[]"
   types:
-  - summary: A `mapper` függvény által leképezett elemek tömb-`'U[]`.
+  - summary: A `mapper` függvény `'U[]` által leképezett elemek tömbje.
     isArray: true
     uid: "'U"
     isLocal: true
 typeParameters:
 - uid: "'T"
-  summary: '`array` elemek típusa'
+  summary: Az `array` elemek típusa.
 - uid: "'U"
-  summary: Az `mapper` függvény eredményének típusa.
+  summary: A `mapper` függvény eredményének típusa.
 seeAlso:
 - mapped
 metadata:
-  ms.openlocfilehash: 08dacd9b53b151d5cadcef16db8b460d4326d746
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 64741df4a3d7b7937f13614ffc9c7c7ec1aa3f7b
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73214282"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82680939"

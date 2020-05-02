@@ -1,19 +1,19 @@
 ---
-title: 'Fejlesztés a Q # + Python révén'
+title: Fejlesztés Q# + Python használatával
 author: natke
 ms.author: nakersha
 ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.python
-ms.openlocfilehash: 1e40c2dddeaf4fad41693c976493f10fffffa139
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: e1b8a0c68b3ac0c059c6de6e478593321764ff88
+ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76831001"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82680150"
 ---
-# <a name="develop-with-q--python"></a>Fejlesztés a Q # + Python révén
+# <a name="develop-with-q--python"></a>Fejlesztés Q# + Python használatával
 
 Telepítse a QDK a Python-gazdagépek kifejlesztéséhez a Q # műveleteinek meghívásához.
 
@@ -24,13 +24,13 @@ Telepítse a QDK a Python-gazdagépek kifejlesztéséhez a Q # műveleteinek meg
     - [.NET Core SDK 3,1 vagy újabb](https://www.microsoft.com/net/download)
 
 
-1. Telepítse a `qsharp` csomagot, amely egy olyan Python-csomag, amely lehetővé teszi a Q # és a Python közötti együttműködési lehetőséget.
+1. Telepítse a `qsharp` csomagot, amely egy Python-csomag, amely lehetővé teszi a Q # és a Python közötti együttműködési lehetőséget.
 
     ```bash
     pip install qsharp
     ```
 
-1. Telepítse `iqsharp`, a Jupyter és a Python által használt kernelt, amely a Q # műveletek fordításának és végrehajtásának alapvető funkcióit biztosítja.
+1. Telepítse az IQ #, a Jupyter és a Python által használt kernelt, amely a Q # műveletek fordításának és végrehajtásának alapvető funkcióit biztosítja.
 
     ```bash
     dotnet tool install -g Microsoft.Quantum.IQSharp
@@ -83,6 +83,6 @@ Telepítse a QDK a Python-gazdagépek kifejlesztéséhez a Q # műveleteinek meg
 > [!NOTE]
 > * A Python Jupyter jegyzetfüzeteket is használhatja a klasszikus Python program írásához és a Q # műveletek a cellákból való meghívásához. A Python-kód csak egy normál Python-program.
 
-## <a name="whats-next"></a>Vajon mi a következő lépés?
+## <a name="whats-next"></a>A következő lépések
 
 Most, hogy a választott környezetben telepítette a Quantum Development Kitet, megírhatja és futtathatja [az első kvantumprogramját](xref:microsoft.quantum.write-program).
