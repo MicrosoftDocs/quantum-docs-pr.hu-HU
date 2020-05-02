@@ -4,10 +4,10 @@ name: PNormalized
 type: function
 namespace: Microsoft.Quantum.Math
 summary: >-
-  `Double`s vektorának normalizálása a `L(p)` normában.
+  Normalizálja az `Double`s-vektort a `L(p)` normában.
 
 
-  Ez azt eredményezi, hogy a tömb $x $ típusú `Double[]`, amely egy olyan tömböt ad vissza, amelyben az összes elem az $p $-Norm $\|x\|_p $ értékre van osztva.
+  Ez azt eredményezi, hogy egy Array $x $ `Double[]`típusú tömbben olyan tömböt ad vissza, amelyben az összes elem a $p $-norm\|$\|x _p $ értékkel van elosztva.
 syntax: 'function PNormalized (p : Double, array : Double[]) : Double[]'
 input:
   content: '(p : Double, array : Double[])'
@@ -23,16 +23,16 @@ input:
 output:
   content: Double[]
   types:
-  - summary: A $p $-Norm $\|x\|_p $ $x által normalizált tömb.
+  - summary: A $p $-norm $\|x\|_p $ $x által normalizált tömb.
     isArray: true
     isPrimitive: true
     uid: Double
 seeAlso:
 - pnorm
 metadata:
-  ms.openlocfilehash: 5fd219b866b14d3d6faf58cdf4f1ce2b9fbadf9d
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 68697fe159fecfeed0078f95de8d91f825125f41
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73067288"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82684033"

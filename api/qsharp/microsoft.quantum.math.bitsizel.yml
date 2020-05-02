@@ -4,7 +4,7 @@ name: BitSizeL
 type: function
 namespace: Microsoft.Quantum.Math
 summary: >-
-  Ha nem negatív egész szám `a`, a visszaadja a `a`ábrázolásához szükséges bitek számát.
+  A nem negatív egész szám `a`esetén a a jelölőhöz `a`szükséges bitek számát adja vissza.
 
 
   Vagyis a legkisebb $n $ értéket adja vissza, amely $a < 2 ^ n $.
@@ -19,13 +19,13 @@ input:
 output:
   content: Int
   types:
-  - summary: A `a`kis mérete.
+  - summary: A kis méret `a`.
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: 09d5cfb994584bc2f411ea70dc57acf0338b93c3
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 70293cfdf4beb784e379632d2e7dc193300d4b52
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73230160"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82683401"

@@ -7,12 +7,12 @@ summary: >-
   A megadott Pauli-tengely rotációját alkalmazza egy dyadic-frakcióként megadott szögben.
 
 
-  \begin{align} R_ {\mu} (n, k) \mathrel{: =} e ^ {i \pi n \ sigma_ {\mu}/2 ^ k}, \end{align}, ahol $ \mu \in \{I, X, Y, Z\}$.
+  \begin{align} R_ {\mu} (n, k) \mathrel{: =} e ^ {i \pi n \ sigma_ {\mu}/2 ^ k}, \end{align}, ahol $ \mu \{\in i, X, Y,\}Z $.
 
 
   > [!WARNING]
 
-  > Ez a művelet az **ellenkező** előjelű konvenciót használja a @"microsoft.quantum.intrinsic.r".
+  > Ez a művelet a következővel @"microsoft.quantum.intrinsic.r" **ellentétes** aláírási konvenciót használja:.
 remarks: >-
   Egyenértékű a következővel:
 
@@ -53,9 +53,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 10795932b7057ccf58d2219208af2750eff0e363
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: dc9f0ca68e1528ee7a36ef1503785cf60c08567c
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73216492"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82683686"
