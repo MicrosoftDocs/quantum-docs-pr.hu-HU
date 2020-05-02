@@ -3,7 +3,7 @@ uid: microsoft.quantum.simulation.adiabaticstateenergyunitary
 name: AdiabaticStateEnergyUnitary
 type: operation
 namespace: Microsoft.Quantum.Simulation
-summary: Végrehajtja az állapot-előkészítést egy `statePrepUnitary` a bemeneti állapotra való alkalmazásával, majd a adiabatic állapot-előkészítést egy `adiabaticUnitary`használatával, és végül a fázis becslését az eredményül kapott állapotra vonatkozó `qpeUnitary``phaseEstAlgorithm`használatával.
+summary: Végrehajtja az állapot-előkészítést a bemeneti állapotra `statePrepUnitary` való alkalmazásával, majd az adiabatic `adiabaticUnitary`állapot-előkészítést a használatával, és `qpeUnitary`végül a fázis becslésével az `phaseEstAlgorithm`eredményül kapott állapottal kapcsolatban.
 syntax: 'operation AdiabaticStateEnergyUnitary (statePrepUnitary : (Qubit[] => Unit), adiabaticUnitary : (Qubit[] => Unit), qpeUnitary : (Qubit[] => Unit is Adj + Ctl), phaseEstAlgorithm : ((Microsoft.Quantum.Oracles.DiscreteOracle, Qubit[]) => Double), qubits : Qubit[]) : Double'
 input:
   content: '(statePrepUnitary : (Qubit[] => Unit), adiabaticUnitary : (Qubit[] => Unit), qpeUnitary : (Qubit[] => Unit is Adj + Ctl), phaseEstAlgorithm : ((Microsoft.Quantum.Oracles.DiscreteOracle, Qubit[]) => Double), qubits : Qubit[])'
@@ -33,7 +33,7 @@ input:
       - isPrimitive: true
         uid: Unit
   - name: qpeUnitary
-    summary: Egy egységes operátort jelképező Oracle, $U $, amely a \delta $ \ket{\phi} $ $E és a The \phi\\, \delta t $ értékű dinamikus generátor alatt az Evolution értéket jelképezi.
+    summary: Egy egységes operátort jelképező Oracle, $U $, amely a \delta $ \ket{\phi} $ $E és a \phi\\, \delta t $ értékű dinamikus generátor alatt az Evolutiont jelképezi.
     isOperation: true
     input:
       types:
@@ -75,9 +75,9 @@ output:
     isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: 747e9f6d926863ce1add86d183ca2ed1dc43c8a4
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 2e8e3917b6f3f741fba3f03aeb467a8785b5325c
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73232030"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82687117"

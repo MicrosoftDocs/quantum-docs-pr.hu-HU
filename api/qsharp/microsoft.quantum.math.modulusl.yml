@@ -3,8 +3,8 @@ uid: microsoft.quantum.math.modulusl
 name: ModulusL
 type: function
 namespace: Microsoft.Quantum.Math
-summary: Kiszámítja `value` adatosztási `modulus`kanonikus maradékát.
-remarks: 'Ez a függvény eltérő módon viselkedik, mint a kezelő `%` C# és a Q #, ahogy az eredményben mindig pozitív egész szám 0 és `modulus - 1`között, még akkor is, ha az érték negatív.'
+summary: Kiszámítja a `value` többrészes `modulus`adatmennyiség kanonikus maradékát.
+remarks: 'Ez a függvény különbözik attól, hogy az operátor `%` hogyan viselkedik a C#-ban és a Q #-ban, ahogy az eredményben mindig egy `modulus - 1`0 és közötti pozitív egész szám, még akkor is, ha az érték negatív.'
 syntax: 'function ModulusL (value : BigInt, modulus : BigInt) : BigInt'
 input:
   content: '(value : BigInt, modulus : BigInt)'
@@ -20,13 +20,13 @@ input:
 output:
   content: BigInt
   types:
-  - summary: Egész szám $r $0 és `modulus - 1` között, hogy a `value - r` a modulus alapján osztható meg.
+  - summary: Egész szám $r $0 és `modulus - 1` között, `value - r` amely a modulus alapján osztható
     isPrimitive: true
     uid: BigInt
 metadata:
-  ms.openlocfilehash: 14ef3669e4c59912129c9ffac6ecbf1a2ed25534
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: c4a9403cc5c2bf62e43b5cc248fb9502f15818e8
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73232455"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82686627"
