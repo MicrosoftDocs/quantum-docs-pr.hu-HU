@@ -3,9 +3,9 @@ uid: microsoft.quantum.canon.embedpauli
 name: EmbedPauli
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: Egy qubit Pauli-operátor és egy qubit indexe egy több qubit Pauli-operátort ad vissza, amely a megadott qubit operátort adja meg az indexben, és minden más indexnél `PauliI`.
+summary: Egy qubit Pauli-operátor és egy qubit indexe miatt egy több qubit Pauli-operátort ad vissza a megadott qubit operátorral az adott indexben és `PauliI` minden más indexben.
 examples: >-
-  A tömb `[PauliI, PauliI, PauliX, PauliI]`ának beszerzése:
+  A tömb `[PauliI, PauliI, PauliX, PauliI]`beszerzése:
 
 
   ```qsharp
@@ -22,7 +22,7 @@ input:
     isPrimitive: true
     uid: Pauli
   - name: location
-    summary: Egy olyan index, amely `output[location] == pauli`, ahol `output` a függvény kimenete.
+    summary: Egy index, `output` amely `output[location] == pauli`a függvény kimenetét adja meg.
     isPrimitive: true
     uid: Int
   - name: n
@@ -36,9 +36,9 @@ output:
     isPrimitive: true
     uid: Pauli
 metadata:
-  ms.openlocfilehash: 1e852781f6dd85e5432f5613184f028db0e84b87
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: df9cff23b6a7255ec57e944fd1bed140ff18560a
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73219382"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82675586"

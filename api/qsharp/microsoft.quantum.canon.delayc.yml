@@ -9,9 +9,9 @@ summary: >-
 
   Adott művelet és a művelet bemenete esetén a művelet a további adatok megadása után alkalmazza a műveletet.
 
-  Különösen a `Delay(op, arg, _)` kifejezés egy olyan művelet, amely `op` `arg`re vonatkozik, amikor hívásra kerül.
+  A kifejezés `Delay(op, arg, _)` egy olyan művelet, amely a `op` `arg` hívásakor vonatkozik.
 
-  A kifejezés `Delay(op,arg,_)` lehetővé teszi `op`alkalmazásának késleltetését.
+  A `Delay(op,arg,_)` kifejezés lehetővé teszi az alkalmazás késleltetését `op`.
 syntax: "operation DelayC (op : ('T => Unit is Ctl), arg : 'T, aux : Unit) : Unit"
 input:
   content: "(op : ('T => Unit is Ctl), arg : 'T, aux : Unit)"
@@ -51,9 +51,9 @@ seeAlso:
 - microsoft.quantum.canon.delay
 - microsoft.quantum.canon.delayed
 metadata:
-  ms.openlocfilehash: bbba9e29e35702d21f4c34a869b4cc1f0046b6ad
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 48648958e013058a14ba2bd4a6f751019cf70d61
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73219671"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82675729"
