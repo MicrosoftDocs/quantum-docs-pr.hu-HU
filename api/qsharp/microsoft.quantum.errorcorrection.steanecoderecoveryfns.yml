@@ -11,7 +11,7 @@ input:
 output:
   content: (Microsoft.Quantum.ErrorCorrection.RecoveryFn, Microsoft.Quantum.ErrorCorrection.RecoveryFn)
   types:
-  - summary: '`RecoveryFn` típusú függvények rekordja, amely a szindrómás mértékét `Result[]` és visszaadja az észlelt hibát javító `Pauli[]` műveleteket.'
+  - summary: A szindrómát `RecoveryFn` `Result[]` használó típusú függvények rekordja, amely az `Pauli[]` észlelt hibát javító műveleteket adja vissza.
     types:
     - uid: microsoft.quantum.errorcorrection.recoveryfn
     - uid: microsoft.quantum.errorcorrection.recoveryfn
@@ -19,9 +19,9 @@ seeAlso:
 - steanecoderecoveryx
 - steanecoderecoveryz
 metadata:
-  ms.openlocfilehash: 9dd537688434c4729e6121b4ba230415504eb309
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 15d089219fa733582a4663f3c95aa65f9b39cf68
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73228426"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82674226"
