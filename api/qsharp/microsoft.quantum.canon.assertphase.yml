@@ -7,21 +7,21 @@ summary: >-
   Azt állítja be, hogy az egyenlő prioritású állapot fázisában a várt érték szerepel.
 
 
-  Pontosabban azt állítja, hogy a $ \frac{e ^ {i t}} {\sqrt{2}} (e ^ {i\phi} \ ket{0} + e ^ {-i\phi} \ ket{1}) $ értékkel rendelkező Quantum állapot $ \phi $ értéke a várt értékkel rendelkezik.
+  Pontosabban azt állítja, hogy a $ \frac{e ^ {i t}} {\sqrt{2}} (e ^ {i\phi} \ ket{0} + e ^ {-i\phi} \ ket{1}) $ értékű Quantum állapot $ \phi $ értéke a várt értékkel rendelkezik.
 examples: >-
-  A következő érvényesítés sikeres: `qubit` állapota $ \ket{\psi} = e ^ {i 0.5} \ SQRT {1/2} \ ket{0}+ e ^ {i 0.5} \ SQRT {1/2} \ ket{1}$;
+  A következő érvényesítés sikeres: `qubit` állapot $ \ket{\psi} = e ^ {i 0.5} \ SQRT {1/2} \ ket{0}+ e ^ {i 0.5} \ SQRT {1/2} \ ket{1}$;
 
 
   - `AssertPhase(0.0,qubit,10e-10);`
 
 
-  a `qubit` állapota $ \ket{\psi} = e ^ {i 0.5} \ SQRT {1/2} \ ket{0}+ e ^ {-i 0.5} \ SQRT {1/2} \ ket{1}$;
+  `qubit`állapotban van $ \ket{\psi} = e ^ {i 0.5} \ SQRT {1/2} \ ket{0}+ e ^ {-i 0.5} \ SQRT {1/2} \ ket{1}$;
 
 
   - `AssertPhase(0.5,qubit,10e-10);`
 
 
-  `qubit` a $ \ket{\psi} = e ^ {-i 2.2} \ SQRT {1/2} \ ket{0}+ e ^ {i 0.2} \ SQRT {1/2} \ ket{1}$; állapotban van.
+  `qubit`állapotban van $ \ket{\psi} = e ^ {-i 2.2} \ SQRT {1/2} \ ket{0}+ e ^ {i 0.2} \ SQRT {1/2} \ ket{1}$;
 
 
   - `AssertPhase(-1.2,qubit,10e-10);`
@@ -47,9 +47,9 @@ output:
   - isPrimitive: true
     uid: Unit
 metadata:
-  ms.openlocfilehash: 2eaeb042f68a2a5c0cff65918653c37f26ab8d4b
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: ecfc39806fb1ffe504c76889fb36949b4fee2ed4
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73212242"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82674320"

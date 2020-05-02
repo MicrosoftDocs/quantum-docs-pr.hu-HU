@@ -5,7 +5,7 @@ type: function
 namespace: Microsoft.Quantum.Logical
 summary: Egy logikai feltétel értékétől függően két érték egyikét adja vissza.
 remarks: >-
-  A `?|` operátortól eltérően ez a függvény nem rövidzárlat, így mindkét bemenet teljes mértékben ki van értékelve.
+  Az `?|` operátortól eltérően ez a függvény nem rövidzárlat, így mindkét bemenet teljes mértékben ki van értékelve.
 
 
   Akár rövid összekapcsolási viselkedés, a következők egyenértékűek:
@@ -27,23 +27,23 @@ input:
     isPrimitive: true
     uid: Bool
   - name: ifTrue
-    summary: A `condition` `true`akor visszaadott érték.
+    summary: Az értékeként visszaadott `condition` érték `true`.
     uid: "'T"
     isLocal: true
   - name: ifFalse
-    summary: A `condition` `false`akor visszaadott érték.
+    summary: Az értékeként visszaadott `condition` érték `false`.
     uid: "'T"
     isLocal: true
 output:
   content: "'T"
   types:
-  - summary: '`ifTrue`, ha `condition` `true`, és `ifFalse` másként.'
+  - summary: '`ifTrue`Ha `condition` van `true`, és `ifFalse` egyéb módon.'
     uid: "'T"
     isLocal: true
 metadata:
-  ms.openlocfilehash: f26e540b181ce405125dbf80cd97c3e177ad9531
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: c5a255fe0434c7dfc9bf49f1a1c9c6be03cd8055
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73233339"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82674079"

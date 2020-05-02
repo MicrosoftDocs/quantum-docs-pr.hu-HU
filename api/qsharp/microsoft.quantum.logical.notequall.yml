@@ -30,13 +30,13 @@ input:
 output:
   content: Bool
   types:
-  - summary: '`true`, ha a `a` nem egyenlő `b`.'
+  - summary: '`true`Ha és csak akkor `a` , ha nem egyenlő `b`.'
     isPrimitive: true
     uid: Bool
 metadata:
-  ms.openlocfilehash: 77dcfbe1fd4a94166dd61dbfa81b2fd33240c40a
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: f5e2cb54c330a9caa92a96196391ee0a7f00d408
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73235243"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82674041"
