@@ -3,25 +3,25 @@ uid: microsoft.quantum.convert.boolasresult
 name: BoolAsResult
 type: function
 namespace: Microsoft.Quantum.Convert
-summary: Egy `Bool` típus konvertálása `Result` típusra, ahol a `true` `One`re van leképezve, és `false` van leképezve `Zero`.
+summary: Egy `Bool` `Result` típusra konvertál egy típust, `true` ahol a le `One` van `false` képezve és le `Zero`van képezve.
 syntax: 'function BoolAsResult (input : Bool) : Result'
 input:
   content: '(input : Bool)'
   types:
   - name: input
-    summary: konvertálandó `Bool`.
+    summary: '`Bool`a konvertáláshoz.'
     isPrimitive: true
     uid: Bool
 output:
   content: Result
   types:
-  - summary: A `input`t jelölő `Result`.
+  - summary: A `Result` `input`jelölője.
     isPrimitive: true
     uid: Result
 metadata:
-  ms.openlocfilehash: 88019e17d91753f9aeafd273d2f38fef0f420be2
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 270809a4e5bdf8eae2c1dfc360c20fa707f39658
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73212293"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82660763"
