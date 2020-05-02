@@ -4,19 +4,19 @@ name: GeneratorIndex
 type: newtype
 namespace: Microsoft.Quantum.Simulation
 summary: >-
-  A dinamikus generátorok készletében egyetlen primitív kifejezést képvisel, például a Hermitian operátorok, amelyek esetében az adott generátorhoz tartozó Térkép az adott generátor által `EvolutionSet`on keresztüli időbeli alakulását jelenti.
+  Egyetlen primitív kifejezést képvisel az összes dinamikus generátor készletében, például a Hermitian operátorok esetében, amelyekhez az adott generátor által adott idő-evolúciós folyamaton alapuló Térkép áll rendelkezésre `EvolutionSet`.
 
 
   Az első elem (int [], Double []) indexeli ezt az egyszeri kifejezést – például a 0,5-as együtthatóval rendelkező XXY-karakterláncot ([1, 1, 2], [0,5]) indexeli. Azt is megteheti, hogy egy folytonos változó (például X cos φ + Y Sin φ) által Hamiltonians paramétert a (z) ([], [φ]) által reprezentált példány lehet. A második elem indexeli azt az alrendszert, amelyen a létrehozó működik.
 remarks: >-
   > [!WARNING]
 
-  > Egy `GeneratorIndex` értelmezése nincs definiálva, kivéve a generátorok adott készletére mutató hivatkozást.
+  > Az an `GeneratorIndex` értelmezése nincs definiálva, kivéve a generátorok adott készletére mutató hivatkozást.
 
 
   ### <a name="examples"></a>Példák
 
-  A <xref:microsoft.quantum.simulation.paulievolutionset>használatával a \pi X_2 X_5 Y_9 $ operátor a következőképpen jelenik meg:
+  A <xref:microsoft.quantum.simulation.paulievolutionset>használatával a (z) $ \pi X_2 X_5 Y_9 $ operátor a következőképpen jelenik meg:
 
 
   ```qsharp
@@ -29,9 +29,9 @@ seeAlso:
 - evolutionset
 - paulievolutionset
 metadata:
-  ms.openlocfilehash: dc5f5b96a6d1708e94de918a65cbd68e0af06192
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: d633ecdc11075eb45a40a58bb2a1ca67af577c3c
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73067050"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82655163"

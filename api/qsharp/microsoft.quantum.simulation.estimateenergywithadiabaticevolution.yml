@@ -3,7 +3,7 @@ uid: microsoft.quantum.simulation.estimateenergywithadiabaticevolution
 name: EstimateEnergyWithAdiabaticEvolution
 type: operation
 namespace: Microsoft.Quantum.Simulation
-summary: Végrehajtja az állapot-előkészítést egy `statePrepUnitary` egy automatikusan lefoglalt bemeneti állapotra való alkalmazásával, majd a adiabatic állapot-előkészítést egy `adiabaticUnitary`használatával, és végül a fázis becslését az eredményül kapott állapotnak a `phaseEstAlgorithm`használatával történő `qpeUnitary`tekintetében.
+summary: Végrehajtja az állapot-előkészítést egy automatikusan lefoglalt bemeneti állapotra `statePrepUnitary` való alkalmazásával, majd az adiabatic `adiabaticUnitary`állapot-előkészítést a használatával, és `qpeUnitary`végül a fázis becslésével, `phaseEstAlgorithm`amely az eredményül kapott állapotra vonatkozik a használatával.
 syntax: 'operation EstimateEnergyWithAdiabaticEvolution (nQubits : Int, statePrepUnitary : (Qubit[] => Unit), adiabaticUnitary : (Qubit[] => Unit), qpeUnitary : (Qubit[] => Unit is Adj + Ctl), phaseEstAlgorithm : ((Microsoft.Quantum.Oracles.DiscreteOracle, Qubit[]) => Double)) : Double'
 input:
   content: '(nQubits : Int, statePrepUnitary : (Qubit[] => Unit), adiabaticUnitary : (Qubit[] => Unit), qpeUnitary : (Qubit[] => Unit is Adj + Ctl), phaseEstAlgorithm : ((Microsoft.Quantum.Oracles.DiscreteOracle, Qubit[]) => Double))'
@@ -37,7 +37,7 @@ input:
       - isPrimitive: true
         uid: Unit
   - name: qpeUnitary
-    summary: Egy egységes operátort jelképező Oracle, $U $, amely a \delta $ \ket{\phi} $ $E és a The \phi\\, \delta t $ értékű dinamikus generátor alatt az Evolution értéket jelképezi.
+    summary: Egy egységes operátort jelképező Oracle, $U $, amely a \delta $ \ket{\phi} $ $E és a \phi\\, \delta t $ értékű dinamikus generátor alatt az Evolutiont jelképezi.
     isOperation: true
     input:
       types:
@@ -74,9 +74,9 @@ output:
     isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: a5c97bb34307c5216720f82c5cf91ca21cf90739
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: ffab30daf3028c12768d9c9f4cd16a8011a7931f
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73223292"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82655187"
