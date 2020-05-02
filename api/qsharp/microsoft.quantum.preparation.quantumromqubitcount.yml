@@ -3,7 +3,7 @@ uid: microsoft.quantum.preparation.quantumromqubitcount
 name: QuantumROMQubitCount
 type: function
 namespace: Microsoft.Quantum.Preparation
-summary: A `QuantumROM`által visszaadott művelethez lefoglalt qubits teljes számát adja vissza.
+summary: A által `QuantumROM`visszaadott művelethez lefoglalt qubits teljes számát adja vissza.
 syntax: 'function QuantumROMQubitCount (targetError : Double, nCoeffs : Int) : (Int, (Int, Int))'
 input:
   content: '(targetError : Double, nCoeffs : Int)'
@@ -13,7 +13,7 @@ input:
     isPrimitive: true
     uid: Double
   - name: nCoeffs
-    summary: A `QuantumROM`ban megadott együtthatók száma.
+    summary: A ben `QuantumROM`megadott együtthatók száma.
     isPrimitive: true
     uid: Int
 output:
@@ -23,7 +23,7 @@ output:
       ## <a name="first-parameter"></a>Első paraméter
 
 
-      Egy rekord `(x,(y,z))`, ahol a `x = y + z` a lefoglalt qubits teljes száma, `y` az `LittleEndian`-regisztrációhoz tartozó qubits száma, `z` pedig a qubits száma.
+      Az a `(x,(y,z))` rekord `x = y + z` , ahol a qubits teljes száma, `y` a qubits `LittleEndian` száma, valamint `z` a szemetet qubits száma.
     types:
     - isPrimitive: true
       uid: Int
@@ -33,9 +33,9 @@ output:
       - isPrimitive: true
         uid: Int
 metadata:
-  ms.openlocfilehash: fdc1d18f088cd5d07558a6fac28b92af6c9884d3
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 717de1097641dcbabf6441424e88d77b71e05738
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73226386"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82685122"

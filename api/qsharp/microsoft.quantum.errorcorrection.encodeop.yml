@@ -10,9 +10,9 @@ summary: >-
   Az első argumentum a fizikai regiszter lesz, amely kódolva lesz, míg a második argumentum lesz a használni kívánt kaparós regisztráció.
 syntax: newtype EncodeOp = ((Qubit[], Qubit[]) => Microsoft.Quantum.ErrorCorrection.LogicalRegister);
 metadata:
-  ms.openlocfilehash: c078fe4b308d0d2aea7d5046b399fb31191d9ed7
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 610b9de9ccf236855c8669ac7df41fde6c297533
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73231724"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82684962"

@@ -3,12 +3,12 @@ uid: microsoft.quantum.math.bigfraction
 name: BigFraction
 type: newtype
 namespace: Microsoft.Quantum.Math
-summary: A `p/q`űrlap racionális számát jelöli. Az egész `p` a rekord első eleme, és a `q` a rekord második eleme.
+summary: Az űrlap `p/q`racionális számát jelöli. Az `p` egész szám a rekord első eleme, `q` amely a rekord második eleme.
 syntax: newtype BigFraction = (BigInt, BigInt);
 metadata:
-  ms.openlocfilehash: 641939304a0846c6de4b200f87c28546278005e6
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: d9da825f0317e9c51dd78f90ec7ee5b087d5dd43
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73230211"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82684236"
