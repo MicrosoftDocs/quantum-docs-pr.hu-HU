@@ -5,9 +5,9 @@ type: function
 namespace: Microsoft.Quantum.Convert
 summary: Egy pozitív egész szám bináris ábrázolását állítja elő a visszaadott tömb kis endian ábrázolásával.
 remarks: >-
-  A bemeneti `bits` 0 és 63 között kell lennie.
+  A bemenetnek `bits` 0 és 63 közöttinek kell lennie.
 
-  A bemeneti `number` 0 és $2 ^ {\texttt{BITS}}-$1 közé kell esnie.
+  A bemenetnek `number` 0 és $2 ^ {\texttt{bits}}-$1 között kell lennie.
 syntax: 'function IntAsBoolArray (number : Int, bits : Int) : Bool[]'
 input:
   content: '(number : Int, bits : Int)'
@@ -17,20 +17,20 @@ input:
     isPrimitive: true
     uid: Int
   - name: bits
-    summary: A `number`bináris ábrázolásában lévő bitek száma.
+    summary: A bináris ábrázolásban lévő bitek száma `number`.
     isPrimitive: true
     uid: Int
 output:
   content: Bool[]
   types:
-  - summary: A `number`t jelölő logikai értékek tömbje.
+  - summary: A logikai értékek tömbje, `number`amely a értéket jelképezi.
     isArray: true
     isPrimitive: true
     uid: Bool
 metadata:
-  ms.openlocfilehash: e75eede507f04178755e886258e7eb73a6cc3dce
-  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+  ms.openlocfilehash: f14af582713f5d08e29b54a1e1758b4efbeea094
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 12/05/2019
-  ms.locfileid: "74858989"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82659192"
