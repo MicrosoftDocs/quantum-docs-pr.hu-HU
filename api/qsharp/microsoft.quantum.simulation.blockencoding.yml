@@ -7,15 +7,15 @@ summary: >-
   Olyan egységes, amelyben a kamatot egy tetszőleges operátor kódolja a bal felső blokkban.
 
 
-  Ez azt a `BlockEncoding` egy egységes $U $, ahol egy tetszőleges operátor $H $ értékű, amely a rendszerregisztrálás `s` a rendszer-regisztrálásra jogosult, a \ket{0}_a $ kiegészítő állapotnak megfelelő bal felső blokkban van kódolva. az
+  Ez az `BlockEncoding` egy egységes $U $ $, ahol a rendszerregisztrációt `s` végző tetszőleges operátor $H $ értékű, a \ket{0}_a $ kiegészítő állapotnak megfelelő bal felső blokkban kódolva. az
 
 
-  $ $ \begin{align} (\bra{0}_a \ otimes I_s) U (\ket{0}_a \ otimes I_s) = H \end{align} $ $.
+  $ $ \begin{align} (\bra{0}_a \otimes I_s) U (\ket{0}_a \Otimes I_s) = H \end{align} $ $.
 syntax: newtype BlockEncoding = ((Qubit[], Qubit[]) => Unit is Adj + Ctl);
 metadata:
-  ms.openlocfilehash: 0991b1b54cdd8e908f60fc104edf588ae08e12e7
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 400173be551747127198f8cee52390a2694dbfe4
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73066030"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82681102"

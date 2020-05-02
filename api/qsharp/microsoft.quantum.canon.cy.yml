@@ -7,7 +7,7 @@ summary: >-
   A vezérelt-Y (CY) kaput alkalmazza egy pár qubits.
 
 
-  $ $ \begin{align} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 &-i \\\\ 0 & 0 & & 0 \end{align} $ $ $, ahol a sorok és oszlopok a Quantum Concepts útmutatóban vannak rendszerezve.
+  $ $ \begin{align} 1 & 0 & 0 & 0 \\ \\ 0 & 1 & 0 & 0 \\ \\ 0 & 0 & 0 &-i \\ \\ 0 & 0 & i & 0 \end{align}, $ $, ahol a sorok és oszlopok a Quantum Concepts útmutatóban vannak rendszerezve.
 remarks: >-
   Egyenértékű a következővel:
 
@@ -38,9 +38,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: d5ea0bcf4697024eeb19b12300a442fffe3d5f56
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: c7d7d0fb5413051ec7a654c04e01b6ffc02903e6
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73227338"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82680289"

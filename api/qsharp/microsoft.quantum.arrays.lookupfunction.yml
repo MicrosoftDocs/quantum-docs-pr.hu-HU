@@ -4,7 +4,7 @@ name: LookupFunction
 type: function
 namespace: Microsoft.Quantum.Arrays
 summary: A tömb adott értéke egy olyan függvényt ad vissza, amely a tömb elemeit adja vissza.
-remarks: Ez a függvény elsősorban olyan függvényekkel és műveletekkel való együttműködésre hasznos, amelyek argumentumként `Int -> 'T` függvényeket használják. Ez gyakran előfordul, például a Generator reprezentációs könyvtárban, ahol a függvények használatával elkerülhető, hogy a teljes tömb ne legyen rögzítve a memóriában.
+remarks: Ez a függvény elsősorban olyan függvényekkel és műveletekkel való együttműködésre hasznos `Int -> 'T` , amelyek argumentumként működnek. Ez gyakran előfordul, például a Generator reprezentációs könyvtárban, ahol a függvények használatával elkerülhető, hogy a teljes tömb ne legyen rögzítve a memóriában.
 syntax: "function LookupFunction (array : 'T[]) : (Int -> 'T)"
 input:
   content: "(array : 'T[])"
@@ -17,7 +17,7 @@ input:
 output:
   content: (Int -> 'T)
   types:
-  - summary: Olyan függvény `f`, amely `f(idx) == f[idx]`.
+  - summary: Ilyen függvény `f` `f(idx) == f[idx]`.
     isFunction: true
     input:
       types:
@@ -31,9 +31,9 @@ typeParameters:
 - uid: "'T"
   summary: A tömb azon elemeinek típusa, amelyek keresési függvényként jelennek meg.
 metadata:
-  ms.openlocfilehash: b4f509de7137377465f1e76e59a04abfd9a22fd1
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 4d911a3952c273e050c75e4d785e6812d54f5fa1
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73218107"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82680969"

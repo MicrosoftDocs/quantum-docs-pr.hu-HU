@@ -5,7 +5,7 @@ type: function
 namespace: Microsoft.Quantum.Arrays
 summary: Egy olyan tömb első elemének első indexét adja vissza, amely megfelel egy adott predikátumnak. Ha nem létezik ilyen elem, a a-1 értéket adja vissza.
 examples: >-
-  Tegyük fel, hogy `IsEven : Int -> Bool` egy olyan függvény, amely `true`t ad vissza, és csak akkor, ha a bemenete páros. Ezt követően a `IndexOf` használatával megkeresheti az első páros elemet egy tömbben:
+  `IsEven : Int -> Bool` Tegyük fel, hogy egy olyan `true` függvény, amely csak akkor adja vissza, ha a bemenete páros. Ezt `IndexOf` követően a használatával megkeresheti a tömb első páros elemét is:
 
 
   ```Q#
@@ -38,13 +38,13 @@ input:
 output:
   content: Int
   types:
-  - summary: A legkisebb index `idx` úgy, hogy `predicate(arr[idx])` igaz, vagy-1, ha nem létezik ilyen elem.
+  - summary: Vagy a legkisebb index `idx` , amely `predicate(arr[idx])` igaz, vagy-1, ha nincs ilyen elem.
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: 6f7fee40a558e7bb17b94c9dd58656c6f34ceac8
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 6fb95357096751e53f601a9c855ff656e2dd1b34
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73218192"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82681000"

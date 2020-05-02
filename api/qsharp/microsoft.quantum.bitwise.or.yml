@@ -6,8 +6,8 @@ namespace: Microsoft.Quantum.Bitwise
 summary: >-
   A bitenkénti vagy két egész számot ad vissza.
 
-  Ez ugyanazokat a számításokat hajtja végre, mint a beépített `|||` operátor.
-remarks: 'Lásd: [ C# | ](https://docs.microsoft.com/dotnet/csharp/language-reference/operators/or-operator)További részletekért lásd a kezelőt.'
+  Ez ugyanazokat a számításokat hajtja végre, `|||` mint a beépített operátor.
+remarks: 'Lásd: [C# | ](https://docs.microsoft.com/dotnet/csharp/language-reference/operators/or-operator)További részletekért lásd a kezelőt.'
 examples: >-
   ```qsharp
 
@@ -34,9 +34,9 @@ output:
   - isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: 494af7ad852a6e88a3a3a521030e21f4f866bee1
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: c55c5e8aa8917392e7be290e56621f42ea5f8a7d
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73217767"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82680650"

@@ -24,19 +24,19 @@ input:
     isPrimitive: true
     uid: BigInt
   - name: amount
-    summary: Azon bitek száma, amelyekkel a `value` balra kell váltani.
+    summary: Azon bitek száma, amelyekről `value` balra kell váltani.
     isPrimitive: true
     uid: Int
 output:
   content: BigInt
   types:
-  - summary: A `value``amount` BITS által balra tolódott értéke.
+  - summary: A érték `value`a `amount` biten balra tolódott.
     isPrimitive: true
     uid: BigInt
 metadata:
-  ms.openlocfilehash: cffab4695cc4bef50975206d2f1eb81554e14ffb
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 61ae04f5085513742058c0208e8add0af8fd463b
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73217801"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82680681"
