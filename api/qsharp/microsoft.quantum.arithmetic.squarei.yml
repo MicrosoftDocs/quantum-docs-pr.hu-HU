@@ -3,7 +3,7 @@ uid: microsoft.quantum.arithmetic.squarei
 name: SquareI
 type: operation
 namespace: Microsoft.Quantum.Arithmetic
-summary: Kiszámítja az egész szám négyzetét, `xs` a `result`, amely kezdetben nullának kell lennie.
+summary: Kiszámítja az egész szám `xs` négyzetét `result`a értékre, amelynek kezdetben nullának kell lennie.
 remarks: A a négyzet kiszámításához szabványos eltolási és hozzáadási megközelítést használ. A $n-$1 qubits az egyenes továbbítási megoldáshoz képest menti, amely először az XS-t másolja, mielőtt normál szorzót alkalmazzon, majd visszaveszi a másolási műveletet.
 syntax: 'operation SquareI (xs : Microsoft.Quantum.Arithmetic.LittleEndian, result : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 input:
@@ -13,7 +13,7 @@ input:
     summary: $n $ bites számot a négyzetbe (LittleEndian)
     uid: microsoft.quantum.arithmetic.littleendian
   - name: result
-    summary: 'a $2n $-bit result (LittleEndian) értékének kezdetben a következő állapotban kell lennie: $ \ket{0}$.'
+    summary: 'a $2n $-bit result (LittleEndian) értékének kezdetben a következő állapotban{0}kell lennie: $ \ket $.'
     uid: microsoft.quantum.arithmetic.littleendian
 output:
   content: Unit
@@ -24,9 +24,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: ae55cd24a5dad065c010006f01484f7e903e76f6
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: eedc2536da0fd75712929af44f5167d3fc73add3
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73218430"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82676614"

@@ -5,7 +5,7 @@ type: function
 namespace: Microsoft.Quantum.Arrays
 summary: Adott típusú két tömb, valamint egy, a tömbök elemeihez definiált predikátum is ellenőrzi, hogy a tömbök egyenlőek-e.
 remarks: >-
-  Ez a függvény általános típusokhoz van definiálva; azaz, ha két tömb `'T[]` és egy függvény `equal: ('T, 'T) -> Bool`, akkor a függvény `Bool` értéket ad vissza, amely jelzi, hogy a tömbök egyenlőek-e.
+  Ez a függvény általános típusokhoz van definiálva; azaz, ha két tömb `'T[]` és egy függvény `equal: ('T, 'T) -> Bool`van, akkor ez a függvény egy `Bool` értéket ad vissza, amely jelzi, hogy a tömbök egyenlőek-e.
 
   Ha két tömbnek egyenlőnek kell lennie, akkor egyenlőnek kell lennie, és a tömbök azonos helyein lévő elemeknek egyenlőnek kell lenniük.
 examples: >-
@@ -59,18 +59,18 @@ output:
   content: Bool
   types:
   - summary: >-
-      Az érték `true`, ha és csak akkor, ha a `array1` és a `array2` egyenlő.
+      Az érték `true` , ha és csak `array1` akkor `array2` , ha és egyenlő.
 
-      Azaz ha mindkét tömb azonos hosszúságú, és az összes elem `equal`szerint van meghatározva.
+      Vagyis ha mindkét tömb azonos hosszúságú, és az összes elem megegyezik a által `equal`meghatározott értékkel.
     isPrimitive: true
     uid: Bool
 typeParameters:
 - uid: "'T"
   summary: Az egyes tömbök elemeinek típusa.
 metadata:
-  ms.openlocfilehash: 466078fa243e2f394fa42dff15845ae5f1cd73df
-  ms.sourcegitcommit: a0e50c5f07841b99204c068cf5b5ec8ed087ffea
+  ms.openlocfilehash: d2af5ff8e2d66e6162c73c3854670451a00dcf50
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 03/26/2020
-  ms.locfileid: "80321606"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82676501"

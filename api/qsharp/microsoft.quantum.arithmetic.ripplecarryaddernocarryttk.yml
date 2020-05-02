@@ -7,7 +7,7 @@ summary: >-
   Visszafordítható, helyi hullámos – a végrehajtás nélkül két egész számot is végezhet.
 
 
-  A LittleEndian-ben a két $n $ bites egész számnak a `xs` és a `ys`regisztrálása során a művelet kiszámítja a két egész számból álló, 2 ^ n $ adatmennyiséget, ahol $n $ a bemenetek mérete `xs` és `ys`. Nem számítja ki az elvégzési bitet.
+  A LittleEndian `xs` -regisztrációban `ys`szereplő két $n $ bites egész szám, a művelet pedig kiszámítja a két egész számból álló, 2 ^ n $ adatmaradékot, ahol a $n $ a bemenetek `xs` és `ys`a méretének mérete. Nem számítja ki az elvégzési bitet.
 remarks: A művelet ugyanazokkal a funkciókkal rendelkezik, mint a RippleCarryAdderTTK, de nem tér vissza a carry bit-nek.
 syntax: 'operation RippleCarryAdderNoCarryTTK (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 references: >-
@@ -31,9 +31,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 5147d6d78582ad3f45587938f1b4cf3f8a2dd506
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: cf6855325edc354d22b0324f5949a435a11ce8bb
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76871056"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82676682"

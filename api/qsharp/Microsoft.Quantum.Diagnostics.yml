@@ -34,21 +34,21 @@ functions:
   summary: Azt állítja, hogy egy klasszikus lebegőpontos érték a várt értékkel rendelkezik a 1e-10 kis tűréshatára alapján.
 operations:
 - uid: microsoft.quantum.diagnostics.assertallzero
-  summary: Azt állítja, hogy a megadott qubits mind a $ \ket{0}$ állapotban vannak.
+  summary: Azt állítja, hogy a megadott qubits mind a{0}$ \ket $ állapotban vannak.
 - uid: microsoft.quantum.diagnostics.assertallzerowithintolerance
-  summary: Azt állítja, hogy a megadott qubits mind a $ \ket{0}$ állapotba kerülnek egy adott toleranciával szemben.
+  summary: Azt állítja, hogy a megadott qubits mind a{0}$ \ket $ állapotba kerülnek egy adott toleranciával.
 - uid: microsoft.quantum.diagnostics.assertoperationsequalinplace
   summary: >-
     A két művelet miatt a azt állítja, hogy az összes bemeneti állapot esetében azonos módon működnek.
 
 
-    Ezt az állítást úgy valósítja meg, hogy ellenőrzi a műveletek műveleteit az űrlap összes állapotában $V _0 \otimes... \otimes V_ {n-1} $, ahol a $V _k $ az egyik állam $ \ket{0}$, $ \ket{1}$, $ \ket{+} $ és $ \ket{i} $ (+ 1 eigenstate Pauli Y operátor).
+    Ez az állítás a műveleteknek a (z) $V _0 \otimes... \otimes V_ {n-1} $, ahol a $V _K $ egyike a (z) $ \ket{0}$, $ \ket{1}$, $ \ket{+} $ és $ \ket{i} $ (+ 1 eigenstate Pauli Y operátor) állapotának ellenőrzésével valósul meg.
 
 
     Ez az állítás $n $ qubits használ, és több hívást igényel a műveletekhez képest.
 - uid: microsoft.quantum.diagnostics.assertoperationsequalinplacecompbasis
   summary: >-
-    Ellenőrzi, hogy a művelet `givenU` egyenlő-e a művelet `expectedU` a megadott bemeneti mérettel, ha a műveletek műveletét csak a vektorokon, a számítási alap alapján ellenőrzi.
+    Ellenőrzi, hogy a `givenU` művelet egyenlő-e a `expectedU` művelettel a megadott bemeneti méreten azáltal, hogy a műveletek műveletét csak a vektorokon végzi el a számítások alapján.
 
     Ez egy szükséges, de nem elégséges, a két unitaries egyenlőségének feltétele.
 - uid: microsoft.quantum.diagnostics.assertoperationsequalreferenced
@@ -62,27 +62,29 @@ operations:
 
     Ezzel az állítással biztosítható például, hogy egy adott művelet optimalizált verziója azonos módon viselkedik a naiv megvalósításával, vagy egy olyan művelet, amely egy tartományon kívüli adatbevitelt hajt végre, ismert esetekkel egyetért.
 - uid: microsoft.quantum.diagnostics.assertqubit
-  summary: Azt állítja, hogy a qubit `q` a Pauli Z operátor várt eigenstate van.
+  summary: Azt állítja be, hogy `q` a Qubit a Pauli Z operátor várt eigenstate van.
 - uid: microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance
   summary: >-
     Azt állítja be, hogy a qubit a várt állapotú.
 
 
-    `expected` egy összetett vektort, a $ \ket{\psi} = \begin{bmatrix}a & b\end {bmatrix} ^ {\mathrm{T}} $ értéket jelöli.
+    `expected`összetett vektort jelöl: $ \ket{\psi} = \begin{bmatrix}a & b\end {bmatrix} ^ {\mathrm{T}} $.
 
     A $a $, $b $ értéket képviselő rekordok első eleme a komplex szám valódi része, míg a második a képzeletbeli rész.
 
     Az utolsó argumentum meghatározza azt a tűréshatárt, amellyel az érvényesítés történik.
 - uid: microsoft.quantum.diagnostics.assertqubitwithintolerance
-  summary: Azt állítja, hogy a qubit `q` a Pauli Z operátor várt eigenstate van, legfeljebb egy adott toleranciával.
+  summary: Azt állítja, hogy a `q` Qubit a Pauli Z operátor várt eigenstate található, egy adott toleranciával.
 newtypes:
+- uid: microsoft.quantum.diagnostics.enabletestingvianame
+  summary: A fordító felismert attribútuma, amelyen keresztül egy alternatív név meghatározható, amely a típus vagy a tesztelési célú betöltés során használható.
 - uid: microsoft.quantum.diagnostics.test
   summary: Egy egység tesztének megjelölésére szolgáló fordító által felismert attribútum.
-summary: " # <a name=\"summary\"></a>Összegzés\n Ez a névtér diagnosztikai célokra használható függvényeket és műveleteket tartalmaz, beleértve az érvényesítési műveleteket és a jogcím-függvényeket."
+summary: " # <a name=\"summary\"></a>Összefoglalás\n Ez a névtér diagnosztikai célokra használható függvényeket és műveleteket tartalmaz, beleértve az érvényesítési műveleteket és a jogcím-függvényeket."
 metadata:
-  ms.openlocfilehash: 353750a6714b1cdd54ff866657a39bb825e34425
-  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.openlocfilehash: 5e580bb50983d5c0e65d3284408bae04a5e92756
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 02/28/2020
-  ms.locfileid: "77905913"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82676976"

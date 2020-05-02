@@ -23,9 +23,9 @@ newtypes:
 - uid: microsoft.quantum.core.entrypoint
   summary: Egy végrehajtható fájl belépési pontjának megjelölésére használt fordító által felismert attribútum.
 metadata:
-  ms.openlocfilehash: 6391521907deddbf4425b927b1dec12e73f0ee5d
-  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+  ms.openlocfilehash: c9125849d8ed04613c92b66823917e468725981c
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 12/05/2019
-  ms.locfileid: "74858581"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82676988"

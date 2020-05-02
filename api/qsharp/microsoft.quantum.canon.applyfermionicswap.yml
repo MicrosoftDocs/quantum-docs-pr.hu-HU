@@ -9,10 +9,10 @@ summary: >-
 
   Ez lényegében felcseréli a qubits, miközben a-1 globális fázist alkalmazza, ha mindkettő qubits: 1s. Megőrzi a symmetrization.
 
-  További információ:.
+  További információ: .
 
 
-  Ezt a műveletet az \begin{align} F_ {swap} \mathrel{: =} \begin{bmatrix} 1 & 0 & 0 & 0 \\\\ 0 & 0 & 1 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 &-1 \\\\ \end{bmatrix}.
+  Ezt a műveletet \\ \\ az egységes operátor \begin{align} F_ {swap} \mathrel{: =} \begin{bmatrix} 1 & 0 & 0 \\ \\ & 0 0 & 0 & 1 & 0 0 & 1 & 0 & 0 \\ \\ 0 & 0 & 0 &-1 \\ \\ \end{bmatrix}.
 
   \end{align}
 syntax: 'operation ApplyFermionicSWAP (qubit1 : Qubit, qubit2 : Qubit) : Unit'
@@ -39,9 +39,9 @@ functors:
 seeAlso:
 - microsoft.quantum.intrinsic.swap
 metadata:
-  ms.openlocfilehash: 4d9fd4ea879dd0df6bddddb3d4f769f4e8096657
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: c5e9a825d29bab3fa6b7a89e67f4cf5e40fec6d8
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73213823"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82676380"

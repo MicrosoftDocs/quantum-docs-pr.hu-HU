@@ -5,35 +5,35 @@ functions:
 - uid: microsoft.quantum.canon.asqubitarray
   summary: "\n> [!WARNING]\n> Elavult\n\nA AsQubitArray elavult.\nA függvény el lett távolítva."
 - uid: microsoft.quantum.canon.assertalmostequal
-  summary: "\n> [!WARNING]\n> Elavult\n\nA AssertAlmostEqual elavult. Ehelyett használja a @\"microsoft.quantum.diagnostics.nearequalityfactd\".\nEhelyett használja a @\"Microsoft.Quantum.Diagnostics.NearEqualityFactD\"."
+  summary: "\n> [!WARNING]\n> Elavult\n\nA AssertAlmostEqual elavult. Használja @\"microsoft.quantum.diagnostics.nearequalityfactd\" helyette.\nHasználja @\"Microsoft.Quantum.Diagnostics.NearEqualityFactD\" helyette."
 - uid: microsoft.quantum.canon.assertalmostequaltol
-  summary: "\n> [!WARNING]\n> Elavult\n\nA AssertAlmostEqualTol elavult. Ehelyett használja a @\"microsoft.quantum.diagnostics.equalitywithintolerancefact\".\nEhelyett használja a @\"Microsoft.Quantum.Diagnostics.EqualityWithinToleranceFact\"."
+  summary: "\n> [!WARNING]\n> Elavult\n\nA AssertAlmostEqualTol elavult. Használja @\"microsoft.quantum.diagnostics.equalitywithintolerancefact\" helyette.\nHasználja @\"Microsoft.Quantum.Diagnostics.EqualityWithinToleranceFact\" helyette."
 - uid: microsoft.quantum.canon.assertboolarrayequal
-  summary: "\n> [!WARNING]\n> Elavult\n\nA AssertBoolArrayEqual elavult. Ehelyett használja a @\"microsoft.quantum.diagnostics.allequalityfactb\".\nEhelyett használja a @\"Microsoft.Quantum.Diagnostics.AllEqualityFactB\"."
+  summary: "\n> [!WARNING]\n> Elavult\n\nA AssertBoolArrayEqual elavult. Használja @\"microsoft.quantum.diagnostics.allequalityfactb\" helyette.\nHasználja @\"Microsoft.Quantum.Diagnostics.AllEqualityFactB\" helyette."
 - uid: microsoft.quantum.canon.assertboolequal
-  summary: "\n> [!WARNING]\n> Elavult\n\nA AssertBoolEqual elavult. Ehelyett használja a @\"microsoft.quantum.diagnostics.equalityfactb\".\nEhelyett használja a @\"Microsoft.Quantum.Diagnostics.EqualityFactB\"."
+  summary: "\n> [!WARNING]\n> Elavult\n\nA AssertBoolEqual elavult. Használja @\"microsoft.quantum.diagnostics.equalityfactb\" helyette.\nHasználja @\"Microsoft.Quantum.Diagnostics.EqualityFactB\" helyette."
 - uid: microsoft.quantum.canon.assertintequal
-  summary: "\n> [!WARNING]\n> Elavult\n\nA AssertIntEqual elavult. Ehelyett használja a @\"microsoft.quantum.diagnostics.equalityfacti\".\nEhelyett használja a @\"Microsoft.Quantum.Diagnostics.EqualityFactI\"."
+  summary: "\n> [!WARNING]\n> Elavult\n\nA AssertIntEqual elavult. Használja @\"microsoft.quantum.diagnostics.equalityfacti\" helyette.\nHasználja @\"Microsoft.Quantum.Diagnostics.EqualityFactI\" helyette."
 - uid: microsoft.quantum.canon.assertresultequal
-  summary: "\n> [!WARNING]\n> Elavult\n\nA AssertResultEqual elavult. Ehelyett használja a @\"microsoft.quantum.diagnostics.equalityfactr\".\nEhelyett használja a @\"Microsoft.Quantum.Diagnostics.EqualityFactR\"."
+  summary: "\n> [!WARNING]\n> Elavult\n\nA AssertResultEqual elavult. Használja @\"microsoft.quantum.diagnostics.equalityfactr\" helyette.\nHasználja @\"Microsoft.Quantum.Diagnostics.EqualityFactR\" helyette."
 - uid: microsoft.quantum.canon.bigendiantolittleendian
-  summary: "\n> [!WARNING]\n> Elavult\n\nA BigEndianToLittleEndian elavult. Ehelyett használja a @\"microsoft.quantum.arithmetic.bigendianaslittleendian\".\nKérjük, használja a @\"Microsoft.Quantum.Arithmetic.BigEndianAsLittleEndian\"."
+  summary: "\n> [!WARNING]\n> Elavult\n\nA BigEndianToLittleEndian elavult. Használja @\"microsoft.quantum.arithmetic.bigendianaslittleendian\" helyette.\nKérjük, @\"Microsoft.Quantum.Arithmetic.BigEndianAsLittleEndian\"használja."
 - uid: microsoft.quantum.canon.bind
-  summary: "\n> [!WARNING]\n> Elavult\n\nA kötés elavult. Ehelyett használja a @\"microsoft.quantum.canon.bound\".\nKérjük, használja a @\"microsoft.quantum.canon.bound\"."
+  summary: "\n> [!WARNING]\n> Elavult\n\nA kötés elavult. Használja @\"microsoft.quantum.canon.bound\" helyette.\nKérjük, @\"microsoft.quantum.canon.bound\"használja."
 - uid: microsoft.quantum.canon.binda
-  summary: "\n> [!WARNING]\n> Elavult\n\nA kötés elavult. Ehelyett használja a @\"microsoft.quantum.canon.bounda\".\nKérjük, használja a @\"microsoft.quantum.canon.bounda\"."
+  summary: "\n> [!WARNING]\n> Elavult\n\nA kötés elavult. Használja @\"microsoft.quantum.canon.bounda\" helyette.\nKérjük, @\"microsoft.quantum.canon.bounda\"használja."
 - uid: microsoft.quantum.canon.bindc
-  summary: "\n> [!WARNING]\n> Elavult\n\nA BindC elavult. Ehelyett használja a @\"microsoft.quantum.canon.boundc\".\nKérjük, használja a @\"microsoft.quantum.canon.boundc\"."
+  summary: "\n> [!WARNING]\n> Elavult\n\nA BindC elavult. Használja @\"microsoft.quantum.canon.boundc\" helyette.\nKérjük, @\"microsoft.quantum.canon.boundc\"használja."
 - uid: microsoft.quantum.canon.bindca
-  summary: "\n> [!WARNING]\n> Elavult\n\nA BindCA elavult. Ehelyett használja a @\"microsoft.quantum.canon.boundca\".\nKérjük, használja a @\"microsoft.quantum.canon.boundca\"."
+  summary: "\n> [!WARNING]\n> Elavult\n\nA BindCA elavult. Használja @\"microsoft.quantum.canon.boundca\" helyette.\nKérjük, @\"microsoft.quantum.canon.boundca\"használja."
 - uid: microsoft.quantum.canon.bitsize
-  summary: "\n> [!WARNING]\n> Elavult\n\nA BitSize elavult. Ehelyett használja a @\"microsoft.quantum.math.bitsizei\".\nKérjük, használja a @\"microsoft.quantum.math.bitsizei\"."
+  summary: "\n> [!WARNING]\n> Elavult\n\nA BitSize elavult. Használja @\"microsoft.quantum.math.bitsizei\" helyette.\nKérjük, @\"microsoft.quantum.math.bitsizei\"használja."
 - uid: microsoft.quantum.canon.boolarrfrompositiveint
-  summary: "\n> [!WARNING]\n> Elavult\n\nA BoolArrFromPositiveInt elavult. Ehelyett használja a @\"microsoft.quantum.convert.intasboolarray\".\nKérjük, használja a @\"microsoft.quantum.convert.intasboolarray\"."
+  summary: "\n> [!WARNING]\n> Elavult\n\nA BoolArrFromPositiveInt elavult. Használja @\"microsoft.quantum.convert.intasboolarray\" helyette.\nKérjük, @\"microsoft.quantum.convert.intasboolarray\"használja."
 - uid: microsoft.quantum.canon.boolarrfromresultarr
-  summary: "\n> [!WARNING]\n> Elavult\n\nA BoolArrFromResultArr elavult. Ehelyett használja a @\"microsoft.quantum.convert.resultarrayasboolarray\".\nKérjük, használja a @\"microsoft.quantum.convert.resultarrayasboolarray\"."
+  summary: "\n> [!WARNING]\n> Elavult\n\nA BoolArrFromResultArr elavult. Használja @\"microsoft.quantum.convert.resultarrayasboolarray\" helyette.\nKérjük, @\"microsoft.quantum.convert.resultarrayasboolarray\"használja."
 - uid: microsoft.quantum.canon.boolfromresult
-  summary: "\n> [!WARNING]\n> Elavult\n\nA BoolFromResult elavult. Ehelyett használja a @\"microsoft.quantum.convert.resultasbool\".\nKérjük, használja a @\"microsoft.quantum.convert.resultasbool\"."
+  summary: "\n> [!WARNING]\n> Elavult\n\nA BoolFromResult elavult. Használja @\"microsoft.quantum.convert.resultasbool\" helyette.\nKérjük, @\"microsoft.quantum.convert.resultasbool\"használja."
 - uid: microsoft.quantum.canon.bound
   summary: Egy adott bemeneten alapuló műveletek tömbje egy olyan új műveletet hoz létre, amely az egyes műveleteket a sorban hajtja végre.
 - uid: microsoft.quantum.canon.bounda
@@ -52,20 +52,20 @@ functions:
 
     A módosító `CA` azt jelzi, hogy a tömbben lévő összes művelet adjointable és ellenőrizhető.
 - uid: microsoft.quantum.canon.ccontrolled
-  summary: A művelet op esetében egy új műveletet ad vissza, amely az op-t alkalmazza, ha a klasszikus vezérlőelem-bit igaz. Ha `false`, semmi nem történik.
+  summary: A művelet op esetében egy új műveletet ad vissza, amely az op-t alkalmazza, ha a klasszikus vezérlőelem-bit igaz. Ha `false`nem történik semmi.
 - uid: microsoft.quantum.canon.ccontrolleda
   summary: >-
-    A művelet op esetében egy új műveletet ad vissza, amely az op-t alkalmazza, ha a klasszikus vezérlőelem-bit igaz. Ha `false`, semmi nem történik.
+    A művelet op esetében egy új műveletet ad vissza, amely az op-t alkalmazza, ha a klasszikus vezérlőelem-bit igaz. Ha `false`nem történik semmi.
 
     A módosító `A` azt jelzi, hogy a művelet adjointable.
 - uid: microsoft.quantum.canon.ccontrolledc
   summary: >-
-    A művelet op esetében egy új műveletet ad vissza, amely az op-t alkalmazza, ha a klasszikus vezérlőelem-bit igaz. Ha `false`, semmi nem történik.
+    A művelet op esetében egy új műveletet ad vissza, amely az op-t alkalmazza, ha a klasszikus vezérlőelem-bit igaz. Ha `false`nem történik semmi.
 
     A módosító `C` azt jelzi, hogy a művelet ellenőrizhető.
 - uid: microsoft.quantum.canon.ccontrolledca
   summary: >-
-    A művelet op esetében egy új műveletet ad vissza, amely az op-t alkalmazza, ha a klasszikus vezérlőelem-bit igaz. Ha `false`, semmi nem történik.
+    A művelet op esetében egy új műveletet ad vissza, amely az op-t alkalmazza, ha a klasszikus vezérlőelem-bit igaz. Ha `false`nem történik semmi.
 
     A módosító `CA` azt jelzi, hogy a művelet ellenőrizhető és adjointable.
 - uid: microsoft.quantum.canon.compose
@@ -79,7 +79,7 @@ functions:
 - uid: microsoft.quantum.canon.conjugatedbyca
   summary: Az adott külső és belső műveletek olyan új műveletet adnak vissza, amely a belső műveletet a külső művelettel végzi.
 - uid: microsoft.quantum.canon.continuedfractionconvergent
-  summary: "\n> [!WARNING]\n> Elavult\n\nA ContinuedFractionConvergent elavult. Ehelyett használja a @\"microsoft.quantum.math.continuedfractionconvergenti\".\nKérjük, használja a @\"microsoft.quantum.math.continuedfractionconvergenti\"."
+  summary: "\n> [!WARNING]\n> Elavult\n\nA ContinuedFractionConvergent elavult. Használja @\"microsoft.quantum.math.continuedfractionconvergenti\" helyette.\nKérjük, @\"microsoft.quantum.math.continuedfractionconvergenti\"használja."
 - uid: microsoft.quantum.canon.controlledonbitstring
   summary: Egy olyan egységes műveletet ad vissza, amely egy Oracle-t alkalmaz a cél-tételjegyzékben, ha a vezérlő regisztrálása állapot egy megadott bit-maszknak felel meg.
 - uid: microsoft.quantum.canon.controlledonint
@@ -91,11 +91,11 @@ functions:
 
     Ez azt eredményezi, hogy a művelet két bemenettel rendelkezik, ez a függvény a curry isomorphism $f (x, y) \equiv f (x) (y) $-t alkalmazza egy olyan bemenet műveletének visszaadására, amely egy bemenet műveletét adja vissza.
 - uid: microsoft.quantum.canon.curryop
-  summary: "\n> [!WARNING]\n> Elavult\n\nA CurryOp elavult. Ehelyett használja a @\"microsoft.quantum.canon.curriedop\".\nKérjük, használja a @\"microsoft.quantum.canon.curriedop\"."
+  summary: "\n> [!WARNING]\n> Elavult\n\nA CurryOp elavult. Használja @\"microsoft.quantum.canon.curriedop\" helyette.\nKérjük, @\"microsoft.quantum.canon.curriedop\"használja."
 - uid: microsoft.quantum.canon.decomposedintotimestepsca
   summary: Egy adott művelethez tartozó Trotter – Suzuki integrátort megvalósító műveletet ad vissza.
 - uid: microsoft.quantum.canon.decomposeintotimestepsca
-  summary: "\n> [!WARNING]\n> Elavult\n\nA DecomposeIntoTimeStepsCA elavult. Ehelyett használja a @\"microsoft.quantum.canon.decomposedintotimestepsca\"."
+  summary: "\n> [!WARNING]\n> Elavult\n\nA DecomposeIntoTimeStepsCA elavult. Használja @\"microsoft.quantum.canon.decomposedintotimestepsca\" helyette."
 - uid: microsoft.quantum.canon.delayed
   summary: Egy olyan műveletet ad vissza, amely a megadott argumentummal megadott műveletet alkalmazza.
 - uid: microsoft.quantum.canon.delayeda
@@ -105,45 +105,45 @@ functions:
 - uid: microsoft.quantum.canon.delayedca
   summary: Egy olyan műveletet ad vissza, amely a megadott argumentummal megadott műveletet alkalmazza.
 - uid: microsoft.quantum.canon.embedpauli
-  summary: Egy qubit Pauli-operátor és egy qubit indexe egy több qubit Pauli-operátort ad vissza, amely a megadott qubit operátort adja meg az indexben, és minden más indexnél `PauliI`.
+  summary: Egy qubit Pauli-operátor és egy qubit indexe miatt egy több qubit Pauli-operátort ad vissza a megadott qubit operátorral az adott indexben és `PauliI` minden más indexben.
 - uid: microsoft.quantum.canon.expmod
-  summary: "\n> [!WARNING]\n> Elavult\n\nA ExpMod elavult. Ehelyett használja a @\"microsoft.quantum.math.expmodi\".\nKérjük, használja a @\"microsoft.quantum.math.expmodi\"."
+  summary: "\n> [!WARNING]\n> Elavult\n\nA ExpMod elavult. Használja @\"microsoft.quantum.math.expmodi\" helyette.\nKérjük, @\"microsoft.quantum.math.expmodi\"használja."
 - uid: microsoft.quantum.canon.extendedgcd
-  summary: "\n> [!WARNING]\n> Elavult\n\nA ExtendedGCD elavult. Ehelyett használja a @\"microsoft.quantum.math.extendedgreatestcommondivisori\".\nKérjük, használja a @\"microsoft.quantum.math.extendedgreatestcommondivisori\"."
+  summary: "\n> [!WARNING]\n> Elavult\n\nA ExtendedGCD elavult. Használja @\"microsoft.quantum.math.extendedgreatestcommondivisori\" helyette.\nKérjük, @\"microsoft.quantum.math.extendedgreatestcommondivisori\"használja."
 - uid: microsoft.quantum.canon.filter
-  summary: "\n> [!WARNING]\n> Elavult\n\nA szűrő elavult. Ehelyett használja a @\"microsoft.quantum.arrays.filtered\".\nEhelyett használja a @\"Microsoft.Quantum.Arrays.Filtered\"."
+  summary: "\n> [!WARNING]\n> Elavult\n\nA szűrő elavult. Használja @\"microsoft.quantum.arrays.filtered\" helyette.\nHasználja @\"Microsoft.Quantum.Arrays.Filtered\" helyette."
 - uid: microsoft.quantum.canon.forall
-  summary: "\n> [!WARNING]\n> Elavult\n\nA ForAll elavult. Ehelyett használja a @\"microsoft.quantum.arrays.all\".\nEhelyett használja a @\"Microsoft.Quantum.Arrays.All\"."
+  summary: "\n> [!WARNING]\n> Elavult\n\nA ForAll elavult. Használja @\"microsoft.quantum.arrays.all\" helyette.\nHasználja @\"Microsoft.Quantum.Arrays.All\" helyette."
 - uid: microsoft.quantum.canon.forany
-  summary: "\n> [!WARNING]\n> Elavult\n\nA ForAny elavult. Ehelyett használja a @\"microsoft.quantum.arrays.any\".\nEhelyett használja a @\"Microsoft.Quantum.Arrays.Any\"."
+  summary: "\n> [!WARNING]\n> Elavult\n\nA ForAny elavult. Használja @\"microsoft.quantum.arrays.any\" helyette.\nHasználja @\"Microsoft.Quantum.Arrays.Any\" helyette."
 - uid: microsoft.quantum.canon.fst
   summary: Egy pár után visszaadja az első elemét.
 - uid: microsoft.quantum.canon.gcd
-  summary: "\n> [!WARNING]\n> Elavult\n\nA GCD elavult. Ehelyett használja a @\"microsoft.quantum.math.greatestcommondivisori\".\nKérjük, használja a @\"microsoft.quantum.math.greatestcommondivisori\"."
+  summary: "\n> [!WARNING]\n> Elavult\n\nA GCD elavult. Használja @\"microsoft.quantum.math.greatestcommondivisori\" helyette.\nKérjük, @\"microsoft.quantum.math.greatestcommondivisori\"használja."
 - uid: microsoft.quantum.canon.ignore
   summary: Figyelmen kívül hagyja egy művelet vagy függvény kimenetét.
 - uid: microsoft.quantum.canon.intabs
-  summary: "\n> [!WARNING]\n> Elavult\n\nAz intabs elavult. Ehelyett használja a @\"microsoft.quantum.math.absi\".\nA függvény el lett távolítva."
+  summary: "\n> [!WARNING]\n> Elavult\n\nAz intabs elavult. Használja @\"microsoft.quantum.math.absi\" helyette.\nA függvény el lett távolítva."
 - uid: microsoft.quantum.canon.intarrayfromrange
-  summary: "\n> [!WARNING]\n> Elavult\n\nA IntArrayFromRange elavult. Ehelyett használja a @\"microsoft.quantum.convert.rangeasintarray\".\nKérjük, használja a @\"microsoft.quantum.convert.rangeasintarray\"."
+  summary: "\n> [!WARNING]\n> Elavult\n\nA IntArrayFromRange elavult. Használja @\"microsoft.quantum.convert.rangeasintarray\" helyette.\nKérjük, @\"microsoft.quantum.convert.rangeasintarray\"használja."
 - uid: microsoft.quantum.canon.intmax
-  summary: "\n> [!WARNING]\n> Elavult\n\nA IntMax elavult. Ehelyett használja a @\"microsoft.quantum.math.maxi\".\nA függvény el lett távolítva."
+  summary: "\n> [!WARNING]\n> Elavult\n\nA IntMax elavult. Használja @\"microsoft.quantum.math.maxi\" helyette.\nA függvény el lett távolítva."
 - uid: microsoft.quantum.canon.inversemod
-  summary: "\n> [!WARNING]\n> Elavult\n\nA InverseMod elavult. Ehelyett használja a @\"microsoft.quantum.math.inversemodi\".\nKérjük, használja a @\"microsoft.quantum.math.inversemodi\"."
+  summary: "\n> [!WARNING]\n> Elavult\n\nA InverseMod elavult. Használja @\"microsoft.quantum.math.inversemodi\" helyette.\nKérjük, @\"microsoft.quantum.math.inversemodi\"használja."
 - uid: microsoft.quantum.canon.iscoprime
-  summary: "\n> [!WARNING]\n> Elavult\n\nA IsCoprime elavult. Ehelyett használja a @\"microsoft.quantum.math.iscoprimei\".\nKérjük, használja a @\"microsoft.quantum.math.greatestcommondivisori\"."
+  summary: "\n> [!WARNING]\n> Elavult\n\nA IsCoprime elavult. Használja @\"microsoft.quantum.math.iscoprimei\" helyette.\nKérjük, @\"microsoft.quantum.math.greatestcommondivisori\"használja."
 - uid: microsoft.quantum.canon.isresultone
-  summary: Ellenőrzi, hogy egy adott eredmény értéke `One`-e.
+  summary: Ellenőrzi, hogy egy adott eredmény értéke egyenlő- `One`e.
 - uid: microsoft.quantum.canon.isresultzero
-  summary: Ellenőrzi, hogy egy adott eredmény értéke `Zero`-e.
+  summary: Ellenőrzi, hogy egy adott eredmény értéke egyenlő- `Zero`e.
 - uid: microsoft.quantum.canon.littleendiantobigendian
-  summary: "\n> [!WARNING]\n> Elavult\n\nA LittleEndianToBigEndian elavult. Ehelyett használja a @\"microsoft.quantum.arithmetic.littleendianasbigendian\".\nKérjük, használja a @\"Microsoft.Quantum.Arithmetic.LittleEndianAsBigEndian\"."
+  summary: "\n> [!WARNING]\n> Elavult\n\nA LittleEndianToBigEndian elavult. Használja @\"microsoft.quantum.arithmetic.littleendianasbigendian\" helyette.\nKérjük, @\"Microsoft.Quantum.Arithmetic.LittleEndianAsBigEndian\"használja."
 - uid: microsoft.quantum.canon.map
-  summary: "\n> [!WARNING]\n> Elavult\n\nA leképezés elavult. Ehelyett használja a @\"microsoft.quantum.arrays.mapped\".\nEhelyett használja a @\"Microsoft.Quantum.Arrays.Mapped\"."
+  summary: "\n> [!WARNING]\n> Elavult\n\nA leképezés elavult. Használja @\"microsoft.quantum.arrays.mapped\" helyette.\nHasználja @\"Microsoft.Quantum.Arrays.Mapped\" helyette."
 - uid: microsoft.quantum.canon.mapindex
-  summary: "\n> [!WARNING]\n> Elavult\n\nA MapIndex elavult. Ehelyett használja a @\"microsoft.quantum.arrays.mappedbyindex\".\nEhelyett használja a @\"Microsoft.Quantum.Arrays.MappedByIndex\"."
+  summary: "\n> [!WARNING]\n> Elavult\n\nA MapIndex elavult. Használja @\"microsoft.quantum.arrays.mappedbyindex\" helyette.\nHasználja @\"Microsoft.Quantum.Arrays.MappedByIndex\" helyette."
 - uid: microsoft.quantum.canon.modulus
-  summary: "\n> [!WARNING]\n> Elavult\n\nA modulus elavult. Ehelyett használja a @\"microsoft.quantum.math.modulusi\".\nKérjük, használja a @\"microsoft.quantum.math.modulusi\"."
+  summary: "\n> [!WARNING]\n> Elavult\n\nA modulus elavult. Használja @\"microsoft.quantum.math.modulusi\" helyette.\nKérjük, @\"microsoft.quantum.math.modulusi\"használja."
 - uid: microsoft.quantum.canon.multiplexerbruteforcefromgenerator
   summary: >-
     Egy szorzásra vezérelt, egységes műveletet ad vissza, $U $, amely egy egységes $V _j $ értéket alkalmaz, ha n-qubit számú \ket{j} $.
@@ -157,7 +157,7 @@ functions:
 
     $U = \sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j}\otimes V_j $.
 - uid: microsoft.quantum.canon.nearequalityfact
-  summary: "\n> [!WARNING]\n> Elavult\n\nA NearEqualityFact elavult. Ehelyett használja a @\"microsoft.quantum.diagnostics.nearequalityfactd\".\nEhelyett használja a @\"Microsoft.Quantum.Diagnostics.NearEqualityFactD\"."
+  summary: "\n> [!WARNING]\n> Elavult\n\nA NearEqualityFact elavult. Használja @\"microsoft.quantum.diagnostics.nearequalityfactd\" helyette.\nHasználja @\"Microsoft.Quantum.Diagnostics.NearEqualityFactD\" helyette."
 - uid: microsoft.quantum.canon.operationpow
   summary: >-
     Kivált egy műveletet egy hatványra.
@@ -189,15 +189,15 @@ functions:
 
     Ez azt jelenti, hogy egy $U $ kaput jelképező művelet miatt egy új műveletet ad vissza $U ^ m $ a Power $m $-hoz.
 - uid: microsoft.quantum.canon.pad
-  summary: "\n> [!WARNING]\n> Elavult\n\nA pad elavult. Ehelyett használja a @\"microsoft.quantum.arrays.padded\".\nEhelyett használja a @\"Microsoft.Quantum.Arrays.Padded\"."
+  summary: "\n> [!WARNING]\n> Elavult\n\nA pad elavult. Használja @\"microsoft.quantum.arrays.padded\" helyette.\nHasználja @\"Microsoft.Quantum.Arrays.Padded\" helyette."
 - uid: microsoft.quantum.canon.paulifrombitstring
-  summary: "\n> [!WARNING]\n> Elavult\n\nA PauliFromBitString elavult. Ehelyett használja a @\"microsoft.quantum.convert.boolarrayaspauli\".\nKérjük, használja a @\"microsoft.quantum.convert.boolarrayaspauli\"."
+  summary: "\n> [!WARNING]\n> Elavult\n\nA PauliFromBitString elavult. Használja @\"microsoft.quantum.convert.boolarrayaspauli\" helyette.\nKérjük, @\"microsoft.quantum.convert.boolarrayaspauli\"használja."
 - uid: microsoft.quantum.canon.pnormalize
-  summary: "\n> [!WARNING]\n> Elavult\n\nA PNormalize elavult. Ehelyett használja a @\"microsoft.quantum.math.pnormalized\".\nKérjük, használja a @\"microsoft.quantum.math.pnormalized\"."
+  summary: "\n> [!WARNING]\n> Elavult\n\nA PNormalize elavult. Használja @\"microsoft.quantum.math.pnormalized\" helyette.\nKérjük, @\"microsoft.quantum.math.pnormalized\"használja."
 - uid: microsoft.quantum.canon.positiveintfromboolarr
-  summary: "\n> [!WARNING]\n> Elavult\n\nA PositiveIntFromBoolArr elavult. Ehelyett használja a @\"microsoft.quantum.convert.boolarrayasint\".\nKérjük, használja a @\"microsoft.quantum.convert.boolarrayasint\"."
+  summary: "\n> [!WARNING]\n> Elavult\n\nA PositiveIntFromBoolArr elavult. Használja @\"microsoft.quantum.convert.boolarrayasint\" helyette.\nKérjük, @\"microsoft.quantum.convert.boolarrayasint\"használja."
 - uid: microsoft.quantum.canon.positiveintfromresultarr
-  summary: "\n> [!WARNING]\n> Elavult\n\nA PositiveIntFromResultArr elavult. Ehelyett használja a @\"microsoft.quantum.convert.resultarrayasint\".\nKérjük, használja a @\"microsoft.quantum.canon.resultarrayasint\"."
+  summary: "\n> [!WARNING]\n> Elavult\n\nA PositiveIntFromResultArr elavult. Használja @\"microsoft.quantum.convert.resultarrayasint\" helyette.\nKérjük, @\"microsoft.quantum.canon.resultarrayasint\"használja."
 - uid: microsoft.quantum.canon.restrictedtosubregister
   summary: Egy művelet korlátozása egy regiszterből álló tömbre, például egy alregisztrációra.
 - uid: microsoft.quantum.canon.restrictedtosubregistera
@@ -216,25 +216,25 @@ functions:
 
     A módosító `CA` azt jelzi, hogy a művelet ellenőrizhető és adjointable.
 - uid: microsoft.quantum.canon.restricttosubregister
-  summary: "\n> [!WARNING]\n> Elavult\n\nA RestrictToSubregister elavult. Ehelyett használja a @\"microsoft.quantum.canon.restrictedtosubregister\".\nKérjük, használja a @\"microsoft.quantum.canon.restrictedtosubregister\"."
+  summary: "\n> [!WARNING]\n> Elavult\n\nA RestrictToSubregister elavult. Használja @\"microsoft.quantum.canon.restrictedtosubregister\" helyette.\nKérjük, @\"microsoft.quantum.canon.restrictedtosubregister\"használja."
 - uid: microsoft.quantum.canon.restricttosubregistera
-  summary: "\n> [!WARNING]\n> Elavult\n\nA RestrictToSubregisterA elavult. Ehelyett használja a @\"microsoft.quantum.canon.restrictedtosubregistera\".\nKérjük, használja a @\"microsoft.quantum.canon.restrictedtosubregistera\"."
+  summary: "\n> [!WARNING]\n> Elavult\n\nA RestrictToSubregisterA elavult. Használja @\"microsoft.quantum.canon.restrictedtosubregistera\" helyette.\nKérjük, @\"microsoft.quantum.canon.restrictedtosubregistera\"használja."
 - uid: microsoft.quantum.canon.restricttosubregisterc
-  summary: "\n> [!WARNING]\n> Elavult\n\nA RestrictToSubregisterC elavult. Ehelyett használja a @\"microsoft.quantum.canon.restrictedtosubregisterc\".\nKérjük, használja a @\"microsoft.quantum.canon.restrictedtosubregisterc\"."
+  summary: "\n> [!WARNING]\n> Elavult\n\nA RestrictToSubregisterC elavult. Használja @\"microsoft.quantum.canon.restrictedtosubregisterc\" helyette.\nKérjük, @\"microsoft.quantum.canon.restrictedtosubregisterc\"használja."
 - uid: microsoft.quantum.canon.restricttosubregisterca
-  summary: "\n> [!WARNING]\n> Elavult\n\nA RestrictToSubregisterCA elavult. Ehelyett használja a @\"microsoft.quantum.canon.restrictedtosubregisterca\".\nKérjük, használja a @\"microsoft.quantum.canon.restrictedtosubregisterca\"."
+  summary: "\n> [!WARNING]\n> Elavult\n\nA RestrictToSubregisterCA elavult. Használja @\"microsoft.quantum.canon.restrictedtosubregisterca\" helyette.\nKérjük, @\"microsoft.quantum.canon.restrictedtosubregisterca\"használja."
 - uid: microsoft.quantum.canon.resultarrfromboolarr
-  summary: "\n> [!WARNING]\n> Elavult\n\nA ResultArrFromBoolArr elavult. Ehelyett használja a @\"microsoft.quantum.convert.boolarrayasresultarray\".\nKérjük, használja a @\"microsoft.quantum.convert.resultarrayasboolarray\"."
+  summary: "\n> [!WARNING]\n> Elavult\n\nA ResultArrFromBoolArr elavult. Használja @\"microsoft.quantum.convert.boolarrayasresultarray\" helyette.\nKérjük, @\"microsoft.quantum.convert.resultarrayasboolarray\"használja."
 - uid: microsoft.quantum.canon.resultasint
-  summary: "\n> [!WARNING]\n> Elavult\n\nA ResultAsInt elavult. Ehelyett használja a @\"microsoft.quantum.convert.resultarrayasint\".\nKérjük, használja a @\"microsoft.quantum.convert.resultarrayasint\"."
+  summary: "\n> [!WARNING]\n> Elavult\n\nA ResultAsInt elavult. Használja @\"microsoft.quantum.convert.resultarrayasint\" helyette.\nKérjük, @\"microsoft.quantum.convert.resultarrayasint\"használja."
 - uid: microsoft.quantum.canon.resultfrombool
-  summary: "\n> [!WARNING]\n> Elavult\n\nA ResultFromBool elavult. Ehelyett használja a @\"microsoft.quantum.convert.boolasresult\".\nKérjük, használja a @\"microsoft.quantum.convert.boolasresult\"."
+  summary: "\n> [!WARNING]\n> Elavult\n\nA ResultFromBool elavult. Használja @\"microsoft.quantum.convert.boolasresult\" helyette.\nKérjük, @\"microsoft.quantum.convert.boolasresult\"használja."
 - uid: microsoft.quantum.canon.reverse
-  summary: "\n> [!WARNING]\n> Elavult\n\nA sztornírozás elavult. Ehelyett használja a @\"microsoft.quantum.arrays.reversed\".\nEhelyett használja a @\"Microsoft.Quantum.Arrays.Reversed\"."
+  summary: "\n> [!WARNING]\n> Elavult\n\nA sztornírozás elavult. Használja @\"microsoft.quantum.arrays.reversed\" helyette.\nHasználja @\"Microsoft.Quantum.Arrays.Reversed\" helyette."
 - uid: microsoft.quantum.canon.snd
   summary: Egy pár után a a második elemet adja vissza.
 - uid: microsoft.quantum.canon.splitarray
-  summary: "\n> [!WARNING]\n> Elavult\n\nA SplitArray elavult. Ehelyett használja a @\"microsoft.quantum.arrays.partitioned\".\nEhelyett használja a @\"Microsoft.Quantum.Arrays.Partitioned\"."
+  summary: "\n> [!WARNING]\n> Elavult\n\nA SplitArray elavult. Használja @\"microsoft.quantum.arrays.partitioned\" helyette.\nHasználja @\"Microsoft.Quantum.Arrays.Partitioned\" helyette."
 - uid: microsoft.quantum.canon.stackcapacity
   summary: "\n> [!WARNING]\n> Elavult\n\nA StackCapacity elavult."
 - uid: microsoft.quantum.canon.stacklength
@@ -248,7 +248,7 @@ functions:
 - uid: microsoft.quantum.canon.stackpush
   summary: "\n> [!WARNING]\n> Elavult\n\nA StackPush elavult."
 - uid: microsoft.quantum.canon.tooperation
-  summary: "\n> [!WARNING]\n> Elavult\n\nA ToOperation elavult. Ehelyett használja a @\"microsoft.quantum.convert.functionasoperation\".\nKérjük, használja a @\"microsoft.quantum.convert.functionasoperation\"."
+  summary: "\n> [!WARNING]\n> Elavult\n\nA ToOperation elavult. Használja @\"microsoft.quantum.convert.functionasoperation\" helyette.\nKérjük, @\"microsoft.quantum.convert.functionasoperation\"használja."
 - uid: microsoft.quantum.canon.transformedoperation
   summary: Egy függvény és egy művelet miatt egy új műveletet ad vissza, amelynek a bemenetét az adott függvény átalakítja.
 - uid: microsoft.quantum.canon.transformedoperationa
@@ -275,20 +275,20 @@ functions:
 
     A módosító `CA` azt jelzi, hogy a műveletek ellenőrizhetők és adjointable.
 - uid: microsoft.quantum.canon.uncurryop
-  summary: "\n> [!WARNING]\n> Elavult\n\nA UncurryOp elavult. Ehelyett használja a @\"microsoft.quantum.canon.uncurriedop\".\nKérjük, használja a @\"microsoft.quantum.canon.uncurriedop\"."
+  summary: "\n> [!WARNING]\n> Elavult\n\nA UncurryOp elavult. Használja @\"microsoft.quantum.canon.uncurriedop\" helyette.\nKérjük, @\"microsoft.quantum.canon.uncurriedop\"használja."
 - uid: microsoft.quantum.canon.uncurryopa
-  summary: "\n> [!WARNING]\n> Elavult\n\nA UncurryOpA elavult. Ehelyett használja a @\"microsoft.quantum.canon.uncurriedopa\".\nKérjük, használja a @\"microsoft.quantum.canon.uncurriedopa\"."
+  summary: "\n> [!WARNING]\n> Elavult\n\nA UncurryOpA elavult. Használja @\"microsoft.quantum.canon.uncurriedopa\" helyette.\nKérjük, @\"microsoft.quantum.canon.uncurriedopa\"használja."
 - uid: microsoft.quantum.canon.uncurryopc
-  summary: "\n> [!WARNING]\n> Elavult\n\nA UncurryOpC elavult. Ehelyett használja a @\"microsoft.quantum.canon.uncurriedopc\".\nKérjük, használja a @\"microsoft.quantum.canon.uncurriedopc\"."
+  summary: "\n> [!WARNING]\n> Elavult\n\nA UncurryOpC elavult. Használja @\"microsoft.quantum.canon.uncurriedopc\" helyette.\nKérjük, @\"microsoft.quantum.canon.uncurriedopc\"használja."
 - uid: microsoft.quantum.canon.uncurryopca
-  summary: "\n> [!WARNING]\n> Elavult\n\nA UncurryOpCA elavult. Ehelyett használja a @\"microsoft.quantum.canon.uncurriedopca\".\nKérjük, használja a @\"microsoft.quantum.canon.uncurriedopca\"."
+  summary: "\n> [!WARNING]\n> Elavult\n\nA UncurryOpCA elavult. Használja @\"microsoft.quantum.canon.uncurriedopca\" helyette.\nKérjük, @\"microsoft.quantum.canon.uncurriedopca\"használja."
 - uid: microsoft.quantum.canon.weightonepaulis
   summary: Az összes Weight-1 Pauli operátor tömbjét adja vissza egy adott számú qubits.
 - uid: microsoft.quantum.canon.xor
-  summary: "\n> [!WARNING]\n> Elavult\n\nA XOR elavult. Ehelyett használja a @\"microsoft.quantum.logical.xor\".\nKérjük, használja a @\"microsoft.quantum.logical.xor\"."
+  summary: "\n> [!WARNING]\n> Elavult\n\nA XOR elavult. Használja @\"microsoft.quantum.logical.xor\" helyette.\nKérjük, @\"microsoft.quantum.logical.xor\"használja."
 operations:
 - uid: microsoft.quantum.canon.adiabaticstateenergyunitary
-  summary: "\n> [!WARNING]\n> Elavult\n\nA AdiabaticStateEnergyUnitary elavult. Ehelyett használja a @\"microsoft.quantum.simulation.estimateenergywithadiabaticevolution\".\nKérjük, használja a @\"microsoft.quantum.simuilation.pnormalized\"."
+  summary: "\n> [!WARNING]\n> Elavult\n\nA AdiabaticStateEnergyUnitary elavult. Használja @\"microsoft.quantum.simulation.estimateenergywithadiabaticevolution\" helyette.\nKérjük, @\"microsoft.quantum.simuilation.pnormalized\"használja."
 - uid: microsoft.quantum.canon.andladder
   summary: Felügyelt "és létra" műveletet hajt végre a célként megadott qubits regisztrálásakor.
 - uid: microsoft.quantum.canon.applyand
@@ -370,27 +370,27 @@ operations:
 - uid: microsoft.quantum.canon.applyquantumfouriertransformbe
   summary: "\n> [!WARNING]\n> Elavult\n\nA ApplyQuantumFourierTransformBE elavult. Ehelyett használja a következőt: @ \"applyquantumfouriertransform (bigendianaslittleendian (Qs))\".\nA művelet el lett távolítva."
 - uid: microsoft.quantum.canon.applyquantumfouriertransformle
-  summary: "\n> [!WARNING]\n> Elavult\n\nA ApplyQuantumFourierTransformLE elavult. Ehelyett használja a @\"microsoft.quantum.canon.applyquantumfouriertransform\".\nKérjük, használja a @\"microsoft.quantum.canon.applyquantumfouriertransform\"."
+  summary: "\n> [!WARNING]\n> Elavult\n\nA ApplyQuantumFourierTransformLE elavult. Használja @\"microsoft.quantum.canon.applyquantumfouriertransform\" helyette.\nKérjük, @\"microsoft.quantum.canon.applyquantumfouriertransform\"használja."
 - uid: microsoft.quantum.canon.applyreversedopbigendian
-  summary: "\n> [!WARNING]\n> Elavult\n\nA ApplyReversedOpBigEndian elavult. Ehelyett használja a @\"microsoft.quantum.arithmetic.applyreversedopbe\".\nKérjük, használja a @\"Microsoft.Quantum.Arithmetic.ApplyReversedOpBE\"."
+  summary: "\n> [!WARNING]\n> Elavult\n\nA ApplyReversedOpBigEndian elavult. Használja @\"microsoft.quantum.arithmetic.applyreversedopbe\" helyette.\nKérjük, @\"Microsoft.Quantum.Arithmetic.ApplyReversedOpBE\"használja."
 - uid: microsoft.quantum.canon.applyreversedopbigendiana
-  summary: "\n> [!WARNING]\n> Elavult\n\nA ApplyReversedOpBigEndianA elavult. Ehelyett használja a @\"microsoft.quantum.arithmetic.applyreversedopbea\".\nKérjük, használja a @\"Microsoft.Quantum.Arithmetic.ApplyReversedOpBEA\"."
+  summary: "\n> [!WARNING]\n> Elavult\n\nA ApplyReversedOpBigEndianA elavult. Használja @\"microsoft.quantum.arithmetic.applyreversedopbea\" helyette.\nKérjük, @\"Microsoft.Quantum.Arithmetic.ApplyReversedOpBEA\"használja."
 - uid: microsoft.quantum.canon.applyreversedopbigendianc
-  summary: "\n> [!WARNING]\n> Elavult\n\nA ApplyReversedOpBigEndianC elavult. Ehelyett használja a @\"microsoft.quantum.arithmetic.applyreversedopbec\".\nKérjük, használja a @\"Microsoft.Quantum.Arithmetic.ApplyReversedOpBEC\"."
+  summary: "\n> [!WARNING]\n> Elavult\n\nA ApplyReversedOpBigEndianC elavult. Használja @\"microsoft.quantum.arithmetic.applyreversedopbec\" helyette.\nKérjük, @\"Microsoft.Quantum.Arithmetic.ApplyReversedOpBEC\"használja."
 - uid: microsoft.quantum.canon.applyreversedopbigendianca
-  summary: "\n> [!WARNING]\n> Elavult\n\nA ApplyReversedOpBigEndianCA elavult. Ehelyett használja a @\"microsoft.quantum.arithmetic.applyreversedopbeca\".\nKérjük, használja a @\"Microsoft.Quantum.Arithmetic.ApplyReversedOpBEC\"."
+  summary: "\n> [!WARNING]\n> Elavult\n\nA ApplyReversedOpBigEndianCA elavult. Használja @\"microsoft.quantum.arithmetic.applyreversedopbeca\" helyette.\nKérjük, @\"Microsoft.Quantum.Arithmetic.ApplyReversedOpBEC\"használja."
 - uid: microsoft.quantum.canon.applyreversedoplittleendian
-  summary: "\n> [!WARNING]\n> Elavult\n\nA ApplyReversedOpLittleEndian elavult. Ehelyett használja a @\"microsoft.quantum.arithmetic.applyreversedople\".\nKérjük, használja a @\"Microsoft.Quantum.Arithmetic.ApplyReversedOpLE\"."
+  summary: "\n> [!WARNING]\n> Elavult\n\nA ApplyReversedOpLittleEndian elavult. Használja @\"microsoft.quantum.arithmetic.applyreversedople\" helyette.\nKérjük, @\"Microsoft.Quantum.Arithmetic.ApplyReversedOpLE\"használja."
 - uid: microsoft.quantum.canon.applyreversedoplittleendiana
-  summary: "\n> [!WARNING]\n> Elavult\n\nA ApplyReversedOpLittleEndianA elavult. Ehelyett használja a @\"microsoft.quantum.arithmetic.applyreversedoplea\".\nKérjük, használja a @\"Microsoft.Quantum.Arithmetic.ApplyReversedOpLEA\"."
+  summary: "\n> [!WARNING]\n> Elavult\n\nA ApplyReversedOpLittleEndianA elavult. Használja @\"microsoft.quantum.arithmetic.applyreversedoplea\" helyette.\nKérjük, @\"Microsoft.Quantum.Arithmetic.ApplyReversedOpLEA\"használja."
 - uid: microsoft.quantum.canon.applyreversedoplittleendianc
-  summary: "\n> [!WARNING]\n> Elavult\n\nA ApplyReversedOpLittleEndianC elavult. Ehelyett használja a @\"microsoft.quantum.arithmetic.applyreversedoplec\".\nKérjük, használja a @\"Microsoft.Quantum.Arithmetic.ApplyReversedOpLEC\"."
+  summary: "\n> [!WARNING]\n> Elavult\n\nA ApplyReversedOpLittleEndianC elavult. Használja @\"microsoft.quantum.arithmetic.applyreversedoplec\" helyette.\nKérjük, @\"Microsoft.Quantum.Arithmetic.ApplyReversedOpLEC\"használja."
 - uid: microsoft.quantum.canon.applyreversedoplittleendianca
-  summary: "\n> [!WARNING]\n> Elavult\n\nA ApplyReversedOpLittleEndianCA elavult. Ehelyett használja a @\"microsoft.quantum.arithmetic.applyreversedopleca\".\nKérjük, használja a @\"Microsoft.Quantum.Arithmetic.ApplyReversedOpLEC\"."
+  summary: "\n> [!WARNING]\n> Elavult\n\nA ApplyReversedOpLittleEndianCA elavult. Használja @\"microsoft.quantum.arithmetic.applyreversedopleca\" helyette.\nKérjük, @\"Microsoft.Quantum.Arithmetic.ApplyReversedOpLEC\"használja."
 - uid: microsoft.quantum.canon.applyripplecarrycomparatorbe
   summary: "\n> [!WARNING]\n> Elavult\n\nA ApplyRippleCarryComparatorBE elavult. Ehelyett használja a következőt: @ \"compareusingripplecarry (bigendianaslittleendian (x), bigendianaslittleendian (y), output)\".\nA művelet el lett távolítva."
 - uid: microsoft.quantum.canon.applyripplecarrycomparatorle
-  summary: "\n> [!WARNING]\n> Elavult\n\nA ApplyRippleCarryComparatorLE elavult. Ehelyett használja a @\"microsoft.quantum.arithmetic.compareusingripplecarry\".\nKérjük, használja a @\"Microsoft.Quantum.Arithmetic.CompareUsingRippleCarry\"."
+  summary: "\n> [!WARNING]\n> Elavult\n\nA ApplyRippleCarryComparatorLE elavult. Használja @\"microsoft.quantum.arithmetic.compareusingripplecarry\" helyette.\nKérjük, @\"Microsoft.Quantum.Arithmetic.CompareUsingRippleCarry\"használja."
 - uid: microsoft.quantum.canon.applyseriesofops
   summary: Egy tömbön egymás után az Ops és a célok listáját alkalmazza.
 - uid: microsoft.quantum.canon.applyseriesofopsa
@@ -551,43 +551,43 @@ operations:
 - uid: microsoft.quantum.canon.approximateqft
   summary: Alkalmazza a becsült kvantum Fourier-transzformációt (AQFT) a kvantum-regiszterre.
 - uid: microsoft.quantum.canon.asserthighestbit
-  summary: "\n> [!WARNING]\n> Elavult\n\nA AssertHighestBit elavult. Ehelyett használja a @\"microsoft.quantum.arithmetic.assertmostsignificantbit\".\nKérjük, használja a @\"Microsoft.Quantum.Arithmetic.AssertMostSignificantBit\"."
+  summary: "\n> [!WARNING]\n> Elavult\n\nA AssertHighestBit elavult. Használja @\"microsoft.quantum.arithmetic.assertmostsignificantbit\" helyette.\nKérjük, @\"Microsoft.Quantum.Arithmetic.AssertMostSignificantBit\"használja."
 - uid: microsoft.quantum.canon.assertlessthanphasele
-  summary: "\n> [!WARNING]\n> Elavult\n\nA AssertLessThanPhaseLE elavult. Ehelyett használja a @\"microsoft.quantum.arithmetic.assertphaselessthan\".\nKérjük, használja a @\"Microsoft.Quantum.Arithmetic.AssertPhaseLessThan\"."
+  summary: "\n> [!WARNING]\n> Elavult\n\nA AssertLessThanPhaseLE elavult. Használja @\"microsoft.quantum.arithmetic.assertphaselessthan\" helyette.\nKérjük, @\"Microsoft.Quantum.Arithmetic.AssertPhaseLessThan\"használja."
 - uid: microsoft.quantum.canon.assertphase
   summary: >-
     Azt állítja be, hogy az egyenlő prioritású állapot fázisában a várt érték szerepel.
 
 
-    Pontosabban azt állítja, hogy a $ \frac{e ^ {i t}} {\sqrt{2}} (e ^ {i\phi} \ ket{0} + e ^ {-i\phi} \ ket{1}) $ értékkel rendelkező Quantum állapot $ \phi $ értéke a várt értékkel rendelkezik.
+    Pontosabban azt állítja, hogy a $ \frac{e ^ {i t}} {\sqrt{2}} (e ^ {i\phi} \ ket{0} + e ^ {-i\phi} \ ket{1}) $ értékű Quantum állapot $ \phi $ értéke a várt értékkel rendelkezik.
 - uid: microsoft.quantum.canon.assertprobintbe
   summary: "\n> [!WARNING]\n> Elavult\n\nA AssertProbIntBE elavult. Ehelyett használja a következőt: @ \"assertprobint (stateindex, prob, bigendianaslittleendian (qubits), tolerancia)\".\nA művelet el lett távolítva."
 - uid: microsoft.quantum.canon.cascadecnot
-  summary: "\n> [!WARNING]\n> Elavult\n\nA CascadeCNOT elavult. Ehelyett használja a @\"microsoft.quantum.canon.applycnotchain\".\nKérjük, használja a @\"microsoft.quantum.canon.applycnotchain\"."
+  summary: "\n> [!WARNING]\n> Elavult\n\nA CascadeCNOT elavult. Használja @\"microsoft.quantum.canon.applycnotchain\" helyette.\nKérjük, @\"microsoft.quantum.canon.applycnotchain\"használja."
 - uid: microsoft.quantum.canon.cnotchain
-  summary: "\n> [!WARNING]\n> Elavult\n\nA CNOTChain elavult. Ehelyett használja a @\"microsoft.quantum.canon.applycnotchain\"."
+  summary: "\n> [!WARNING]\n> Elavult\n\nA CNOTChain elavult. Használja @\"microsoft.quantum.canon.applycnotchain\" helyette."
 - uid: microsoft.quantum.canon.cnotchaintarget
-  summary: "\n> [!WARNING]\n> Elavult\n\nA CNOTChainTarget elavult. Ehelyett használja a @\"microsoft.quantum.canon.applycnotchainwithtarget\"."
+  summary: "\n> [!WARNING]\n> Elavult\n\nA CNOTChainTarget elavult. Használja @\"microsoft.quantum.canon.applycnotchainwithtarget\" helyette."
 - uid: microsoft.quantum.canon.copymostsignificantbitle
-  summary: "\n> [!WARNING]\n> Elavult\n\nA CopyMostSignificantBitLE elavult. Ehelyett használja a @\"microsoft.quantum.arithmetic.copymostsignificantbit\".\nKérjük, használja a @\"Microsoft.Quantum.Arithmetic.CopyMostSignificantBit\"."
+  summary: "\n> [!WARNING]\n> Elavult\n\nA CopyMostSignificantBitLE elavult. Használja @\"microsoft.quantum.arithmetic.copymostsignificantbit\" helyette.\nKérjük, @\"Microsoft.Quantum.Arithmetic.CopyMostSignificantBit\"használja."
 - uid: microsoft.quantum.canon.cx
   summary: >-
     A vezérelt-X (CX) kaput alkalmazza egy pár qubits.
 
 
-    $ $ \begin{align} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 & 1 \\\\ 0 & 0 & 1 & 0 \end{align}, $ $, ahol a sorok és oszlopok a Quantum Concepts útmutatóban vannak rendezve.
+    $ $ \begin{align} 1 & 0 & 0 & 0 \\ \\ 0 & 1 & 0 & 0 \\ \\ 0 & 0 & 0 & 1 \\ \\ 0 & 0 & 1 & 0 \end{align}, $ $, ahol a sorok és oszlopok a Quantum Concepts útmutatóban vannak rendszerezve.
 - uid: microsoft.quantum.canon.cy
   summary: >-
     A vezérelt-Y (CY) kaput alkalmazza egy pár qubits.
 
 
-    $ $ \begin{align} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 &-i \\\\ 0 & 0 & & 0 \end{align}, $ $, ahol a sorok és oszlopok a Quantum Concepts útmutatóban vannak rendezve.
+    $ $ \begin{align} 1 & 0 & 0 & 0 \\ \\ 0 & 1 & 0 & 0 \\ \\ 0 & 0 & 0 &-i \\ \\ 0 & 0 & i & 0 \end{align}, $ $, ahol a sorok és oszlopok a Quantum Concepts útmutatóban vannak rendszerezve.
 - uid: microsoft.quantum.canon.cz
   summary: >-
     A vezérelt-Z (CZ) kaput alkalmazza egy pár qubits.
 
 
-    $ $ \begin{align} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 1 & 0 \\\\ 0 & 0 & 0 &-1 \end{align}, $ $, ahol a sorok és oszlopok a Quantum Concepts útmutatóban vannak rendezve.
+    $ $ \begin{align} 1 & 0 & 0 & 0 \\ \\ 0 & 1 & 0 & 0 \\ \\ 0 & 0 & 1 & 0 \\ \\ 0 & 0 & 0 &-1 \end{align}, $ $, ahol a sorok és oszlopok a Quantum Concepts útmutatóban vannak rendszerezve.
 - uid: microsoft.quantum.canon.delay
   summary: Egy megadott műveletet késleltetve alkalmaz.
 - uid: microsoft.quantum.canon.delaya
@@ -604,19 +604,19 @@ operations:
     Az Y Hadamard átalakítás $H _Y = S H $ egyetlen qubit:
 
 
-    \begin{align} H_Y \mathrel{: =} \frac{1}{\sqrt{2}} \begin{bmatrix} 1 & 1 \\\\ i &-i \end{bmatrix}.
+    \begin{align} H_Y \mathrel{: =} \frac{1}{\sqrt{2}} \begin{bmatrix} 1 & 1 \\ \\ i &-i \end{bmatrix}.
 
     \end{align}
 - uid: microsoft.quantum.canon.inplacemajority
-  summary: "\n> [!WARNING]\n> Elavult\n\nA InPlaceMajority elavult. Ehelyett használja a @\"microsoft.quantum.arithmetic.applymajorityinplace\".\nKérjük, használja a @\"microsoft.quantum.arithmetic.applymajorityinplace\"."
+  summary: "\n> [!WARNING]\n> Elavult\n\nA InPlaceMajority elavult. Használja @\"microsoft.quantum.arithmetic.applymajorityinplace\" helyette.\nKérjük, @\"microsoft.quantum.arithmetic.applymajorityinplace\"használja."
 - uid: microsoft.quantum.canon.inplacexorbe
   summary: "\n> [!WARNING]\n> Elavult\n\nA InPlaceXorBE elavult. Ehelyett használja a következőt: @ \"applyreversedopleca (applyxorinplace (Value, _), TARGET)\".\nA művelet el lett távolítva."
 - uid: microsoft.quantum.canon.inplacexorle
-  summary: "\n> [!WARNING]\n> Elavult\n\nA InPlaceXorLE elavult. Ehelyett használja a @\"microsoft.quantum.measurement.applyxorinplace\".\nKérjük, használja a @\"Microsoft.Quantum.Measurement.ApplyXorInPlace\"."
+  summary: "\n> [!WARNING]\n> Elavult\n\nA InPlaceXorLE elavult. Használja @\"microsoft.quantum.measurement.applyxorinplace\" helyette.\nKérjük, @\"Microsoft.Quantum.Measurement.ApplyXorInPlace\"használja."
 - uid: microsoft.quantum.canon.integerincrementle
-  summary: "\n> [!WARNING]\n> Elavult\n\nA IntegerIncrementLE elavult. Ehelyett használja a @\"microsoft.quantum.arithmetic.incrementbyinteger\".\nKérjük, használja a @\"Microsoft.Quantum.Arithmetic.IncrementByInteger\"."
+  summary: "\n> [!WARNING]\n> Elavult\n\nA IntegerIncrementLE elavult. Használja @\"microsoft.quantum.arithmetic.incrementbyinteger\" helyette.\nKérjük, @\"Microsoft.Quantum.Arithmetic.IncrementByInteger\"használja."
 - uid: microsoft.quantum.canon.integerincrementphasele
-  summary: "\n> [!WARNING]\n> Elavult\n\nA IntegerIncrementPhaseLE elavult. Ehelyett használja a @\"microsoft.quantum.arithmetic.incrementphasebyinteger\".\nKérjük, használja a @\"Microsoft.Quantum.Arithmetic.IncrementPhaseByInteger\"."
+  summary: "\n> [!WARNING]\n> Elavult\n\nA IntegerIncrementPhaseLE elavult. Használja @\"microsoft.quantum.arithmetic.incrementphasebyinteger\" helyette.\nKérjük, @\"Microsoft.Quantum.Arithmetic.IncrementPhaseByInteger\"használja."
 - uid: microsoft.quantum.canon.iteratethroughcartesianpower
   summary: Végrehajt egy műveletet az egész tartomány Descartes-as teljesítményében lévő minden indexnél.
 - uid: microsoft.quantum.canon.iteratethroughcartesianproduct
@@ -624,15 +624,15 @@ operations:
 - uid: microsoft.quantum.canon.measureintegerbe
   summary: "\n> [!WARNING]\n> Elavult\n\nA MeasureIntegerBE elavult. Ehelyett használja a következőt: @ \"measureinteger (bigendianaslittleendian (TARGET))\".\nA művelet el lett távolítva."
 - uid: microsoft.quantum.canon.modularaddproductle
-  summary: "\n> [!WARNING]\n> Elavult\n\nA ModularAddProductLE elavult. Ehelyett használja a @\"microsoft.quantum.arithmetic.multiplyandaddbymodularinteger\".\nKérjük, használja a @\"Microsoft.Quantum.Arithmetic.MultiplyAndAddByModularInteger\"."
+  summary: "\n> [!WARNING]\n> Elavult\n\nA ModularAddProductLE elavult. Használja @\"microsoft.quantum.arithmetic.multiplyandaddbymodularinteger\" helyette.\nKérjük, @\"Microsoft.Quantum.Arithmetic.MultiplyAndAddByModularInteger\"használja."
 - uid: microsoft.quantum.canon.modularaddproductphasele
-  summary: "\n> [!WARNING]\n> Elavult\n\nA ModularAddProductPhaseLE elavult. Ehelyett használja a @\"microsoft.quantum.arithmetic.multiplyandaddphasebymodularinteger\".\nKérjük, használja a @\"Microsoft.Quantum.Arithmetic.MultiplyAndAddPhaseByModularInteger\"."
+  summary: "\n> [!WARNING]\n> Elavult\n\nA ModularAddProductPhaseLE elavult. Használja @\"microsoft.quantum.arithmetic.multiplyandaddphasebymodularinteger\" helyette.\nKérjük, @\"Microsoft.Quantum.Arithmetic.MultiplyAndAddPhaseByModularInteger\"használja."
 - uid: microsoft.quantum.canon.modularincrementle
-  summary: "\n> [!WARNING]\n> Elavult\n\nA ModularIncrementLE elavult. Ehelyett használja a @\"microsoft.quantum.arithmetic.modularincrementbyinteger\".\nKérjük, használja a @\"Microsoft.Quantum.Arithmetic.ModularIncrementByInteger\"."
+  summary: "\n> [!WARNING]\n> Elavult\n\nA ModularIncrementLE elavult. Használja @\"microsoft.quantum.arithmetic.modularincrementbyinteger\" helyette.\nKérjük, @\"Microsoft.Quantum.Arithmetic.ModularIncrementByInteger\"használja."
 - uid: microsoft.quantum.canon.modularincrementphasele
-  summary: "\n> [!WARNING]\n> Elavult\n\nA ModularIncrementPhaseLE elavult. Ehelyett használja a @\"microsoft.quantum.arithmetic.incrementphasebymodularinteger\".\nKérjük, használja a @\"Microsoft.Quantum.Arithmetic.IncrementPhaseByModularInteger\"."
+  summary: "\n> [!WARNING]\n> Elavult\n\nA ModularIncrementPhaseLE elavult. Használja @\"microsoft.quantum.arithmetic.incrementphasebymodularinteger\" helyette.\nKérjük, @\"Microsoft.Quantum.Arithmetic.IncrementPhaseByModularInteger\"használja."
 - uid: microsoft.quantum.canon.modularmultiplybyconstantle
-  summary: "\n> [!WARNING]\n> Elavult\n\nA ModularMultiplyByConstantLE elavult. Ehelyett használja a @\"microsoft.quantum.arithmetic.multiplybymodularinteger\".\nKérjük, használja a @\"Microsoft.Quantum.Arithmetic.MultiplyByModularInteger\"."
+  summary: "\n> [!WARNING]\n> Elavult\n\nA ModularMultiplyByConstantLE elavult. Használja @\"microsoft.quantum.arithmetic.multiplybymodularinteger\" helyette.\nKérjük, @\"Microsoft.Quantum.Arithmetic.MultiplyByModularInteger\"használja."
 - uid: microsoft.quantum.canon.multiplexoperations
   summary: >-
     A több állapotú tömb által vezérelt műveletek tömbjét alkalmazza.
@@ -681,22 +681,22 @@ operations:
 - uid: microsoft.quantum.canon.swapreverseregister
   summary: A SWAP Gates használatával fordította vissza a qubits sorrendjét a regisztrációban.
 - uid: microsoft.quantum.canon.with
-  summary: "\n> [!WARNING]\n> Elavult\n\nA with már elavult. Ehelyett használja a @\"microsoft.quantum.canon.applywith\".\nKérjük, használja a @\"Microsoft.Quantum.Canon.ApplyWith\"."
+  summary: "\n> [!WARNING]\n> Elavult\n\nA with már elavult. Használja @\"microsoft.quantum.canon.applywith\" helyette.\nKérjük, @\"Microsoft.Quantum.Canon.ApplyWith\"használja."
 - uid: microsoft.quantum.canon.witha
-  summary: "\n> [!WARNING]\n> Elavult\n\nA witha elavult. Ehelyett használja a @\"microsoft.quantum.canon.applywitha\".\nKérjük, használja a @\"Microsoft.Quantum.Canon.ApplyWithA\"."
+  summary: "\n> [!WARNING]\n> Elavult\n\nA witha elavult. Használja @\"microsoft.quantum.canon.applywitha\" helyette.\nKérjük, @\"Microsoft.Quantum.Canon.ApplyWithA\"használja."
 - uid: microsoft.quantum.canon.withc
-  summary: "\n> [!WARNING]\n> Elavult\n\nA WithC elavult. Ehelyett használja a @\"microsoft.quantum.canon.applywithc\".\nKérjük, használja a @\"Microsoft.Quantum.Canon.ApplyWithC\"."
+  summary: "\n> [!WARNING]\n> Elavult\n\nA WithC elavult. Használja @\"microsoft.quantum.canon.applywithc\" helyette.\nKérjük, @\"Microsoft.Quantum.Canon.ApplyWithC\"használja."
 - uid: microsoft.quantum.canon.withca
-  summary: "\n> [!WARNING]\n> Elavult\n\nA WithCA elavult. Ehelyett használja a @\"microsoft.quantum.canon.applywithca\".\nKérjük, használja a @\"Microsoft.Quantum.Canon.ApplyWithCA\"."
+  summary: "\n> [!WARNING]\n> Elavult\n\nA WithCA elavult. Használja @\"microsoft.quantum.canon.applywithca\" helyette.\nKérjük, @\"Microsoft.Quantum.Canon.ApplyWithCA\"használja."
 newtypes:
 - uid: microsoft.quantum.canon.ccnotop
   summary: A CCNOT-kapu aláírásának típusa
 - uid: microsoft.quantum.canon.resultstack
   summary: "\n> [!WARNING]\n> Elavult\n\nA ResultStack elavult."
 metadata:
-  ms.openlocfilehash: db3466b0e6fe493393f75bea85f9c91e2f56ec67
-  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.openlocfilehash: a38f0267c2caefba7acc63e8e36d96a1b8c08d91
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 02/28/2020
-  ms.locfileid: "77905624"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82677056"

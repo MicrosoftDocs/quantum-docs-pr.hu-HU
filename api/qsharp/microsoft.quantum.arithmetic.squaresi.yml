@@ -3,7 +3,7 @@ uid: microsoft.quantum.arithmetic.squaresi
 name: SquareSI
 type: operation
 namespace: Microsoft.Quantum.Arithmetic
-summary: A négyzet alá eső egész szám `xs`, és az eredményt a `result`ban tárolja, amelynek kezdetben nullának kell lennie.
+summary: Négyzetes aláírású egész szám `xs` `result`, és a eredményét tárolja, amelynek kezdetben nullának kell lennie.
 remarks: A megvalósítás a IntegerSquare-ra támaszkodik.
 syntax: 'operation SquareSI (xs : Microsoft.Quantum.Arithmetic.SignedLittleEndian, result : Microsoft.Quantum.Arithmetic.SignedLittleEndian) : Unit'
 input:
@@ -13,7 +13,7 @@ input:
     summary: n bites egész szám – négyzet (SignedLittleEndian)
     uid: microsoft.quantum.arithmetic.signedlittleendian
   - name: result
-    summary: 'a 2n-bit result (SignedLittleEndian) értékének kezdetben a következő állapotban kell lennie: $ \ket{0}$.'
+    summary: 'a 2n-bit result (SignedLittleEndian) értékének kezdetben a következő állapotban{0}kell lennie: $ \ket $.'
     uid: microsoft.quantum.arithmetic.signedlittleendian
 output:
   content: Unit
@@ -24,9 +24,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 71a3ffc190540ccfb51eb81febdce6a943dc99fb
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: e4a212094c38d370e2489b586ee8014131bef9dc
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73218413"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82676601"

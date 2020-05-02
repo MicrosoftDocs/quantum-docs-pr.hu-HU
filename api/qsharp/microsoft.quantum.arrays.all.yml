@@ -4,7 +4,7 @@ name: All
 type: function
 namespace: Microsoft.Quantum.Arrays
 summary: Egy tömböt és egy predikátumot adott meg, amely a tömb elemeihez van meghatározva, és ellenőrzi, hogy a tömb összes eleme megfelel-e a predikátumnak.
-remarks: "A függvény általános típusokhoz van definiálva (például ha egy Array `'T[]` és egy függvényt is `predicate: 'T -> Bool` egy `Bool` értéket, amely azt jelzi, hogy az összes elem megfelel-e `predicate`nak."
+remarks: "A függvény általános típusokhoz van definiálva, például `'T[]` ha egy tömb és egy függvény `predicate: 'T -> Bool` is létrehoz egy `Bool` értéket, amely azt jelzi, hogy az összes elem megfelel `predicate`-e."
 examples: >-
   A következő kód ellenőrzi, hogy a tömb összes eleme nem nulla-e:
 
@@ -28,7 +28,7 @@ input:
   content: "(predicate : ('T -> Bool), array : 'T[])"
   types:
   - name: predicate
-    summary: A `'T` függvényből `Bool`, amely az elemek vizsgálatára szolgál.
+    summary: Az elemekhez `'T` `Bool` tartozó függvény, amely az elemek vizsgálatára szolgál.
     isFunction: true
     input:
       types:
@@ -39,23 +39,23 @@ input:
       - isPrimitive: true
         uid: Bool
   - name: array
-    summary: Elemek tömbje `'T`fölé.
+    summary: Elemek tömbje `'T`.
     isArray: true
     uid: "'T"
     isLocal: true
 output:
   content: Bool
   types:
-  - summary: Az összes elemre alkalmazott predikátum és függvény `Bool` értéke.
+  - summary: Az `Bool` összes elemre alkalmazott predikátum és függvényének értéke.
     isPrimitive: true
     uid: Bool
 typeParameters:
 - uid: "'T"
-  summary: '`array` elemek típusa'
+  summary: Az `array` elemek típusa.
 metadata:
-  ms.openlocfilehash: bc21229d0468adcd41f6c460f5325cad9f09ba5c
-  ms.sourcegitcommit: a0e50c5f07841b99204c068cf5b5ec8ed087ffea
+  ms.openlocfilehash: 116a2a537c4712c968187785873c0546ec236762
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 03/26/2020
-  ms.locfileid: "80320789"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82676585"

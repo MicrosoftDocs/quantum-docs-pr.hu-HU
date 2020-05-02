@@ -4,7 +4,7 @@ name: Filtered
 type: function
 namespace: Microsoft.Quantum.Arrays
 summary: Egy tömb és egy, a tömb elemeihez definiált predikátum miatt egy tömböt ad vissza, amely a predikátumnak megfelelő elemeket tartalmaz.
-remarks: A függvény általános típusokhoz van definiálva, például ha egy Array `'T[]` és egy predikátummal rendelkezik, `'T -> Bool` lehetőség van az elemek szűrésére.
+remarks: A függvény általános típusokhoz van definiálva, azaz, ha egy tömböt `'T[]` és egy predikátumot `'T -> Bool` is használhatunk az elemek szűréséhez.
 examples: >-
   A következő kód a "szűrt" függvényt mutatja be.
 
@@ -33,7 +33,7 @@ input:
   content: "(predicate : ('T -> Bool), array : 'T[])"
   types:
   - name: predicate
-    summary: Az elemek szűrésére szolgáló, `'T` és Boolean közötti függvény.
+    summary: Az elemek szűréséhez használt logikai értékből származó `'T` függvény.
     isFunction: true
     input:
       types:
@@ -44,24 +44,24 @@ input:
       - isPrimitive: true
         uid: Bool
   - name: array
-    summary: Elemek tömbje `'T`fölé.
+    summary: Elemek tömbje `'T`.
     isArray: true
     uid: "'T"
     isLocal: true
 output:
   content: "'T[]"
   types:
-  - summary: A predikátumot kielégítő elemek tömb-`'T[]`.
+  - summary: A predikátumnak megfelelő elemek tömbje `'T[]` .
     isArray: true
     uid: "'T"
     isLocal: true
 typeParameters:
 - uid: "'T"
-  summary: '`array` elemek típusa'
+  summary: Az `array` elemek típusa.
 metadata:
-  ms.openlocfilehash: 8ce7f84c2243a5194b5a2223884fb68304767dbf
-  ms.sourcegitcommit: a0e50c5f07841b99204c068cf5b5ec8ed087ffea
+  ms.openlocfilehash: 6aa19a279425672675182f3c8098e7c47fb5cce6
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 03/26/2020
-  ms.locfileid: "80320750"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82676467"

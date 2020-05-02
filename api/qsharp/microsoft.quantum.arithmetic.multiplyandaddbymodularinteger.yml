@@ -24,7 +24,7 @@ input:
     isPrimitive: true
     uid: Int
   - name: multiplier
-    summary: Egy olyan előjel nélküli egész szám, amelynek értékét hozzá kell adni a `summand`egyes alapállapotának címkéjéhez.
+    summary: Egy olyan előjel nélküli egész szám, amelynek értékét fel kell venni az egyes alapállapotok címkéjébe `summand`.
     uid: microsoft.quantum.arithmetic.littleendian
   - name: summand
     summary: A művelet céljaként használandó, előjel nélküli egész számot jelölő kvantum-regisztráció.
@@ -40,9 +40,9 @@ functors:
 seeAlso:
 - microsoft.quantum.arithmetic.multiplyandaddphasebymodularinteger
 metadata:
-  ms.openlocfilehash: d0f3a28df20b6dd3a353a445bb9a6130e6100f99
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: 38efb2840406fc82b7ae24640bec6641f048a5b2
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76871430"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82676752"

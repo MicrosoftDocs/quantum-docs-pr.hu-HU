@@ -5,7 +5,7 @@ type: operation
 namespace: Microsoft.Quantum.Canon
 summary: Egy olyan művelet, amely egy bizonyos bemenetet fogad el, egy olyan függvényt ad vissza, amely kompatibilis a művelettel, és a függvény bemenete a művelettel a művelet által várt űrlapra alakítja át a bemenetet.
 examples: >-
-  A következő hívás a @"Microsoft.Quantum.Arithmetic.LittleEndianAsBigEndian" használatával alkalmaz egy @"Microsoft.Quantum.Arithmetic.LittleEndian"típusú bemenetre @"Microsoft.Quantum.Arithmetic.BigEndian" bemenetre tervezett műveletet.
+  A következő hívás @"Microsoft.Quantum.Arithmetic.LittleEndianAsBigEndian" egy olyan művelet alkalmazására szolgál, @"Microsoft.Quantum.Arithmetic.BigEndian" amely bemenetekhez van hozzárendelve @"Microsoft.Quantum.Arithmetic.LittleEndian"egy típusú bemenethez:
 
 
   ```qsharp
@@ -58,9 +58,9 @@ seeAlso:
 - applywithinputtransformationca
 - transformedoperation
 metadata:
-  ms.openlocfilehash: 29b22fdff94be068341e94ad4c5f67303011a298
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: bf2e1c808b908ea5e1ad15014b5d7745708d6156
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73212667"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82676275"
