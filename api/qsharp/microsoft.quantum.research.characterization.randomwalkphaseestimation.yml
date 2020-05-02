@@ -1,0 +1,82 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.research.characterization.randomwalkphaseestimation
+name: RandomWalkPhaseEstimation
+type: operation
+namespace: Microsoft.Quantum.Research.Characterization
+summary: Elvégzi az iterációs fázisok becslését egy véletlenszerű lépéssel, hogy megközelítse az adott Oracle-és eigenstate klasszikus mérési eredményeinek a többhelyes tesztelését.
+remarks: >-
+  ### <a name="iterative-phase-estimation-and-eigenstates"></a>Iterációs fázis becslése és Eigenstates
+
+
+  Általánosságban elmondható, hogy `eigenstate` a bemeneti regisztrációnak nem kell eigenstate $ \ket{\phi} $ $U $-nak lennie, de eigenstates is lehet. Tegyük fel, hogy a bemeneti állapotot a \begin{align} \ket{\psi} &\_= \sum {j\_} \alpha\_j \ket{\phi j}, \end{align}\{,\_ahol\}a $ \alpha j $ olyan összetett együtthatók,\_mint a $\_\sum j | \alpha j | ^ 2 = $1\_, ahol $U \ket{\phi\_j} = \phi\_j\ket {\ Phi j} $.
+
+
+  Ezután az iterációs fázis becslésének végrehajtása végül egyetlen eigenstate konvergál, a [fejlesztési útmutatóban](xref:microsoft.quantum.libraries.characterization#iterative-phase-estimation-without-eigenstates)leírtak szerint.
+
+
+  ### <a name="experiment-design"></a>Kísérlet kialakítása
+
+
+  A \begin{align} \theta \sim \Pr (\phi), \quad t \approx \frac `oracle` {1}{\variance{\phi}}.) által megadott mérési idő $t $ és a deverziós $ \theta $ átadott értéknek megfelelően van kiválasztva. *particle guess heuristic*
+
+  a \end{align} ez a heurisztikus megoldás optimálisan csökkenti a várt posteriori eltérést az iterációs fázisok becslésében a normál előtt.
+
+
+  ### <a name="optimality"></a>Optimális működés
+
+
+  Ezzel a művelettel közelíthető meg a $ \phi $ fázis optimális kiértékelése, a másodfokú veszteség $L (\phi, \hat{\phi}) \mathrel{: =} (\phi-\hat{\phi}) ^ 2 $ használatával.
+
+
+  Az iterációs fázis becslésével kapcsolatos további részletekért tekintse meg a [Bayes fázis becslését](xref:microsoft.quantum.libraries.characterization#bayesian-phase-estimation) .
+syntax: 'operation RandomWalkPhaseEstimation (initialMean : Double, initialStdDev : Double, nMeasurements : Int, maxMeasurements : Int, unwind : Int, oracle : Microsoft.Quantum.Oracles.ContinuousOracle, targetState : Qubit[]) : Double'
+references: >-
+  - Komphajó és *szerzőtársai 2011* [Doi: 10/TFX](https://doi.org/10.1007/s11128-012-0407-6), [arXiv: 1110.3067](https://arxiv.org/abs/1110.3067).
+
+  - Wiebe *et al.* 2013 [Doi: 10/TF3](https://doi.org/10.1103/PhysRevLett.112.190501), [arXiv: 1309.0876](https://arxiv.org/abs/1309.0876)
+
+  - Wiebe és granade 2018 *(előkészítés)*.
+input:
+  content: '(initialMean : Double, initialStdDev : Double, nMeasurements : Int, maxMeasurements : Int, unwind : Int, oracle : Microsoft.Quantum.Oracles.ContinuousOracle, targetState : Qubit[])'
+  types:
+  - name: initialMean
+    summary: A kezdeti normál korábbi eloszlás átlaga a $ \phi $-nél.
+    isPrimitive: true
+    uid: Double
+  - name: initialStdDev
+    summary: A kezdeti normál korábbi eloszlás szórása a $ \phi $ felett.
+    isPrimitive: true
+    uid: Double
+  - name: nMeasurements
+    summary: A végső posteriori becslésbe elfogadandó mérések száma.
+    isPrimitive: true
+    uid: Int
+  - name: maxMeasurements
+    summary: A művelet végrehajtása előtt elvégzendő mérések teljes száma.
+    isPrimitive: true
+    uid: Int
+  - name: unwind
+    summary: A konzisztencia-ellenőrzések meghiúsulása esetén felejtse a találatok számát.
+    isPrimitive: true
+    uid: Int
+  - name: oracle
+    summary: 'Egy olyan, egységes $U $ értékű művelet, amely $U (t) \ket{\phi} = e ^ {i t \phi}\ket{\phi} $ for eigenstates $ \ket{\phi} $, ismeretlen fázis: $ \phi \in \mathbb{R} ^ + $.'
+    uid: microsoft.quantum.oracles.continuousoracle
+  - name: targetState
+    summary: Regisztrálja, hogy $U $.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Double
+  types:
+  - summary: 'A végleges becslés $ \hat{\phi} \mathrel{: =} \expect [\phi] $, ahol a várt érték az összes elfogadott adat után a hátsó.'
+    isPrimitive: true
+    uid: Double
+metadata:
+  ms.openlocfilehash: 719c8583cb0fe7f0c9c0f7fa617fa469080a9588
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.translationtype: MT
+  ms.contentlocale: hu-HU
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82706737"
