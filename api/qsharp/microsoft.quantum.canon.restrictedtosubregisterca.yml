@@ -50,9 +50,9 @@ output:
 seeAlso:
 - microsoft.quantum.canon.restrictedtosubregister
 metadata:
-  ms.openlocfilehash: 699126640d5afaebac8a6276458ffc5a497fe61a
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 153dc21e2c4e2ded5acd5c1343c766d7a1cda540
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73222510"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82678416"

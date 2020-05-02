@@ -7,9 +7,9 @@ summary: >-
   Végrehajt egy műveletet az egész tartomány Descartes-as teljesítményében lévő minden indexnél.
 
 
-  A iteratív egy műveletet alkalmaz a tartomány Descartes-os teljesítményének minden eleméhez `0..(bound - 1)`.
+  A iteratív a tartomány `0..(bound - 1)`Descartes-as teljesítményének minden elemére alkalmazza a műveletet.
 examples: >-
-  A művelet `op`a következő két kódrészlet egyenértékű:
+  Egy művelet `op`miatt a következő két kódrészlet egyenértékű:
 
 
   ```Q#
@@ -39,7 +39,7 @@ input:
   content: '(power : Int, bound : Int, op : (Int[] => Unit))'
   types:
   - name: power
-    summary: Az a Descartes-os teljesítmény, amelynek a tartományát meg kell `0..(bound - 1)`.
+    summary: Az a Descartes-érték, amelybe a tartományt `0..(bound - 1)` fel kell venni.
     isPrimitive: true
     uid: Int
   - name: bound
@@ -66,9 +66,9 @@ output:
 seeAlso:
 - microsoft.quantum.canon.iteratethroughcartesianproduct
 metadata:
-  ms.openlocfilehash: 4679e1b569dab167eecbb22947543ab993d7fa8d
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: a6f2d0e1f99c6cf7038803271af974a1c5fca465
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76870937"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82679056"
