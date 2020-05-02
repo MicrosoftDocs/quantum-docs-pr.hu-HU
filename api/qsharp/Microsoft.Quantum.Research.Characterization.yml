@@ -1,0 +1,14 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.research.characterization
+name: Microsoft.Quantum.Research.Characterization
+summary: " # <a name=\"summary\"></a>Összefoglalás\n Ez a névtér speciális kutatási módszereket biztosít a kvantum-jellemzéshez és a fázisok becsléséhez."
+operations:
+- uid: microsoft.quantum.research.characterization.randomwalkphaseestimation
+  summary: Elvégzi az iterációs fázisok becslését egy véletlenszerű lépéssel, hogy megközelítse az adott Oracle-és eigenstate klasszikus mérési eredményeinek a többhelyes tesztelését.
+metadata:
+  ms.openlocfilehash: 8f4ca8b0f5f16f5eae8b6db42e1da32cfc3a778f
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.translationtype: MT
+  ms.contentlocale: hu-HU
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82706703"

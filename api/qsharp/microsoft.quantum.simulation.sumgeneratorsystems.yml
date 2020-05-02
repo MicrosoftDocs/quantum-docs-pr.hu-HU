@@ -9,20 +9,20 @@ input:
   content: '(generatorSystems : Microsoft.Quantum.Simulation.GeneratorSystem[])'
   types:
   - name: generatorSystems
-    summary: '`GeneratorSystem[]`típusú tömb.'
+    summary: Egy típusú `GeneratorSystem[]`tömb.
     isArray: true
     uid: microsoft.quantum.simulation.generatorsystem
 output:
   content: Microsoft.Quantum.Simulation.GeneratorSystem
   types:
-  - summary: Egy `GeneratorSystem`, amely a bemeneti létrehozó rendszerek összegét képező rendszert jelképezi.
+  - summary: A `GeneratorSystem` rendszer a bemeneti létrehozó rendszerek összegét jelképezi.
     uid: microsoft.quantum.simulation.generatorsystem
 seeAlso:
 - microsoft.quantum.canon.generatorsystem
 metadata:
-  ms.openlocfilehash: 610e6f8e49d940d70c9f0e7d15eb63298453920e
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 5474e35cb303a6f490794a77483aafd609724eaa
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73065316"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82687330"
