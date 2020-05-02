@@ -13,15 +13,15 @@ operations:
 - uid: microsoft.quantum.measurement.mresety
   summary: Egyetlen qubit mér az Y alapon, és alaphelyzetbe állítja a standard állapotot | 0 〉 a mérés után.
 - uid: microsoft.quantum.measurement.mresetz
-  summary: Egyetlen qubit mér a `Z` alapján, és alaphelyzetbe állítja a standard állapotot | 0 〉 a mérés után.
+  summary: Egyetlen qubit `Z` mér, és alaphelyzetbe állítja a standard állapotot | 0 〉 a mérés után.
 - uid: microsoft.quantum.measurement.multim
   summary: A standard szintű egy adott tömb mindegyik qubit méri.
 - uid: microsoft.quantum.measurement.settobasisstate
   summary: A qubit egy adott számítási állapotra állítja be a qubit mérésével, és szükség esetén egy kis tükrözés alkalmazásával.
 metadata:
-  ms.openlocfilehash: dc74db43b60728bf9924c05346bae4c6b329a265
-  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.openlocfilehash: 8e0910bf53734ffe65aa12b06321ec9b3403133f
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 02/28/2020
-  ms.locfileid: "77905760"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82673149"

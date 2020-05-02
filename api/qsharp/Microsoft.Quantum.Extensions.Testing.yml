@@ -3,25 +3,25 @@ uid: microsoft.quantum.extensions.testing
 name: Microsoft.Quantum.Extensions.Testing
 operations:
 - uid: microsoft.quantum.extensions.testing.assertallzero
-  summary: "\n> [!WARNING]\n> Elavult\n\nA AssertAllZero elavult. Ehelyett használja a @\"microsoft.quantum.diagnostics.assertallzero\".\nKérjük, használja a @\"microsoft.quantum.diagnostics.assertallzero\"."
+  summary: "\n> [!WARNING]\n> Elavult\n\nA AssertAllZero elavult. Használja @\"microsoft.quantum.diagnostics.assertallzero\" helyette.\nKérjük, @\"microsoft.quantum.diagnostics.assertallzero\"használja."
 - uid: microsoft.quantum.extensions.testing.assertallzerotol
-  summary: "\n> [!WARNING]\n> Elavult\n\nA AssertAllZeroTol elavult. Ehelyett használja a @\"microsoft.quantum.diagnostics.assertallzerowithintolerance\".\nKérjük, használja a @\"microsoft.quantum.diagnostics.assertallzerowithintolerance\"."
+  summary: "\n> [!WARNING]\n> Elavult\n\nA AssertAllZeroTol elavult. Használja @\"microsoft.quantum.diagnostics.assertallzerowithintolerance\" helyette.\nKérjük, @\"microsoft.quantum.diagnostics.assertallzerowithintolerance\"használja."
 - uid: microsoft.quantum.extensions.testing.assertoperationsequalinplace
-  summary: "\n> [!WARNING]\n> Elavult\n\nA AssertOperationsEqualInPlace elavult. Ehelyett használja a @\"microsoft.quantum.diagnostics.assertoperationsequalinplace\".\nKérjük, használja a @\"microsoft.quantum.diagnostics.assertoperationsequalinplace\".\nVegye figyelembe, hogy a művelet argumentumai sorrendje megváltozott."
+  summary: "\n> [!WARNING]\n> Elavult\n\nA AssertOperationsEqualInPlace elavult. Használja @\"microsoft.quantum.diagnostics.assertoperationsequalinplace\" helyette.\nKérjük, @\"microsoft.quantum.diagnostics.assertoperationsequalinplace\"használja.\nVegye figyelembe, hogy a művelet argumentumai sorrendje megváltozott."
 - uid: microsoft.quantum.extensions.testing.assertoperationsequalinplacecompbasis
-  summary: "\n> [!WARNING]\n> Elavult\n\nA AssertOperationsEqualInPlaceCompBasis elavult. Ehelyett használja a @\"microsoft.quantum.diagnostics.assertoperationsequalinplacecompbasis\".\nKérjük, használja a @\"microsoft.quantum.diagnostics.assertoperationsequalinplaceCompBasis\".\nVegye figyelembe, hogy a művelet argumentumai sorrendje megváltozott."
+  summary: "\n> [!WARNING]\n> Elavult\n\nA AssertOperationsEqualInPlaceCompBasis elavult. Használja @\"microsoft.quantum.diagnostics.assertoperationsequalinplacecompbasis\" helyette.\nKérjük, @\"microsoft.quantum.diagnostics.assertoperationsequalinplaceCompBasis\"használja.\nVegye figyelembe, hogy a művelet argumentumai sorrendje megváltozott."
 - uid: microsoft.quantum.extensions.testing.assertoperationsequalreferenced
-  summary: "\n> [!WARNING]\n> Elavult\n\nA AssertOperationsEqualReferenced elavult. Ehelyett használja a @\"microsoft.quantum.diagnostics.assertoperationsequalreferenced\".\nKérjük, használja a @\"microsoft.quantum.diagnostics.assertoperationsequalreferenced\".\nVegye figyelembe, hogy a művelet argumentumai sorrendje megváltozott."
+  summary: "\n> [!WARNING]\n> Elavult\n\nA AssertOperationsEqualReferenced elavult. Használja @\"microsoft.quantum.diagnostics.assertoperationsequalreferenced\" helyette.\nKérjük, @\"microsoft.quantum.diagnostics.assertoperationsequalreferenced\"használja.\nVegye figyelembe, hogy a művelet argumentumai sorrendje megváltozott."
 - uid: microsoft.quantum.extensions.testing.assertqubit
-  summary: "\n> [!WARNING]\n> Elavult\n\nA AssertQubit elavult. Ehelyett használja a @\"microsoft.quantum.diagnostics.assertqubit\".\nKérjük, használja a @\"microsoft.quantum.diagnostics.assertqubit\"."
+  summary: "\n> [!WARNING]\n> Elavult\n\nA AssertQubit elavult. Használja @\"microsoft.quantum.diagnostics.assertqubit\" helyette.\nKérjük, @\"microsoft.quantum.diagnostics.assertqubit\"használja."
 - uid: microsoft.quantum.extensions.testing.assertqubitstate
-  summary: "\n> [!WARNING]\n> Elavult\n\nA AssertQubitState elavult. Ehelyett használja a @\"microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance\".\nKérjük, használja a @\"microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance\"."
+  summary: "\n> [!WARNING]\n> Elavult\n\nA AssertQubitState elavult. Használja @\"microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance\" helyette.\nKérjük, @\"microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance\"használja."
 - uid: microsoft.quantum.extensions.testing.assertqubittol
-  summary: "\n> [!WARNING]\n> Elavult\n\nA AssertQubitTol elavult. Ehelyett használja a @\"microsoft.quantum.diagnostics.assertqubitwithintolerance\".\nKérjük, használja a @\"microsoft.quantum.diagnostics.assertqubitwithintolerance\"."
+  summary: "\n> [!WARNING]\n> Elavult\n\nA AssertQubitTol elavult. Használja @\"microsoft.quantum.diagnostics.assertqubitwithintolerance\" helyette.\nKérjük, @\"microsoft.quantum.diagnostics.assertqubitwithintolerance\"használja."
 metadata:
-  ms.openlocfilehash: 0d06129c66f13c8c5ee9158ef6be41bf447791f9
-  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+  ms.openlocfilehash: 2edd8b382cb62078188850d6810c26e4f3a8a901
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 12/05/2019
-  ms.locfileid: "74858414"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82673245"
