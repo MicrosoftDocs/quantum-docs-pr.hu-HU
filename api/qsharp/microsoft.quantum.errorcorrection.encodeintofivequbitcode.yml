@@ -21,14 +21,14 @@ input:
 output:
   content: Microsoft.Quantum.ErrorCorrection.LogicalRegister
   types:
-  - summary: A kódolt állapotot tároló `LogicalRegister` típusú fizikai qubits tömbje.
+  - summary: A kódolt állapotot tároló fizikai qubits `LogicalRegister` tömbje.
     uid: microsoft.quantum.errorcorrection.logicalregister
 seeAlso:
 - logicalregister
 metadata:
-  ms.openlocfilehash: 6147098742759d72dba9c8eee0218d973320793b
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: f2f8c3aef8ea85691270958cf3274daa22f3ac03
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73234563"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82684999"

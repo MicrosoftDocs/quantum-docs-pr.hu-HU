@@ -16,7 +16,7 @@ input:
     isArray: true
     uid: microsoft.quantum.machinelearning.labeledsample
   - name: options
-    summary: A Betanításkor használandó konfiguráció További részletekért tekintse meg @"microsoft.quantum.machinelearning.trainingoptions" és @"microsoft.quantum.machinelearning.defaulttrainingoptions".
+    summary: 'A Betanításkor használandó konfiguráció további @"microsoft.quantum.machinelearning.trainingoptions" részletekért lásd: és @"microsoft.quantum.machinelearning.defaulttrainingoptions" .'
     uid: microsoft.quantum.machinelearning.trainingoptions
   - name: trainingSchedule
     summary: Mintavételezési ütemterv, amely a betanítási adatokban a minták kiválasztásakor használatos a betanítási lépések során.
@@ -39,9 +39,9 @@ seeAlso:
 - microsoft.quantum.machinelearning.trainsequentialclassifier
 - microsoft.quantum.machinelearning.validatesequentialclassifier
 metadata:
-  ms.openlocfilehash: 5b574d72115518389124d850a96f9fbcd669bd4e
-  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.openlocfilehash: ab30be93a0a1e0b347d2adfe82dbcf07b12d6996
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 02/28/2020
-  ms.locfileid: "77909041"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82684275"

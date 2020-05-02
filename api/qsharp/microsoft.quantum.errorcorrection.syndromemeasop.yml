@@ -5,7 +5,7 @@ type: newtype
 namespace: Microsoft.Quantum.ErrorCorrection
 summary: Egy olyan műveletet jelöl, amely egy hiba-javító kód blokkolásának mérésére szolgál.
 remarks: >-
-  Az aláírási `(LogicalRegister => Syndrome)` egy olyan műveletet jelöl, amely együttesen működik a qubits `LogicalRegister` és egyes segédszolgáltatása qubits, majd a segédszolgáltatása qubits mérésével, hogy kinyerje a mérések `Result[]`ét jelképező `Syndrome` értéket.
+  Az aláírás `(LogicalRegister => Syndrome)` egy olyan műveletet jelöl, amely közösen működik a qubits `LogicalRegister` és néhány segédszolgáltatása-qubits, majd a segédszolgáltatása qubits egy, a méréseket `Syndrome` jelképező `Result[]` érték kinyerésére.
 
 
   ### <a name="examples"></a>Példák
@@ -24,9 +24,9 @@ seeAlso:
 - logicalregister
 - syndrome
 metadata:
-  ms.openlocfilehash: 75f0fee569475e887b97d9969c9e92285809f1cb
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: aa324e8e149ba9418082145ed982236c473c1a4d
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73232234"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82684829"
