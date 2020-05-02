@@ -5,12 +5,12 @@ type: operation
 namespace: Microsoft.Quantum.AmplitudeAmplification
 summary: A részleges reflexiók megadásával megfeledkezett az amplitúdó-erősítésről.
 remarks: >-
-  Egy adott kiegészítő indítási állapot miatt a $ \ket{\text{Start}}\_a $, egy adott kiegészítő megcélzott állapot $ \ket{\text{Target}}\_$, és minden rendszerállapot $ \ket{\psi}\_s $, tegyük fel, hogy \begin{align} O\ket {\ Text {Start}}\_a\ket {\ PSI}\_s = \lambda\ket{\text{Target}}\_a U \ket{\psi}\_s + \sqrt{1-| \lambda | ^ 2} \ket{\text{Target} ^ \perp}\_a\cdots \end{align} néhány egységes $U $.
+  Egy adott kiegészítő indítási állapothoz $ \ket{\text{Start}}\_a $, egy adott kiegészítő megcélzott állapot $\_\ket{\text{Target}} $ és minden rendszerállapot $ \ket{\psi}\_s $, tegyük fel, hogy a \begin{align} O\ket {\ Text {\_Start}} a\ket {\_\ PSI}\_s = \lambda\ket{\text{Target}}\_a U \ket{\psi} s + \sqrt{1-| \lambda | ^ 2}\_\ket{\text{Target} ^ \perp} a\cdots \end{align} néhány egységes $U $.
 
-  A kezdő és a cél állapotokra vonatkozó, a `signalOracle` és a adjoint alkalmazásával összefoglalt kiegészítő regisztráció során felmerülő reflexiók sorozatából az U alkalmazásának sikerességi valószínűsége módosítható.
+  A kezdő és a cél állapotokra vonatkozó, az alkalmazások `signalOracle` és a adjoint által összekapcsolt kiegészítő regisztráció során felmerülő reflexiók sorozatából az U alkalmazásának sikerességi valószínűsége módosítható.
 
 
-  A legtöbb esetben a `auxiliaryRegister` inicializálása a $ \ket{\text{Start}}\_a $ állapotú.
+  A legtöbb esetben a `auxiliaryRegister` a $ \ket{\text{Start}}\_állapotban van inicializálva.
 syntax: 'operation ApplyObliviousAmplitudeAmplification (phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, startStateReflection : Microsoft.Quantum.Oracles.ReflectionOracle, targetStateReflection : Microsoft.Quantum.Oracles.ReflectionOracle, signalOracle : Microsoft.Quantum.Oracles.ObliviousOracle, auxiliaryRegister : Qubit[], systemRegister : Qubit[]) : Unit'
 references: >-
   Lásd:
@@ -32,7 +32,7 @@ input:
     summary: A kiegészítő regiszter megcélzott állapotával kapcsolatos reflexiós operátor
     uid: microsoft.quantum.oracles.reflectionoracle
   - name: signalOracle
-    summary: Az egységes Oracle $O $ típusú `ObliviousOracle`, amely közösen működik a kiegészítő és a rendszerregisztrálók tekintetében.
+    summary: Egységes Oracle $O $ típusú, `ObliviousOracle` amely közösen működik a kiegészítő és a rendszerregisztrálók esetében.
     uid: microsoft.quantum.oracles.obliviousoracle
   - name: auxiliaryRegister
     summary: Kiegészítő regisztráció
@@ -53,9 +53,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 3ed252d38ebe32900a7ac22079f46eaf04f2018d
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: 7452686a76d9ff89c0eb79290e7dae23347778ac
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76872546"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82672948"

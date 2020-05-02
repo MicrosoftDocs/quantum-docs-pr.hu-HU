@@ -7,7 +7,7 @@ summary: >-
   Egy, a klasszikus eredmény értékének egyikét alkalmazza.
 
 
-  A művelet `op` és az eredmény `result``op` a `target`ra vonatkozik, ha `result` `One`. Ha `Zero`, semmi nem történik a `target`.
+  A művelet `op` és az eredmény megadott értéke `result` `op` az `target` if `result` értékre vonatkozik. `One` Ha `Zero`semmi nem történik a `target`következővel:.
 
   Az utótag `C` azt jelzi, hogy az alkalmazni kívánt művelet ellenőrizhető.
 syntax: "operation ApplyIfOneC (result : Result, (op : ('T => Unit is Ctl), target : 'T)) : Unit"
@@ -50,9 +50,9 @@ seeAlso:
 - microsoft.quantum.canon.applyifonea
 - microsoft.quantum.canon.applyifoneca
 metadata:
-  ms.openlocfilehash: 51388c63a15b9f8244b49cc145297faef11bf5cc
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: e42bb11c3f3f8cf740bbd619b4388f23c77ed8a5
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73220776"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82672662"

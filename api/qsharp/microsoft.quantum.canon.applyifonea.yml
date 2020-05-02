@@ -7,7 +7,7 @@ summary: >-
   Egy olyan adjointable műveletet alkalmaz, amely egy klasszikus eredmény értéke egy.
 
 
-  A művelet `op` és az eredmény `result``op` a `target`ra vonatkozik, ha `result` `One`. Ha `Zero`, semmi nem történik a `target`.
+  A művelet `op` és az eredmény megadott értéke `result` `op` az `target` if `result` értékre vonatkozik. `One` Ha `Zero`semmi nem történik a `target`következővel:.
 
   Az utótag `A` azt jelzi, hogy az alkalmazni kívánt művelet a adjointable.
 syntax: "operation ApplyIfOneA (result : Result, (op : ('T => Unit is Adj), target : 'T)) : Unit"
@@ -50,9 +50,9 @@ seeAlso:
 - microsoft.quantum.canon.applyifonea
 - microsoft.quantum.canon.applyifoneca
 metadata:
-  ms.openlocfilehash: 5846b1178a8373f4b21faaa63ae9f6f86e514339
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 041b9f1f97ec5fe615b6ff83fe7c69bf5a7d0894
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73217410"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82672689"

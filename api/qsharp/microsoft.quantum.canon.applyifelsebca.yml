@@ -7,17 +7,17 @@ summary: >-
   Egy klasszikus bites értéktől függően két egységes művelet egyikét alkalmazza.
 
 
-  Egy kicsit `bit`adott a művelet `trueOp` a `trueInput` a `bit` `true`kor, és `falseOp(falseInput)` `bit` esetén alkalmazza.
+  `bit` `trueOp` Adott esetben a műveletet `trueInput` a bemenetként alkalmazza, ha `bit` a értéke `true`, és ha `falseOp(falseInput)` `bit` a értéke `false`, akkor alkalmazza.
 syntax: "operation ApplyIfElseBCA (bit : Bool, (trueOp : ('T => Unit is Adj + Ctl), trueInput : 'T), (falseOp : ('U => Unit is Adj + Ctl), falseInput : 'U)) : Unit"
 input:
   content: "(bit : Bool, (trueOp : ('T => Unit is Adj + Ctl), trueInput : 'T), (falseOp : ('U => Unit is Adj + Ctl), falseInput : 'U))"
   types:
   - name: bit
-    summary: Az `trueOp` vagy `falseOp` alkalmazásának megállapításához használt logikai érték.
+    summary: A logikai érték, amellyel megállapítható `trueOp` , `falseOp` hogy alkalmazva van-e vagy sem.
     isPrimitive: true
     uid: Bool
   - name: trueOp
-    summary: A `bit` `true`akor alkalmazandó egységes művelet.
+    summary: Az a művelet, amelyre alkalmazni `bit` kell. `true`
     isOperation: true
     input:
       types:
@@ -31,11 +31,11 @@ input:
     - Adjoint
     - Controlled
   - name: trueInput
-    summary: A `trueOp` számára megadott bemenet, ha `bit` `true`.
+    summary: 'A következőhöz megadott `trueOp` `bit` bemenet: `true`.'
     uid: "'T"
     isLocal: true
   - name: falseOp
-    summary: A `bit` `false`akor alkalmazandó egységes művelet.
+    summary: Az a művelet, amelyre alkalmazni `bit` kell. `false`
     isOperation: true
     input:
       types:
@@ -49,7 +49,7 @@ input:
     - Adjoint
     - Controlled
   - name: falseInput
-    summary: A `falseOp` számára megadott bemenet, ha `bit` `false`.
+    summary: 'A következőhöz megadott `falseOp` `bit` bemenet: `false`.'
     uid: "'U"
     isLocal: true
 output:
@@ -59,9 +59,9 @@ output:
     uid: Unit
 typeParameters:
 - uid: "'T"
-  summary: A feltételesen alkalmazni kívánt művelet bemeneti típusa `trueOp`.
+  summary: A feltételesen alkalmazni kívánt `trueOp` művelet bemeneti típusa.
 - uid: "'U"
-  summary: A feltételesen alkalmazni kívánt művelet bemeneti típusa `falseOp`.
+  summary: A feltételesen alkalmazni kívánt `falseOp` művelet bemeneti típusa.
 functors:
 - Adjoint
 - Controlled
@@ -72,9 +72,9 @@ seeAlso:
 - microsoft.quantum.canon.applyifelsera
 - microsoft.quantum.canon.applyifelserca
 metadata:
-  ms.openlocfilehash: 526170a58fcab51aa36abeee6bd1573dc5eeddbb
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: 3f0d704d33fc1d3e964e804c2ff68cb893069445
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76871328"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82672773"

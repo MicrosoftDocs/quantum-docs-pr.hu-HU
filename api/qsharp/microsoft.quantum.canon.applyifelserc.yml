@@ -7,17 +7,17 @@ summary: >-
   A klasszikus eredmények értékétől függően két ellenőrizhető művelet egyikét alkalmazza.
 
 
-  Az eredmény `result`miatt a művelet `zeroOp` a `zeroInput`, ha a `result` `Zero`értékkel egyenlő, és `oneOp(oneInput)`re vonatkozik.
+  Az `result`eredmény megadásakor a műveletet `zeroOp` `zeroInput` a bemenetként alkalmazza `result` `Zero`, ha az egyenlő, és ha van `oneOp(oneInput)` , `result == One`akkor alkalmazza.
 syntax: "operation ApplyIfElseRC (result : Result, (zeroOp : ('T => Unit is Ctl), zeroInput : 'T), (oneOp : ('U => Unit is Ctl), oneInput : 'U)) : Unit"
 input:
   content: "(result : Result, (zeroOp : ('T => Unit is Ctl), zeroInput : 'T), (oneOp : ('U => Unit is Ctl), oneInput : 'U))"
   types:
   - name: result
-    summary: Az `zeroOp` vagy `oneOp` alkalmazásának megállapításához használt mérési eredmény.
+    summary: Az a mérési eredmény, amellyel meghatározható, hogy alkalmazva van `zeroOp` -e vagy `oneOp` sem.
     isPrimitive: true
     uid: Result
   - name: zeroOp
-    summary: A `result == Zero`kor alkalmazandó, ellenőrizhető művelet.
+    summary: Az a művelet, amelyre alkalmazni kell a műveletet `result == Zero`.
     isOperation: true
     input:
       types:
@@ -30,11 +30,11 @@ input:
     functors:
     - Controlled
   - name: zeroInput
-    summary: A `result == Zero`kor `zeroOp`hoz megadott bemenet.
+    summary: Az a bemenet, amelyet meg `zeroOp` kell `result == Zero`adni.
     uid: "'T"
     isLocal: true
   - name: oneOp
-    summary: A `result == One`kor alkalmazandó, ellenőrizhető művelet.
+    summary: Az a művelet, amelyre alkalmazni kell a műveletet `result == One`.
     isOperation: true
     input:
       types:
@@ -47,7 +47,7 @@ input:
     functors:
     - Controlled
   - name: oneInput
-    summary: A `result == One`kor `oneOp`hoz megadott bemenet.
+    summary: Az a bemenet, amelyet meg `oneOp` kell `result == One`adni.
     uid: "'U"
     isLocal: true
 output:
@@ -57,9 +57,9 @@ output:
     uid: Unit
 typeParameters:
 - uid: "'T"
-  summary: A feltételesen alkalmazni kívánt művelet bemeneti típusa `zeroOp`.
+  summary: A feltételesen alkalmazni kívánt `zeroOp` művelet bemeneti típusa.
 - uid: "'U"
-  summary: A feltételesen alkalmazni kívánt művelet bemeneti típusa `oneOp`.
+  summary: A feltételesen alkalmazni kívánt `oneOp` művelet bemeneti típusa.
 functors:
 - Controlled
 seeAlso:
@@ -69,9 +69,9 @@ seeAlso:
 - microsoft.quantum.canon.applyifelsera
 - microsoft.quantum.canon.applyifelserca
 metadata:
-  ms.openlocfilehash: e2dd871aa42ed22ba088e6eaad9d9705dfb26254
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: aeb4c7f86ac1f41140bb14436d9dee39b4c4d98b
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73220929"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82672729"
