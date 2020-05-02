@@ -3,7 +3,7 @@ uid: microsoft.quantum.arithmetic.carry
 name: Carry
 type: operation
 namespace: Microsoft.Quantum.Arithmetic
-summary: Végrehajt egy reverzibilis Carry-kaput. A qubit-`carryIn` és a `summand1` és `summand2`ban található két summand-bitek esetében a rendszer a qubit `summand1` `carryIn`, `summand2` és `summand2` bitenkénti XOR értékének kiszámításával a xored `carryOut`.
+summary: Végrehajt egy reverzibilis Carry-kaput. A `carryIn` qubit-ben és a-ben két summand-ben kódolt, `summand1` a és `summand2`a alkalmazásban elvégezhető átviteli sebesség miatt `carryIn`a `summand1` kiszámítja a bitenkénti `summand2` és a qubit `summand2` , valamint a végrehajtást a `carryOut`xored qubit.
 syntax: 'operation Carry (carryIn : Qubit, summand1 : Qubit, summand2 : Qubit, carryOut : Qubit) : Unit'
 input:
   content: '(carryIn : Qubit, summand1 : Qubit, summand2 : Qubit, carryOut : Qubit)'
@@ -17,7 +17,7 @@ input:
     isPrimitive: true
     uid: Qubit
   - name: summand2
-    summary: A második summand-qubit a `summand1` és `summand2`összegének alsó kis részénél lesz lecserélve.
+    summary: A második summand qubit a `summand1` és `summand2`a összegének alsó kis részébe kerül.
     isPrimitive: true
     uid: Qubit
   - name: carryOut
@@ -33,9 +33,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 6736bc62db7d8ac1952bf74617bd8764702bd8b3
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 3fa18b56fb242e76a88a23af02b3ebe7e5cc57d4
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73221337"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82679838"
