@@ -18,9 +18,9 @@ functions:
 - uid: microsoft.quantum.convert.boolarrayaspauli
   summary: Egy kis karakterlánc miatt egy qubit Pauli-operátort ad vissza, amely egyetlen qubit Pauli-operátorok tömbje.
 - uid: microsoft.quantum.convert.boolarrayasresultarray
-  summary: Egy `Bool[]` típus konvertálása `Result[]` típusra, ahol a `true` `One`re van leképezve, és `false` van leképezve `Zero`.
+  summary: Egy `Bool[]` `Result[]` típusra konvertál egy típust, `true` ahol a le `One` van `false` képezve és le `Zero`van képezve.
 - uid: microsoft.quantum.convert.boolasresult
-  summary: Egy `Bool` típus konvertálása `Result` típusra, ahol a `true` `One`re van leképezve, és `false` van leképezve `Zero`.
+  summary: Egy `Bool` `Result` típusra konvertál egy típust, `true` ahol a le `One` van `false` képezve és le `Zero`van képezve.
 - uid: microsoft.quantum.convert.boolasstring
   summary: Egy adott logikai értéket egy egyenértékű karakterlánc-ábrázolásra konvertál.
 - uid: microsoft.quantum.convert.doubleasstring
@@ -47,20 +47,20 @@ functions:
 - uid: microsoft.quantum.convert.pauliarrayasint
   summary: Egy több qubit Pauli-operátort kódol egy egész számra, amely egy qubit Pauli-operátorok tömbje.
 - uid: microsoft.quantum.convert.rangeasintarray
-  summary: Létrehoz egy, a Start... számú számokból álló tömb `arr`. lépés.. végén.
+  summary: A (Start `arr` ) számú egész számok tömbjét hozza létre. lépés.. végén.
 - uid: microsoft.quantum.convert.resultarrayasboolarray
-  summary: Egy `Result[]` típus konvertálása `Bool[]` típusra, ahol a `One` `true`re van leképezve, és `Zero` van leképezve `false`.
+  summary: Egy `Result[]` `Bool[]` típusra konvertál egy típust, `One` ahol a le `true` van `Zero` képezve és le `false`van képezve.
 - uid: microsoft.quantum.convert.resultarrayasint
   summary: Egy pozitív egész számot hoz létre egy rövid endian formátumú eredményekből.
 - uid: microsoft.quantum.convert.resultasbool
-  summary: Egy `Result` típus konvertálása `Bool` típusra, ahol a `One` `true`re van leképezve, és `Zero` van leképezve `false`.
+  summary: Egy `Result` `Bool` típusra konvertál egy típust, `One` ahol a le `true` van `Zero` képezve és le `false`van képezve.
 operations:
 - uid: microsoft.quantum.convert.call
   summary: Egy függvényt hív meg egy megadott bemenettel.
 metadata:
-  ms.openlocfilehash: a0c347d8004b8f8bd35fc1b7f7eaf52e6230cee0
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: d435979692fe94efb64af82f4a7a949cb2341ef8
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73210967"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82677003"

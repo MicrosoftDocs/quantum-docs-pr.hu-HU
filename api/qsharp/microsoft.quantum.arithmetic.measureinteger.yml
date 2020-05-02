@@ -3,7 +3,7 @@ uid: microsoft.quantum.arithmetic.measureinteger
 name: MeasureInteger
 type: operation
 namespace: Microsoft.Quantum.Arithmetic
-summary: A kvantum-regiszter tartalmát méri, és egy egész számra konvertálja. A mérés a standard számítási alapon történik, azaz a `PauliZ`eigenbasis.
+summary: A kvantum-regiszter tartalmát méri, és egy egész számra konvertálja. A mérés a standard számítási alapon történik, azaz a eigenbasis `PauliZ`.
 remarks: Ez a művelet visszaállítja a bemeneti regisztrációját a $ \ket{00\cdots 0} $ állapotra, amely alkalmas a célszámítógép visszaengedésére.
 syntax: 'operation MeasureInteger (target : Microsoft.Quantum.Arithmetic.LittleEndian) : Int'
 input:
@@ -15,15 +15,15 @@ input:
 output:
   content: Int
   types:
-  - summary: Előjel nélküli egész szám, amely a `target`mért értékét tartalmazza.
+  - summary: Előjel nélküli egész szám, amely a mért értéket tartalmazza `target`.
     isPrimitive: true
     uid: Int
 seeAlso:
 - microsoft.quantum.canon.measureintegerbe
 metadata:
-  ms.openlocfilehash: 989302867cbfb6b429bf8e8d4b8a76a0c1c4e61d
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: cb7432ccf4c66b4f508b182e8c96bd73b13e2f08
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73214877"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82676774"

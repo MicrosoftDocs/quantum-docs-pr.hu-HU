@@ -7,11 +7,11 @@ summary: >-
   Egy qubit-regiszter moduláris növekményét hajtja végre egy egész állandó értékkel.
 
 
-  $A $, `modulus` $N $ és egész számú, `target` $ kódolású `increment` jelölését.
+  $A $, `increment` $N $ és Integer `modulus` szerint, $y $ kódolással `target` jelezze nekünk.
 
   Ezután a művelet a következő átalakítást hajtja végre: \begin{align} \ket{y} \mapsto \ket{(y + a) \operatorname{mod} N} \end{align} egész számok kódolása kis endian formátumban történik QFT alapján.
 remarks: >-
-  Azt feltételezi, hogy a `target` a legmagasabb bit 0-ra van állítva.
+  Feltételezi, `target` hogy a legmagasabb bit 0 értékű.
 
   Azt is feltételezi, hogy a célként megadott érték kisebb, mint $N $.
 
@@ -30,7 +30,7 @@ input:
     isPrimitive: true
     uid: Int
   - name: target
-    summary: Egész $y $ a fázis-kódolású kis endian formátumban, amelyet a rendszer `increment` $a $ hozzáad a következőhöz:.
+    summary: Egész $y $ a fázis-kódolású kis endian formátumban, amelyet `increment` a $a $ hozzáad a következőhöz:.
     uid: microsoft.quantum.arithmetic.phaselittleendian
 output:
   content: Unit
@@ -43,9 +43,9 @@ functors:
 seeAlso:
 - microsoft.quantum.arithmetic.incrementbymodularinteger
 metadata:
-  ms.openlocfilehash: 69240c9ecac0917f8f2a6d1f6a3554cc93269cbd
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: e97f88d64d9188d18b10ed7f67adc0225167c466
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76871413"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82676854"

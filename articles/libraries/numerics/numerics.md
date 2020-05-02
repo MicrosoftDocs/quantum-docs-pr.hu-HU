@@ -6,12 +6,12 @@ ms.author: thhaner
 ms.date: 5/14/2019
 ms.topic: article
 uid: microsoft.quantum.numerics.usage
-ms.openlocfilehash: ad9f529efd06fdf13bab4467b091aafacf1d5b09
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: 10d5675e0ef182211a38db4d09347b05afe109c3
+ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77907256"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82677111"
 ---
 # <a name="using-the-numerics-library"></a>A numerikus könyvtár használata
 
@@ -32,23 +32,23 @@ open Microsoft.Quantum.Arithmetic;
 
 A numerikus könyvtár a következő típusokat támogatja
 
-1. **`LittleEndian`** : egy qubit tömb `qArr : Qubit[]`, amely egy egész számot jelöl, amelyben `qArr[0]` a legkevésbé jelentős bitet jelzi.
-1. **`SignedLittleEndian`** : ugyanaz, mint `LittleEndian`, kivéve, hogy a két kiegészítésben tárolt, aláírt egész számot jelöli.
-1. **`FixedPoint`** : egy qubit tömbből álló valós számot jelöl, `qArr2 : Qubit[]` és egy bináris pont `pos`, amely a bináris pont bal oldalán lévő bináris számjegyek számát számolja. a `qArr2` tárolása ugyanúgy történik, mint `SignedLittleEndian`.
+1. **`LittleEndian`**: Egy egész számot `qArr : Qubit[]` `qArr[0]` jelölő qubit tömb, amely a legkevésbé jelentős bitet jelöli.
+1. **`SignedLittleEndian`**: Ugyanaz, `LittleEndian` mint a kivételével, hogy a két kiegészítésben tárolt, aláírt egész számot jelöli.
+1. **`FixedPoint`**: Egy qubit tömbből `qArr2 : Qubit[]` és egy bináris pont pozícióból `pos`álló valós számot képvisel, amely a bináris pont bal oldalán lévő bináris számjegyek számát számlálja. `qArr2`a tárolása ugyanúgy történik, mint `SignedLittleEndian`a.
 
 ## <a name="operations"></a>Műveletek
 
 A fenti három típus mindegyikéhez számos művelet érhető el:
 
 1. **`LittleEndian`**
-    - Mellett
+    - Összeadás
     - Összehasonlítás
     - Szorzás
     - Négyszögesítése
     - Osztás (a maradéktal)
 
 1. **`SignedLittleEndian`**
-    - Mellett
+    - Összeadás
     - Összehasonlítás
     - A többverziós adattárház 2
     - Szorzás
@@ -75,8 +75,8 @@ A Quantum Development Kit használatával ez a művelet a következőképpen alk
 operation TestMyAddition(xValue : Int, yValue : Int, n : Int) : Unit {
     using ((xQubits, yQubits) = (Qubit[n], Qubit[n]))
     {
-        x = LittleEndian(xQubits); // define bit order
-        y = LittleEndian(yQubits);
+        let x = LittleEndian(xQubits); // define bit order
+        let y = LittleEndian(yQubits);
         
         ApplyXorInPlace(xValue, x); // initialize values
         ApplyXorInPlace(yValue, y);
@@ -90,15 +90,15 @@ operation TestMyAddition(xValue : Int, yValue : Int, n : Int) : Unit {
 
 ## <a name="sample-evaluating-smooth-functions"></a>Minta: simított függvények kiértékelése
 
-Ha olyan simított függvényeket szeretne kiértékelni, mint például a $ \sin (x) $ a kvantum-számítógépen, ahol a $x $ a Quantum `FixedPoint` száma, a Quantum Development Kit numerikus könyvtára biztosítja az operatív `EvaluatePolynomialFxP` és `Evaluate[Even/Odd]PolynomialFxP`.
+Ha olyan simított függvényeket szeretne kiértékelni, mint például a $ \sin (x) $ a kvantum-számítógépen, `FixedPoint` ahol a $x $ a kvantum-szám, a Quantum Development `EvaluatePolynomialFxP` Kit `Evaluate[Even/Odd]PolynomialFxP`numerikus könyvtár biztosítja a műveleteket és a-t.
 
-Az első, `EvaluatePolynomialFxP`lehetővé teszi, hogy kiértékelje a "$ P (x) = a_0 + a_1x + a_2x ^ 2 + \cdots + a_dx ^ d, $ $, ahol $d $ a *mértéket*. Ehhez minden szükséges, hogy a polinom-`[a_0,..., a_d]` (típusú `Double[]`), a bemeneti `x : FixedPoint` és a kimeneti `y : FixedPoint` (kezdetben nulla):
+Az első `EvaluatePolynomialFxP`lehetővé teszi, hogy kiértékelje a "$ P (x) = a_0 + a_1x + a_2x ^ 2 + \cdots + a_dx ^ d, $ $, ahol a $d $ a *mértékét*. Ehhez minden `[a_0,..., a_d]` szükséges, hogy a polinom (típus `Double[]`), a bemenet `x : FixedPoint` és a kimenet `y : FixedPoint` (kezdetben nulla) a következő:
 ```qsharp
 EvaluatePolynomialFxP([1.0, 2.0], x, y);
 ```
-Az eredmény, $P (x) = 1 + 2x $, `yFxP`lesz tárolva.
+Az eredmény, $P (x) = 1 + 2x $, a következő helyen lesz `yFxP`tárolva:.
 
-A második, `EvaluateEvenPolynomialFxP`és a harmadik `EvaluateOddPolynomialFxP`a páros és páratlan függvények esetében is specializált. Ez a páros/páratlan függvény esetében $f (x) $ és $ $ P_ {even} (x) = a_0 + a_1 x ^ 2 + a_2 x ^ 4 + \cdots + a_d x ^ {2D}, a $ $ $f (x) $ megközelítő értéke $P _ {even} (x) $ vagy $P _ {odd} (x): = x\cdot P_ {even} (x) $, ill.
+A második, `EvaluateEvenPolynomialFxP`és a harmadik, `EvaluateOddPolynomialFxP`a páros és páratlan függvények esetében is specializálódott. Ez a páros/páratlan függvény esetében $f (x) $ és $ $ P_ {even} (x) = a_0 + a_1 x ^ 2 + a_2 x ^ 4 + \cdots + a_d x ^ {2D}, a $ $ $f (x) $ megközelítő értéke $P _ {even} (x) $ vagy $P _ {odd} (x): = x\cdot P_ {even} (x) $, ill.
 A Q #-ban ez a két eset a következőképpen kezelhető:
 ```qsharp
 EvaluateEvenPolynomialFxP([1.0, 2.0], x, y);
@@ -113,14 +113,14 @@ amely kiértékeli $P _ {odd} (x) = x + 2x ^ 3 $ értéket.
 
 További mintákat a [fő minták tárházában](https://github.com/Microsoft/Quantum)talál.
 
-Első lépésként klónozott a tárházat, és nyissa meg a `Numerics` almappát:
+Első lépésként klónozott a tárházat, és nyissa meg az `Numerics` almappát:
 
 ```bash
 git clone https://github.com/Microsoft/Quantum.git
 cd Quantum/Numerics
 ```
 
-Ezután `cd` az egyik minta mappájába, és futtassa a mintát a használatával
+`cd` Ezután az egyik minta mappájába, és futtassa a mintát a használatával
 
 ```bash
 dotnet run
