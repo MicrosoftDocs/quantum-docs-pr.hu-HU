@@ -9,12 +9,12 @@ input:
   content: '(qSharpData : Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerEncodingData)'
   types:
   - name: qSharpData
-    summary: A Hamilton `JordanWignerEncodingData` formátuma írja le.
+    summary: A Hamilton formátum `JordanWignerEncodingData` szerint van leírva.
     uid: microsoft.quantum.chemistry.jordanwigner.jordanwignerencodingdata
 output:
   content: (Int, (Double, (Qubit[] => Unit is Adj + Ctl)))
   types:
-  - summary: Az a rekord, ahol a `Int` a lefoglalt qubits száma, `Double` a Hamilton-együtthatók egy normája, a művelet pedig a Qubitization által létrehozott Quantum Walk.
+  - summary: 'Egy rekord, ahol `Int` : a lefoglalt qubits száma, `Double` a Hamilton-együtthatók egyféle normája, a művelet pedig a Qubitization által létrehozott Quantum Walk.'
     types:
     - isPrimitive: true
       uid: Int
@@ -35,9 +35,9 @@ output:
         - Adjoint
         - Controlled
 metadata:
-  ms.openlocfilehash: 4890f95631a5d99720fc5da307707ad040f0b391
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 9e58837b8f4d59505a321578cbd9f69b4c849627
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73233509"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82663445"
