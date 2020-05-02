@@ -3,7 +3,7 @@ uid: microsoft.quantum.characterization.estimatefrequencya
 name: EstimateFrequencyA
 type: operation
 namespace: Microsoft.Quantum.Characterization
-summary: A adjointable és a mérést követően a rendszer a megadott számú kísérlet végrehajtásával becsüli meg, hogy a mérték milyen gyakorisággal sikeres (`Zero`).
+summary: A adjointable és a mérést követően a rendszer a megadott számú próbaverzió elvégzésével megbecsüli `Zero`a gyakoriságot, amellyel a mérték sikeres (visszaadott) értékkel rendelkezik.
 remarks: A adjointable műveletek esetében bizonyos feltételezések olyanok, mint például a művelet meghívása, hogy a qubits pontosan ugyanazt az állapotot hozza létre, ami lehetővé teszi a célszámítógép számára a teljesítmény optimalizálása érdekében.
 syntax: 'operation EstimateFrequencyA (preparation : (Qubit[] => Unit is Adj), measurement : (Qubit[] => Result), nQubits : Int, nMeasurements : Int) : Double'
 input:
@@ -46,13 +46,13 @@ input:
 output:
   content: Double
   types:
-  - summary: Az a gyakoriság, amellyel a $M (P (\ket{00 \cdots 0} \bra{00 \cdots 0}) $ értéket adja `Zero`vissza, amely a nem elfogult binomiális kalkulátor $ \hat{p} = n\_{\uparrow}/n\_{\text{Measurements}} $ \hat{p}, ahol $n\_{\uparrow} $ a megfigyelt `Zero` eredmények száma.
+  - summary: Az a gyakoriság, amellyel a $M (P (\ket{00 \cdots 0} \bra{00 \cdots 0}) $ értéket adja `Zero`vissza, amely a nem torzítatlan binomiális kalkulátor $ \hat{p} = n\_{\uparrow}/n\_{\text{measurements}} $ \hat{p}, ahol a $n\_{\uparrow} $ a megfigyelt `Zero` eredmények száma.
     isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: cfc90cee0b98b88391ee23218489669600a97920
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 064f6d3cf9c075d635ed27ac4192b5aa4045e4d8
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73229174"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82677706"

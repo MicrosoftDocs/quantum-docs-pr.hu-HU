@@ -10,7 +10,7 @@ remarks: >-
   \end{align} $ $
 
 
-  A Pauli-operátorok tömbje `[P0, ..., Pn]`, ez a függvény egy olyan egész számot ad vissza, amely az egyes Pauli-operátorok leképezéseit kombinálja a big-endian Order `bits(Pn) ... bits(P0)`ban.
+  A Pauli-operátorok `[P0, ..., Pn]`tömbje miatt ez a függvény egy olyan egész számot ad vissza, amely bináris kiterjesztéssel van ellátva, és az egyes Pauli- `bits(Pn) ... bits(P0)`operátorok hozzárendeléseit nagy endian sorrendben fűzi össze.
 syntax: 'function PauliArrayAsInt (paulis : Pauli[]) : Int'
 input:
   content: '(paulis : Pauli[])'
@@ -23,13 +23,13 @@ input:
 output:
   content: Int
   types:
-  - summary: Egy egész szám, amely egyedileg azonosítja `paulis`, az alább leírtak szerint.
+  - summary: Egy egész szám, amely `paulis`egyedileg azonosítja az alább leírtakat.
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: 0c211075d07147b1c1392fe3f3e4ceb110364bb3
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 170218ccf1ec4ee1183a7a69ff1e0969f595cac4
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73230755"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82677394"

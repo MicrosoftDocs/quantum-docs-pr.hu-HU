@@ -7,10 +7,10 @@ summary: A megadott qubits tartozó aktuális célszámítógép állapotának k
 remarks: >-
   Ez a módszer lehetővé teszi az adott qubits állapotával kapcsolatos adatok egy fájlba vagy más helyre történő kiírását.
 
-  A ténylegesen létrehozott információk és a `location` szemantikai adatai az egyes célszámítógépeken jellemzőek. Ha azonban üres rekordot (`()`) ad meg, általában a kimenetet a-konzolra hozza elő.
+  A ténylegesen létrehozott információk és a szemantikai adatai `location` az egyes célszámítógépeken is jellemzőek. Ha azonban üres rekordot ad meg helyként (`()`), általában azt jelenti, hogy a kimenetet a-konzolra hozza elő.
 
 
-  A Quantum Development Kit részeként elosztott helyi teljes állapotú szimulátor esetében ez a metódus egy karakterláncot vár egy olyan fájl elérési útjával, amelyben a megadott qubits (azaz a megfelelő alrendszer Wave funkciója) egy egydimenziós AR-ként fog szerepelni. az összetett számok sugara, amelyben az egyes elemek a megfelelő állapot mérésének valószínűségét jelölik.
+  A Quantum Development Kit részeként elosztott helyi teljes állapotú szimulátor esetében ez a módszer egy karakterláncot vár egy olyan fájl elérési útjával, amelyben a megadott qubits állapotát (azaz a megfelelő alrendszer Wave függvényét) az összetett számok egydimenziós tömbje fogja írni, amelyben az egyes elemek a megfelelő állapot mérésének valószínűségének amplitúdóját jelölik.
 
   Ha a megadott qubits más qubit vannak összefoglalva, és az állapotuk nem különíthető el, akkor csak azt jelenti, hogy a qubits összekeverve vannak.
 syntax: "function DumpRegister (location : 'T, qubits : Qubit[]) : Unit"
@@ -33,9 +33,9 @@ output:
     isPrimitive: true
     uid: Unit
 metadata:
-  ms.openlocfilehash: 6d553a95bfa619d142b681e2830fc0375c6bcae5
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 3bf5302364b37cb1ccef651935833b966ff84464
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73227032"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82677229"

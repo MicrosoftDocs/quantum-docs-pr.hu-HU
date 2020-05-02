@@ -5,7 +5,7 @@ type: function
 namespace: Microsoft.Quantum.Canon
 summary: Egy függvény és egy művelet miatt egy új műveletet ad vissza, amelynek a bemenetét az adott függvény átalakítja.
 examples: >-
-  A következő hívás @"Microsoft.Quantum.Arithmetic.LittleEndianAsBigEndian"t használ egy olyan művelet átalakítására, amelyet @"Microsoft.Quantum.Arithmetic.BigEndian" bemenetekhez terveztek egy olyan művelethez, amely @"Microsoft.Quantum.Arithmetic.LittleEndian"típusú bemeneteket fogad el:
+  A következő hívás @"Microsoft.Quantum.Arithmetic.LittleEndianAsBigEndian" egy olyan művelet átalakítására szolgál, @"Microsoft.Quantum.Arithmetic.BigEndian" amelynek bemenetei egy olyan műveletbe kerülnek, @"Microsoft.Quantum.Arithmetic.LittleEndian"amely a típusú bemeneteket fogadja el:
 
 
   ```qsharp
@@ -45,7 +45,7 @@ input:
 output:
   content: ('U => Unit is Adj + Ctl)
   types:
-  - summary: Egy új művelet tbat hívja a `fn`t a bemenetével, majd átadja az eredményül kapott kimenetet `op`nak.
+  - summary: Egy új művelet tbat hívja `fn` a bemenetét, majd átadja az eredményül `op`kapott kimenetet.
     isOperation: true
     input:
       types:
@@ -65,9 +65,9 @@ seeAlso:
 - applywithinputtransformation
 - compose
 metadata:
-  ms.openlocfilehash: 4383a28fa6cae8e36438b6c4ba8262f60edbf025
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 95f2233ae50f404ec3a6e137470150fc77ae2406
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73217036"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82678024"

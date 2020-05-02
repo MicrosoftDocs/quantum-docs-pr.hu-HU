@@ -3,7 +3,7 @@ uid: microsoft.quantum.diagnostics.assertallzerowithintolerance
 name: AssertAllZeroWithinTolerance
 type: operation
 namespace: Microsoft.Quantum.Diagnostics
-summary: Azt állítja, hogy a megadott qubits mind a $ \ket{0}$ állapotba kerülnek egy adott toleranciával szemben.
+summary: Azt állítja, hogy a megadott qubits mind a{0}$ \ket $ állapotba kerülnek egy adott toleranciával.
 syntax: 'operation AssertAllZeroWithinTolerance (qubits : Qubit[], tolerance : Double) : Unit'
 input:
   content: '(qubits : Qubit[], tolerance : Double)'
@@ -28,9 +28,9 @@ functors:
 seeAlso:
 - assertqubitwithintolerance
 metadata:
-  ms.openlocfilehash: 0e3b560d08077bb353147d98a921a2c2ca3ae202
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: ae55998333d6bc3a4d8b41341842147d80dcd183
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73066540"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82677295"

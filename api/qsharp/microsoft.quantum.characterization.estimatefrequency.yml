@@ -3,7 +3,7 @@ uid: microsoft.quantum.characterization.estimatefrequency
 name: EstimateFrequency
 type: operation
 namespace: Microsoft.Quantum.Characterization
-summary: Az előkészítés és a mérés alapján a rendszer a megadott számú kísérlet végrehajtásával becsüli meg, hogy a mérték milyen gyakorisággal sikeres (`Zero`).
+summary: Az előkészítés és a mérés miatt a rendszer a megadott számú próbaverzió elvégzésével megbecsüli a gyakoriságot, amellyel a mérték sikeres (visszatérési `Zero`).
 syntax: 'operation EstimateFrequency (preparation : (Qubit[] => Unit), measurement : (Qubit[] => Result), nQubits : Int, nMeasurements : Int) : Double'
 input:
   content: '(preparation : (Qubit[] => Unit), measurement : (Qubit[] => Result), nQubits : Int, nMeasurements : Int)'
@@ -44,16 +44,16 @@ output:
   content: Double
   types:
   - summary: >-
-      Az a gyakoriság, amellyel a $M (P (\ket{00 \cdots 0} \bra{00 \cdots 0}) $ értéket adja `Zero`vissza, amely a nem elfogult binomiális kalkulátor $ \hat{p} = n\_{\uparrow}/n\_{\text{Measurements}} $ \hat{p}, ahol $n\_{\uparrow} $ a megfigyelt `Zero` eredmények száma.
+      Az a gyakoriság, amellyel a $M (P (\ket{00 \cdots 0} \bra{00 \cdots 0}) $ értéket adja `Zero`vissza, amely a nem torzítatlan binomiális kalkulátor $ \hat{p} = n\_{\uparrow}/n\_{\text{measurements}} $ \hat{p}, ahol a $n\_{\uparrow} $ a megfigyelt `Zero` eredmények száma.
 
 
       Ez különösen fontos azokon a célszámítógépeken, amelyek figyelembe veszik a fizikai korlátozásokat, így a valószínűségek nem mérhetők.
     isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: 1c27d38983f9fa9c1a1dc5c80548e307b7c36ffe
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 973ab328d11410fee400659f18a99d50c1883156
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73229191"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82677736"

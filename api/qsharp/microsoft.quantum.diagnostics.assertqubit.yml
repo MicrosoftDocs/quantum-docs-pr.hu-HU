@@ -3,14 +3,14 @@ uid: microsoft.quantum.diagnostics.assertqubit
 name: AssertQubit
 type: operation
 namespace: Microsoft.Quantum.Diagnostics
-summary: Azt állítja, hogy a qubit `q` a Pauli Z operátor várt eigenstate van.
-remarks: <xref:microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance> lehetővé teszi tetszőleges qubit-állapotok beállítását, nem csak $Z $ eigenstates.
+summary: Azt állítja be, hogy `q` a Qubit a Pauli Z operátor várt eigenstate van.
+remarks: <xref:microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance>lehetővé teszi tetszőleges qubit-állapotok megadását, nem csak $Z $ eigenstates.
 syntax: 'operation AssertQubit (expected : Result, q : Qubit) : Unit'
 input:
   content: '(expected : Result, q : Qubit)'
   types:
   - name: expected
-    summary: 'A qubit várható állapota a következő: `Zero` vagy `One`.'
+    summary: 'A qubit várható állapota a következő: `Zero` vagy. `One`'
     isPrimitive: true
     uid: Result
   - name: q
@@ -25,9 +25,9 @@ output:
 seeAlso:
 - assertqubitisinstatewithintolerance
 metadata:
-  ms.openlocfilehash: e926e8a106e7ef0999f30d00922394e611aa40a8
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 18d1db5c36dddf7bd40c64e02252a15d37dc4fe1
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73227168"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82677266"

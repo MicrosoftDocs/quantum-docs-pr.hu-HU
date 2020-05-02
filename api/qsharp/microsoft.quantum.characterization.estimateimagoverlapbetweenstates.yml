@@ -4,7 +4,7 @@ name: EstimateImagOverlapBetweenStates
 type: operation
 namespace: Microsoft.Quantum.Characterization
 summary: A két művelet, amely az egyes állapotok előkészítését végzi, a megbecsüli az egyes műveletek által előkészített állapotok közötti átfedés képzeletbeli részét.
-remarks: Ez a művelet a Hadamard teszttel keresi a $ $ \begin{align} \braket{\psi-beli képzeletbeli részét. V ^ {\dagger} U | a \psi} \end{align} $ $, ahol a $ \ket{\psi} $ a `commonPreparation`által előkészített állapot, $U $ a `preparation1`műveletének egységes ábrázolása, és a $V $ érték `preparation2`nek felel meg.
+remarks: Ez a művelet a Hadamard teszttel keresi a $ $ \begin{align} \braket{\psi-beli képzeletbeli részét. V ^ {\dagger} U | \psi} \end{align} $ $, ahol a $ \ket{\psi} $ a által `commonPreparation`előkészített állapot, $U $ a művelet egységes ábrázolása `preparation1`, és a $V $ értéknek megfelelő. `preparation2`
 syntax: 'operation EstimateImagOverlapBetweenStates (commonPreparation : (Qubit[] => Unit is Adj), preparation1 : (Qubit[] => Unit is Adj + Ctl), preparation2 : (Qubit[] => Unit is Adj + Ctl), nQubits : Int, nMeasurements : Int) : Double'
 references: '- Aharonov *et al.* [Quant – pH/0511096](https://arxiv.org/abs/quant-ph/0511096).'
 input:
@@ -55,7 +55,7 @@ input:
     - Adjoint
     - Controlled
   - name: nQubits
-    summary: Azon qubits száma, amelyeken a `commonPreparation`, a `preparation1`és a `preparation2` az összes cselekedet.
+    summary: Azon qubits száma, amelyeken `commonPreparation` `preparation1`a, és `preparation2` az összes tevékenység szerepel.
     isPrimitive: true
     uid: Int
   - name: nMeasurements
@@ -71,9 +71,9 @@ seeAlso:
 - microsoft.quantum.characterization.estimaterealoverlapbetweenstates
 - microsoft.quantum.characterization.estimateoverlapbetweenstates
 metadata:
-  ms.openlocfilehash: 8d15c55627cc3cdf9167c7834fe8a1f1e0864fc1
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: 6885830a644da147b0e9fe4e9efd3b553b15885e
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76872852"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82677721"
