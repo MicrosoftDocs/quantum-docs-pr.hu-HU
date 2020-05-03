@@ -17,15 +17,7 @@
     - name: Bevezetés a QDK használatába
       href: welcome.md
     - name: A QDK telepítése
-      items:
-        - name: A telepítés áttekintése
-          href: install-guide/index.md
-        - name: 'Q# + C#'
-          href: install-guide/csinstall.md
-        - name: 'Q# + Python'
-          href: install-guide/pyinstall.md
-        - name: 'Q# Jupyter-notebookok'
-          href: install-guide/qjupyter.md
+      href: install-guide/toc.yml
     - name: A QDK frissítése
       href: install-guide/update.md
     - name: 'Q#-projekt létrehozása'
