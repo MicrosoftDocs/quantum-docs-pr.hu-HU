@@ -1,0 +1,13 @@
+items:
+  - name: A telepítés áttekintése
+    href: index.md
+  - name: 'Q# nyelvű parancssori alkalmazások'
+    href: standalone.md
+  - name: 'Q# Jupyter-notebookok'
+    href: qjupyter.md
+  - name: 'A Q# használata más nyelvekkel'
+    items:
+      - name: 'A Q# használata Pythonnal'
+        href: pyinstall.md
+      - name: 'A Q# használata .NET-tel'
+        href: csinstall.md
