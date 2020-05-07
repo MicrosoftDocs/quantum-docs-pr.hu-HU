@@ -1,6 +1,6 @@
 - name: Microsoft Quantum-dokumentáció
   href: index.yml
-- name: Bevezetés a kvantum-számítástechnikába
+- name: Áttekintés
   items:
     - name: Mi az a kvantum-számítástechnika?
       href: overview/what-is-quantum-computing.md
@@ -12,7 +12,7 @@
       href: overview/what-is-qsharp.md
     - name: Hol találhatok további információt?
       href: overview/how-to-learn-quantum-computing.md
-- name: A Quantum Development Kit beszerzése
+- name: Rövid útmutatók
   items:
     - name: Bevezetés a QDK használatába
       href: welcome.md
@@ -22,21 +22,19 @@
       href: install-guide/update.md
     - name: 'Q#-projekt létrehozása'
       href: how-to-guides/create-qsharp-project.md
-- name: 'Q# – tanulási forrásanyagok'
+- name: Oktatóanyagok
   items:
-    - name: Rövid útmutatók
-      items:
-        - name: Kvantum-véletlenszámgenerátor
-          href: quickstarts/qrng.md
-        - name: 'Összefonódások megismerése Q# nyelven'
-          href: quickstart.md
-        - name: A keresési Grover-algoritmus implementálása
-          href: quickstarts/search.md
+    - name: Kvantum-véletlenszámgenerátor
+      href: quickstarts/qrng.md
+    - name: 'Összefonódások megismerése Q# nyelven'
+      href: quickstart.md
+    - name: A keresési Grover-algoritmus implementálása
+      href: quickstarts/search.md
     - name: 'A Q# megismerése Quantum Katákkal'
       href: intro-to-katas.md
     - name: 'Q#-kódminták'
       href: 'https://docs.microsoft.com/en-us/samples/browse/?languages=qsharp'
-- name: A QDK-ról részletesen
+- name: 'A Q# használati útmutatója'
   items:
     - name: Kvantumfejlesztési módszerek
       topicHref: techniques/index.md
@@ -46,15 +44,21 @@
       href: language/toc.yml
     - name: Kvantumszimulátorok és erőforrásbecslők
       href: machines/toc.yml
-- name: 'Q#-kódtárak'
-  href: libraries/toc.yml
-- name: Kvantum-számítástechnikai fogalmak
-  href: concepts/toc.yml
-- name: További információ
-  href: for-more-info.md
-- name: Hozzájárulás a QDK-hoz
-  href: contributing/toc.yml
-  topicHref: contributing/index.md
-- name: QDK – Kibocsátási megjegyzések
-  topicHref: relnotes/index.md
-  href: relnotes/toc.yml
+- name: Alapelvek
+  items:
+    - name: Kvantum-számítástechnikai fogalmak
+      href: concepts/toc.yml
+    - name: 'Q#-kódtárak'
+      href: libraries/toc.yml
+- name: További források
+  items:
+    - name: Szószedet
+      href: concepts/Glossary.md
+    - name: Hozzájárulás a QDK-hoz
+      href: contributing/toc.yml
+      topicHref: contributing/index.md
+    - name: QDK – Kibocsátási megjegyzések
+      topicHref: relnotes/index.md
+      href: relnotes/toc.yml
+    - name: További információ
+      href: for-more-info.md

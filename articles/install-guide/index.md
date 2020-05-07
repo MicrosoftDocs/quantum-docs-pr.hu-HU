@@ -7,12 +7,12 @@ ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install
-ms.openlocfilehash: 5fafb736f34d27f9233370a0a8a66c0613606048
-ms.sourcegitcommit: 9d1c045cf1a2c3e19030cb38dbc7496dbd24ab58
+ms.openlocfilehash: bca700660094b91f1c0dfa03f9bce1336073ca51
+ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
 ms.translationtype: HT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "77904774"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82680191"
 ---
 # <a name="install-the-microsoft-quantum-development-kit-qdk"></a>A Microsoft Quantum Development Kit (QDK) telepítése
 
@@ -28,6 +28,7 @@ Ráadásul a QDK Q#-támogatást nyújt a Jupyter-notebookokhoz az IQ# Jupyter k
 
 A QDK számos fejlesztői környezethez elérhető. Válassza ki az Ön által előnyben részesített beállítást az alábbi szakaszok közül:
 
-- [Q# telepítése C# nyelvhez:](xref:microsoft.quantum.install.cs) válassza ezt a környezetet, ha együtt szeretné használni a C#-t és a Q#-t egy C#-gazdaprogram létrehozásához, amely Q#-műveleteket hív meg.
-- [Q# telepítése Python nyelvhez:](xref:microsoft.quantum.install.python) válassza ezt a környezetet, ha együtt szeretné használni a Pythont és a Q#-t egy Python-gazdaprogram létrehozásához, amely Q#-műveleteket hív meg.
-- [Q# telepítése Jupyter-notebookokhoz:](xref:microsoft.quantum.install.jupyter) válassza ezt a környezetet Q#-kód beágyazott szöveggel rendelkező cellákban való végrehajtásához vagy kvantum-számítástechnikai interaktív oktatóanyagok létrehozásához. Ha a Q#-t egy külső klasszikus gazdaprogrammal szeretné használni, ne ezt a környezetet válassza.
+- [Q# nyelvű parancssori alkalmazás:](xref:microsoft.quantum.install.standalone) akkor válassza ezt a módszert, ha a Q#-ot szeretné használni a parancssorból. Ehhez nincs szükség illesztőprogramra vagy gazdaprogramra, mint az alábbi lehetőségek esetében.
+- [Q# telepítése Jupyter-notebookokhoz:](xref:microsoft.quantum.install.jupyter) válassza ezt a környezetet Q#-kód beágyazott szöveggel rendelkező cellákban való végrehajtásához vagy kvantum-számítástechnikai interaktív oktatóanyagok létrehozásához. 
+- [Fejlesztés Q# és Python használatával:](xref:microsoft.quantum.install.python) ha együtt szeretné használni a Pythont és a Q#-ot egy Python-gazdaprogram létrehozásához, amely Q#-műveleteket hív meg.
+- [Fejlesztés Q# és C# vagy F# használatával:](xref:microsoft.quantum.install.cs) ha együtt szeretné használni a C#-ot vagy az F#-ot és a Q#-ot egy .NET-gazdaprogram létrehozásához, amely Q#-műveleteket hív meg.

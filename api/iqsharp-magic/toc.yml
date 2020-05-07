@@ -1,0 +1,28 @@
+- href: chemistry.broombridge.md
+  name: '%chemistry.broombridge magic parancs'
+- href: chemistry.encode.md
+  name: '%chemistry.encode magic parancs'
+- href: chemistry.fh.add_terms.md
+  name: '%chemistry.fh.add_terms magic parancs'
+- href: chemistry.fh.load.md
+  name: '%chemistry.fh.load magic parancs'
+- href: chemistry.inputstate.load.md
+  name: '%chemistry.inputstate.load magic parancs'
+- href: config.md
+  name: '%config magic parancs'
+- href: estimate.md
+  name: '%estimate magic parancs'
+- href: lsmagic.md
+  name: '%lsmagic magic parancs'
+- href: package.md
+  name: '%package magic parancs'
+- href: performance.md
+  name: '%performance magic parancs'
+- href: simulate.md
+  name: '%simulate magic parancs'
+- href: toffoli.md
+  name: '%toffoli magic parancs'
+- href: who.md
+  name: '%who magic parancs'
+- href: workspace.md
+  name: '%workspace magic parancs'

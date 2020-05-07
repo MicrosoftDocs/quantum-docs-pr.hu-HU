@@ -6,12 +6,12 @@ ms.author: nakersha
 ms.date: 09/30/2019
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: 84e5db17ab8d963a75c72da38d3e4487b89abc9d
-ms.sourcegitcommit: b6b8459eb654040f1e19f66411b29fc9e48e95c9
+ms.openlocfilehash: 91f12ef6bd15e27c8920471442c66ff3b1e71122
+ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
 ms.translationtype: HT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82030599"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82677092"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>A Microsoft Quantum Development Kit kibocsátási megjegyzései
 
@@ -20,6 +20,21 @@ Ez a cikk információkat tartalmaz a Quantum Development Kit egyes verzióiról
 A telepítési utasításokat lásd a [telepítési útmutatóban](xref:microsoft.quantum.install).
 
 A frissítésre vonatkozó utasításokat lásd a [frissítési útmutatóban](xref:microsoft.quantum.update).
+
+## <a name="version-01120042825"></a>0\.11.2004.2825-ös verzió
+
+*Kiadási dátum: 2020. április 30.*
+
+A verzió a következőket tartalmazza:
+
+- Új támogatás azon Q# nyelvű parancssori alkalmazásokhoz, amelyekhez a továbbiakban nem szükséges C#- vagy Python-gazdafájl. További információkat a #Q nyelvű parancssori alkalmazások használatának első lépéseiről [itt](xref:microsoft.quantum.install.standalone) talál.
+- Frissült a kvantum-véletlenszámgenerátor rövid útmutatója, hogy a továbbiakban ne legyen szükség C#- vagy Python-gazdafájlra. A frissített [rövid útmutató](xref:microsoft.quantum.quickstarts.qrng) itt tekinthető meg.
+- Az IQ# Docker-rendszerképek teljesítménnyel kapcsolatos fejlesztései
+
+> [!NOTE]
+> Az új [`@EntryPoint()`](xref:microsoft.quantum.core.entrypoint) attribútumot használó Q# nyelvű parancssori alkalmazások jelenleg nem hívhatók meg Python- vagy .NET-gazdaprogramokból.
+> További információkat a [Python](xref:microsoft.quantum.install.python) és a [.NET közötti együttműködést](xref:microsoft.quantum.install.cs) bemutató útmutatókban talál.
+
 
 ## <a name="version-01120033107"></a>0\.11.2003.3107-es verzió
 
