@@ -7,12 +7,12 @@ ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.update
-ms.openlocfilehash: 264b5640216b2c0a468b625cdef4b9e0123d8b39
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: bf6d6d3d80af485b555429f25b125bfea685bebf
+ms.sourcegitcommit: c57c271ab73f75f165401651fad2b5bc143e9c8f
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77904757"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82862207"
 ---
 # <a name="update-the-microsoft-quantum-development-kit-qdk"></a>A Microsoft Quantum Development Kit frissítése (QDK)
 
@@ -26,7 +26,7 @@ Javasoljuk, hogy naprakészen tartson a legújabb QDK-kiadással. Ezt a frissít
 
 ## <a name="updating-q-projects"></a>Q # projektek frissítése 
 
-Függetlenül attól, hogy a (z C# ) vagy a Python használatával üzemelteti a q # műveleteit, kövesse ezeket az utasításokat a q # projektjeinek frissítéséhez.
+Függetlenül attól, hogy C# vagy Python használatával üzemelteti a Q # műveleteit, kövesse ezeket az utasításokat a Q # projektjeinek frissítéséhez.
 
 1. Először is győződjön meg arról, hogy rendelkezik a [.NET Core SDK 3,1](https://dotnet.microsoft.com/download)legújabb verziójával. Futtassa a következő parancsot a parancssorban:
 
@@ -34,23 +34,23 @@ Függetlenül attól, hogy a (z C# ) vagy a Python használatával üzemelteti a
     dotnet --version
     ```
 
-    Ellenőrizze, hogy a kimenet `3.1.100` vagy magasabb-e. Ha nem, telepítse a [legújabb verziót](https://dotnet.microsoft.com/download) , és ellenőrizze újra. Ezután kövesse az alábbi utasításokat a beállítástól függően (Visual Studio, Visual Studio Code vagy közvetlenül a parancssorból).
+    Ellenőrizze a kimenetet `3.1.100` vagy a magasabbat. Ha nem, telepítse a [legújabb verziót](https://dotnet.microsoft.com/download) , és ellenőrizze újra. Ezután kövesse az alábbi utasításokat a beállítástól függően (Visual Studio, Visual Studio Code vagy közvetlenül a parancssorból).
 
 ### <a name="update-q-projects-in-visual-studio"></a>Q # projektek frissítése a Visual Studióban
  
 1. A Visual Studio 2019 legújabb verziójának frissítése [itt](https://docs.microsoft.com/visualstudio/install/update-visual-studio?view=vs-2019) talál útmutatást.
 2. A megoldás megnyitása a Visual Studióban
-3. A menüben válassza a **Build** -> **tiszta megoldás** elemet.
-4. A. csproj-fájlok mindegyikében frissítse a célként megadott keretrendszert, hogy `netcoreapp3.0` (vagy `netstandard2.1`, ha a könyvtári projekt).
+3. A menüben válassza a**tiszta megoldás** **létrehozása** -> elemet.
+4. Az egyes. csproj-fájlokban frissítse a célként megadott keretrendszert `netcoreapp3.1` (vagy `netstandard2.1` ha ez egy függvénytár-projekt).
     Az űrlap sorainak szerkesztése:
 
     ```xml
-    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
     ```
 
     A cél-keretrendszerek meghatározásáról [itt](https://docs.microsoft.com/dotnet/standard/frameworks#how-to-specify-target-frameworks)talál további információt.
 5. A megoldásban lévő összes fájl mentése és lezárása
-6. Válassza az **eszközök** -> **parancssori** -> **fejlesztői parancssor** lehetőséget.
+6. Válassza ki az **eszközök** -> **parancssori** -> **fejlesztői parancssort**
 7. A megoldás minden egyes projektje esetében futtassa a következő parancsot:
 
     ```dotnetcli
@@ -58,7 +58,7 @@ Függetlenül attól, hogy a (z C# ) vagy a Python használatával üzemelteti a
     ```
 
    Ha a projektek más Microsoft. Quantum csomagokat használnak (például Microsoft. Quantum. Numerikusok), futtassa a parancsot ezekre is.
-8. A parancssor bezárásához és a **build** -> **Build megoldás** *kiválasztásához (ne válassza az* Újraépítés megoldás lehetőséget)
+8. Zárjuk be a parancssort, és válassza a **Build** -> **Build Solution** ( *ne válassza az* Újraépítés megoldás lehetőséget)
 
 Most már kihagyhatja a [Visual Studio QDK bővítmény frissítését](#update-visual-studio-qdk-extension).
 
@@ -66,7 +66,7 @@ Most már kihagyhatja a [Visual Studio QDK bővítmény frissítését](#update-
 ### <a name="update-q-projects-in-visual-studio-code"></a>Q # projektek frissítése a Visual Studio Code-ban
 
 1. A Visual Studio Code-ban nyissa meg a frissíteni kívánt projektet tartalmazó mappát.
-2. Válassza ki a **terminal** -> **új terminált**
+2. **Terminál** -> **új termináljának** kiválasztása
 3. Kövesse a parancssor használatával történő frissítéshez szükséges utasításokat (közvetlenül alább)
 
 ### <a name="update-q-projects-using-the-command-line"></a>Q # projektek frissítése a parancssor használatával
@@ -78,11 +78,11 @@ Most már kihagyhatja a [Visual Studio QDK bővítmény frissítését](#update-
     dotnet clean [project_name].csproj
     ```
 
-3. A. csproj-fájlok mindegyikében frissítse a célként megadott keretrendszert, hogy `netcoreapp3.0` (vagy `netstandard2.1`, ha a könyvtári projekt).
+3. Az egyes. csproj-fájlokban frissítse a célként megadott keretrendszert `netcoreapp3.1` (vagy `netstandard2.1` ha ez egy függvénytár-projekt).
     Az űrlap sorainak szerkesztése:
 
     ```xml
-    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
     ```
 
     A cél-keretrendszerek meghatározásáról [itt](https://docs.microsoft.com/dotnet/standard/frameworks#how-to-specify-target-frameworks)talál további információt.
@@ -123,7 +123,7 @@ Válassza ki az alábbi fejlesztési környezetet.
     dotnet iqsharp install
     ```
 
-2. A `iqsharp` verziójának ellenőrzése
+2. A `iqsharp` verzió ellenőrzése
 
     ```dotnetcli
     dotnet iqsharp --version
@@ -136,7 +136,7 @@ Válassza ki az alábbi fejlesztési környezetet.
     Jupyter Core: 1.2.20112.0
     ```
 
-    Ne aggódjon, ha a `iqsharp` verziója magasabb, meg kell egyeznie a [legújabb kiadással](xref:microsoft.quantum.relnotes).
+    Ne aggódjon, `iqsharp` ha a verzió magasabb, meg kell egyeznie a [legújabb kiadással](xref:microsoft.quantum.relnotes).
 
 3. A `qsharp` csomag frissítése
 
@@ -144,7 +144,7 @@ Válassza ki az alábbi fejlesztési környezetet.
     pip install qsharp --upgrade
     ```
 
-4. A `qsharp` verziójának ellenőrzése
+4. A `qsharp` verzió ellenőrzése
 
     ```bash
     pip show qsharp
@@ -176,7 +176,7 @@ Válassza ki az alábbi fejlesztési környezetet.
     dotnet iqsharp install
     ```
 
-2. A `iqsharp` verziójának ellenőrzése
+2. A `iqsharp` verzió ellenőrzése
 
     ```dotnetcli
     dotnet iqsharp --version
@@ -189,7 +189,7 @@ Válassza ki az alábbi fejlesztési környezetet.
     Jupyter Core: 1.2.20112.0
     ```
 
-    Ne aggódjon, ha a `iqsharp` verziója magasabb, meg kell egyeznie a [legújabb kiadással](xref:microsoft.quantum.relnotes).
+    Ne aggódjon, `iqsharp` ha a verzió magasabb, meg kell egyeznie a [legújabb kiadással](xref:microsoft.quantum.relnotes).
 
 3. Futtassa a következő parancsot a Jupyter Notebook egyik cellájából:
 
@@ -220,11 +220,11 @@ Válassza ki az alábbi fejlesztési környezetet.
 
 2. A Quantum Project-sablonok frissítése:
 
-   - Lépjen a **Nézet** -> **Parancskatalógus** lehetőséghez
+   - Ugrás a **View** -> **parancs-paletta** megtekintéséhez
    - Válassza a **Q #: Project-sablonok telepítése lehetőséget.**
    - Néhány másodperc elteltével be kell szereznie egy felugró ablakban, hogy a "Project templates telepítése sikeresen megtörtént"
 
-### <a name="c-using-the-dotnet-command-line-tool"></a>C#, a `dotnet` parancssori eszköz használatával
+### <a name="c-using-the-dotnet-command-line-tool"></a>C# a `dotnet` parancssori eszköz használatával
 
 1. A .NET-hez készült Quantum Project-sablonok frissítése
 
