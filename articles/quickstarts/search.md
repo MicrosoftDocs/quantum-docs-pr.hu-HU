@@ -6,123 +6,114 @@ ms.author: chgranad@microsoft.com
 ms.date: 10/19/2019
 ms.topic: article
 uid: microsoft.quantum.quickstarts.search
-ms.openlocfilehash: 0e64fcd56929fa33397c45bf1b2e99bf687eca6f
-ms.sourcegitcommit: 7d350db4b5e766cd243633aee7d0a839b6274bd6
+ms.openlocfilehash: c67ccd16957ceef694552bdd9c073ba5a35d8aaf
+ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
 ms.translationtype: HT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "77906950"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82686827"
 ---
-# <a name="quickstart-implement-grovers-search-algorithm-in-q"></a><span data-ttu-id="5ae9c-103">Gyorsútmutató: A keresési Grover-algoritmus implementálása Q#-ban</span><span class="sxs-lookup"><span data-stu-id="5ae9c-103">Quickstart: Implement Grover's search algorithm in Q#</span></span>
+# <a name="quickstart-implement-grovers-search-algorithm-in-q"></a><span data-ttu-id="3cb6a-103">Gyorsútmutató: A keresési Grover-algoritmus implementálása Q#-ban\#</span><span class="sxs-lookup"><span data-stu-id="3cb6a-103">Quickstart: Implement Grover's search algorithm in Q\#</span></span>
 
-<span data-ttu-id="5ae9c-104">Ebből a gyorsútmutatóból megismerheti, hogyan hozhat létre és futtathat Grover-keresést a strukturálatlan adatok keresésének felgyorsításához.</span><span class="sxs-lookup"><span data-stu-id="5ae9c-104">In this Quickstart, you can learn how to build and run Grover search to speed up the search of unstructured data.</span></span>  <span data-ttu-id="5ae9c-105">A Grover-keresés az egyik legnépszerűbb kvantum-számítástechnikai algoritmus, és ebből a viszonylag kicsi Q#-implementációból megtapasztalhatja, hogy milyen előnyökkel jár a kvantummegoldások magas szintű Q# kvantumprogramozási nyelven történő programozása a kvantumalgoritmusok kifejezéséhez.</span><span class="sxs-lookup"><span data-stu-id="5ae9c-105">Grover's search is one of the most popular quantum computing algorithms, and this relatively small Q# implementation gives you a sense of some of the advantages of programming quantum solutions with a high-level Q# quantum programming language to express quantum algorithms.</span></span>  <span data-ttu-id="5ae9c-106">Az útmutató végén találja annak bemutatását, hogy a szimulációkimenet hogyan talál meg sikeresen egy sztringet egy rendezetlen bejegyzéslistában annak az időnek a töredéke alatt, amennyi a teljes lista klasszikus számítógépen történő áttekintéséhez kellene.</span><span class="sxs-lookup"><span data-stu-id="5ae9c-106">At the end of the guide, you will see the simulation output demonstrates successfully finding a specific string among a list of onordered entries in a fraction of the time it would take to search the whole list on a classical computer.</span></span>
+<span data-ttu-id="3cb6a-104">Ebből a gyorsútmutatóból megismerheti, hogyan hozhat létre és futtathat Grover-keresést a strukturálatlan adatok keresésének felgyorsításához.</span><span class="sxs-lookup"><span data-stu-id="3cb6a-104">In this Quickstart, you can learn how to build and run Grover search to speed up the search of unstructured data.</span></span>  <span data-ttu-id="3cb6a-105">A Grover-keresés az egyik legnépszerűbb kvantum-számítástechnikai algoritmus, és ebből a viszonylag kicsi Q#-implementációból megtapasztalhatja, hogy milyen előnyökkel jár a kvantummegoldások magas szintű Q# kvantumprogramozási nyelven történő programozása a kvantumalgoritmusok kifejezéséhez.</span><span class="sxs-lookup"><span data-stu-id="3cb6a-105">Grover's search is one of the most popular quantum computing algorithms, and this relatively small Q# implementation gives you a sense of some of the advantages of programming quantum solutions with a high-level Q# quantum programming language to express quantum algorithms.</span></span>  <span data-ttu-id="3cb6a-106">Az útmutató végén találja annak bemutatását, hogy a szimulációkimenet hogyan talál meg sikeresen egy sztringet egy rendezetlen bejegyzéslistában annak az időnek a töredéke alatt, amennyi a teljes lista klasszikus számítógépen történő áttekintéséhez kellene.</span><span class="sxs-lookup"><span data-stu-id="3cb6a-106">At the end of the guide, you will see the simulation output demonstrates successfully finding a specific string among a list of unordered entries in a fraction of the time it would take to search the whole list on a classical computer.</span></span>
 
-<span data-ttu-id="5ae9c-107">Grover algoritmusa egy strukturálatlan adatlistában keres bizonyos tételeket.</span><span class="sxs-lookup"><span data-stu-id="5ae9c-107">Grover's algorithm searches a list of unstructured data for specific items.</span></span> <span data-ttu-id="5ae9c-108">Választ adhat például a következő kérdésre: A kártyapakliból húzott kártya egy kőr ász?</span><span class="sxs-lookup"><span data-stu-id="5ae9c-108">For example, it can answer the question: Is this card drawn from a pack of cards an ace of hearts?</span></span> <span data-ttu-id="5ae9c-109">Az adott tétel címkéjét _megjelölt bemenetnek_ hívják.</span><span class="sxs-lookup"><span data-stu-id="5ae9c-109">The labeling of the specific item is called _marked input_.</span></span>
+<span data-ttu-id="3cb6a-107">Grover algoritmusa egy strukturálatlan adatlistában keres bizonyos tételeket.</span><span class="sxs-lookup"><span data-stu-id="3cb6a-107">Grover's algorithm searches a list of unstructured data for specific items.</span></span> <span data-ttu-id="3cb6a-108">Választ adhat például a következő kérdésre: A kártyapakliból húzott kártya egy kőr ász?</span><span class="sxs-lookup"><span data-stu-id="3cb6a-108">For example, it can answer the question: Is this card drawn from a pack of cards an ace of hearts?</span></span> <span data-ttu-id="3cb6a-109">Az adott tétel címkéjét _megjelölt bemenetnek_ hívják.</span><span class="sxs-lookup"><span data-stu-id="3cb6a-109">The labeling of the specific item is called _marked input_.</span></span>
 
-<span data-ttu-id="5ae9c-110">Grover keresési algoritmusát felhasználva egy kvantumszámítógép garantáltan kevesebb lépésből futtatja a keresést, mint ahány tételből áll a keresendő lista – erre egy átlagos algoritmus nem képes.</span><span class="sxs-lookup"><span data-stu-id="5ae9c-110">Using Grover's search algorithm, a quantum computer is guaranteed to run this search in fewer steps than the number of items in the list that you're searching — something no classical algorithm can do.</span></span> <span data-ttu-id="5ae9c-111">A sebességnövekedés elhanyagolható egy kártyapakli esetében; több millió vagy több milliárd tételt tartalmazó listák esetében azonban már számottevő.</span><span class="sxs-lookup"><span data-stu-id="5ae9c-111">The increased speed in the case of a pack of cards is negligible; however, in lists containing millions or billions of items, it becomes significant.</span></span>
+<span data-ttu-id="3cb6a-110">Grover keresési algoritmusát felhasználva egy kvantumszámítógép garantáltan kevesebb lépésből futtatja a keresést, mint ahány tételből áll a keresendő lista – erre egy átlagos algoritmus nem képes.</span><span class="sxs-lookup"><span data-stu-id="3cb6a-110">Using Grover's search algorithm, a quantum computer is guaranteed to run this search in fewer steps than the number of items in the list that you're searching — something no classical algorithm can do.</span></span> <span data-ttu-id="3cb6a-111">A sebességnövekedés elhanyagolható egy kártyapakli esetében; több millió vagy több milliárd tételt tartalmazó listák esetében azonban már számottevő.</span><span class="sxs-lookup"><span data-stu-id="3cb6a-111">The increased speed in the case of a pack of cards is negligible; however, in lists containing millions or billions of items, it becomes significant.</span></span>
 
-<span data-ttu-id="5ae9c-112">Grover keresési algoritmusát néhány sornyi kóddal megírhatja.</span><span class="sxs-lookup"><span data-stu-id="5ae9c-112">You can build Grover's search algorithm with just a few lines of code.</span></span>
+<span data-ttu-id="3cb6a-112">Grover keresési algoritmusát néhány sornyi kóddal megírhatja.</span><span class="sxs-lookup"><span data-stu-id="3cb6a-112">You can build Grover's search algorithm with just a few lines of code.</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="5ae9c-113">Előfeltételek</span><span class="sxs-lookup"><span data-stu-id="5ae9c-113">Prerequisites</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="3cb6a-113">Előfeltételek</span><span class="sxs-lookup"><span data-stu-id="3cb6a-113">Prerequisites</span></span>
 
-- <span data-ttu-id="5ae9c-114">A Microsoft [Quantum Development Kit][install].</span><span class="sxs-lookup"><span data-stu-id="5ae9c-114">The Microsoft [Quantum Development Kit][install].</span></span>
+- <span data-ttu-id="3cb6a-114">A Microsoft [Quantum Development Kit][install].</span><span class="sxs-lookup"><span data-stu-id="3cb6a-114">The Microsoft [Quantum Development Kit][install].</span></span>
 
-## <a name="what-does-grovers-search-algorithm-do"></a><span data-ttu-id="5ae9c-115">Mit csinál pontosan Grover keresési algoritmusa?</span><span class="sxs-lookup"><span data-stu-id="5ae9c-115">What does Grover's search algorithm do?</span></span>
+## <a name="what-does-grovers-search-algorithm-do"></a><span data-ttu-id="3cb6a-115">Mit csinál pontosan Grover keresési algoritmusa?</span><span class="sxs-lookup"><span data-stu-id="3cb6a-115">What does Grover's search algorithm do?</span></span>
 
-<span data-ttu-id="5ae9c-116">Grover algoritmusa rákérdez, hogy a lista egyik tétele az-e, amelyet keresünk.</span><span class="sxs-lookup"><span data-stu-id="5ae9c-116">Grover's algorithm asks whether an item in a list is the one we are searching for.</span></span> <span data-ttu-id="5ae9c-117">Ezt a lista indexeinek minden együtthatójára vagy valószínűségi amplitúdójára vetített kvantum-szuperpozíciójának összeállításával teszi, ami annak a valószínűségét mutatja, hogy az adott indexet keressük-e.</span><span class="sxs-lookup"><span data-stu-id="5ae9c-117">It does this by constructing a quantum superposition of the indexes of the list with each coefficient, or probability amplitude, representing the probability of that specific index being the one you are looking for.</span></span>
+<span data-ttu-id="3cb6a-116">Grover algoritmusa rákérdez, hogy a lista egyik tétele az-e, amelyet keresünk.</span><span class="sxs-lookup"><span data-stu-id="3cb6a-116">Grover's algorithm asks whether an item in a list is the one we are searching for.</span></span> <span data-ttu-id="3cb6a-117">Ezt a lista indexeinek minden együtthatójára vagy valószínűségi amplitúdójára vetített kvantum-szuperpozíciójának összeállításával teszi, ami annak a valószínűségét mutatja, hogy az adott indexet keressük-e.</span><span class="sxs-lookup"><span data-stu-id="3cb6a-117">It does this by constructing a quantum superposition of the indexes of the list with each coefficient, or probability amplitude, representing the probability of that specific index being the one you are looking for.</span></span>
 
-<span data-ttu-id="5ae9c-118">Az algoritmus mozgatórugója az a két lépés, ami fokozatosan növeli a keresett index együtthatóját, amíg az együttható valószínűségi amplitúdója el nem éri az egyet.</span><span class="sxs-lookup"><span data-stu-id="5ae9c-118">At the heart of the algorithm are two steps that incrementally boost the coefficient of the index that we are looking for, until the probability amplitude of that coefficient approaches one.</span></span>
+<span data-ttu-id="3cb6a-118">Az algoritmus mozgatórugója az a két lépés, ami fokozatosan növeli a keresett index együtthatóját, amíg az együttható valószínűségi amplitúdója el nem éri az egyet.</span><span class="sxs-lookup"><span data-stu-id="3cb6a-118">At the heart of the algorithm are two steps that incrementally boost the coefficient of the index that we are looking for, until the probability amplitude of that coefficient approaches one.</span></span>
 
-<span data-ttu-id="5ae9c-119">A fokozatos növekedések száma kevesebb, mint a lista tételeinek száma.</span><span class="sxs-lookup"><span data-stu-id="5ae9c-119">The number of incremental boosts is fewer than the number of items in the list.</span></span> <span data-ttu-id="5ae9c-120">Grover keresési algoritmusa ezért kevesebb lépésből hajtja végre a keresést, mint az átlagos algoritmusok.</span><span class="sxs-lookup"><span data-stu-id="5ae9c-120">This is why Grover's search algorithm performs the search in fewer steps than any classical algorithm.</span></span>
+<span data-ttu-id="3cb6a-119">A fokozatos növekedések száma kevesebb, mint a lista tételeinek száma.</span><span class="sxs-lookup"><span data-stu-id="3cb6a-119">The number of incremental boosts is fewer than the number of items in the list.</span></span> <span data-ttu-id="3cb6a-120">Grover keresési algoritmusa ezért kevesebb lépésből hajtja végre a keresést, mint az átlagos algoritmusok.</span><span class="sxs-lookup"><span data-stu-id="3cb6a-120">This is why Grover's search algorithm performs the search in fewer steps than any classical algorithm.</span></span>
 
 ![Grover keresési algoritmusának funkcionális diagramja](~/media/grover.png)
 
-## <a name="write-the-code"></a><span data-ttu-id="5ae9c-122">A kód írása</span><span class="sxs-lookup"><span data-stu-id="5ae9c-122">Write the code</span></span>
+## <a name="write-the-code"></a><span data-ttu-id="3cb6a-122">A kód írása</span><span class="sxs-lookup"><span data-stu-id="3cb6a-122">Write the code</span></span>
 
-1. <span data-ttu-id="5ae9c-123">A Quantum Development Kit használatával [hozzon létre egy új Q#-projektet](xref:microsoft.quantum.howto.createproject)`Grover` néven az Ön által választott fejlesztői környezetben.</span><span class="sxs-lookup"><span data-stu-id="5ae9c-123">Using the Quantum Development Kit, [create a new Q# project](xref:microsoft.quantum.howto.createproject) called `Grover`, in your development environment of choice.</span></span>
+1. <span data-ttu-id="3cb6a-123">A Quantum Development Kit használatával [hozzon létre egy új Q#-projektet](xref:microsoft.quantum.howto.createproject)`Grover` néven az Ön által választott fejlesztői környezetben.</span><span class="sxs-lookup"><span data-stu-id="3cb6a-123">Using the Quantum Development Kit, [create a new Q# project](xref:microsoft.quantum.howto.createproject) called `Grover`, in your development environment of choice.</span></span>
 
-1. <span data-ttu-id="5ae9c-124">Az új projektjében adja a következő kódot az `Operations.qs` fájlhoz:</span><span class="sxs-lookup"><span data-stu-id="5ae9c-124">Add the following code to the `Operations.qs` file in your new project:</span></span>
+1. <span data-ttu-id="3cb6a-124">Az új projektjében adja a következő kódot az `Program.qs` fájlhoz:</span><span class="sxs-lookup"><span data-stu-id="3cb6a-124">Add the following code to the `Program.qs` file in your new project:</span></span>
 
-    :::code language="qsharp" source="~/quantum/samples/algorithms/simple-grover/SimpleGrover.qs" range="4-40":::
+    :::code language="qsharp" source="~/quantum/samples/algorithms/simple-grover/SimpleGrover.qs" range="4-41":::
 
-1. <span data-ttu-id="5ae9c-125">A keresendő lista meghatározásához hozzon létre egy új fájlt `Reflections.qs` néven, és illessze be a következő kódot:</span><span class="sxs-lookup"><span data-stu-id="5ae9c-125">To define the list that we're searching, create a new file `Reflections.qs`, and paste in the following code:</span></span>
+1. <span data-ttu-id="3cb6a-125">A keresendő lista meghatározásához hozzon létre egy új fájlt `Reflections.qs` néven, és illessze be a következő kódot:</span><span class="sxs-lookup"><span data-stu-id="3cb6a-125">To define the list that we're searching, create a new file `Reflections.qs`, and paste in the following code:</span></span>
 
     :::code language="qsharp" source="~/quantum/samples/algorithms/simple-grover/Reflections.qs" range="4-70":::
 
-    <span data-ttu-id="5ae9c-126">A `ReflectAboutMarked` művelet meghatározza az Ön által keresett megjelölt bemenetet, a nullák és egyek váltakozásából álló sztringet.</span><span class="sxs-lookup"><span data-stu-id="5ae9c-126">The `ReflectAboutMarked` operation defines the marked input that you are searching for: the string of alternating zeros and ones.</span></span> <span data-ttu-id="5ae9c-127">Ez a minta szoftveresen rögzíti a megjelölt bemenetet, amely kiterjeszthető más bemenetek keresésére, vagy általánosítható bármilyen bemenetre.</span><span class="sxs-lookup"><span data-stu-id="5ae9c-127">This sample hard-codes the marked input, and can be extended to search for different inputs or generalized for any input.</span></span>
+    <span data-ttu-id="3cb6a-126">A `ReflectAboutMarked` művelet meghatározza az Ön által keresett megjelölt bemenetet, a nullák és egyek váltakozásából álló sztringet.</span><span class="sxs-lookup"><span data-stu-id="3cb6a-126">The `ReflectAboutMarked` operation defines the marked input that you are searching for: the string of alternating zeros and ones.</span></span> <span data-ttu-id="3cb6a-127">Ez a minta szoftveresen rögzíti a megjelölt bemenetet, amely kiterjeszthető más bemenetek keresésére, vagy általánosítható bármilyen bemenetre.</span><span class="sxs-lookup"><span data-stu-id="3cb6a-127">This sample hard-codes the marked input, and can be extended to search for different inputs or generalized for any input.</span></span>
 
-1. <span data-ttu-id="5ae9c-128">Ezután futtassa új Q#-programját a `ReflectAboutMarked` által jelölt tétel megtalálásához.</span><span class="sxs-lookup"><span data-stu-id="5ae9c-128">Next, run your new Q# program to find the item marked by `ReflectAboutMarked`.</span></span>
+1. <span data-ttu-id="3cb6a-128">Ezután futtassa új Q#-programját a `ReflectAboutMarked` által jelölt tétel megtalálásához.</span><span class="sxs-lookup"><span data-stu-id="3cb6a-128">Next, run your new Q# program to find the item marked by `ReflectAboutMarked`.</span></span>
 
-    ### <a name="python-with-visual-studio-code-or-the-command-line"></a>[<span data-ttu-id="5ae9c-129">Python a Visual Studio Code-dal vagy a parancssorból</span><span class="sxs-lookup"><span data-stu-id="5ae9c-129">Python with Visual Studio Code or the Command Line</span></span>](#tab/tabid-python)
+### <a name="q-command-line-applications-with-visual-studio-or-visual-studio-code"></a><span data-ttu-id="3cb6a-129">Q# nyelvű parancssori alkalmazások a Visual Studióval vagy a Visual Studio Code-dal</span><span class="sxs-lookup"><span data-stu-id="3cb6a-129">Q# command line applications with Visual Studio or Visual Studio Code</span></span>
 
-    <span data-ttu-id="5ae9c-130">Mentse `host.py`-ként a következő kódot az új Q#-program Pythonból történő futtatásához:</span><span class="sxs-lookup"><span data-stu-id="5ae9c-130">To run your new Q# program from Python, save the following code as `host.py`:</span></span>
+<span data-ttu-id="3cb6a-130">A végrehajtható fájl a projekt konfigurációja és a parancssori lehetőségek függvényében egy szimulátoron vagy egy erőforrásbecslőn futtatja az `@EntryPoint()` attribútummal jelölt műveletet vagy függvényt.</span><span class="sxs-lookup"><span data-stu-id="3cb6a-130">The executable will run the operation or function marked with the `@EntryPoint()` attribute on a simulator or resource estimator, depending on the project configuration and command-line options.</span></span>
 
-    :::code language="python" source="~/quantum/samples/algorithms/simple-grover/host.py" range="9-14":::
+<span data-ttu-id="3cb6a-131">A szkript végrehajtásához egyszerűen nyomja le a Ctrl + F5 billentyűkombinációt a Visual Studióban.</span><span class="sxs-lookup"><span data-stu-id="3cb6a-131">In Visual Studio, simply press Ctrl + F5 to execute the script.</span></span>
 
-    <span data-ttu-id="5ae9c-131">Ezután a parancssorból futtathatja a Python-gazdaprogramot:</span><span class="sxs-lookup"><span data-stu-id="5ae9c-131">You can then run your Python host program from the command line:</span></span>
+<span data-ttu-id="3cb6a-132">A VS Code-ban a `Program.qs` első alkalommal való összeállításához írja be az alábbiakat a terminálban:</span><span class="sxs-lookup"><span data-stu-id="3cb6a-132">In VS Code, build the `Program.qs` the first time by typing the below in the terminal:</span></span>
 
-    ```bash
-    $ python host.py
-    Preparing Q# environment...
-    Reflecting about marked state...
-    Reflecting about marked state...
-    Reflecting about marked state...
-    Reflecting about marked state...
-    [0, 1, 0, 1, 0]
-    ```
+```Command line
+dotnet build
+```
 
-    ### <a name="c-with-visual-studio-code-or-the-command-line"></a>[<span data-ttu-id="5ae9c-132">C# a Visual Studio Code-dal vagy a parancssorból</span><span class="sxs-lookup"><span data-stu-id="5ae9c-132">C# with Visual Studio Code or the Command Line</span></span>](#tab/tabid-csharp)
+<span data-ttu-id="3cb6a-133">A későbbi futtatásokhoz az összeállítást nem kell megismételni.</span><span class="sxs-lookup"><span data-stu-id="3cb6a-133">For subsequent runs, there is no need to build it again.</span></span> <span data-ttu-id="3cb6a-134">Futtatáshoz írja be a következő parancsot, majd nyomja le az Enter billentyűt:</span><span class="sxs-lookup"><span data-stu-id="3cb6a-134">To run it, type the following command and press enter:</span></span>
 
-    <span data-ttu-id="5ae9c-133">Adja hozzá a következő C#-kódot a `Driver.cs` fájlhoz, hogy futtatni tudja az új Q#-programot a C#-ből:</span><span class="sxs-lookup"><span data-stu-id="5ae9c-133">To run your new Q# program from C#, modify `Driver.cs` to include the following C# code:</span></span>
+```Command line
+dotnet run --no-build
+```
 
-    :::code language="csharp" source="~/quantum/samples/algorithms/simple-grover/Host.cs" range="4-23":::
+<span data-ttu-id="3cb6a-135">Ekkor a következő üzenetnek kell megjelennie a terminálon:</span><span class="sxs-lookup"><span data-stu-id="3cb6a-135">You should see the following message displayed in the terminal:</span></span>
 
-    <span data-ttu-id="5ae9c-134">Ezután a parancssorból futtathatja a C#-gazdaprogramot:</span><span class="sxs-lookup"><span data-stu-id="5ae9c-134">You can then run your C# host program from the command line:</span></span>
+```
+operations.qs:
+This operation applies Grover's algorithm to search all possible inputs to an operation to find a particular marked state.
+Usage:
+operations.qs [options] [command]
 
-    ```bash
-    $ dotnet run
-    Reflecting about marked state...
-    Reflecting about marked state...
-    Reflecting about marked state...
-    Reflecting about marked state...
-    Result: [Zero,One,Zero,One,Zero]
+--n-qubits <n-qubits> (REQUIRED)
+-s, --simulator <simulator>         The name of the simulator to use.
+--version                           Show version information
+-?, -h, --help                      Show help and usage information
+Commands:
+```
 
-    Press any key to continue...
-    ```
+<span data-ttu-id="3cb6a-136">Ennek az az oka, hogy nem adta meg a használni kívánt qubitek számát, így a terminál kínálja fel a végrehajtható fájlhoz elérhető parancsokat.</span><span class="sxs-lookup"><span data-stu-id="3cb6a-136">This is because you didn't specify the number of qubits you wanted to use, so the terminal tells you the commands available for the executable.</span></span> <span data-ttu-id="3cb6a-137">Ha 5 qubitet szeretnénk használni, a következőt írjuk be:</span><span class="sxs-lookup"><span data-stu-id="3cb6a-137">If we want to use 5 qubits we should type:</span></span>
 
-    ### <a name="c-with-visual-studio-2019"></a>[<span data-ttu-id="5ae9c-135">C# a Visual Studio 2019-cel</span><span class="sxs-lookup"><span data-stu-id="5ae9c-135">C# with Visual Studio 2019</span></span>](#tab/tabid-vs2019)
+```Command line
+dotnet run --n-qubits 5
+```
 
-    <span data-ttu-id="5ae9c-136">A Visual Studióban adja hozzá a következő C#-kódot a `Driver.cs` fájlhoz, hogy futtatni tudja az új Q#-programot a C#-ból:</span><span class="sxs-lookup"><span data-stu-id="5ae9c-136">To run your new Q# program from C# in Visual Studio, modify `Driver.cs` to include the following C# code:</span></span>
+<span data-ttu-id="3cb6a-138">Az Enter lenyomásakor a következő kimenetnek kell megjelennie:</span><span class="sxs-lookup"><span data-stu-id="3cb6a-138">Pressing enter you should see the following output:</span></span>
 
-    :::code language="csharp" source="~/quantum/samples/algorithms/simple-grover/Host.cs" range="4-23":::
+```
+Reflecting about marked state...
+Reflecting about marked state...
+Reflecting about marked state...
+Reflecting about marked state...
+[Zero,One,Zero,One,Zero]
+```
 
-    <span data-ttu-id="5ae9c-137">Ezután nyomja le az F5 billentyűt, így a program elkezdi a végrehajtást, és megjelenik egy új előugró ablak a következő eredményekkel:</span><span class="sxs-lookup"><span data-stu-id="5ae9c-137">Then press F5, the program will start execution and a new windows will pop-up with the following results:</span></span> 
+## <a name="next-steps"></a><span data-ttu-id="3cb6a-139">További lépések</span><span class="sxs-lookup"><span data-stu-id="3cb6a-139">Next steps</span></span>
 
-    ```bash
-    $ dotnet run
-    Reflecting about marked state...
-    Reflecting about marked state...
-    Reflecting about marked state...
-    Reflecting about marked state...
-    Result: [Zero,One,Zero,One,Zero]
+<span data-ttu-id="3cb6a-140">Ha hasznosnak találta ezt a gyorsútmutatót, tekintsen meg néhányat a lenti források közül, amelyek azzal foglalkoznak, hogyan írhat saját kvantumalkalmazásokat a Q# segítségével:</span><span class="sxs-lookup"><span data-stu-id="3cb6a-140">If you enjoyed this quickstart, check out some of the resources below to learn more about how you can use Q# to write your own quantum applications:</span></span>
 
-    Press any key to continue...
-    ```
-    ***
-
-    <span data-ttu-id="5ae9c-138">A `ReflectAboutMarked` műveletet csak négyszer kellett lehívni, és a Q#-program képes volt megtalálni a „01010” bemenetet $2^{5} = 32$ lehetséges bemenet közül!</span><span class="sxs-lookup"><span data-stu-id="5ae9c-138">The `ReflectAboutMarked` operation is called only four times, but your Q# program was able to find the "01010" input amongst $2^{5} = 32$ possible inputs!</span></span>
-
-## <a name="next-steps"></a><span data-ttu-id="5ae9c-139">További lépések</span><span class="sxs-lookup"><span data-stu-id="5ae9c-139">Next steps</span></span>
-
-<span data-ttu-id="5ae9c-140">Ha hasznosnak találta ezt a gyorsútmutatót, tekintsen meg néhányat a lenti források közül, amelyek azzal foglalkoznak, hogyan írhat saját kvantumalkalmazásokat a Q# segítségével:</span><span class="sxs-lookup"><span data-stu-id="5ae9c-140">If you enjoyed this quickstart, check out some of the resources below to learn more about how you can use Q# to write your own quantum applications:</span></span>
-
-- [<span data-ttu-id="5ae9c-141">Vissza a QDK-val való ismerkedésről szóló útmutatóhoz</span><span class="sxs-lookup"><span data-stu-id="5ae9c-141">Back to the Getting Started with QDK guide</span></span>](xref:microsoft.quantum.welcome)
-- <span data-ttu-id="5ae9c-142">Egy általánosabb [példa](https://github.com/microsoft/Quantum/tree/master/samples/algorithms/database-search) a keresési Grover-algoritmusra</span><span class="sxs-lookup"><span data-stu-id="5ae9c-142">Try a more general Grover's search algorithm [sample](https://github.com/microsoft/Quantum/tree/master/samples/algorithms/database-search)</span></span>
-- [<span data-ttu-id="5ae9c-143">A Grover-kereséssel és a Kvantum Katákkal kapcsolatos további információk</span><span class="sxs-lookup"><span data-stu-id="5ae9c-143">Learn more about Grover's search with the Quantum Katas</span></span>](xref:microsoft.quantum.overview.katas)
-- <span data-ttu-id="5ae9c-144">További információk a Grover keresési algoritmusa mögött álló kvantum-számítástechnikai technikával, az [amplitúdó-erősítéssel](xref:microsoft.quantum.libraries.standard.algorithms#amplitude-amplification) kapcsolatban</span><span class="sxs-lookup"><span data-stu-id="5ae9c-144">Read more about [Amplitude amplification](xref:microsoft.quantum.libraries.standard.algorithms#amplitude-amplification), the quantum computing technique behind Grover's search algorithm</span></span>
-- [<span data-ttu-id="5ae9c-145">Kvantum-számítástechnikai fogalmak</span><span class="sxs-lookup"><span data-stu-id="5ae9c-145">Quantum computing concepts</span></span>](xref:microsoft.quantum.concepts.intro)
-- [<span data-ttu-id="5ae9c-146">Példák a Quantum Development Kit használatára</span><span class="sxs-lookup"><span data-stu-id="5ae9c-146">Quantum Development Kit Samples</span></span>](https://docs.microsoft.com/samples/browse/?products=qdk)
+- [<span data-ttu-id="3cb6a-141">Vissza a QDK-val való ismerkedésről szóló útmutatóhoz</span><span class="sxs-lookup"><span data-stu-id="3cb6a-141">Back to the Getting Started with QDK guide</span></span>](xref:microsoft.quantum.welcome)
+- <span data-ttu-id="3cb6a-142">Egy általánosabb [példa](https://github.com/microsoft/Quantum/tree/master/samples/algorithms/database-search) a keresési Grover-algoritmusra</span><span class="sxs-lookup"><span data-stu-id="3cb6a-142">Try a more general Grover's search algorithm [sample](https://github.com/microsoft/Quantum/tree/master/samples/algorithms/database-search)</span></span>
+- [<span data-ttu-id="3cb6a-143">A Grover-kereséssel és a Kvantum Katákkal kapcsolatos további információk</span><span class="sxs-lookup"><span data-stu-id="3cb6a-143">Learn more about Grover's search with the Quantum Katas</span></span>](xref:microsoft.quantum.overview.katas)
+- <span data-ttu-id="3cb6a-144">További információk a Grover keresési algoritmusa mögött álló kvantum-számítástechnikai technikával, az [amplitúdó-erősítéssel][amplitude-amplification] kapcsolatban</span><span class="sxs-lookup"><span data-stu-id="3cb6a-144">Read more about [Amplitude amplification][amplitude-amplification], the quantum computing technique behind Grover's search algorithm</span></span>
+- [<span data-ttu-id="3cb6a-145">Kvantum-számítástechnikai fogalmak</span><span class="sxs-lookup"><span data-stu-id="3cb6a-145">Quantum computing concepts</span></span>](xref:microsoft.quantum.concepts.intro)
+- [<span data-ttu-id="3cb6a-146">Példák a Quantum Development Kit használatára</span><span class="sxs-lookup"><span data-stu-id="3cb6a-146">Quantum Development Kit Samples</span></span>](https://docs.microsoft.com/samples/browse/?products=qdk)
 
 <!-- LINKS -->
 
 [install]: xref:microsoft.quantum.install
+[amplitude-amplification]: xref:microsoft.quantum.libraries.standard.algorithms#amplitude-amplification
