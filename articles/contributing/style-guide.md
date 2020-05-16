@@ -6,19 +6,19 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.style
-ms.openlocfilehash: 3c8e432378ec563a197a5b87000c3e90cadb8e18
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: dfb2b1779e3ddc77fc74697bc4dc2904b1a0c70f
+ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77907443"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83426925"
 ---
 # <a name="q-style-guide"></a>Q # Style útmutató #
 ## <a name="general-conventions"></a>Általános konvenciók ##
 
 Az ebben az útmutatóban javasolt konvenciók célja, hogy a Q # könnyebben olvasható és értelmezhető programokat és kódtárakat segítse.
 
-## <a name="guidance"></a>Útmutatás
+## <a name="guidance"></a>Útmutató
 
 Javasoljuk, hogy:
 
@@ -39,7 +39,7 @@ A függvények és a műveletek a felhasználók közötti megkülönböztetés�
 *Ez egy művelet végrehajtása* .
 
 Ezzel szemben a függvények leírják az adatok közötti matematikai kapcsolatokat.
-A `Sin(PI() / 2.0)` kifejezés `1.0`, és semmit *sem jelent a* program vagy a qubits állapotával kapcsolatban.
+A kifejezés `Sin(PI() / 2.0)` *az* `1.0` , és nem jelent semmit a program vagy a qubits állapotáról.
 
 Összefoglalva, a műveletek műveleteket végeznek, miközben a függvények a dolgok.
 Ez a különbségtétel azt sugallja, hogy az Operations és a függvények neve a következő: nevek.
@@ -57,14 +57,14 @@ Például:
 
 Egy eset, amely különleges említést érdemel, ha egy művelet bemenetként egy másik műveletet hajt végre, és meghívja azt.
 Ilyen esetekben a bemeneti művelet által végrehajtott művelet nem egyértelmű, ha a külső művelet definiálva van, úgy, hogy a megfelelő művelet ne legyen azonnal egyértelmű.
-A `ApplyIf`, a `ApplyToEach`és a `ApplyToFirst`esetében a `Apply`művelet használatát javasoljuk.
-Ebben az esetben más műveletek is hasznosak lehetnek, mint a `IterateThroughCartesianPower`.
+A művelet a, a, a és a esetében ajánlott `Apply` `ApplyIf` `ApplyToEach` `ApplyToFirst` .
+Ebben az esetben más igék is hasznosak lehetnek, mint a-ben `IterateThroughCartesianPower` .
 
 | Művelet | Várt hatás |
 | ---- | ------ |
 | Alkalmaz | A bemenetként megadott műveletet nevezzük |
 | Assert | A lehetséges kvantum-mérés eredményével kapcsolatos hipotézist egy szimulátor ellenőrzi |
-| Becslés | Egy klasszikus értéket ad vissza, amely egy vagy több mérésből álló becslést jelöl. |
+| Estimate (becslés) | Egy klasszikus értéket ad vissza, amely egy vagy több mérésből álló becslést jelöl. |
 | Measure | A rendszer elvégzi a kvantum-mérést, és annak eredményét visszaadja a felhasználónak |
 | Előkészítés | A qubits adott regisztrálása egy adott állapotba van inicializálva |
 | Sample | Egy klasszikus értéket ad vissza véletlenszerűen egy bizonyos eloszlásból |
@@ -76,28 +76,28 @@ A függvények esetében javasoljuk, hogy kerülje a műveletek használatát a 
 - `LookupFunction`
 
 Különösen, ha szinte minden esetben azt javasoljuk, hogy a múltbeli táblázatos adatok használatával jelezze, hogy egy függvény neve erősen csatlakozik egy művelethez vagy egy mellékhatáshoz a kvantum-programban másutt.
-A `ControlledOnInt` például a "vezérlő" művelet "vezérlőelem" kifejezésének "a" kifejezést használja annak jelzésére, hogy a függvény melléknévként viselkedik az argumentumának módosításához.
-Ennek a névnek a további előnye, hogy a beépített `Controlled`-inaktívnak megfelelő szemantikai feltételnek felel meg, ahogy azt az alábbiakban tárgyaljuk.
-Hasonlóképpen, az _ügynökök_ nevei a függvények és a UDT nevéből is felhasználhatók a műveleti nevekből, ahogy a neve `Encoder` a `Encode`hoz szorosan társított UDT esetében.
+Például a `ControlledOnInt` "vezérlő" művelet "Control" utasításának "a" kifejezés formája, amely azt jelzi, hogy a függvény melléknévként viselkedik az argumentumának módosításához.
+Ennek a névnek a további előnye, hogy összefoglalja a beépített felépítmény szemantikai `Controlled` feltételeit, ahogy azt az alábbiakban tárgyaljuk.
+Hasonlóképpen, az _ügynökök_ nevei a függvények és a UDT alapján is felhasználhatók a műveleti nevekből, például egy, a szolgáltatáshoz `Encoder` szorosan társított UDT neve esetén `Encode` .
 
-# <a name="guidance"></a>[Útmutatás](#tab/guidance)
+# <a name="guidance"></a>[Útmutató](#tab/guidance)
 
 Javasoljuk, hogy:
 
 - Műveletek neveihez használjon műveleteket.
 - Nevek vagy melléknevek használata a függvények neveihez.
 - A felhasználó által definiált típusokhoz és attribútumokhoz tartozó nevek használata.
-- Az összes hívható név esetén a `CamelCase` erős preferencia alapján `pascalCase`, `snake_case`vagy `ANGRY_CASE`. Különösen ügyeljen arra, hogy a hívható nevek nagybetűvel kezdődjön.
-- Az összes helyi változó esetében a `pascalCase` erős preferencia használatával `CamelCase`, `snake_case`vagy `ANGRY_CASE`. Különösen ügyeljen arra, hogy a helyi változók kisbetűkkel kezdődjön.
-- Az aláhúzások használatának elkerülése a függvények és a műveletek neveiben `_` Ha további hierarchiára van szükség, használja a névtereket és a névterek aliasait.
+- Az összes hívható név esetében használjon `CamelCase` erős preferenciát a `pascalCase` ,, vagy rendszerre `snake_case` `ANGRY_CASE` . Különösen ügyeljen arra, hogy a hívható nevek nagybetűvel kezdődjön.
+- Az összes helyi változó esetében használjon `pascalCase` erős preferenciát a `CamelCase` ,, vagy rendszerre `snake_case` `ANGRY_CASE` . Különösen ügyeljen arra, hogy a helyi változók kisbetűkkel kezdődjön.
+- Kerülje az aláhúzások használatát a `_` függvények és a műveletek neveiben; ahol további hierarchiára van szükség, használja a névtereket és a névterek aliasait.
 
 # <a name="examples"></a>[Példák](#tab/examples)
 
-|   | Name (Név) | Leírás |
+|   | Name | Leírás |
 |---|------|-------------|
 | ☑ | `operation ReflectAboutStart` | A művelet hatásának jelzéséhez törölje a műveletet ("tükrözze"). |
 | ☒ | <s>`operation XRotation`</s> | A főnévi kifejezés a művelet helyett a függvényt javasolja. |
-| ☒ | <s>`operation search_oracle`</s> | `snake_case` ellentétes Q # jelölés használata. |
+| ☒ | <s>`operation search_oracle`</s> | Az `snake_case` ellentétes Q # jelölés használata. |
 | ☒ | <s>`operation Search_Oracle`</s> | A belső és a műveleti név közötti aláhúzás használata a Q # jelöléssel ellentétes. |
 | ☑ | `function StatePreparationOracle` | A főnévi kifejezés használata azt sugallja, hogy a függvény egy műveletet ad vissza. |
 | ☑ | `function EqualityFact` | A főnév ("Fact") egyértelmű használata annak jelzésére, hogy ez egy függvény, míg a melléknév. |
@@ -112,16 +112,16 @@ Javasoljuk, hogy:
 
 A fenti tanácsokban a Gyorsírás számos formája létezik, amely a kvantum-számítástechnika általános és átható használatát látja el.
 Javasoljuk, hogy meglévő és közös gyorsírást használjon, ahol létezik, különösen olyan műveletek esetén, amelyek a célszámítógép működéséhez tartoznak.
-Például a `ApplyX`helyett `X` nevet választjuk, `RotateAboutZ`helyett pedig `Rz`.
-Az ilyen rövidítések használatakor a művelet neve csak nagybetűs lehet (például: `MAJ`).
+Például a helyett a nevet választjuk `X` `ApplyX` `Rz` `RotateAboutZ` .
+Ilyen rövidítés használatakor a művelet neve csak nagybetűs lehet (például: `MAJ` ).
 
 Erre az egyezményre akkor van szükség, ha gyakran használt betűszók és nagybetűk, például "QFT" a "Quantum Fourier átalakítás" kifejezésre alkalmazzák.
 Javasoljuk, hogy az általános .NET-konvenciókat a betűszók és a nagyszótárak teljes névben való használatára ajánljuk, amely az alábbiakat írja elő:
 
-- a kétbetűs mozaikszavak és a nagyvállalatok neve nagybetűs (pl.: `BE` a "big-endian" esetében),
-- minden további betűszó és nagybetűk neve `CamelCase` (például: `Qft` a "Quantum Fourier Transform")
+- a kétbetűs betűszók és a nagyvállalatok neve nagybetűs (például: `BE` "big-endian"),
+- az összes további betűszó és a nagybetűk neve `CamelCase` (például: `Qft` "Quantum Fourier Transform")
 
-Ennek megfelelően a QFT megvalósító művelet vagy `QFT` lehet gyorsírásként, vagy `ApplyQft`ként kiírva.
+Így a QFT megvalósító művelet lehet `QFT` rövidített vagy kiírva `ApplyQft` .
 
 A gyakran használt műveletek és függvények esetében érdemes lehet egy rövidített nevet megadni egy hosszú űrlap _aliasként_ való megadásához:
 
@@ -132,22 +132,22 @@ is Adj + Ctl {
 }
 ```
 
-# <a name="guidance"></a>[Útmutatás](#tab/guidance)
+# <a name="guidance"></a>[Útmutató](#tab/guidance)
 
 Javasoljuk, hogy:
 
 - Ha szükséges, tekintse meg a gyakran elfogadott és széles körben használt rövidített neveket.
 - Kis-és nagybetűk használata a gyorsíráshoz.
 - Rövid (kétbetűs) betűszók és nagybetűk használata.
-- A hosszabb (három vagy több betűs) betűszók és a nagybetűk használatát `CamelCase` használhatja.
+- `CamelCase`Hosszabb (három vagy több betűs) rövidítéssel és nagybetűkkel is használható.
 
 # <a name="examples"></a>[Példák](#tab/examples)
 
-|   | Name (Név) | Leírás |
+|   | Name | Leírás |
 |---|------|-------------|
 | ☑ | `X` | Jól ismert Gyorsírás a "$X $ átalakítás alkalmazása" |
 | ☑ | `CNOT` | Jól értelmezhető Gyorsírás a "vezérelt – nem" |
-| ☒ | <s>`Cnot`</s> | A Gyorsírás nem lehet `CamelCase`ban. |
+| ☒ | <s>`Cnot`</s> | A Gyorsírás nem lehet a-ben `CamelCase` . |
 | ☑ | `ApplyQft` | A "QFT" általános inicializálás a hosszú formátumú név részeként jelenik meg. |
 | ☑ | `QFT` | A "QFT" általános inicializálás egy rövidített név részeként jelenik meg. |
 
@@ -165,14 +165,14 @@ Especially in a field such as quantum computing that is rich with domain experti
 In naming code symbols, one way that this cognizance expresses itself is as an awareness of the convention from physics of adopting as the names of algorithms and operations the names of their original publishers.
 While we must maintain the history and intellectual provenance of concepts in quantum computing, demanding that all users be versed in this history to use even the most basic of functions and operations places a barrier to entry that is in most cases severe enough to even present an ethical compromise. -->
 Ezért azt javasoljuk, hogy ha ésszerű, a fogalmakat leíró általános nevek erős előnyben legyenek kitéve a fogalmak közzétételének előzményeit leíró földrajzi nevek iránt.
-Ebben az esetben az "Fredkin" és a "Toffoli" műveletet gyakran nevezik a tudományos irodalomban, de a Q # elsődlegesen a `CSWAP` és `CCNOT`.
+Egy adott példának megfelelően az "Fredkin" és a "Toffoli" műveletet gyakran nevezik a tudományos irodalomban, de a Q # elsődlegesen a és a kifejezéssel azonosítják őket `CSWAP` `CCNOT` .
 Az API-dokumentációs megjegyzések mindkét esetben a megfelelő neveken alapuló szinonimákat biztosítanak az összes megfelelő hivatkozással együtt.
 
-Ez a beállítás különösen fontos, mivel a megfelelő főnevek bizonyos használata mindig szükséges: a Q # a számos klasszikus nyelv által meghatározott hagyományt követi, és a logikai logikára hivatkozó `Bool` típusokra hivatkozik, amely a George Boole tiszteletben tartásával van elnevezve.
-Ehhez hasonló módon kell elnevezni néhány kvantum-fogalmat, például a Q # nyelvhez beépített `Pauli` típust.
+Ez a beállítás különösen fontos, mivel a megfelelő főnevek bizonyos használata mindig szükséges – a Q # a sok klasszikus nyelv által meghatározott hagyományt követi, és a `Bool` logikai logikára hivatkozó típusokra hivatkozik, ami pedig George Boole tiszteletében megnevezett.
+Ehhez hasonló módon kell megneveznie a kvantum-fogalmakat, beleértve a `Pauli` Q # nyelv beépített típusát is.
 A megfelelő főnevek használatának minimalizálása, ha az ilyen használat nem alapvető fontosságú, csökkentik annak a hatását, hogy a megfelelő földrajzi nevek ne legyenek ésszerűen elkerülhetők.
 
-# <a name="guidance"></a>[Útmutatás](#tab/guidance) 
+# <a name="guidance"></a>[Útmutató](#tab/guidance) 
 
 Javasoljuk, hogy:
 
@@ -188,19 +188,19 @@ Mivel a Q # egy erősen és statikusan beírt nyelv, az egyik típusú érték c
 Ez ellentétben áll azokkal a nyelvekkel, amelyek lehetővé teszik, hogy az értékek implicit módon módosítsák a típusokat (pl.: Type Promotion) vagy a casting használatával.
 Ennek eredményeképpen az átalakítási függvények fontos szerepet játszanak a Q # könyvtár fejlesztésében, és az elnevezéssel kapcsolatban leggyakrabban felmerülő döntések egyikét alkotják.
 Azonban ez azt jelzi, hogy mivel a Type konverziók mindig _determinisztikus_, a függvények is megírhatók, ezért a fenti tanács alá tartoznak.
-Különösen azt javasoljuk, hogy a Type Conversion functions soha ne legyen elnevezve műveletként (pl.: `ConvertToX`) vagy a határozószók előírási kifejezésekkel (`ToX`), hanem a forrás-és a rendeltetési típusokat (`XAsY`) jelző, melléknévi előírási kifejezéseknek kell nevezni.
-A típus átalakítási függvények neveiben szereplő tömb típusok listázásakor ajánlott a Gyorsírás `Arr`.
-A kivételes körülmények korlátozásával azt javasoljuk, hogy az összes típus-átalakítási függvényt `As` használatával lehessen elnevezni, hogy gyorsan azonosíthatóak legyenek.
+Különösen azt javasoljuk, hogy a Type konverziós függvények soha ne legyenek elnevezve műveleteknek (pl.: `ConvertToX` ) vagy a határozószók előírási kifejezéseknek ( `ToX` ), hanem a forrás és a cél típusokat () jelző, melléknévi előírási kifejezéseknek kell nevezni `XAsY` .
+Ha a tömb típusait a konverziós függvények neveiben listázza, javasoljuk a gyorsírást `Arr` .
+A kivételes körülmények korlátozásával azt javasoljuk, hogy az összes Type konverziós függvény neve legyen, hogy `As` gyorsan azonosítható legyen.
 
-# <a name="guidance"></a>[Útmutatás](#tab/guidance)
+# <a name="guidance"></a>[Útmutató](#tab/guidance)
 
 Javasoljuk, hogy:
 
-- Ha egy függvény `X` típusú értéket konvertál `Y`típusú értékre, használja a `AsY` vagy a `XAsY`nevet.
+- Ha egy függvény Type típusú értéket alakít át `X` `Y` , használja a nevet vagy a értéket `AsY` `XAsY` .
 
 # <a name="examples"></a>[Példák](#tab/examples)
 
-|   | Name (Név) | Leírás |
+|   | Name | Leírás |
 |---|------|-------------|
 | ☒ | <s>`ToDouble`</s> | A "to" utasítás a művelethez tartozó kifejezést eredményez, és nem függvényt jelez. |
 | ☒ | <s>`AsDouble`</s> | A bemeneti típus nem egyértelmű a függvény nevéből. |
@@ -213,20 +213,20 @@ Javasoljuk, hogy:
 
 Sok esetben a név kifejezetten a belső könyvtárakhoz vagy projektekhez való használatra szolgál, és nem a könyvtár által kínált API garantált részét képezi.
 Hasznos lehet egyértelműen jelezni, hogy ez a helyzet az elnevezési függvények és műveletek esetében, hogy a csak belső kódok véletlen függőségei legyenek egyértelműek.
-Ha egy művelet vagy függvény nem közvetlen használatra készült, hanem egy, a részleges alkalmazás által elvégezhető egyező meghívónak kell használnia, érdemes lehet olyan nevet használni, amely a részben alkalmazott hívható `_`.
+Ha egy művelet vagy függvény nem közvetlen használatra készült, hanem egy, a részleges alkalmazás által elvégezhető egyező meghívónak kell használnia, érdemes lehet a `_` részben alkalmazott hívható nevet használni.
 
-# <a name="guidance"></a>[Útmutatás](#tab/guidance)
+# <a name="guidance"></a>[Útmutató](#tab/guidance)
 
 Javasoljuk, hogy:
 
-- Ha egy függvény, művelet vagy felhasználó által definiált típus nem része a Q # függvénytárának vagy programjának a nyilvános API-nak, akkor győződjön meg arról, hogy a neve kezdő aláhúzással (`_`) kezdődik.
+- Ha egy függvény, művelet vagy felhasználó által definiált típus nem része a Q # függvénytárának vagy programjának a nyilvános API-nak, akkor győződjön meg arról, hogy a neve kezdő aláhúzással ( `_` ) kezdődik.
 
 # <a name="examples"></a>[Példák](#tab/examples)
 
-|   | Name (Név) | Leírás |
+|   | Name | Leírás |
 |---|------|-------------|
 | ☒ | <s>`ApplyDecomposedOperation_`</s> | Az aláhúzás `_` nem szerepelhet a név végén. |
-| ☑ | `_ApplyDecomposedOperation` | Az aláhúzás `_` az elején egyértelműen azt jelzi, hogy ez a művelet csak belső használatra szolgál. |
+| ☑ | `_ApplyDecomposedOperation` | Az aláhúzás `_` kezdetben egyértelműen azt jelzi, hogy ez a művelet csak belső használatra szolgál. |
 
 ***
 
@@ -237,14 +237,14 @@ Ezek a csoportok megkülönböztetni ugyanazt a legfelső szintű nevet, majd eg
 
 | Utótag | Jelentés |
 |--------|---------|
-| `A` | A `Adjoint` támogatásához szükséges bemenet |
-| `C` | A `Controlled` támogatásához szükséges bemenet |
-| `CA` | A `Controlled` és `Adjoint` támogatásához szükséges bemenet |
-| `I` | A bemenet vagy bemenet típusa `Int` |
-| `D` | A bemenet vagy bemenet típusa `Double` |
-| `L` | A bemenet vagy bemenet típusa `BigInt` |
+| `A` | Várhatóan támogatott bemenet`Adjoint` |
+| `C` | Várhatóan támogatott bemenet`Controlled` |
+| `CA` | A várt támogatás `Controlled` és`Adjoint` |
+| `I` | Bemenet vagy bemenet típusa`Int` |
+| `D` | Bemenet vagy bemenet típusa`Double` |
+| `L` | Bemenet vagy bemenet típusa`BigInt` |
 
-# <a name="guidance"></a>[Útmutatás](#tab/guidance)
+# <a name="guidance"></a>[Útmutató](#tab/guidance)
 
 Javasoljuk, hogy:
 
@@ -261,20 +261,20 @@ Egy függvény vagy művelet Q # kódjának fő célja, hogy könnyen olvasható
 Hasonlóképpen, a bemenetek és a Type argumentumok neveinek kell megadniuk, hogy a rendszer hogyan használja a függvényt vagy az argumentumot.
 
 
-# <a name="guidance"></a>[Útmutatás](#tab/guidance)
+# <a name="guidance"></a>[Útmutató](#tab/guidance)
 
 Javasoljuk, hogy:
 
-- A változó és a bemeneti nevek esetében a `pascalCase` erős preferencia használatával `CamelCase`, `snake_case`vagy `ANGRY_CASE`.
+- Az összes változó és bemeneti név esetében használjon `pascalCase` erős preferenciát a `CamelCase` ,, vagy rendszerhez `snake_case` `ANGRY_CASE` .
 - A bemeneti névnek leírónak kell lennie. lehetőleg ne adjon meg egy vagy két betűt.
-- A pontosan egy típusú argumentumot elfogadó műveletek és függvények a típus argumentumát `T`, ha a szerepköre nyilvánvaló.
-- Ha egy függvény vagy művelet több típusú argumentumot is igénybe vesz, vagy ha egy adott típusú argumentum szerepköre nem egyértelmű, érdemes lehet egy rövid, `T` (például: `TOutput`) típusú tőkésített szót használni az egyes típusokhoz.
+- A pontosan egy típusú argumentumot elfogadó műveletek és függvények a Type argumentumot jelölik, `T` Ha a szerepköre nyilvánvaló.
+- Ha egy függvény vagy művelet több típusú argumentumot is igénybe vesz, vagy ha egy adott típusú argumentum szerepköre nem egyértelmű, érdemes lehet egy rövid, tőkésített szót `T` (például:) használni `TOutput` az egyes típusokhoz.
 - Az argumentumban és a változók neveiben ne szerepeljenek a nevek. ezt az információt a fejlesztési környezetnek is meg kell adni.
-- A skaláris típusokat a literális nevük szerint (`flagQubit`), a tömböket pedig többes szám (`measResults`) alapján jelöli.
-  A qubits esetében érdemes megfontolni az ilyen típusok jelölését `Register`, ha a név olyan qubits-sorozatra hivatkozik, amely valamilyen módon szorosan összefügg egymással.
-- A tömbökben indexként használt változóknak `idx` kell kezdődnie, és csak számnak kell lennie (például: `things[idxThing]`).
-  Különösen érdemes elkerülni az egybetűs változók nevének indexként való használatát. legalább a `idx`t kell használnia.
-- A tömbök hosszának tárolására használt változóknak `n` kell kezdődnie, és a következőnek kell lennie: (például `nThings`).
+- Skaláris típusokat jelöl a literális nevük ( `flagQubit` ) és a tömb típusa szerint egy többes szám ( `measResults` ) alapján.
+  A qubits-tömbök esetében érdemes lehet olyan típusokat megjelölni, `Register` amelyek alapján a név olyan qubits-sorozatra hivatkozik, amely valamilyen módon szorosan összefügg egymással.
+- A tömbökbe indexként használt változóknak a (z) értékkel kell kezdődnie, `idx` és csak néhány lehet (például: `things[idxThing]` ).
+  Különösen érdemes elkerülni az egybetűs változók nevének indexként való használatát. ajánlott legalább a használata `idx` .
+- A tömbök hosszának megtartására használt változóknak a (z) értékkel kell kezdődnie, `n` és a (z) számnak kell lennie (például: `nThings` ).
 
 # <a name="examples"></a>[Példák](#tab/examples)
 
@@ -282,23 +282,23 @@ Javasoljuk, hogy:
 
 ### <a name="user-defined-type-named-items"></a>A felhasználó által definiált típusú elemek neve ###
 
-A felhasználó által definiált típusok elnevezett elemeinek `CamelCase`nak kell lenniük, még a UDT konstruktorok bemenetében is.
-Ez segít az elnevezett elemek egyértelmű elkülönítésében a helyileg hatókörön belüli változókra mutató hivatkozásokon, ha a hozzáférési jelölést (például: `callable::Apply`) vagy a másolás és frissítés jelölését (`set arr w/= Data <- newData`) használja.
+A felhasználó által definiált típusokban megnevezett elemek neveként kell nevezni `CamelCase` , még a UDT konstruktorok számára is.
+Ez segít az elnevezett elemek egyértelmű elkülönítésében a helyileg hatókörön belüli változókra mutató hivatkozásokkal a hozzáférési jelölés (például: `callable::Apply` ) vagy a másolási és frissítési jelölés ( `set arr w/= Data <- newData` ) használatakor.
 
-# <a name="guidance"></a>[Útmutatás](#tab/guidance)
+# <a name="guidance"></a>[Útmutató](#tab/guidance)
 
 Javasoljuk, hogy:
 
-- A UDT konstruktorokban megnevezett elemek neve `CamelCase`; tehát a kezdeti nagybetűvel kell kezdődnie.
+- A UDT konstruktorokban megnevezett elemek neveként kell nevezni, `CamelCase` azaz kezdeti nagybetűvel kell kezdődnie.
 - A műveletekhez feloldani megnevezett elemek művelet fázisként kell nevezni.
 - A műveleteknek nem feloldható megnevezett elemeknek főnévi kifejezéseknek kell lenniük.
-- A műveleteket UDT egy `Apply` nevű, egyetlen névvel ellátott elemnek kell definiálni.
+- A műveleteket UDT egyetlen elnevezett elemnek kell `Apply` definiálni.
 
 # <a name="examples"></a>[Példák](#tab/examples)
 
-|   | Részlet | Leírás |
+|   | Snippet | Leírás |
 |---|---------|-------------|
-| ☑ | `newtype Oracle = (Apply : Qubit[] => Unit is Adj + Ctl)` | A `Apply` neve `CamelCase`formázott kifejezés, amely arra utal, hogy az elnevezett elem egy művelet. |
+| ☑ | `newtype Oracle = (Apply : Qubit[] => Unit is Adj + Ctl)` | A név `Apply` egy `CamelCase` formázott igei kifejezés, amely arra utal, hogy az elnevezett elem egy művelet. |
 | ☒ | <s>`newtype Oracle = (apply : Qubit[] => Unit is Adj + Ctl) `</s> | Az elnevezett elemeknek kezdeti nagybetűvel kell kezdődnie. |
 | ☒ | <s>`newtype Collection = (Length : Int, Get : Int -> (Qubit => Unit)) `</s> | A függvények feloldására szolgáló névvel ellátott elemeknek főnévi kifejezéseknek kell lenniük, nem pedig ige kifejezéseknek. |
 
@@ -320,12 +320,12 @@ Ezt az elvet követve érdemes lehet a következő argumentumokat használni:
 - Klasszikus, nem hívható argumentumok, például szögek, hatáskörök vektorai stb.
 - Hívható argumentumok (függvények és argumentumok).
   Ha a functions és a Operations is argumentumként van megadva, érdemes lehet műveleteket végrehajtani a függvények után.
-- A gyűjtemények a meghívásos argumentumok alapján `Map`, `Iter`, `Enumerate`és `Fold`hoz hasonló módon jártak el.
+- A gyűjtemények a,, és rendszerhez hasonló módon, meghívásos argumentumok alapján jártak el `Map` `Iter` `Enumerate` `Fold` .
 - A vezérlőkként használt Qubit argumentumok.
 - Qubit használt argumentumok.
 
-Vegye fontolóra egy művelet `ApplyPhaseEstimationIteration` a fázis-becslésben való használathoz, amely egy szöget és egy Oracle-t használ, átadja a szöget úgy, hogy a különböző skálázási tényezők tömbje `Rz` módosítsa, majd az Oracle alkalmazásait vezérli.
-A bemeneteket a következő módon `ApplyPhaseEstimationIteration`juk:
+Vegye fontolóra egy olyan művelet használatát, amellyel a `ApplyPhaseEstimationIteration` fázis becslése egy szöget és egy Oracle-t vesz igénybe, és a szöget átadja a `Rz` különböző skálázási tényezők tömbje által módosítottnak, majd az Oracle alkalmazásait vezérli.
+A bemeneteket a következő módon kell megrendelni `ApplyPhaseEstimationIteration` :
 
 ```qsharp
 operation ApplyPhaseEstimationIteration(
@@ -338,11 +338,11 @@ operation ApplyPhaseEstimationIteration(
 : Unit
 ...
 ```
-A kis-és nagybetűk minimálisra csökkentése érdekében egyes függvények és műveletek a beépített elhasználók viselkedését utánozzák `Adjoint` és `Controlled`.
-A `ControlledOnInt<'T>` például `(Int, ('T => Unit is Adj + Ctl)) => ((Qubit[], 'T) => Unit is Adj + Ctl)`típust tartalmaz, így a `ControlledOnInt<Qubit[]>(5, _)` például a `Controlled`-kezelőhöz hasonlóan viselkedik, de a vezérlő regisztrálása a \ket{5} = \ket{101}$ állapotot jelöli.
-Így a fejlesztő azt várja, hogy a `ControlledOnInt` helyezze át a meghívót az utolsó értékre, és hogy az eredményül kapott művelet ugyanolyan sorrendben legyen, mint a bemeneti `(Qubit[], 'T)`---, ahogyan az a `Controlled`-futtató kimenete.
+A kis-és nagybetűk minimálisra csökkentése érdekében egyes függvények és műveletek a beépített és a rendszer működését utánozzák `Adjoint` `Controlled` .
+`ControlledOnInt<'T>` `(Int, ('T => Unit is Adj + Ctl)) => ((Qubit[], 'T) => Unit is Adj + Ctl)` Ilyen például a típus, amely a következőhöz hasonló módon viselkedik:, `ControlledOnInt<Qubit[]>(5, _)` `Controlled` de abban a feltétellel, hogy a vezérlő regisztrálása a $ \ket {5} = \ket $ állapotot jelöli {101} .
+Így a fejlesztő azt várja, hogy a `ControlledOnInt` meghívót a legutóbb átalakított értékre helyezze át, és hogy az eredményül kapott művelet a bemeneti---ugyanolyan sorrendben legyen, mint az ellátottak `(Qubit[], 'T)` kimenete `Controlled` .
 
-# <a name="guidance"></a>[Útmutatás](#tab/guidance)
+# <a name="guidance"></a>[Útmutató](#tab/guidance)
 
 Javasoljuk, hogy:
 
@@ -357,36 +357,36 @@ Javasoljuk, hogy:
 ## <a name="documentation-conventions"></a>Dokumentációs konvenciók ##
 
 A Q # nyelv lehetővé teszi a dokumentáció csatolását a műveletekhez, a függvényekhez és a felhasználó által definiált típusokhoz a speciálisan formázott dokumentációs megjegyzések használatával.
-A Triple-perjel (`///`) által megjelenített megjegyzések olyan kis [DocFX-stílusú Markdown-](https://dotnet.github.io/docfx/spec/docfx_flavored_markdown.html) dokumentumok, amelyek az egyes műveletek, függvények és felhasználó által definiált típusok, valamint a várt bemeneti adatok céljának leírására használhatók.
-A Quantum Development Kit által biztosított fordító kibontja ezeket a megjegyzéseket, és felhasználja őket a https://docs.microsoft.com/quantumhoz hasonló dokumentációk videótartalmakban.
+A Triple-ferde ( `///` ) függvényekkel ezek a dokumentációs megjegyzések kisméretű, [DocFX Markdown](https://dotnet.github.io/docfx/spec/docfx_flavored_markdown.html) dokumentumok, amelyek az egyes műveletek, függvények és felhasználó által definiált típusok, valamint a várt bemeneti adatok céljának leírására használhatók.
+A Quantum Development Kit által biztosított fordító kibontja ezeket a megjegyzéseket, és a segítségével a következőhöz hasonló dokumentációt videótartalmakban https://docs.microsoft.com/quantum .
 Hasonlóképpen, a Quantum Development Kit által biztosított nyelvi kiszolgáló ezeket a megjegyzéseket használja, hogy segítséget nyújtson a felhasználóknak a Q # kódjában lévő szimbólumok fölé helyezve.
 A dokumentációs megjegyzések használata így segítheti a felhasználókat a kód értelmezésében azáltal, hogy a jelen dokumentum többi konvenciója alapján nem könnyen elérhetővé tett részletekre vonatkozó hasznos hivatkozást biztosítanak.
 
 <div class="nextstepaction">
-    [Dokumentációs Megjegyzés szintaxisának hivatkozása](xref:microsoft.quantum.language.statements#documentation-comments)
+    [Dokumentációs Megjegyzés szintaxisának leírása](xref:microsoft.quantum.guide.filestructure#documentation-comments)
 </div>
 
 Ahhoz, hogy hatékonyan használhassa ezt a funkciót a felhasználók számára, javasoljuk, hogy a dokumentációs megjegyzések írásakor ne feledje el néhány dolgot.
 
-# <a name="guidance"></a>[Útmutatás](#tab/guidance)
+# <a name="guidance"></a>[Útmutató](#tab/guidance)
 
 Javasoljuk, hogy:
 
 - Minden nyilvános funkciót, műveletet és felhasználó által definiált típust közvetlenül a dokumentációs Megjegyzés előtt kell megadni.
 - Az egyes dokumentációs megjegyzéseknek legalább a következő részeket kell tartalmazniuk:
-    - Összegzés
-    - Input (Bemenet)
+    - Összefoglalás
+    - Bevitel
     - Kimenet (ha van ilyen)
-- Győződjön meg arról, hogy minden összefoglaló két mondat vagy kevesebb. Ha további helyiségre van szükség, adjon meg egy `# Description` szakaszt közvetlenül a `# Summary` után, a teljes részletességgel.
+- Győződjön meg arról, hogy minden összefoglaló két mondat vagy kevesebb. Ha további helyiségre van szükség, adjon meg egy szakaszt, amely `# Description` azonnal követi a `# Summary` teljes részleteket.
 - Ahol ésszerű, ne szerepeljenek a matematika az összefoglalókban, mivel nem minden ügyfél támogatja a TeX-jelöléseket az összefoglalók között. Vegye figyelembe, hogy a prózai dokumentumok (például a TeX vagy a Markdown) írásakor érdemes lehet hosszabb vonali hosszúságot használni.
 - Adja meg az összes releváns matematikai kifejezést a `# Description` szakaszban.
 - A bemenetek leírásakor ne ismételje meg az egyes bemenetek típusait, mivel ezek a fordító számára következtetni tudnak, és az inkonzisztencia bevezetését kockáztatják.
 - Szükség szerint adjon meg példákat a saját `# Example` szakaszában.
 - A kód listázása előtt röviden ismertesse az egyes példákat.
-- Tekintse meg az összes releváns tanulmányi kiadványt (pl.: dokumentumok, eljárások, blogbejegyzések és alternatív implementációk) egy `# References` szakaszban a hivatkozások felsorolásával.
+- Sorolja fel az összes releváns tanulmányi kiadványt (például: dokumentumok, eljárások, blogbejegyzések és alternatív implementációk) a `# References` szakaszokban a hivatkozások felsorolásával.
 - Győződjön meg arról, hogy ha lehetséges, az összes hivatkozási hivatkozás állandó és megváltoztathatatlan azonosítók (DOIs vagy verziószámmal ellátott arXiv-számok).
-- Ha egy művelet vagy függvény más műveletekhez vagy függvényekhez kapcsolódik, és az esetlegesen előforduló változatok vannak, akkor a `# See Also` szakaszban található felsorolásjelként sorolja fel a többi változatot.
-- Hagyjon üres megjegyzést a Level-1 (`/// #`) szakaszban, de ne hagyjon üres vonalat a 2. szintű (`/// ##`) szakaszban.
+- Ha egy művelet vagy függvény más műveletekhez vagy függvényekhez kapcsolódik, és az esetlegesen előforduló változatok is szerepelnek, a szakaszokban listajelként sorolja fel a többi változatot `# See Also` .
+- Hagyjon üres megjegyzést a Level-1 ( `/// #` ) szakaszban, de ne hagyjon üres vonalat a 2. szint ( `/// ##` ) szakaszban.
 
 # <a name="examples"></a>[Példák](#tab/examples)
 
@@ -434,7 +434,7 @@ A természet szerinti formázási szabályok általában némileg önkényesak �
 Ugyanakkor javasolt a formázási konvenciók egységes csoportjának fenntartása a közreműködők csoportjain belül, és különösen a nagy Q # projektekhez, például a Quantum Development Kit-hoz.
 Ezek a szabályok automatikusan alkalmazhatók a Q # fordítóprogrammal integrált formázó eszköz használatával.
 
-# <a name="guidance"></a>[Útmutatás](#tab/guidance) 
+# <a name="guidance"></a>[Útmutató](#tab/guidance) 
 
 Javasoljuk, hogy:
 
@@ -448,12 +448,12 @@ Javasoljuk, hogy:
 - Használjon szóközöket a bináris operátorok köré.
 - Használjon szóközöket a típushoz tartozó kettőspontok egyik oldalán.
 - A tömbben és a rekordokban lévő literálokban (például a functions és a Operations műveletekben) használt vesszők után egyetlen helyet használjon.
-- Ne használjon szóközt a függvény, a művelet vagy a UDT neve után, vagy a `@` az attribútum deklarációjában.
+- Ne használjon szóközt a függvény, a művelet vagy a UDT neve után, vagy a `@` in attribútum deklarációja után.
 - Minden attribútum deklarációjának saját sorban kell lennie.
 
 # <a name="examples"></a>[Példák](#tab/examples)
 
-|   | Részlet | Leírás |
+|   | Snippet | Leírás |
 |---|---------|-------------|
 | ☒ | <s>`2+3`</s> | Használjon szóközöket a bináris operátorok köré. |
 | ☒ | <s>`target:Qubit`</s> | Használjon szóközt a típus megjegyzési kettőspontok használatával. |

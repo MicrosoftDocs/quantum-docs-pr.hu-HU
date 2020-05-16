@@ -1,19 +1,19 @@
 ---
-title: Fejlesztés Q# + C# használatával
+title: Fejlesztés Q#-pal és .NET-tel
 author: natke
 ms.author: nakersha
 ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.cs
-ms.openlocfilehash: 5bcb036b0b32e64d43f90e9a068d9dcc237890ba
-ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+ms.openlocfilehash: 155367dbb1373f00e2b0bd732a5319b32462c9f9
+ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82680165"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83426509"
 ---
-# <a name="using-q-with-c-and-f"></a>Q # használata C\# és F használatával\#
+# <a name="develop-with-q-and-net"></a>Fejlesztés Q#-pal és .NET-tel
 
 A Q # a .NET nyelvekkel, például a C# és az F # használatával készült.
 Ebben az útmutatóban bemutatjuk, hogyan használható a Q # egy .NET nyelven írt gazda program használatával.
@@ -29,7 +29,7 @@ Első lépésként hozzon létre projekteket a Q # Library-hez, illetve a .NET-g
 ### <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
 
 - Új Q # könyvtár létrehozása
-  - Ugrás a **fájl** -> **új** -> **projektre**
+  - Ugrás a **fájl**  ->  **új**  ->  **projektre**
   - Írja be a "Q #" kifejezést a keresőmezőbe
   - **Q # könyvtár** kiválasztása
   - Válassza a **tovább** lehetőséget
@@ -84,9 +84,9 @@ A .net-es [együttműködési minta](https://github.com/microsoft/Quantum/tree/m
 
 :::code language="qsharp" source="~/quantum/samples/interoperability/dotnet/qsharp/Operations.qs" range="67-75":::
 
-Ha ezt a műveletet a .NET-keretrendszerben szeretné meghívni egy kvantum- `Run` szimulátoron, `RunAlgorithm` használhatja a Q # compiler által generált .net-osztály metódusát:
+Ha ezt a műveletet a .NET-keretrendszerben szeretné meghívni egy kvantum-szimulátoron, használhatja a `Run` `RunAlgorithm` Q # compiler által generált .net-osztály metódusát:
 
-### <a name="c"></a>[C #](#tab/tabid-csharp)
+### <a name="c"></a>[C#](#tab/tabid-csharp)
 
 :::code language="csharp" source="~/quantum/samples/interoperability/dotnet/csharp/Host.cs" range="4-":::
 
@@ -96,6 +96,6 @@ Ha ezt a műveletet a .NET-keretrendszerben szeretné meghívni egy kvantum- `Ru
 
 ***
     
-## <a name="whats-next"></a>A következő lépések
+## <a name="next-steps"></a>Következő lépések
 
-Most, hogy már beállította a Quantum Development Kit-t mind a Q # parancssori programokhoz, mind a .NET-tel való együttműködéshez, megírhatja és futtathatja [az első kvantum-programot](xref:microsoft.quantum.write-program).
+Most, hogy már beállította a Quantum Development Kit-t mind a Q # parancssori programokhoz, mind a .NET-tel való együttműködéshez, megírhatja és futtathatja [az első kvantum-programot](xref:microsoft.quantum.quickstarts.qrng).

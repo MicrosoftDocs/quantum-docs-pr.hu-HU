@@ -6,23 +6,23 @@ ms.author: anpaz@microsoft.com
 ms.date: 1/22/2019
 ms.topic: article
 uid: microsoft.quantum.machines.resources-estimator
-ms.openlocfilehash: 51186134e9279727fec212cdce84f69493aaa656
-ms.sourcegitcommit: a0e50c5f07841b99204c068cf5b5ec8ed087ffea
+ms.openlocfilehash: 01d242ed405bdd326f65e534f82ff378a464ee7d
+ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80320810"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83426879"
 ---
-# <a name="the-resourcesestimator-target-machine"></a>A ResourcesEstimator cél gépe
+# <a name="the-resources-estimator-target-machine"></a>Az erőforrások kalkulátor cél gépe
 
-Ahogy a név is jelenti, a `ResourcesEstimator` a Q # művelet egy kvantum-számítógépen való futtatásához szükséges erőforrásokat becsüli meg.
+Ahogy a név is jelenti, a `ResourcesEstimator` becslések szerint a Q # művelet egy adott példányának futtatásához szükséges erőforrások a kvantum-számítógépen.
 Ezt úgy hajtja végre, hogy végrehajtja a kvantum-műveletet anélkül, hogy ténylegesen szimulálja a kvantum-számítógép állapotát; Emiatt megbecsülheti a Q # olyan műveleteinek erőforrásait, amelyek több ezer qubits használnak, ha a kód klasszikus része ésszerű időn belül futtatható.
 
 ## <a name="usage"></a>Használat
 
-A `ResourcesEstimator` csak egy másik típusú célszámítógép, így bármely Q # művelet futtatására is használható. 
+A `ResourcesEstimator` csak egy másik típusú célszámítógép, így bármilyen Q # művelet futtatására is használható. 
 
-Más célszámítógépek esetén a C# gazdagépen való használathoz hozzon létre egy példányt, és adja át a művelet `Run` metódusának első paramétereként:
+Más célszámítógépként a C#-gazdagépen való használathoz hozzon létre egy példányt, és adja át a művelet metódusának első paramétereként `Run` :
 
 ```csharp
 using Microsoft.Quantum.Simulation.Core;
@@ -42,7 +42,7 @@ namespace Quantum.MyProgram
 }
 ```
 
-A példa azt mutatja, hogy a `ResourcesEstimator` `ToTSV()` módszert biztosít egy olyan tabulátorral elválasztott tábla létrehozásához, amely fájlba menthető, vagy elemzésre a konzolba. A fenti program kimenetének a következőhöz hasonlóan kell kinéznie:
+A példa azt mutatja, `ResourcesEstimator` hogy a lehetővé teszi egy olyan `ToTSV()` táblázat létrehozását, amely tabulátorral tagolt értékeket (TSV) tartalmaz, amelyek fájlba menthetők, vagy a konzolba való beírással elemezhetők. A fenti program kimenetének a következőhöz hasonlóan kell kinéznie:
 
 ```Output
 Metric          Sum
@@ -57,15 +57,15 @@ BorrowedWidth   0
 ```
 
 > [!NOTE]
-> A `ResourcesEstimator` nem állítja alaphelyzetbe a számításokat minden futtatáskor, ha ugyanazt a példányt egy másik művelet végrehajtásához használja, akkor a meglévő eredmények alapján megtartja az összesítési számlálást.
+> A `ResourcesEstimator` nem állítja alaphelyzetbe a számításokat minden futtatáskor, ha ugyanazt a példányt egy másik művelet végrehajtásához használja, a meglévő eredmények alapján megtartja az összesítést.
 > Ha a futtatások közötti számításokat kell alaphelyzetbe állítani, hozzon létre egy új példányt minden végrehajtáshoz.
 
 
 ## <a name="programmatically-retrieving-the-estimated-data"></a>A becsült adatok programozott beolvasása
 
-A TSV-táblázat mellett a becsült erőforrások programozott módon is beolvashatók a `ResourcesEstimator``Data` tulajdonságán keresztül. a `Data` `System.DataTable` példányt biztosít két oszloppal: `Metric` és `Sum`, a metrikák nevei szerint indexelve.
+A TSV-táblázat mellett a becsült erőforrások programozott módon is beolvashatók a `ResourcesEstimator` `Data` tulajdonságán keresztül. `Data``System.DataTable`két oszloppal rendelkező példányt biztosít: `Metric` és `Sum` a metrikák nevei szerint indexelve.
 
-A következő kód bemutatja, hogyan kérhető le és nyomtatható ki a Q # művelet által használt `QubitClifford`, `T` és `CNOT` Gates teljes száma:
+A következő kód azt mutatja be, hogyan lehet lekérdezni és kinyomtatni a `QubitClifford` `T` `CNOT` Q # művelet által használt teljes számát és kapuit:
 
 ```csharp
 using Microsoft.Quantum.Simulation.Core;
@@ -91,7 +91,7 @@ namespace Quantum.MyProgram
 
 ## <a name="metrics-reported"></a>Jelentett metrikák
 
-Az alábbi lista a `ResourcesEstimator`becsült mérőszámait sorolja fel:
+Az alábbi lista a becsült mérőszámokat sorolja fel `ResourcesEstimator` :
 
 * __Cnem__: a cnem (más néven ellenőrzött Pauli X Gate) Gates száma.
 * __QubitClifford__: egy qubit-es Clifford-és Pauli-kapuk száma.
@@ -105,7 +105,7 @@ Az alábbi lista a `ResourcesEstimator`becsült mérőszámait sorolja fel:
 
 ## <a name="providing-the-probability-of-measurement-outcomes"></a>Mérési eredmények valószínűségének biztosítása
 
-a <xref:microsoft.quantum.intrinsic> névtérből származó <xref:microsoft.quantum.intrinsic.assertprob> használatával információt adhat meg egy mérték várható valószínűségéről a Q # program végrehajtásának elősegítése érdekében. A következő példa ezt illusztrálja:
+<xref:microsoft.quantum.intrinsic.assertprob>a névtérből megadható <xref:microsoft.quantum.intrinsic> , hogy milyen valószínűséggel kell megadnia egy mérés várható valószínűségét a Q # program végrehajtásának elősegítése érdekében. A következő példa ezt illusztrálja:
 
 ```qsharp
 operation Teleport(source : Qubit, target : Qubit) : Unit {
@@ -127,10 +127,10 @@ operation Teleport(source : Qubit, target : Qubit) : Unit {
 }
 ```
 
-Ha a `ResourcesEstimator` `AssertProb`, a rendszer rögzíti, hogy a mérési `PauliZ` a `source`, és `q` a 0,5-as valószínűségű `Zero` eredményét kell adni. Amikor később végrehajtja `M`, megkeresi a kimeneteli valószínűségek rögzített értékeit, és `M` `Zero` vagy `One` értéket ad vissza a 0,5 valószínűséggel.
+Amikor a `ResourcesEstimator` `AssertProb` rendszer megkezdi a mérést `PauliZ` , `source` és a 0,5-as `q` `Zero` valószínűséggel a következő eredményt kapja:. Amikor később végrehajtja `M` , a rendszer megkeresi a kimeneteli valószínűségek rögzített értékeit, és `M` visszaküldi `Zero` vagy `One` a 0,5-es valószínűséggel.
 
 
 ## <a name="see-also"></a>Lásd még
 
-A `ResourcesEstimator` a kvantum-számítógép [nyomkövetési szimulátorra](xref:microsoft.quantum.machines.qc-trace-simulator.intro)épül, amely a metrikák széles választékát biztosítja, a teljes hívási gráfban lévő mérőszámok jelentését, valamint az olyan funkciókat, mint a [különböző bemenet-ellenőrök](xref:microsoft.quantum.machines.qc-trace-simulator.distinct-inputs) , amelyek segítenek a hibák keresésében a Q # programokon. További információért tekintse meg a [trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro) dokumentációját.
+A a `ResourcesEstimator` kvantum-számítógép [nyomkövetési szimulátorra](xref:microsoft.quantum.machines.qc-trace-simulator.intro)épül, amely a metrikák széles választékát biztosítja, a teljes hívás – gráf mérőszámait és a különböző funkciókat (például a [DISTINCT Inputs-ellenőröket](xref:microsoft.quantum.machines.qc-trace-simulator.distinct-inputs) ) a Q # programok hibáinak megkereséséhez. További információért tekintse meg a [trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro) dokumentációját.
 

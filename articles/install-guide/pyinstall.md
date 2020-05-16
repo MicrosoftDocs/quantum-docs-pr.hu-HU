@@ -1,19 +1,19 @@
 ---
-title: Fejlesztés Q# + Python használatával
+title: 'Fejlesztés Q # és Python nyelven'
 author: natke
 ms.author: nakersha
 ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.python
-ms.openlocfilehash: e1b8a0c68b3ac0c059c6de6e478593321764ff88
-ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+ms.openlocfilehash: a8c5b9c25c069f98ef8eefd6cfbc36bf3376931c
+ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82680150"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83426367"
 ---
-# <a name="develop-with-q--python"></a>Fejlesztés Q# + Python használatával
+# <a name="develop-with-q-and-python"></a>Fejlesztés Q # és Python nyelven
 
 Telepítse a QDK a Python-gazdagépek kifejlesztéséhez a Q # műveleteinek meghívásához.
 
@@ -83,6 +83,6 @@ Telepítse a QDK a Python-gazdagépek kifejlesztéséhez a Q # műveleteinek meg
 > [!NOTE]
 > * A Python Jupyter jegyzetfüzeteket is használhatja a klasszikus Python program írásához és a Q # műveletek a cellákból való meghívásához. A Python-kód csak egy normál Python-program.
 
-## <a name="whats-next"></a>A következő lépések
+## <a name="next-steps"></a>Következő lépések
 
-Most, hogy a választott környezetben telepítette a Quantum Development Kitet, megírhatja és futtathatja [az első kvantumprogramját](xref:microsoft.quantum.write-program).
+Most, hogy a választott környezetben telepítette a Quantum Development Kitet, megírhatja és futtathatja [az első kvantumprogramját](xref:microsoft.quantum.quickstarts.qrng).
