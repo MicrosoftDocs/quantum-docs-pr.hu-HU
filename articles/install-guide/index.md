@@ -1,34 +1,38 @@
 ---
-title: A Microsoft Quantum Development Kit (QDK) telepítésének ismertetése
-description: A Microsoft Quantum Development Kit (QDK) telepítésének ismertetése C#-, Python- és Jupyter Notebook-környezethez.
+title: A Microsoft Quantum Development Kit (QDK) telepítése
+description: A Microsoft Quantum Development Kit telepítése különböző környezetekben.
 author: natke
 ms.author: nakersha
-ms.date: 9/30/2019
+ms.date: 5/8/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install
-ms.openlocfilehash: bca700660094b91f1c0dfa03f9bce1336073ca51
-ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+ms.openlocfilehash: 2041b90ba021b7640615d73c35841cc21f025ac0
+ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
 ms.translationtype: HT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82680191"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83426468"
 ---
-# <a name="install-the-microsoft-quantum-development-kit-qdk"></a><span data-ttu-id="c83d1-103">A Microsoft Quantum Development Kit (QDK) telepítése</span><span class="sxs-lookup"><span data-stu-id="c83d1-103">Install the Microsoft Quantum Development Kit (QDK)</span></span>
+# <a name="install-the-microsoft-quantum-development-kit-qdk"></a><span data-ttu-id="e6aac-103">A Microsoft Quantum Development Kit (QDK) telepítése</span><span class="sxs-lookup"><span data-stu-id="e6aac-103">Install the Microsoft Quantum Development Kit (QDK)</span></span>
 
-<span data-ttu-id="c83d1-104">Ismerje meg a Microsoft Quantum Development Kit (QDK) telepítésének módját, hogy nekiláthasson a kvantumprogramozás első lépéseinek.</span><span class="sxs-lookup"><span data-stu-id="c83d1-104">Learn how to install the Microsoft Quantum Development Kit (QDK), so that you can get started with quantum programming.</span></span> <span data-ttu-id="c83d1-105">A QDK a következőket tartalmazza:</span><span class="sxs-lookup"><span data-stu-id="c83d1-105">The QDK consists of:</span></span>
+<span data-ttu-id="e6aac-104">Ismerje meg a Microsoft Quantum Development Kit (QDK) telepítésének módját, hogy nekiláthasson a kvantumprogramozás első lépéseinek.</span><span class="sxs-lookup"><span data-stu-id="e6aac-104">Learn how to install the Microsoft Quantum Development Kit (QDK), so that you can get started with quantum programming.</span></span> <span data-ttu-id="e6aac-105">A QDK a következőket tartalmazza:</span><span class="sxs-lookup"><span data-stu-id="e6aac-105">The QDK consists of:</span></span>
 
-- <span data-ttu-id="c83d1-106">a Q# programozási nyelv</span><span class="sxs-lookup"><span data-stu-id="c83d1-106">the Q# programming language</span></span>
-- <span data-ttu-id="c83d1-107">kódtárak, amelyek összetett funkciókat választanak el a Q#-ban</span><span class="sxs-lookup"><span data-stu-id="c83d1-107">a set of libraries that abstract complex functionality in Q#</span></span>
-- <span data-ttu-id="c83d1-108">Pythonhoz és .NET-nyelvekhez (C#, F# és VB.NET) készült API-k a Q#-ban írt kvantumprogramok futtatásához</span><span class="sxs-lookup"><span data-stu-id="c83d1-108">APIs for Python and .NET languages (C#, F#, and VB.NET) for running quantum programs written in Q#</span></span>
-- <span data-ttu-id="c83d1-109">a fejlesztést megkönnyítő eszközök</span><span class="sxs-lookup"><span data-stu-id="c83d1-109">tools to facilitate your development</span></span>
+- <span data-ttu-id="e6aac-106">A Q# programozási nyelv</span><span class="sxs-lookup"><span data-stu-id="e6aac-106">The Q# programming language</span></span>
+- <span data-ttu-id="e6aac-107">Kódtárak, amelyek Q# összetett funkcióit kivonatolják</span><span class="sxs-lookup"><span data-stu-id="e6aac-107">A set of libraries that abstract complex functionality in Q#</span></span>
+- <span data-ttu-id="e6aac-108">Pythonhoz és .NET-nyelvekhez (C#, F# és VB.NET) készült API-k a Q#-ban írt kvantumprogramok futtatásához</span><span class="sxs-lookup"><span data-stu-id="e6aac-108">APIs for Python and .NET languages (C#, F#, and VB.NET) for running quantum programs written in Q#</span></span>
+- <span data-ttu-id="e6aac-109">A fejlesztést megkönnyítő eszközök</span><span class="sxs-lookup"><span data-stu-id="e6aac-109">Tools to facilitate your development</span></span>
 
-<span data-ttu-id="c83d1-110">A Q#-programok gyakran vannak párban egy .NET-nyelven (legtöbbször C#-ban) vagy Pythonban írt gazdaprogrammal.</span><span class="sxs-lookup"><span data-stu-id="c83d1-110">Q# programs are often paired with a host program written in a .NET language (typically C#) or Python.</span></span> <span data-ttu-id="c83d1-111">Ez lehetővé teszi, hogy a kvantumműveleteket egy klasszikus programból hívjuk meg.</span><span class="sxs-lookup"><span data-stu-id="c83d1-111">This allows us to call quantum operations from inside a classical program.</span></span>
-<span data-ttu-id="c83d1-112">Ráadásul a QDK Q#-támogatást nyújt a Jupyter-notebookokhoz az IQ# Jupyter kernel révén.</span><span class="sxs-lookup"><span data-stu-id="c83d1-112">In addition, the QDK provides Q# support for Jupyter Notebooks with the IQ# Jupyter kernel.</span></span>
+<span data-ttu-id="e6aac-110">A Q#-programok futhatnak önálló alkalmazásként a Visual Studio Code vagy a Visual Studio használatával, vagy Jupyter-notebookokon keresztül az IQ# Jupyter kernellel.</span><span class="sxs-lookup"><span data-stu-id="e6aac-110">Q# programs can run as standalone applications using Visual Studio Code or Visual Studio, or through Jupyter Notebooks with the IQ# Jupyter kernel.</span></span>
 
-<span data-ttu-id="c83d1-113">A QDK számos fejlesztői környezethez elérhető.</span><span class="sxs-lookup"><span data-stu-id="c83d1-113">The QDK is available for multiple development environments.</span></span> <span data-ttu-id="c83d1-114">Válassza ki az Ön által előnyben részesített beállítást az alábbi szakaszok közül:</span><span class="sxs-lookup"><span data-stu-id="c83d1-114">Select your preferred setup from the sections below:</span></span>
+<span data-ttu-id="e6aac-111">Társíthatók .NET (jellemzően C# nyelven) vagy Python nyelven írt gazdaprogrammal is, ez lehetővé teszi kvantumműveletek meghívását egy klasszikus programon belül.</span><span class="sxs-lookup"><span data-stu-id="e6aac-111">They can also be paired with a host program written in a .NET language (typically C#) or Python, enabling you to call quantum operations from inside a classical program.</span></span>
 
-- <span data-ttu-id="c83d1-115">[Q# nyelvű parancssori alkalmazás:](xref:microsoft.quantum.install.standalone) akkor válassza ezt a módszert, ha a Q#-ot szeretné használni a parancssorból.</span><span class="sxs-lookup"><span data-stu-id="c83d1-115">[Q# command line application:](xref:microsoft.quantum.install.standalone) choose this approach if you want to work with Q# from the command line.</span></span> <span data-ttu-id="c83d1-116">Ehhez nincs szükség illesztőprogramra vagy gazdaprogramra, mint az alábbi lehetőségek esetében.</span><span class="sxs-lookup"><span data-stu-id="c83d1-116">This does not require a driver or a host program like the below options.</span></span>
-- <span data-ttu-id="c83d1-117">[Q# telepítése Jupyter-notebookokhoz:](xref:microsoft.quantum.install.jupyter) válassza ezt a környezetet Q#-kód beágyazott szöveggel rendelkező cellákban való végrehajtásához vagy kvantum-számítástechnikai interaktív oktatóanyagok létrehozásához.</span><span class="sxs-lookup"><span data-stu-id="c83d1-117">[Install Q# for Jupyter Notebooks:](xref:microsoft.quantum.install.jupyter) choose this environment to execute Q# code in cells with embedded text or create quantum computing interactive tutorials.</span></span> 
-- <span data-ttu-id="c83d1-118">[Fejlesztés Q# és Python használatával:](xref:microsoft.quantum.install.python) ha együtt szeretné használni a Pythont és a Q#-ot egy Python-gazdaprogram létrehozásához, amely Q#-műveleteket hív meg.</span><span class="sxs-lookup"><span data-stu-id="c83d1-118">[Develop with Q# and Python:](xref:microsoft.quantum.install.python) if you want to combine Python and Q# to create a Python host program that calls Q# operations.</span></span>
-- <span data-ttu-id="c83d1-119">[Fejlesztés Q# és C# vagy F# használatával:](xref:microsoft.quantum.install.cs) ha együtt szeretné használni a C#-ot vagy az F#-ot és a Q#-ot egy .NET-gazdaprogram létrehozásához, amely Q#-műveleteket hív meg.</span><span class="sxs-lookup"><span data-stu-id="c83d1-119">[Develop with Q# and C# or F#:](xref:microsoft.quantum.install.cs) if you want to combine C# or F# and Q# to create a .NET host program that calls Q# operations.</span></span>
+<span data-ttu-id="e6aac-112">A QDK számos fejlesztői környezethez elérhető.</span><span class="sxs-lookup"><span data-stu-id="e6aac-112">The QDK is available for multiple development environments.</span></span> <span data-ttu-id="e6aac-113">Válassza ki az Ön által előnyben részesített beállítást:</span><span class="sxs-lookup"><span data-stu-id="e6aac-113">Select your preferred setup from:</span></span>
+
+<span data-ttu-id="e6aac-114">[**Fejlesztés Q# nyelvű parancssori alkalmazásokkal**](xref:microsoft.quantum.install.standalone) – Ezt a megközelítést választva a parancssorból használhatja a Q#-ot.</span><span class="sxs-lookup"><span data-stu-id="e6aac-114">[**Develop with Q# command line applications**](xref:microsoft.quantum.install.standalone) - Choose this approach to work with Q# from the command line.</span></span> <span data-ttu-id="e6aac-115">Ehhez nincs szükség illesztőprogramra vagy gazdaprogramra, mint az alábbi lehetőségek esetében.</span><span class="sxs-lookup"><span data-stu-id="e6aac-115">This does not require a driver or a host program like the below options.</span></span>
+
+<span data-ttu-id="e6aac-116">[**Fejlesztés Q# Jupyter-notebookokkal**](xref:microsoft.quantum.install.jupyter) – Ezt a környezetet választva Q#-kódot futtathat beágyazott szöveggel rendelkező cellákban vagy létrehozhat kvantum-számítástechnikai interaktív oktatóanyagokat.</span><span class="sxs-lookup"><span data-stu-id="e6aac-116">[**Develop with Q# Jupyter Notebooks**](xref:microsoft.quantum.install.jupyter) - Select this environment to run Q# code in cells with embedded text or create quantum computing interactive tutorials.</span></span> 
+
+<span data-ttu-id="e6aac-117">[**Fejlesztés Q# és Python használatával**](xref:microsoft.quantum.install.python) – Lehetővé teszi a Python és a Q# együttes használatát egy olyan Python-gazdaprogram létrehozásához, amely Q#-műveleteket hív meg.</span><span class="sxs-lookup"><span data-stu-id="e6aac-117">[**Develop with Q# and Python**](xref:microsoft.quantum.install.python) - Enables you to combine Python and Q# to create a Python host program that calls Q# operations.</span></span>
+
+<span data-ttu-id="e6aac-118">[**Fejlesztés Q# és .NET használatával**](xref:microsoft.quantum.install.cs) – Kombinálhatja a C#, az F# vagy a VB.NET nyelvet a Q# nyelvvel egy olyan .NET-gazdaprogram létrehozásához, amely Q#-műveleteket hív meg.</span><span class="sxs-lookup"><span data-stu-id="e6aac-118">[**Develop with Q# and .NET**](xref:microsoft.quantum.install.cs) - Combine C#, F#, or VB.NET with Q# to create a .NET host program that calls Q# operations.</span></span>

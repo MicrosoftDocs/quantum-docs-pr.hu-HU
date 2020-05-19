@@ -1,10 +1,10 @@
 - name: Áttekintés
   href: index.md
-- name: Kvantumszimulátor
+- name: Teljes körű funkciókkal rendelkező szimulátor
   href: full-state-simulator.md
 - name: Erőforrásbecslő
   href: resources-estimator.md
-- name: Kvantumszámítógép nyomkövetési szimulátora
+- name: Nyomkövetési szimulátor
   topicHref: qc-trace-simulator/index.md
   href: qc-trace-simulator/toc.yml
 - name: Toffoli-szimulátor

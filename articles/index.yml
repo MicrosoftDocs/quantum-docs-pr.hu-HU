@@ -9,35 +9,33 @@ metadata:
   ms.collection: collection
   author: cjgronlund
   ms.author: cgronlun
-  ms.date: 10/21/2019
-  ms.openlocfilehash: e21b191689c228fa3e7c0590ee2f79f625b3960d
-  ms.sourcegitcommit: 9d1c045cf1a2c3e19030cb38dbc7496dbd24ab58
+  ms.date: 5/10/2020
+  ms.openlocfilehash: 7c0fdf596c3409f0e1db7773b079a258d14a7d9c
+  ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
   ms.translationtype: HT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 04/13/2020
-  ms.locfileid: "80320831"
+  ms.lasthandoff: 05/15/2020
+  ms.locfileid: "83426893"
 landingContent:
 - title: Kvantum-számítástechnika
   linkLists:
   - linkListType: learn
     links:
-    - text: Mi az a kvantum-számítástechnika?
-      url: overview/what-is-quantum-computing.md
-    - text: Mire képesek a kvantumszámítógépek?
-      url: overview/quantum-computers.md
-    - text: Miért érdemes kvantum-számítástechnikát tanulni?
-      url: overview/why-learn-quantum-computing.md
+    - text: A kvantum-számítástechnika ismertetése
+      url: overview/understanding-quantum-computing.md
+    - text: A kvantumszámítógépek és a kvantumszimulátorok
+      url: overview/quantum-computers-and-simulators.md
     - text: Mi az a Q# és a QDK?
-      url: overview/what-is-qsharp.md
-    - text: Hol találhatok további információt?
-      url: overview/how-to-learn-quantum-computing.md
+      url: overview/what-is-qsharp-and-qdk.md
+    - text: A kvantum-számítástechnika lineáris algebrája
+      url: overview/algebra-for-quantum-computing.md
   - linkListType: concept
     links:
     - text: Kvantum-számítástechnikai fogalmak
       url: concepts/index.md
-- title: A Quantum Development Kit beszerzése
+- title: A Quantum Development Kit (QDK) bemutatása
   linkLists:
-  - linkListType: overview
+  - linkListType: get-started
     links:
     - text: A Quantum Development Kit
       url: welcome.md
@@ -49,15 +47,13 @@ landingContent:
       url: install-guide/update.md
 - title: Q# programozási nyelv
   linkLists:
-  - linkListType: overview
+  - linkListType: how-to-guide
     links:
-    - text: Bevezetés a Q# nyelvbe
-      url: language/index.md
-    - text: Q#-alapú fejlesztési módszerek
-      url: techniques/index.md
+    - text: A Q# használati útmutatója
+      url: user-guide/index.md
     - text: Kvantumszimulátorok és gazdaalkalmazások
       url: machines/index.md
-  - linkListType: quickstart
+  - linkListType: tutorial
     links:
     - text: Kvantum-véletlenszámgenerátor készítése
       url: quickstarts/qrng.md

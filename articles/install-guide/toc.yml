@@ -5,9 +5,9 @@ items:
     href: standalone.md
   - name: 'Q# Jupyter-notebookok'
     href: qjupyter.md
-  - name: 'A Q# használata más nyelvekkel'
+  - name: 'Q# más nyelvekkel'
     items:
-      - name: 'A Q# használata Pythonnal'
+      - name: 'Q# Pythonnal'
         href: pyinstall.md
-      - name: 'A Q# használata .NET-tel'
+      - name: 'Q# .NET-tel'
         href: csinstall.md

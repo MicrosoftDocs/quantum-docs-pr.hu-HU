@@ -1,0 +1,12 @@
+- name: 'Q#-fájlstruktúra'
+  href: file-structure.md
+- name: Műveletek és függvények
+  href: operations-functions.md
+- name: Változók
+  href: variables.md
+- name: A qubitek használata
+  href: working-with-qubits.md
+- name: Átvitelvezérlés
+  href: control-flow.md
+- name: Tesztelés és hibakeresés
+  href: testing-debugging.md
