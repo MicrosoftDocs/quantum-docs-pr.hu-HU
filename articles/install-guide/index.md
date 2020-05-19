@@ -1,34 +1,38 @@
 ---
-title: A Microsoft Quantum Development Kit (QDK) telepítésének ismertetése
-description: A Microsoft Quantum Development Kit (QDK) telepítésének ismertetése C#-, Python- és Jupyter Notebook-környezethez.
+title: A Microsoft Quantum Development Kit (QDK) telepítése
+description: A Microsoft Quantum Development Kit telepítése különböző környezetekben.
 author: natke
 ms.author: nakersha
-ms.date: 9/30/2019
+ms.date: 5/8/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install
-ms.openlocfilehash: bca700660094b91f1c0dfa03f9bce1336073ca51
-ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+ms.openlocfilehash: 2041b90ba021b7640615d73c35841cc21f025ac0
+ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
 ms.translationtype: HT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82680191"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83426468"
 ---
 # <a name="install-the-microsoft-quantum-development-kit-qdk"></a>A Microsoft Quantum Development Kit (QDK) telepítése
 
 Ismerje meg a Microsoft Quantum Development Kit (QDK) telepítésének módját, hogy nekiláthasson a kvantumprogramozás első lépéseinek. A QDK a következőket tartalmazza:
 
-- a Q# programozási nyelv
-- kódtárak, amelyek összetett funkciókat választanak el a Q#-ban
+- A Q# programozási nyelv
+- Kódtárak, amelyek Q# összetett funkcióit kivonatolják
 - Pythonhoz és .NET-nyelvekhez (C#, F# és VB.NET) készült API-k a Q#-ban írt kvantumprogramok futtatásához
-- a fejlesztést megkönnyítő eszközök
+- A fejlesztést megkönnyítő eszközök
 
-A Q#-programok gyakran vannak párban egy .NET-nyelven (legtöbbször C#-ban) vagy Pythonban írt gazdaprogrammal. Ez lehetővé teszi, hogy a kvantumműveleteket egy klasszikus programból hívjuk meg.
-Ráadásul a QDK Q#-támogatást nyújt a Jupyter-notebookokhoz az IQ# Jupyter kernel révén.
+A Q#-programok futhatnak önálló alkalmazásként a Visual Studio Code vagy a Visual Studio használatával, vagy Jupyter-notebookokon keresztül az IQ# Jupyter kernellel.
 
-A QDK számos fejlesztői környezethez elérhető. Válassza ki az Ön által előnyben részesített beállítást az alábbi szakaszok közül:
+Társíthatók .NET (jellemzően C# nyelven) vagy Python nyelven írt gazdaprogrammal is, ez lehetővé teszi kvantumműveletek meghívását egy klasszikus programon belül.
 
-- [Q# nyelvű parancssori alkalmazás:](xref:microsoft.quantum.install.standalone) akkor válassza ezt a módszert, ha a Q#-ot szeretné használni a parancssorból. Ehhez nincs szükség illesztőprogramra vagy gazdaprogramra, mint az alábbi lehetőségek esetében.
-- [Q# telepítése Jupyter-notebookokhoz:](xref:microsoft.quantum.install.jupyter) válassza ezt a környezetet Q#-kód beágyazott szöveggel rendelkező cellákban való végrehajtásához vagy kvantum-számítástechnikai interaktív oktatóanyagok létrehozásához. 
-- [Fejlesztés Q# és Python használatával:](xref:microsoft.quantum.install.python) ha együtt szeretné használni a Pythont és a Q#-ot egy Python-gazdaprogram létrehozásához, amely Q#-műveleteket hív meg.
-- [Fejlesztés Q# és C# vagy F# használatával:](xref:microsoft.quantum.install.cs) ha együtt szeretné használni a C#-ot vagy az F#-ot és a Q#-ot egy .NET-gazdaprogram létrehozásához, amely Q#-műveleteket hív meg.
+A QDK számos fejlesztői környezethez elérhető. Válassza ki az Ön által előnyben részesített beállítást:
+
+[**Fejlesztés Q# nyelvű parancssori alkalmazásokkal**](xref:microsoft.quantum.install.standalone) – Ezt a megközelítést választva a parancssorból használhatja a Q#-ot. Ehhez nincs szükség illesztőprogramra vagy gazdaprogramra, mint az alábbi lehetőségek esetében.
+
+[**Fejlesztés Q# Jupyter-notebookokkal**](xref:microsoft.quantum.install.jupyter) – Ezt a környezetet választva Q#-kódot futtathat beágyazott szöveggel rendelkező cellákban vagy létrehozhat kvantum-számítástechnikai interaktív oktatóanyagokat. 
+
+[**Fejlesztés Q# és Python használatával**](xref:microsoft.quantum.install.python) – Lehetővé teszi a Python és a Q# együttes használatát egy olyan Python-gazdaprogram létrehozásához, amely Q#-műveleteket hív meg.
+
+[**Fejlesztés Q# és .NET használatával**](xref:microsoft.quantum.install.cs) – Kombinálhatja a C#, az F# vagy a VB.NET nyelvet a Q# nyelvvel egy olyan .NET-gazdaprogram létrehozásához, amely Q#-műveleteket hív meg.

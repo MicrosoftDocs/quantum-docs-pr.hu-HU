@@ -6,12 +6,12 @@ ms.author: nakersha
 ms.date: 09/30/2019
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: 91f12ef6bd15e27c8920471442c66ff3b1e71122
-ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+ms.openlocfilehash: f365d471d9af73828b78c4fab8579557310a5288
+ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
 ms.translationtype: HT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82677092"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83426768"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>A Microsoft Quantum Development Kit kibocsátási megjegyzései
 
@@ -48,7 +48,7 @@ Ez a kiadás jelentős hibajavításokat tartalmaz a 0.11.2003.2506-os verzióho
 
 A verzió a következőket tartalmazza:
 
-- A hozzáférés-módosítók új támogatása a Q#-ban. További információ: [Fájlszerkezetek](xref:microsoft.quantum.language.file-structure#internal-declarations)
+- A hozzáférés-módosítók új támogatása a Q#-ban. További információ: [Fájlszerkezetek](xref:microsoft.quantum.guide.filestructure)
 - A .NET Core SDK 3.1-es verziójára frissítve
 
 A [kódtárak](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [fordítók](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [futtatókörnyezetek](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [minták](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed) és [Katák ](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed) lezárt lekéréses kérelmeinek teljes listáját itt tekintheti meg.  
@@ -86,7 +86,7 @@ A [kódtárak](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%
 
 A verzió a következőket tartalmazza:
 
-- Új tesztelési attribútum a Q#-egységek teszteléséhez. A frissített API-dokumentáció [itt](https://docs.microsoft.com/qsharp/api/qsharp/microsoft.quantum.diagnostics.test), frissített tesztelési és hibakeresési útmutató pedig [itt](xref:microsoft.quantum.techniques.testing-and-debugging) tekinthető meg.
+- Új tesztelési attribútum a Q#-egységek teszteléséhez. A frissített API-dokumentáció [itt](https://docs.microsoft.com/qsharp/api/qsharp/microsoft.quantum.diagnostics.test), frissített tesztelési és hibakeresési útmutató pedig [itt](xref:microsoft.quantum.guide.testingdebugging) tekinthető meg.
 - Híváslánc hozzáadva a Q#-program hibás végrehajtása esetére
 - Töréspontok támogatása a Visual Studio Code-ban az [OmniSharp C# Visual Studio Code-bővítmény](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp) frissítése révén
 
@@ -133,7 +133,7 @@ A [kódtárak](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%
 
 A verzió a következőket tartalmazza:
 
-- Új támogatás a [konjugációs utasításokhoz](xref:microsoft.quantum.language.statements#conjugations) a Q#-ban
+- Új támogatás a [konjugációs utasításokhoz](xref:microsoft.quantum.guide.operationsfunctions#conjugations) a Q#-ban
 - Új kódműveletek a fordítóban, például: csere, dokumentáció hozzáadása és a tömbelemek egyszerű frissítése
 - Új telepítési sablon és új projektparancsok a Visual Studio Code-bővítményhez
 - Az ApplyIf kombinátor új változatai, például a [Microsoft.Quantum.Canon.ApplyIfOne](xref:microsoft.quantum.canon.applyifone)
@@ -150,7 +150,7 @@ A módosítások és a meglévő programok frissítésére vonatkozó utasítás
 
 A verzió a következőket tartalmazza:
 
-- Új indexelési helyeket a szeletelőtömbökhöz. További információért [lásd a nyelvi referenciát](xref:microsoft.quantum.language.expressions#array-slices).
+- Új indexelési helyeket a szeletelőtömbökhöz. További információért [lásd a nyelvi referenciát](xref:microsoft.quantum.guide.expressions#array-slices).
 - Új Docker-fájl a [Microsoft Container Registryben](https://github.com/microsoft/ContainerRegistry). [További információt az IQ#-adattárban](https://github.com/microsoft/iqsharp/blob/master/README.md) talál.
 - A [nyomkövetés-szimulátor](xref:microsoft.quantum.machines.qc-trace-simulator.intro) kompatibilitástörő változása, a konfigurációs beállítások frissítése, névváltozások; a frissített nevek a [.NET API-tallózóban](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.qctracesimulatorconfiguration) találhatók.
 
@@ -171,10 +171,10 @@ A módosítások és a meglévő programok frissítésére vonatkozó utasítás
 
 ### <a name="q-language-syntax"></a>Q# nyelvi szintaxis
 Ez a kiadás új Q# nyelvi szintaxist ad hozzá:
-* Elnevezett elemek hozzáadása a [felhasználó által meghatározott típusokhoz](xref:microsoft.quantum.language.type-model#user-defined-types).  
+* Elnevezett elemek hozzáadása a [felhasználó által meghatározott típusokhoz](xref:microsoft.quantum.guide.types#user-defined-types).  
 * A felhasználó által meghatározott típusú konstruktorok most már függvényként használhatók.
-* A [másolás és frissítéshez](xref:microsoft.quantum.language.expressions#copy-and-update-expressions), valamint az [alkalmazás és újrafelhasználás]((xref:microsoft.quantum.language.statements#rebinding-of-mutable-symbols)) új támogatása a felhasználó által meghatározott típusokban.
-* A [sikerességig ismétlődő](xref:microsoft.quantum.language.statements#repeat-until-success-loop) ciklusok javítási blokkja már opcionális.
+* A [másolás és frissítéshez](xref:microsoft.quantum.guide.expressions#copy-and-update-expressions), valamint az [alkalmazás és újrafelhasználás](xref:microsoft.quantum.guide.variables#rebinding-of-mutable-symbols) új támogatása a felhasználó által meghatározott típusokban.
+* A [sikerességig ismétlődő](xref:microsoft.quantum.guide.controlflow#repeat-until-success-loop) ciklusok javítási blokkja már opcionális.
 * A while ciklusok használata már támogatott a függvényekben (a műveletekben nem).
 
 ### <a name="library"></a>Kódtár 
@@ -202,10 +202,10 @@ A módosítások és a meglévő programok frissítésére vonatkozó utasítás
 
 ### <a name="q-language-syntax"></a>Q# nyelvi szintaxis
 Ez a kiadás új Q# nyelvi szintaxist ad hozzá:
-* [Rövidített mód hozzáadása a kvantumműveletek](xref:microsoft.quantum.language.type-model#functors) (vezérlés és mellékletek) specializációinak `+` operátorokkal történő kifejezésére.  A régi szintaxis elavult.  A régi szintaxisok egyikét használó programok (például az `: adjoint`) továbbra is működni fognak, de egy fordítási idővel kapcsolatos figyelmeztetés jön létre.  
-* [Másolásra és frissítésre](xref:microsoft.quantum.language.expressions#copy-and-update-expressions) szolgáló új `w/` operátor, amely egy meglévő tömb módosításaként fejezi ki egy tömb létrehozását.
-* Gyakori [alkalmazási és frissítési utasítások](xref:microsoft.quantum.language.statements#rebinding-of-mutable-symbols) hozzáadása, például `+=`, `w/=`.
-* Új lehetőség az [open utasításokban](xref:microsoft.quantum.language.file-structure#open-directives) használt névterek rövid nevének megadására.
+* [Rövidített mód hozzáadása a kvantumműveletek](xref:microsoft.quantum.guide.operationsfunctions#controlled-and-adjoint-operations) (vezérlés és mellékletek) specializációinak `+` operátorokkal történő kifejezésére.  A régi szintaxis elavult.  A régi szintaxisok egyikét használó programok (például az `: adjoint`) továbbra is működni fognak, de egy fordítási idővel kapcsolatos figyelmeztetés jön létre.  
+* [Másolásra és frissítésre](xref:microsoft.quantum.guide.expressions#copy-and-update-expressions) szolgáló új `w/` operátor, amely egy meglévő tömb módosításaként fejezi ki egy tömb létrehozását.
+* Gyakori [alkalmazási és frissítési utasítások](xref:microsoft.quantum.guide.variables#rebinding-of-mutable-symbols) hozzáadása, például `+=`, `w/=`.
+* Új lehetőség az [open utasításokban](xref:microsoft.quantum.guide.filestructure#open-directives) használt névterek rövid nevének megadására.
 
 Ebben a kiadásban a tömbelemek már nem adhatók meg a set utasítások bal oldalán.  Ennek az az oka, hogy az a szintaxis azt sugallja, hogy a tömbök módosíthatók, pedig a művelet eredménye valójában mindig egy új, módosított tömb létrehozása volt.  Ehelyett fordítói hiba jön létre azzal a javaslattal, hogy az új `w/` másolási és frissítési operátort használja ugyanazon eredmény eléréséhez.  
 
@@ -280,7 +280,7 @@ A verzió a következőket tartalmazza:
 
 - A közösség által jelentett DumpRegister probléma hibajavítása ([148.](https://github.com/Microsoft/Quantum/issues/148)).
 
-- Új visszatérési képesség a [using utasításokból](xref:microsoft.quantum.language.statements).
+- Új visszatérési képesség a [using utasításokból](xref:microsoft.quantum.guide.qubits#allocating-qubits).
 
 - Átalakított [útmutató az első lépésekhez](xref:microsoft.quantum.install).
 
@@ -303,7 +303,7 @@ A verzió a következőket tartalmazza:
 
 A verzió a következőket tartalmazza:
 
-- támogatja a BigInt nevű új egyszerű típust, amely egy tetszőleges méretű előjeles egész számot jelöl.  A [BigInt típusról](xref:microsoft.quantum.language.type-model) itt talál további információt.
+- támogatja a BigInt nevű új egyszerű típust, amely egy tetszőleges méretű előjeles egész számot jelöl.  A [BigInt típusról](xref:microsoft.quantum.guide.types) itt talál további információt.
 - hozzáadja a Toffoli nevű új, különleges, gyors szimulátort ad hozzá, amely nagy számú qubittel képes X-, CNEM- és több elem által vezérelt X kvantumműveleteket szimulálni.  A [Toffoli-szimulátorról](xref:microsoft.quantum.machines.toffoli-simulator) itt talál további információt.
 - hozzáad egy egyszerű erőforrásbecslőt, amely a Q#-művelet adott példányának a kvantumszámítógépen való futtatásához szükséges erőforrásokat becsli meg.  Az [erőforrásbecslőről](xref:microsoft.quantum.machines.resources-estimator) itt talál további információt.
 
@@ -427,7 +427,7 @@ Ez a frissítés új funkciókkal bővíti a hibakeresést:
 * A $\ket{1}$ egyetlen qubiten való mérésének valószínűsége mostantól automatikusan megjelenik a Visual Studióban a QuantumSimulator célgépének hibakeresési ablakában.
 * Továbbfejlesztettük a változó tulajdonságok megjelenítését a Visual Studio **Automatikus értékek** és **Helyi változók** hibakeresési ablakaiban. 
 
-További információ a [tesztelésről és hibakeresésről](xref:microsoft.quantum.techniques.testing-and-debugging).
+További információ a [tesztelésről és hibakeresésről](xref:microsoft.quantum.guide.testingdebugging).
 
 ### <a name="community-contributions"></a>Közösségi hozzájárulások
 
