@@ -6,12 +6,12 @@ ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.python
-ms.openlocfilehash: a8c5b9c25c069f98ef8eefd6cfbc36bf3376931c
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: 35499daae0cd0ae329e39b43b0d8dd5a00183871
+ms.sourcegitcommit: 328f45a0b64cb6b325fa9d3b3ddb74a6a7a97ee9
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83426367"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83660728"
 ---
 # <a name="develop-with-q-and-python"></a>Fejlesztés Q # és Python nyelven
 
@@ -21,7 +21,7 @@ Telepítse a QDK a Python-gazdagépek kifejlesztéséhez a Q # műveleteinek meg
 
     - [Python](https://www.python.org/downloads/) 3.6 vagy újabb verzió
     - A [PIP](https://pip.pypa.io/en/stable/installing) Python-csomagkezelő
-    - [.NET Core SDK 3,1 vagy újabb](https://www.microsoft.com/net/download)
+    - [.NET Core SDK 3,1](https://dotnet.microsoft.com/download/dotnet-core/3.1)
 
 
 1. Telepítse a `qsharp` csomagot, amely egy Python-csomag, amely lehetővé teszi a Q # és a Python közötti együttműködési lehetőséget.
@@ -83,6 +83,6 @@ Telepítse a QDK a Python-gazdagépek kifejlesztéséhez a Q # műveleteinek meg
 > [!NOTE]
 > * A Python Jupyter jegyzetfüzeteket is használhatja a klasszikus Python program írásához és a Q # műveletek a cellákból való meghívásához. A Python-kód csak egy normál Python-program.
 
-## <a name="next-steps"></a>Következő lépések
+## <a name="next-steps"></a>További lépések
 
 Most, hogy a választott környezetben telepítette a Quantum Development Kitet, megírhatja és futtathatja [az első kvantumprogramját](xref:microsoft.quantum.quickstarts.qrng).

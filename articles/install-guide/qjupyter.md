@@ -1,19 +1,19 @@
 ---
-title: 'Fejlesztés Q # Jupyter notebookokkal'
+title: Fejlesztés Q# Jupyter-notebookokkal
 author: natke
 ms.author: nakersha
 ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.jupyter
-ms.openlocfilehash: 3302a9bd0652b2dea86b844058bf8303ee7a4a7f
-ms.sourcegitcommit: c85c1b439807ac576d3a11aadca307d57b059673
+ms.openlocfilehash: 0c4dc856c94b0a694fb99607eda64cec4d5c221d
+ms.sourcegitcommit: 328f45a0b64cb6b325fa9d3b3ddb74a6a7a97ee9
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 05/18/2020
-ms.locfileid: "83551039"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83660773"
 ---
-# <a name="develop-with-q-jupyter-notebooks"></a>Fejlesztés Q # Jupyter notebookokkal
+# <a name="develop-with-q-jupyter-notebooks"></a>Fejlesztés Q# Jupyter-notebookokkal
 
 A q # Jupyter Jegyzetfüzeteken a Q # műveletek fejlesztéséhez telepítse a QDK.
 
@@ -45,9 +45,9 @@ Az IQ# elsősorban a Jupyter és a Python által a .NET Core SDK-hoz használt b
         jupyter notebook
         ```
 
-    - Nyissa meg a Jupyter jegyzetfüzetet, és illessze be a parancssorban megadott URL-címet a böngészőjébe.
+    - A Jupyter Notebook megnyitásához másolja és illessze be a parancssorban megadott URL-címet a böngészőjébe.
 
-    - Hozzon létre egy Jupyter-notebookot egy Q#-kernellel, majd szúrja be a következő kódot az első notebookcellába:
+    - Hozzon létre egy Jupyter Notebook Q # kernelrel, és adja hozzá a következő kódot az első jegyzetfüzet-cellához:
 
         ```qsharp
         operation SayHello () : Unit {
@@ -57,17 +57,21 @@ Az IQ# elsősorban a Jupyter és a Python által a .NET Core SDK-hoz használt b
 
     - Futtassa a notebook következő celláját:
 
-        ![Jupyter-notebookcella Q#-kóddal](~/media/install-guide-jupyter.png)
+        ![Jupyter Notebook cella Q # kóddal](~/media/install-guide-jupyter.png)
 
-        A cella kimenetében a következőnek kell megjelennie: `SayHello`. A Jupyter-notebookokban való futtatáskor a Q#-kód le lesz fordítva, és a notebook kiadja a talált művelet(ek) nevét.
+        A cella kimenetében a következőnek kell megjelennie: `SayHello`. Ha Jupyter Notebook fut, a Q # kód le lesz fordítva, és a jegyzetfüzet a megtalált művelet (ek) nevét adja meg.
 
 
     - Egy új cellában hajtsa végre az imént létrehozott műveletet (szimulátorban) a következő `%simulate` paranccsal:
 
-        ![Jupyter-notebookcella %simulate használatával](~/media/install-guide-jupyter-simulate.png)
+        ![Jupyter Notebook cella% szimulálása mágia](~/media/install-guide-jupyter-simulate.png)
 
         A képernyőn megjelenő üzenetnek a meghívott művelet eredményével együtt kell megjelennie (itt látható az üres rekord, mert a `()` műveletünk egyszerűen egy `Unit` típust ad vissza).
 
-## <a name="next-steps"></a>Következő lépések
+## <a name="next-steps"></a>További lépések
 
-Most, hogy a választott környezetben telepítette a Quantum Development Kitet, megírhatja és futtathatja [az első kvantumprogramját](xref:microsoft.quantum.quickstarts.qrng).
+Most, hogy telepítette a QDK a Q # Jupyter-jegyzetfüzetekhez, megírhatja és futtathatja [első Quantum programját](xref:microsoft.quantum.quickstarts.qrng) úgy, hogy a q # kódját közvetlenül a Jupyter notebook-környezetbe írja.
+
+A Q # Jupyter notebookokkal kapcsolatos további példákért tekintse meg a következőt:
+- [Bevezetés a Q # és a Jupyter notebookba](https://docs.microsoft.com/samples/microsoft/quantum/intro-to-qsharp-jupyter/). Itt egy Q # Jupyter Notebook jelenik meg, amely bemutatja, hogyan használható a Q # ebben a környezetben.
+- [Quantum katas](xref:microsoft.quantum.overview.katas), a saját ütemben elsajátított oktatóanyagok és a Q # Jupyter jegyzetfüzetek formájában elérhető programozási gyakorlatok gyűjteménye. A [Quantum katas oktatóanyagának notebookja](https://github.com/microsoft/QuantumKatas#tutorial-topics) jó kiindulási pont. A Quantum katas célja, hogy egy időben megtanítsa a Quantum Computing és a Q # programozási elemeit. Kiváló példa arra, hogy milyen típusú tartalmat hozhat létre a Q # Jupyter notebookokkal.

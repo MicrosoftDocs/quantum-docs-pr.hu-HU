@@ -1,19 +1,19 @@
 ---
-title: 'Típusok a Q-ban #'
+title: Típusok a Q#-ban
 description: 'A Q # programozási nyelvben használt különböző típusok megismerése.'
 author: gillenhaalb
 ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.types
-ms.openlocfilehash: 58370193bd62e306197a9e07c28f8611f043e55c
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: 4a551ee90a0abb6e42953cf04c7f5a8ca3573f26
+ms.sourcegitcommit: 682a4a5f5dd23ca58a4addf62aea4086bb308552
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83431138"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83609141"
 ---
-# <a name="types-in-q"></a>Típusok a Q-ban #
+# <a name="types-in-q"></a>Típusok a Q#-ban
 
 Ez a lap a Q # type modellt mutatja be, és leírja a típusok megadásának és használatának szintaxisát.
 A következő lapon [írja be a kifejezések kifejezést](xref:microsoft.quantum.guide.expressions), és adja meg, hogyan kell létrehozni és használni az ilyen típusú kifejezéseket.
@@ -35,7 +35,7 @@ A Q # nyelv számos *primitív típust*biztosít, amelyekből más típusok is l
    típusa.
 - A `Double` típus egy dupla pontosságú lebegőpontos számot jelöl, például: `0.0` , `-1.3` , `4e-7` .
 - A `Bool` típus olyan logikai értéket jelöl, amely vagy lehet `true` `false` .
-- A `Range` típus egy egész számokból álló sorozatot jelöl, amelyet a, a következővel lehet megjelölni `start..step..stop` , ahol a lépés a lehetőség. 
+- A `Range` típus egy egész számokból álló sorozatot jelöl, amelyet a (a) jelöl, `start..step..stop` Ha a lépés megadása nem kötelező. 
    Ez `start .. stop` megfelel a-nek `start..1..stop` , és például `1..2..7` az \{ 1., 3., 5., 7 $-os sorozatot jelöli \} .
 - A `String` típus egy Unicode-karakterből álló sor, amely átlátszatlan a felhasználó számára a létrehozás után.
   Ez a típus egy klasszikus gazdagép üzeneteinek jelentésére szolgál hiba vagy diagnosztikai esemény esetén.
