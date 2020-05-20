@@ -55,7 +55,7 @@ Egy ilyen újrakötés a kulcsszóból, egy szimbólum vagy egy szimbólum, egy 
 
 ### <a name="apply-and-reassign-statements"></a>Utasítások alkalmazása és újbóli társítása
 
-Egy adott típusú `set` -utasításra hivatkozunk, mint az *alkalmazásra és az ismételt hozzárendelésre* vonatkozó utasítás, amely kényelmes megoldást kínál az Összefűzésre, ha a jobb oldalon egy bináris operátor alkalmazásából áll, és az eredmény a kezelőhöz a bal argumentumhoz lesz kötve. Például:
+Egy adott típusú `set` -utasításra hivatkozunk, mint az *alkalmazásra és az ismételt hozzárendelésre* vonatkozó utasítás, amely kényelmes megoldást kínál az Összefűzésre, ha a jobb oldalon egy bináris operátor alkalmazásából áll, és az eredmény a kezelőhöz a bal argumentumhoz lesz kötve. Példa:
 ```qsharp
 mutable counter = 0;
 for (i in 1 .. 2 .. 10) {
