@@ -1,23 +1,25 @@
 ---
-title: Kvantumalapok Q# nyelven
+title: Összefonódások megismerése Q# nyelven
 description: Ismerje meg, hogyan írhat kvantumprogramot Q# nyelven. Bell-állapotot jelző alkalmazás fejlesztése a Quantum Development Kit (QDK) használatával
 author: natke
 ms.author: nakersha
 ms.date: 10/07/2019
 ms.topic: tutorial
 uid: microsoft.quantum.write-program
-ms.openlocfilehash: 8d3b2d7c8da39a961f4eedcc5989ad3a1e134ade
-ms.sourcegitcommit: 7d350db4b5e766cd243633aee7d0a839b6274bd6
+ms.openlocfilehash: 7836e39227fa2282c6e2faa039f6e625103d5403
+ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
 ms.translationtype: HT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "77906729"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83426848"
 ---
-# <a name="quantum-basics-with-q"></a>Kvantumalapok Q# nyelven
+# <a name="tutorial-explore-entanglement-with-q"></a>Oktatóanyag: Összefonódások megismerése Q\# nyelven
 
-Ebben a rövid útmutatóban bemutatjuk, hogyan írhat olyan Q# nyelvű programot, amely qubiteket manipulál és mér meg, valamint szemlélteti a szuperpozíció és az összefonódás hatásait.  Az útmutató végigvezet a QDK telepítésén, a program létrehozásán, majd a program kvantumszimulátoron való végrehajtásán.  
+Ebben az oktatóanyagban bemutatjuk, hogyan írhat olyan Q# nyelvű programot, amely qubiteket manipulál és mér meg, valamint szemlélteti a szuperpozíció és az összefonódás hatásait.
+Az útmutató végigvezet a QDK telepítésén, a program létrehozásán, majd a program kvantumszimulátoron való végrehajtásán.  
 
-Írni fog egy Bell nevű alkalmazást a kvantum-összefonódás szemléltetése céljából.  A Bell név a Bell-állapotokra utal. Ezek két qubit konkrét kvantumállapotát jelentik, amelyekkel szemléltethetők a szuperpozíció és a kvantum-összefonódás legegyszerűbb példái. 
+Írni fog egy Bell nevű alkalmazást a kvantum-összefonódás szemléltetése céljából.
+A Bell név a Bell-állapotokra utal. Ezek két qubit konkrét kvantumállapotát jelentik, amelyekkel szemléltethetők a szuperpozíció és a kvantum-összefonódás legegyszerűbb példái.
 
 ## <a name="pre-requisites"></a>Előfeltételek
 
@@ -30,7 +32,7 @@ A leírást a QDK telepítése nélkül is követheti, hogy áttekintést kapjon
 
 ## <a name="demonstrating-qubit-behavior-with-q"></a>A qubitek viselkedésének szemléltetése a Q# segítségével
 
-Emlékezzen vissza a [qubit egyszerű definíciójára](xref:microsoft.quantum.overview.what#the-qubit).  Míg a hagyományos bit egyetlen bináris értéket hordoz, ami 0 vagy 1 lehet, a qubit állapota egyszerre lehet a 0 és az 1 érték közötti **szuperpozícióban**.  Alapjában véve a qubit úgy képzelhető el, mint egy térbeli irány (más néven vektor).  A qubitek bármilyen lehetséges irányba mutathatnak. A két **klasszikus állapot** az a két irány, amelyek a 0 érték mérésének 100%-os esélyét és az 1 érték mérésének 100%-os esélyét jelentik.  Ennek a megjelenítésnek a formálisabb vizualizációja a [Bloch-gömb](/quantum/concepts/the-qubit#visualizing-qubits-and-transformations-using-the-bloch-sphere).
+Emlékezzen vissza a [qubit egyszerű definíciójára](xref:microsoft.quantum.overview.understanding).  Míg a hagyományos bit egyetlen bináris értéket hordoz, ami 0 vagy 1 lehet, a qubit állapota egyszerre lehet a 0 és az 1 érték közötti **szuperpozícióban**.  Alapjában véve a qubit úgy képzelhető el, mint egy térbeli irány (más néven vektor).  A qubitek bármilyen lehetséges irányba mutathatnak. A két **klasszikus állapot** az a két irány, amelyek a 0 érték mérésének 100%-os esélyét és az 1 érték mérésének 100%-os esélyét jelentik.  Ennek a megjelenítésnek a formálisabb vizualizációja a [Bloch-gömb](/quantum/concepts/the-qubit#visualizing-qubits-and-transformations-using-the-bloch-sphere).
 
 
 A mérés ténye egy bináris eredményt ad, és megváltoztatja a qubit állapotát. A mérés egy bináris eredményt ad, amely 0 vagy 1 lehet.  A qubit a szuperpozícióból (amely bármilyen irányú lehet) az egyik klasszikus állapotba kerül.  Ezt követően ugyanannak a mérésnek a megismétlése – ha időközben nem végeztünk el semmilyen más műveletet – ugyanazt a bináris eredményt adja.  
@@ -498,7 +500,7 @@ Gratulálunk, megírta az első kvantumprogramját!
 
 ## <a name="whats-next"></a>A következő lépések
 
-A [Grover-keresés](xref:microsoft.quantum.quickstarts.search) gyorsútmutatója ismerteti, hogyan lehet létrehozni és futtatni egy Grover-keresést, amely az egyik legnépszerűbb kvantum-számítástechnikai algoritmus, és remekül példázza, hogyan oldhatók meg valós problémák egy Q#-programmal és a kvantum-számítástechnika segítségével.  
+A [Grover-keresés](xref:microsoft.quantum.quickstarts.search) című oktatóanyag ismerteti, hogyan lehet létrehozni és futtatni egy Grover-keresést, amely az egyik legnépszerűbb kvantum-számítástechnikai algoritmus, és remekül példázza, hogyan oldhatók meg valós problémák egy Q#-programmal és a kvantum-számítástechnika segítségével.  
 
 A [Bevezetés a Quantum Development Kit használatába](xref:microsoft.quantum.welcome) című cikkben további módszereket is talál a Q# és a kvantumprogramozás elsajátítására.
 
