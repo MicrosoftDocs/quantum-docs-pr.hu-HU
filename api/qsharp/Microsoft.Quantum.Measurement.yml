@@ -9,19 +9,19 @@ operations:
 - uid: microsoft.quantum.measurement.measurewithscratch
   summary: A megadott Pauli-operátort egy explicit qubit használatával méri a mérés végrehajtásához.
 - uid: microsoft.quantum.measurement.mresetx
-  summary: X alapon egyetlen qubit mér, és a mérést követően visszaállítja a standard szintű állapotba | 0 〉.
+  summary: Egy qubit X alapon, és a mérték után visszaállítja egy rögzített kezdeti állapotba.
 - uid: microsoft.quantum.measurement.mresety
-  summary: Egyetlen qubit mér az Y alapon, és alaphelyzetbe állítja a standard állapotot | 0 〉 a mérés után.
+  summary: Egyetlen qubit mér az Y-ben, és visszaállítja a mérést követő rögzített kezdeti állapotba.
 - uid: microsoft.quantum.measurement.mresetz
-  summary: Egyetlen qubit `Z` mér, és alaphelyzetbe állítja a standard állapotot | 0 〉 a mérés után.
+  summary: Egy qubit a Z alapján, és visszaállítja egy rögzített kezdeti állapotba a mérést követően.
 - uid: microsoft.quantum.measurement.multim
   summary: A standard szintű egy adott tömb mindegyik qubit méri.
 - uid: microsoft.quantum.measurement.settobasisstate
   summary: A qubit egy adott számítási állapotra állítja be a qubit mérésével, és szükség esetén egy kis tükrözés alkalmazásával.
 metadata:
-  ms.openlocfilehash: 8e0910bf53734ffe65aa12b06321ec9b3403133f
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 894c0bb7f0b57e9fe04837b89cd57345745df6c5
+  ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82673149"
+  ms.lasthandoff: 06/03/2020
+  ms.locfileid: "84326625"
