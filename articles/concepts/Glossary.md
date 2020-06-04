@@ -6,12 +6,12 @@ ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.glossary
-ms.openlocfilehash: cbc473eb14d8afd255a7072475dc054e18b98e3e
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: 042e4e27ef4e42cfc0c24fbb0ae2232cf1bbfe36
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83426704"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327611"
 ---
 # <a name="quantum-computing-glossary"></a>Quantum Computing – Szószedet
 
@@ -55,7 +55,7 @@ Az a tényező, amellyel egy adott átalakítás [eigenvector](xref:microsoft.qu
 
 Egy olyan vektor, amelynek irányát egy adott átalakítás nem változtatja meg, és amelynek nagyságrendjét a vektor [sajátérték](xref:microsoft.quantum.glossary#eigenvalue)megfelelő tényező módosítja. Egy négyzetes mátrix $M $ és egy sajátérték $c $, majd $Mv = CV $, ahol a $v $ a mátrix eigenvector, és az argumentumok összetett száma lehet. További információ: [speciális mátrix – fogalmak](xref:microsoft.quantum.concepts.matrix-advanced).
 
-## <a name="entanglement"></a>Felakadás
+## <a name="entanglement"></a>Összefonódás
 
 A *kvantum-részecskék* (például a [qubits](xref:microsoft.quantum.glossary#qubit)) csatlakoztathatók vagy összekapcsolhatók úgy, hogy ne legyenek egymástól függetlenül. A mérési eredmények akkor is összekapcsolhatók, ha a rendszer végtelenül elválasztja őket. A felakadás elengedhetetlen a qubit [állapotának](xref:microsoft.quantum.glossary#quantum-state) [méréséhez](xref:microsoft.quantum.glossary#measurement) .  További információ: [speciális mátrix – fogalmak](xref:microsoft.quantum.concepts.matrix-advanced).
 
@@ -120,7 +120,11 @@ Három 2 x 2 egységes mátrix, azaz a `X` `Y` és a `Z` Quantum művelet. Az Id
 
 ## <a name="quantum-circuit-diagram"></a>Quantum Circuit diagram
 
-Egy metódus, amely grafikusan ábrázolja az egyszerű kvantum-programok [műveleteinek](xref:microsoft.quantum.glossary#operation) (vagy [kapuinak](xref:microsoft.quantum.glossary#gate)) sorát, például a ![ minta áramköri diagramot ](~/media/qpe.png) . További információ: kvantum- [áramkörök](xref:microsoft.quantum.concepts.circuits).
+Egy módszer, amely grafikusan ábrázolja az egyszerű kvantum-programok [műveleteinek](xref:microsoft.quantum.glossary#operation) (vagy [kapuinak](xref:microsoft.quantum.glossary#gate)) sorozatot, például: 
+
+![Minta áramköri diagram](~/media/qpe.png). 
+
+További információ: kvantum- [áramkörök](xref:microsoft.quantum.concepts.circuits).
 
 ## <a name="quantum-libraries"></a>Kvantum-kódtárak
 
@@ -138,13 +142,13 @@ A kvantum-információk alapszintű egysége, amely *a klasszikus* számításte
 
 A probabilistically által sikeresnek bizonyuló kvantum-algoritmus. Hiba esetén a rutin újra próbálkozik, amíg a művelet sikertelen lesz (vagy elérte a korlátot). További információ: REPEAT to [Success (RUS)](xref:microsoft.quantum.guide.controlflow#repeat-until-success-loop)
 
-## <a name="standard-libraries"></a>Standard kódtárak
+## <a name="standard-libraries"></a>Szabványos kódtárak
 
 A telepítés során a Q # fordítóprogrammal együtt telepített [műveletek](xref:microsoft.quantum.glossary#operation), [függvények](xref:microsoft.quantum.glossary#function) és [felhasználó által definiált típusok](xref:microsoft.quantum.glossary#user-defined-type) . A standard szintű függvénytár-implementáció agnosztikus a célszámítógépek tekintetében. További információ: [standard könyvtárak](xref:microsoft.quantum.libraries.standard.intro).
 
 ## <a name="superposition"></a>Szuperpozíció
 
-A Quantum Computing koncepciója, amely szerint a [qubit](xref:microsoft.quantum.glossary#qubit) két állapot lineáris kombinációja, $ \ket{\0} $ és $ \ket{\1} $, amíg meg nem történik a [mérés](xref:microsoft.quantum.glossary#measurement).  További információ: a [kvantum-számítástechnika ismertetése](xref:microsoft.quantum.overview.understanding).
+A Quantum Computing koncepciója, amely szerint a [qubit](xref:microsoft.quantum.glossary#qubit) két állapot lineáris kombinációja, $ \ket {0} $ és $ \ket {1} $, amíg meg nem történik a [mérés](xref:microsoft.quantum.glossary#measurement).  További információ: a [kvantum-számítástechnika ismertetése](xref:microsoft.quantum.overview.understanding).
 
 ## <a name="target-machine"></a>Célszámítógép
 

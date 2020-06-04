@@ -6,12 +6,12 @@ ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.expressions
-ms.openlocfilehash: 93432cef9711b6780192cd59e92b09647a264b5c
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: c4b2cc0bed44ffdfb191ba522d6526959e7c6708
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83431206"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327305"
 ---
 # <a name="type-expressions-in-q"></a>Kifejezések megadása a Q-ban #
 
@@ -221,7 +221,6 @@ let g = Foo(arg)!;      // Syntax error
 A tömb literál egy vagy több elem kifejezésének sorozata, vesszővel elválasztva, a és a `[` közé `]` .
 Minden elemnek kompatibilisnek kell lennie ugyanazzal a típussal.
 
-
 Mivel a két tömb azonos típusú, a bináris `+` operátor egy olyan új tömb létrehozásához használható, amely a két tömb összefűzése.
 Például: `[1,2,3] + [4,5,6]` `[1,2,3,4,5,6]` .
 
@@ -229,6 +228,9 @@ Például: `[1,2,3] + [4,5,6]` `[1,2,3,4,5,6]` .
 
 Adott típus és kifejezés alapján `Int` az `new` operátor felhasználható a megadott méretű új tömb kiosztására.
 Például `new Int[i + 1]` lefoglalhat egy új `Int` tömböt `i + 1` elemekkel.
+
+Az üres tömb literálok `[]` nem engedélyezettek.
+A használata helyett, `new ★[0]` ahol a `★` egy megfelelő típusú helyőrző, lehetővé teszi a nulla hosszúságú kívánt tömb létrehozását.
 
 Az új tömb elemei egy típustól függő alapértelmezett értékre vannak inicializálva.
 A legtöbb esetben ez a nulla valamilyen változata.
@@ -373,8 +375,7 @@ Például, ha, `Op1` `Op2` és `Op3` mind a `Qubit[] => Unit` , de támogatja `O
 - `[Op1, Op3]`a a műveletek tömbje `(Qubit[] => Unit is Adj)` .
 - `[Op2, Op3]`a a műveletek tömbje `(Qubit[] => Unit is Ctl)` .
 
-Az üres tömb literálok `[]` nem engedélyezettek.
-A használata helyett, `new ★[0]` ahol a `★` egy megfelelő típusú helyőrző, lehetővé teszi a nulla hosszúságú kívánt tömb létrehozását.
+Bár `(Qubit[] => Unit is Adj)` `(Qubit[] => Unit is Ctl)` a és a műveletek közös alaptípussal rendelkeznek `(Qubit[] => Unit)` , vegye figyelembe, hogy ezen *of* operátorok tömbje nem közös alaptípust tartalmaz. Például `[[Op1], [Op2]]` jelenleg hiba történt, mivel a nem kompatibilis tömbök tömbjét kísérli meg létrehozni `(Qubit[] => Unit is Adj)[]` `(Qubit[] => Unit is Ctl)[]` .
 
 
 ## <a name="conditional-expressions"></a>Feltételes kifejezések
@@ -486,11 +487,12 @@ Operátor | Aritása | Leírás | Operandusok típusai
  `&&&` | Bináris | Bitenkénti és | `Int` vagy `BigInt`
  `^^^` | Bináris | Bitenkénti XOR | `Int` vagy `BigInt`
  <code>\|\|\|</code> | Bináris | Bitenkénti vagy | `Int` vagy `BigInt`
- `and` | Bináris | Logikai és | `Bool`
- `or` | Bináris | Logikai vagy | `Bool`
+ `and` | Bináris | Logikai ÉS | `Bool`
+ `or` | Bináris | Logikai VAGY | `Bool`
  `..` | Bináris/Ternáris | Tartomány operátora | `Int`
  `?` `|` | Ternáris | Feltételes | `Bool`a bal oldali
 `w/` `<-` | Ternáris | Másolás és frissítés | Lásd: [Másolás és frissítés kifejezések](#copy-and-update-expressions)
 
-## <a name="whats-next"></a>Vajon mi a következő lépés?
+## <a name="next-steps"></a>Következő lépések
+
 Most, hogy a Q #-ban kifejezésekkel dolgozhat, a [q # műveletekhez és függvényekhez](xref:microsoft.quantum.guide.operationsfunctions) is megtudhatja, hogyan határozhatja meg és hívhatja meg a műveleteket és a függvényeket.

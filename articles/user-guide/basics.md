@@ -6,12 +6,12 @@ ms.author: a-gibec@microsoft.com
 ms.date: 02/28/2020
 ms.topic: article
 uid: microsoft.quantum.guide.basics
-ms.openlocfilehash: fd0ea47f00b1456ec460808ef7d451c8427677cd
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: e77b52d1a6eb7e2f62ab12dedd75d00ac8fec4be
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83431155"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327322"
 ---
 # <a name="q-basics"></a>Q # alapjai
 
@@ -106,8 +106,7 @@ A kifejezés-értékelési utasításokhoz pontosvesszőt kell lezárni.
 A Q # program csaknem minden aspektusa utasítások használatával készült, így egyetlen oldal sem terjedhet ki a rájuk vonatkozó összes információra.
 Azonban a saját lexikális szerkezete és formázása a [q # file Structure](xref:microsoft.quantum.guide.filestructure) oldalon, a Symbol kötési hozzárendelés és a hatókör a [q # változóknál](xref:microsoft.quantum.guide.variables), valamint a flow-hurkok vezérlése, például a `for` [Control flow in q #](xref:microsoft.quantum.guide.controlflow).
 
-
-## <a name="whats-next"></a>A következő lépések
+## <a name="next-steps"></a>Következő lépések
 A jelen útmutató további részében bemutatjuk, hogyan használhatók a Q # az összetett kvantum-programok létrehozásához a műveletek, függvények és típusok alapvető építőelemei alapján.
 
 Első lépésként megkezdheti [a Q #-ban található típusok](xref:microsoft.quantum.guide.types)megismerését.

@@ -6,12 +6,12 @@ ms.author: v-edsanc@microsoft.com
 ms.date: 02/16/2020
 ms.topic: article
 uid: microsoft.quantum.libraries.machine-learning.load
-ms.openlocfilehash: 15e63ced6223759a332ce22a43c133a7899f482a
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: efa4a65a489446cbef48507d0b02a932da74c71c
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77909959"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327662"
 ---
 # <a name="load-and-classify-your-own-datasets"></a>Saját adatkészletek betöltése és besorolása
 
@@ -25,7 +25,7 @@ Különösen azt javasoljuk, hogy az adatok betöltéséhez használja a sablont
 
 Tegyük fel, hogy a (z) $ (x, y) $ $N = $2-es betanítási adatkészlettel rendelkezik, ahol minden példánynak $x _i $ $x $-nak három funkciója van: $x _ {I1} $, $x _ {I2} $ és $x _ {i3} $.
 Az érvényesítési adatkészlet ugyanazzal a szerkezettel rendelkezik.
-Ezeket a datsets a következőhöz hasonló `data.json` fájl jelölheti:
+Ezeket a datsets `data.json` az alábbihoz hasonló fájl jelölheti:
 
 ```json
 {
@@ -79,15 +79,15 @@ Tegyük fel, hogy van egy kis adathalmaza, amely a különböző macskák és ku
 | 0,91      | 44         | Figyelve    |
 | 0,86      | 31          | Figyelve    |
 | 0,32      | 5         | Cat    |
-| 0.25      | 4          | Cat    |
+| 0,25      | 4          | Cat    |
 
 A folyamat:
 
 - Először el kell különíteni az adatkészletet a képzésbe és az érvényesítésbe. Ebben az esetben csak az első három mintát vesszük igénybe a képzéshez és a többi minta ellenőrzéshez. Általánosságban azt érdemes megtervezni, hogy véletlenszerűen megkóstolja a betanítási és érvényesítési adatkészletet, hogy elkerülje a betanítási adatokat a nemkívánatos torzulások elkerülése érdekében.
-- Másodszor, minden osztályhoz hozzá kell rendelni egy numerikus címkét. Vegye figyelembe, hogy jelenleg a QML-könyvtár csak bináris besorolási problémákat fogad el. Ezért a 0. címkét a (`Dog` és az 1. számú osztályhoz rendeljük a `Cat`.
+- Másodszor, minden osztályhoz hozzá kell rendelni egy numerikus címkét. Vegye figyelembe, hogy jelenleg a QML-könyvtár csak bináris besorolási problémákat fogad el. Ezért a 0. címkét a osztályhoz rendeljük, `Dog` az 1-es számot pedig az osztályhoz `Cat` .
 - Végül kitöltjük a sablont az adatkészlet adatai alapján. Vegye figyelembe, hogy a nagyméretű adatkészletek esetében érdemes létrehozni egy kis parancsfájlt, amely automatikusan létrehozza a sablont az adott adatkészletből. Ez a szkript az adatkészlet eredeti formátumának függvénye lesz.
 
-Adatkészlet esetén a `data.json` fájl a következő:
+Az adatkészlet esetében a `data.json` fájl a következő:
 
 ```json
 {
@@ -137,24 +137,24 @@ Adatkészlet esetén a `data.json` fájl a következő:
 
 ```
 
-## <a name="loading-the-data"></a>Az adattöltés
+## <a name="loading-the-data"></a>Az adatok betöltése
 
 Miután a rendszer JSON-fájlként szerializálta az adatait, betöltheti azt a választott gazdagép nyelvén elérhető JSON-kódtárak használatával.
 
 ### <a name="python"></a>[Python](#tab/tabid-python)
 
-A Python a következő [beépített `json` csomagot](https://docs.python.org/3.7/library/json.html) biztosítja a JSON-szerializált adatkezeléshez:
+A Python a JSON-szerializált adatkezeléshez használható [beépített `json` csomagot](https://docs.python.org/3.7/library/json.html) tartalmazza:
 
 :::code language="python" source="~/quantum/samples/machine-learning/half-moons/host.py" range="4-5,20-22":::
 
 ### <a name="c"></a>[C#](#tab/tabid-csharp)
 
-A .NET Core platform biztosítja a [`System.Text.Json` csomagot](https://www.nuget.org/packages/System.Text.Json) a JSON-szerializált adatkezeléshez:
+A .NET Core platform biztosítja a [ `System.Text.Json` csomagot](https://www.nuget.org/packages/System.Text.Json) a JSON-szerializált adatkezeléshez:
 
 :::code language="csharp" source="~/quantum/samples/machine-learning/half-moons/Host.cs" range="10,64-82":::
 
 ***
 
-## <a name="whats-next"></a>A következő lépések
+## <a name="next-steps"></a>Következő lépések
 
 Most már készen áll a saját adatkészletekkel való saját kísérletek futtatására. Próbálja ki a különböző besorolásokat és adatkészleteket, és járuljon hozzá az eredményeket megosztó közösséghez.

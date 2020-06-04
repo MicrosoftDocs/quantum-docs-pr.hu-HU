@@ -7,7 +7,7 @@ summary: Tömb felosztása több részre.
 examples: >-
   ```qsharp
 
-  // The following returns [[1,5],[3],[7]];
+  // The following returns [[1, 5], [3], [7]];
 
   let split = Partitioned([2,1], [1,5,3,7]);
 
@@ -29,16 +29,16 @@ input:
 output:
   content: "'T[][]"
   types:
-  - summary: 'Több `nElements[0]` tömb, `arr` ahol az első tömb az első, a második tömb pedig a következő `nElements[1]` `arr` : Az utolsó tömb tartalmazni fogja az összes fennmaradó elemet.'
+  - summary: 'Több tömb, ahol az első tömb az első, `nElements[0]` `arr` a második tömb pedig a következő: `nElements[1]` `arr` Az utolsó tömb tartalmazni fogja az összes fennmaradó elemet.'
     isArray: true
     types:
     - isArray: true
       uid: "'T"
       isLocal: true
 metadata:
-  ms.openlocfilehash: 319147f72f0ef13a942ab5440a51f60d6f2bae1f
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 431c62538c9d7c165c570d680c7d4c14974e294c
+  ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680883"
+  ms.lasthandoff: 06/03/2020
+  ms.locfileid: "84326523"

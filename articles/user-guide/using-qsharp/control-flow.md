@@ -6,12 +6,12 @@ ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.controlflow
-ms.openlocfilehash: c534e016fcb8b50e66c11ca29c253ba0512acc6e
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: 1f1b641563fe35879abeee32b4f0aeeb7001b1a0
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83430951"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84326540"
 ---
 # <a name="control-flow-in-q"></a>Vezérlési folyamat a Q-ban #
 
@@ -44,7 +44,7 @@ Ha az eredeti if feltétel és az összes más-if záradék hamis értéket ad v
 Vegye figyelembe, hogy a rendszer bármelyik blokkot a saját hatókörében hajtja végre.
 Az egy `if` , `elif` , vagy blokkon belül végrehajtott kötések `else` nem láthatók a vége után.
 
-Például:
+Példa:
 
 ```qsharp
 if (result == One) {
@@ -174,7 +174,7 @@ A más típusokat visszaadó Callables a végső visszatérési utasítást kell
 Egy műveletben nem engedélyezett a visszaküldési utasítások maximális száma.
 A fordító kibocsáthat egy figyelmeztetést, ha a utasítások egy blokkon belüli visszatérési utasítást követnek.
 
-Például:
+Példa:
 ```qsharp
 return 1;
 ```
@@ -196,7 +196,7 @@ A rendszer a karakterláncot a klasszikus illesztőprogramnak adja vissza hibaü
 A műveleteken belüli sikertelen utasítások száma nincs korlátozva.
 A fordító kibocsáthat egy figyelmeztetést, ha a utasítások egy blokkon belüli sikertelen utasítást követnek.
 
-Például:
+Példa:
 ```qsharp
 fail $"Impossible state reached";
 ```
@@ -329,5 +329,6 @@ Az ebben a műveletben bemutatott jelentős programozott funkciók a hurok össz
 Lásd még: [tesztelés és hibakeresés](xref:microsoft.quantum.guide.testingdebugging) , további információ a [`Assert`](xref:microsoft.quantum.intrinsic.assert) és a [`AssertProb`](xref:microsoft.quantum.intrinsic.assertprob) műveletekről.
 
 
-## <a name="whats-next"></a>Vajon mi a következő lépés?
+## <a name="next-steps"></a>Következő lépések
+
 A [tesztelés és a hibakeresés](xref:microsoft.quantum.guide.testingdebugging) megismertetése a Q #-ban.

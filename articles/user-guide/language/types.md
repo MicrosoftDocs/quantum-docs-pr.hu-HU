@@ -6,12 +6,12 @@ ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.types
-ms.openlocfilehash: 4a551ee90a0abb6e42953cf04c7f5a8ca3573f26
-ms.sourcegitcommit: 682a4a5f5dd23ca58a4addf62aea4086bb308552
+ms.openlocfilehash: f7a3ac3813966c0ef695068297ce4d9949ead554
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83609141"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327288"
 ---
 # <a name="types-in-q"></a>Típusok a Q#-ban
 
@@ -63,7 +63,8 @@ A második példában látható, hogy ez a tömbök potenciálisan szaggatott t�
 A Q # nem nyújt támogatást a négyszögletes többdimenziós tömbökhöz.
 
 A tömb értéke Q # forráskódban is megadható, ha szögletes zárójeleket használ egy tömb elemei körül `[PauliI, PauliX, PauliY, PauliZ]` .
-A tömb literál típusát a tömbben lévő összes elem közös alaptípusa határozza meg. 
+A tömb literál típusát a tömbben lévő összes elem közös alaptípusa határozza meg. Ezért egy olyan tömb létrehozásával próbálkozhat, amely nem rendelkezik közös alaptípussal.  
+Ehhez a [callables tömbökben](xref:microsoft.quantum.guide.expressions#arrays-of-callables) talál példát.
 
 > [!WARNING]
 > Egy tömb elemei nem módosíthatók a tömb létrehozása után.
@@ -291,7 +292,8 @@ A típus-paraméteres metódus hívásakor az azonos típusú paraméterrel rend
 
 A Q # nem biztosít olyan mechanizmust, amely lehetővé teszi a Type paraméterhez helyettesíthető lehetséges típusok korlátozását.
 
-## <a name="whats-next"></a>Vajon mi a következő lépés?
+## <a name="next-steps"></a>Következő lépések
+
 Most, hogy megismerte a Q # nyelvét alkotó összes típust, [írja be a kifejezéseket a q # szövegbe](xref:microsoft.quantum.guide.expressions) , hogy megtudja, hogyan hozhat létre és kezelhet a különböző típusú kifejezéseket.
 
 

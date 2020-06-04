@@ -7,8 +7,8 @@ summary: >-
   Visszafordítható, helyi hullámos – két egész szám hozzáadását hajthatja végre.
 
 
-  A LittleEndian- `xs` regiszterekben és `ys`a qubit-ben kódolva két $n $ bites egész szám lett megadva, a művelet kiszámítja a két egész szám összegét, ahol az eredmény $n $ legkevésbé jelentős bitek vannak tárolva `ys` , a végrehajtás bit pedig xored a qubit. `carry`
-remarks: Ez a művelet ugyanazokkal a funkciókkal rendelkezik, mint a RippleCarryAdderD, de $n $ helyett csak egy Ancilla-qubit használ.
+  A LittleEndian-regiszterekben és a qubit-ben kódolva két $n $ bites egész szám lett megadva `xs` `ys` , a művelet kiszámítja a két egész szám összegét, ahol az eredmény $n $ legkevésbé jelentős bitek vannak tárolva, `ys` a végrehajtás bit pedig xored a qubit `carry` .
+remarks: Ez a művelet ugyanazokkal a funkciókkal rendelkezik, mint a RippleCarryAdderD, de $n $ helyett csak egy kiegészítő qubit használ.
 syntax: 'operation RippleCarryAdderCDKM (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, carry : Qubit) : Unit'
 references: >-
   - Steven A. Cuccaro, Thomas G. Drapérier, Samuel A. Kutin, David Petra Moulton: "egy új kvantum-hullám-Carry összeadás Circuit", 2004.
@@ -35,9 +35,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: d75313cbc70643bc9cb96967c1b2eb928296f8d7
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: a72b9fe01846bbdb0b3cb6079a681104904747df
+  ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82675134"
+  ms.lasthandoff: 06/03/2020
+  ms.locfileid: "84326501"

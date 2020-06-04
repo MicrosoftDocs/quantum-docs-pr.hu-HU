@@ -7,12 +7,12 @@ ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.update
-ms.openlocfilehash: 53f72f1d49ae32a5a8572a1cf68a66a1d9b45e4a
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: 3245f587493ce12cfec15c8f932fd092d85f688e
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83426913"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327568"
 ---
 # <a name="update-the-microsoft-quantum-development-kit-qdk"></a>A Microsoft Quantum Development Kit frissítése (QDK)
 
@@ -21,8 +21,8 @@ Megtudhatja, hogyan frissítheti a Microsoft Quantum Development Kit (QDK) a leg
 Ez a cikk azt feltételezi, hogy már telepítette a QDK. Ha első alkalommal telepíti a rendszert, tekintse meg a [telepítési útmutatót](xref:microsoft.quantum.install).
 
 Javasoljuk, hogy naprakészen tartson a legújabb QDK-kiadással. Ezt a frissítési útmutatót követve frissíthet a legújabb QDK-verzióra. A folyamat két részből áll:
-1. meglévő Q # fájlok és projektek frissítése a kód a frissített szintaxissal való igazításához
-2. saját maga frissítése a választott fejlesztési környezet QDK 
+1. Meglévő Q # fájlok és projektek frissítése a kód a frissített szintaxissal való igazításához.
+2. A kiválasztott fejlesztési környezethez tartozó QDK frissítése.
 
 ## <a name="updating-q-projects"></a>Q # projektek frissítése 
 
@@ -38,9 +38,9 @@ Függetlenül attól, hogy C# vagy Python használatával üzemelteti a Q # műv
 
 ### <a name="update-q-projects-in-visual-studio"></a>Q # projektek frissítése a Visual Studióban
  
-1. A Visual Studio 2019 legújabb verziójának frissítése [itt](https://docs.microsoft.com/visualstudio/install/update-visual-studio?view=vs-2019) talál útmutatást.
-2. A megoldás megnyitása a Visual Studióban
-3. A menüben válassza a **Build**  ->  **tiszta megoldás** létrehozása elemet.
+1. Frissítsen a Visual Studio 2019 legújabb verziójára, [itt](https://docs.microsoft.com/visualstudio/install/update-visual-studio?view=vs-2019) talál útmutatást.
+2. Nyissa meg a megoldást a Visual Studióban.
+3. Válassza a menü **Build**  ->  **tiszta megoldás**létrehozása elemét.
 4. Az egyes. csproj-fájlokban frissítse a célként megadott keretrendszert `netcoreapp3.1` (vagy `netstandard2.1` Ha ez egy függvénytár-projekt).
     Az űrlap sorainak szerkesztése:
 
@@ -49,16 +49,30 @@ Függetlenül attól, hogy C# vagy Python használatával üzemelteti a Q # műv
     ```
 
     A cél-keretrendszerek meghatározásáról [itt](https://docs.microsoft.com/dotnet/standard/frameworks#how-to-specify-target-frameworks)talál további információt.
-5. A megoldásban lévő összes fájl mentése és lezárása
-6. Válassza ki az **eszközök**  ->  **parancssori**  ->  **fejlesztői parancssort**
-7. A megoldás minden egyes projektje esetében futtassa a következő parancsot:
 
-    ```dotnetcli
-    dotnet add [project_name].csproj package Microsoft.Quantum.Development.Kit
+5. Az összes. csproj fájlban állítsa be az SDK-t az `Microsoft.Quantum.Sdk` alábbi sorban látható módon. Figyelje meg, hogy a verziószámnak a legújabb elérhetőnek kell lennie, és megtekintheti a [kibocsátási megjegyzések](https://docs.microsoft.com/quantum/relnotes/)áttekintésével.
+
+    ```xml
+    <Project Sdk="Microsoft.Quantum.Sdk/0.11.2006.207">
     ```
 
-   Ha a projektek más Microsoft. Quantum csomagokat használnak (például Microsoft. Quantum. Numerikusok), futtassa a parancsot ezekre is.
-8. Zárjuk be a parancssort, és válassza a **Build**  ->  **Build Solution** ( *ne* válassza az Újraépítés megoldás lehetőséget)
+6. Mentse és zárjunk be minden fájlt a megoldásban.
+
+7. Válassza az **eszközök**  ->  **parancssori**  ->  **fejlesztői parancssor**lehetőséget. Másik lehetőségként használhatja a csomagkezelő konzolt a Visual Studióban is.
+
+8. A megoldás minden egyes projektje esetében futtassa a következő parancsot a csomag **eltávolításához** :
+
+    ```dotnetcli
+    dotnet remove [project_name].csproj package Microsoft.Quantum.Development.Kit
+    ```
+
+   Ha a projektek más Microsoft. Quantum vagy Microsoft. Azure. Quantum csomagokat használnak (pl. microsoft. Quantum. Numerikusok), futtassa az **Add** parancsot a következőhöz a használt verzió frissítéséhez.
+
+    ```dotnetcli
+    dotnet add [project_name].csproj package [package_name]
+    ```
+
+9. Zárjuk be a parancssort, és válassza a **Build**  ->  **Build Solution** ( *ne* válassza az Újraépítés megoldást) lehetőséget.
 
 Most már kihagyhatja a [Visual Studio QDK bővítmény frissítését](#update-visual-studio-qdk-extension).
 
@@ -66,35 +80,65 @@ Most már kihagyhatja a [Visual Studio QDK bővítmény frissítését](#update-
 ### <a name="update-q-projects-in-visual-studio-code"></a>Q # projektek frissítése a Visual Studio Code-ban
 
 1. A Visual Studio Code-ban nyissa meg a frissíteni kívánt projektet tartalmazó mappát.
-2. **Terminál**  ->  **új termináljának** kiválasztása
-3. Kövesse a parancssor használatával történő frissítéshez szükséges utasításokat (közvetlenül alább)
+2. Válassza a **terminál**  ->  **új terminál**elemet.
+3. Kövesse a parancssor használatával történő frissítéshez szükséges utasításokat (közvetlenül alább).
 
 ### <a name="update-q-projects-using-the-command-line"></a>Q # projektek frissítése a parancssor használatával
 
-1. Navigáljon a projektfájlt tartalmazó mappára.
+1. Navigáljon a fő projektfájlt tartalmazó mappához.
+
 2. Futtassa az alábbi parancsot:
 
     ```dotnetcli
     dotnet clean [project_name].csproj
     ```
 
-3. Az egyes. csproj-fájlokban frissítse a célként megadott keretrendszert `netcoreapp3.1` (vagy `netstandard2.1` Ha ez egy függvénytár-projekt).
-    Az űrlap sorainak szerkesztése:
+3. Határozza meg a QDK aktuális verzióját. A megkereséséhez tekintse át a [kibocsátási megjegyzéseket](https://docs.microsoft.com/quantum/relnotes/). A verzió formátuma a következőhöz hasonló lesz: `0.11.2006.207` .
 
-    ```xml
-    <TargetFramework>netcoreapp3.1</TargetFramework>
-    ```
+4. Az egyes `.csproj` fájlokban végezze el a következő lépéseket:
 
-    A cél-keretrendszerek meghatározásáról [itt](https://docs.microsoft.com/dotnet/standard/frameworks#how-to-specify-target-frameworks)talál további információt.
-4. Futtassa az alábbi parancsot:
+    - Frissítse a célként megadott keretrendszert a `netcoreapp3.1` következőre: (vagy `netstandard2.1` Ha ez egy függvénytár-projekt). Az űrlap sorainak szerkesztése:
 
-    ```dotnetcli
-    dotnet add package Microsoft.Quantum.Development.Kit
-    ```
+        ```xml
+        <TargetFramework>netcoreapp3.1</TargetFramework>
+        ```
 
-    Ha a projekt más Microsoft. Quantum csomagokat (például Microsoft. Quantum. numerikus értékeket) használ, futtassa a parancsot ezekre is.
-5. Mentse és zárjunk be minden fájlt.
-6. Ismételje meg a 1-4-et minden egyes projekt-függőség esetében, majd térjen vissza a fő projektet tartalmazó mappára, és futtassa a következőt:
+        A cél-keretrendszerek meghatározásáról [itt](https://docs.microsoft.com/dotnet/standard/frameworks#how-to-specify-target-frameworks)talál további információt.
+
+    - Cserélje le az SDK-ra mutató hivatkozást a projekt definíciójában. Győződjön meg arról, hogy a verziószám a **3. lépésben**meghatározott értéknek felel meg.
+
+        ```xml
+        <Project Sdk="Microsoft.Quantum.Sdk/0.11.2006.207">
+        ```
+
+    - Ha van, távolítsa el a csomagra mutató hivatkozást `Microsoft.Quantum.Development.Kit` , amely a következő bejegyzésben lesz meghatározva:
+
+        ```xml
+        <PackageReference Include="Microsoft.Quantum.Development.Kit" Version="0.10.1910.3107" />
+        ```
+
+    - Frissítse az összes Microsoft Quantum-csomag verzióját a QDK legutóbb kiadott verziójára (a **3. lépésben**meghatározva). A csomagok neve a következő mintákkal történik:
+
+        ```
+        Microsoft.Quantum.*
+        Microsoft.Azure.Quantum.*
+        ```
+    
+        A csomagokra mutató hivatkozások formátuma a következő:
+
+        ```xml
+        <PackageReference Include="Microsoft.Quantum.Compiler" Version="0.11.2006.207" />
+        ```
+
+    - Mentse a módosított fájlt.
+
+    - Állítsa vissza a projekt függőségeit a következő módon:
+
+        ```dotnetcli
+        dotnet restore [project_name].csproj
+        ```
+
+4. Váltson vissza a fő projektet tartalmazó mappára, és futtassa a következőt:
 
     ```dotnetcli
     dotnet build [project_name].csproj

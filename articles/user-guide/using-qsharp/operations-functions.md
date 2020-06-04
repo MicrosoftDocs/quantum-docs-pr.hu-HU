@@ -6,12 +6,12 @@ ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.operationsfunctions
-ms.openlocfilehash: bc9695b85b68807801225ccbc903a4622b450768
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: 9e924b973c4f22a59dd862df3f4f0d70278a1b4e
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83431070"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327798"
 ---
 # <a name="operations-and-functions-in-q"></a>Műveletek és függvények a Q-ban #
 
@@ -670,5 +670,6 @@ A rekurzió használatának két fontos megjegyzése van, azonban:
 - Ha tényleges kvantum-eszközön végez végrehajtást, előfordulhat, hogy a halmozott terület korlátozva van, ezért a mélyebb rekurzió hibát okozhat.
   A Q # Compiler és a Runtime nem azonosítja és optimalizálja a farok rekurzióját.
 
-## <a name="whats-next"></a>Vajon mi a következő lépés?
+## <a name="next-steps"></a>Következő lépések
+
 További tudnivalók a Q #-ban található [változókról](xref:microsoft.quantum.guide.variables) .

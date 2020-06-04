@@ -7,26 +7,26 @@ ms.date: 10/19/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.howto.createproject
-ms.openlocfilehash: c093284f1ea33b72d4d264992b0ba6bf6bc72782
-ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
+ms.openlocfilehash: 8019b32a3290e2d45124ebb1eb75395f6cb758db
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 02/06/2020
-ms.locfileid: "77036440"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327526"
 ---
 # <a name="create-a-q-project-in-your-development-environment"></a>Q # projekt létrehozása a fejlesztői környezetben
 
 Megtudhatja, hogyan hozhat létre Q # projektet a QDK.
 
-A Q # projekt a kvantum-kódot tartalmazó Q # fájlokat, valamint a Quantum program futtatására szolgáló gazda programot tartalmaz. A gazda programot .NET-nyelveken C#, például a (z) vagy a Pythonban is megírhatja. A Q # kódot egy Jupyter-jegyzetfüzetben is futtathatja az IQ # kernel használatával.
+A Q # projekt a kvantum-kódot tartalmazó Q # fájlokat, valamint a Quantum program futtatására szolgáló gazda programot tartalmaz. A gazda programot .NET-nyelveken, például a C#-ban vagy a Pythonban is megírhatja. A Q # kódot egy Jupyter Notebook is futtathatja az IQ # kernel használatával.
 
 Válassza ki a fejlesztési környezetét és nyelvét az alábbi fejezetekben:
 
 * [Python](#create-a-python-project)
-* [Q # Jupyter notebookok](#create-a-q-jupyter-notebook-project)
-* [C#a Visual Studióval](#create-a-c-project-on-windows-using-visual-studio)
-* [C#VS Code-val](#create-a-c-project-using-vs-code)
-* [C#a parancssorral](#create-a-c-project-using-the-dotnet-command-line-tool)
+* [Q# nyelvű Jupyter-notebookok](#create-a-q-jupyter-notebook-project)
+* [C# a Visual Studióval](#create-a-c-project-on-windows-using-visual-studio)
+* [C# és VS Code](#create-a-c-project-using-vs-code)
+* [C# a parancssorból](#create-a-c-project-using-the-dotnet-command-line-tool)
 
 ## <a name="create-a-python-project"></a>Python-projekt létrehozása
 
@@ -36,7 +36,7 @@ Válassza ki a fejlesztési környezetét és nyelvét az alábbi fejezetekben:
 
 1. Hozzon létre egy mappát a projekt számára, és navigáljon a mappára
 
-1. Hozzon létre egy `Operation.qs`nevű Q # fájlt, és adja hozzá a Q # kódját. Például:
+1. Hozzon létre egy nevű Q # fájlt `Operation.qs` , és adja hozzá a q # kódját. Például:
 
     ```qsharp
     namespace HelloWorld {
@@ -50,7 +50,7 @@ Válassza ki a fejlesztési környezetét és nyelvét az alábbi fejezetekben:
     }
     ```
 
-1. Hozzon létre egy `host.py` nevű Python-gazdagépet a Q # művelet meghívásához. Például:
+1. Hozzon létre egy nevű Python-gazdagépet a `host.py` Q # művelet meghívásához. Például:
 
     ```python
     import qsharp
@@ -89,7 +89,7 @@ Most már folytathatja a kvantum-program fejlesztését.
 
 1. Lépjen a parancssorban megjelenített URL-címre. Például: [http://localhost:8888/?token=c790a52ba54f0cf77465c3c8983d776348285b0280d91b85]
 
-1. Megjelenik egy Jupyter lap a böngészőben. A **Files (fájlok** ) lapon válassza az **új** > **q #** lehetőséget, hogy Jupyter-jegyzetfüzetet hozzon létre a q # kernel használatával. Adja hozzá a következő kódot az első jegyzetfüzet-cellához:
+1. Megjelenik egy Jupyter lap a böngészőben. A **Files (fájlok** ) lapon válassza az **új**  >  **q #** elemet a q # kernelt tartalmazó Jupyter notebook létrehozásához. Adja hozzá a következő kódot az első jegyzetfüzet-cellához:
 
     ```qsharp
     operation SayHello() : Unit {
@@ -97,21 +97,21 @@ Most már folytathatja a kvantum-program fejlesztését.
     }
     ```
 
-1. Válassza a **cella** > a **cellák futtatása** lehetőséget a jegyzetfüzet futtatásához. `SayHello` hamarosan megjelennek a cella kimenetében:
+1. Válassza a **cella**  >  **futtatása cellákat** a jegyzetfüzet futtatásához. `SayHello`hamarosan megjelenik a cella kimenetében:
 
-    ![Jupyter-notebookcella Q#-kóddal](~/media/install-guide-jupyter.png)
+    ![Jupyter Notebook cella Q # kóddal](~/media/install-guide-jupyter.png)
 
     Jupyter-jegyzetfüzetekben való futtatáskor a Q # kód le van fordítva, és a jegyzetfüzet a megtalált művelet (ek) nevét adja meg.
 
 1. Egy új cellában szimulálja a most létrehozott `%simulate`-művelet végrehajtását egy kvantumszámítógépen:
 
-    ![Jupyter-notebookcella %simulate használatával](~/media/install-guide-jupyter-simulate.png)
+    ![Jupyter Notebook cella% szimulálása mágia](~/media/install-guide-jupyter-simulate.png)
 
     A képernyőn megjelenik az üzenet a meghívott művelet eredményével együtt (ebben az esetben üresen).
 
 Mostantól további Q #-műveleteket is hozzáadhat a kvantum-fejlesztés folytatásához.
 
-## <a name="create-a-c-project-on-windows-using-visual-studio"></a>C# Projekt létrehozása Windows rendszeren a Visual Studio használatával
+## <a name="create-a-c-project-on-windows-using-visual-studio"></a>C#-projekt létrehozása Windows rendszeren a Visual Studio használatával
 
 1. Előfeltételek
 
@@ -119,12 +119,12 @@ Mostantól további Q #-műveleteket is hozzáadhat a kvantum-fejlesztés folyta
 
 1. Hozzon létre egy új Q#-alkalmazást
 
-    * Lépjen a **Fájl** -> **Új** -> **Projekt** lehetőséghez
+    * Ugrás a **fájl**  ->  **új**  ->  **projektre**
     * A keresőmezőbe írja be a következőt: `Q#`
     * Válassza a **Q#-alkalmazás** elemet
-    * Kattintson a **Tovább** gombra.
+    * Válassza a **tovább** lehetőséget
     * Válassza ki az alkalmazás nevét és helyét
-    * Kattintson a **Létrehozás** elemre.
+    * **Létrehozás** kiválasztása
 
 1. Vizsgálja meg a projektet
 
@@ -132,7 +132,7 @@ Mostantól további Q #-műveleteket is hozzáadhat a kvantum-fejlesztés folyta
 
 1. Az alkalmazás futtatása
 
-    * Válassza a **Hibakeresés** -> **Indítás hibakeresés nélkül** lehetőséget
+    * **Hibakeresési**  ->  **kezdés kiválasztása hibakeresés nélkül**
     * Látni fogja, hogy a következő szöveg jelenik meg a konzolablakban: `Hello quantum world!`.
 
 Most már folytathatja a kvantum-fejlesztést a Visual Studio használatával
@@ -140,7 +140,7 @@ Most már folytathatja a kvantum-fejlesztést a Visual Studio használatával
 > [!NOTE]
 > * Ha egy Visual Studio-megoldásban több projekt is található, a megoldásban foglalt összes projektnek a megoldás mappájában vagy valamelyik almappájában kell lennie.  
 
-## <a name="create-a-c-project-using-vs-code"></a>Projekt létrehozása C# a vs Code használatával
+## <a name="create-a-c-project-using-vs-code"></a>C#-projekt létrehozása a VS Code használatával
 
 1. Előfeltételek
 
@@ -148,7 +148,7 @@ Most már folytathatja a kvantum-fejlesztést a Visual Studio használatával
 
 1. Hozzon létre egy új projektet:
 
-    * Lépjen a **Nézet** -> **Parancskatalógus** lehetőséghez
+    * Ugrás a **View**  ->  **parancs-paletta** megtekintéséhez
     * Válassza a **Q #: új projekt létrehozása** lehetőséget
     * **Önálló konzolos alkalmazás** kiválasztása
     * Lépjen arra a helyre a fájlrendszerben, ahol létre szeretné hozni az alkalmazást
@@ -156,8 +156,8 @@ Most már folytathatja a kvantum-fejlesztést a Visual Studio használatával
 
 1. Futtassa az alkalmazást:
 
-    * Ugrás a **terminal** -> **új terminálra**
-    * Adja meg `dotnet run`
+    * Ugrás a **terminál**  ->  **új terminálra**
+    * Be`dotnet run`
     * A következőnek szövegnek kell megjelennie a kimeneti ablakban: `Hello quantum world!`
 
 Most már folytathatja a kvantum-fejlesztést a Visual Studio Code használatával.
@@ -165,11 +165,11 @@ Most már folytathatja a kvantum-fejlesztést a Visual Studio Code használatáv
 > [!NOTE]
 > * A Visual Studio Code-bővítmény jelenleg nem támogatja a több gyökérmappával rendelkező munkaterületeket. Ha egy VS Code-munkaterületen belül több projekt is található, az összes projektnek azonos gyökérmappában kell lennie.
 
-## <a name="create-a-c-project-using-the-dotnet-command-line-tool"></a>C# Projekt létrehozása a `dotnet` parancssori eszköz használatával
+## <a name="create-a-c-project-using-the-dotnet-command-line-tool"></a>C#-projekt létrehozása a `dotnet` parancssori eszköz használatával
 
 1. Előfeltételek
 
-    * A [Quantum Development Kit telepítése a parancssorba](xref:microsoft.quantum.install.cs)
+    * A [Quantum Development Kit telepítése a parancssorba](xref:microsoft.quantum.install.standalone)
 
 1. Új alkalmazás létrehozása
 
@@ -195,6 +195,6 @@ Most már folytathatja a kvantum-fejlesztést a Visual Studio Code használatáv
 
 Most folytassa a kvantum-fejlesztést a parancssori eszközök használatával.
 
-## <a name="whats-next"></a>A következő lépések
+## <a name="next-steps"></a>Következő lépések
 
 Most, hogy létrehozott egy projektet az előnyben részesített környezetben, folytathatja a kvantum-fejlesztést.

@@ -6,12 +6,12 @@ ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.qubits
-ms.openlocfilehash: e89b9ccfe2a0796e01eedfc99f7ce71038d85f38
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: 0deb0729a88c49798f32a22a943b935d383c570b
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83430934"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327543"
 ---
 # <a name="working-with-qubits"></a>Munkavégzés qubitekkel
 
@@ -30,7 +30,7 @@ Az utasítás a kulcsszót tartalmazza `using` , majd egy nyitó zárójelet `(`
 A kötés ugyanazt a mintát követi, mint az utasítások: egy vagy több szimbólumot `let` vagy egy szimbólumot, majd egy egyenlőségjelet `=` , és egy értéket, vagy az *inicializálók*egyező rekordját.
 
 Az inicializálók a következők lehetnek: egyetlen qubit, `Qubit()` vagy qubits tömbje, `Qubit[n]` ahol `n` a `Int` kifejezés szerepel.
-Például:
+Példa:
 
 ```qsharp
 using (qubit = Qubit()) {
@@ -59,7 +59,7 @@ Ezek a qubits általában nem tiszta állapotban vannak, azaz nem feltétlenül 
 Ezeket gyakran "piszkos" qubits nevezik, mert az állapotuk ismeretlen, és a kvantum-számítógép memóriájának más részeivel is összekeverhető.
 
 A kötés ugyanazokat a mintákat és szabályokat követi, mint egy `using` utasításban.
-Például:
+Példa:
 ```qsharp
 borrowing (qubit = Qubit()) {
     // ...
@@ -221,5 +221,6 @@ Ennek az az oka, hogy tisztában vagyunk az áramkör struktúrájával, így k�
 
 Ez a kód egy másik Canon-függvénnyel hasonlítható össze `MultiControlledXClean` , amely ugyanazt a célt fogja elérni, mint egy szorzásra vezérelt `X` művelet megvalósítását, amely azonban számos tiszta qubits használ a `using` mechanizmus használatával. 
 
-## <a name="whats-next"></a>Vajon mi a következő lépés?
+## <a name="next-steps"></a>Következő lépések
+
 Tudnivalók a [vezérlési folyamatról](xref:microsoft.quantum.guide.controlflow) a Q #-ban.
