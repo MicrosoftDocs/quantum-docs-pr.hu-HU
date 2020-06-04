@@ -1,19 +1,19 @@
 ---
 uid: microsoft.quantum.welcome
-title: Bevezetés a Quantum Development Kit használatába
+title: Bevezetés a Quantum Development Kit (QDK) használatába
 description: Ismerkedjen meg a kvantum-projektek programozásával Q# nyelven, a Microsoft Quantum Development Kit használatával.
 author: natke
 ms.author: nakersha
 ms.date: 5/10/2020
 ms.topic: overview
-ms.openlocfilehash: 2356fee2333acb73f528fad6d9def68a7fe84083
-ms.sourcegitcommit: 4da99168479f96f408b984279a5a7eabcda752db
+ms.openlocfilehash: 5fea46e43d9a3739e4b058781e1b52dff20b7e21
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: HT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83708718"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327509"
 ---
-# <a name="get-started-with-the-quantum-development-kit"></a>Bevezetés a Quantum Development Kit használatába
+# <a name="get-started-with-the-quantum-development-kit-qdk"></a>Bevezetés a Quantum Development Kit (QDK) használatába
 
 Üdvözli a Microsoft Quantum Development Kit!  
 
