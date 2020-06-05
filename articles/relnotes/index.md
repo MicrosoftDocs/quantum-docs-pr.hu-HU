@@ -6,12 +6,12 @@ ms.author: nakersha
 ms.date: 09/30/2019
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: f365d471d9af73828b78c4fab8579557310a5288
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: ec5b3b26102df6ecc19d89b41c7fd8938b34e761
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: HT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83426768"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327764"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>A Microsoft Quantum Development Kit kibocsátási megjegyzései
 
@@ -20,6 +20,19 @@ Ez a cikk információkat tartalmaz a Quantum Development Kit egyes verzióiról
 A telepítési utasításokat lásd a [telepítési útmutatóban](xref:microsoft.quantum.install).
 
 A frissítésre vonatkozó utasításokat lásd a [frissítési útmutatóban](xref:microsoft.quantum.update).
+
+## <a name="version-0112006207"></a>0\.11.2006.207-es verzió
+
+*Kiadási dátum: 2020. június 3.*
+
+A verzió a következőket tartalmazza:
+
+- A Q#-notebookok és a Python-gazdaprogramok nem fognak meghibásodni, ha létezik Q# belépési pont
+- A [Szabványos kódtár](xref:microsoft.quantum.libraries.standard.intro) frissítései a hozzáférés-módosítók használatához
+- A fordító mostantól lehetővé teszi a beépített átírási lépések között az átírási lépések beépülő moduljának használatát
+- Számos elavult függvény és művelet el lett távolítva az [API-alapelvek](xref:microsoft.quantum.contributing.api-design) dokumentumban ismertetett ütemezés szerint. A 0.11.2004.2825-ös verzióban figyelmeztetések nélkül buildelő Q#-programok és -kódtárak működése nem változik.
+
+A [kódtárak](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [fordítók](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [futtatókörnyezetek](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [minták](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed), [IQ#](https://github.com/microsoft/iqsharp/pulls?q=is%3Apr+is%3Aclosed) és [Katák](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed) lezárt lekéréses kérelmeinek teljes listáját itt tekintheti meg.  
 
 ## <a name="version-01120042825"></a>0\.11.2004.2825-ös verzió
 
@@ -34,7 +47,6 @@ A verzió a következőket tartalmazza:
 > [!NOTE]
 > Az új [`@EntryPoint()`](xref:microsoft.quantum.core.entrypoint) attribútumot használó Q# nyelvű parancssori alkalmazások jelenleg nem hívhatók meg Python- vagy .NET-gazdaprogramokból.
 > További információkat a [Python](xref:microsoft.quantum.install.python) és a [.NET közötti együttműködést](xref:microsoft.quantum.install.cs) bemutató útmutatókban talál.
-
 
 ## <a name="version-01120033107"></a>0\.11.2003.3107-es verzió
 

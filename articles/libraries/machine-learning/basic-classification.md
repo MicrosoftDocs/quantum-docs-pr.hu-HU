@@ -6,12 +6,12 @@ ms.author: v-edsanc@microsoft.com
 ms.date: 02/16/2020
 ms.topic: article
 uid: microsoft.quantum.libraries.machine-learning.basics
-ms.openlocfilehash: ddd889fdfabb505d7118c1eff551a6fbfa757309
-ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+ms.openlocfilehash: 1d2538fd164c4c61c2712978d3b5c57b0eb766e6
+ms.sourcegitcommit: 8d9d392bf5e114ae223e6f689ba80d25866ff586
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84327645"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84422172"
 ---
 # <a name="basic-classification-classify-data-with-the-qdk"></a>Alapszintű besorolás: adatok osztályozása a QDK
 
@@ -86,9 +86,9 @@ A következő kódot menti egy nevű fájlba `Training.qs` .
 A fenti kódban meghatározott legfontosabb funkciók és műveletek a következők:
 
 - `ClassifierStructure() : ControlledRotation[]`: ebben a függvényben az áramköri modell felépítését úgy állítjuk be, hogy hozzáadja az ellenőrzött kapuk rétegeit. Ez a lépés egy szekvenciális, mélyebb tanulási modellben található neuronok rétegeinek deklarációját hasonlítja.
-- `TrainHalfMoonModel() : TrainWineModel() : (Double[], Double)`: Ez a művelet a kód legfontosabb része, és meghatározza a képzést. Itt betöltjük a mintákat a könyvtárban található adatkészletből, beállítjuk a Hyper-paramétereket és a betanítás kezdeti paramétereit, és elindítjuk a képzést a könyvtárban található művelet meghívásával `TrainSequentialClassifier` . Megjeleníti a paramétereket és a torzítást, amely meghatározza az osztályozó.
+- `TrainHalfMoonModel() : (Double[], Double)`: Ez a művelet a kód legfontosabb része, és meghatározza a képzést. Itt betöltjük a mintákat a könyvtárban található adatkészletből, beállítjuk a Hyper-paramétereket és a betanítás kezdeti paramétereit, és elindítjuk a képzést a könyvtárban található művelet meghívásával `TrainSequentialClassifier` . Megjeleníti a paramétereket és a torzítást, amely meghatározza az osztályozó.
 - `ValidateHalfMoonModel(parameters : Double[], bias : Double) : Int`: Ez a művelet meghatározza a modell kiértékelésének ellenőrzési folyamatát. Itt betöltjük a mintákat az ellenőrzéshez, a mintavételezések számát és a tűréshatárt. Az érvényesítéshez a kiválasztott kötegben a téves besorolások számát adja eredményül.
 
-## <a name="next-steps"></a>Következő lépések
+## <a name="next-steps"></a>További lépések
 
 Először is játszhat a kóddal, és megpróbálhat módosítani néhány paramétert, hogy megtudja, hogyan befolyásolja a képzést. Ezután a következő oktatóanyagban [tervezze meg saját besorolását](xref:microsoft.quantum.libraries.machine-learning.design), és Ismerje meg, hogyan határozhatja meg az osztályozó szerkezetét.

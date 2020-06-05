@@ -6,12 +6,12 @@ ms.author: a-gibec@microsoft.com
 ms.date: 10/06/2019
 uid: microsoft.quantum.circuit-tutorial
 ms.topic: tutorial
-ms.openlocfilehash: f0b87936c9baf07555e76f295da58c0a6b9ecd17
-ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+ms.openlocfilehash: 05d3292e1c6e3c8c1163c460f2aaa51c591aa1d5
+ms.sourcegitcommit: 8d9d392bf5e114ae223e6f689ba80d25866ff586
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84328595"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84422240"
 ---
 # <a name="tutorial-write-and-simulate-qubit-level-programs-in-q"></a>Oktatóanyag: qubit-szintű programok írása és szimulálása a Q-ban\#
 
@@ -386,7 +386,7 @@ A bemeneti állapot első sorában a $ \ket {000} $:
 * **`    ---`**: Az amplitúdó fázisának grafikus ábrázolása.
 * **`[ 0.0000 rad ]`**: a fázis numerikus értéke (radiánban).
 
-A magnitúdó és a fázis is grafikus ábrázolással jelenik meg. A magnitúdó ábrázolása egyszerű: megmutatja, hogy egy sáv `*` , annál nagyobb a valószínűsége, annál nagyobb lesz a sáv. A fázisban tekintse meg a DumpMachine szakaszt [itt](xref:microsoft.quantum.techniques.testing-and-debugging#dump-functions) a lehetséges szimbólum-ábrázolások számára a szög tartományai alapján.
+A magnitúdó és a fázis is grafikus ábrázolással jelenik meg. A magnitúdó ábrázolása egyszerű: megmutatja, hogy egy sáv `*` , annál nagyobb a valószínűsége, annál nagyobb lesz a sáv. A fázisban tekintse meg a [tesztelés és hibakeresés: kiírási függvények](xref:microsoft.quantum.guide.testingdebugging#dump-functions) a lehetséges szimbólum-ábrázolásokhoz a szög tartományai alapján lehetőséget.
 
 
 A kinyomtatott kimenet tehát azt szemlélteti, hogy a programozott kapuk átalakították az állapotukat
