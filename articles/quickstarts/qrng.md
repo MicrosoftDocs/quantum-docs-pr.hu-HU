@@ -6,12 +6,12 @@ ms.author: megbrow@microsoft.com
 ms.date: 10/25/2019
 ms.topic: article
 uid: microsoft.quantum.quickstarts.qrng
-ms.openlocfilehash: 3e109553adc4d724733834e3660bfe7789052bcf
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: 8fafbccfe2a94a824353221b5e7eb8bac16c42f2
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: HT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83426819"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327356"
 ---
 # <a name="tutorial-implement-a-quantum-random-number-generator-in-q"></a>Oktatóanyag: Kvantum-véletlenszámgenerátor implementálása a Q#-ban\#
 
@@ -20,7 +20,7 @@ A Q#-ban írt kvantumalgoritmusok egyik egyszerű példája egy kvantum-véletle
 ## <a name="prerequisites"></a>Előfeltételek
 
 - A Microsoft [Quantum Development Kit](xref:microsoft.quantum.install).
-- [Q#-projekt létrehozása](xref:microsoft.quantum.howto.createproject)
+- Hozzon létre egy Q#-projektet [a Q# használatával a parancssorból](xref:microsoft.quantum.install.standalone), egy [Python-gazdaprogrammal](xref:microsoft.quantum.install.python) vagy egy [C#-gazdaprogrammal](xref:microsoft.quantum.install.cs).
 
 ## <a name="write-a-q-operation"></a>Q#-művelet írása
 

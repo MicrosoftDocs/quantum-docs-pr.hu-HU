@@ -6,12 +6,12 @@ ms.author: chgranad@microsoft.com
 ms.date: 10/19/2019
 ms.topic: article
 uid: microsoft.quantum.quickstarts.search
-ms.openlocfilehash: 9562e1937a2cac49d682cc0524d8fb29e276d95c
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: 9e4c53b4d5159cf07f0654603c1d477ad09eb7c6
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: HT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83426804"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327407"
 ---
 # <a name="tutorial-implement-grovers-search-algorithm-in-q"></a>Oktatóanyag: A keresési Grover-algoritmus implementálása Q#-ban\#
 
@@ -39,7 +39,7 @@ A fokozatos növekedések száma kevesebb, mint a lista tételeinek száma. Grov
 
 ## <a name="write-the-code"></a>A kód írása
 
-1. A Quantum Development Kit használatával [hozzon létre egy új Q#-projektet](xref:microsoft.quantum.howto.createproject)`Grover` néven az Ön által választott fejlesztői környezetben.
+1. A Quantum Development Kit használatával [hozzon létre egy új Q#-projektet a parancssori alkalmazáshoz](xref:microsoft.quantum.install.standalone). A projektnek adja a következő címet: `Grover`.
 
 1. Az új projektjében adja a következő kódot az `Program.qs` fájlhoz:
 

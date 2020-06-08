@@ -3,15 +3,15 @@ title: Összefonódások megismerése Q# nyelven
 description: Ismerje meg, hogyan írhat kvantumprogramot Q# nyelven. Bell-állapotot jelző alkalmazás fejlesztése a Quantum Development Kit (QDK) használatával
 author: natke
 ms.author: nakersha
-ms.date: 10/07/2019
+ms.date: 05/29/2020
 ms.topic: tutorial
 uid: microsoft.quantum.write-program
-ms.openlocfilehash: 7836e39227fa2282c6e2faa039f6e625103d5403
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: 989080e7d9979bb87d14b2580d28732bb1092eb1
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: HT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83426848"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327373"
 ---
 # <a name="tutorial-explore-entanglement-with-q"></a>Oktatóanyag: Összefonódások megismerése Q\# nyelven
 
@@ -25,28 +25,27 @@ A Bell név a Bell-állapotokra utal. Ezek két qubit konkrét kvantumállapotá
 
 Ha készen áll a kódolásra, először végezze el a következő lépéseket: 
 
-* [Telepítse](xref:microsoft.quantum.install) a Quantum Development Kitet a választott nyelven és fejlesztési környezetben.
+* Telepítse a [Pythonhoz](xref:microsoft.quantum.install.python) vagy a [.NET](xref:microsoft.quantum.install.cs)-hez készült Quantum Development Kitet.
 * Ha a QDK már telepítve van, győződjön meg arról, hogy a legújabb verzióra van [frissítve](xref:microsoft.quantum.update).
 
 A leírást a QDK telepítése nélkül is követheti, hogy áttekintést kapjon a Q# programozási nyelvről és a kvantum-számítástechnika alapvető koncepcióiról.
 
 ## <a name="demonstrating-qubit-behavior-with-q"></a>A qubitek viselkedésének szemléltetése a Q# segítségével
 
-Emlékezzen vissza a [qubit egyszerű definíciójára](xref:microsoft.quantum.overview.understanding).  Míg a hagyományos bit egyetlen bináris értéket hordoz, ami 0 vagy 1 lehet, a qubit állapota egyszerre lehet a 0 és az 1 érték közötti **szuperpozícióban**.  Alapjában véve a qubit úgy képzelhető el, mint egy térbeli irány (más néven vektor).  A qubitek bármilyen lehetséges irányba mutathatnak. A két **klasszikus állapot** az a két irány, amelyek a 0 érték mérésének 100%-os esélyét és az 1 érték mérésének 100%-os esélyét jelentik.  Ennek a megjelenítésnek a formálisabb vizualizációja a [Bloch-gömb](/quantum/concepts/the-qubit#visualizing-qubits-and-transformations-using-the-bloch-sphere).
-
+Emlékezzen vissza a [qubit egyszerű definíciójára](xref:microsoft.quantum.overview.understanding).  Míg a hagyományos bit egyetlen bináris értéket hordoz, ami 0 vagy 1 lehet, a [qubit](xref:microsoft.quantum.glossary#qubit) állapota a 0 és az 1 érték közötti **szuperpozícióban** is lehet.  Alapjában véve a qubit úgy képzelhető el, mint egy térbeli irány (más néven vektor).  A qubitek bármilyen lehetséges irányba mutathatnak. A két **klasszikus állapot** az a két irány, amelyek a 0 érték mérésének 100%-os esélyét és az 1 érték mérésének 100%-os esélyét jelentik.  Ennek a megjelenítésnek a formálisabb vizualizációja a [Bloch-gömb](/quantum/concepts/the-qubit#visualizing-qubits-and-transformations-using-the-bloch-sphere).
 
 A mérés ténye egy bináris eredményt ad, és megváltoztatja a qubit állapotát. A mérés egy bináris eredményt ad, amely 0 vagy 1 lehet.  A qubit a szuperpozícióból (amely bármilyen irányú lehet) az egyik klasszikus állapotba kerül.  Ezt követően ugyanannak a mérésnek a megismétlése – ha időközben nem végeztünk el semmilyen más műveletet – ugyanazt a bináris eredményt adja.  
 
-Több qubit **össze is fonható**. Ha az összefonódott qubitek egyikéről mérést készítünk, a másik/többi állapotáról is információt kapunk.
+Több qubit [**össze is fonható**](xref:microsoft.quantum.glossary#entanglement). Ha az összefonódott qubitek egyikéről mérést készítünk, a másik/többi állapotáról is információt kapunk.
 
 Most már készen állunk annak szemléltetésére, hogy a Q# hogyan fejezi ki ezt a viselkedést.  A lehető legegyszerűbb programmal kezd, és azt építi fel a kvantum-szuperpozíció és a kvantum-összefonódás bemutatásához.
 
 ## <a name="setup"></a>Telepítés
 
-A Microsoft Quantum Development Kittel fejlesztett alkalmazások két részből állnak:
+Ez az oktatóprogram gazdaprogramokat használ, és két részből áll:
 
-1. Egy vagy több kvantumalgoritmusból, amelyek a Q# kvantumprogramozási nyelvvel lettek implementálva.
-1. Egy gazdaprogramból, amely a Pythonhoz vagy C#-hoz hasonló programozási nyelven van implementálva, és amely a fő belépési pontként szolgál, valamint Q#-műveleteket hív meg egy kvantumalgoritmus végrehajtásához.
+1. Több kvantumalgoritmusból, amelyek a Q# kvantumprogramozási nyelvvel lettek implementálva.
+1. Egy gazdaprogramból, amely a Pythonhoz vagy a C# nyelven van implementálva, és amely a fő belépési pontként szolgál, valamint Q#-műveleteket hív meg a kvantumalgoritmusok végrehajtásához.
 
 #### <a name="python"></a>[Python](#tab/tabid-python)
 
@@ -498,9 +497,8 @@ Ahogy az áttekintésben is említettük, az első qubit statisztikái nem vált
 
 Gratulálunk, megírta az első kvantumprogramját!
 
-## <a name="whats-next"></a>A következő lépések
+## <a name="next-steps"></a>További lépések
 
 A [Grover-keresés](xref:microsoft.quantum.quickstarts.search) című oktatóanyag ismerteti, hogyan lehet létrehozni és futtatni egy Grover-keresést, amely az egyik legnépszerűbb kvantum-számítástechnikai algoritmus, és remekül példázza, hogyan oldhatók meg valós problémák egy Q#-programmal és a kvantum-számítástechnika segítségével.  
 
 A [Bevezetés a Quantum Development Kit használatába](xref:microsoft.quantum.welcome) című cikkben további módszereket is talál a Q# és a kvantumprogramozás elsajátítására.
-

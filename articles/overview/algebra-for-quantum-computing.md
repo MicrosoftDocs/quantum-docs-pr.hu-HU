@@ -6,12 +6,12 @@ ms.author: bradben
 ms.date: 5/5/2020
 ms.topic: overview
 uid: microsoft.quantum.overview.algebra
-ms.openlocfilehash: 9f156a3cc092e295317061dda5e8aa29e9d5ca1e
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: 4750643d16ad8af6240df42c1b93353565561429
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: HT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83430849"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327594"
 ---
 # <a name="linear-algebra-for-quantum-computing"></a>A kvantum-számítástechnika lineáris algebrája
 
@@ -67,7 +67,7 @@ $$
 
 Az eredmény egy négydimenziós mátrix, amelyben minden elem egy valószínűséget jelöl. Az $ac$ például annak a valószínűsége, hogy mindkét qubit 0-val esik egybe, az $ad$ annak a valószínűsége, hogy az egyik 0-val, a másik 1-gyel, és így tovább. 
 
-Az $\begin{bmatrix} a \\\\  b \end{bmatrix}$ egyqubites állapotnak meg kell felelnie a következő követelménynek: $|a|^2 + |b|^2 = 1$. Erre a kvantumállapot jelölése érdekében van szükség. Az $\begin{bmatrix} ac \\\\  ad \\\\  bc \\\\  bd \end{bmatrix}$ kétqubites állapotnak meg kell felelnie a következő követelménynek: $|a|^2 + |b|^2 + |c|^2+ |d|^2 = 1$.
+Az $\begin{bmatrix} a \\\\  b \end{bmatrix}$ egyqubites állapotnak meg kell felelnie a következő követelménynek: $|a|^2 + |b|^2 = 1$. Erre a kvantumállapot jelölése érdekében van szükség. Az $\begin{bmatrix} ac \\\\  ad \\\\  bc \\\\  bd \end{bmatrix}$ kétqubites állapotnak meg kell felelnie a következő követelménynek: $|ac|^2 + |ad|^2 + |bc|^2+ |bd|^2 = 1$.
 
 ## <a name="summary"></a>Összefoglalás
 
@@ -75,5 +75,4 @@ A lineáris algebra a kvantum-számítástechnika és a kvantumfizika leírásá
 
 ## <a name="next-steps"></a>További lépések
 
-> [!div class="nextstepaction"]
-> [A QDK telepítése](xref:microsoft.quantum.install)
+[A QDK telepítése](xref:microsoft.quantum.install)
