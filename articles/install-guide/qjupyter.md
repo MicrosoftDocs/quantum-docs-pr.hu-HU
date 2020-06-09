@@ -6,12 +6,12 @@ ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.jupyter
-ms.openlocfilehash: 0c4dc856c94b0a694fb99607eda64cec4d5c221d
-ms.sourcegitcommit: 328f45a0b64cb6b325fa9d3b3ddb74a6a7a97ee9
+ms.openlocfilehash: 9117794d6cf6f05fa34e05c21fad8977d0e76505
+ms.sourcegitcommit: c8ebc5d7d8581444754f5d7bfaca2f25601f1b14
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83660773"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84577820"
 ---
 # <a name="develop-with-q-jupyter-notebooks"></a>Fejlesztés Q# Jupyter-notebookokkal
 
@@ -32,7 +32,7 @@ Az IQ# elsősorban a Jupyter és a Python által a .NET Core SDK-hoz használt b
 
 1. Telepítse a(z) `iqsharp` csomagot
 
-    ```bash
+    ```dotnetcli
     dotnet tool install -g Microsoft.Quantum.IQSharp
     dotnet iqsharp install
     ```
@@ -41,7 +41,7 @@ Az IQ# elsősorban a Jupyter és a Python által a .NET Core SDK-hoz használt b
 
     - Futtassa a következő parancsot a notebook-kiszolgáló elindításához:
 
-        ```bash
+        ```
         jupyter notebook
         ```
 
@@ -68,7 +68,7 @@ Az IQ# elsősorban a Jupyter és a Python által a .NET Core SDK-hoz használt b
 
         A képernyőn megjelenő üzenetnek a meghívott művelet eredményével együtt kell megjelennie (itt látható az üres rekord, mert a `()` műveletünk egyszerűen egy `Unit` típust ad vissza).
 
-## <a name="next-steps"></a>További lépések
+## <a name="next-steps"></a>Következő lépések
 
 Most, hogy telepítette a QDK a Q # Jupyter-jegyzetfüzetekhez, megírhatja és futtathatja [első Quantum programját](xref:microsoft.quantum.quickstarts.qrng) úgy, hogy a q # kódját közvetlenül a Jupyter notebook-környezetbe írja.
 

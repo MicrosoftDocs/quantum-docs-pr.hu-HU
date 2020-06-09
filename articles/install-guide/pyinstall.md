@@ -6,12 +6,12 @@ ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.python
-ms.openlocfilehash: 35499daae0cd0ae329e39b43b0d8dd5a00183871
-ms.sourcegitcommit: 328f45a0b64cb6b325fa9d3b3ddb74a6a7a97ee9
+ms.openlocfilehash: f18d005012dc1c52aab456f1c7b194d182cab786
+ms.sourcegitcommit: c8ebc5d7d8581444754f5d7bfaca2f25601f1b14
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83660728"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84578164"
 ---
 # <a name="develop-with-q-and-python"></a>Fejlesztés Q # és Python nyelven
 
@@ -26,13 +26,13 @@ Telepítse a QDK a Python-gazdagépek kifejlesztéséhez a Q # műveleteinek meg
 
 1. Telepítse a `qsharp` csomagot, amely egy Python-csomag, amely lehetővé teszi a Q # és a Python közötti együttműködési lehetőséget.
 
-    ```bash
+    ```
     pip install qsharp
     ```
 
 1. Telepítse az IQ #, a Jupyter és a Python által használt kernelt, amely a Q # műveletek fordításának és végrehajtásának alapvető funkcióit biztosítja.
 
-    ```bash
+    ```dotnetcli
     dotnet tool install -g Microsoft.Quantum.IQSharp
     dotnet iqsharp install
     ```
@@ -69,20 +69,20 @@ Telepítse a QDK a Python-gazdagépek kifejlesztéséhez a Q # műveleteinek meg
 
     - Futtassa a programot:
 
-        ```bash
+        ```
         python hello_world.py
         ```
 
     - Ellenőrizze a kimenetet. A program kimenetében a következő soroknak kell szerepelniük:
 
-        ```bash
+        ```
         Hello from quantum world!
-       ```
+        ```
 
 
 > [!NOTE]
 > * A Python Jupyter jegyzetfüzeteket is használhatja a klasszikus Python program írásához és a Q # műveletek a cellákból való meghívásához. A Python-kód csak egy normál Python-program.
 
-## <a name="next-steps"></a>További lépések
+## <a name="next-steps"></a>Következő lépések
 
 Most, hogy a választott környezetben telepítette a Quantum Development Kitet, megírhatja és futtathatja [az első kvantumprogramját](xref:microsoft.quantum.quickstarts.qrng).

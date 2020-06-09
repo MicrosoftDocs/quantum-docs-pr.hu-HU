@@ -7,12 +7,12 @@ ms.date: 10/19/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.howto.createproject
-ms.openlocfilehash: 8019b32a3290e2d45124ebb1eb75395f6cb758db
-ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+ms.openlocfilehash: 8af8e3288aab731520ede984d5f89644de292385
+ms.sourcegitcommit: c8ebc5d7d8581444754f5d7bfaca2f25601f1b14
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84327526"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84578211"
 ---
 # <a name="create-a-q-project-in-your-development-environment"></a>Q # projekt létrehozása a fejlesztői környezetben
 
@@ -62,13 +62,13 @@ Válassza ki a fejlesztési környezetét és nyelvét az alábbi fejezetekben:
 
 1. Futtassa a programot:
 
-    ```bash
+    ```
     python host.py
     ```
 
 1. Ellenőrizze a kimenetet. A program kimenetében a következő soroknak kell szerepelniük:
 
-    ```bash
+    ```
     Hello from quantum world!
     0
     ```
@@ -83,7 +83,7 @@ Most már folytathatja a kvantum-program fejlesztését.
 
 1. Futtassa a következő parancsot a notebook-kiszolgáló elindításához:
 
-    ```bash
+    ```
     jupyter notebook
     ```
 
@@ -130,7 +130,7 @@ Mostantól további Q #-műveleteket is hozzáadhat a kvantum-fejlesztés folyta
 
     Látni fogja, hogy két fájl jött létre: `Driver.cs`, amely a C#-gazdaalkalmazás, valamint `Operation.qs`, amely egy Q#-program, amely üzenetek a konzolon való megjelenítésének egyszerű műveletét definiálja.
 
-1. Az alkalmazás futtatása
+1. Alkalmazás futtatása
 
     * **Hibakeresési**  ->  **kezdés kiválasztása hibakeresés nélkül**
     * Látni fogja, hogy a következő szöveg jelenik meg a konzolablakban: `Hello quantum world!`.
@@ -179,13 +179,13 @@ Most már folytathatja a kvantum-fejlesztést a Visual Studio Code használatáv
 
 1. Lépjen az új alkalmazás könyvtárához
 
-    ```bash
+    ```
     cd <project name>
     ```
 
     Látni fogja, hogy az alkalmazás projektfájljai mellett két fájl jött létre: egy Q#-fájl (`Operation.qs`) és egy C#-gazdafájl (`Driver.cs`).
 
-1. Az alkalmazás futtatása
+1. Alkalmazás futtatása
 
     ```dotnetcli
     dotnet run
