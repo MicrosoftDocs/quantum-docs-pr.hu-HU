@@ -6,12 +6,12 @@ ms.author: nakersha
 ms.date: 09/30/2019
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: ec5b3b26102df6ecc19d89b41c7fd8938b34e761
-ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+ms.openlocfilehash: 9a54c1d7a4403a98f945181fdad8ba8a7fdb1175
+ms.sourcegitcommit: 8d9d392bf5e114ae223e6f689ba80d25866ff586
 ms.translationtype: HT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84327764"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84422223"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>A Microsoft Quantum Development Kit kibocsátási megjegyzései
 
@@ -21,9 +21,9 @@ A telepítési utasításokat lásd a [telepítési útmutatóban](xref:microsof
 
 A frissítésre vonatkozó utasításokat lásd a [frissítési útmutatóban](xref:microsoft.quantum.update).
 
-## <a name="version-0112006207"></a>0\.11.2006.207-es verzió
+## <a name="version-0112006403"></a>0\.11.2006.403-as verzió
 
-*Kiadási dátum: 2020. június 3.*
+*Kiadási dátum: 2020. június 4.*
 
 A verzió a következőket tartalmazza:
 
