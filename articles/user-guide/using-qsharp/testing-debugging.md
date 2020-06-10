@@ -6,12 +6,12 @@ ms.author: mamykhai@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.guide.testingdebugging
-ms.openlocfilehash: 374ac42255ab6b2c5eff8ab7879b3a5103181f7f
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: dd6c7ae8a016423f26c37f3eedf0ae9c1d126b78
+ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83430917"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84630031"
 ---
 # <a name="testing-and-debugging"></a>Tesztelés és hibakeresés
 
@@ -218,7 +218,7 @@ A többi sor a kiinduló valószínűségi amplitúdót írja le a \ket{n} $ és
 
 * **`∣0❭:`** Ez a sor a `0` számítási alap állapotnak felel meg.
 * **`0.707107 +  0.000000 i`**: a valószínűségi amplitúdója Descartes formátumban.
-* **` == `**: a `equal` Sign elválasztja mindkét egyenértékű ábrázolással rendelkezik.
+* **` == `**: a `equal` jel elválasztja mindkét egyenértékű ábrázolást.
 * **`**********  `**: A magnitúdó grafikus ábrázolása, amelynek száma arányos az `*` állapot-vektor mérésének valószínűségével.
 * **`[ 0.500000 ]`**: a magnitúdó numerikus értéke
 * **`    ---`**: Az amplitúdó fázisának grafikus ábrázolása (lásd alább).

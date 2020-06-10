@@ -6,12 +6,12 @@ ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.python
-ms.openlocfilehash: f18d005012dc1c52aab456f1c7b194d182cab786
-ms.sourcegitcommit: c8ebc5d7d8581444754f5d7bfaca2f25601f1b14
+ms.openlocfilehash: 1ae208e7047cb040fb44945a59c3cc6508a09723
+ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
 ms.translationtype: MT
 ms.contentlocale: hu-HU
 ms.lasthandoff: 06/09/2020
-ms.locfileid: "84578164"
+ms.locfileid: "84630288"
 ---
 # <a name="develop-with-q-and-python"></a>Fejlesztés Q # és Python nyelven
 
@@ -36,6 +36,15 @@ Telepítse a QDK a Python-gazdagépek kifejlesztéséhez a Q # műveleteinek meg
     dotnet tool install -g Microsoft.Quantum.IQSharp
     dotnet iqsharp install
     ```
+
+    > [!NOTE]
+    > Ha a lépés során hibaüzenet jelenik `dotnet iqsharp install` meg, nyisson meg egy új Terminálablak-ablakot, és próbálkozzon újra.
+    > Ha ez továbbra sem működik, próbálja meg megkeresni a telepített `dotnet-iqsharp` eszközt (Windows rendszeren `dotnet-iqsharp.exe` ), és futtassa a következőt:
+    > ```
+    > /path/to/dotnet-iqsharp install --user --path-to-tool="/path/to/dotnet-iqsharp"
+    > ```
+    > ahol a `/path/to/dotnet-iqsharp` fájlrendszerben lévő eszköz abszolút elérési útját kell cserélni `dotnet-iqsharp` .
+    > Ez általában a `.dotnet/tools` felhasználói profil mappájában történik.
   
 1. Habár a Q #-t bármilyen IDE-ben használhatja a Python használatával, javasoljuk, hogy a Q # + Python-alkalmazásokhoz használja a Visual Studio Code (VS Code) IDE-t. A Visual Studio Code és a QDK Visual Studio Code bővítmény használatával gazdagabb funkciókhoz férhet hozzá.
 

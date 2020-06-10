@@ -6,12 +6,12 @@ ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.expressions
-ms.openlocfilehash: c4b2cc0bed44ffdfb191ba522d6526959e7c6708
-ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+ms.openlocfilehash: b32644382bb88fb11da00d0d7d78bbd797a0eaaa
+ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84327305"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84629994"
 ---
 # <a name="type-expressions-in-q"></a>Kifejezések megadása a Q-ban #
 
@@ -201,7 +201,7 @@ A konstansok kivételével a felhasználó által definiált típusok egyetlen k
 A Q # értéknél a kicsomagolás operátor egy záró felkiáltójel `!` .
 Például, ha `IntPair` egy felhasználó által definiált típus, amely egy alapul szolgáló típussal rendelkezik `(Int, Int)` , és `s` egy változó értékkel rendelkezik `IntPair(2, 3)` , akkor a következő `s!` lesz: `(2, 3)` .
 
-A felhasználó által definiált típusok esetében definiált más felhasználók által definiált típusok esetében. lehet, hogy a kicsomagolási operátor megismétlődik; például `s!!` a kétszeresen kicsomagolt értéket jelöli `s` .
+Más, felhasználó által definiált típusokban definiált, felhasználó által definiált típusok esetében előfordulhat, hogy a kicsomagolási operátor megismétlődik; például `s!!` a kétszeresen kicsomagolt értéket jelöli `s` .
 Így ha a `WrappedPair` felhasználó által definiált típus egy alapul szolgáló típusú `IntPair` , és `t` egy változó értékkel `WrappedPair(IntPair(1,2))` , akkor a következő `t!!` lesz: `(1,2)` .
 
 Az `!` operátor magasabb prioritású, mint az összes többi operátor `[]` , mint a tömb indexelése és a szeletelése.

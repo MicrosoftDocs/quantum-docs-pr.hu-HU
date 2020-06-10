@@ -6,18 +6,89 @@ uid: microsoft.quantum.concepts.circuits
 ms.author: nawiebe@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 43f14d67db76dabda34bf881ccbfae0bfd1784ff
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+no-loc:
+- $
+- $
+- '\cdots'
+- bmatrix
+- '\ddots'
+- '\equiv'
+- '\sum'
+- '\begin'
+- '\end'
+- '\sqrt'
+- '\otimes'
+- '{'
+- '}'
+- '\text'
+- '\phi'
+- '\kappa'
+- '\psi'
+- '\alpha'
+- '\beta'
+- '\gamma'
+- '\delta'
+- '\omega'
+- '\bra'
+- '\ket'
+- '\boldone'
+- '\\\\'
+- '\\'
+- =
+- '\frac'
+- '\text'
+- '\mapsto'
+- '\dagger'
+- '\to'
+- "\begin{cases}"
+- "\end{cases}"
+- '\operatorname'
+- '\braket'
+- '\id'
+- '\expect'
+- '\defeq'
+- '\variance'
+- '\dd'
+- '&'
+- "\begin{align}"
+- "\end{align}"
+- '\Lambda'
+- '\lambda'
+- '\Omega'
+- '\mathrm'
+- '\left'
+- '\right'
+- '\qquad'
+- '\times'
+- '\big'
+- '\langle'
+- '\rangle'
+- '\bigg'
+- '\Big'
+- '|'
+- '\mathbb'
+- '\vec'
+- '\in'
+- '\texttt'
+- '\ne'
+- <
+- '>'
+- '\leq'
+- '\geq'
+- ~~
+- "~"
+ms.openlocfilehash: 745f0570bf62c5d98c2896cdc893ec385abd7115
+ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83426611"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84630410"
 ---
 # <a name="quantum-circuits"></a>Kvantum-áramkörök
-Vegyünk egy pillanatra az egységes átalakítás $ \text{CNEM} _ {01} (H\otimes 1) $ értéket.
+Vegyünk egy pillanatra az egységes átalakítás $ \text { cnem} _ {01 } (H \otimes 1) $ értéket.
 Ez a kapui sorozat alapvető jelentőséggel bír a kvantum-számítástechnika szempontjából, mivel a két qubit állapotot hozza létre:
 
-$ $ \mathrm{CNOT}_ {01} (H\otimes 1) \ket {00} = \frac {1} {\sqrt {2} } \left (\ket {00} + \ket {11} \right), $ $
+$ $ \mathrm{CNOT}_{01 } (H \otimes 1) \ket{00 } = \frac{1 } {\sqrt{2 } } \left (\ket{00 } + \ket{11 } \right), $ $
 
 Az ezzel vagy nagyobb bonyolultsággal rendelkező műveletek a kvantum-algoritmusokban és a kvantum-hibák kijavításában mindenütt elérhetők, ezért nagy mértékű feltételnek kell lennie, hogy a vizualizációk *egy egyszerű*metódust használjanak.
 A maximálisan kusza kvantum-állapot előkészítésének áramköri diagramja a következő:
@@ -31,7 +102,7 @@ A kvantum-műveletek vizuális nyelve könnyebben emészthető, mint a kvantum-k
 Az alábbi konvenciókat tekintjük át.
 
 Egy áramköri diagramon minden egyes folytonos vonal egy qubit vagy általánosabban qubit-regisztrációt ábrázol.
-Az egyezmény szerint a legfelső sor a $0 $ qubit-regisztráció, a maradék pedig szekvenciálisan van megjelölve. A fenti példában szereplő áramkör két qubits (vagy egy qubit álló, egymással egyenértékű két regiszterből áll) való működésként van ábrázolva.
+Az egyezmény szerint a felső sor a $0 $ -es qubit-regisztráció, a maradék pedig szekvenciálisan van megjelölve. A fenti példában szereplő áramkör két qubits (vagy egy qubit álló, egymással egyenértékű két regiszterből áll) való működésként van ábrázolva.
 Az egy vagy több qubit-regiszteren eljáró kapuk mezőként vannak kijelölve.
 Például a szimbólum
 
@@ -49,7 +120,7 @@ Azaz
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
 ![A Quantum Gates diagramja balról jobbra van alkalmazva](~/media/3.svg)
 
-az egységes mátrix $CBA $.
+az egységes mátrix $CBA $ .
 A mátrix szorzása engedelmeskedik a szemközti konvenciónak: a jobb oldali mátrix először van alkalmazva. A Quantum Circuit-diagramoknál azonban először a bal szélső kaput alkalmazza a rendszer.
 Ez a különbség időnként zavart eredményezhet, ezért fontos megjegyezni, hogy ez a különbség a lineáris algebrai jelölés és a kvantum-áramköri diagramok között jelentős.
 
@@ -61,27 +132,27 @@ Ha nem azonos számú kimenet szerepel a bemenetekben, nem vonhatók vissza, és
 Ebben az esetben az áramköri diagramban rajzolt bármely mezőnek pontosan ugyanannyi drótot kell megadnia, mint kilép.
 
 A multi-qubit áramköri diagramok hasonló konvenciókat követnek az qubit is.
-Példaként meghatározhatunk egy kétqubites, egységes műveletet $B $-t a $ (H S\otimes X) $ értékre, és az áramkört egyenértékűként kell kifejezni
+Példaként meghatározhatunk egy kétqubites, egységes műveleti $B $ a $ (H S \otimes X) $ értékre, és az áramkört egyenértékűként kell kifejezni
 
 <!--- ![](.\media\4.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
 ![Kétqubitű egységes művelet áramköri diagramja](~/media/4.svg)
 
-$B $-t úgy is megtekintheti, mintha egy qubit-regisztráción alapuló művelettel rendelkezik, és nem 2 1-qubit regisztrálja az áramkört használó környezettől függően. Az absztrakt áramköri diagramok leghasznosabb tulajdonsága az, hogy lehetővé teszik, hogy a bonyolult kvantum-algoritmusokat magas szinten írják le anélkül, hogy le kellene őket állítani az alapvető kapuk számára.
+Azt is megtekintheti $B, hogy a $ művelet egy qubit-regisztráción alapul, és nem 2 1-qubit regisztrálja az áramkört használó környezettől függően. Az absztrakt áramköri diagramok leghasznosabb tulajdonsága az, hogy lehetővé teszik, hogy a bonyolult kvantum-algoritmusokat magas szinten írják le anélkül, hogy le kellene őket állítani az alapvető kapuk számára.
 Ez azt jelenti, hogy a nagyméretű kvantum-algoritmusok adatforgalmával kapcsolatban nem kell megismernie az algoritmus működésével kapcsolatos összes alrutin részleteit.
 
 ## <a name="controlled-gates"></a>Vezérelt kapuk
 A multi-qubit Quantum Circuit-diagramokba beépített másik összeállítás vezérli.
-Egy olyan kvantum-vezérelt kapu művelete, amely a $ \Lambda (G) $ értéket jelöli, ahol egyetlen qubit érték vezérli $G $-t, az alábbi példa egy termék állapotba való bemenő adat: \Lambda (G) (\alpha \ket {0} + \beta \ket {1} ) \ket{\psi} = \alpha \ket \ket{\psi} {0} + \beta \ket {1} G\ket {\ psi} $.
-Ez azt jelenti, hogy az ellenőrzött kapu $G $ értéket alkalmaz a $ \psi $-t tartalmazó regisztrációra, és csak akkor, ha a vezérlő qubit $1 $ értékű.
+Egy olyan kvantum-vezérelt kapu művelete, amely a $ \Lambda (G) $ értéket jelöli, ahol egyetlen qubit érték vezérli a $G alkalmazását $ , a következő példa a termék állapotának bevitele: \Lambda (g) (\alpha \ket{0 } + \beta \ket{1 } ) \ket { \psi } = \alpha \ket{0 } \ket { \psi } + \beta \ket{1 } G \ket { \psi } $.
+Ez azt jelenti, hogy az ellenőrzött kapu $G $ a $ \psi-t tartalmazó regisztrációra vonatkozik, $ Ha pedig csak akkor, ha a vezérlő qubit $1 értéket vesz igénybe $ .
 Általánosságban leírjuk, hogy milyen ellenőrzött műveleteket kell elvégeznie az áramköri diagramokban
 
 <!--- ![](.\media\5.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
 ![Egy megfelelően vezérelt kapu áramköri diagramja](~/media/5.svg)
 
-Itt a fekete kör azt a kvantum-bitet jelöli, amelyen a kapu vezérelhető, és a vertikális huzal azt jelöli, hogy a vezérlő qubit a $1 $ értéket veszi figyelembe.
-Azon speciális esetekben, ahol $G = X $ és $G = Z $ bevezetjük a következő jelölést a kapuk ellenőrzött verziójának leírásához (vegye figyelembe, hogy a vezérelt X Gate a [$CNOT $ Gate](xref:microsoft.quantum.intrinsic.cnot)):
+Itt a fekete kör azt a kvantum-bitet jelöli, amelyen a kapu vezérelhető, és a vertikális huzal azt jelöli, hogy a vezérlő qubit a $1 értéket veszi figyelembe $ .
+Azoknál a speciális esetekben, ahol a $G = X $ és $G = Z a $ kapuk ellenőrzött verziójának leírásához bevezetjük a következő jelölést (vegye figyelembe, hogy a vezérelt X kapu a [$CNOT $ Gate](xref:microsoft.quantum.intrinsic.cnot)):
 
 <!--- ![](.\media\6.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
@@ -115,7 +186,7 @@ Hasonlóképpen, az aláramkör
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
 ![Ellenőrzött műveletet jelképező áramköri diagram](~/media/8.svg)
 
-egy klasszikusan vezérelt kaput biztosít, ahol a $G $ a klasszikus vezérlési bit értéke $1 $.
+egy klasszikusan vezérelt kaput biztosít, ahol $ a $G a klasszikus vezérlési bit $1 értékre van alkalmazva $ .
 
 ## <a name="teleportation-circuit-diagram"></a>Teleportáló áramköri diagram
 A kvantum-teleportáció talán a legjobb kvantum-algoritmus ezen összetevők szemléltetésére.

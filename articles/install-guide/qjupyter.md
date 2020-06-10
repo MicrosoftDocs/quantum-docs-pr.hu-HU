@@ -6,12 +6,12 @@ ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.jupyter
-ms.openlocfilehash: 9117794d6cf6f05fa34e05c21fad8977d0e76505
-ms.sourcegitcommit: c8ebc5d7d8581444754f5d7bfaca2f25601f1b14
+ms.openlocfilehash: b80d95a160b5f46c1132d3428ba32ad6dcd5656e
+ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
 ms.translationtype: MT
 ms.contentlocale: hu-HU
 ms.lasthandoff: 06/09/2020
-ms.locfileid: "84577820"
+ms.locfileid: "84630331"
 ---
 # <a name="develop-with-q-jupyter-notebooks"></a>Fejlesztés Q# Jupyter-notebookokkal
 
@@ -36,6 +36,15 @@ Az IQ# elsősorban a Jupyter és a Python által a .NET Core SDK-hoz használt b
     dotnet tool install -g Microsoft.Quantum.IQSharp
     dotnet iqsharp install
     ```
+
+    > [!NOTE]
+    > Ha a lépés során hibaüzenet jelenik `dotnet iqsharp install` meg, nyisson meg egy új Terminálablak-ablakot, és próbálkozzon újra.
+    > Ha ez továbbra sem működik, próbálja meg megkeresni a telepített `dotnet-iqsharp` eszközt (Windows rendszeren `dotnet-iqsharp.exe` ), és futtassa a következőt:
+    > ```
+    > /path/to/dotnet-iqsharp install --user --path-to-tool="/path/to/dotnet-iqsharp"
+    > ```
+    > ahol a `/path/to/dotnet-iqsharp` fájlrendszerben lévő eszköz abszolút elérési útját kell cserélni `dotnet-iqsharp` .
+    > Ez általában a `.dotnet/tools` felhasználói profil mappájában történik.
 
 1. Ellenőrizze a telepítést egy `Hello World`-alkalmazás létrehozásával
 

@@ -6,12 +6,12 @@ ms.author: anpaz@microsoft.com
 ms.date: 1/22/2019
 ms.topic: article
 uid: microsoft.quantum.machines.resources-estimator
-ms.openlocfilehash: 01d242ed405bdd326f65e534f82ff378a464ee7d
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: b0c800c3946d2e4ba4457127fb9495dc9dcf2934
+ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83426879"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84630129"
 ---
 # <a name="the-resources-estimator-target-machine"></a>Az erőforrások kalkulátor cél gépe
 
@@ -42,7 +42,7 @@ namespace Quantum.MyProgram
 }
 ```
 
-A példa azt mutatja, `ResourcesEstimator` hogy a lehetővé teszi egy olyan `ToTSV()` táblázat létrehozását, amely tabulátorral tagolt értékeket (TSV) tartalmaz, amelyek fájlba menthetők, vagy a konzolba való beírással elemezhetők. A fenti program kimenetének a következőhöz hasonlóan kell kinéznie:
+A példa azt mutatja, `ResourcesEstimator` hogy a lehetővé teszi egy olyan `ToTSV()` tábla létrehozását, amely tabulátorral elválasztott értékeket (TSV) tartalmaz, amelyek fájlba menthetők, vagy a konzolba való beírással elemezhetők. A fenti program kimenetének a következőhöz hasonlóan kell kinéznie:
 
 ```Output
 Metric          Sum

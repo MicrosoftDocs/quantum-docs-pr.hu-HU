@@ -6,12 +6,12 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.style
-ms.openlocfilehash: dfb2b1779e3ddc77fc74697bc4dc2904b1a0c70f
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: 948b385948f0b362e7c12500662132883959a798
+ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83426925"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84630235"
 ---
 # <a name="q-style-guide"></a>Q # Style útmutató #
 ## <a name="general-conventions"></a>Általános konvenciók ##
@@ -235,7 +235,7 @@ Javasoljuk, hogy:
 Bár ez a korlátozás nem szűnik meg a Q # jövőbeli verzióiban, jelenleg a kapcsolódó műveletek vagy függvények olyan csoportjai lesznek, amelyek megkülönböztetni egymástól a bemenők által támogatott, illetve az argumentumok konkrét típusait.
 Ezek a csoportok megkülönböztetni ugyanazt a legfelső szintű nevet, majd egy vagy két betűt, amelyek jelzik a változatát.
 
-| Utótag | Jelentés |
+| Utótag | Értelmezés |
 |--------|---------|
 | `A` | Várhatóan támogatott bemenet`Adjoint` |
 | `C` | Várhatóan támogatott bemenet`Controlled` |
@@ -280,7 +280,7 @@ Javasoljuk, hogy:
 
 ***
 
-### <a name="user-defined-type-named-items"></a>A felhasználó által definiált típusú elemek neve ###
+### <a name="user-defined-type-named-items"></a>Felhasználó által definiált típus, névvel ellátott elemek ###
 
 A felhasználó által definiált típusokban megnevezett elemek neveként kell nevezni `CamelCase` , még a UDT konstruktorok számára is.
 Ez segít az elnevezett elemek egyértelmű elkülönítésében a helyileg hatókörön belüli változókra mutató hivatkozásokkal a hozzáférési jelölés (például: `callable::Apply` ) vagy a másolási és frissítési jelölés ( `set arr w/= Data <- newData` ) használatakor.

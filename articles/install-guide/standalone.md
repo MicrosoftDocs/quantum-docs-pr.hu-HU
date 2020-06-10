@@ -6,18 +6,18 @@ ms.date: 4/24/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.standalone
-ms.openlocfilehash: e829862521951c50cb42eebf261c803071a95275
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: 4311ebf9f72254485a20ba721ea2ce19163f4371
+ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83426439"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84630263"
 ---
 # <a name="develop-with-q-command-line-applications"></a>Fejlesztés Q # parancssori alkalmazásokkal
 
 A Q # programok saját maguk is végrehajthatók a gazdagépen, például C#, F # vagy Python nyelven.
 
-## <a name="pre-requisites"></a>Előfeltételek
+## <a name="prerequisites"></a>Előfeltételek
 
 - [.NET Core SDK 3,1 vagy újabb](https://www.microsoft.com/net/download)
 

@@ -6,18 +6,89 @@ ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.glossary
-ms.openlocfilehash: 042e4e27ef4e42cfc0c24fbb0ae2232cf1bbfe36
-ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+no-loc:
+- $
+- $
+- '\cdots'
+- bmatrix
+- '\ddots'
+- '\equiv'
+- '\sum'
+- '\begin'
+- '\end'
+- '\sqrt'
+- '\otimes'
+- '{'
+- '}'
+- '\text'
+- '\phi'
+- '\kappa'
+- '\psi'
+- '\alpha'
+- '\beta'
+- '\gamma'
+- '\delta'
+- '\omega'
+- '\bra'
+- '\ket'
+- '\boldone'
+- '\\\\'
+- '\\'
+- =
+- '\frac'
+- '\text'
+- '\mapsto'
+- '\dagger'
+- '\to'
+- "\begin{cases}"
+- "\end{cases}"
+- '\operatorname'
+- '\braket'
+- '\id'
+- '\expect'
+- '\defeq'
+- '\variance'
+- '\dd'
+- '&'
+- "\begin{align}"
+- "\end{align}"
+- '\Lambda'
+- '\lambda'
+- '\Omega'
+- '\mathrm'
+- '\left'
+- '\right'
+- '\qquad'
+- '\times'
+- '\big'
+- '\langle'
+- '\rangle'
+- '\bigg'
+- '\Big'
+- '|'
+- '\mathbb'
+- '\vec'
+- '\in'
+- '\texttt'
+- '\ne'
+- <
+- '>'
+- '\leq'
+- '\geq'
+- ~~
+- "~"
+ms.openlocfilehash: 2a3b1fe480b9886d0c11255bb1b1e01402dce4f7
+ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84327611"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84630094"
 ---
 # <a name="quantum-computing-glossary"></a>Quantum Computing – Szószedet
 
 ## <a name="adjoint"></a>Adjoint
 
-Egy [művelet](xref:microsoft.quantum.glossary#operation)összetett konjugált átültetése. Az [egységes](xref:microsoft.quantum.glossary#unitary-operator) operátort megvalósító műveletek esetében a adjoint a művelet inverze, és egy tőr szimbólum jelzi. Ha például a művelet `U` az egységes operátort jelöli $U $, akkor a `Adjoint U` $U ^ \dagger $ értéket jelöli. További információ: [Adjoint](xref:microsoft.quantum.guide.operationsfunctions#controlled-and-adjoint-operations).
+Egy [művelet](xref:microsoft.quantum.glossary#operation)összetett konjugált átültetése. Az [egységes](xref:microsoft.quantum.glossary#unitary-operator) operátort megvalósító műveletek esetében a adjoint a művelet inverze, és egy tőr szimbólum jelzi. Ha például a művelet `U` a $U egységes operátort jelöli $ , akkor a `Adjoint U` $U ^ \dagger jelöli $ . További információ: [Adjoint](xref:microsoft.quantum.guide.operationsfunctions#controlled-and-adjoint-operations).
 
 ## <a name="ancilla"></a>Ancilla
 
@@ -25,7 +96,7 @@ Egy [qubit](xref:microsoft.quantum.glossary#qubit) , amely ideiglenes memóriát
 
 ## <a name="bell-state"></a>Harang állapota
 
-Két qubits négy specifikus, maximálisan [összekeverhető](xref:microsoft.quantum.glossary#entanglement) [Quantum állapotának](xref:microsoft.quantum.glossary#quantum-state) egyike. A négy állapot definiálva van $ \ket{\ beta_ {ij}} = (\mathbb{I} \otimes X ^ iZ ^ j) (\ket {00} + \ket {11} )/\sqrt {2} $. A Bell-állapotot [EPR-pároknak](xref:microsoft.quantum.glossary#epr-pair)is nevezzük.
+Két qubits négy specifikus, maximálisan [összekeverhető](xref:microsoft.quantum.glossary#entanglement) [Quantum állapotának](xref:microsoft.quantum.glossary#quantum-state) egyike. A négy állapot definiálva van: $ \ket { \ beta_ {ij } } = (\Mathbb{I } \Otimes X ^ iZ ^ j) (\ket{00 } + \ket{11 } )/\sqrt{2 } $. A Bell-állapotot [EPR-pároknak](xref:microsoft.quantum.glossary#epr-pair)is nevezzük.
 
 ## <a name="bloch-sphere"></a>Bloch gömb
 
@@ -37,7 +108,7 @@ Egy [művelet](xref:microsoft.quantum.glossary#operation) vagy [függvény](xref
 
 ## <a name="clifford-group"></a>Clifford-csoport
 
-Azok a műveletek [összessége, amelyek](xref:microsoft.quantum.glossary#bloch-sphere) elfoglalják a octants és a [Pauli-operátorok](xref:microsoft.quantum.glossary#pauli-operators)hatását. Ezek közé tartoznak a következő műveletek: [$X $](xref:microsoft.quantum.intrinsic.x), [$Y $](xref:microsoft.quantum.intrinsic.y), [$Z $](xref:microsoft.quantum.intrinsic.z), [$H $](xref:microsoft.quantum.intrinsic.h) és [$S $](xref:microsoft.quantum.intrinsic.s).
+Azok a műveletek [összessége, amelyek](xref:microsoft.quantum.glossary#bloch-sphere) elfoglalják a octants és a [Pauli-operátorok](xref:microsoft.quantum.glossary#pauli-operators)hatását. Ezek közé tartoznak az Operations [$X $ ](xref:microsoft.quantum.intrinsic.x), [$Y $ ](xref:microsoft.quantum.intrinsic.y), [$Z $ ](xref:microsoft.quantum.intrinsic.z), [$H $ ](xref:microsoft.quantum.intrinsic.h) és [$S $ ](xref:microsoft.quantum.intrinsic.s).
 
 ## <a name="controlled"></a>Ellenőrzött
 
@@ -45,15 +116,15 @@ Olyan Quantum [művelet](xref:microsoft.quantum.glossary#operation) , amely egy 
 
 ## <a name="dirac-notation"></a>Dirac jelölése
 
-Egy szimbolikus Gyorsírás, amely leegyszerűsíti a [kvantum-állapotok](xref:microsoft.quantum.glossary#quantum-state), más néven a *Bra-ket* jelölések megjelenítését.  A *melltartó* része egy sor vektort jelöl, például: $ \bra{A} = \begin{bmatrix} a {_1} & a {_2} \end{bmatrix} $, és a *ket* rész egy oszlop vektort jelöl, $ \ket{B} = \begin{bmatrix} B {_1} \\ \\ b {_2} \end{bmatrix} $. További információ: Dirac- [jelölés](xref:microsoft.quantum.concepts.dirac).
+Egy szimbolikus Gyorsírás, amely leegyszerűsíti a [kvantum-állapotok](xref:microsoft.quantum.glossary#quantum-state), más néven a *Bra-ket* jelölések megjelenítését.  A *melltartó* része egy sor vektort jelöl, például: $ \bra{A } = \begin{ bmatrix } a {_1 } & a {_2 } \end{$, bmatrix } és a *ket* rész egy oszlop vektort jelöl, $ \ket{B } = \begin{ bmatrix } b {_1 } \\ \\ b {_2 } \end{ bmatrix } $. További információ: Dirac- [jelölés](xref:microsoft.quantum.concepts.dirac).
 
 ## <a name="eigenvalue"></a>Sajátérték
 
-Az a tényező, amellyel egy adott átalakítás [eigenvector](xref:microsoft.quantum.glossary#eigenvector) nagysága megváltozik az átalakítás alkalmazásával.  Egy négyzetes mátrix $M $ és egy eigenvector $v $, majd $Mv = CV $, ahol $c $ a sajátérték, és az argumentumok összetett száma lehet. További információ: [speciális mátrix – fogalmak](xref:microsoft.quantum.concepts.matrix-advanced).
+Az a tényező, amellyel egy adott átalakítás [eigenvector](xref:microsoft.quantum.glossary#eigenvector) nagysága megváltozik az átalakítás alkalmazásával.  Egy négyzetes mátrix $M $ és egy eigenvector $v $ , majd $MV = CV $ , ahol $c $ a sajátérték, és az argumentumok összetett száma lehet. További információ: [speciális mátrix – fogalmak](xref:microsoft.quantum.concepts.matrix-advanced).
 
 ## <a name="eigenvector"></a>Eigenvector
 
-Egy olyan vektor, amelynek irányát egy adott átalakítás nem változtatja meg, és amelynek nagyságrendjét a vektor [sajátérték](xref:microsoft.quantum.glossary#eigenvalue)megfelelő tényező módosítja. Egy négyzetes mátrix $M $ és egy sajátérték $c $, majd $Mv = CV $, ahol a $v $ a mátrix eigenvector, és az argumentumok összetett száma lehet. További információ: [speciális mátrix – fogalmak](xref:microsoft.quantum.concepts.matrix-advanced).
+Egy olyan vektor, amelynek irányát egy adott átalakítás nem változtatja meg, és amelynek nagyságrendjét a vektor [sajátérték](xref:microsoft.quantum.glossary#eigenvalue)megfelelő tényező módosítja. A négyzetes mátrix $M $ és egy sajátérték $c $ , majd $MV = CV $ , ahol $ a $v a mátrix eigenvector, és az argumentumok összetett száma lehet. További információ: [speciális mátrix – fogalmak](xref:microsoft.quantum.concepts.matrix-advanced).
 
 ## <a name="entanglement"></a>Összefonódás
 
@@ -61,7 +132,7 @@ A *kvantum-részecskék* (például a [qubits](xref:microsoft.quantum.glossary#q
 
 ## <a name="epr-pair"></a>EPR pár
 
-Két [qubits](xref:microsoft.quantum.glossary#qubit)négy specifikus, maximálisan összekeverhető [Quantum állapotának](xref:microsoft.quantum.glossary#quantum-state) egyike. A négy állapot definiálva van $ \ket{\ beta_ {ij}} = (\mathbb {1} \Otimes X ^ iZ ^ j) (\ket {00} + \ket {11} )/\sqrt {2} $. Egy EPR pár más néven [Bell-állapot](xref:microsoft.quantum.glossary#bell-state)
+Két [qubits](xref:microsoft.quantum.glossary#qubit)négy specifikus, maximálisan összekeverhető [Quantum állapotának](xref:microsoft.quantum.glossary#quantum-state) egyike. A négy állapot definiálva van: $ \ket { \ beta_ {ij } } = (\Mathbb{1 } \Otimes X ^ iZ ^ j) (\ket{00 } + \ket{11 } )/\sqrt{2 } $. Egy EPR pár más néven [Bell-állapot](xref:microsoft.quantum.glossary#bell-state)
 
 ## <a name="evolution"></a>Evolution
 
@@ -76,11 +147,11 @@ Egy kvantum- [művelet](xref:microsoft.quantum.glossary#operation)örökölt kif
 
 ## <a name="global-phase"></a>Globális fázis
 
-Ha két [állapot](xref:microsoft.quantum.glossary#quantum-state) megegyezik egy összetett szám többszörösével, $e ^ {i\phi} $, azt mondják, hogy eltérnek a globális fázistól. A helyi fázisokkal ellentétben a globális fázisok nem figyelhetők meg semmilyen [méréssel](xref:microsoft.quantum.glossary#measurement). További információ: [Qubit](xref:microsoft.quantum.concepts.qubit).
+Ha két [állapot](xref:microsoft.quantum.glossary#quantum-state) megegyezik egy összetett szám többszörösével, $e ^ {i \phi } $, azt mondják, hogy eltérnek a globális fázistól. A helyi fázisokkal ellentétben a globális fázisok nem figyelhetők meg semmilyen [méréssel](xref:microsoft.quantum.glossary#measurement). További információ: [Qubit](xref:microsoft.quantum.concepts.qubit).
 
 ## <a name="hadamard"></a>Hadamard
 
-A Hadamard művelet (más néven Hadamard-kapu vagy átalakító) egyetlen [qubit](xref:microsoft.quantum.glossary#qubit) viselkedik, és a $ \ket $ vagy $ \ket $ páros [pozícióba](xref:microsoft.quantum.glossary#superposition) helyezi, {0} {1} Ha a qubit kezdetben $ \ket {0} $ állapotban van. A Q # esetében ezt a műveletet az előre definiált művelet alkalmazza [`H`](xref:microsoft.quantum.intrinsic.h) .
+A Hadamard művelet (más néven Hadamard-kapu vagy átalakító) egyetlen [qubit](xref:microsoft.quantum.glossary#qubit) viselkedik, és a $ \ket{0 $ vagy $ \ket{1 $ páros [pozícióba](xref:microsoft.quantum.glossary#superposition) helyezi, } } Ha a qubit kezdetben $ \ket{0 } $ állapotban van. A Q # esetében ezt a műveletet az előre definiált művelet alkalmazza [`H`](xref:microsoft.quantum.intrinsic.h) .
 
 ## <a name="immutable"></a>Nem módosítható
 
@@ -116,7 +187,7 @@ Egy olyan alrutin, amely Adatfüggő adatokat biztosít a kvantum-algoritmusnak 
 
 ## <a name="pauli-operators"></a>Pauli-operátorok
 
-Három 2 x 2 egységes mátrix, azaz a `X` `Y` és a `Z` Quantum művelet. Az Identity Matrix, $I $, gyakran szerepel a készletben is.  $I = \begin{bmatrix} 1 & 0 \\ \\ 0 & 1 \end{bmatrix} $, $X = \begin{bmatrix} 0 & 1 \\ \\ 1 & 0 \end{bmatrix} $, $Y = \begin{bmatrix} 0 &-i \\ \\ & 0 \end{bmatrix} $, $Z = \begin{bmatrix} 1 & 0 \\ \\ 0 &-1 \end{bmatrix} $.   További információ: [qubit műveletek](xref:microsoft.quantum.concepts.qubit#single-qubit-operations).
+Három 2 x 2 egységes mátrix, azaz a `X` `Y` és a `Z` Quantum művelet. Az Identity Matrix, $I $ , is gyakran szerepel a készletben is.  $I = \begin{ bmatrix } 1 & 0 \\ \\ 0 & 1 \end{ bmatrix } $, $X = \begin{ bmatrix } 0 & 1 \\ \\ 1 & 0 \end{ bmatrix } $, $Y = \begin{ bmatrix } 0 &-i \\ \\ & 0 \end{ bmatrix } $, $Z = \begin{ bmatrix } 1 & 0 \\ \\ 0 &-1 \end{ bmatrix } $.   További információ: [qubit műveletek](xref:microsoft.quantum.concepts.qubit#single-qubit-operations).
 
 ## <a name="quantum-circuit-diagram"></a>Quantum Circuit diagram
 
@@ -148,7 +219,7 @@ A telepítés során a Q # fordítóprogrammal együtt telepített [műveletek](
 
 ## <a name="superposition"></a>Szuperpozíció
 
-A Quantum Computing koncepciója, amely szerint a [qubit](xref:microsoft.quantum.glossary#qubit) két állapot lineáris kombinációja, $ \ket {0} $ és $ \ket {1} $, amíg meg nem történik a [mérés](xref:microsoft.quantum.glossary#measurement).  További információ: a [kvantum-számítástechnika ismertetése](xref:microsoft.quantum.overview.understanding).
+A Quantum Computing koncepciója, amely szerint a [qubit](xref:microsoft.quantum.glossary#qubit) két állapot lineáris kombinációja, $ \ket{0 } $ és $ \ket{1 } $, amíg meg nem történik a [mérés](xref:microsoft.quantum.glossary#measurement).  További információ: a [kvantum-számítástechnika ismertetése](xref:microsoft.quantum.overview.understanding).
 
 ## <a name="target-machine"></a>Célszámítógép
 
@@ -164,7 +235,7 @@ Vesszővel tagolt értékek gyűjteménye, amely egyetlen értékként viselkedi
 
 ## <a name="unitary-operator"></a>Egységes operátor
 
-Egy operátor, amelynek inverze egyenlő a [adjoint](xref:microsoft.quantum.glossary#adjoint), azaz $uu ^ {\dagger} = \id $.
+Egy operátor, amelynek inverze egyenlő a [adjoint](xref:microsoft.quantum.glossary#adjoint), azaz $uu ^ {\dagger } = \id $ .
 
 ## <a name="user-defined-type"></a>Felhasználó által definiált típus
 
