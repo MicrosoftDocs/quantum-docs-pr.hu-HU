@@ -6,12 +6,12 @@ ms.author: nakersha
 ms.date: 09/30/2019
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: 9a54c1d7a4403a98f945181fdad8ba8a7fdb1175
-ms.sourcegitcommit: 8d9d392bf5e114ae223e6f689ba80d25866ff586
+ms.openlocfilehash: 6b24ebe9f0b5fd3318e8adfe1a62bafaf9d1961e
+ms.sourcegitcommit: c8ebc5d7d8581444754f5d7bfaca2f25601f1b14
 ms.translationtype: HT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84422223"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84578134"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>A Microsoft Quantum Development Kit kibocsátási megjegyzései
 
@@ -25,6 +25,12 @@ A frissítésre vonatkozó utasításokat lásd a [frissítési útmutatóban](x
 
 *Kiadási dátum: 2020. június 4.*
 
+Ez a kiadás kijavít egy hibát, amely A Q#-projektek fordítását érinti.
+
+## <a name="version-0112006207"></a>0\.11.2006.207-es verzió
+
+*Kiadási dátum: 2020. június 3.*
+
 A verzió a következőket tartalmazza:
 
 - A Q#-notebookok és a Python-gazdaprogramok nem fognak meghibásodni, ha létezik Q# belépési pont
@@ -33,6 +39,9 @@ A verzió a következőket tartalmazza:
 - Számos elavult függvény és művelet el lett távolítva az [API-alapelvek](xref:microsoft.quantum.contributing.api-design) dokumentumban ismertetett ütemezés szerint. A 0.11.2004.2825-ös verzióban figyelmeztetések nélkül buildelő Q#-programok és -kódtárak működése nem változik.
 
 A [kódtárak](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [fordítók](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [futtatókörnyezetek](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [minták](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed), [IQ#](https://github.com/microsoft/iqsharp/pulls?q=is%3Apr+is%3Aclosed) és [Katák](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed) lezárt lekéréses kérelmeinek teljes listáját itt tekintheti meg.  
+
+> [!NOTE]
+> Ez a verzió tartalmaz egy hibát, amely a Q#-projektek fordítását érinti. Azt javasoljuk, hogy frissítsen újabb kiadásra.
 
 ## <a name="version-01120042825"></a>0\.11.2004.2825-ös verzió
 
