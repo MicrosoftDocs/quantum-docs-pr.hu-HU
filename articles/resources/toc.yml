@@ -1,0 +1,9 @@
+- name: Szószedet
+  href: glossary.md
+- name: Hozzájárulás a QDK-hoz
+  href: contributing/toc.yml
+  topicHref: contributing/index.md
+- name: QDK – Kibocsátási megjegyzések
+  href: relnotes.md
+- name: További információ
+  href: further-reading.md
