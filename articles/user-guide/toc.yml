@@ -1,12 +1,14 @@
 - name: Áttekintés/tartalom
   href: index.md
-- name: 'A Q# alapjai'
+- name: A Q# alapjai
   href: basics.md
-- name: 'A Q# nyelv'
+- name: A Q# nyelv
   href: language/toc.yml
-- name: 'A Q# használata'
+- name: A Q# használata
   href: using-qsharp/toc.yml
 - name: Szimulátorok és erőforrásbecslők
-  href: ../machines/toc.yml
+  href: machines/toc.yml
+- name: Q#-kódtárak
+  href: libraries/toc.yml
 - name: Rövid összefoglalás
   href: quickref/toc.yml

@@ -1,0 +1,10 @@
+- name: A kvantum gépi tanulás bemutatása
+  href: introduction.md
+- name: Alapszintű osztályozás
+  href: basic-classification.md
+- name: Saját osztályozó tervezése
+  href: design.md
+- name: Saját adathalmazok betöltése
+  href: load.md
+- name: Szószedet (QML)
+  href: glossary-qml.md

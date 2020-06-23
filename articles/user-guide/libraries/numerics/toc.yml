@@ -1,0 +1,4 @@
+- name: Telepítés és ellenőrzés
+  href: installation.md
+- name: A numerikus kódtár használata
+  href: numerics.md

@@ -1,0 +1,20 @@
+expanded: true
+items:
+  - name: Bevezetés a QDK használatába
+    href: get-started.md
+  - name: A QDK telepítése
+    items:
+      - name: A telepítés áttekintése
+        href: index.md
+      - name: Q# nyelvű parancssori alkalmazások
+        href: install-command-line.md
+      - name: Q# nyelvű Jupyter-notebookok
+        href: install-jupyter.md
+      - name: Q# más nyelvekkel
+        items:
+          - name: Q# Pythonnal
+            href: install-python.md
+          - name: Q# .NET-tel
+            href: install-cs.md
+  - name: A QDK frissítése
+    href: update.md
