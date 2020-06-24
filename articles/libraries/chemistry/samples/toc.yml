@@ -1,8 +1,0 @@
-- name: Energiaszint-becslések lekérése
-  href: molecular-hydrogen.md
-- name: Hamilton-operátor betöltése fájlból
-  href: loading-from-file.md
-- name: Erőforrásszámok lekérése
-  href: resource-counts.md
-- name: Végponttól végpontig az NWChem-mel
-  href: end-to-end.md
