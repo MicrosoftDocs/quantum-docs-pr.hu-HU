@@ -9,6 +9,10 @@ ms.topic: article
 no-loc:
 - $
 - $
+- $
+- $
+- $
+- $
 - '\cdots'
 - bmatrix
 - '\ddots'
@@ -77,12 +81,15 @@ no-loc:
 - '\geq'
 - ~~
 - "~"
-ms.openlocfilehash: 224bd5165f508f6cd1fdb85fb5c14ba2e23e59ea
-ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
+- "\begin{bmatrix}"
+- "\end{bmatrix}"
+- '\_'
+ms.openlocfilehash: 1ac235bef473efa82b096cae4159e2c724ba7c0e
+ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84630367"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85269490"
 ---
 # <a name="multiple-qubits"></a>Több qubits
 
@@ -138,7 +145,7 @@ $$
 
 Az is lehetséges, hogy csak egy qubit kell mérni egy qubit kvantum-állapotból. Azokban az esetekben, amikor csak az egyik qubits méri, a mérés hatása finoman eltérő, mert a teljes állapot nem a számítási alapú állapotba van csukva, hanem csak egy alrendszerre van összecsukva.  Más szóval, ebben az esetben, ha csak egy qubit kell mérnie, csak az alrendszerek egyikét csukja össze, de nem mindegyiket.  
 
-Ennek megtekintéséhez érdemes megfontolni a következő állapot első qubit mérését, amely a Hadamard átalakítási $H alkalmazásával jön létre $ két qubits, kezdetben a "0" állapotra van állítva: $ $ H ^ {\otimes 2 } \left (\begin{ bmatrix } 1 \\ \\ 0 \end{ bmatrix } \otimes \begin{ bmatrix } 1 \\ \\ 0 \end{ bmatrix } \right) = \frac{1 } {2 } \begin{ bmatrix } 1 & 1 & 1 & 1 \\ \\ 1 &-1 & 1 &-1 \\ \\ 1 & 1 &-1 &-1 \\ \\ 1 &-1 &-1 & 1 \end{ bmatrix } \begin{ bmatrix } 1 \\\\ 0 0 \\\\ \\\\ 0 \end { bmatrix } = \frac{1 } {2 } \begin{ bmatrix } 1 \\\\ 1 \\\\ 1 \\\\ 1 \end { bmatrix } \mapsto \begin{Cases } \text{outcome} = 0 & \frac{1 } {\sqrt{2 } } \begin{ bmatrix } 1 \\\\ 1 \\\\ 0 \\\\ 0 \end{\text{outcome bmatrix } \\ \\ } = 1 & \frac{1 } {\sqrt{2 } } \begin{ bmatrix } 0 0 \\\\ \\\\ 1 \\\\ 1 \end{ bmatrix } \\ \\ \end{Cases } .
+Ennek megtekintéséhez érdemes megfontolni a következő állapot első qubit mérését, amely a Hadamard átalakítási $H alkalmazásával jön létre $ két qubits, kezdetben a "0" állapotra van állítva: $ $ H ^ {\otimes 2 } \left (\begin{ bmatrix } 1 \\ \\ 0 \end{ bmatrix } \otimes \begin{ bmatrix } 1 \\ \\ 0 \end{ bmatrix } \right) = \frac{1 } {2 } \begin{ bmatrix } 1 & 1 & 1 & 1 \\ \\ 1 &-1 & 1 &-1 \\ \\ 1 & 1 &-1 &-1 \\ \\ 1 &-1 &-1 & 1 \end{ bmatrix } \begin{ bmatrix } 1 \\\\ 0 0 \\\\ \\\\ 0 \end{bmatrix} = \frac{1 } {2 \begin{} 1 1 1 1 \mapsto \begin{Cases \text{outcome } bmatrix \\\\ \\\\ \\\\ \end{bmatrix} } } = 0 & \frac{1 } {\sqrt{2 } } \begin{ bmatrix } 1 \\\\ 1 \\\\ 0 \\\\ 0 \end{\text{outcome bmatrix } \\ \\ } = 1 & \frac{1 } {\sqrt{2 } } \begin{ bmatrix } 0 \\\\ 0 \\\\ 1 \\\\ 1 \end{ bmatrix } \\ \\ \end{Cases } .
 $ $ Mindkét eredmény 50%-os valószínűséggel rendelkezik.  Az eredmény a 50%-os valószínűsége annak, hogy a kezdeti kvantum-állapot vektora invariáns legyen a $0 $ és $1 közötti, $ az első qubit.
 
 Az első vagy második qubit mérésére szolgáló matematikai szabály egyszerű.  Ha hagyjuk, hogy $e _k $ legyen a $k ^ {\rm th } $ számítási alap vektor, és hagyja $S $ az összes $e _kt úgy, $ hogy a szóban forgó qubit a $k értékének értékeként a $1 értéket adja meg $ $ .  Ha például érdeklik az első qubit mérése, akkor a $S $ $e _1 \equiv 10 $ és $e 11 _3 áll \equiv $ .  Hasonlóképpen, ha érdeklik a második qubit $S $ $e _2 \equiv 01 $ és $e _3 \equiv 11 áll a rendelkezésére $ .  Ezt követően a kiválasztott qubit $1 értékre való mérésének valószínűsége az $ állapot Vector $ \psi$
@@ -167,12 +174,12 @@ $$
 Vegye figyelembe, hogy ez csak azon két valószínűség összege, amelyek várhatóan a $10 és a $11 eredmény méréséhez szükségesek $ $ voltak a qubits.
 A példánkban ez a következőt értékeli:
 
-$ $ \frac{1 } {4 } \left | \begin{ bmatrix } 0&0&1&0 \end { bmatrix } \begin{ bmatrix } 1 \\\\ 1 \\\\ 1 \\\\ 1 \end { bmatrix } \right | ^ 2 + \frac{1 } {4 } \left | \begin{ bmatrix } 0&0&0&1 \end { bmatrix } \begin{ bmatrix } 1 \\\\ 1 \\\\ 1 \\\\ 1 \end { bmatrix } \right | ^ 2 = \frac{1 } {2 } .
+$ $ \frac{1 } {4 } \left | \begin{ bmatrix } 0&0&1&0 \end{bmatrix} \begin{ bmatrix } 1 \\\\ 1 \\\\ 1 \\\\ 1 \end{bmatrix} \right | ^ 2 + \frac{1 } {4 } \left | \begin{ bmatrix } 0&0&0&1 \end{bmatrix} \begin{ bmatrix } 1 \\\\ 1 1 1 \\\\ \\\\ \end{bmatrix} \right | ^ 2 = \frac{1 } {2 } .
 $$
 
 amely tökéletesen illeszkedik a mi intuíciónk számára, hogy a valószínűség legyen.  Ehhez hasonlóan az állapot is írható
 
-$ $ \frac { \frac{e_1 } {2 } + \frac{e_3 } {2 } } {\sqrt { \frac{1 } {2 } }} = \frac{1 } {\sqrt{2 } } \begin{ bmatrix } 0 \\\\ 0 \\\\ 1 \\\\ 1 \end {bmatrix}
+$ $ \frac { \frac{e_1 } {2 } + \frac{e_3 } {2 } } {\sqrt { \frac{1 } {2 } }} = \frac{1 } {\sqrt{2 } } \begin{ bmatrix } 0 \\\\ 0 \\\\ 1 \\\\ 1\end{bmatrix}
 $$
 
 ismét az intuíciónk alapján.

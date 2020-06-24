@@ -9,6 +9,10 @@ ms.topic: article
 no-loc:
 - $
 - $
+- $
+- $
+- $
+- $
 - '\cdots'
 - bmatrix
 - '\ddots'
@@ -77,12 +81,15 @@ no-loc:
 - '\geq'
 - ~~
 - "~"
-ms.openlocfilehash: 115c1703e433f24930e4be61b545048c95da28d1
-ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
+- "\begin{bmatrix}"
+- "\end{bmatrix}"
+- '\_'
+ms.openlocfilehash: 7f10c4ad5eb325da97552d60ff47ea89a699f08d
+ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84630303"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85269473"
 ---
 # <a name="pauli-measurements"></a>Pauli-mérések
 
@@ -161,7 +168,7 @@ A Q #-ban azt mondjuk, hogy az eredmény---az a klasszikus információ, amelyet
 
 A több-qubit Pauli-operátorok mérései hasonló módon vannak definiálva, ahogy a következőkben is látható:
 
-$ $ Z \otimes z = \begin{ bmatrix } 1 &0 &0&0 \\\\ 0 & -1&0&0 \\\\ 0&0 & -1&0 0&0&0&\\\\ 1 \end { bmatrix } .
+$ $ Z \otimes z = \begin{ bmatrix } 1 &0 &0&0 \\\\ 0 & -1&0&0 \\\\ 0&0 & -1&0 \\\\ 0&0&0&1 \end{bmatrix} .
 $$
 
 Így a kétféle Pauli-$Z-kezelők kétféle, a $ $ + 1 $ és a $-1 eigenvalues tartalmazó mátrixot alkotnak $ .

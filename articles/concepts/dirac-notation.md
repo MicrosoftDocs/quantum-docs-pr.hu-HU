@@ -9,6 +9,10 @@ ms.topic: article
 no-loc:
 - $
 - $
+- $
+- $
+- $
+- $
 - '\cdots'
 - bmatrix
 - '\ddots'
@@ -77,12 +81,15 @@ no-loc:
 - '\geq'
 - ~~
 - "~"
-ms.openlocfilehash: 958910452109fc722999acddd70894c458e38357
-ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
+- "\begin{bmatrix}"
+- "\end{bmatrix}"
+- '\_'
+ms.openlocfilehash: f9dddfa25e9fd1e3d8aaf92b2e3b17c96ed8b72a
+ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84630385"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85269506"
 ---
 # <a name="dirac-notation"></a>Dirac jelölése
 
@@ -123,7 +130,7 @@ $$
 
 Példaként tekintse meg a braket $ \braket{0 | 1 $ Dirac, } amely az $0 és $1 közötti belső termék $ $ .  A következőképpen írható 
 
-$ $ \braket{0 | 1 } = \begin{ bmatrix } 1 & 0 \end{ bmatrix } \begin{ bmatrix } 0 \\\\ 1 \end { bmatrix } = 0. $ $
+$ $ \braket{0 | 1 } = \begin{ bmatrix } 1 & 0 \end{ bmatrix } \begin{ bmatrix } 0 \\\\ 1 \end{bmatrix} = 0. $ $
 
 Ez azt jelzi, hogy a $ \ket{0 } $ és a $ \ket{1 } $ a merőleges vektorok, ami azt jelenti, hogy a $ \braket{0 | 1 } = \braket{1 | 0 } = 0 $ .  Szintén definíció szerint $ \braket{0 | 0 } = \braket{1 | 1 } = 1 $ , ami azt jelenti, hogy a két számítási alap vektor is hívható *orthonormal*.
 Ezek a orthonormal tulajdonságok az alábbi példában is hasznosak. Ha a $ \ket { \psi } = {\frac{3 } {5 } } \ket{1 } + {\frac{4 } {5 } } \ket{0 $ értékkel rendelkezik } , akkor a $ \braket{1 | 0 } = 0 $ a $1 mérési valószínűsége $  
@@ -173,7 +180,7 @@ Az a tény, hogy a negatív előjel jelenik meg a valószínűség kiszámítás
 ## <a name="ketbra-or-outer-product"></a>ketbra vagy külső termék
 A Dirac jelölésének utolsó eleme a *ketbra* vagy külső termék.  A külső termék a $ \ket { \psi } \bra { \phi } $ Dirac és más néven ketbras, mivel a melltartó és a kulcsfontosságú alaptechnológiák a brakets ellentétes sorrendben történnek.  A külső termék a mátrix szorzásán keresztül van definiálva, mint $ \ket { \psi } \bra { \phi } = \psi \phi ^ \dagger $ a Quantum State vectors $ \psi $ és $ \phi $ .  Ennek a jelölésnek a legegyszerűbb és vitathatatlan leggyakoribb példája a következő
 
-$ $ \ket{0 } \bra{0 } = \begin{ bmatrix } 1 \\\\ 0 \end{ bmatrix } \begin{ bmatrix } 1&0 \end{ bmatrix } = \begin{ bmatrix } 1 &0 \\\\ 0 &0 \end { bmatrix } \qquad \ket{1 } \bra{1 } = \begin{ bmatrix } 0 \\\\ 1 \end{ bmatrix } \begin{ bmatrix } 0&1 \end{ bmatrix } = \begin{ bmatrix } 0 &0 \\\\ 0 &1 \end { bmatrix } .
+$ $ \ket{0 } \bra{0 } = \begin{ bmatrix } 1 \\\\ 0 \end{ bmatrix } \begin{ bmatrix } 1&0 \end{ bmatrix } = \begin{ bmatrix } 1 &0 \\\\ 0 &0 \end{bmatrix} \qquad \ket{1 } \bra{1 } = \begin{ bmatrix } 0 \\\\ 1 \end{ bmatrix } \begin{ bmatrix } 0&1 \end{ bmatrix } = \begin{ bmatrix } 0 &0 \\\\ 0 &1 \end{bmatrix} .
 $$
 
 A Ketbras gyakran nevezik kivetítőknek, mert a kvantum-állapotot egy rögzített értékre tervezik.  Mivel ezek a műveletek nem egységesek (és nem is őrzik meg a vektorok normáját), nem meglepő, hogy a kvantum-számítógép nem tud determinisztikus módon alkalmazni.  A kivetítők azonban szép munkát végeznek, amely leírja, hogy milyen műveletet végeznek a mérések kvantum-állapotban.  Ha például a $ \ket { \psi } $ értéket mérjük a $0-as értékre, $ akkor az azt eredményező átalakítás, hogy az állapot a mérés eredményeképpen megtapasztalható
