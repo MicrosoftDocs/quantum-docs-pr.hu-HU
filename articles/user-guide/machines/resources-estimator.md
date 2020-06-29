@@ -6,12 +6,12 @@ ms.author: anpaz@microsoft.com
 ms.date: 1/22/2019
 ms.topic: article
 uid: microsoft.quantum.machines.resources-estimator
-ms.openlocfilehash: b0c800c3946d2e4ba4457127fb9495dc9dcf2934
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: cbb1c274b64738cc4b47869563d7d02eb717afbc
+ms.sourcegitcommit: af10179284967bd7a72a52ae7e1c4da65c7d128d
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274887"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85415257"
 ---
 # <a name="the-resources-estimator-target-machine"></a>Az erőforrások kalkulátor cél gépe
 
@@ -98,8 +98,8 @@ Az alábbi lista a becsült mérőszámokat sorolja fel `ResourcesEstimator` :
 * __Mérték__: a végrehajtott mérések száma.
 * __R__: a végrehajtott egyetlen qubit-forgatások száma, kivéve a T, Clifford és Pauli gateset.
 * __T__: a t-kapuk és a benne lévő konjugátumok száma, beleértve a t-kaput, T_x = H. T. h, valamint T_y = a (z). t. a.
-* __Mélység__: a Q # művelet által végrehajtott kvantum-áramkör mélysége. Alapértelmezés szerint csak a T-Gates számítanak bele a mélységbe, a részletekért lásd a részletes [számlálót](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter) .
-* __Szélesség__: a Q # művelet végrehajtása során lefoglalt qubits maximális száma.
+* __Mélység__: a Q # művelet által végrehajtott kvantum-áramkör mélységének alsó határa. Alapértelmezés szerint csak a T-Gates számítanak bele a mélységbe, a részletekért lásd a részletes [számlálót](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter) .
+* __Width (szélesség__): a Q # művelet végrehajtása során lefoglalt qubits maximális számának alsó határa. Előfordulhat, hogy a __mélység__ és a __szélesség__ alsó határa nem érhető el egyszerre.
 * __BorrowedWidth__: a Q # műveletben kölcsönzött qubits maximális száma.
 
 

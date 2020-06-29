@@ -6,12 +6,12 @@ ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.expressions
-ms.openlocfilehash: b32644382bb88fb11da00d0d7d78bbd797a0eaaa
-ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
+ms.openlocfilehash: 1821df6a3a51a62b44f3ccd96b127577c5db990a
+ms.sourcegitcommit: af10179284967bd7a72a52ae7e1c4da65c7d128d
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84629994"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85415388"
 ---
 # <a name="type-expressions-in-q"></a>Kifejezések megadása a Q-ban #
 
@@ -20,11 +20,11 @@ ms.locfileid: "84629994"
 A numerikus kifejezések a következő típusú kifejezések:, `Int` `BigInt` vagy `Double` .
 Vagyis egész vagy lebegőpontos számok.
 
-`Int`a Q # literálok csak számjegyek sorozatából írhatók.
-A hexadecimális és a bináris egész számok a `0x` és a `0b` előtaggal támogatottak.
+`Int`a Q # literálokat számjegyek sorozatából kell írni.
+A hexadecimális és a bináris egész számok támogatottak, és a `0x` és `0b` előtaggal vannak írva.
 
-`BigInt`a Q # karakteres literálok egy záró `l` vagy `L` utótaggal íródnak.
-A hexadecimális nagy egész számok "0x" előtaggal támogatottak.
+`BigInt`a Q # konstansok egy záró `l` vagy `L` utótaggal rendelkeznek.
+A hexadecimális nagy egész számok támogatottak, és "0x" előtaggal írhatók.
 Így az alábbi értékek érvényesek a literálok összes érvényes használatára `BigInt` :
 
 ```qsharp
@@ -34,36 +34,36 @@ let bigOne = bigZero + 1L;
 ```
 
 `Double`a Q # literális lebegőpontos számok, amelyek decimális számjegyek használatával íródnak.
-Ezek írhatók decimális ponttal, `.` és/vagy az "e" vagy "e" karakterrel jelzett exponenciális rész (amely után csak egy lehetséges negatív jel és decimális számjegy érvényes).
+Megírhatók decimális ponttal vagy anélkül `.` , illetve az "e" vagy az "e" karakterrel jelzett exponenciális rész (amely után csak egy lehetséges negatív jel és decimális számjegy érvényes).
 A következő érvényes `Double` literálok: `0.0` , `1.2e5` , `1e-5` .
 
-Egy adott elemtípus tömb kifejezése miatt a beépített függvénnyel létrehozható egy `Int` kifejezés, [`Length`](xref:microsoft.quantum.core.length) amely zárójelek közé foglalt tömb kifejezéssel `(` és `)` .
+Bármilyen típusú tömb kifejezése miatt `Int` a beépített függvény használatával kifejezéseket állíthat be a [`Length`](xref:microsoft.quantum.core.length) tömb kifejezés zárójelek közé.
 Ha például `a` egy tömbhöz van kötve, akkor az egy `Length(a)` egész szám kifejezés.
 Ha `b` az egész számokból álló tömbök tömbje, akkor a- `Int[][]` ben az `Length(b)` altömbök száma, a `b` `Length(b[1])` pedig a második altömbben lévő egész számok száma `b` .
 
 Az adott típus két numerikus kifejezése, a bináris operátorok, a, `+` `-` és az `*` `/` új numerikus kifejezéseket is felhasználhatja.
 Az új kifejezés típusa megegyezik az összetevő-kifejezések típusával.
 
-A két egész szám kifejezés miatt a bináris operátor `^` (Power) egy új egész kifejezés létrehozásához használható.
-Hasonlóképpen, két kettős kifejezéssel is használható, amelyek `^` új dupla kifejezést alkotnak.
-Végül a `^` bal oldalon egy nagy egész számmal, a jobb oldalon pedig egy egész számmal, egy új Big Integer típusú kifejezés létrehozásához is használható.
-Ebben az esetben a második paraméternek 32 bitesnek kell lennie; Ha nem, a rendszer futásidejű hibát jelez.
+A két egész szám kifejezésnek megfelelően a bináris operátor `^` (Power) használatával új egész kifejezést formálhat.
+Ehhez hasonlóan két dupla kifejezés is használható `^` egy új dupla kifejezés létrehozásához.
+Végül a `^` bal oldalon egy nagy egész számot és egy egész számot is használhat a jobb oldalon egy új Big Integer típusú kifejezés létrehozásához.
+Ebben az esetben a második paraméternek 32 bitesnek kell lennie; Ha nem, futásidejű hibát jelez.
 
-A két egész vagy nagy egész szám típusú kifejezés esetében egy új egész vagy Big Integer kifejezés is létrehozható a `%` (modulus), `&&&` (bitenkénti és), `|||` (bitenkénti vagy), vagy `^^^` (bitenkénti XOR) operátorok használatával.
+A megadott két egész vagy nagy egész szám típusú kifejezés egy új egész számot vagy egy Big Integer kifejezést alkot a `%` (modulus), `&&&` (bitenkénti és), `|||` (bitenkénti vagy), vagy `^^^` (bitenkénti XOR) operátorok használatával.
 
-A bal oldali egész szám vagy nagy egész szám kifejezés, a jobb oldalon pedig egy egész szám kifejezés, a `<<<` (aritmetikai bal SHIFT) vagy `>>>` (aritmetikai jobbra váltás) operátorok használhatók a bal oldali kifejezéssel megegyező típusú új kifejezés létrehozására.
+A bal oldali egész szám vagy nagy egész szám kifejezés, a jobb oldalon pedig egy egész szám kifejezés, a `<<<` (aritmetikai bal SHIFT) vagy `>>>` (aritmetikai jobbra váltás) operátorok segítségével hozzon létre egy új kifejezést a bal oldali kifejezéssel megegyező típussal.
 
 A második paraméternek (a eltolási mennyiségnek) vagy a SHIFT műveletnek nullánál nagyobbnak vagy azzal egyenlőnek kell lennie. a negatív eltolású összegek viselkedése nincs meghatározva.
-A eltolási művelet eltolási értékének a 32 bit-be is illeszkednie kell. Ha nem, a rendszer futásidejű hibát jelez.
-Ha az áthelyezhető szám egész szám, akkor a rendszer a eltolási értéket fogja értelmezni, `mod 64` azaz az 1. és a 65-es váltás hatása megegyezik.
+A eltolási művelet eltolási értékének a 32 bit-be is illeszkednie kell. Ha nem, futásidejű hibát jelez.
+Ha az áthelyezett szám egész szám, akkor a rendszer a eltolási értéket fogja értelmezni, `mod 64` azaz az 1 eltolást és a 65 eltolását.
 
 Mind az egész, mind a Big Integer érték esetén a váltások aritmetikai értékek.
-A negatív érték eltolása balra vagy jobbra is negatív számot eredményez.
-Ez azt okozhatja, hogy az egyik lépés balra vagy jobbra való eltolása pontosan ugyanaz, mint a 2. számú szorzás vagy osztás.
+A negatív érték balra vagy jobbra való eltolása negatív szám lehet.
+Ez azt jelöli, hogy az egyik lépés balra vagy jobbra való eltolása megegyezik a 2. számú szorzással vagy osztással.
 
 Az egész szám és az Integer modulus ugyanazt a viselkedést követi a negatív számok esetében, mint a C#.
-Ez azt `a % b` eredményezi, hogy mindig ugyanazzal a jellel fog rendelkezni `a` , és `b * (a / b) + a % b` mindig egyenlő lesz `a` .
-Például:
+Vagyis `a % b` mindig ugyanaz a jel, mint a `a` , és `b * (a / b) + a % b` mindig egyenlő `a` .
+Példa:
 
  `A` | `B` | `A / B` | `A % B`
 ---------|----------|---------|---------
@@ -72,19 +72,19 @@ Például:
  -5 | 2 | -2 | -1
  -5 | -2 | 2 | -1
 
-A Big Integer osztás és a modulus hasonló módon működik.
+A Big Integer osztás és a modulus műveletek ugyanúgy működnek.
 
-A numerikus kifejezéseket megadva egy új kifejezés hozható létre az `-` unáris operátor használatával.
-Az új kifejezés ugyanolyan típusú lesz, mint az összetevő kifejezése.
+A numerikus kifejezéseket megadva egy új kifejezés is létrehozható az `-` unáris operátor használatával.
+Az új kifejezés ugyanolyan típusú, mint az összetevő kifejezése.
 
-Adott egész szám vagy nagy egész szám kifejezés esetén az azonos típusú új kifejezés az `~~~` (bitenkénti komplement) unáris operátor használatával hozható létre.
+Egy egész szám vagy egy nagy egész szám kifejezés esetén a `~~~` (bitenkénti komplement) egyoperandusú operátor használatával egy adott típusú új kifejezés is létrehozható.
 
 ## <a name="boolean-expressions"></a>Logikai kifejezések
 
 A két `Bool` literális érték a `true` és a `false` .
 
 Az azonos primitív típusú két kifejezés miatt a `==` és a `!=` bináris operátor is használható kifejezés létrehozásához `Bool` .
-A kifejezés akkor igaz, ha a két kifejezés egyenlő, és hamis, ha nem.
+A kifejezés értéke igaz, ha a két kifejezés egyenlő és hamis, ha nem.
 
 A felhasználó által definiált típusok értéke nem hasonlítható össze, csak a nem burkolt értékeket lehet összehasonlítani. Például a "kicsomagolás" operátor használatával `!` (részletes magyarázat a [Q # típusokban](xref:microsoft.quantum.guide.types#access-anonymous-items-with-the-unwrap-operator))
 
@@ -100,56 +100,55 @@ Az értékek egyenlőségének összehasonlítása az `Qubit` identitással egye
 A két qubits állapota nem hasonlítható össze, nem érhető el, nem mérhető, illetve nem módosult ezzel az összehasonlítással.
 
 Az értékek egyenlőségének összehasonlítása a `Double` kerekítési hatások miatt félrevezető lehet.
-Például: `49.0 * (1.0/49.0) != 1.0` .
+Például: `49.0 * (1.0/49.0) != 1.0`.
 
 A két numerikus kifejezéstől függően a bináris operátorok, a, `>` `<` `>=` és `<=` felhasználhatók egy olyan új logikai kifejezés létrehozására, amely igaz, ha az első kifejezés nagyobb, mint, kisebb, mint, nagyobb vagy egyenlő, mint a második kifejezés.
 
-A két logikai kifejezés miatt a `and` és a `or` bináris operátor felhasználható egy olyan új logikai kifejezés létrehozására, amely igaz, ha a két kifejezés mindkét (vagy mindkét) értéke igaz.
+Ha két logikai kifejezés van megadva, a `and` bináris operátor használatával olyan új logikai kifejezést hozhat létre, amely igaz, ha mindkét kifejezés igaz. Hasonlóképpen, az `or` operátor használatával egy olyan kifejezést hoz létre, amely akkor igaz, ha a két kifejezés egyike igaz.
 
 A logikai kifejezéseket megadva az `not` egyoperandusú operátor felhasználható egy olyan új logikai kifejezés létrehozására, amely igaz, ha az összetevő kifejezése hamis.
 
-## <a name="string-expressions"></a>Karakterlánc-kifejezések
+## <a name="string-expressions"></a>Sztringkifejezések
 
-A Q # lehetővé teszi a karakterláncok használatát az `fail` utasításban (a [vezérlési folyamat](xref:microsoft.quantum.guide.controlflow#fail-statement)ismertetése) és a [`Message`](xref:microsoft.quantum.intrinsic.message) standard függvényben.
-Az utóbbi adott viselkedése a használt szimulátortól függ, de általában egy üzenetet ír a gazdagép-konzolra, amikor a rendszer egy Q # programban hívja meg.
+A Q # lehetővé teszi a karakterláncok használatát az `fail` utasításban (a [vezérlési folyamat](xref:microsoft.quantum.guide.controlflow#fail-statement)ismertetése) és a [`Message`](xref:microsoft.quantum.intrinsic.message) standard függvényben. Az utóbbi viselkedése a használt szimulátortól függ, de általában egy üzenetet ír a gazdagép-konzolra, amikor a rendszer a Q # program során hívja meg.
 
 A Q # sztringek literálok vagy interpolált karakterláncok.
 
-A karakterlánc-literálok a legtöbb nyelvben hasonlítanak az egyszerű karakterlánc-literálokra: az Unicode-karakterek egy számsorozata idézőjelek közé `"` .
-Egy karakterláncon belül a háttér-perjel karakter `\` felhasználható dupla idézőjelek kiírására, valamint egy új vonal beszúrására, `\n` a kocsivissza karaktert `\r` és a lapot `\t` .
-Ilyenek például a következők:
+A karakterlánc-literálok a legtöbb nyelvben hasonlítanak az egyszerű karakterlánc-literálokra: a Unicode-karakterek egy sorozata dupla idézőjelek közé `" "` .
+Egy karakterláncon belül használja a fordított perjel karaktert `\` egy dupla idézőjeles karakter () elküldéséhez `\"` , vagy egy új vonal ( `\n` ), egy kocsivissza ( `\r` ) vagy egy lap () beszúrásához `\t` .
+Példa:
 
 ```qsharp
 "\"Hello world!\", she said.\n"
 ```
 ### <a name="interpolated-strings"></a>Interpolált karakterláncok
 
-A Q # szintaxis a karakterlánc-Interpolációk esetében a C# szintaxis egy részhalmaza, de itt összefoglaljuk azokat a kulcsfontosságú pontokat, amelyek a Q #-ra vonatkoznak.
-A legfontosabb különbségeket az alábbiakban tárgyaljuk.
+A Q # szintaxis a karakterlánc-interpolációhoz a C# szintaxis egy részhalmaza. A következő kulcsfontosságú pontok a Q # esetében vonatkoznak:
 
-Ha egy szövegkonstans-karakterláncot interpolált karakterláncként szeretne azonosítani, a szimbólummal megadhatja azt `$` .
-A és a között nem lehet szóköz, `$` `"` amely egy szövegkonstans-karakterláncot indít el.
+* Ha egy szövegkonstans-karakterláncot interpolált karakterláncként szeretne azonosítani, a szimbólummal megadhatja azt `$` . A és a közötti térköz nem lehet üres `$` `"` karakterláncot indít.
 
-A következő példa egy olyan alapszintű példát mutat be, amely a [`Message`](xref:microsoft.quantum.intrinsic.message) mérés eredményét a konzolra írja, más Q # kifejezésekkel együtt.
+* A következő példa egy olyan alapszintű példát mutat be, amely a [`Message`](xref:microsoft.quantum.intrinsic.message) mérés eredményét a konzolra írja, más Q # kifejezésekkel együtt.
 
 ```qsharp
     let num = 8;       // some Q# expression
     let res = M(q);
     Message($"Number: {num}, Result: {res}");
 ```
-Bármely érvényes Q # kifejezés egy interpolált karakterláncban jelenhet meg.
 
-A C# szintaxissal kapcsolatos további részletek az [*interpolált karakterláncokban*](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/interpolated-strings)találhatók.
-A legfontosabb különbség az, hogy a Q # nem támogatja a Verbatim (többsoros) interpolált karakterláncokat.
-Az interpolált karakterláncban szereplő kifejezések a Q # szintaxist követik, nem a C# szintaxist.
+* Bármely érvényes Q # kifejezés egy interpolált karakterláncban jelenhet meg.
+
+* Az interpolált karakterláncban szereplő kifejezések a Q # szintaxist követik, nem a C# szintaxist. A legfontosabb különbség az, hogy a Q # nem támogatja a Verbatim (többsoros) interpolált karakterláncokat.
+
+A C# szintaxissal kapcsolatos további információkért lásd: [*interpolált karakterláncok*](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/interpolated-strings).
 
 ## <a name="range-expressions"></a>Tartomány kifejezései
 
-`Int`Egy három kifejezés `start` , a `step` és a `stop` `start .. step .. stop` egy olyan tartomány kifejezése, amelynek első eleme a, a `start` második elem `start+step` , a harmadik elem, `start+step+step` stb., amíg `stop` a rendszer át nem adja.
-A tartomány lehet üres, ha például a `step` pozitív és a `stop < start` .
-A tartomány utolsó eleme abban az esetben lesz `stop` , ha a és a közötti különbség a `start` `stop` többszöröse `step` ; vagyis a tartomány mindkét végén szerepel.
+A (z `Int` `start` `step` ) és a (z `stop` ) kifejezés `start .. step .. stop` egy olyan tartomány kifejezése, amelynek első eleme a `start` második elem, a `start+step` harmadik elem, `start+step+step` és így tovább, amíg át nem halad `stop` .
+A tartomány lehet üres, ha például `step` pozitív és `stop < start` .
 
-`Int`A két kifejezésnek `start` `stop` megfelelő, és `start .. stop` egy tartománybeli kifejezés, amely egyenlő `start .. 1 .. stop` .
+A tartomány mindkét végén szerepel. Ez azt eredményezi, hogy ha a és a közötti különbség az `start` `stop` egész szám `step` , a tartomány utolsó eleme lesz `stop` .
+
+`Int` `start` `stop` A kifejezés `start .. stop` egy olyan tartomány kifejezése, amely egyenlő a két kifejezéssel `start .. 1 .. stop` .
 Vegye figyelembe, hogy a vélelmezett `step` érték + 1 `stop` , akkor is, ha kevesebb, mint `start` ; ebben az esetben a tartomány üres.
 
 Néhány példa a tartományokra:
@@ -184,7 +183,7 @@ Ugyanez érvényes a és a esetében is `Zero` `0` .
 
 ## <a name="tuple-expressions"></a>Rekordos kifejezések
 
-A rekordos literál a megfelelő típusú elemek sorozata, vesszővel elválasztva, a és a közé foglalt módon `(` `)` .
+A rekordos konstans a megfelelő típusú elemek sorozata, vesszővel elválasztva, zárójelek közé zárva.
 Például `(1, One)` egy `(Int, Result)` kifejezés.
 
 A konstansok kivételével az egyetlen rekord kifejezés olyan szimbólum, amely a rekord értékekhez, a rekordos tömbök tömb elemeihez és a rekordok visszaadó hívható hívásokhoz van kötve.
@@ -192,24 +191,24 @@ A konstansok kivételével az egyetlen rekord kifejezés olyan szimbólum, amely
 ## <a name="user-defined-type-expressions"></a>Felhasználó által definiált típusú kifejezések
 
 A felhasználó által definiált típus egy literálja a típus nevét, a típus alaprekordjának típusát pedig a rekordból.
-Ha például a `IntPair` felhasználó által definiált típus a (z) alapján `(Int, Int)` , akkor az `IntPair(2, 3)` adott típusú érvényes literál lenne.
+Ha például `IntPair` egy felhasználó által definiált típus a (z) alapján `(Int, Int)` , akkor `IntPair(2, 3)` az egy adott típusú érvényes literál.
 
 A konstansok kivételével a felhasználó által definiált típusok egyetlen kifejezése az adott típus értékeit, tömb elemeit és a típust visszaadó hívható hívásokat tartalmazó szimbólumok.
 
 ## <a name="unwrap-expressions"></a>Kifejezések kicsomagolása
 
 A Q # értéknél a kicsomagolás operátor egy záró felkiáltójel `!` .
-Például, ha `IntPair` egy felhasználó által definiált típus, amely egy alapul szolgáló típussal rendelkezik `(Int, Int)` , és `s` egy változó értékkel rendelkezik `IntPair(2, 3)` , akkor a következő `s!` lesz: `(2, 3)` .
+Ha például `IntPair` egy felhasználó által definiált típus az alapul szolgáló típussal `(Int, Int)` , és `s` egy változó értékkel `IntPair(2, 3)` , akkor `s!` `(2, 3)` a következő:.
 
-Más, felhasználó által definiált típusokban definiált, felhasználó által definiált típusok esetében előfordulhat, hogy a kicsomagolási operátor megismétlődik; például `s!!` a kétszeresen kicsomagolt értéket jelöli `s` .
-Így ha a `WrappedPair` felhasználó által definiált típus egy alapul szolgáló típusú `IntPair` , és `t` egy változó értékkel `WrappedPair(IntPair(1,2))` , akkor a következő `t!!` lesz: `(1,2)` .
+Más, felhasználó által definiált típusokban definiált, felhasználó által definiált típusok esetén megismételheti a kicsomagolási operátort. Például `s!!` a kétszeresen kicsomagolt értéket jelöli `s` .
+Így ha a `WrappedPair` felhasználó által definiált típus egy alapul szolgáló típusú `IntPair` , és `t` egy változó értékkel `WrappedPair(IntPair(1,2))` , akkor a `t!!` következő: `(1,2)` .
 
 Az `!` operátor magasabb prioritású, mint az összes többi operátor `[]` , mint a tömb indexelése és a szeletelése.
-`!`és a `[]` kötés elhelyezése, azaz a `a[i]![3]` következőképpen kell elolvasni `((a[i])!)[3]` : a `i` "th elemének `a` kicsomagolása, a kicsomagolása, majd a nem burkolt érték harmadik elemének beolvasása (tömbnek kell lennie).
+`!`és a `[]` kötés elhelyezése; ez a következő `a[i]![3]` `((a[i])!)[3]` : a (z), a (z), a kicsomagolása `i` , majd a nem `a` burkolt érték harmadik elemének beolvasása (tömbnek kell lennie).
 
 Az operátor elsőbbsége `!` egy olyan hatással van, amely esetleg nem nyilvánvaló.
 Ha egy függvény vagy művelet egy értéket ad vissza, amelyet a rendszer kicsomagol, a függvény vagy a művelet hívását zárójelek közé kell foglalni, hogy az argumentum rekordja a kicsomagolás helyett a híváshoz kapcsolódjon.
-Például:
+Példa:
 
 ```qsharp
 let f = (Foo(arg))!;    // Calls Foo(arg), then unwraps the result
@@ -218,27 +217,26 @@ let g = Foo(arg)!;      // Syntax error
 
 ## <a name="array-expressions"></a>Tömb kifejezései
 
-A tömb literál egy vagy több elem kifejezésének sorozata, vesszővel elválasztva, a és a `[` közé `]` .
+A tömb literál egy vagy több elem kifejezésének sorozata, vesszővel elválasztva, szögletes zárójelek közé `[]` .
 Minden elemnek kompatibilisnek kell lennie ugyanazzal a típussal.
 
-Mivel a két tömb azonos típusú, a bináris `+` operátor egy olyan új tömb létrehozásához használható, amely a két tömb összefűzése.
-Például: `[1,2,3] + [4,5,6]` `[1,2,3,4,5,6]` .
+Ha a két tömb azonos típusú, a bináris `+` operátor használatával olyan új tömböt formálhat, amely a két tömb összefűzése.
+Például: `[1,2,3] + [4,5,6]` = `[1,2,3,4,5,6]`.
 
 ### <a name="array-creation"></a>Tömb létrehozása
 
-Adott típus és kifejezés alapján `Int` az `new` operátor felhasználható a megadott méretű új tömb kiosztására.
-Például `new Int[i + 1]` lefoglalhat egy új `Int` tömböt `i + 1` elemekkel.
+Adott típus és `Int` kifejezés `new` alapján a kezelővel lefoglalhatja a megadott méretű új tömböt.
+Például `new Int[i + 1]` kioszt egy új `Int` tömböt `i + 1` elemekkel.
 
-Az üres tömb literálok `[]` nem engedélyezettek.
-A használata helyett, `new ★[0]` ahol a `★` egy megfelelő típusú helyőrző, lehetővé teszi a nulla hosszúságú kívánt tömb létrehozását.
+Az üres tömb literálok (például `[]` ) nem engedélyezettek.
+Ehelyett létrehozhat egy nulla hosszúságú tömböt a használatával `new T[0]` , ahol a a `T` megfelelő típusú helyőrző.
 
 Az új tömb elemei egy típustól függő alapértelmezett értékre vannak inicializálva.
 A legtöbb esetben ez a nulla valamilyen változata.
 
 Az entitásokra hivatkozó qubits és callables esetében nincs ésszerű alapértelmezett érték.
-Ezért az ilyen típusú típusok esetében az alapértelmezett érték egy érvénytelen hivatkozás, amely futásidejű hiba nélkül nem használható.
-Ez hasonló a más nyelveken (például C# vagy Java) található null hivatkozáshoz.
-A qubits vagy callables tartalmazó tömböket megfelelően kell inicializálni a nem alapértelmezett értékekkel, mielőtt az elemek biztonságosan használhatók legyenek. A megfelelő inicializálási rutinok a következő címen találhatók: <xref:microsoft.quantum.arrays> .
+Ezért az ilyen típusú típusok esetében az alapértelmezett érték egy érvénytelen hivatkozás, amely nem használható futásidejű hiba nélkül, hasonlóan a nyelvekhez, mint például a C# vagy a Java.
+Az qubits vagy callables tartalmazó tömböket nem alapértelmezett értékekkel kell inicializálni az elemek biztonságos használata előtt. A megfelelő inicializálási rutinok: <xref:microsoft.quantum.arrays> .
 
 Az egyes típusok alapértelmezett értékei a következők:
 
@@ -256,17 +254,17 @@ Típus | Alapértelmezett
  `Callable` | _Érvénytelen hívható_
  `Array['T]` | `'T[0]`
 
-A rekord típusú típusok inicializálása elem-by-Element.
+A rekord típusú típusok inicializálása elemről elemre.
 
 
 ### <a name="array-elements"></a>Tömb elemei
 
-Egy tömb kifejezése és egy `Int` kifejezés alapján egy új kifejezés is létrehozható a `[` és a `]` tömb elem operátor használatával.
-Az új kifejezés ugyanolyan típusú lesz, mint a tömb elemének típusa.
-Ha például `a` egy tömbhöz van kötve `Double` , akkor `a[4]` egy `Double` kifejezés.
+Egy tömböt megadó kifejezés és egy `Int` kifejezés, amely egy új kifejezést képez a tömb elem operátor használatával `[]` .
+Az új kifejezés ugyanaz, mint a tömb elemének típusa.
+Ha például `a` egy típusú tömbhöz van kötve `Double` , akkor `a[4]` egy `Double` kifejezés.
 
-Ha a tömb kifejezése nem egyszerű azonosító, zárójelek közé kell tenni, hogy ki lehessen választani egy elemet.
-Ha például a `a` és `b` mindkét tömbje `Int` , az összefűzésből származó elem a következőként lesz kifejezve:
+Ha a tömb kifejezése nem egyszerű azonosító, akkor zárójelek közé kell helyeznie egy elem kiválasztásához.
+Ha például a `a` és `b` mindkét típusú tömb `Int` , az összefűzésből származó elemek a következőképpen jelennek meg:
 
 ```qsharp
 (a + b)[13]
@@ -278,14 +276,14 @@ Vagyis a tömb első eleme `a` mindig `a[0]` .
 
 ### <a name="array-slices"></a>Tömb szeletek
 
-Egy tömböt megadó kifejezés és egy `Range` kifejezés alapján egy új kifejezés is létrehozható a `[` és a `]` tömb szelet operátor használatával.
-Az új kifejezés ugyanolyan típusú, mint a tömb, és a () elemei által indexelt tömb elemeket fogja tartalmazni `Range` a által definiált sorrendben `Range` .
-Ha például egy `a` tömbhöz van kötve `Double` , akkor `a[3..-1..0]` egy `Double[]` kifejezés, amely az első négy elemét tartalmazza, `a` de a fordított sorrendben, ahogy azok megjelennek a következőben: `a` .
+Egy tömb kifejezése és egy `Range` kifejezés alapján egy új kifejezés is létrehozható a tömb szelet operátor használatával `[ ]` .
+Az új kifejezés típusa megegyezik a tömb típusával, és tartalmazza a által a által meghatározott sorrendben indexelt elemeket `Range` `Range` .
+Ha például `a` egy típusú tömbhöz van kötve `Double` , akkor `a[3..-1..0]` egy `Double[]` kifejezés, amely az első négy elemét tartalmazza, `a` de a fordított sorrendben, ahogy azok megjelennek a ben `a` .
 
-Ha az `Range` üres, akkor az eredményül kapott tömb szelete nulla hosszúságú lesz.
+Ha az `Range` üres, akkor az eredményül kapott tömb szelete nulla hosszúságú.
 
-A tömb elemeihez hasonlóan, ha a tömb kifejezése nem egyszerű azonosító, azt zárójelek közé kell tenni a szelethez.
-Ha `a` és `b` mindkét tömbje `Int` , az összefűzésből származó szeletek a következőképpen lesznek kifejezve:
+A tömbök viszonyítási elemeihez hasonlóan, ha a tömb kifejezése nem egyszerű azonosító, akkor zárójelek közé kell tenni a szeletet.
+Ha például a `a` és `b` mindkét típusú tömb `Int` , az összefűzésből származó szelet a következőként van kifejezve:
 
 ```qsharp
 (a+b)[1..2..7]
@@ -293,15 +291,17 @@ Ha `a` és `b` mindkét tömbje `Int` , az összefűzésből származó szeletek
 
 #### <a name="inferred-startend-values"></a>Következtetett kezdő/záró értékek
 
-A 0,8-es verziótól kezdődően a hatókör-szeletelők környezetfüggő kifejezéseket támogatunk. A tartomány indítási és befejezési értékei a tartomány-szeletelő kifejezés kontextusában is kihagyhatók. Ebben az esetben a fordító a következő szabályok alkalmazásával következteti ki a tartományhoz tartozó elhatárolókat. 
+A 0,8-es [verziótól](xref:microsoft.quantum.relnotes)kezdődően a hatókör-szeletelők környezetfüggő kifejezéseket támogatunk. Különösen kihagyhatja a tartomány kezdő és záró értékeit egy tartomány-szeletelő kifejezés kontextusában. Ebben az esetben a fordító a következő szabályok alapján következteti ki a tartományhoz tartozó elhatárolókat:
 
-Ha például a tartomány indítási értéke kimarad, akkor a késleltetett indítási érték 
-- nulla, ha nincs megadva lépés, vagy a megadott lépés pozitív, és 
-- a szeletelt tömb hossza mínusz eggyel, ha a megadott lépés negatív. 
+* Ha a tartomány *indítási* értéke kimarad, akkor a késleltetett indítási érték
+  * nulla, ha nincs megadva lépés, vagy a megadott lépés pozitív.  
+  * a szeletelt tömb hossza mínusz eggyel, ha a megadott lépés negatív.
 
-Ha a tartomány befejezési értéke kimarad, akkor a következtetett vég értéke 
-- a szeletelt tömb hossza mínusz eggyel, ha nincs megadva lépés, vagy a megadott lépés pozitív, és 
-- nulla, ha a megadott lépés negatív. 
+* Ha a tartomány *befejezési* értéke kimarad, akkor a következtetett vég értéke
+  * a szeletelt tömb hossza mínusz eggyel, ha nincs megadva a lépés, vagy a megadott lépés pozitív.
+  * nulla, ha a megadott lépés negatív.
+
+Néhány példa:
 
 ```qsharp
 let arr = [1,2,3,4,5,6];
@@ -318,18 +318,21 @@ let slice10 = arr[...];       // slice10 is [1,2,3,4,5,6];
 
 ### <a name="copy-and-update-expressions"></a>Másolás és frissítés kifejezések
 
-Mivel az összes Q # típus érték típusú, és a qubits némileg speciális szerepkört vesznek fel – a "Copy" szó akkor jön létre, amikor egy érték egy szimbólumhoz van kötve, vagy ha egy szimbólum újra van kötve. Ez azt jelenti, hogy a Q # viselkedése megegyezik azzal, mintha egy másolat lett létrehozva a hozzárendelésen.
-A gyakorlatban természetesen csak az érintett darabok szükségesek a létrehozásuk során. 
+Mivel az összes Q # típus érték típusú (a qubits valamivel speciális szerepkört vesznek fel), az űrlapos másolás akkor jön létre, amikor egy érték egy szimbólumhoz van kötve, vagy ha szimbólum van kötve. Ez azt jelenti, hogy a Q # viselkedése megegyezik azzal, mintha egy másolatot egy hozzárendelési operátor használatával hoztak létre. 
 
-Ez különösen magában foglalja a tömböket is.
-Különösen nem lehetséges a tömb elemeinek frissítése. Egy meglévő tömb módosításához a *copy-Update* mechanizmust kell használnia.
+Természetesen a gyakorlatban csak az érintett darabok szükségesek újra létrehozva. Ez befolyásolja a tömbök másolásának módját, mert nem lehetséges a tömb elemeinek frissítése. Egy meglévő tömb módosításához a *copy-Update* mechanizmust kell használnia.
 
-Új tömbök hozhatók létre a meglévő *példányokból másolás és frissítés* kifejezések használatával.
-A copy-Update kifejezés az űrlap kifejezése `expression1 w/ expression2 <- expression3` , amelyben valamilyen típusú típusnak `expression1` kell lennie `T[]` `T` .
-A második `expression2` meghatározza, hogy az elem (ek) milyen indexeket módosítson a tömbhöz képest, `expression1` és a típusnak vagy típusúnak kell lennie `Int` `Range` .
-Ha a `expression2` típusa típusú `Int` , a `expression3` típusnak kell lennie `T` . Ha a `expression2` típusa típusú `Range` , a `expression3` típusnak kell lennie `T[]` .
+Létrehozhat egy új tömböt egy meglévő tömbből *Másolás és frissítés* kifejezések használatával, amelyek a kezelőket és a-t használják `w/` `<-` .
+A copy-Update kifejezés az űrlap kifejezése `expression1 w/ expression2 <- expression3` , ahol
 
-A másolási és frissítési kifejezés `arr w/ idx <- value` egy új tömböt hoz létre, amely a megfelelő elemre van állítva `arr` , kivéve a (z) elem (ek) et, amely a (z) értékre `idx` van beállítva `value` . Ha például `arr` egy tömböt tartalmaz `[0,1,2,3]` , akkor 
+* `expression1`valamilyen típusúnak kell lennie `T[]` `T` .
+* `expression2`meghatározza, hogy mely indexeket kell megadni a tömbben a `expression1` módosításhoz. `expression2`típusnak `Int` vagy típusnak kell lennie `Range` .
+* `expression3`az elemeknek a alkalmazásban való frissítéséhez használt érték (ek) a `expression1` ben megadott indexek alapján `expression2` . Ha `expression2` a típus típusa `Int` , `expression3` típusnak kell lennie `T` . Ha `expression2` a típus típusa `Range` , `expression3` típusnak kell lennie `T[]` .
+
+A copy-and-Update kifejezés például `arr w/ idx <- value` egy új tömböt hoz létre, amely a megfelelő elemeire van beállítva `arr` , kivéve a által megadott elem (ek) et, `idx` amely a (z) értékre van beállítva `value` . 
+
+`arr`A megadott tömb tartalmazza `[0,1,2,3]` , majd 
+
 - `arr w/ 0 <- 10`a tömb `[10,1,2,3]` .
 - `arr w/ 2 <- 10`a tömb `[0,1,10,3]` .
 - `arr w/ 0..2..3 <- [10,12]`a tömb `[10,1,12,3]` .
@@ -338,7 +341,7 @@ A másolási és frissítési kifejezés `arr w/ idx <- value` egy új tömböt 
 
 A felhasználó által definiált típusokban hasonló kifejezések léteznek a megnevezett elemekhez. 
 
-Vegyük például a típust 
+Vegyük például a következőt: 
 
 ```qsharp
 newtype Complex = (Re : Double, Im : Double);
@@ -365,50 +368,46 @@ for (i in 1..N) {
 
 ### <a name="arrays-of-callables"></a>Callables tömbök 
 
-Vegye figyelembe, hogy a hívható típusokkal kapcsolatos további részletek az alábbiakban láthatók, valamint a következő oldalon a [Q #-ban található műveletek és függvények](xref:microsoft.quantum.guide.operationsfunctions).
+A callables tömbjét is létrehozhatja.
 
-Ha az általános elemtípus művelet vagy függvény típusú, az összes elemnek azonos bemeneti és kimeneti típussal kell rendelkeznie.
-A tömb elemének típusa az összes elem által támogatott összes olyan futtatót támogatni fogja.
-Például, ha, `Op1` `Op2` és `Op3` mind a `Qubit[] => Unit` , de támogatja `Op1` `Adjoint` , `Op2` támogatja `Controlled` és `Op3` támogatja a következőket:
+* Ha az általános elemtípus művelet vagy függvény típusú, az összes elemnek azonos bemeneti és kimeneti típussal kell rendelkeznie.
+* A tömb elemének típusa az összes elem által [támogatott összes olyan futtatót](xref:microsoft.quantum.guide.operationsfunctions) támogatja.
+Például ha a `Op1` , a `Op2` és `Op3` az mind `Qubit[] => Unit` művelet, de támogatja, `Op1` `Adjoint` `Op2` támogatja `Controlled` és `Op3` támogatja mind a következőket:
+  * `[Op1, Op2]`a a műveletek tömbje `(Qubit[] => Unit)` .
+  * `[Op1, Op3]`a a műveletek tömbje `(Qubit[] => Unit is Adj)` .
+  * `[Op2, Op3]`a a műveletek tömbje `(Qubit[] => Unit is Ctl)` .
 
-- `[Op1, Op2]`a a műveletek tömbje `(Qubit[] => Unit)` .
-- `[Op1, Op3]`a a műveletek tömbje `(Qubit[] => Unit is Adj)` .
-- `[Op2, Op3]`a a műveletek tömbje `(Qubit[] => Unit is Ctl)` .
+Azonban bár a műveletek `(Qubit[] => Unit is Adj)` és `(Qubit[] => Unit is Ctl)` a közös alaptípusa, a `(Qubit[] => Unit)` műveletek *tömbje* nem osztozik közös alaptípuson.
 
-Bár `(Qubit[] => Unit is Adj)` `(Qubit[] => Unit is Ctl)` a és a műveletek közös alaptípussal rendelkeznek `(Qubit[] => Unit)` , vegye figyelembe, hogy ezen *of* operátorok tömbje nem közös alaptípust tartalmaz. Például `[[Op1], [Op2]]` jelenleg hiba történt, mivel a nem kompatibilis tömbök tömbjét kísérli meg létrehozni `(Qubit[] => Unit is Adj)[]` `(Qubit[] => Unit is Ctl)[]` .
+Például `[[Op1], [Op2]]` jelenleg hiba történt, mert megkísérli létrehozni a két nem kompatibilis tömb típusának tömbjét `(Qubit[] => Unit is Adj)[]` `(Qubit[] => Unit is Ctl)[]` .
 
+A callables kapcsolatos további információkért lásd: [hívható kifejezések](#callable-expressions) ezen az oldalon vagy [műveletek és függvények a Q #-ban](xref:microsoft.quantum.guide.operationsfunctions).
 
 ## <a name="conditional-expressions"></a>Feltételes kifejezések
 
-Egy adott típus és egy logikai kifejezés két másik kifejezése alapján a feltételes kifejezés a kérdőjel `?` és a függőleges sáv használatával hozható létre `|` .
-Például: `a==b ? c | d` .
-Ebben a példában a feltételes kifejezés értéke `c` `a==b` true (igaz `d` ) és false (hamis) lesz.
+Egy adott típus és egy logikai kifejezés két kifejezése is egy feltételes kifejezést alkot a kérdőjel `?` és a függőleges sáv használatával `|` . A `a==b ? c | d` feltételes kifejezés értéke, `c` Ha `a==b` igaz, és `d` hamis.
 
 ### <a name="conditional-expressions-with-callables"></a>Feltételes kifejezések callables
 
-A két kifejezés kiértékelheti azokat a műveleteket, amelyek azonos bemenettel és kimenettel rendelkeznek, de támogatják a különböző elhasználókat.
-Ebben az esetben a feltételes kifejezés típusa olyan művelet, amely azokat a bemeneteket és kimeneteket támogatja, amelyek a mindkét kifejezés által támogatott összes feltételt támogatják.
+A feltételes kifejezések kiértékelik azokat a műveleteket, amelyek azonos bemenettel és kimenettel rendelkeznek, de támogatják a különböző elhasználókat. Ebben az esetben a feltételes kifejezés típusa egy olyan bemenettel és kimenettel rendelkező művelet, amely támogatja a mindkét kifejezés által támogatott összes feltételt.
 Például, ha, `Op1` `Op2` és `Op3` mind a `Qubit[]=>Unit` , de támogatja `Op1` `Adjoint` , `Op2` támogatja `Controlled` és `Op3` támogatja a következőket:
 
 - `flag ? Op1 | Op2`egy `(Qubit[] => Unit)` művelet.
 - `flag ? Op1 | Op3`egy `(Qubit[] => Unit is Adj)` művelet.
 - `flag ? Op2 | Op3`egy `(Qubit[] => Unit is Ctl)` művelet.
 
-Ha a két lehetséges eredményhalmaz egyike egy függvény vagy művelet hívása, akkor ez a hívás csak akkor kerül sor, ha az eredmény a hívás értéke lesz.
-`a==b ? C(qs) | D(qs)`Ha például `a==b` igaz, akkor a rendszer `C` meghívja a műveletet, és ha hamis, akkor csak a rendszer `D` hívja meg.
-Ez hasonló a más nyelvek rövid összekapcsolásához.
+Ha a két lehetséges eredményhalmaz egyike egy függvény vagy művelet hívása, akkor a hívás csak akkor történik meg, ha ez az eredmény a hívás értéke. `a==b ? C(qs) | D(qs)`Ha például `a==b` igaz, akkor a rendszer `C` meghívja a műveletet, és ha az értéke hamis, akkor csak a `D` művelet meghívására kerül sor. Ez a megközelítés hasonló a más nyelveken történő *rövid összekapcsoláshoz* .
 
 ## <a name="callable-expressions"></a>Hívható kifejezések
 
-A meghívásos literál a fordítási hatókörben definiált művelet vagy függvény neve.
-Például egy olyan `X` műveleti literál, amely a szabványos könyvtári `X` műveletre hivatkozik, és `Message` egy függvény literál, amely a standard Library `Message` függvényre hivatkozik.
+A meghívásos literál a fordítási hatókörben definiált művelet vagy függvény neve. Például `X` egy olyan műveleti literál, amely a szabványos könyvtári `X` műveletre hivatkozik, és `Message` egy olyan függvény, amely a standard Library `Message` függvényre hivatkozik.
 
 Ha egy művelet támogatja az elválasztó műveletet `Adjoint` , akkor `Adjoint op` egy művelet kifejezése.
 Hasonlóképpen, ha a művelet támogatja az elválasztó műveletet `Controlled` , akkor `Controlled op` egy művelet kifejezése.
-Ezeknek a kifejezéseknek a típusa a [Hívási művelet specializációjában](xref:microsoft.quantum.guide.operationsfunctions#calling-operation-specializations)van megadva.
+A kifejezések típusaival kapcsolatos további információkért lásd: a [műveleti specializációk meghívása](xref:microsoft.quantum.guide.operationsfunctions#calling-operation-specializations).
 
-A (z `Adjoint` ) és a (z) (és `Controlled` ) az összes többi operátornál jobban kötődik, kivéve a kicsomagolási operátort és a tömb indexelését a következővel: `!` [].
-Így a következők mindegyike jogi, feltételezve, hogy a műveletek támogatják a használt munkafolyamatokat:
+`Adjoint`A (és `Controlled` ) az összes többi operátorral szorosabban kötődik, kivéve a kicsomagolási operátort és a `!` tömb indexelését `[ ]` .
+Így a következők mindegyike érvényes, feltéve, hogy a műveletek támogatják a használt munkafolyamatokat:
 
 ```qsharp
 Adjoint Op(qs)
@@ -419,27 +418,25 @@ Adjoint WrappedOp!(qs)
 
 ### <a name="type-parameterized-callable-expressions"></a>Típus – paraméteres hívható kifejezések
 
-Egy meghívásos literál is használható értékként, azaz egy változóhoz való hozzárendeléshez, vagy egy másik meghíváshoz való továbbításhoz.
-Ebben az esetben, ha a meghívható [paraméterekkel](xref:microsoft.quantum.guide.operationsfunctions#generic-type-parameterized-callables)rendelkezik, azokat a meghívásos érték részeként kell megadni.
-Egy meghívható érték nem rendelkezhet meghatározatlan típusú paraméterekkel.
+Használhat egy meghívásos literálot értékként, például hozzárendelheti egy változóhoz, vagy átadhatja egy másik meghívónak. Ebben az esetben, ha a meghívható [típus paraméterekkel](xref:microsoft.quantum.guide.operationsfunctions#generic-type-parameterized-callables)rendelkezik, meg kell adnia a paramétereket a meghívásos érték részeként.
 
-Ha például a `Fun` függvény aláírása `'T1->Unit` :
+Egy meghívható érték nem rendelkezhet meghatározatlan típusú paraméterekkel. Ha például az `Fun` egy függvény az aláírással `'T1->Unit` :
 
 ```qsharp
 let f = Fun<Int>;            // f is (Int->Unit).
 let g = Fun;                 // This causes a compilation error.
-SomeOtherFun(Fun<Double>);   // A (Double->Unit) is passed to SomOtherFun.
+SomeOtherFun(Fun<Double>);   // A (Double->Unit) is passed to SomeOtherFun.
 SomeOtherFun(Fun);           // This also causes a compilation error.
 ```
 
 ## <a name="callable-invocation-expressions"></a>Hívható hívási kifejezések
 
-Egy meghívásos (művelet vagy függvény) kifejezés és a meghívásos aláírás bemeneti típusának egy rekord kifejezése miatt a meghívásos kifejezés úgy hozható létre, hogy hozzáfűzi a rekord kifejezését a meghívható kifejezéshez.
+Egy meghívásos kifejezés (művelet vagy függvény) és a meghívásos aláírás bemeneti típusának egy rekord kifejezése miatt a meghívásos *kifejezéshez* hozzáfűzheti a rekord kifejezését.
 A Meghívási kifejezés típusa a hívható aláírása kimeneti típusa.
 
-Ha például `Op` az egy aláírással rendelkező művelet, a egy `((Int, Qubit) => Double)` `Op(3, qubit1)` típusú kifejezés `Double` .
-Hasonlóképpen, ha `Sin` az egy függvény az aláírással `(Double -> Double)` , `Sin(0.1)` egy típusú kifejezés `Double` .
-Végül, ha `Builder` az a függvény az aláírással `(Int -> (Int -> Int))` , akkor `Builder(3)` a függvény a from int értékre.
+Ha például az `Op` egy művelet az aláírással, a `((Int, Qubit) => Double)` egy `Op(3, qubit1)` típusú kifejezés `Double` .
+Hasonlóképpen, ha az `Sin` egy függvény az aláírással `(Double -> Double)` , a egy `Sin(0.1)` típusú kifejezés `Double` .
+Végül, ha `Builder` az a függvény az aláírással `(Int -> (Int -> Int))` , akkor a `Builder(3)` függvény a- `Int` ből `Int` .
 
 Egy hívható értékű kifejezés eredményének meghívásához egy további zárójelre van szükség a meghívásos kifejezés körül.
 Így az előző bekezdésből történő hívás eredményének meghívásához `Builder` a helyes szintaxis a következő:
@@ -448,12 +445,12 @@ Egy hívható értékű kifejezés eredményének meghívásához egy további z
 (Builder(3))(2)
 ```
 
-A [típus-paraméteres](xref:microsoft.quantum.guide.operationsfunctions#generic-type-parameterized-callables) metódus meghívásakor a tényleges Type paraméterek a szögletes zárójelben `<` és `>` a meghívásos kifejezés után is megadhatók.
-Ez általában szükségtelen, mivel a Q # fordítóprogram a tényleges típusokat fogja kikövetkeztetni.
+A [típus-paraméteres](xref:microsoft.quantum.guide.operationsfunctions#generic-type-parameterized-callables) metódus meghívásakor megadható, hogy a tényleges Type paraméterek a `< >` meghívásos kifejezés után a szög zárójelben legyenek.
+Ez a művelet általában szükségtelen, mivel a Q # fordítóprogram a tényleges típusokat vezeti le.
 Azonban szükség *van* a [részleges alkalmazásra](xref:microsoft.quantum.guide.operationsfunctions#partial-application) , ha egy Type-paraméteres argumentum nincs meghatározva.
-Időnként hasznos lehet, ha a különböző felállókkal rendelkező műveletek átadása meghívásos támogatással történik.
+Emellett akkor is hasznos, ha a különböző felhasználók által támogatott műveletek továbbítása meghívásos.
 
-Ha például `Func` rendelkezik aláírással, és aláírással rendelkezik, `('T1, 'T2, 'T1) -> 'T2` `Op1` `Op2` `(Qubit[] => Unit is Adj)` és `Op3` aláírással rendelkezik `(Qubit[] => Unit)` , az `Func` `Op1` első argumentumként, `Op2` a másodikként és `Op3` a harmadikként való meghívásához:
+Például ha `Func` rendelkezik aláírással, és aláírással rendelkezik, `('T1, 'T2, 'T1) -> 'T2` `Op1` `Op2` `(Qubit[] => Unit is Adj)` és `Op3` aláírással rendelkezik `(Qubit[] => Unit)` , az `Func` `Op1` első argumentumként, `Op2` a másodikként és `Op3` a harmadikként való meghívásához:
 
 ```qsharp
 let combinedOp = Func<(Qubit[] => Unit), (Qubit[] => Unit is Adj)>(Op1, Op2, Op3);
@@ -464,15 +461,15 @@ A típus specifikációjának megadása kötelező `Op3` `Op1` , mert különbö
 
 ## <a name="operator-precedence"></a>Operátori prioritás
 
-Minden bináris operátor megfelelő társítású, kivéve a következőt: `^` .
+* Minden bináris operátor megfelelő társítású, kivéve a következőt: `^` .
 
-Szögletes zárójelek, `[` valamint `]` a tömb szeleteléséhez és indexeléséhez minden operátor előtt kötést kell kötni.
+* Szögletes zárójelek, `[ ]` a tömb szeletelése és indexelése minden operátor előtt kötést biztosít.
 
-A kikapcsolók `Adjoint` és a `Controlled` kötés a tömb indexelése után, de az összes többi operátor előtt.
+* A kikapcsolók `Adjoint` és a `Controlled` kötés a tömb indexelése után, de az összes többi operátor előtt.
 
-A művelethez és a függvényhez tartozó zárójelek az operátorok előtt, de a tömb indexelése és a feldolgozók után is kötésben vannak.
+* A művelethez és a függvényhez tartozó zárójelek az operátorok előtt, de a tömb indexelése és a feldolgozók után is kötésben vannak.
 
-Az operátorok elsőbbségi sorrendben, a legmagasabbtól a legalacsonyabbig:
+Q # operátorok elsőbbségi sorrendben, a legmagasabbtól a legalacsonyabbig:
 
 Operátor | Aritása | Leírás | Operandusok típusai
 ---------|----------|---------|---------------
@@ -493,6 +490,6 @@ Operátor | Aritása | Leírás | Operandusok típusai
  `?` `|` | Ternáris | Feltételes | `Bool`a bal oldali
 `w/` `<-` | Ternáris | Másolás és frissítés | Lásd: [Másolás és frissítés kifejezések](#copy-and-update-expressions)
 
-## <a name="next-steps"></a>Következő lépések
+## <a name="next-steps"></a>További lépések
 
-Most, hogy a Q #-ban kifejezésekkel dolgozhat, a [q # műveletekhez és függvényekhez](xref:microsoft.quantum.guide.operationsfunctions) is megtudhatja, hogyan határozhatja meg és hívhatja meg a műveleteket és a függvényeket.
+Most, hogy a Q # kifejezésekkel tud dolgozni, a Q #-ban lévő [műveletekre és függvényekre](xref:microsoft.quantum.guide.operationsfunctions) való áttéréssel megtudhatja, hogyan határozhat meg és hívhat meg műveleteket és funkciókat.

@@ -6,12 +6,12 @@ ms.author: bradben
 ms.date: 5/30/2020
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: e48f4157438fba063877b2b79fbc7629710fc9f3
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: 0fcdec1a304730b593224283421539ea3ca9c913
+ms.sourcegitcommit: af10179284967bd7a72a52ae7e1c4da65c7d128d
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274802"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85415455"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>A Microsoft Quantum Development Kit kibocsátási megjegyzései
 
@@ -344,8 +344,6 @@ Ha korábban már telepítette a bővítményt, akkor újra telepítenie kell. E
 
 Ez a kiadás kijavít egy olyan hibát, amely miatt néhány felhasználónak nem sikerült betöltenie a Visual Studio-bővítményt.
 
-Ha a Quantum Development Kit 0.2-es verziójáról frissít, itt talál további információt a [Q# nyelv változásairól és a Q#-programok migrálásáról](xref:microsoft.quantum.relnotes.migration-0-3).
-
 ## <a name="version-031811203"></a>0\.3.1811.203-as verzió
 
 *Kiadási dátum: 2018. november 2.*
@@ -356,8 +354,6 @@ Ez a kiadás hibajavításokat tartalmaz, többek között a következőeket:
 * Eltávolítottuk a fordítási figyelmeztetéseket, amelyek a projektek a .NET Core 2.1.403-asnál korábbi verzióinak használatával történő létrehozásakor jelentek meg.
 * Átláthatóbbá tettük a dokumentációt, különös tekintettel a VS Code-ban vagy Visual Studióban az egérrel való rámutatáskor megjelenő elemleírásokra.
 
-Ha a Quantum Development Kit 0.2-es verziójáról frissít, itt talál további információt a [Q# nyelv változásairól és a Q#-programok migrálásáról](xref:microsoft.quantum.relnotes.migration-0-3).
-
 ## <a name="version-0318102508"></a>0\.3.1810.2508-as verzió
 
 *Kiadási dátum: 2018. október 29.*
@@ -367,8 +363,6 @@ Ez a kiadás új nyelvi funkciókat és továbbfejlesztett fejlesztői élményt
 * Ez a kiadás a Q# egy új nyelvi kiszolgálóját, valamint a Visual Studio és a Visual Studio Code ügyfél-integrációját tartalmazza. Ezzel elérhetővé válnak az IntelliSense új funkciói, valamint a valós idejű gépelési visszajelzés a hibák és figyelmeztetések hullámvonalas aláhúzása révén. 
 * A frissítés általánosságban véve nagy mértékben javítja a diagnosztikai üzeneteket, egyszerűen elérhetővé teszi a diagnosztikákat és pontosan meghatározza azok tartományait, valamint az egérrel való rámutatással további részletek jelenít meg.
 * A Q# nyelv kiterjesztésével a fejlesztők egységes módon végezhetnek gyakori műveleteket, a nyelvi funkciók új fejlesztéseivel pedig hatékonyan fejezhetők ki a kvantumszámítások.  A kiadással néhány kompatibilitástörő változás állt be a Q# nyelvben.   
-
-További információk a [Q# nyelv változtatásairól és a Q#-programok migrálásáról](xref:microsoft.quantum.relnotes.migration-0-3).
 
 Ez a kiadás egy új kvantumkémiai kódtárat is tartalmaz:
 
