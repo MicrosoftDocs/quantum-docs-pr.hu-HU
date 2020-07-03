@@ -6,12 +6,12 @@ uid: microsoft.quantum.more-information
 ms.author: nawiebe@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: bcc26f66a4ba3e861800ceca122b38b8d3ef6ad5
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: d3c252c6579e1286aae71a0f18ac7b6b02a5c1ed
+ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274794"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85884141"
 ---
 # <a name="more-quantum-computing-learning-resources"></a>További Quantum Computing learning-erőforrások
 
@@ -24,6 +24,14 @@ Ez a szakasz a kvantum-számítástechnikai témakörök részletes lefedettség
 + Kitaev, A. Y., Shen, A., & Vyalyi, M. N. (2002). Klasszikus és Quantum számítás (Vol. 47). Providence: amerikai matematikai társaság.
 + Mosca, P., leva, R., &, M. (2007). Bevezetés a kvantum-számítástechnika használatába. Oxford University Press.
 + Rieffel, E. G. & Polak, W. H. (2011). Quantum Computing: gyengéd bevezetést. MIT Press.
++ Sarah C. Kaiser és Christopher E. granade (a személyzet korai hozzáférési programja 2019. április, a 2020-as kiadásban). A [Quantum Computing megismerése Python és Q # – gyakorlati megközelítéssel](https://www.manning.com/books/learn-quantum-computing-with-python-and-q-sharp).
+
+## <a name="online-courses"></a>Online tanfolyamok ##
+
++ [MS-Learn Quantum Computing-modulok](https://docs.microsoft.com/users/buildcollections2020-6557/collections/1o2iogrmn8x4r). A Quantum Computing-fogalmakkal és-eljárásokkal kapcsolatos Ste-lépésenkénti oktatóanyag. 
++ [Quantum Computing – ragyogó tanfolyam](https://brilliant.org/courses/quantum-computing/). Ismerje meg, hogyan hozhat létre kvantum-algoritmusokat az alapoktól a böngészőben szimulált kvantum-számítógéppel.
++ [A Quantum Computing bemutatása – LinkedIn learning](https://www.linkedin.com/learning/introduction-to-quantum-computing). 1h25m videó bemutatása 
++ [A kvantum-számítástechnika képregény használatával](https://hackaday.io/project/168554-introduction-to-quantum-computing). Vasárnap heti gyakorlati közösségi osztály. 
 
 ## <a name="elementary-techniques-for-building-controlled-gates"></a>A vezérelt kapuk létrehozásához szükséges alapvető technikák ##
 

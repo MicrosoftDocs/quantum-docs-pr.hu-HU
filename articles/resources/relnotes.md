@@ -6,12 +6,12 @@ ms.author: bradben
 ms.date: 5/30/2020
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: 0fcdec1a304730b593224283421539ea3ca9c913
-ms.sourcegitcommit: af10179284967bd7a72a52ae7e1c4da65c7d128d
+ms.openlocfilehash: d10f81a1e49235be8e02661dcd6d3c839485af6e
+ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85415455"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85885052"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>A Microsoft Quantum Development Kit kibocsátási megjegyzései
 
@@ -20,6 +20,27 @@ Ez a cikk információkat tartalmaz a Quantum Development Kit egyes verzióiról
 A telepítési utasításokat lásd a [telepítési útmutatóban](xref:microsoft.quantum.install).
 
 A frissítésre vonatkozó utasításokat lásd a [frissítési útmutatóban](xref:microsoft.quantum.update).
+
+## <a name="version-01220070124"></a>0.12.20070124 verziója
+
+*Kiadás dátuma: július 2., 2020*
+
+A verzió a következőket tartalmazza:
+
+- Új `qdk-chem` eszköz az örökölt elektronikus struktúra problémák szerializálási formátumának (például: FCIDUMP) a [Broombridge](xref:microsoft.quantum.libraries.chemistry.schema.broombridge) való átalakításához
+- Új függvények és műveletek a [ `Microsoft.Quantum.Synthesis` névtérben](xref:microsoft.quantum.synthesis) az átalakítási és a deösszetételes-alapú szintézisi algoritmusok segítségével, hogy koherens módon alkalmazzák a klasszikus Oracle-ket.
+- Az IQ # mostantól lehetővé teszi a `%simulate` , `%estimate` és más mágikus parancsok argumentumait. További részletekért tekintse meg a [ `%simulate` Magic parancs referenciáját](xref:microsoft.quantum.iqsharp.magic-ref.simulate) .
+- Az új fázis megjelenítési beállításai az IQ #-ban. További részletekért tekintse meg a [ `%config` Magic parancs referenciáját](xref:microsoft.quantum.iqsharp.magic-ref.config) .
+- Az IQ # és a `qsharp` Python-csomag mostantól Conda-csomagokon ([qsharp](https://anaconda.org/quantum-engineering/qsharp) és [iqsharp](https://anaconda.org/quantum-engineering/iqsharp)) keresztül érhető el, hogy leegyszerűsítse a Q # Jupyter és a Python funkcióinak helyi telepítését Conda-környezetbe. További részletekért tekintse meg a [q # Jupyter notebookok](xref:microsoft.quantum.install.jupyter) és a [q # Python](xref:microsoft.quantum.install.python) -telepítési útmutatókat.
+- A szimulátor használatakor a qubits már nem kell a (z) | 0 ⟩ állapotban lennie a kiadáskor, de automatikusan alaphelyzetbe állítható, ha a felszabadítás előtt azonnal megmérjük őket.
+- A frissítések megkönnyítik az IQ # felhasználók számára, hogy a különböző QDK-verziókkal rendelkező függvénytár-csomagokat használják, és ez a verzió csak a fő & alverziószámot igényli
+- Elavult névtér eltávolítva `Microsoft.Quantum.Primitive.*`
+- Áthelyezett műveletek:
+  - `Microsoft.Quantum.Intrinsic.Assert`most`Microsoft.Quantum.Diagnostics.AssertMeasurement`
+  - `Microsoft.Quantum.Intrinsic.AssertProb`most`Microsoft.Quantum.Diagnostics.AssertMeasurementProbability`
+- Hibajavítások 
+
+A [kódtárak](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [fordítók](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [futtatókörnyezetek](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [minták](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed), [IQ#](https://github.com/microsoft/iqsharp/pulls?q=is%3Apr+is%3Aclosed) és [Katák](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed) lezárt lekéréses kérelmeinek teljes listáját itt tekintheti meg.  
 
 ## <a name="version-0112006403"></a>0\.11.2006.403-as verzió
 

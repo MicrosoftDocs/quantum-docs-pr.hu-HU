@@ -6,12 +6,12 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.style
-ms.openlocfilehash: f8e398b5c9932a5079222fed7ad20e54de814eb8
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: 3ddb5d67b972f69df1774b476a10e74dd16d97b7
+ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274797"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85884193"
 ---
 # <a name="q-style-guide"></a>Q # Style útmutató #
 ## <a name="general-conventions"></a>Általános konvenciók ##
@@ -93,7 +93,7 @@ Javasoljuk, hogy:
 
 # <a name="examples"></a>[Példák](#tab/examples)
 
-|   | Name | Leírás |
+|   | Name | Description |
 |---|------|-------------|
 | ☑ | `operation ReflectAboutStart` | A művelet hatásának jelzéséhez törölje a műveletet ("tükrözze"). |
 | ☒ | <s>`operation XRotation`</s> | A főnévi kifejezés a művelet helyett a függvényt javasolja. |
@@ -105,6 +105,31 @@ Javasoljuk, hogy:
 | ☑ | `newtype GeneratorTerm` | A főnévi kifejezés használata egyértelműen a UDT konstruktor hívásának eredményét jelenti. |
 | ☒ | <s>`@Attribute() newtype RunOnce()`</s> | A ige kifejezés használata azt sugallja, hogy a UDT konstruktora egy művelet. |
 | ☑ | `@Attribute() newtype Deprecated(Reason : String)` | A főnévi kifejezés használata az attribútum használatát közli. |
+
+***
+
+### <a name="entry-points"></a>Belépési pontok
+
+Amikor egy belépési pontot egy Q # programba definiál, a Q # Compiler felismeri az [ `@EntryPoint()` attribútumot](xref:microsoft.quantum.core.entrypoint) , ami azt igényli, hogy a belépési pontoknak egy adott névvel kell rendelkezniük (például: `main` , `Main` vagy `__main__` ).
+Vagyis a Q # fejlesztő szemszögéből a belépési pontok a következőhöz fűzött általános műveletek: `@EntryPoint()` .
+Emellett a Q # belépési pontok a teljes alkalmazás (például a Q # önálló végrehajtható fájlok) belépési pontjai lehetnek, vagy a Q # program és az alkalmazáshoz tartozó gazda program (például a Q # Python vagy .NET használatával történő használata esetén) közötti kapcsolat lehet, hogy a "Main" név félrevezető lenne, ha a Q # belépési pontra alkalmazza őket.
+
+Javasoljuk, hogy az elnevezési belépési pontok használatával tükrözze az `@EntryPoint()` attribútum használatát a fent felsorolt elnevezési műveletek általános tanácsainak használatával.
+
+
+# <a name="guidance"></a>[Útmutató](#tab/guidance)
+
+Javasoljuk, hogy:
+
+- Ne nevezze a belépési pont műveleteit "Main"-ként.
+- A név belépési pont műveletei szokásos műveletként.
+
+# <a name="examples"></a>[Példák](#tab/examples)
+
+|   | Name | Description |
+|---|------|-------------|
+| ☑ | `@EntryPoint() operation RunSimulation` | A művelet neve a belépési pont célját egyértelműen közli. |
+| ☒ | <s>`@EntryPoint() operation Main`</s> | A használata `Main` nem jelent egyértelmű kommunikációt a belépési pont céljával, és redundáns az `@EntryPoint()` attribútummal. |
 
 ***
 
@@ -143,7 +168,7 @@ Javasoljuk, hogy:
 
 # <a name="examples"></a>[Példák](#tab/examples)
 
-|   | Name | Leírás |
+|   | Name | Description |
 |---|------|-------------|
 | ☑ | `X` | Jól ismert Gyorsírás a "$X $ átalakítás alkalmazása" |
 | ☑ | `CNOT` | Jól értelmezhető Gyorsírás a "vezérelt – nem" |
@@ -200,7 +225,7 @@ Javasoljuk, hogy:
 
 # <a name="examples"></a>[Példák](#tab/examples)
 
-|   | Name | Leírás |
+|   | Name | Description |
 |---|------|-------------|
 | ☒ | <s>`ToDouble`</s> | A "to" utasítás a művelethez tartozó kifejezést eredményez, és nem függvényt jelez. |
 | ☒ | <s>`AsDouble`</s> | A bemeneti típus nem egyértelmű a függvény nevéből. |
@@ -223,7 +248,7 @@ Javasoljuk, hogy:
 
 # <a name="examples"></a>[Példák](#tab/examples)
 
-|   | Name | Leírás |
+|   | Name | Description |
 |---|------|-------------|
 | ☒ | <s>`operation _ApplyDecomposedOperation`</s> | Ne használjon aláhúzást `_` annak jelzésére, hogy a művelet csak belső használatra szolgál. |
 | ☑ | `internal operation ApplyDecomposedOperation` | Az `internal` elején lévő kulcsszó egyértelműen azt jelzi, hogy ez a művelet csak belső használatra szolgál. |
@@ -295,7 +320,7 @@ Javasoljuk, hogy:
 
 # <a name="examples"></a>[Példák](#tab/examples)
 
-|   | Snippet | Leírás |
+|   | Snippet | Description |
 |---|---------|-------------|
 | ☑ | `newtype Oracle = (Apply : Qubit[] => Unit is Adj + Ctl)` | A név `Apply` egy `CamelCase` formázott igei kifejezés, amely arra utal, hogy az elnevezett elem egy művelet. |
 | ☒ | <s>`newtype Oracle = (apply : Qubit[] => Unit is Adj + Ctl) `</s> | Az elnevezett elemeknek kezdeti nagybetűvel kell kezdődnie. |
@@ -452,7 +477,7 @@ Javasoljuk, hogy:
 
 # <a name="examples"></a>[Példák](#tab/examples)
 
-|   | Snippet | Leírás |
+|   | Snippet | Description |
 |---|---------|-------------|
 | ☒ | <s>`2+3`</s> | Használjon szóközöket a bináris operátorok köré. |
 | ☒ | <s>`target:Qubit`</s> | Használjon szóközt a típus megjegyzési kettőspontok használatával. |
