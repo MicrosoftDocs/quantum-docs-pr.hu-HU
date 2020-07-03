@@ -1,0 +1,49 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.synthesis.applytransposition
+name: ApplyTransposition
+type: operation
+namespace: Microsoft.Quantum.Synthesis
+summary: Ez a művelet felcseréli az amplitúdót az indexben `a` az amplitúdónál az indexnél az `b` adott állapotú, `register` $n $ hosszúságú vektorban.  Ha `a` egyenlő `b` , az állapot-vektor nem módosul.
+examples: >-
+  A Number állapotok egységes felhelyezésének előkészítése $ | 1 \ rangle $, $ | 2 \ rangle $ és $ | 3 \ rangle $ on 2 qubits.
+
+
+  ```Q#
+
+  using (qubits = Qubit[2]) {
+    let register = LittleEndian(qubits);
+    PrepareUniformSuperposition(3, register);
+    ApplyTransposition(0, 3, register);
+  }
+
+  ```
+syntax: 'operation ApplyTransposition (a : Int, b : Int, qubits : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
+input:
+  content: '(a : Int, b : Int, qubits : Microsoft.Quantum.Arithmetic.LittleEndian)'
+  types:
+  - name: a
+    summary: Első index (0 és $2 ^ n-$1 közötti értéknek kell lennie)
+    isPrimitive: true
+    uid: Int
+  - name: b
+    summary: Második index (0 és $2 ^ n-$1 közötti értéknek kell lennie)
+    isPrimitive: true
+    uid: Int
+  - name: qubits
+    summary: $N $ qubits listája, amelyre az átültetést alkalmazza a rendszer.
+    uid: microsoft.quantum.arithmetic.littleendian
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+metadata:
+  ms.openlocfilehash: de888c27a7d897492283c7285c6d2d828fe5821b
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.translationtype: MT
+  ms.contentlocale: hu-HU
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85886571"

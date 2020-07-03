@@ -1,0 +1,61 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.synthesis.applypermutationusingtransformation
+name: ApplyPermutationUsingTransformation
+type: operation
+namespace: Microsoft.Quantum.Synthesis
+summary: >-
+  A Permutes az átalakítási alapú szintézis használatával egy olyan kvantum-állapotot adott meg, amely egy permutációt használ.
+
+
+  Ez az eljárás megvalósítja az egyirányú átalakításon alapuló szintézis megközelítését.  A bemenet egy \pi $ több mint $2 ^ n $ Elements $ \{ 0, \dots, 2 ^ n-1 \} $, amely egy $n $-változó visszafordítható logikai függvényt jelöl.
+
+  Az algoritmus a következő lépésekkel hajtja végre a iteratív:
+
+
+  1. Keresse meg a legkisebb $x $ értéket, amely $x \ne \pi (x) = y $.
+
+  2. Több vezérelt Toffoli-művelet, amelyek a kimenetekre vonatkoznak, a $ \pi (x) = x $ értéket, és nem változtatja meg a $ \pi (x) $ értéket az összes $x "< x $
+examples: >-
+  Művelet szintetizálása `SWAP` :
+
+
+  ```Q#
+
+  using (qubits = Qubit[2]) {
+    ApplyPermutationUsingTransformation([0, 2, 1, 3], LittleEndian(qubits));
+  }
+
+  ```
+syntax: 'operation ApplyPermutationUsingTransformation (perm : Int[], qubits : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
+references: >-
+  - [*D. Michael Miller*, *Dmitrij Maslov*, *Gerhard W. Dueck*, proc. DAC 2003, IEEE, PP. 318-323, 2003](https://doi.org/10.1145/775832.775915)
+
+  - [*Mathias Soeken*, *Gerhard W. Dueck*, *D. Michael Miller*, proc. RC 2016, Springer, PP. 307-321, 2016](https://doi.org/10.1007/978-3-319-40578-0_22)
+input:
+  content: '(perm : Int[], qubits : Microsoft.Quantum.Arithmetic.LittleEndian)'
+  types:
+  - name: perm
+    summary: A 0-tól kezdődően 2 ^ n $ elemből álló permutáció.
+    isArray: true
+    isPrimitive: true
+    uid: Int
+  - name: qubits
+    summary: $N $ qubits listája, amelyre a permutáció vonatkozik.
+    uid: microsoft.quantum.arithmetic.littleendian
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+seeAlso:
+- microsoft.quantum.synthesis.applypermutationusingdecomposition
+metadata:
+  ms.openlocfilehash: e611197ba2fbfc0271c17664acc23b4de2c90ff6
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.translationtype: MT
+  ms.contentlocale: hu-HU
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85886580"

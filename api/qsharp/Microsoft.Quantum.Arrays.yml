@@ -1,7 +1,6 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.arrays
 name: Microsoft.Quantum.Arrays
-summary: " # <a name=\"summary\"></a>Összefoglalás\n Ez a névtér az adattömbök létrehozására és módosítására szolgáló függvényeket tartalmaz."
 functions:
 - uid: microsoft.quantum.arrays.all
   summary: Egy tömböt és egy predikátumot adott meg, amely a tömb elemeihez van meghatározva, és ellenőrzi, hogy a tömb összes eleme megfelel-e a predikátumnak.
@@ -67,13 +66,16 @@ functions:
   summary: A három tömb esetében a rekordok egy új tömböt ad vissza, amely szerint minden 3 rekord tartalmaz egy elemet az eredeti tömbből.
 - uid: microsoft.quantum.arrays.zip4
   summary: A megadott négy tömb a 4 rekordok egy új tömbjét adja vissza, amely minden 4 rekord tartalmaz egy elemet az eredeti tömbből.
+summary: " # <a name=\"summary\"></a>Összefoglalás\n Ez a névtér az adattömbök létrehozására és módosítására szolgáló függvényeket tartalmaz."
 operations:
+- uid: microsoft.quantum.arrays.drawmany
+  summary: Megismétli a műveletet egy adott számú minta esetében, és a kimenetét egy tömbben gyűjti össze.
 - uid: microsoft.quantum.arrays.foreach
   summary: Egy tömb és egy olyan művelet, amely a tömb elemeihez van meghatározva, egy új tömböt ad vissza, amely a művelet alatt található eredeti tömb képéből áll.
 metadata:
-  ms.openlocfilehash: 92eb956a1387a9765354f45e27eb084c6d73f51b
-  ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+  ms.openlocfilehash: 32aeecb419739a89792bdf1e9761e3821abcf380
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 06/03/2020
-  ms.locfileid: "84326710"
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85884690"

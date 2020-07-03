@@ -1,7 +1,7 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.machinelearning
 name: Microsoft.Quantum.MachineLearning
-summary: " # <a name=\"summary\"></a>Összefoglalás\n Ez a névtér a Quantum Machine learning-alkalmazásokban használt funkciókat és műveleteket biztosítja.\n\n # <a name=\"references\"></a>Referencia\n - Maria Schuld, Alex Bocharov, Garai Viktória Svore, Nathan Wiebe, \"Circuit-centrikus Quantum osztályozók\", https://arxiv.org/abs/1804.00633."
+summary: " # <a name=\"summary\"></a>Összefoglalás\n Ez a névtér a Quantum Machine learning-alkalmazásokban használt funkciókat és műveleteket biztosítja.\n\n # <a name=\"references\"></a>Hivatkozások\n - Maria Schuld, Alex Bocharov, Garai Viktória Svore, Nathan Wiebe, \"Circuit-centrikus Quantum osztályozók\", https://arxiv.org/abs/1804.00633 ."
 functions:
 - uid: microsoft.quantum.machinelearning.approximateinputencoder
   summary: Az egyes együtthatók és a tűréshatárok halmaza egy állapot-előkészítési műveletet ad vissza, amely az egyes együtthatókat a számítási állapot megfelelő amplitúdójának megfelelően, a megadott tűréshatárig állítja elő.
@@ -56,7 +56,7 @@ newtypes:
 - uid: microsoft.quantum.machinelearning.samplingschedule
   summary: A kötegek mintából való rajzolásának ütemterve.
 - uid: microsoft.quantum.machinelearning.sequentialmodel
-  summary: Egy olyan Quantum osztályozó modellt ismertet, amely paraméteres és vezérelt rotációk sorozatából áll, elforgatási szögek hozzárendelésével, valamint a modell által felismert két osztály közötti torzítással.
+  summary: A paraméteres és vezérelt Forgások sorozatából álló Quantum osztályozó modellt ismerteti, amely elforgatási szögek hozzárendelését, valamint a modell által felismert két osztály közötti torzítást tartalmaz.
 - uid: microsoft.quantum.machinelearning.stategenerator
   summary: Egy olyan műveletet ismertet, amely egy adott bemenetet készít elő egy szekvenciális osztályozó számára.
 - uid: microsoft.quantum.machinelearning.trainingoptions
@@ -64,9 +64,9 @@ newtypes:
 - uid: microsoft.quantum.machinelearning.validationresults
   summary: Az eredmények egy adott minta alapján osztályozták a besorolást.
 metadata:
-  ms.openlocfilehash: 43b40489e34a2483ff9331b34b6cd289e3a7bb56
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 85728552e323a640d5abd78f6a2bada5c37e6919
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82673169"
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85885247"

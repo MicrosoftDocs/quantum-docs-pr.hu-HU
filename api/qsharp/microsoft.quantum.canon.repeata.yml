@@ -1,0 +1,64 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.repeata
+name: RepeatA
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: Adott számú alkalommal ismétli meg a műveletet.
+examples: >-
+  A következők egyenértékűek:
+
+
+  ```Q#
+
+  RepeatA(U, 17, target);
+
+  (BoundA(ConstantArray(17, U)))(target);
+
+  ```
+syntax: "operation RepeatA (op : ('TInput => Unit is Adj), nTimes : Int, input : 'TInput) : Unit"
+input:
+  content: "(op : ('TInput => Unit is Adj), nTimes : Int, input : 'TInput)"
+  types:
+  - name: op
+    summary: A művelet, amelyet többször kell meghívni.
+    isOperation: true
+    input:
+      types:
+      - uid: "'TInput"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+  - name: nTimes
+    summary: A hívni kívánt idő száma `op` .
+    isPrimitive: true
+    uid: Int
+  - name: input
+    summary: Az átadandó bemenet `op` .
+    uid: "'TInput"
+    isLocal: true
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+typeParameters:
+- uid: TInput
+  summary: A várt bemeneti típus `op` .
+functors:
+- Adjoint
+seeAlso:
+- microsoft.quantum.arrays.drawmany
+- microsoft.quantum.canon.repeat
+- microsoft.quantum.canon.repeatc
+- microsoft.quantum.canon.repeatca
+metadata:
+  ms.openlocfilehash: 59f3dc721801ddbb0de966948ddaacc59529b833
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.translationtype: MT
+  ms.contentlocale: hu-HU
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85887047"

@@ -3,42 +3,26 @@ uid: microsoft.quantum.intrinsic.assertprob
 name: AssertProb
 type: operation
 namespace: Microsoft.Quantum.Intrinsic
-summary: Azt állítja be, hogy a megadott Pauli-alapú qubits mérése a megadott valószínűséggel az adott küszöbértéken belül megtörténik.
-remarks: Vegye figyelembe, hogy a művelet Adjoint és ellenőrzött verziói nem ellenőrzik a feltételt.
-examples: >-
-  ```qsharp
-
-  using (register = Qubit()) {
-      H(register);
-      AssertProb([PauliZ], [register], One, 0.5,
-          "Measuring in conjugate basis did not give 50/50 results.", 1e-5);
-  }
-
-  ```
+summary: A AssertProb elavult. Használja @"microsoft.quantum.diagnostics.assertmeasurementprobability" helyette.
 syntax: 'operation AssertProb (bases : Pauli[], qubits : Qubit[], result : Result, prob : Double, msg : String, tol : Double) : Unit'
 input:
   content: '(bases : Pauli[], qubits : Qubit[], result : Result, prob : Double, msg : String, tol : Double)'
   types:
   - name: bases
-    summary: A több qubit Pauli-operátor valószínűségének meghatározására szolgáló mérési hatás.
     isArray: true
     isPrimitive: true
     uid: Pauli
   - name: qubits
-    summary: A regisztráció, amelyre az állítást el kell végezni.
     isArray: true
     isPrimitive: true
     uid: Qubit
   - name: result
-    summary: A várt eredmény `Measure(bases, qubits)`.
     isPrimitive: true
     uid: Result
   - name: prob
-    summary: A valószínűség, amellyel a rendszer a megadott eredményt várta.
     isPrimitive: true
     uid: Double
   - name: msg
-    summary: Az az üzenet, amelyet jelenteni kell, ha az állítás sikertelen.
     isPrimitive: true
     uid: String
   - name: tol
@@ -52,12 +36,10 @@ output:
 functors:
 - Adjoint
 - Controlled
-seeAlso:
-- assert
 metadata:
-  ms.openlocfilehash: 6317476e89feb3a5fecac15afd52541859fc2f21
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: db29d52b79b1e7b5a980f3e3196c5b2547132103
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82674157"
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85885727"

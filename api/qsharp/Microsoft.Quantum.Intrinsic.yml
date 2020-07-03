@@ -6,9 +6,9 @@ functions:
   summary: Egy üzenet naplózása.
 operations:
 - uid: microsoft.quantum.intrinsic.assert
-  summary: Azt állítja be, hogy a megadott Pauli-alapú qubits mérése mindig a megadott eredménnyel jár.
+  summary: "\n> [!WARNING]\n> Elavult\n\nA érvényesítés elavult. Használja @\"microsoft.quantum.diagnostics.assertmeasurement\" helyette."
 - uid: microsoft.quantum.intrinsic.assertprob
-  summary: Azt állítja be, hogy a megadott Pauli-alapú qubits mérése a megadott valószínűséggel az adott küszöbértéken belül megtörténik.
+  summary: "\n> [!WARNING]\n> Elavult\n\nA AssertProb elavult. Használja @\"microsoft.quantum.diagnostics.assertmeasurementprobability\" helyette."
 - uid: microsoft.quantum.intrinsic.ccnot
   summary: A kettős vezérlésű – NOT (CCNOT) kaput alkalmazza három qubits.
 - uid: microsoft.quantum.intrinsic.cnot
@@ -25,19 +25,19 @@ operations:
     Egy több qubit Pauli-operátor exponenciális értékének alkalmazása.
 
 
-    \begin{align} e ^ {i \theta [P_0 \otimes P_1 \cdots P_ {N-1}]}, \end{align}, ahol $P _i $ a $i $ th eleme `paulis`, és hol $N = $.`Length(paulis)`
+    \begin{align} e ^ {i \theta [P_0 \otimes P_1 \cdots P_ {N-1}]}, \end{align}, ahol $P _i $ a $i $ th eleme `paulis` , és hol $N = $ `Length(paulis)` .
 - uid: microsoft.quantum.intrinsic.expfrac
   summary: >-
     Egy több qubit Pauli operátor exponenciális értékének alkalmazása egy dyadic-frakció által megadott argumentummal.
 
 
-    \begin{align} e ^ {i \pi k [P_0 \otimes P_1 \cdots P_ {N-1}]/2 ^ N}, \end{align}, ahol $P _i $ a $i $ th eleme `paulis`, és hol $N = $.`Length(paulis)`
+    \begin{align} e ^ {i \pi k [P_0 \otimes P_1 \cdots P_ {N-1}]/2 ^ N}, \end{align}, ahol $P _i $ a $i $ th eleme `paulis` , és hol $N = $ `Length(paulis)` .
 - uid: microsoft.quantum.intrinsic.h
   summary: >-
     A Hadamard átalakítását alkalmazza egyetlen qubit.
 
 
-    \begin{align} H \mathrel{: =} \frac{1}{\sqrt{2}} \begin{bmatrix} 1 & 1 \\ \\ 1 &-1 \end{bmatrix}.
+    \begin{align} H \mathrel{: =} \frac {1} {\sqrt {2} } \begin{bmatrix} 1 & 1 \\ \\ 1 &-1 \end{bmatrix}.
 
     \end{align}
 - uid: microsoft.quantum.intrinsic.i
@@ -55,18 +55,18 @@ operations:
     Egy vagy több qubits közös mérését hajtja végre a megadott Pauli-alapokon.
 
 
-    A kimenet eredményét a következő eloszlás adja meg: \begin{align} \Pr (\texttt{Zero} | \ket{\psi}) = \frac12 \braket{\psi \mid | \left (\boldone + P_0 \otimes P_1 \otimes \cdots \otimes P_ {N-1} \right) \mid | \psi}, \end{align}, ahol $P _i $ a $i $ th eleme `bases`, és ahol $N = \texttt{length} (\texttt{bases}) $.
+    A kimenet eredményét a következő eloszlás adja meg: \begin{align} \Pr (\texttt{Zero} | \ket{\psi}) = \frac12 \braket{\psi \mid | \left (\boldone + P_0 \otimes P_1 \otimes \cdots \otimes P_ {N-1} \right) \mid | \psi}, \end{align}, ahol $P _i $ a $i $ th eleme `bases` , és ahol $N = \texttt{length} (\texttt{bases}) $.
 
-    Ez azt eredményezi, hogy `Result` a mérés egy $d $ értéket ad vissza, hogy a megfigyelt mérési hatás sajátérték értéke $ (-1) ^ d $.
+    Ez azt eredményezi, hogy a mérés egy $d $ értéket ad vissza, `Result` hogy a megfigyelt mérési hatás sajátérték értéke $ (-1) ^ d $.
 - uid: microsoft.quantum.intrinsic.r
   summary: >-
     A megadott Pauli-tengely elforgatását alkalmazza.
 
 
-    \begin{align} R_ {\mu} (\theta) \mathrel{: =} e ^ {-i \theta \ sigma_ {\mu}/2}, \end{align}, ahol $ \mu \{\in i, X, Y,\}Z $.
+    \begin{align} R_ {\mu} (\theta) \mathrel{: =} e ^ {-i \theta \ sigma_ {\mu}/2}, \end{align}, ahol $ \mu \in \{ i, X, Y, Z \} $.
 - uid: microsoft.quantum.intrinsic.r1
   summary: >-
-    A $ \ket{1}$ állapotú rotációt alkalmazza egy adott szög alapján.
+    A $ \ket {1} $ állapotú rotációt alkalmazza egy adott szög alapján.
 
 
     \begin{align} R_1 (\theta) \mathrel{: =} \operatorname{diag} (1, e ^ {i\theta}).
@@ -74,7 +74,7 @@ operations:
     \end{align}
 - uid: microsoft.quantum.intrinsic.r1frac
   summary: >-
-    A $ \ket{1}$ állapotú rotációt alkalmazza egy dyadic-frakcióként megadott szögben.
+    A $ \ket $ állapotú rotációt alkalmazza egy {1} dyadic-frakcióként megadott szögben.
 
 
     \begin{align} R_1 (n, k) \mathrel{: =} \operatorname{diag} (1, e ^ {i \pi k/2 ^ n}).
@@ -84,10 +84,10 @@ operations:
 
     > [!WARNING]
 
-    > Ezzel a művelettel a-től **eltérő aláírási** konvenciót használ, és nem tartalmazza a következőhöz @"microsoft.quantum.intrinsic.r"tartozó @"microsoft.quantum.intrinsic.r1"$1/2 $ faktort:.
+    > Ezzel a művelettel a-től **eltérő aláírási** konvenciót használ @"microsoft.quantum.intrinsic.r" , és nem tartalmazza a következőhöz tartozó $1/2 $ faktort: @"microsoft.quantum.intrinsic.r1" .
 - uid: microsoft.quantum.intrinsic.random
   summary: >-
-    A véletlenszerű művelet a bemenetek tömbjét veszi igénybe, és egy véletlenszerűen kiválasztott indexet ad vissza a tömbben `Int`.
+    A véletlenszerű művelet a bemenetek tömbjét veszi igénybe, és egy véletlenszerűen kiválasztott indexet ad vissza a tömbben `Int` .
 
     Egy adott index kiválasztásának valószínűsége az adott indexben lévő tömb elem értékével arányos.
 
@@ -101,16 +101,16 @@ operations:
     A megadott Pauli-tengely rotációját alkalmazza egy dyadic-frakcióként megadott szögben.
 
 
-    \begin{align} R_ {\mu} (n, k) \mathrel{: =} e ^ {i \pi n \ sigma_ {\mu}/2 ^ k}, \end{align}, ahol $ \mu \{\in i, X, Y,\}Z $.
+    \begin{align} R_ {\mu} (n, k) \mathrel{: =} e ^ {i \pi n \ sigma_ {\mu}/2 ^ k}, \end{align}, ahol $ \mu \in \{ i, X, Y, Z \} $.
 
 
     > [!WARNING]
 
-    > Ez a művelet a következővel @"microsoft.quantum.intrinsic.r" **ellentétes** aláírási konvenciót használja:.
+    > Ez a művelet a következővel **ellentétes** aláírási konvenciót használja: @"microsoft.quantum.intrinsic.r" .
 - uid: microsoft.quantum.intrinsic.rx
-  summary: "A $x $ tengelyre vonatkozó rotációt alkalmaz egy adott szög alapján.\n\n\\begin{align} R_x (\\theta) \\mathrel{: =} e ^ {-i \\theta \\ sigma_x/2} = \\begin{bmatrix} \\cos \\frac{\\theta}{2} &-i\\sin \\frac{\\theta}{2} \\\\ \\\\ -i\\sin \\frac{\\theta}{2} & \\cos \\frac{\\theta}{2} \\end{bmatrix}.  \n\\end{align}"
+  summary: "A $x $ tengelyre vonatkozó rotációt alkalmaz egy adott szög alapján.\n\n\\begin{align} R_x (\\theta) \\mathrel{: =} e ^ {-i \\theta \\ sigma_x/2} = \\begin{bmatrix} \\cos \\frac{\\theta} {2} &-i\\sin \\frac{\\theta} {2} \\\\ \\\\ -i\\sin \\frac{\\theta} {2} & \\cos \\frac{\\theta} {2} \\end{bmatrix}.  \n\\end{align}"
 - uid: microsoft.quantum.intrinsic.ry
-  summary: "A $y $ tengelyre vonatkozó rotációt alkalmaz egy adott szög alapján.\n\n\\begin{align} R_y (\\theta) \\mathrel{: =} e ^ {-i \\theta \\ sigma_y/2} = \\begin{bmatrix} \\cos \\frac{\\theta}{2} &-\\sin \\frac{\\theta}{2} \\\\ \\\\ \\sin \\frac{\\theta}{2} & \\cos \\frac{\\theta}{2} \\end{bmatrix}.  \n\\end{align}"
+  summary: "A $y $ tengelyre vonatkozó rotációt alkalmaz egy adott szög alapján.\n\n\\begin{align} R_y (\\theta) \\mathrel{: =} e ^ {-i \\theta \\ sigma_y/2} = \\begin{bmatrix} \\cos \\frac{\\theta} {2} &-\\sin \\frac{\\theta} {2} \\\\ \\\\ \\sin \\frac{\\theta} {2} & \\cos \\frac{\\theta} {2} \\end{bmatrix}.  \n\\end{align}"
 - uid: microsoft.quantum.intrinsic.rz
   summary: >-
     A $z $ tengelyre vonatkozó rotációt alkalmaz egy adott szög alapján.
@@ -120,30 +120,18 @@ operations:
 
     \end{align}
 - uid: microsoft.quantum.intrinsic.s
-  summary: >-
-    A π/4 fázisú kaput alkalmazza egyetlen qubit.
-
-
-    \begin{align} S \mathrel{: =} \begin{bmatrix} 1 & 0 \\ \\ 0 & \end{bmatrix}.
-
-    \end{align}
+  summary: A S kaput egyetlen qubit alkalmazza.
 - uid: microsoft.quantum.intrinsic.swap
   summary: >-
     Alkalmazza a SWAP-kaput egy qubits.
 
 
-    \begin{align} \operatorname{swap} \mathrel{: =} \begin{bmatrix} 1 & 0 & 0 & 0 \\ \\ 0 & 0 & 1 & 0 \\ \\ 0 & 1 & 0 & 0 \\ \\ 0 & 0 & 0 & 1 \end{bmatrix}, \end{align}
+    \begin{align} \operatorname{SWAP} \mathrel{: =} \begin{bmatrix} 1 & 0 & 0 & 0 \\ \\ 0 & 0 & 1 & 0 \\ \\ 0 & 1 & 0 & 0 \\ \\ 0 & 0 & 0 & 1 \end{bmatrix}, \end{align}
 
 
     a sorok és oszlopok sorrendjét a Quantum Concepts útmutatója tartalmazza.
 - uid: microsoft.quantum.intrinsic.t
-  summary: >-
-    A π/8 kaput alkalmazza egyetlen qubit.
-
-
-    \begin{align} T \mathrel{: =} \begin{bmatrix} 1 & 0 \\ \\ 0 & e ^ {i \pi/4} \end{bmatrix}.
-
-    \end{align}
+  summary: A T-kaput alkalmazza egyetlen qubit.
 - uid: microsoft.quantum.intrinsic.x
   summary: >-
     A Pauli $X $ kaput alkalmazza.
@@ -169,9 +157,9 @@ operations:
 
     \end{align}
 metadata:
-  ms.openlocfilehash: 303e6d0376841672b9c8dbd3d8bd47ff7b24916a
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: c0be1da035393f32fa2949214d79ecb8a4c5ccb3
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82673229"
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85885236"

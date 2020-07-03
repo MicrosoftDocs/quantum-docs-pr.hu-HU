@@ -7,22 +7,24 @@ summary: >-
   Egy olyan egységes műveletet ad vissza, amely egy Oracle-t alkalmaz a cél-tételjegyzékben, ha a vezérlő regisztrálása állapot egy megadott bit-maszknak felel meg.
 
 
-  Ennek a függvénynek a kimenete egy olyan művelet, amely egy egységes átalakítással $U $, amely \begin{align} U \ket{b_0 b_1 \cdots b_ {n-1}} \ket{\psi} = \ket{b_0 b_1 \cdots b_ {n-1}} \otimes \begin{Cases} V \ket{\psi} & \textrm{if} (b_0 b_1 \cdots b_ {n-1}) = \texttt{BITS} \\ \\ \ket{\psi} & \textrm{otherwise} \end{Cases}, \end{align}, ahol a $V $ egy egységes átalakítás, amely a `oracle` művelet műveletét jelöli.
+  Ennek a függvénynek a kimenete egy olyan művelet, amely egy egységes átalakítással $U $, amely \begin{align} U \ket{b_0 b_1 \cdots b_ {n-1}} \ket{\psi} = \ket{b_0 b_1 \cdots b_ {n-1}} \otimes \begin{Cases} V \ket{\psi} & \textrm{if} (b_0 b_1 \cdots b_ {n-1}) = \texttt{BITS} \\ \\ \ket{\psi} & \textrm{otherwise} \end{Cases}, \end{align}, ahol a $V $ egy egységes átalakítás, amely a művelet műveletét jelöli `oracle` .
 remarks: >-
-  A hosszának `bits` és `controlRegister` a értékének egyenlőnek kell lennie.
+  A által megadott minta `bits` rövidebb lehet, mint `controlRegister` , amelynél a rendszer figyelmen kívül hagyja a további vezérlési qubits (azaz nem a $ \ket {0} $, sem a $ \ket $ értéket sem {1} ).
+
+  Ha `bits` a értéke hosszabb `controlRegister` , hiba történik.
 
 
-  Egy logikai tömb `bits` és egy egységes művelet `oracle`miatt a függvény kimenete egy olyan művelet, amely a következő lépéseket hajtja végre:
+  Egy logikai tömb `bits` és egy egységes művelet miatt `oracle` a függvény kimenete egy olyan művelet, amely a következő lépéseket hajtja végre:
 
 
-  * alkalmazzon `X` egy műveletet a vezérlési regiszter minden olyan qubit, amely `false` megfelel a `bits`; elemének;
+  * alkalmazzon egy `X` műveletet a vezérlési regiszter minden olyan qubit, amely megfelel a `false` ; elemének `bits` ;
 
-  * a `Controlled oracle` vezérlő és a cél regiszterekre vonatkozik;
+  * `Controlled oracle`a vezérlő és a cél regiszterekre vonatkozik;
 
-  * alkalmazzon `X` egy műveletet a vezérlési regiszter minden olyan qubit, amely `false` az `bits` újra elemnek felel meg, hogy visszaadja a vezérlő regisztrálását az eredeti állapotába.
+  * alkalmazzon egy `X` műveletet a vezérlési regiszter minden olyan qubit, amely az `false` újra elemnek felel meg `bits` , hogy visszaadja a vezérlő regisztrálását az eredeti állapotába.
 
 
-  A leálltak `Controlled` kimenete olyan speciális eset, `ControlledOnBitString` ahol `bits` egyenlő. `[true, ..., true]`
+  A leálltak kimenete `Controlled` olyan speciális eset, `ControlledOnBitString` ahol `bits` egyenlő `[true, ..., true]` .
 examples: >-
   A következő kódrészletek egyenértékűek:
 
@@ -48,7 +50,7 @@ examples: >-
   ```
 
 
-  A következő kód előkészíti a $ \frac{1}{2}(\ket{00} -\ket{01} + \ket{10} + \ket{11}) $ értéket:
+  A következő kód előkészíti a $ \frac {1} {2} (\ket {00} -\ket {01} + \ket {10} + \ket {11} ) $ értéket:
 
 
   ```qsharp
@@ -85,7 +87,7 @@ input:
 output:
   content: ((Qubit[], 'T) => Unit is Adj + Ctl)
   types:
-  - summary: Egy egységes művelet, amely `oracle` a cél-regisztrációra vonatkozik, ha a vezérlő regisztrálása állapot megfelel `bits`a bit maszknak.
+  - summary: Egy egységes művelet, amely `oracle` a cél-regisztrációra vonatkozik, ha a vezérlő regisztrálása állapot megfelel a bit maszknak `bits` .
     isOperation: true
     input:
       types:
@@ -102,9 +104,9 @@ output:
     - Adjoint
     - Controlled
 metadata:
-  ms.openlocfilehash: d5a6223c130150f42f83044aec19b1d5a875bb1d
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 98bb8a9d5770e34257cd2fbc5456bcf70139af07
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680358"
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85885509"
