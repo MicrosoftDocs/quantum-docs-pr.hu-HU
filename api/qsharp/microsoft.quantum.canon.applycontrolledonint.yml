@@ -1,0 +1,59 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applycontrolledonint
+name: ApplyControlledOnInt
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: Egy egységes műveletet alkalmaz a cél-tételjegyzéken, ha a vezérlő regisztrálása állapot egy megadott pozitív egész számnak felel meg.
+remarks: >-
+  A értéke `numberState` kis endian kódolással értelmezhető.
+
+
+  `numberState`legfeljebb 2 ^ \texttt{Length kell lennie (controlRegister)} – $1.
+
+  Például az `numberState = 537` azt jelenti, hogy az `oracle` csak akkor van alkalmazva, ha a és csak `controlRegister` a $ \ket $ állapotban van {537} .
+syntax: "operation ApplyControlledOnInt (numberState : Int, oracle : ('T => Unit is Adj + Ctl), controlRegister : Qubit[], targetRegister : 'T) : Unit"
+input:
+  content: "(numberState : Int, oracle : ('T => Unit is Adj + Ctl), controlRegister : Qubit[], targetRegister : 'T)"
+  types:
+  - name: numberState
+    summary: Nem negatív egész szám, amelyen a műveletet `oracle` ellenőrizni kell.
+    isPrimitive: true
+    uid: Int
+  - name: oracle
+    summary: Egy szabályozható, egységes művelet.
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+    - Controlled
+  - name: controlRegister
+    summary: Egy kvantum-regisztráció, amely a alkalmazást vezérli `oracle` .
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+  - name: targetRegister
+    summary: Egy regisztráció, amelyre alkalmazni kell `oracle` .
+    uid: "'T"
+    isLocal: true
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+metadata:
+  ms.openlocfilehash: 468886684513035d24b3b4881944f2c18fa65e18
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.translationtype: MT
+  ms.contentlocale: hu-HU
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85886736"

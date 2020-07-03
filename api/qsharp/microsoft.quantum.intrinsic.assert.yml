@@ -3,28 +3,23 @@ uid: microsoft.quantum.intrinsic.assert
 name: Assert
 type: operation
 namespace: Microsoft.Quantum.Intrinsic
-summary: Azt állítja be, hogy a megadott Pauli-alapú qubits mérése mindig a megadott eredménnyel jár.
-remarks: Vegye figyelembe, hogy a művelet Adjoint és ellenőrzött verziói nem ellenőrzik a feltételt.
+summary: A érvényesítés elavult. Használja @"microsoft.quantum.diagnostics.assertmeasurement" helyette.
 syntax: 'operation Assert (bases : Pauli[], qubits : Qubit[], result : Result, msg : String) : Unit'
 input:
   content: '(bases : Pauli[], qubits : Qubit[], result : Result, msg : String)'
   types:
   - name: bases
-    summary: A több qubit Pauli-operátor valószínűségének meghatározására szolgáló mérési hatás.
     isArray: true
     isPrimitive: true
     uid: Pauli
   - name: qubits
-    summary: A regisztráció, amelyre az állítást el kell végezni.
     isArray: true
     isPrimitive: true
     uid: Qubit
   - name: result
-    summary: A várt eredménye `Measure(bases, qubits)`.
     isPrimitive: true
     uid: Result
   - name: msg
-    summary: Az az üzenet, amelyet jelenteni kell, ha az állítás sikertelen.
     isPrimitive: true
     uid: String
 output:
@@ -35,12 +30,10 @@ output:
 functors:
 - Adjoint
 - Controlled
-seeAlso:
-- assertprob
 metadata:
-  ms.openlocfilehash: ececd74240ef9340666795142719faeeb0cbef7b
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 56e41923bfeaa5ecf10bd47130260c78fbce7970
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82674174"
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85885735"

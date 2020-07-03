@@ -6,9 +6,9 @@ namespace: Microsoft.Quantum.Core
 summary: Egy végrehajtható fájl belépési pontjának megjelölésére használt fordító által felismert attribútum.
 syntax: newtype EntryPoint = Unit;
 metadata:
-  ms.openlocfilehash: e049fff21ee94e6ba02774274fbc83704bd0950c
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 82abb7cee1ee120334495da55b1bd096218a4a0e
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82658061"
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85885327"

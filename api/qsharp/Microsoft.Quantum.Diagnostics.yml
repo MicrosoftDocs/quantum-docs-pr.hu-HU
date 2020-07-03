@@ -39,6 +39,10 @@ operations:
   summary: Azt állítja, hogy a megadott qubits mind a $ \ket {0} $ állapotban vannak.
 - uid: microsoft.quantum.diagnostics.assertallzerowithintolerance
   summary: Azt állítja, hogy a megadott qubits mind a $ \ket {0} $ állapotba kerülnek egy adott toleranciával.
+- uid: microsoft.quantum.diagnostics.assertmeasurement
+  summary: Azt állítja be, hogy a megadott Pauli-alapú qubits mérése mindig a megadott eredménnyel jár.
+- uid: microsoft.quantum.diagnostics.assertmeasurementprobability
+  summary: Azt állítja be, hogy a megadott Pauli-alapú qubits mérése a megadott valószínűséggel az adott küszöbértéken belül megtörténik.
 - uid: microsoft.quantum.diagnostics.assertoperationsequalinplace
   summary: >-
     A két művelet miatt a azt állítja, hogy az összes bemeneti állapot esetében azonos módon működnek.
@@ -79,14 +83,14 @@ operations:
   summary: Azt állítja, hogy a qubit a `q` Pauli Z operátor várt eigenstate található, egy adott toleranciával.
 newtypes:
 - uid: microsoft.quantum.diagnostics.enabletestingvianame
-  summary: A fordító felismert attribútuma, amelyen keresztül egy alternatív név meghatározható, amely a típus vagy a tesztelési célú betöltés során használható.
+  summary: A fordító által felismert attribútum, amelyen keresztül egy alternatív név meghatározható, amelyet a rendszer a típus vagy a meghívásos tesztelési célú betöltéskor használhat.
 - uid: microsoft.quantum.diagnostics.test
-  summary: Egy egység tesztének megjelölésére szolgáló fordító által felismert attribútum.
+  summary: A fordító által felismert attribútum, amely egy egység tesztének megjelölésére szolgál.
 summary: " # <a name=\"summary\"></a>Összefoglalás\n Ez a névtér diagnosztikai célokra használható függvényeket és műveleteket tartalmaz, beleértve az érvényesítési műveleteket és a jogcím-függvényeket."
 metadata:
-  ms.openlocfilehash: 2c619ac283653d87f2917d7c780ed9fe6ccfa965
-  ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+  ms.openlocfilehash: c8e1cd7f3458e736a47749dd057174eb4961c31d
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 06/03/2020
-  ms.locfileid: "84326591"
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85884579"

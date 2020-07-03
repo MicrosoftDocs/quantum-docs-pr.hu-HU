@@ -1,0 +1,46 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.diagnostics.assertmeasurement
+name: AssertMeasurement
+type: operation
+namespace: Microsoft.Quantum.Diagnostics
+summary: Azt állítja be, hogy a megadott Pauli-alapú qubits mérése mindig a megadott eredménnyel jár.
+remarks: Vegye figyelembe, hogy a művelet Adjoint és ellenőrzött verziói nem ellenőrzik a feltételt.
+syntax: 'operation AssertMeasurement (bases : Pauli[], qubits : Qubit[], result : Result, msg : String) : Unit'
+input:
+  content: '(bases : Pauli[], qubits : Qubit[], result : Result, msg : String)'
+  types:
+  - name: bases
+    summary: A több qubit Pauli-operátor valószínűségének meghatározására szolgáló mérési hatás.
+    isArray: true
+    isPrimitive: true
+    uid: Pauli
+  - name: qubits
+    summary: A regisztráció, amelyre az állítást el kell végezni.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+  - name: result
+    summary: A várt eredménye `Measure(bases, qubits)` .
+    isPrimitive: true
+    uid: Result
+  - name: msg
+    summary: Az az üzenet, amelyet jelenteni kell, ha az állítás sikertelen.
+    isPrimitive: true
+    uid: String
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+seeAlso:
+- microsoft.quantum.diagnostics.assertmeasurementprobability
+metadata:
+  ms.openlocfilehash: e8c74cdeb9ba196b337b56ec377a1158cd331ac7
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.translationtype: MT
+  ms.contentlocale: hu-HU
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85886789"

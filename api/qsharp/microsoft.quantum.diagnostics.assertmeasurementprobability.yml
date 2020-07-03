@@ -1,0 +1,63 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.diagnostics.assertmeasurementprobability
+name: AssertMeasurementProbability
+type: operation
+namespace: Microsoft.Quantum.Diagnostics
+summary: Azt állítja be, hogy a megadott Pauli-alapú qubits mérése a megadott valószínűséggel az adott küszöbértéken belül megtörténik.
+remarks: Vegye figyelembe, hogy a művelet Adjoint és ellenőrzött verziói nem ellenőrzik a feltételt.
+examples: >-
+  ```qsharp
+
+  using (register = Qubit()) {
+      H(register);
+      AssertProb([PauliZ], [register], One, 0.5,
+          "Measuring in conjugate basis did not give 50/50 results.", 1e-5);
+  }
+
+  ```
+syntax: 'operation AssertMeasurementProbability (bases : Pauli[], qubits : Qubit[], result : Result, prob : Double, msg : String, tol : Double) : Unit'
+input:
+  content: '(bases : Pauli[], qubits : Qubit[], result : Result, prob : Double, msg : String, tol : Double)'
+  types:
+  - name: bases
+    summary: A több qubit Pauli-operátor valószínűségének meghatározására szolgáló mérési hatás.
+    isArray: true
+    isPrimitive: true
+    uid: Pauli
+  - name: qubits
+    summary: A regisztráció, amelyre az állítást el kell végezni.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+  - name: result
+    summary: A várt eredmény `Measure(bases, qubits)` .
+    isPrimitive: true
+    uid: Result
+  - name: prob
+    summary: A valószínűség, amellyel a rendszer a megadott eredményt várta.
+    isPrimitive: true
+    uid: Double
+  - name: msg
+    summary: Az az üzenet, amelyet jelenteni kell, ha az állítás sikertelen.
+    isPrimitive: true
+    uid: String
+  - name: tol
+    isPrimitive: true
+    uid: Double
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+seeAlso:
+- microsoft.quantum.diagnostics.assertmeasurement
+metadata:
+  ms.openlocfilehash: 6663722ae72cc8dd984e6422029db5a0bfad5d39
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.translationtype: MT
+  ms.contentlocale: hu-HU
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85887035"

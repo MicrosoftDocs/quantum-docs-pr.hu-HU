@@ -3,12 +3,12 @@ uid: microsoft.quantum.diagnostics.enabletestingvianame
 name: EnableTestingViaName
 type: newtype
 namespace: Microsoft.Quantum.Diagnostics
-summary: A fordító felismert attribútuma, amelyen keresztül egy alternatív név meghatározható, amely a típus vagy a tesztelési célú betöltés során használható.
+summary: A fordító által felismert attribútum, amelyen keresztül egy alternatív név meghatározható, amelyet a rendszer a típus vagy a meghívásos tesztelési célú betöltéskor használhat.
 syntax: newtype EnableTestingViaName = String;
 metadata:
-  ms.openlocfilehash: 7887df093b51d9e525adda1860361ea649106cb2
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 769df7a097ddbd49877b72369cd2e72a27e2058c
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82706669"
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85885779"

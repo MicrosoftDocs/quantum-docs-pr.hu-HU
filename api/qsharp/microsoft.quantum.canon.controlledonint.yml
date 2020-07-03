@@ -4,6 +4,7 @@ name: ControlledOnInt
 type: function
 namespace: Microsoft.Quantum.Canon
 summary: Egy olyan egységes operátort ad vissza, amely egy Oracle-t alkalmaz a cél-tételjegyzékben, ha a vezérlő regisztrálása állapot egy megadott pozitív egész számnak felel meg.
+remarks: A értéke `numberState` kis endian kódolással értelmezhető.
 syntax: "function ControlledOnInt (numberState : Int, oracle : ('T => Unit is Adj + Ctl)) : ((Qubit[], 'T) => Unit is Adj + Ctl)"
 input:
   content: "(numberState : Int, oracle : ('T => Unit is Adj + Ctl))"
@@ -29,7 +30,7 @@ input:
 output:
   content: ((Qubit[], 'T) => Unit is Adj + Ctl)
   types:
-  - summary: Egy egységes operátor, amely `oracle` a cél-regisztrációra vonatkozik, ha a vezérlő regisztrálása állapot megfelel `numberState`a szám állapotnak.
+  - summary: Egy egységes operátor, amely a `oracle` cél-regisztrációra vonatkozik, ha a vezérlő regisztrálása állapot megfelel a szám állapotnak `numberState` .
     isOperation: true
     input:
       types:
@@ -46,9 +47,9 @@ output:
     - Adjoint
     - Controlled
 metadata:
-  ms.openlocfilehash: 544b96c809af69ce1cc33aad2d42b012f93d4b3c
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 81aeec4086549691d789e02e5a94e86cd75fdf06
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82675706"
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85885487"
