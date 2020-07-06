@@ -6,17 +6,19 @@ ms.date: 5/30/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.cs
-ms.openlocfilehash: 2b0b16bdd9fccc3b668036e6df2b20e11b32f8b6
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: 714c15d9589095f0fe395fcd6941672167879dca
+ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
 ms.translationtype: HT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274088"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85885500"
 ---
 # <a name="develop-with-q-and-net"></a>Fejlesztés Q#-pal és .NET-tel
 
 A Q# úgy lett kifejlesztve, hogy a .NET-nyelvekkel, például C# és F#, jól együttműködjön.
 Ebben az útmutatóban bemutatjuk, hogyan használhatja a Q#-ot egy .NET-nyelven írt gazdaprogrammal.
+
+Először létrehozunk egy Q#-alkalmazást és egy .NET-gazdagépet, majd bemutatjuk, hogyan hívhat meg egy Q#-ot a gazdagépről.
 
 ## <a name="prerequisites"></a>Előfeltételek
 
@@ -26,23 +28,8 @@ Ebben az útmutatóban bemutatjuk, hogyan használhatja a Q#-ot egy .NET-nyelven
 
 Első lépésként hozzon létre projekteket a Q#-kódtár és a .NET-gazdagép számára. Utóbbi a Q#-kódtárban definiált műveleteket és függvényeket hívja meg.
 
-### <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
-
-- Új Q#-kódtár létrehozása
-  - Lépjen a **Fájl** -> **Új** -> **Projekt** lehetőséghez
-  - A keresőmezőbe írja be a Q# kifejezést
-  - Válassza a **Q# Library (Q#-kódtár)** lehetőséget
-  - Kattintson a **Tovább** gombra.
-  - Adja meg a kódtár nevét és helyét
-  - Győződjön meg arról, hogy a Place project and solution in same directory (Projekt és megoldás azonos kódtárba helyezése) beállítás **nincs bejelölve**
-  - Kattintson a **Létrehozás** elemre.
-- Hozzon létre egy új, C# vagy F# nyelvű gazdaprogramot
-  - Lépjen a **File (Fájl)** → **New (Új)** → **Project (Projekt)** lehetőséghez
-  - Válassza a Console App (.NET Core) Konzolalkalmazás (.NET Core) lehetőséget a C# vagy az F# esetében
-  - Kattintson a **Tovább** gombra.
-  - A *megoldás* alatt válassza az Add to solution (Hozzáadás a megoldáshoz) lehetőséget
-  - Válasszon egy nevet a gazdaprogram számára
-  - Kattintson a **Létrehozás** elemre.
+Kövesse a fejlesztési környezetéhez tartozó fülön található utasításokat.
+Ha a Visual Studiótól vagy a VS Code-tól eltérő szerkesztőt használ, egyszerűen kövesse a parancssor lépéseit.
 
 ### <a name="visual-studio-code-or-command-line"></a>[Visual Studio Code vagy parancssor](#tab/tabid-cmdline)
 
@@ -72,6 +59,24 @@ Első lépésként hozzon létre projekteket a Q#-kódtár és a .NET-gazdagép 
   dotnet sln quantum-dotnet.sln add ./quantum/quantum.csproj
   dotnet sln quantum-dotnet.sln add ./host/host.csproj
   ```
+
+### <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
+
+- Új Q#-kódtár létrehozása
+  - Lépjen a **Fájl** -> **Új** -> **Projekt** lehetőséghez
+  - A keresőmezőbe írja be a Q# kifejezést
+  - Válassza a **Q# Library (Q#-kódtár)** lehetőséget
+  - Kattintson a **Tovább** gombra.
+  - Adja meg a kódtár nevét és helyét
+  - Győződjön meg arról, hogy a Place project and solution in same directory (Projekt és megoldás azonos kódtárba helyezése) beállítás **nincs bejelölve**
+  - Kattintson a **Létrehozás** elemre.
+- Hozzon létre egy új, C# vagy F# nyelvű gazdaprogramot
+  - Lépjen a **File (Fájl)** → **New (Új)** → **Project (Projekt)** lehetőséghez
+  - Válassza a Console App (.NET Core) Konzolalkalmazás (.NET Core) lehetőséget a C# vagy az F# esetében
+  - Kattintson a **Tovább** gombra.
+  - A *megoldás* alatt válassza az Add to solution (Hozzáadás a megoldáshoz) lehetőséget
+  - Válasszon egy nevet a gazdaprogram számára
+  - Kattintson a **Létrehozás** elemre.
 
 ***
 

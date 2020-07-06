@@ -6,12 +6,12 @@ ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide
-ms.openlocfilehash: c5611f3e2907791f2dfc1644be0a45515d50dfd7
-ms.sourcegitcommit: af10179284967bd7a72a52ae7e1c4da65c7d128d
+ms.openlocfilehash: 078d86c808b26c7f0b7b2577020cd9cef9491a9d
+ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
 ms.translationtype: HT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85415364"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85885014"
 ---
 # <a name="the-q-user-guide"></a>A Q# használati útmutatója
 
@@ -22,6 +22,8 @@ A jelen útmutató különböző témaköreiben részletesen ismertetjük a Q# n
 ## <a name="user-guide-contents"></a>A felhasználói útmutató tartalma
 
 - [A Q# alapjai](xref:microsoft.quantum.guide.basics): A Q# programozási nyelv célját és funkcióit bemutató áttekintés. 
+
+- [A Q#-programok futtatásának módjai](xref:microsoft.quantum.guide.host-programs): a Q#-programok végrehajtásának módját ismerteti, valamint áttekintést nyújt a program meghívásának különböző módjairól: a parancssorból, a Q# Jupyter-notebookokból vagy a Python vagy .NET nyelven írt klasszikus gazdaprogramokból.
 
 ### <a name="q-language"></a>A Q# nyelv
 

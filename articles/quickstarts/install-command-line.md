@@ -6,12 +6,12 @@ ms.date: 4/24/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.standalone
-ms.openlocfilehash: 4311ebf9f72254485a20ba721ea2ce19163f4371
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: 15015d1673f47faf5a13dde516f834916b4319d6
+ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
 ms.translationtype: HT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274122"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85884282"
 ---
 # <a name="develop-with-q-command-line-applications"></a>Fejlesztés Q# nyelvű parancssori alkalmazásokkal
 
@@ -23,7 +23,7 @@ A Q#-programok külön, illesztő nélkül is végrehajthatók olyan gazdanyelve
 
 ## <a name="installation"></a>Telepítés
 
-Bár Q# parancssori alkalmazásokat bármilyen IDE-ben létrehozhat, javasoljuk, hogy Q#-alkalmazásokhoz használja a Visual Studio Code-ot (VS Code) vagy a Visual Studio IDE-t. Ha ezekben az eszközökben fejleszt, számos funkcióhoz férhet hozzá.
+Bár Q# parancssori alkalmazásokat bármilyen IDE-ben létrehozhat, javasoljuk, hogy Q#-alkalmazásokhoz használja a Visual Studio Code-ot (VS Code) vagy a Visual Studio IDE-t. Ha ezekben a környezetekben fejleszt, hozzáférhet a QDK-bővítmény széleskörű funkcióihoz, beleértve a figyelmeztetéseket, a szintaxiselemek kiemelését, a projektsablonokat és egyebeket.
 
 A VS Code konfigurálása:
 
@@ -35,8 +35,17 @@ A Visual Studio konfigurálása:
 1. Töltse le és telepítse a [Visual Studio](https://visualstudio.microsoft.com/downloads/) 16.3-as vagy újabb verzióját, a .NET Core platformfüggetlen fejlesztési tevékenységprofil engedélyezésével.
 2. Töltse le és telepítse a [Microsoft QDK-t](https://marketplace.visualstudio.com/items?itemName=quantum.DevKit).
 
+A QDK egy másik környezetben való telepítéséhez írja a következőt a parancssorba:
 
-## <a name="develop-with-q-using-vs-code"></a>Fejlesztés a Q# és a VS Code használatával
+```dotnetcli
+dotnet new -i Microsoft.Quantum.ProjectTemplates
+```
+
+## <a name="develop-with-q"></a>Fejlesztés a Q# használatával
+
+Kövesse a környezetéhez tartozó fülön található utasításokat.
+
+### <a name="vs-code"></a>[VS Code](#tab/tabid-vscode)
 
 Telepítse a Q#-projektsablonokat:
 
@@ -64,7 +73,7 @@ Az alkalmazás futtatása:
 > [!NOTE]
 > A VS Code Q#-bővítmény jelenleg nem támogatja a több gyökérmappával rendelkező munkaterületeket. Ha egy VS Code-munkaterületen belül több projekt is található, az összes projektnek azonos gyökérmappában kell lennie.
 
-## <a name="develop-with-q-using-visual-studio"></a>Fejlesztés a Q# és a Visual Studio használatával
+### <a name="visual-studio"></a>[Visual Studio](#tab/tabid-vs)
 
 Ellenőrizze a Visual Studio telepítését egy `Hello World` Q#-alkalmazás létrehozásával.
 
@@ -83,6 +92,30 @@ Az alkalmazás futtatása:
 > [!NOTE]
 > Ha egy Visual Studio-megoldásban több projekt is található, a megoldásban foglalt összes projektnek a megoldás mappájában vagy valamelyik almappájában kell lennie.  
 
+### <a name="other-editors-with-the-command-line"></a>[Egyéb, parancssorral rendelkező szerkesztők](#tab/tabid-cmdline)
+
+Ellenőrizze a telepítést egy `Hello World` Q#-alkalmazás létrehozásával.
+
+1. Új alkalmazás létrehozása:
+    ```dotnetcli
+    dotnet new console -lang Q# -o runSayHello
+    ```
+
+2. Navigáljon az alkalmazás könyvtárához:
+    ```dotnetcli
+    cd runSayHello
+    ```
+
+    A könyvtár egy `Program.qs` nevű fájlt fog tartalmazni, amely egy olyan Q#-program, amely az üzenetek konzolon való megjelenítésének egyszerű műveletét definiálja. Ezt a sablont egy szövegszerkesztővel módosíthatja, és felülírhatja saját kvantumalkalmazásaival. 
+
+3. Futtassa a programot:
+    ```dotnetcli
+    dotnet run
+    ```
+
+4. A következő szövegnek kell megjelennie: `Hello quantum world!`
+
+***
 
 ## <a name="next-steps"></a>További lépések
 

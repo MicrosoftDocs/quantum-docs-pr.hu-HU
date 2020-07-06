@@ -7,12 +7,12 @@ ms.date: 5/30/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.update
-ms.openlocfilehash: 8d39716c4d4c96ad87862b4b185895aab66cd210
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: 457083ea4756d64375834e5a276c2d91031138fe
+ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
 ms.translationtype: HT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274077"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85885144"
 ---
 # <a name="update-the-microsoft-quantum-development-kit-qdk"></a>A Microsoft Quantum Development Kit (QDK) frissítése
 
@@ -151,14 +151,32 @@ A Q#-projektek frissítése után kövesse az alábbi utasításokat a QDK friss
 A QDK frissítési folyamata a fejlesztési nyelvtől és a környezettől függ.
 A lenti listából válassza ki a fejlesztőkörnyezetet.
 
-* [Python: az IQ#-bővítmény frissítése](#update-iq-for-python)
-* [Jupyter-notebookok: az IQ#-bővítmény frissítése](#update-iq-for-jupyter-notebooks)
+* [Python: frissítse a(z) `qsharp` csomagot](#update-the-qsharp-python-package)
+* [Jupyter-notebookok: frissítse az IQ#-kernelt](#update-the-iq-jupyter-kernel)
 * [Visual Studio: a QDK-bővítmény frissítése](#update-visual-studio-qdk-extension)
 * [VS Code: a QDK-bővítmény frissítése](#update-vs-code-qdk-extension)
 * [Parancssor és C#: projektsablonok frissítése](#c-using-the-dotnet-command-line-tool)
 
 
-### <a name="update-iq-for-python"></a>A Pythonhoz készült IQ# frissítése
+### <a name="update-the-qsharp-python-package"></a>A(z) `qsharp` Python-csomag frissítése
+
+A frissítési eljárás attól függ, hogy a telepítést eredetileg a Conda vagy a .NET CLI és a pip használatával végezte.
+
+#### <a name="update-using-conda-recommended"></a>[Frissítés a Conda használatával (ajánlott)](#tab/tabid-conda)
+
+1. Aktiválja azt a Conda-környezetet, amelyben a(z) `qsharp` csomagot telepítette, majd futtassa a következő parancsot a frissítéséhez:
+
+    ```
+    conda update -c quantum-engineering qsharp
+    ```
+
+1. Futtassa az alábbi parancsot a(z) `.qs`-fájlok helyéről:
+
+    ```
+    python -c "import qsharp; qsharp.reload()"
+    ```
+
+#### <a name="update-using-net-cli-and-pip-advanced"></a>[Frissítés a .NET CLI és a pip használatával (haladó)](#tab/tabid-dotnetcli)
 
 1. Frissítse az `iqsharp` kernelt 
 
@@ -167,7 +185,7 @@ A lenti listából válassza ki a fejlesztőkörnyezetet.
     dotnet iqsharp install
     ```
 
-2. Ellenőrizze az `iqsharp` verzióját
+1. Ellenőrizze az `iqsharp` verzióját
 
     ```dotnetcli
     dotnet iqsharp --version
@@ -176,19 +194,19 @@ A lenti listából válassza ki a fejlesztőkörnyezetet.
     A következő kimenetnek kell megjelennie:
 
     ```
-    iqsharp: 0.10.1912.501
-    Jupyter Core: 1.2.20112.0
+    iqsharp: 0.12.20070124
+    Jupyter Core: 1.4.0.0
     ```
 
-    Ne aggódjon, ha az `iqsharp` verziószáma nagyobb, annak meg kell egyeznie a [legújabb kiadással](xref:microsoft.quantum.relnotes).
+    Ne aggódjon, ha a(z) `iqsharp` verziószáma nagyobb. Annak meg kell egyeznie a(z) [legújabb kiadással](xref:microsoft.quantum.relnotes).
 
-3. Frissítse a `qsharp` csomagot
+1. Frissítse a(z) `qsharp` csomagot:
 
     ```
     pip install qsharp --upgrade
     ```
 
-4. Ellenőrizze az `qsharp` verzióját
+1. Ellenőrizze a(z) `qsharp` verzióját:
 
     ```
     pip show qsharp
@@ -198,29 +216,49 @@ A lenti listából válassza ki a fejlesztőkörnyezetet.
 
     ```
     Name: qsharp
-    Version: 0.10.1912.501
+    Version: 0.12.20070124
     Summary: Python client for Q#, a domain-specific quantum programming language
     ...
     ```
 
-5. Futtassa az alábbi parancsot a `.qs`-fájlok helyéről
+1. Futtassa az alábbi parancsot a(z) `.qs`-fájlok helyéről:
 
     ```
     python -c "import qsharp; qsharp.reload()"
     ```
 
-6. Most már használhatja a frissített QDK-verziót a meglévő kvantumprogramok futtatásához.
+***
 
-### <a name="update-iq-for-jupyter-notebooks"></a>A Jupyter-notebookhoz készült IQ# frissítése
+Most már használhatja a frissített `qsharp` Python-csomagot a meglévő kvantumprogramok futtatásához.
 
-1. Frissítse az `iqsharp` kernelt
+### <a name="update-the-iq-jupyter-kernel"></a>Az IQ# Jupyter kernel frissítése
+
+A frissítési eljárás attól függ, hogy a telepítést eredetileg a Conda vagy a .NET CLI és a pip használatával végezte.
+
+#### <a name="update-using-conda-recommended"></a>[Frissítés a Conda használatával (ajánlott)](#tab/tabid-conda)
+
+1. Aktiválja azt a Conda-környezetet, amelyben a(z) `qsharp` csomagot telepítette, majd futtassa a következő parancsot a frissítéséhez:
+
+    ```
+    conda update -c quantum-engineering qsharp
+    ```
+
+1. Futtassa az alábbi parancsot valamennyi meglévő Q# Jupyter-notebook egy-egy cellájából:
+
+    ```
+    %workspace reload
+    ```
+
+#### <a name="update-using-net-cli-and-pip-advanced"></a>[Frissítés a .NET CLI és a pip használatával (haladó)](#tab/tabid-dotnetcli)
+
+1. Frissítse a(z) `Microsoft.Quantum.IQSharp` csomagot:
 
     ```dotnetcli
     dotnet tool update -g Microsoft.Quantum.IQSharp
     dotnet iqsharp install
     ```
 
-2. Ellenőrizze az `iqsharp` verzióját
+1. Ellenőrizze a(z) `iqsharp` verzióját:
 
     ```dotnetcli
     dotnet iqsharp --version
@@ -229,19 +267,21 @@ A lenti listából válassza ki a fejlesztőkörnyezetet.
     A kimenet az alábbihoz hasonló lesz:
 
     ```
-    iqsharp: 0.10.1912.501
-    Jupyter Core: 1.2.20112.0
+    iqsharp: 0.12.20070124
+    Jupyter Core: 1.4.0.0
     ```
 
-    Ne aggódjon, ha az `iqsharp` verziószáma nagyobb, annak meg kell egyeznie a [legújabb kiadással](xref:microsoft.quantum.relnotes).
+    Ne aggódjon, ha a(z) `iqsharp` verziószáma nagyobb. Annak meg kell egyeznie a(z) [legújabb kiadással](xref:microsoft.quantum.relnotes).
 
-3. Futtassa az alábbi parancsot a Jupyter Notebook egyik cellájából:
+1. Futtassa az alábbi parancsot valamennyi meglévő Q# Jupyter-notebook egy-egy cellájából:
 
     ```
     %workspace reload
     ```
 
-4. Most már megnyithat egy meglévő Jupyter Notebookot, és futtathatja azt a frissített QDK-val.
+***
+
+Most már használhatja a frissített IQ# kernelt a meglévő Q# Jupyter-notebookok futtatásához.
 
 ### <a name="update-visual-studio-qdk-extension"></a>A Visual Studio QDK-bővítmény frissítése
 
