@@ -2,6 +2,8 @@
   href: index.md
 - name: A Q# alapjai
   href: basics.md
+- name: A Q#-programok futtatásának módjai
+  href: host-programs.md
 - name: A Q# nyelv
   href: language/toc.yml
 - name: A Q# használata
