@@ -6,14 +6,14 @@ ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.libraries.standard.intro
-ms.openlocfilehash: 820ad885e7134aa723116d4c9f853d88210a5514
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: ab069c496d89a57f979732da6ccdfbe673b79726
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: HT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85273531"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86870583"
 ---
-# <a name="introduction-to-the-q-standard-libraries"></a>Bevezetés a szabványos Q#-kódtárak használatába #
+# <a name="introduction-to-the-q-standard-libraries"></a>Bevezetés a szabványos Q#-kódtárak használatába
 
 A Q#-t számos olyan hasznos művelet, függvény és felhasználó által definiált típus támogatja, amelyek együttesen a Q# *szabványos kódtárát* alkotják.
 A [telepítés és ellenőrzés](xref:microsoft.quantum.install) során telepített [`Microsoft.Quantum.Development.Kit` NuGet-csomag](https://www.nuget.org/packages/microsoft.quantum.development.kit) tartalmazza a Q#-fordítót, valamint a célszámítógépek által implementált szabványos kódtár részeit.
