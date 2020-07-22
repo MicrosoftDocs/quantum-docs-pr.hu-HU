@@ -1,5 +1,5 @@
 - name: A kvantum gépi tanulás bemutatása
-  href: introduction.md
+  href: intro.md
 - name: Alapszintű osztályozás
   href: basic-classification.md
 - name: Saját osztályozó tervezése
