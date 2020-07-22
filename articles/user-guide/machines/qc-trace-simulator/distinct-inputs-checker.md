@@ -1,21 +1,25 @@
 ---
-title: Különálló bemenet-ellenőrzési
-description: 'Ismerje meg a Microsoft QDK DISTINCT Inputs-ellenőrzőt, amely a Q # kódját ellenőrzi a megosztott qubits lehetséges ütközések esetén.'
+title: DISTINCT Inputs-Dámajáték – Quantum Development Kit
+description: 'Ismerje meg a Microsoft QDK DISTINCT input-ellenőrzését, amely a Quantum Trace Simulator használatával vizsgálja meg a Q # kódját a megosztott qubits lehetséges ütközések esetén.'
 author: vadym-kl
 ms.author: vadym@microsoft.com
-ms.date: 12/11/2017
+ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.distinct-inputs
-ms.openlocfilehash: 11a0573242c8afb12f242aa3be5f9cff18290452
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: 49a1ccc5f37acfeaa1ee08bd974be45a40a76f93
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274930"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871144"
 ---
-# <a name="distinct-inputs-checker"></a><span data-ttu-id="a64ba-103">Különálló bemenet-ellenőrzési</span><span class="sxs-lookup"><span data-stu-id="a64ba-103">Distinct Inputs Checker</span></span>
+# <a name="quantum-trace-simulator-distinct-inputs-checker"></a><span data-ttu-id="5710a-103">Quantum Trace Simulator: különálló bemenet-ellenőrzési</span><span class="sxs-lookup"><span data-stu-id="5710a-103">Quantum trace simulator: distinct inputs checker</span></span>
 
-<span data-ttu-id="a64ba-104">A a `Distinct Inputs Checker` Quantum Computer [trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro)részét képezi.</span><span class="sxs-lookup"><span data-stu-id="a64ba-104">The `Distinct Inputs Checker` is a part of the quantum computer [Trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro).</span></span> <span data-ttu-id="a64ba-105">Ez a kód a lehetséges hibák észlelésére szolgál.</span><span class="sxs-lookup"><span data-stu-id="a64ba-105">It is designed for detecting potential bugs in the code.</span></span> <span data-ttu-id="a64ba-106">A csomag által észlelt problémák szemléltetéséhez vegye figyelembe az alábbi Q #-kódot:</span><span class="sxs-lookup"><span data-stu-id="a64ba-106">Consider the following piece of Q# code to illustrate the issues detected by this package:</span></span>
+<span data-ttu-id="5710a-104">A DISTINCT input-ellenőrök a Quantum Development Kit [Quantum Trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro)részét képezik.</span><span class="sxs-lookup"><span data-stu-id="5710a-104">The distinct inputs checker is a part of the Quantum Development Kit [Quantum trace simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro).</span></span> <span data-ttu-id="5710a-105">A használatával észlelheti a programkódban előforduló esetleges hibákat a megosztott qubits ütközései miatt.</span><span class="sxs-lookup"><span data-stu-id="5710a-105">You can use it to detect potential bugs in the code caused by conflicts with shared qubits.</span></span> 
+
+## <a name="conflicts-with-shared-qubits"></a><span data-ttu-id="5710a-106">Ütközés megosztott qubits</span><span class="sxs-lookup"><span data-stu-id="5710a-106">Conflicts with shared qubits</span></span>
+
+<span data-ttu-id="5710a-107">Vegye figyelembe a következő Q #-kódrészletet a különböző input-ellenőrök által észlelt problémák szemléltetése érdekében:</span><span class="sxs-lookup"><span data-stu-id="5710a-107">Consider the following piece of Q# code to illustrate the issues detected by the distinct inputs checker:</span></span>
 
 ```qsharp
 operation ApplyBoth(
@@ -29,7 +33,9 @@ operation ApplyBoth(
 }
 ```
 
-<span data-ttu-id="a64ba-107">Amikor a felhasználó megkeresi a programot, feltételezi, hogy a `op1` és a `op2` hívási sorrend nem számít, mert `q1` és különböző `q2` qubits és műveletek különböző qubits-feladatokkal működnek.</span><span class="sxs-lookup"><span data-stu-id="a64ba-107">When the user looks at this program, they assume that the order in which `op1` and `op2` are called does not matter because `q1` and `q2` are different qubits and operations acting on different qubits commute.</span></span> <span data-ttu-id="a64ba-108">Most Vegyünk példaként egy példát, ahol ezt a műveletet használják:</span><span class="sxs-lookup"><span data-stu-id="a64ba-108">Let us now consider an example, where this operation is used:</span></span>
+<span data-ttu-id="5710a-108">Ha megtekinti ezt a programot, feltételezheti, hogy a meghívása `op1` és a `op2` nem számít, mivel a `q1` és a különböző `q2` qubits és műveletek különböző qubits-feladatokkal működnek.</span><span class="sxs-lookup"><span data-stu-id="5710a-108">When you look at this program, you can assume that the order in which it calls `op1` and `op2` does not matter, because `q1` and `q2` are different qubits and operations acting on different qubits commute.</span></span> 
+
+<span data-ttu-id="5710a-109">Most gondolja át a következő példát:</span><span class="sxs-lookup"><span data-stu-id="5710a-109">Now, consider this example:</span></span>
 
 ```qsharp
 operation ApplyWithNonDistinctInputs() : Unit {
@@ -41,11 +47,21 @@ operation ApplyWithNonDistinctInputs() : Unit {
 }
 ```
 
-<span data-ttu-id="a64ba-109">Most `op1` és `op2` mindkettőt részleges alkalmazás használatával szerezték be, és megosztanak egy qubit.</span><span class="sxs-lookup"><span data-stu-id="a64ba-109">Now `op1` and `op2` are both obtained using partial application and share a qubit.</span></span> <span data-ttu-id="a64ba-110">Ha a felhasználó a `ApplyBoth` fenti példában meghívja a művelet eredményét, a és a belső sorrendtől `op1` függ `op2` `ApplyBoth` .</span><span class="sxs-lookup"><span data-stu-id="a64ba-110">When the user calls `ApplyBoth` in the example above the result of the operation will depend on the order of `op1` and `op2` inside `ApplyBoth`.</span></span> <span data-ttu-id="a64ba-111">Ez biztosan nem az, amit a felhasználó elvár.</span><span class="sxs-lookup"><span data-stu-id="a64ba-111">This is definitely not what the user would expect to happen.</span></span> <span data-ttu-id="a64ba-112">A az `Distinct Inputs Checker` ilyen helyzeteket fogja felderíteni, ha engedélyezve van, és a rendszer kidobja `DistinctInputsCheckerException` .</span><span class="sxs-lookup"><span data-stu-id="a64ba-112">The `Distinct Inputs Checker` will detect such situations when enabled and will throw `DistinctInputsCheckerException`.</span></span> <span data-ttu-id="a64ba-113">További részletekért tekintse meg a [DISTINCTINPUTSCHECKEREXCEPTION](https://docs.microsoft.com/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.DistinctInputsCheckerException) API-dokumentációját.</span><span class="sxs-lookup"><span data-stu-id="a64ba-113">See the API documentation on [DistinctInputsCheckerException](https://docs.microsoft.com/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.DistinctInputsCheckerException) for more details.</span></span>
+<span data-ttu-id="5710a-110">Vegye figyelembe, hogy `op1` `op2` mindkettő részleges alkalmazás használatával és a qubit megosztásával is beszerezhető.</span><span class="sxs-lookup"><span data-stu-id="5710a-110">Note that `op1` and `op2` are both obtained using partial application and share a qubit.</span></span> <span data-ttu-id="5710a-111">Ha ezt a `ApplyBoth` példát hívja meg, a művelet eredménye a és a belső sorrendtől függ, `op1` és nem az, `op2` `ApplyBoth` ami várható.</span><span class="sxs-lookup"><span data-stu-id="5710a-111">When you call `ApplyBoth` in this example, the result of the operation depends on the order of `op1` and `op2` inside `ApplyBoth` - not what you would expect to happen.</span></span> <span data-ttu-id="5710a-112">Ha engedélyezi a különböző bemenet-ellenőröket, az észleli az ilyen helyzeteket, és eldönti a `DistinctInputsCheckerException` .</span><span class="sxs-lookup"><span data-stu-id="5710a-112">When you enable the distinct inputs checker, it detects such situations and throws a `DistinctInputsCheckerException`.</span></span> <span data-ttu-id="5710a-113">További információ: a <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.DistinctInputsCheckerException> Q # API Library.</span><span class="sxs-lookup"><span data-stu-id="5710a-113">For more information, see <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.DistinctInputsCheckerException> in the Q# API library.</span></span>
 
-## <a name="using-the-distinct-inputs-checker-in-your-c-program"></a><span data-ttu-id="a64ba-114">A különböző input-ellenőrök használata a C# programban</span><span class="sxs-lookup"><span data-stu-id="a64ba-114">Using the Distinct Inputs Checker in your C# Program</span></span>
+## <a name="invoking-the-distinct-inputs-checker"></a><span data-ttu-id="5710a-114">A különböző bemenet-ellenőrök meghívása</span><span class="sxs-lookup"><span data-stu-id="5710a-114">Invoking the distinct inputs checker</span></span>
 
-<span data-ttu-id="a64ba-115">Az alábbi példa egy C#-illesztőprogram-kódra mutat be, amely a Quantum Computer Trace Simulator használatát teszi `Distinct Inputs Checker` lehetővé:</span><span class="sxs-lookup"><span data-stu-id="a64ba-115">The following is an example of C# driver code for using the quantum computer trace simulator with the `Distinct Inputs Checker` enabled:</span></span>
+<span data-ttu-id="5710a-115">Ha a kvantum-nyomkövetési szimulátort a DISTINCT Inputs-előfizetési lehetőséggel szeretné futtatni, létre kell hoznia egy <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> példányt, állítsa a `UseDistinctInputsChecker` tulajdonságot **igaz**értékre, majd hozzon létre egy új <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> példányt `QCTraceSimulatorConfiguration` a paraméterrel.</span><span class="sxs-lookup"><span data-stu-id="5710a-115">To run the quantum trace simulator with the distinct inputs checker you must create a <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> instance, set the `UseDistinctInputsChecker` property to **true**, and then create a new <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> instance with `QCTraceSimulatorConfiguration` as the parameter.</span></span> 
+
+```csharp
+var config = new QCTraceSimulatorConfiguration();
+config.UseDistinctInputsChecker = true;
+var sim = new QCTraceSimulator(config);
+```
+
+## <a name="using-the-distinct-inputs-checker-in-a-c-host-program"></a><span data-ttu-id="5710a-116">A különböző input-ellenőrök használata C#-gazdagép programban</span><span class="sxs-lookup"><span data-stu-id="5710a-116">Using the distinct inputs checker in a C# host program</span></span>
+
+<span data-ttu-id="5710a-117">A következőkben egy példa látható a C#-alapú gazdagépre, amely a kvantum-nyomkövetési szimulátort használja a különböző bemenet-ellenőrzési lehetőségekkel:</span><span class="sxs-lookup"><span data-stu-id="5710a-117">The following is an example of C# host program that uses the quantum trace simulator with the distinct inputs checker enabled:</span></span>
 
 ```csharp
 using Microsoft.Quantum.Simulation.Core;
@@ -59,7 +75,7 @@ namespace Quantum.MyProgram
         static void Main(string[] args)
         {
             var traceSimCfg = new QCTraceSimulatorConfiguration();
-            traceSimCfg.useDistinctInputsChecker = true; //enables distinct inputs checker
+            traceSimCfg.UseDistinctInputsChecker = true; //enables distinct inputs checker
             QCTraceSimulator sim = new QCTraceSimulator(traceSimCfg);
             var res = MyQuantumProgram.Run().Result;
             System.Console.WriteLine("Press any key to continue...");
@@ -69,8 +85,9 @@ namespace Quantum.MyProgram
 }
 ```
 
-<span data-ttu-id="a64ba-116">Az osztály `QCTraceSimulatorConfiguration` tárolja a kvantum-számítógép nyomkövetési szimulátor konfigurációját, és a konstruktor argumentumként is elérhető `QCTraceSimulator` .</span><span class="sxs-lookup"><span data-stu-id="a64ba-116">The class `QCTraceSimulatorConfiguration` stores the configuration of the quantum computer trace simulator and can be provided as an argument for the `QCTraceSimulator` constructor.</span></span> <span data-ttu-id="a64ba-117">Ha `useDistinctInputsChecker` a értéke TRUE (igaz `Distinct Inputs Checker` ), akkor az engedélyezve van.</span><span class="sxs-lookup"><span data-stu-id="a64ba-117">When `useDistinctInputsChecker` is set to true the `Distinct Inputs Checker` is enabled.</span></span> <span data-ttu-id="a64ba-118">További részletekért tekintse meg a [QCTraceSimulator](https://docs.microsoft.com/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator) és a [QCTraceSimulatorConfiguration](https://docs.microsoft.com/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration?) API-dokumentációját.</span><span class="sxs-lookup"><span data-stu-id="a64ba-118">See the API documentation on [QCTraceSimulator](https://docs.microsoft.com/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator) and [QCTraceSimulatorConfiguration](https://docs.microsoft.com/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration?) for more details.</span></span>
+## <a name="see-also"></a><span data-ttu-id="5710a-118">Lásd még</span><span class="sxs-lookup"><span data-stu-id="5710a-118">See also</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="a64ba-119">Lásd még</span><span class="sxs-lookup"><span data-stu-id="a64ba-119">See also</span></span>
-
-- <span data-ttu-id="a64ba-120">A Quantum Computer [trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro) áttekintése.</span><span class="sxs-lookup"><span data-stu-id="a64ba-120">The quantum computer [Trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro) overview.</span></span>
+- <span data-ttu-id="5710a-119">A Quantum Development Kit [Quantum Trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro) áttekintése.</span><span class="sxs-lookup"><span data-stu-id="5710a-119">The Quantum Development Kit [Quantum trace simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro) overview.</span></span>
+- <span data-ttu-id="5710a-120">Az <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> API-hivatkozás.</span><span class="sxs-lookup"><span data-stu-id="5710a-120">The <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> API reference.</span></span>
+- <span data-ttu-id="5710a-121">Az <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> API-hivatkozás.</span><span class="sxs-lookup"><span data-stu-id="5710a-121">The <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> API reference.</span></span>
+- <span data-ttu-id="5710a-122">Az <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.DistinctInputsCheckerException> API-hivatkozás.</span><span class="sxs-lookup"><span data-stu-id="5710a-122">The <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.DistinctInputsCheckerException> API reference.</span></span>

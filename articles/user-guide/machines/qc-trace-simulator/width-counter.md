@@ -1,22 +1,35 @@
 ---
-title: Szélesség számlálója
-description: Ismerje meg a Microsoft QDK szélességi számlálóját, amely megszámolja a kvantum-programban a műveletek által lefoglalt és kölcsönvett qubits számát.
+title: Szélesség számláló – Quantum Development Kit
+description: 'Ismerkedjen meg a Microsoft QDK szélességi számlálójának használatával, amely a Quantum Trace Simulator használatával számítja ki, hogy hány qubits van kiosztva, és hogyan kölcsönzött a Q # programban végzett műveletek.'
 author: vadym-kl
 ms.author: vadym@microsoft.com
-ms.date: 12/11/2017
+ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.width-counter
-ms.openlocfilehash: a76292222950310acc90dded02980e4a5b792e76
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: af8609dc5c05f7a19b8d21755281427feb29b84c
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274897"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871519"
 ---
-# <a name="width-counter"></a><span data-ttu-id="6ac80-103">Szélesség számlálója</span><span class="sxs-lookup"><span data-stu-id="6ac80-103">Width Counter</span></span>
+# <a name="quantum-trace-simulator-width-counter"></a><span data-ttu-id="caa8b-103">Quantum Trace Simulator: szélesség számláló</span><span class="sxs-lookup"><span data-stu-id="caa8b-103">Quantum trace simulator: width counter</span></span>
 
-<span data-ttu-id="6ac80-104">A `Width Counter` megszámolja az egyes műveletek által lefoglalt és kölcsönzött qubits számát.</span><span class="sxs-lookup"><span data-stu-id="6ac80-104">The `Width Counter` counts the number of qubits allocated and borrowed by each operation.</span></span>
-<span data-ttu-id="6ac80-105">A névtérből származó összes művelet az `Microsoft.Quantum.Intrinsic` egyszeres qubit Forgások, a T Gates, az egyetlen Qubit Clifford Gates, a cnem Gates és a multi-Qubit Pauli observables mérései alapján van kifejezve.</span><span class="sxs-lookup"><span data-stu-id="6ac80-105">All operations from the `Microsoft.Quantum.Intrinsic` namespace are expressed in terms of single qubit rotations, T gates, single qubit Clifford gates, CNOT gates and measurements of multi-qubit Pauli observables.</span></span> <span data-ttu-id="6ac80-106">Néhány primitív művelet további qubits foglalhat le.</span><span class="sxs-lookup"><span data-stu-id="6ac80-106">Some of the primitive operations can allocate extra qubits.</span></span> <span data-ttu-id="6ac80-107">Például: szorzás vezérelt `X` kapuk vagy vezérelt `T` kapuk.</span><span class="sxs-lookup"><span data-stu-id="6ac80-107">For example, multiply controlled `X` gates or controlled `T` gates.</span></span> <span data-ttu-id="6ac80-108">Tegyük fel, hogy kiszámítjuk a szorzás vezérelt kapu megvalósításával kiosztott extra qubits számát `X` :</span><span class="sxs-lookup"><span data-stu-id="6ac80-108">Let us compute the number of extra qubits allocated by the implementation of a multiply controlled `X` gate:</span></span>
+<span data-ttu-id="caa8b-104">A szélesség számláló a Quantum Development Kit [Quantum Trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro)részét képezi.</span><span class="sxs-lookup"><span data-stu-id="caa8b-104">The width counter is a part of the Quantum Development Kit [Quantum trace simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro).</span></span> <span data-ttu-id="caa8b-105">Felhasználhatja a Q # program egyes műveletei által lefoglalt qubits számának megszámlálására.</span><span class="sxs-lookup"><span data-stu-id="caa8b-105">You can use it to count the number of qubits allocated and borrowed by each operation in a Q# program.</span></span> <span data-ttu-id="caa8b-106">Néhány primitív művelet több qubits is kioszthat, például szorzásra vezérelt `X` vagy vezérelt `T` műveleteket.</span><span class="sxs-lookup"><span data-stu-id="caa8b-106">Some primitive operations can allocate extra qubits, for example, multiply controlled `X` operations or controlled `T` operations.</span></span>
+
+## <a name="invoking-the-width-counter"></a><span data-ttu-id="caa8b-107">A szélességi számláló meghívása</span><span class="sxs-lookup"><span data-stu-id="caa8b-107">Invoking the width counter</span></span>
+
+<span data-ttu-id="caa8b-108">Ha a kvantum-nyomkövetési szimulátort a szélességi számlálóval szeretné futtatni, létre kell hoznia egy <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> példányt, a `UseWidthCounter` tulajdonságot **igaz**értékre kell állítania, majd létre kell hoznia egy új <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> példányt a `QCTraceSimulatorConfiguration` paraméterrel.</span><span class="sxs-lookup"><span data-stu-id="caa8b-108">To run the quantum trace simulator with the width counter, you must create a <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> instance, set the `UseWidthCounter` property to **true**, and then create a new <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> instance with the `QCTraceSimulatorConfiguration` as the parameter.</span></span> 
+
+```csharp
+var config = new QCTraceSimulatorConfiguration();
+config.UseWidthCounter = true;
+var sim = new QCTraceSimulator(config);
+```
+
+## <a name="using-the-width-counter-in-a-c-host-program"></a><span data-ttu-id="caa8b-109">A szélesség számláló használata C#-gazdagép programban</span><span class="sxs-lookup"><span data-stu-id="caa8b-109">Using the width counter in a C# host program</span></span>
+
+<span data-ttu-id="caa8b-110">Az ebben a szakaszban ismertetett C#-példa a <xref:microsoft.quantum.intrinsic.x> következő Q # mintakód alapján kiszámítja a szorzás által vezérelt művelet megvalósításával lefoglalt extra qubits számát:</span><span class="sxs-lookup"><span data-stu-id="caa8b-110">The C# example that follows in this section computes the number of extra qubits allocated by the implementation of a multiply controlled <xref:microsoft.quantum.intrinsic.x> operation, based on the following Q# sample code:</span></span>
 
 ```qsharp
 open Microsoft.Quantum.Intrinsic;
@@ -28,13 +41,11 @@ operation ApplyMultiControlledX( numberOfQubits : Int ) : Unit {
 }
 ```
 
-## <a name="using-width-counter-within-a-c-program"></a><span data-ttu-id="6ac80-109">A szélesség számlálójának használata C#-programon belül</span><span class="sxs-lookup"><span data-stu-id="6ac80-109">Using Width Counter within a C# Program</span></span>
-
-<span data-ttu-id="6ac80-110">`X`Az összesen 5 qubits elvégezhető szorzási művelet 2 kiegészítő qubits foglal le, és a bemeneti szélessége 5 lesz.</span><span class="sxs-lookup"><span data-stu-id="6ac80-110">Multiply controlled `X` acting on a total of 5 qubits will allocate 2 ancillary qubits and its input width will be 5.</span></span> <span data-ttu-id="6ac80-111">Ebben az esetben a következő C# programot használhatja:</span><span class="sxs-lookup"><span data-stu-id="6ac80-111">To check that this is the case, we can use the following C# program:</span></span>
+<span data-ttu-id="caa8b-111">A szorzás <xref:microsoft.quantum.intrinsic.x> által vezérelt művelet összesen öt qubits működik, és két [kiegészítő qubits](xref:microsoft.quantum.glossary#ancilla)foglal le, és a bemeneti szélessége **5**.</span><span class="sxs-lookup"><span data-stu-id="caa8b-111">The multiply controlled <xref:microsoft.quantum.intrinsic.x> operation acts on a total of five qubits, allocates two [ancillary qubits](xref:microsoft.quantum.glossary#ancilla), and has an input width of **5**.</span></span> <span data-ttu-id="caa8b-112">A következő C# program használatával ellenőrizheti a számlálókat:</span><span class="sxs-lookup"><span data-stu-id="caa8b-112">Use the following C# program to verify the counts:</span></span>
 
 ```csharp 
 var config = new QCTraceSimulatorConfiguration();
-config.useWidthCounter = true;
+config.UseWidthCounter = true;
 var sim = new QCTraceSimulator(config);
 int totalNumberOfQubits = 5;
 var res = ApplyMultiControlledX.Run(sim, totalNumberOfQubits).Result;
@@ -50,13 +61,16 @@ double inputWidth =
         functor: OperationFunctor.Controlled);
 ```
 
-<span data-ttu-id="6ac80-112">A program első része hajtja végre `ApplyMultiControlledX` .</span><span class="sxs-lookup"><span data-stu-id="6ac80-112">The first part of the program executes `ApplyMultiControlledX`.</span></span> <span data-ttu-id="6ac80-113">A második részben a metódus használatával lekéri `QCTraceSimulator.GetMetric` a lefoglalt qubits számát, valamint a bemenetként ellenőrzött qubits számát `X` .</span><span class="sxs-lookup"><span data-stu-id="6ac80-113">In the second part we use the method `QCTraceSimulator.GetMetric` to get the number of allocated qubits as well as the number of qubits that Controlled `X` received as input.</span></span> 
+<span data-ttu-id="caa8b-113">A program első része futtatja a `ApplyMultiControlledX` műveletet.</span><span class="sxs-lookup"><span data-stu-id="caa8b-113">The first part of the program runs the `ApplyMultiControlledX` operation.</span></span> <span data-ttu-id="caa8b-114">A második rész a [`QCTraceSimulator.GetMetric`](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.qctracesimulator.getmetric) metódus használatával kéri le a lefoglalt qubits számát, valamint azt a qubits-számot, amelyet a `Controlled X` művelet bemenetként kapott.</span><span class="sxs-lookup"><span data-stu-id="caa8b-114">The second part uses the [`QCTraceSimulator.GetMetric`](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.qctracesimulator.getmetric) method to retrieve the number of allocated qubits as well as the number of qubits that the `Controlled X` operation received as input.</span></span> 
 
-<span data-ttu-id="6ac80-114">Végezetül a következő műveleteket végezheti el a szélességi számláló által összegyűjtött összes statisztika CSV-formátumban való kinyomtatásához:</span><span class="sxs-lookup"><span data-stu-id="6ac80-114">Finally, to output all the statistics collected by width counter in CSV format we can use the following:</span></span>
+<span data-ttu-id="caa8b-115">Végezetül a következő paranccsal állíthatja be az összes olyan statisztikát, amelyet a szélességi számláló a CSV formátumban gyűjtött:</span><span class="sxs-lookup"><span data-stu-id="caa8b-115">Finally, you can output all the statistics collected by the width counter in CSV format using the following:</span></span>
 ```csharp
 string csvSummary = sim.ToCSV()[MetricsCountersNames.widthCounter];
 ```
 
-## <a name="see-also"></a><span data-ttu-id="6ac80-115">Lásd még</span><span class="sxs-lookup"><span data-stu-id="6ac80-115">See also</span></span> ##
+## <a name="see-also"></a><span data-ttu-id="caa8b-116">Lásd még</span><span class="sxs-lookup"><span data-stu-id="caa8b-116">See also</span></span>
 
-- <span data-ttu-id="6ac80-116">A Quantum Computer [trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro) áttekintése.</span><span class="sxs-lookup"><span data-stu-id="6ac80-116">The quantum computer [Trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro) overview.</span></span>
+- <span data-ttu-id="caa8b-117">A Quantum Development Kit [Quantum Trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro) áttekintése.</span><span class="sxs-lookup"><span data-stu-id="caa8b-117">The Quantum Development Kit [Quantum trace simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro) overview.</span></span>
+- <span data-ttu-id="caa8b-118">Az <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> API-hivatkozás.</span><span class="sxs-lookup"><span data-stu-id="caa8b-118">The <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> API reference.</span></span>
+- <span data-ttu-id="caa8b-119">Az <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> API-hivatkozás.</span><span class="sxs-lookup"><span data-stu-id="caa8b-119">The <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> API reference.</span></span>
+- <span data-ttu-id="caa8b-120">Az <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.MetricsNames.WidthCounter> API-hivatkozás.</span><span class="sxs-lookup"><span data-stu-id="caa8b-120">The <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.MetricsNames.WidthCounter> API reference.</span></span>
