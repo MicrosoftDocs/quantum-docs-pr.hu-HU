@@ -1,157 +1,158 @@
 ---
-title: Kvantumorákulumok
-description: Megtudhatja, hogyan dolgozhat a használatával, és meghatározhatja a Quantum Oracles és a Black Box olyan műveleteit, amelyek bemenetként használhatók egy másik algoritmushoz.
-author: cgranade
-uid: microsoft.quantum.concepts.oracles
-ms.author: Christopher.Granade@microsoft.com
-ms.date: 07/11/2018
-ms.topic: article
-no-loc:
-- $
-- $
-- $
-- $
-- $
-- $
-- '\cdots'
-- bmatrix
-- '\ddots'
-- '\equiv'
-- '\sum'
-- '\begin'
-- '\end'
-- '\sqrt'
-- '\otimes'
-- '{'
-- '}'
-- '\text'
-- '\phi'
-- '\kappa'
-- '\psi'
-- '\alpha'
-- '\beta'
-- '\gamma'
-- '\delta'
-- '\omega'
-- '\bra'
-- '\ket'
-- '\boldone'
-- '\\\\'
-- '\\'
-- =
-- '\frac'
-- '\text'
-- '\mapsto'
-- '\dagger'
-- '\to'
+title: Quantum Oracles Description: megtudhatja, hogyan dolgozhat és határozhat meg a Quantum Oracles, Black Box műveleteit, amelyeket egy másik algoritmus bemenetként használ.
+Szerző: cgranade UID: Microsoft. Quantum. Concepts. Oracles MS. Author: Christopher.Granade@microsoft.com MS. Date: 07/11/2018 MS. topic: No-Loc:
+- "$$"
+- "$$"
+- "$"
+- "$"
+- "$"
+- "$$"
+- "\cdots"
+- "bmatrix"
+- "\ddots"
+- "\equiv"
+- "\sum"
+- "\begin"
+- "\end"
+- "\sqrt"
+- "\otimes"
+- "{"
+- "}"
+- "\text"
+- "\phi"
+- "\kappa"
+- "\psi"
+- "\alpha"
+- "\beta"
+- "\gamma"
+- "\delta"
+- "\omega"
+- "\bra"
+- "\ket"
+- "\boldone"
+- "\\\\"
+- "\\"
+- "="
+- "\frac"
+- "\text"
+- "\mapsto"
+- "\dagger"
+- "\to"
 - "\begin{cases}"
 - "\end{cases}"
-- '\operatorname'
-- '\braket'
-- '\id'
-- '\expect'
-- '\defeq'
-- '\variance'
-- '\dd'
-- '&'
+- "\operatorname"
+- "\braket"
+- "\id"
+- "\expect"
+- "\defeq"
+- "\variance"
+- "\dd"
+- "&"
 - "\begin{align}"
 - "\end{align}"
-- '\Lambda'
-- '\lambda'
-- '\Omega'
-- '\mathrm'
-- '\left'
-- '\right'
-- '\qquad'
-- '\times'
-- '\big'
-- '\langle'
-- '\rangle'
-- '\bigg'
-- '\Big'
-- '|'
-- '\mathbb'
-- '\vec'
-- '\in'
-- '\texttt'
-- '\ne'
-- <
-- '>'
-- '\leq'
-- '\geq'
-- ~~
+- "\Lambda"
+- "\lambda"
+- "\Omega"
+- "\mathrm"
+- "\left"
+- "\right"
+- "\qquad"
+- "\times"
+- "\big"
+- "\langle"
+- "\rangle"
+- "\bigg"
+- "\Big"
+- "|"
+- "\mathbb"
+- "\vec"
+- "\in"
+- "\texttt"
+- "\ne"
+- "<"
+- ">"
+- "\leq"
+- "\geq"
+- "~~"
 - "~"
 - "\begin{bmatrix}"
 - "\end{bmatrix}"
-- '\_'
-ms.openlocfilehash: 747c08df110f1f10efe552628d15e3500509b690
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
-ms.translationtype: MT
-ms.contentlocale: hu-HU
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85269558"
+- "\_"
+
 ---
 # <a name="quantum-oracles"></a>Quantum jóslatok
 
-Az Oracle $O $ egy olyan "fekete doboz" művelet, amelyet bemenetként használ egy másik algoritmus.
-Ezeket a műveleteket gyakran egy klasszikus függvénnyel határozzák meg $f: \\ {0, 1 \\ } ^ n \to \\ {0, 1 \\ } ^ m, $ amely egy $n $ bites bináris bemenetet hoz létre, és egy $m $ bites bináris kimenetet állít elő.
-Ehhez vegye fontolóra egy adott bináris bemenet $x = (x_ {0 } , X_ {1 } , \dots, X_ {n-1 } ) $ értéket.
-Qubit-állapotokat is címkézheti $ \ket { \vec{x } } = \ket{X_ {0 } } \otimes \ket{X_ {1} \otimes \cdots \otimes } \ket{X_ {n-1 } } $.
+Az Oracle $ O $ egy "fekete doboz" művelet, amelyet bemenetként használ egy másik algoritmushoz.
+Az ilyen műveletek gyakran az $ f: \\ { 0, 1 \\ } ^ n 0, 1 ^ m klasszikus függvénnyel vannak definiálva, \to \\ { \\ } $ amely egy $ n $ bites bináris bemenetet vesz igénybe, és egy $ m $ bites bináris kimenetet hoz létre.
+Ehhez vegye fontolóra egy adott bináris bemeneti $ x-t = (X_ { 0 } , X_ { 1 } , \dots, X_ { n-1 } ) $ .
+Az qubit-állapotokat $ \ket { \vec { x } } = \ket { X_ { 0 } } \otimes \ket { X_ { 1 } } \otimes \cdots \otimes \ket { X_ { n-1 } } $ értékre lehet felcímkézni.
 
-Először megpróbáljuk meghatározni $O, $ hogy $O \ket {x } = \ket{f (x)} $, de ez néhány problémával is rendelkezik.
-Először is, $f $ lehet, hogy a bemeneti és a kimeneti ($n \ne m $ ) mérete eltérő, így a $O alkalmazásával $ megváltoztathatja a regisztrációban lévő qubits számát.
-Másodszor, még akkor is, ha $n = m $ , a függvény nem lehet invertálható: ha $f (x) = f (y) $ egyes $x \ne y esetében $ , akkor $O \ket {x } = O \ket {y } $, de $O ^ \dagger o \ket {x } \ne o ^ \dagger o \ket {y } $.
-Ez azt jelenti, hogy nem tudjuk kialakítani a adjoint műveletet $O ^ \dagger $ , és az Oracles-nek meg kell adni egy adjoint.
+Először megpróbáljuk meghatározni az o-t $ $ , hogy az $ o \ket { x } = \ket { f (x) } $ , de ez néhány problémával is rendelkezik.
+Először $ $ is lehet, hogy a bemeneti és kimeneti (n m) értéknek eltérő a mérete $ \ne $ , így az $ O alkalmazása $ megváltoztathatja a regisztrációban lévő qubits számát.
+Másodszor, még ha $ n = m is $ , a függvény nem lehet invertálható: Ha $ f (x) = f (y) $ egy $ x \ne y $ , akkor az $ o \ket { x } = o \ket { y, } $ de $ o ^ \dagger o \ket { x } \ne o ^ \dagger o \ket { y } $ .
+Ez azt jelenti, hogy nem tudjuk kialakítani a adjoint műveletet $ O ^ \dagger $ , és az Oracles-nek hozzá kell adni egy adjoint.
 
 ## <a name="defining-an-oracle-by-its-effect-on-computational-basis-states"></a>Az Oracle meghatározása a számítási alapú állapotokra gyakorolt hatásuk alapján
-Mindkét probléma megoldásához bemutatjuk a $m qubits második regisztrációját $ , hogy megtartsa a választ.
-Ezután definiáljuk az Oracle hatását az összes számítási állapotra: az összes $x \in \\ {0, 1 \\ } ^ n $ és $y \in \\ {0, 1 \\ } ^ m $ ,
+Mindkét problémát felhasználhatjuk egy második m qubits-regisztráció bevezetésével $ $ , hogy megtartsa a választ.
+Ezután definiáljuk az Oracle hatását az összes számítási állapotra: az összes $ x \in \\ { 0, 1 \\ } ^ n $ és $ y \in \\ { 0, 1 \\ } ^ m $ értéknél.
 
-$ $ \begin{align}
-    O (\ket{x } \otimes \ket{y } ) = \ket{x } \otimes \ket{y \oplus f (x)}.
+$$
+\begin{align}
+    O ( \ket { x } \otimes \ket { y } ) = \ket { x } \otimes \ket { y \oplus f (x) } .
 \end{align}
 $$
 
-Most $O = O ^ \dagger az $ építőiparban, így mindkét korábbi problémát megoldottuk.
+Most $ o = o ^ \dagger $ by Construction, így mindkét korábbi problémát megoldottuk.
 
 > [!TIP]
-> Ha szeretné látni, hogy $O = O ^ {\dagger } $, vegye figyelembe, hogy $O ^ 2 = \boldone $ óta $a \oplus b \oplus b = a $ minden $a, b \in \{ 0, 1 \} $.
-> Ennek eredményeképpen $O \ket{x } \ket{y \oplus f (x)} = \ket{x } \ket{y \oplus f (x) \oplus f (x)} = \ket{x } \ket{y } $.
+>Ha szeretné látni, hogy o $ = o ^ { \dagger } $ , vegye figyelembe, hogy $ o ^ 2, = \boldone $ mivel $ a \oplus b \oplus b a a = $ $ , b \in \[ ! OP. NO-LOC ({)] 0, 1 \[ ! OP. NEM-LOC (})] $ .
+>Ennek eredményeképpen az $ O \ket { x } \ket { y \oplus f (x) } = \ket { x } \ket { y \oplus f (x) \oplus f (x) } = \ket { x } \ket { y } $ .
 
-Fontos, hogy ily módon Definiáljon egy Oracle-t úgy, hogy az egyes számítási alapú állapotok esetében a $ \ket{x } \ket{y } $ is meghatározza, hogy a $O hogyan $ viselkedik más állapotok esetén.
-Ez közvetlenül attól a ténytől függ, hogy a $O $ , mint az összes kvantum-művelet, lineáris állapotban van.
-Vegye figyelembe a Hadamard műveletet (például: $H \ket{0 } = \ket { +} $ és $H \ket{1 } = \ket { -} $).
-Ha tudni szeretné, hogyan viselkednek $H $ a $ \ket { +} $-ra, akkor a $H $ lineáris,
+Fontos, hogy az Oracle ily módon történő meghatározása az egyes számítási állapotok esetében $ \ket { x } \ket { y azt } $ is meghatározza, hogy az $ O hogyan $ viselkedik bármely más államban.
+Ez azonnal az a tény, hogy az $ O $ , mint az összes kvantum-művelet, lineáris abban az állapotban, amelyben működik.
+Vegye figyelembe a Hadamard műveletet, például: $ h \ket { 0 } = \ket { + } $ és $ h \ket { 1 } = \ket { - } $ .
+Ha tudni szeretné, hogyan viselkedik $ a h, akkor a $ $ \ket { + } $ $ h $ lineáris,
 
-$ $ \begin{align}
-H \ket { +} & = \frac{1 } {\sqrt{2 } } H (\ket{0 } + \ket{1 } ) = \frac{1 } {\sqrt{2 } } (h \ket {0 } + h \ket {1 } ) \\ \\ & = \frac{1 } {\sqrt{2 } } (\ket { +} + \ket { -}) = \frac12 (\ket{0 } + \ket{1 } + \ket{0 } -\ket{1 } ) = \ket{0 } .
+$$
+\begin{align}
+H \ket { + } & = \frac { 1 } { \sqrt { 2 } } h ( \ket { 0 }  +  \ket { 1 } ) = \frac { 1 } { \sqrt { 2 } } (H \ket { 0 } + h \ket { 1 } )\\\\
+           &= \frac{ 1 } { \sqrt { 2 } } ( \ket { + }  +  \ket { - } ) = \frac 12 ( \ket { 0 }  +  \ket { 1 }  +  \ket { 0 }  -  \ket { 1 } ) = \ket { 0 } .
 \end{align}
 $$
 
-Ha az Oracle-$Ot definiáljuk $ , hasonlóképpen használhatjuk, hogy { } $n + m qubits bármely állam $ \ket \psi $ $
+Az Oracle O meghatározása esetén $ $ hasonlóképpen használhatjuk azt is, hogy az $ \ket { \psi } $ $ n + m qubits lévő állapotok a $ következőképpen írhatók:
 
-$ $ \begin{align}
-\ket { \psi } & = \ sum_ {x \in \\ {0, 1 \\ } ^ n, y \in \\ {0, 1 \\ } ^ m } \alpha (x, y) \ket{x } \ket{y}
+$$
+\begin{align}
+\ket{\psi}& = \sum _ { x \in \\ { 0, 1 \\ } ^ n, y \in \\ { 0, 1 \\ } ^ m } \alpha (x, y) \ket { x } \ket { y}
 \end{align}
 $$
 
-ahol a $ \alpha: \\ {0, 1 \\ } ^ n \times \\ {0, 1 \\ } ^ m \to \mathbb{C $, a } $ \ket { \psi $ állapot együtthatóit jelöli } . Így
+ahol $ \alpha : \\ { 0, 1 \\ } ^ n \times \\ { 0, 1 \\ } ^ m \to \mathbb { C } $ az állapot együtthatóit jelöli $ \ket { \psi } $ . Így
 
-$ $ \begin{align}
-O \ket { \psi } & = O \ sum_ {x \in \\ {0, 1 \\ } ^ n, y \in \\ {0, 1 \\ } ^ m } \alpha (x, y) \ket{x } \ket{y } \\ \\ & = \ sum_ {x \in \\ {0, 1 \\ } ^ n, y \in \\ {0, 1 \\ } ^ m } \alpha (x, y) O \ket{x } \ket{y } \\ \\ & = \ sum_ {x \in \\ {0, 1 \\ } ^ n, y \in \\ {0, 1 \\ } ^ m } \alpha (x, y) \ket{x } \ket{y \oplus f (x)}.
+$$
+\begin{align}
+O \ket { \psi } & = o \sum _ { x \in \\ { 0, 1 \\ } ^ n, y \in \\ { 0, 1 \\ } ^ m } \alpha (x, y) \ket { x } \ket { y } x \\\\ 0 & , = 1 ^ n, y 0, 1 ^ m (x, y) O \sum _ { \in \\ { \\ } \in \\ { \\ } } \alpha \ket { x } \ket { y }\\\\
+             &= \sum _ { x \in \\ { 0, 1 \\ } ^ n, y \in \\ { 0, 1 \\ } ^ m } \alpha (x, y) \ket { x } \ket { y \oplus f (x) } .
 \end{align}
 $$
 
 ## <a name="phase-oracles"></a>Jóslatok fázisa
-Azt is megteheti, $ hogy a $f egy Oracle-$OBA kódoljuk $ egy olyan _fázis_ alkalmazásával, amely a $O bemenetén alapul $ .
-Előfordulhat például, hogy meghatározhatjuk $O $ például $ $ \begin{align}
-    O \ket{x } = (-1) ^ {f (x)} \ket{x } .
+Azt is megteheti, $ hogy egy Oracle o-ra kódolja az f- $ t egy $ $ , a bemeneten alapuló _fázis_ alkalmazásával $ $ . Például meghatározhatjuk az O-t, $ $ hogy$$
+\begin{align}
+    O \ket { x } = (-1) ^ { f (x) } \ket { x } .
 \end{align}
-$ $, Ha az Oracle egy fázisban kezdetben egy számítási alapon, a $ \ket{x } $ értékben működik, akkor ez a fázis globális fázis, ezért nem észlelhető.
+$$
+Ha az Oracle egy fázisban először egy számítási állapotú x-ben működik $ \ket { } $ , akkor ez a fázis globális fázis, ezért nem észlelhető.
 Az Oracle azonban nagyon nagy teljesítményű erőforrás lehet, ha egy vagy több helyre, vagy ellenőrzött műveletre alkalmazva van.
-Tegyük fel például, hogy egy fázis orcale $O _f $ egy qubit függvény $f $ .
-Ezután $ $ \begin{align}
-    O_f \ket { +} & = O_f (\ket{0 } + \ket{1 } )/\sqrt{2 } \\ \\ & = ((-1) ^ {f (0)} \ket{0 } + (-1) ^ {f (1)} \ket{1 } )/\sqrt{2 } \\ \\ & = (-1) ^ {f (0)} (\ket{0 } + (-1) ^ {f (1)-f (0)} \ket{1 } )/\sqrt{2 } \\ \\ & = (-1) ^ {f (0)} Z ^ {f (0)-f (1)} \ket { +}.
+Tegyük fel például, hogy egy fázis Oracle $ $ -O_f az f qubit függvényhez $ $ .
+Majd$$
+\begin{align}
+    O_f\ket{+}
+        &=O_f ( \ket { 0 }  +  \ket { 1 } )/ \sqrt { 2 }\\\\
+        &=((-1) ^ { f (0) } \ket { 0 } + (-1) ^ { f (1) } \ket { 1 } )/ \sqrt { 2 }\\\\
+        &=(-1) ^ { f (0) } ( \ket { 0 } + (-1) ^ { f (1)-f (0) } \ket { 1 } )/ \sqrt { 2 }\\\\
+        &=(-1) ^ { f (0) } Z ^ { f (0) – f (1) } \ket { + } .
 \end{align}
 $$
 

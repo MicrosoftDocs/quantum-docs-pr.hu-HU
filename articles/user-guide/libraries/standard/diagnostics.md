@@ -5,12 +5,12 @@ author: cgranade
 uid: microsoft.quantum.libraries.diagnostics
 ms.author: chgranad@microsoft.com
 ms.topic: article
-ms.openlocfilehash: fa5173f710dd9e0b0b2c110e45aa0bf019111aca
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: 324753cfa1b7d940bf5a0bbe7665f19cc6dda82c
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274987"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86870634"
 ---
 # <a name="diagnostics"></a>Diagnosztika #
 
@@ -61,19 +61,19 @@ A Q # standard könyvtárak számos különböző funkciót biztosítanak a tén
 
 A gyakorlatban az állítások arra utalnak, hogy a kvantummechanika klasszikus szimulációinak nem kell megtartaniuk a [klónozás nélküli adattételt](https://arxiv.org/abs/quant-ph/9607018), így nem lehet fizikai méréseket és kijelentéseket készíteni, ha szimulátort használunk a célszámítógép számára.
 Így a hardverre való üzembe helyezés előtt tesztelheti az egyes műveleteket a klasszikus szimulátoron.
-Azokon a célszámítógépeken, amelyek nem engedélyezik az állítások kiértékelését, <xref:microsoft.quantum.intrinsic.assert> nyugodtan figyelmen kívül hagyhatják a hívásokat.
+Azokon a célszámítógépeken, amelyek nem engedélyezik az állítások kiértékelését, <xref:microsoft.quantum.diagnostics.assertmeasurement> nyugodtan figyelmen kívül hagyhatják a hívásokat.
 
-Általánosságban a <xref:microsoft.quantum.intrinsic.assert> művelet azt állítja be, hogy a megadott Pauli-alapú qubits mérése mindig a megadott eredménnyel jár.
+Általánosságban a <xref:microsoft.quantum.diagnostics.assertmeasurement> művelet azt állítja be, hogy a megadott Pauli-alapú qubits mérése mindig a megadott eredménnyel jár.
 Ha az állítás sikertelen, a végrehajtás a `fail` megadott üzenettel való meghívásával végződik.
 Alapértelmezés szerint ez a művelet nincs implementálva; a-t támogató szimulátoroknak olyan implementációt kell biztosítaniuk, amely a futtatókörnyezet ellenőrzését végzi.
-`Assert`aláírással rendelkezik `((Pauli[], Qubit[], Result, String) -> ())` .
-Mivel a `Assert` függvény egy üres rekord kimenetének típusa, a rendszer semmilyen, `Assert` a Q # programon belül megfigyelhető hatást sem tartalmaz.
+`AssertMeasurement`aláírással rendelkezik `((Pauli[], Qubit[], Result, String) -> ())` .
+Mivel a `AssertMeasurement` függvény egy üres rekord kimenetének típusa, a rendszer semmilyen, `AssertMeasurement` a Q # programon belül megfigyelhető hatást sem tartalmaz.
 
-A <xref:microsoft.quantum.intrinsic.assertprob> Operation függvény azt állítja be, hogy a megadott Pauli-alapú qubits mérése a megadott valószínűséggel az adott tűréshatáron belül megtörténik.
+A <xref:microsoft.quantum.diagnostics.assertmeasurementprobability> Operation függvény azt állítja be, hogy a megadott Pauli-alapú qubits mérése a megadott valószínűséggel az adott tűréshatáron belül megtörténik.
 A tolerancia adalékanyag (például `abs(expected-actual) < tol` ).
 Ha az állítás sikertelen, a végrehajtás a `fail` megadott üzenettel való meghívásával végződik.
 Alapértelmezés szerint ez a művelet nincs implementálva; a-t támogató szimulátoroknak olyan implementációt kell biztosítaniuk, amely a futtatókörnyezet ellenőrzését végzi.
-`AssertProb`aláírással rendelkezik `((Pauli[], Qubit[], Result, Double, String, Double) -> Unit)` . Az első `Double` paraméter megadja az eredmény kívánt valószínűségét, a második pedig a tűréshatárt.
+`AssertMeasurementProbability`aláírással rendelkezik `((Pauli[], Qubit[], Result, Double, String, Double) -> Unit)` . Az első `Double` paraméter megadja az eredmény kívánt valószínűségét, a második pedig a tűréshatárt.
 
 Több, mint egy olyan mérést végzünk, amely a szimulátor által a qubit belső állapotának jelzésére használt klasszikus információkat a másolásra alkalmasnak tekinti, így nem kell mérést végeznie az állítás teszteléséhez.
 Ez különösen azt eredményezi, hogy a nem *kompatibilis* mérések oka a tényleges hardverek esetében nem lehetséges.
@@ -100,7 +100,7 @@ using (register = Qubit()) {
 ```
 
 Általánosságban azonban előfordulhat, hogy nem férnek hozzá olyan állapotokra vonatkozó kijelentésekhez, amelyek nem egyeznek a Pauli-operátorok eigenstates.
-Például a $ \ket{\psi} = (\ket {0} + e ^ {i \pi/8} \ket {1} )/\sqrt {2} $ nem eigenstate a Pauli operátorok egyike sem, így nem tudjuk <xref:microsoft.quantum.intrinsic.assertprob> egyedileg meghatározni, hogy a $ \ket{\psi '} $ érték egyenlő a $ \ket{\psi} $ értékkel.
+Például a $ \ket{\psi} = (\ket {0} + e ^ {i \pi/8} \ket {1} )/\sqrt {2} $ nem eigenstate a Pauli operátorok egyike sem, így nem tudjuk <xref:microsoft.quantum.diagnostics.assertmeasurementprobability> egyedileg meghatározni, hogy a $ \ket{\psi '} $ érték egyenlő a $ \ket{\psi} $ értékkel.
 Ehelyett fel kell bontani a $ \ket{\psi '} = \ket{\psi} $ metódust olyan feltételezésekre, amelyeket közvetlenül a szimulátor által támogatott primitívek használatával lehet tesztelni.
 Ehhez tegye a $ \ket{\psi} = \alpha \ket {0} + \beta \ket $ értéket {1} a következő összetett számok esetében: $ \alpha = a \_ r + a \_ i i $ és $ \beta $.
 Vegye figyelembe, hogy ehhez a kifejezéshez négy valós számot kell \{ \_ megadnia: $ a r, \_ i, b \_ r, b \_ i \} $, hogy megadják, mivel minden összetett szám egy valós és egy képzeletbeli rész összegével fejezhető ki.

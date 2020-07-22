@@ -6,12 +6,12 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.style
-ms.openlocfilehash: 3ddb5d67b972f69df1774b476a10e74dd16d97b7
-ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+ms.openlocfilehash: 26de7d5f639ea1b4df24232127b6f95cee3a041e
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85884193"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871382"
 ---
 # <a name="q-style-guide"></a>Q # Style útmutató #
 ## <a name="general-conventions"></a>Általános konvenciók ##
@@ -64,7 +64,7 @@ Ebben az esetben más igék is hasznosak lehetnek, mint a-ben `IterateThroughCar
 | ---- | ------ |
 | Alkalmaz | A bemenetként megadott műveletet nevezzük |
 | Assert | A lehetséges kvantum-mérés eredményével kapcsolatos hipotézist egy szimulátor ellenőrzi |
-| Estimate (becslés) | Egy klasszikus értéket ad vissza, amely egy vagy több mérésből álló becslést jelöl. |
+| Becslés | Egy klasszikus értéket ad vissza, amely egy vagy több mérésből álló becslést jelöl. |
 | Measure | A rendszer elvégzi a kvantum-mérést, és annak eredményét visszaadja a felhasználónak |
 | Előkészítés | A qubits adott regisztrálása egy adott állapotba van inicializálva |
 | Sample | Egy klasszikus értéket ad vissza véletlenszerűen egy bizonyos eloszlásból |
@@ -93,7 +93,7 @@ Javasoljuk, hogy:
 
 # <a name="examples"></a>[Példák](#tab/examples)
 
-|   | Name | Description |
+|   | Név | Leírás |
 |---|------|-------------|
 | ☑ | `operation ReflectAboutStart` | A művelet hatásának jelzéséhez törölje a műveletet ("tükrözze"). |
 | ☒ | <s>`operation XRotation`</s> | A főnévi kifejezés a művelet helyett a függvényt javasolja. |
@@ -126,7 +126,7 @@ Javasoljuk, hogy:
 
 # <a name="examples"></a>[Példák](#tab/examples)
 
-|   | Name | Description |
+|   | Név | Leírás |
 |---|------|-------------|
 | ☑ | `@EntryPoint() operation RunSimulation` | A művelet neve a belépési pont célját egyértelműen közli. |
 | ☒ | <s>`@EntryPoint() operation Main`</s> | A használata `Main` nem jelent egyértelmű kommunikációt a belépési pont céljával, és redundáns az `@EntryPoint()` attribútummal. |
@@ -168,7 +168,7 @@ Javasoljuk, hogy:
 
 # <a name="examples"></a>[Példák](#tab/examples)
 
-|   | Name | Description |
+|   | Név | Leírás |
 |---|------|-------------|
 | ☑ | `X` | Jól ismert Gyorsírás a "$X $ átalakítás alkalmazása" |
 | ☑ | `CNOT` | Jól értelmezhető Gyorsírás a "vezérelt – nem" |
@@ -225,7 +225,7 @@ Javasoljuk, hogy:
 
 # <a name="examples"></a>[Példák](#tab/examples)
 
-|   | Name | Description |
+|   | Név | Leírás |
 |---|------|-------------|
 | ☒ | <s>`ToDouble`</s> | A "to" utasítás a művelethez tartozó kifejezést eredményez, és nem függvényt jelez. |
 | ☒ | <s>`AsDouble`</s> | A bemeneti típus nem egyértelmű a függvény nevéből. |
@@ -248,7 +248,7 @@ Javasoljuk, hogy:
 
 # <a name="examples"></a>[Példák](#tab/examples)
 
-|   | Name | Description |
+|   | Név | Leírás |
 |---|------|-------------|
 | ☒ | <s>`operation _ApplyDecomposedOperation`</s> | Ne használjon aláhúzást `_` annak jelzésére, hogy a művelet csak belső használatra szolgál. |
 | ☑ | `internal operation ApplyDecomposedOperation` | Az `internal` elején lévő kulcsszó egyértelműen azt jelzi, hogy ez a művelet csak belső használatra szolgál. |
@@ -320,7 +320,7 @@ Javasoljuk, hogy:
 
 # <a name="examples"></a>[Példák](#tab/examples)
 
-|   | Snippet | Description |
+|   | Snippet | Leírás |
 |---|---------|-------------|
 | ☑ | `newtype Oracle = (Apply : Qubit[] => Unit is Adj + Ctl)` | A név `Apply` egy `CamelCase` formázott igei kifejezés, amely arra utal, hogy az elnevezett elem egy művelet. |
 | ☒ | <s>`newtype Oracle = (apply : Qubit[] => Unit is Adj + Ctl) `</s> | Az elnevezett elemeknek kezdeti nagybetűvel kell kezdődnie. |
@@ -386,9 +386,8 @@ A Quantum Development Kit által biztosított fordító kibontja ezeket a megjeg
 Hasonlóképpen, a Quantum Development Kit által biztosított nyelvi kiszolgáló ezeket a megjegyzéseket használja, hogy segítséget nyújtson a felhasználóknak a Q # kódjában lévő szimbólumok fölé helyezve.
 A dokumentációs megjegyzések használata így segítheti a felhasználókat a kód értelmezésében azáltal, hogy a jelen dokumentum többi konvenciója alapján nem könnyen elérhetővé tett részletekre vonatkozó hasznos hivatkozást biztosítanak.
 
-<div class="nextstepaction">
-    [Dokumentációs Megjegyzés szintaxisának leírása](xref:microsoft.quantum.guide.filestructure#documentation-comments)
-</div>
+> [!div class="nextstepaction"]
+> [Dokumentációs Megjegyzés szintaxisának leírása](xref:microsoft.quantum.guide.filestructure#documentation-comments).
 
 Ahhoz, hogy hatékonyan használhassa ezt a funkciót a felhasználók számára, javasoljuk, hogy a dokumentációs megjegyzések írásakor ne feledje el néhány dolgot.
 
@@ -398,8 +397,8 @@ Javasoljuk, hogy:
 
 - Minden nyilvános funkciót, műveletet és felhasználó által definiált típust közvetlenül a dokumentációs Megjegyzés előtt kell megadni.
 - Az egyes dokumentációs megjegyzéseknek legalább a következő részeket kell tartalmazniuk:
-    - Összefoglalás
-    - Bevitel
+    - Összegzés
+    - Input (Bemenet)
     - Kimenet (ha van ilyen)
 - Győződjön meg arról, hogy minden összefoglaló két mondat vagy kevesebb. Ha további helyiségre van szükség, adjon meg egy szakaszt, amely `# Description` azonnal követi a `# Summary` teljes részleteket.
 - Ahol ésszerű, ne szerepeljenek a matematika az összefoglalókban, mivel nem minden ügyfél támogatja a TeX-jelöléseket az összefoglalók között. Vegye figyelembe, hogy a prózai dokumentumok (például a TeX vagy a Markdown) írásakor érdemes lehet hosszabb vonali hosszúságot használni.
@@ -477,7 +476,7 @@ Javasoljuk, hogy:
 
 # <a name="examples"></a>[Példák](#tab/examples)
 
-|   | Snippet | Description |
+|   | Snippet | Leírás |
 |---|---------|-------------|
 | ☒ | <s>`2+3`</s> | Használjon szóközöket a bináris operátorok köré. |
 | ☒ | <s>`target:Qubit`</s> | Használjon szóközt a típus megjegyzési kettőspontok használatával. |

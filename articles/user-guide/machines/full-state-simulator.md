@@ -1,25 +1,29 @@
 ---
-title: Teljes állapotú szimulátor
+title: Teljes állapotú Quantum Simulator – Quantum Development Kit
 description: 'Megtudhatja, hogyan futtathatja a Q # programokat a Microsoft Quantum Development Kit teljes állapotú szimulátoron.'
 author: anpaz-msft
 ms.author: anpaz@microsoft.com
-ms.date: 12/7/2017
+ms.date: 06/26/2020
 ms.topic: article
 uid: microsoft.quantum.machines.full-state-simulator
-ms.openlocfilehash: f73abbc4366b003e4b22366ed83ca9c897737307
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: 563fdbd2a45461d112e4c46651eddd75c6fc3db2
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274947"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871178"
 ---
-# <a name="quantum-development-kit-full-state-simulator"></a>Quantum Development Kit teljes állapotú szimulátor
+# <a name="quantum-development-kit-qdk-full-state-simulator"></a>Quantum Development Kit (QDK) teljes állapotú szimulátor
 
-A Quantum Development Kit olyan teljes állapotú kvantum-szimulátort biztosít, mint a [LIQ $ UI | \rangle $](http://stationq.github.io/Liquid/) a Microsoft Research-től.
-Ez a szimulátor felhasználható a Q #-ban írt kvantum-algoritmusok végrehajtásához és hibakereséséhez a számítógépen.
+A QDK teljes állapotú szimulátort biztosít, amely a helyi számítógépen lévő kvantum-gépet szimulálja. A teljes állapot szimulátorral a Q #-ban írt kvantum-algoritmusokat futtathat és hibakeresést végezhet, akár 30 qubits is felhasználhatja. A teljes állapot szimulátor hasonló a [LIQ $ UI | \rangle $](http://stationq.github.io/Liquid/) platformon a Microsoft Research szolgáltatásban használt kvantum-szimulátorhoz.
 
-Ezt a kvantum-szimulátort a osztályon keresztül teszi elérhetővé `QuantumSimulator` . A szimulátor használatához egyszerűen hozza létre az osztály egy példányát, és adja át a `Run` végrehajtani kívánt kvantum-művelet metódusának a többi paraméterrel együtt:
+## <a name="invoking-and-running-the-full-state-simulator"></a>A teljes állapotú szimulátor meghívása és futtatása
 
+A teljes állapotú szimulátort a osztályon keresztül teheti elérhetővé `QuantumSimulator` . További részleteket a [Q # program futtatásának módjai](xref:microsoft.quantum.guide.host-programs)című témakörben talál.
+
+### <a name="invoking-the-simulator-from-c"></a>A szimulátor meghívása C-ről #
+
+Hozza létre a osztály egy példányát, `QuantumSimulator` majd adja át a `Run` kvantum-művelet metódusának, valamint a további paramétereket.
 ```csharp
     using (var sim = new QuantumSimulator())
     {
@@ -28,13 +32,35 @@ Ezt a kvantum-szimulátort a osztályon keresztül teszi elérhetővé `QuantumS
     }
 ```
 
-## <a name="idisposable"></a>IDisposable
+Mivel az `QuantumSimulator` osztály implementálja az <xref:System.IDisposable> illesztőfelületet, meg kell hívnia a `Dispose` metódust, ha már nincs szüksége a szimulátor példányára. Ennek a legjobb módja a szimulátor deklarációjának és műveleteinek becsomagolása egy [using](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/using-statement) utasításon belül, amely automatikusan meghívja a `Dispose` metódust.
 
-Az `QuantumSimulator` osztály implementálja <xref:System.IDisposable> , így a `Dispose` metódust akkor kell meghívni, ha már nincs használatban a szimulátor példánya. Ennek a legjobb módja, ha egy utasításon belül becsomagolja a szimulátort `using` , ahogy a fenti példában is látható.
+### <a name="invoking-the-simulator-from-python"></a>A szimulátor meghívása a Pythonból
 
-## <a name="seed"></a>Kezdőérték
+Használja a Q # Python könyvtár [szimulálása ()](https://docs.microsoft.com/python/qsharp/qsharp.loader.qsharpcallable) metódusát az importált q # művelettel:
 
-A `QuantumSimulator` véletlenszerű számú generátort használ a kvantum-véletlenszerűség szimulálása érdekében. Tesztelési célokra időnként hasznos lehet a determinisztikus eredményeinek használata. Ezt úgy teheti meg, hogy a (z) paraméterrel létrehoz egy magot a véletlenszerű számú generátorhoz a `QuantumSimulator` konstruktorban `randomNumberGeneratorSeed` :
+```python
+qubit_result = myOperation.simulate()
+```
+
+### <a name="invoking-the-simulator-from-the-command-line"></a>A szimulátor meghívása a parancssorból
+
+Ha Q # programot futtat a parancssorból, a teljes állapot szimulátor az alapértelmezett célszámítógép. Igény szerint a **--Simulator** (vagy **-s** parancsikon) paraméterrel megadhatja a kívánt célszámítógépet. Mindkét alábbi parancs a teljes állapotú szimulátor használatával futtat egy programot. 
+
+```dotnetcli
+dotnet run
+dotnet run -s QuantumSimulator
+```
+
+### <a name="invoking-the-simulator-from-juptyer-notebooks"></a>A szimulátor meghívása Juptyer-jegyzetfüzetekről
+
+A Q # művelet futtatásához használja az IQ # Magic Command [% szimulálása](xref:microsoft.quantum.iqsharp.magic-ref.simulate) parancsot.
+
+```
+%simulate myOperation
+```
+## <a name="seeding-the-simulator"></a>A szimulátor kivetése
+
+Alapértelmezés szerint a teljes állapot szimulátor egy véletlenszerű számú generátort használ a kvantum-véletlenszerűség szimulálása érdekében. Tesztelési célokra időnként hasznos lehet a determinisztikus eredményeinek használata. Egy C#-programban ezt úgy hajthatja végre, hogy a `QuantumSimulator` paraméterrel a konstruktorban található véletlenszerű számú generátorhoz biztosít magot `randomNumberGeneratorSeed` .
 
 ```csharp
     using (var sim = new QuantumSimulator(randomNumberGeneratorSeed: 42))
@@ -44,7 +70,12 @@ A `QuantumSimulator` véletlenszerű számú generátort használ a kvantum-vél
     }
 ```
 
-## <a name="threads"></a>Szálak
+## <a name="configuring-threads"></a>Szálak konfigurálása
 
-A `QuantumSimulator` a [OpenMP dokumentáció](http://www.openmp.org/) használatával integrálással a lineáris algebra szükséges. Alapértelmezés szerint az OpenMP az összes rendelkezésre álló hardveres szálat használja, ami azt jelenti, hogy a kis számú qubittel rendelkező programok gyakran lassabban futnak, mert a szükséges koordináció mellett eltörpül a tényleges munka. Ezt úgy lehet megjavítani, hogy a környezeti változót `OMP_NUM_THREADS` kis számra állítja be. Nagyon nagy általánosságban nézve 1 szál nagyjából 4 qubithez elég, onnantól pedig qubitenként további 1 szálra van szükség, de ezek a számok nagyban függenek az adott algoritmustól.
+A teljes körű állapot szimulátor a [OpenMP dokumentáció](http://www.openmp.org/) használatával integrálással a lineáris algebra szükséges. Alapértelmezés szerint a OpenMP dokumentáció az összes rendelkezésre álló hardveres szálat használja, ami azt jelenti, hogy a kis számú qubits rendelkező programok gyakran lassan futnak, mert a szükséges koordináció a tényleges munka. Ezt a környezeti változó kis számra állításával javíthatja `OMP_NUM_THREADS` . A hüvelykujj szabályként legfeljebb négy qubits konfigurálhat egy szálat, majd qubit egy további szálat. Előfordulhat, hogy az algoritmustól függően módosítania kell a változót.
 
+## <a name="see-also"></a>Lásd még
+
+- [Quantum-erőforrások kalkulátora](xref:microsoft.quantum.machines.resources-estimator)
+- [Quantum Toffoli szimulátor](xref:microsoft.quantum.machines.toffoli-simulator)
+- [Quantum Trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro)

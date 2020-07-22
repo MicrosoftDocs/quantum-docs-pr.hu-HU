@@ -6,12 +6,12 @@ ms.author: mamykhai@microsoft.com
 ms.date: 06/01/2020
 ms.topic: article
 uid: microsoft.quantum.guide.testingdebugging
-ms.openlocfilehash: cd619607af9e2b601f3bec1304c5729d84312f35
-ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+ms.openlocfilehash: db6e49e94e5ceb3b1b0b2d6ab57391618084072b
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85884091"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86870974"
 ---
 # <a name="testing-and-debugging"></a>Tesztelés és hibakeresés
 
@@ -50,7 +50,7 @@ Kezdetben ez a fájl egy minta egység tesztet tartalmaz, `AllocateQubit` amely 
     operation AllocateQubit () : Unit {
 
         using (qubit = Qubit()) {
-            Assert([PauliZ], [qubit], Zero, "Newly allocated qubit must be in the |0⟩ state.");
+            AssertMeasurement([PauliZ], [qubit], Zero, "Newly allocated qubit must be in the |0⟩ state.");
         }
         
         Message("Test passed");
@@ -177,7 +177,7 @@ Itt a műveletet használjuk a <xref:microsoft.quantum.environment.getqubitsavai
 Mivel ez a program globális állapotától és a végrehajtási környezettől függ, a definíciójának is `AssertQubitsAreAvailable` egy műveletnek kell lennie.
 Ezt a globális állapotot azonban használhatja arra, hogy egy egyszerű `Bool` értéket adjon meg bemenetként a `Fact` függvénynek.
 
-Ezen ötletek alapján [a bevezetés](xref:microsoft.quantum.libraries.standard.prelude)két, különösen hasznos állítást kínál, <xref:microsoft.quantum.intrinsic.assert> és <xref:microsoft.quantum.intrinsic.assertprob> mindkét modell a műveletekre épül `()` . Ezek a kijelentések mindegyike egy olyan Pauli-operátort mutat be, amely egy adott érdeklődési mérőszámot, egy kvantum-regisztrációt és egy feltételezett eredményt mutat be.
+Ezen ötletek alapján [a bevezetés](xref:microsoft.quantum.libraries.standard.prelude)két, különösen hasznos állítást kínál, <xref:microsoft.quantum.diagnostics.assertmeasurement> és <xref:microsoft.quantum.diagnostics.assertmeasurementprobability> mindkét modell a műveletekre épül `()` . Ezek a kijelentések mindegyike egy olyan Pauli-operátort mutat be, amely egy adott érdeklődési mérőszámot, egy kvantum-regisztrációt és egy feltételezett eredményt mutat be.
 A szimuláció által végzett működést [a nem klónozási tétel](https://en.wikipedia.org/wiki/No-cloning_theorem)nem köti, és ezeket a méréseket anélkül hajthatja végre, hogy megzavarja a regisztrációt, amely megfelel az ilyen állításoknak.
 A szimulátor ezután az `PositivityFact` előző függvényhez hasonló módon állíthatja le a számítást, ha a feltételezett eredmény nem figyelhető meg a gyakorlatban:
 
@@ -185,14 +185,14 @@ A szimulátor ezután az `PositivityFact` előző függvényhez hasonló módon 
 using (register = Qubit()) 
 {
     H(register);
-    Assert([PauliX], [register], Zero);
+    AssertMeasurement([PauliX], [register], Zero);
     // Even though we do not have access to states in Q#,
     // we know by the anthropic principle that the state
     // of register at this point is |+〉.
 }
 ```
 
-Fizikai kvantum-hardveren, ahol a nem klónozási tétel megakadályozza a kvantum-állapot vizsgálatát, a `Assert` és a `AssertProb` műveletek egyszerűen visszatérhetnek `()` más hatás nélkül.
+Fizikai kvantum-hardveren, ahol a nem klónozási tétel megakadályozza a kvantum-állapot vizsgálatát, a `AssertMeasurement` és a `AssertMeasurementProbability` műveletek egyszerűen visszatérhetnek `()` más hatás nélkül.
 
 A <xref:microsoft.quantum.diagnostics> névtér több funkciót is biztosít a `Assert` család számára, amellyel további speciális feltételeket is megtudhat. 
 

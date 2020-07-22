@@ -1,87 +1,35 @@
 ---
-title: 'Microsoft Q # kémia könyvtár telepítése és érvényesítése'
+title: 'Microsoft Q # kémia könyvtár telepítése'
 description: Ismerje meg, hogyan telepítheti a Microsoft Quantum kémia-függvénytárat, és hogyan használhatja a NWChem számítási kémia platformon.
 author: guanghaolow
 ms.author: gulow
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.chemistry.concepts.installation
-ms.openlocfilehash: 48bf7bc980e238e622053f5c2bdd09604c572596
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: 0e870bb3421dddb632375a2fc8633249954f8c8b
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275176"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871534"
 ---
-# <a name="chemistry-library-installation-and-validation"></a>Kémiai könyvtárak telepítése és érvényesítése
+# <a name="chemistry-library-installation"></a>Kémiai könyvtár telepítése
 
-A Quantum Development Kit támogatást nyújt a Quantum kémia-alkalmazásokhoz a [`Microsoft.Quantum.Chemistry`](https://www.nuget.org/packages/Microsoft.Quantum.Chemistry) NuGet-csomagban.
-Ahogy a többi NuGet-csomag esetében is, a kémia könyvtára a projekthez is egyszerűen hozzáadható.
-
-**Visual Studio 2019:** Ha a Visual Studio 2019-at használja, a Quantum kémia-csomagokat a NuGet csomagkezelő használatával adhatja hozzá.
-A csomagkezelő megnyitásához kattintson a jobb gombbal arra a projektre, amelyhez hozzá szeretné adni a kémiai könyvtárat, és válassza a "NuGet-csomagok kezelése..." lehetőséget az alábbi képernyőképen.
-
-![A NuGet Package Manager használata a Visual Studio 2019-ben](~/media/vs2017-nuget-manage-packages.png)
-
-A Tallózás lapon keresse meg a "Microsoft. Quantum. kémia" nevű csomagot.
-
-> [!NOTE]
-> Győződjön meg arról, hogy az "előzetes kiadás belefoglalása" jelölőnégyzet be van jelölve.
-
-![Előzetes kiadás jelölőnégyzetének belefoglalása](~/media/vs2017-nuget-package-search.png)
-
-Ekkor megjelenik a letölthető csomagok listája.
-Kattintson a "Microsoft. Quantum. kémia" elemre a bal oldali ablaktáblán, válassza ki a legújabb előzetes verziót a jobb oldali ablaktáblán, majd kattintson a telepítés gombra:
-
-![A legújabb Microsoft. Quantum. Kémiá csomag telepítése](~/media/vs2017-nuget-select-chem.png)
-
-További részletekért tekintse meg a [Package Manager felhasználói felületi útmutatóját](https://docs.microsoft.com/nuget/tools/package-manager-ui).
-
-Azt is megteheti, hogy a Package Manager konzol segítségével hozzáadja a Quantum kémia függvénytárat a projekthez egy parancssori felülettel.
-
-![A Package Manager konzol használata a parancssorból](~/media/vs2017-nuget-console-menu.png)
-
-A Package Manager konzolon futtassa a következőt:
-
-```
-Install-Package Microsoft.Quantum.Chemistry
-```
-
-További részletekért tekintse meg a [Package Manager konzol útmutatóját](https://docs.microsoft.com/nuget/tools/package-manager-console).
-
-**Parancssor vagy Visual Studio code:** Ha a parancssort saját vagy a Visual Studio Code-ból szeretné használni, a `dotnet` paranccsal adhat hozzá NuGet-csomagot a projekthez:
-
-```dotnetcli
-dotnet add package Microsoft.Quantum.Chemistry
-```
-
-## <a name="verifying-your-installation"></a>A telepítés ellenőrzése 
-
-A Quantum Development Kit többi részéhez hasonlóan a kvantum-kémia könyvtára számos teljesen dokumentált mintát tartalmaz, amelyek segítségével gyorsan megkezdheti a működést.
-Ha tesztelni szeretné a telepítést ezen minták használatával, akkor a [fő minták tárházát](https://github.com/Microsoft/Quantum), majd futtassa az egyik mintát.  A minta futtatásához például [`MolecularHydrogen`](https://github.com/microsoft/Quantum/tree/master/samples/chemistry/MolecularHydrogen) :
-
-```bash
-git clone https://github.com/Microsoft/Quantum.git
-cd Quantum/samples/chemistry/MolecularHydrogen
-dotnet run
-```
-
-A Quantum kémiai könyvtár telepítésének ellenőrzése a Microsoft Visual Studio használatával a tárház klónozása után:
-    1. Nyissa meg a ChemistrySamples. SLN megoldást a kémia mappában.  
-    2. Válassza a minták/1 elemet. Egyszerű molekulák/MolecularHydrogen indítási projektként.
-    3. Nyomja le az F5 billentyűt a molekuláris hidrogén Quantum fázisú becslési bemutató futtatásához.
-
-Az energia szintjeinek becslésével kapcsolatos további információkért lásd: az [energia szintjének becslése](xref:microsoft.quantum.chemistry.examples.energyestimate) .   
-
-
-## <a name="using-the-quantum-development-kit-with-nwchem"></a>A Quantum Development Kit és a NWChem használata ##
-
-A MolecularHydrogen minta manuálisan konfigurált molekuláris bemeneti adatokat használ.  Habár ez a kis példák esetében is jó, a kvantum-kémia méretének Hamiltonians millió vagy több milliárd kifejezéssel kell rendelkeznie. A skálázható számítási kémia csomagok által generált Hamiltonians túl nagyok a kézzel történő importáláshoz. 
+A [ **MolecularHydrogen** minta](https://github.com/microsoft/Quantum/tree/master/samples/chemistry/MolecularHydrogen) manuálisan konfigurált molekuláris bemeneti adatokat használ.
+Habár ez a kis példák esetében is jó, a kvantum-kémia méretének Hamiltonians millió vagy több milliárd kifejezéssel kell rendelkeznie.
+A skálázható számítási kémia-csomagok által generált Hamiltonians túl nagyok a kézzel történő importáláshoz.
 
 A Quantum Development Kit-hez készült Quantum kémiai könyvtár úgy lett kialakítva, hogy jól használható legyen a számítási kémia csomagjaival, leginkább a [**NWChem**](http://www.nwchem-sw.org/) számítási kémia platformját, amelyet a környezeti molekuláris tudományok laboratóriuma (EMSL) fejlesztett ki a csendes-óceáni országos laboratóriumban.
-Különösen a `Microsoft.Quantum.Chemistry` csomag eszközöket biztosít a [Broombridge-sémában](xref:microsoft.quantum.libraries.chemistry.schema.broombridge)képviselt Quantum kémia-szimulációs problémák példányainak betöltéséhez, amelyet a NWChem legújabb verziói is támogatnak.
+A [ **Microsoft. Quantum. kémia** csomag](https://www.nuget.org/packages/Microsoft.Quantum.Chemistry) például eszközöket biztosít a [Broombridge-sémában](xref:microsoft.quantum.libraries.chemistry.schema.broombridge)képviselt Quantum kémia-szimulációs problémák példányainak betöltéséhez, amelyet a NWChem legújabb verziói is támogatnak.
 
-A NWChem és a Quantum Development Kit együttes használatának megkezdéséhez a következő módszerek egyikét javasoljuk:
+A Quantum Development Kit kémia Library egy parancssori eszközt is biztosít, `qdk-chem` amely az örökölt formátumok és a [Broombridge](xref:microsoft.quantum.libraries.chemistry.schema.broombridge)közötti átalakításra szolgál.
+
+Ez a szakasz részletesen ismerteti, hogyan használható a Quantum Development Kit NWChem és Broombridge, illetve örökölt formátumokkal és `qdk-chem` .
+
+## <a name="using-the-quantum-development-kit-with-nwchem"></a>A Quantum Development Kit és a NWChem használata
+
+A NWChem és a Quantum Development Kit együttes használatának megkezdéséhez használja a következő módszerek egyikét:
+
 - Ismerkedjen meg a [IntegralData/YAML-](https://github.com/microsoft/Quantum/tree/master/samples/chemistry/IntegralData/YAML)ben a mintákhoz megadott meglévő Broombridge-fájlok használatával.
 - Használja a [EMSL Arrows Builder-t a Microsoft Quantum Development Kit](https://arrows.emsl.pnnl.gov/api/qsharp_chem) webalapú NWChem, amely új, Broombridge formátumú molekuláris bemeneti fájlok létrehozását eredményezi.  
 - Használja a PNNL által biztosított [Docker-rendszerképet](https://hub.docker.com/r/nwchemorg/nwchem-qc/) a NWChem futtatásához, vagy
@@ -171,4 +119,27 @@ További információ a PowerShell beépített súgó funkciójának használat�
 ```powershell
 Convert-NWChemToBroombridge -?
 Get-Help Convert-NWChemToBroombridge -Full
+```
+
+## <a name="using-the-quantum-development-kit-with-qdk-chem"></a>A Quantum Development Kit használata a`qdk-chem`
+
+A telepítéséhez használhatja `qdk-chem` a .net Core SDK a parancssorban:
+
+```dotnetcli
+dotnet tool install --global Microsoft.Quantum.Chemistry.Tools
+```
+
+A telepítése után `qdk-chem` a `--help` lehetőséggel további információkat kaphat az eszköz által kínált funkciókról `qdk-chem` .
+
+A (z) és a (z) Broombridge való konvertáláshoz a következő `qdk-chem convert` parancsot használhatja:
+
+```
+qdk-chem convert --from fcidump --to broombridge data.fcidump --out data.yml
+```
+
+A `qdk-chem convert` parancs a szabványos bemenetből is elfogadhatja az adatait, és a szabványos kimenetre írhat. Ez különösen hasznos a parancsfájlokban és a régebbi formátumokra exportált eszközök integrálásához.
+Például a Bashben:
+
+```bash
+cat data.fcidump | qdk-convert --from fcidump --to broombridge - > data.yml
 ```

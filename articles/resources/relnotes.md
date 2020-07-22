@@ -6,12 +6,12 @@ ms.author: bradben
 ms.date: 5/30/2020
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: d10f81a1e49235be8e02661dcd6d3c839485af6e
-ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+ms.openlocfilehash: 4b5e7b657f0e11fb4a14308c20859f4007729146
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85885052"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871553"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>A Microsoft Quantum Development Kit kibocsátási megjegyzései
 
@@ -21,6 +21,17 @@ A telepítési utasításokat lásd a [telepítési útmutatóban](xref:microsof
 
 A frissítésre vonatkozó utasításokat lásd a [frissítési útmutatóban](xref:microsoft.quantum.update).
 
+
+## <a name="version-01220072031"></a>0.12.20072031 verziója
+
+*Kiadás dátuma: július 21., 2020*
+
+A verzió a következőket tartalmazza:
+
+- A Q # jegyzetfüzetekben megnyitott névterek mostantól elérhetők az összes jövőbeli cella-végrehajtáshoz. Ez lehetővé teszi például, hogy a névtereket egyszer kell megnyitni a jegyzetfüzet tetején lévő cellában, ahelyett, hogy a megfelelő névtereket meg kellene nyitnia az egyes kódok celláiban. Az új `%lsopen` Magic parancs megjeleníti a jelenleg megnyitott névterek listáját.
+
+A [kódtárak](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [fordítók](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [futtatókörnyezetek](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [minták](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed), [IQ#](https://github.com/microsoft/iqsharp/pulls?q=is%3Apr+is%3Aclosed) és [Katák](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed) lezárt lekéréses kérelmeinek teljes listáját itt tekintheti meg.  
+
 ## <a name="version-01220070124"></a>0.12.20070124 verziója
 
 *Kiadás dátuma: július 2., 2020*
@@ -28,7 +39,7 @@ A frissítésre vonatkozó utasításokat lásd a [frissítési útmutatóban](x
 A verzió a következőket tartalmazza:
 
 - Új `qdk-chem` eszköz az örökölt elektronikus struktúra problémák szerializálási formátumának (például: FCIDUMP) a [Broombridge](xref:microsoft.quantum.libraries.chemistry.schema.broombridge) való átalakításához
-- Új függvények és műveletek a [ `Microsoft.Quantum.Synthesis` névtérben](xref:microsoft.quantum.synthesis) az átalakítási és a deösszetételes-alapú szintézisi algoritmusok segítségével, hogy koherens módon alkalmazzák a klasszikus Oracle-ket.
+- Új függvények és műveletek a [`Microsoft.Quantum.Synthesis`](xref:microsoft.quantum.synthesis) névtérben az átalakítási és a deösszetételes-alapú szintézisi algoritmusok segítségével, hogy koherens módon alkalmazzák a klasszikus Oracle-ket.
 - Az IQ # mostantól lehetővé teszi a `%simulate` , `%estimate` és más mágikus parancsok argumentumait. További részletekért tekintse meg a [ `%simulate` Magic parancs referenciáját](xref:microsoft.quantum.iqsharp.magic-ref.simulate) .
 - Az új fázis megjelenítési beállításai az IQ #-ban. További részletekért tekintse meg a [ `%config` Magic parancs referenciáját](xref:microsoft.quantum.iqsharp.magic-ref.config) .
 - Az IQ # és a `qsharp` Python-csomag mostantól Conda-csomagokon ([qsharp](https://anaconda.org/quantum-engineering/qsharp) és [iqsharp](https://anaconda.org/quantum-engineering/iqsharp)) keresztül érhető el, hogy leegyszerűsítse a Q # Jupyter és a Python funkcióinak helyi telepítését Conda-környezetbe. További részletekért tekintse meg a [q # Jupyter notebookok](xref:microsoft.quantum.install.jupyter) és a [q # Python](xref:microsoft.quantum.install.python) -telepítési útmutatókat.
@@ -446,7 +457,7 @@ Ez a kiadás csupán egy gyorsjavítás a [GitHubon jelentett 48-as számú hiba
 
 *Kiadási dátum: 2018. június 22.*
 
-Ez a kiadás számos közösségi hozzájárulást tartalmaz, valamint továbbfejlesztett hibakeresési élményt és jobb teljesítményt nyújt.  Ezek a következők:
+Ez a kiadás számos közösségi hozzájárulást tartalmaz, valamint továbbfejlesztett hibakeresési élményt és jobb teljesítményt nyújt.  Ezek konkrétan a következők:
 
 * Teljesítménybeli javítások a QuantumSimulator célszámítógép kis- és nagyméretű szimulációi esetében.
 * Továbbfejlesztett hibakeresési funkciók.

@@ -1,21 +1,37 @@
 ---
-title: Primitív műveleti számláló
-description: Ismerje meg a Microsoft QDK primitív műveleti számlálóját, amely nyomon követi a kvantum-programban végzett műveletek által használt primitív végrehajtások számát.
+title: Primitív művelet számláló – Quantum Development Kit
+description: 'Ismerje meg a Microsoft QDK primitív műveleti számlálóját, amely a Quantum Trace Simulator használatával követi nyomon a Q # programban végzett műveletek által használt primitív végrehajtásokat.'
 author: vadym-kl
 ms.author: vadym@microsoft.com
-ms.date: 12/11/2017
+ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.primitive-counter
-ms.openlocfilehash: 8bdb0aed370e72b58b23025f1685ad7ce1a77a43
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: ea022d499354f7cefd60da690466496e0ce7c336
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274890"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871025"
 ---
-# <a name="primitive-operations-counter"></a>Primitív műveleti számláló  
+# <a name="quantum-trace-simulator-primitive-operations-counter"></a>Quantum Trace Simulator: primitív műveleti számláló
 
-A a `Primitive Operations Counter` Quantum Computer [trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro)részét képezi. A kvantum-programban meghívott összes művelet által használt primitív végrehajtások számát számítja fel. Az összes művelet az `Microsoft.Quantum.Intrinsic` egyetlen qubit-forgás, a T Gates, az Qubit Clifford Gates, a cnem Gates és a multi-Qubit Pauli observables mértékegységei alapján van kifejezve. Az összegyűjtött statisztikákat a rendszer az Operations Call gráf szélein összesíti. Most megszámoljuk, hogy hány `T` kapura van szükség a `CCNOT` művelet végrehajtásához. 
+A primitív műveleti számláló a Quantum Development Kit [Quantum Trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro)részét képezi. A kvantum-programban meghívott összes művelet által használt primitív végrehajtások számát számítja fel. 
+
+Az összes <xref:microsoft.quantum.intrinsic> művelet az qubit-Forgások, a T-műveletek, az Qubit Clifford-műveletek, a cnem-műveletek és a több Qubit Pauli-observables mérései alapján van kifejezve. A primitív műveletek számlálója összesíti és statisztikai adatokat gyűjt a művelet [hívási gráfjának](https://en.wikipedia.org/wiki/Call_graph)összes széléről.
+
+## <a name="invoking-the-primitive-operation-counter"></a>A primitív műveleti számláló meghívása
+
+Ha a kvantum-nyomkövetési szimulátort a primitív műveleti számlálóval szeretné futtatni, létre kell hoznia egy <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> példányt, a `UsePrimitiveOperationsCounter` tulajdonságot **igaz**értékre kell állítania, majd létre kell hoznia egy új <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> példányt a `QCTraceSimulatorConfiguration` paraméterrel.
+
+```csharp
+var config = new QCTraceSimulatorConfiguration();
+config.UsePrimitiveOperationsCounter = true;
+var sim = new QCTraceSimulator(config);
+```
+
+## <a name="using-the-primitive-operation-counter-in-a-c-host-program"></a>A primitív műveleti számláló használata C#-gazdagép programban
+
+Az ebben a szakaszban szereplő C#-példa azt mutatja, hogy hány <xref:microsoft.quantum.intrinsic.t> műveletre van szükség a művelet megvalósításához a <xref:microsoft.quantum.intrinsic.ccnot> következő Q # mintakód alapján:
 
 ```qsharp
 open Microsoft.Quantum.Intrinsic;
@@ -24,19 +40,17 @@ operation ApplySampleWithCCNOT() : Unit {
     using (qubits = Qubit[3]) {
         CCNOT(qubits[0], qubits[1], qubits[2]);
         T(qubits[0]);
-    } 
+    }
 }
 ```
 
-## <a name="using-the-primitive-operations-counter-within-a-c-program"></a>A primitív műveleti számláló használata C# programon belül
-
-Annak ellenőrzését, hogy `CCNOT` valóban 7 `T` kaput igényel, és `ApplySampleWithCCNOT` 8 `T` kaput hajt végre, a következő C#-kódot használhatja:
+A következő C#-kód használatával ellenőrizze, hogy a működéséhez `CCNOT` hét `T` művelet szükséges-e `ApplySampleWithCCNOT` , és nyolc műveletet futtat-e `T` :
 
 ```csharp 
 // using Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators;
 // using System.Diagnostics;
 var config = new QCTraceSimulatorConfiguration();
-config.usePrimitiveOperationsCounter = true;
+config.UsePrimitiveOperationsCounter = true;
 var sim = new QCTraceSimulator(config);
 var res = ApplySampleWithCCNOT.Run(sim).Result;
 
@@ -44,25 +58,23 @@ double tCountAll = sim.GetMetric<ApplySampleWithCCNOT>(PrimitiveOperationsGroups
 double tCount = sim.GetMetric<Primitive.CCNOT, ApplySampleWithCCNOT>(PrimitiveOperationsGroupsNames.T);
 ```
 
-A program első része hajtja végre `ApplySampleWithCCNOT` . A második részben a metódust használjuk a `QCTraceSimulator.GetMetric` által végrehajtott T-kapuk számának lekérésére `ApplySampleWithCCNOT` : 
+A program első része fut `ApplySampleWithCCNOT` . A második rész a [`QCTraceSimulator.GetMetric`](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.qctracesimulator.getmetric) metódus használatával kéri le a `T` által futtatott műveletek számát `ApplySampleWithCCNOT` : 
 
-```csharp
-double tCount = sim.GetMetric<Primitive.CCNOT, ApplySampleWithCCNOT>(PrimitiveOperationsGroupsNames.T);
-double tCountAll = sim.GetMetric<ApplySampleWithCCNOT>(PrimitiveOperationsGroupsNames.T);
-```
+Ha `GetMetric` két típusú paramétert hív meg, akkor az egy adott hívási gráf szegélyéhez társított metrika értékét adja vissza. Az előző példában a program meghívja a `Primitive.CCNOT` műveletet belül, `ApplySampleWithCCNOT` ezért a hívási gráf tartalmazza a peremhálózat szegélyét `<Primitive.CCNOT, ApplySampleWithCCNOT>` . 
 
-Ha `GetMetric` két típusú paraméterrel van meghívva, az egy adott hívási gráf szegélyéhez társított metrika értékét adja vissza. A példában szereplő művelet a következőn `Primitive.CCNOT` belül lesz meghívva `ApplySampleWithCCNOT` , ezért a hívási gráf tartalmazza a peremhálózat szegélyét `<Primitive.CCNOT, ApplySampleWithCCNOT>` . 
-
-A használt kapuk számának lekéréséhez `CNOT` a következő sort tudjuk felvenni:
+A használt műveletek számának beolvasásához `CNOT` adja hozzá a következő sort:
 ```csharp
 double cxCount = sim.GetMetric<Primitive.CCNOT, ApplySampleWithCCNOT>(PrimitiveOperationsGroupsNames.CX);
 ```
 
-Végezetül a következő lépésekkel állíthatja be a kapu számlálója által összegyűjtött összes statisztikát CSV-formátumban:
+Végezetül a következő paranccsal állíthatja be a primitív műveleti számláló által összegyűjtött összes statisztikát CSV formátumban:
 ```csharp
 string csvSummary = sim.ToCSV()[MetricsCountersNames.primitiveOperationsCounter];
 ```
 
-## <a name="see-also"></a>Lásd még ##
+## <a name="see-also"></a>Lásd még
 
-- A Quantum Computer [trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro) áttekintése.
+- A Quantum Development Kit [Quantum Trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro) áttekintése.
+- Az <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> API-hivatkozás.
+- Az <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> API-hivatkozás.
+- Az <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.PrimitiveOperationsGroupsNames> API-hivatkozás.
