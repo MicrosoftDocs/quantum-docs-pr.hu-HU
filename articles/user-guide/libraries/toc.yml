@@ -3,6 +3,8 @@
 - name: Szabványos kódtárak
   topicHref: standard/index.md
   href: standard/toc.yml
+- name: További Q#-kódtárak használata
+  href: additional-libraries.md
 - name: Kvantumkémiai kódtár
   topicHref: chemistry/index.md
   href: chemistry/toc.yml

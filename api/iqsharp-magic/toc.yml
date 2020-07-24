@@ -32,6 +32,8 @@
   name: '%kata magic parancs'
 - href: lsmagic.md
   name: '%lsmagic magic parancs'
+- href: lsopen.md
+  name: '%lsopen magic parancs'
 - href: package.md
   name: '%package magic parancs'
 - href: performance.md
