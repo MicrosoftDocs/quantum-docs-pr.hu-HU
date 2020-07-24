@@ -6,12 +6,12 @@ ms.author: thhaner
 ms.date: 5/14/2019
 ms.topic: article
 uid: microsoft.quantum.numerics.intro
-ms.openlocfilehash: efd1a712616534ac281433fc008f0983271881d7
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: 9552f3683e1df8cb10d19d0b3f85223df056f83d
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: HT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85273641"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871348"
 ---
 # <a name="introduction-to-the-quantum-numerics-library"></a>A kvantumnumerikus kódtár bemutatása
 
@@ -33,9 +33,10 @@ A Quantum Development Kit ezért támogatja a numerikus funkciók széles köré
 
 A fentiekben említett egész számos aritmetika mellett a numerikus kódtár a következőket nyújtja:
 
- - (Nem) előjeles egész számokkal kapcsolatos funkciók (szorzás, négyzetre emelés, osztás maradékkal, inverzió stb.), ahol egy vagy két egész kvantumszám a bemenet
- - Fixpontos funkciók (hozzáadás/kivonás, szorzás, négyzetre emelés, 1/x, polinomértékelés), ahol egy vagy két fixpontos kvantumszám a bemenet
+- (Nem) előjeles egész számokkal kapcsolatos funkciók (szorzás, négyzetre emelés, osztás maradékkal, inverzió stb.), ahol egy vagy két egész kvantumszám a bemenet
+- Fixpontos funkciók (hozzáadás/kivonás, szorzás, négyzetre emelés, 1/x, polinomértékelés), ahol egy vagy két fixpontos kvantumszám a bemenet
 
 ## <a name="getting-started"></a>Első lépések
 
-A numerikus kódtár használatának megkezdéséhez tekintse át a [telepítési útmutatót](xref:microsoft.quantum.numerics.installation) és [a numerikus kódtár használatával](xref:microsoft.quantum.numerics.usage) kapcsolatos további információkat.
+> [!div class="nextstepaction"]
+> [A numerikus kódtár használatának megismerése](xref:microsoft.quantum.numerics.usage)

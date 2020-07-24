@@ -6,12 +6,12 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing
-ms.openlocfilehash: cf913a09395f0694a51645ec8f91171e5b1555c3
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: 108a50302422e5ae41e14b30ef22169370c2a35a
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: HT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85273464"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871416"
 ---
 # <a name="contributing-to-the-quantum-development-kit"></a>Hozzájárulás a Quantum Development Kithez
 
@@ -61,10 +61,9 @@ Ezek a különböző részek mindegyike különböző adattárakba tartozik, íg
 > [!NOTE]
 > Sajnos a [**microsoft/Quantum-NC**](https://github.com/microsoft/Quantum-NC) adattár esetében jelenleg nem tudunk kóddal és dokumentációval kapcsolatos hozzájárulásokat elfogadni, de a hibajelentéseket továbbra is nagyra értékeljük.
 
-Vannak még további speciálisabb adattárak, amelyek a Quantum Development Kithez kapcsolódó különböző eseményeket vagy kiegészítő funkciókat tartalmaznak.
+Találhatók olyan további speciálisabb adattárak is, amelyek a Quantum Development Kithez kapcsolódó kiegészítő funkciókat tartalmaznak.
 
 - [**msr-quarc/qsharp.sty**](https://github.com/msr-quarc/qsharp.sty): LaTeX formázási támogatás a Q#-szintaxishoz.
-- [**msr-quarc/intern-workshop-2019**](https://github.com/msr-quarc/intern-workshop-2019): IQ#-jegyzetfüzet a 2019-es gyakornoki műhely keretében bemutatott Deutsch–Jozsa-oktatóanyaghoz.
 
 ## <a name="next-steps"></a>További lépések
 

@@ -1,53 +1,32 @@
 ---
-title: Kvantumszámítógép nyomkövetési szimulátora
-description: Ismerje meg, hogyan használható a Microsoft kvantumszámítógépekhez való nyomkövetési szimulátora klasszikus kódok hibakereséséhez, illetve kvantumprogramok erőforrásigényeinek becsléséhez.
+title: Kvantum-nyomkövetési szimulátor – Quantum Development Kit
+description: Ismerje meg, hogyan használható a Microsoft kvantumszámítógépekhez való nyomkövetési szimulátora klasszikus kódok hibakereséséhez, illetve Q#-programok erőforrásigényeinek becsléséhez.
 author: vadym-kl
 ms.author: vadym@microsoft.com
-ms.date: 12/11/2017
+ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.intro
-ms.openlocfilehash: 4cec688da35951271d87396d9b6a8fed744defc6
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: c01f01973ea08153cbfa35d87a588a4eae46f1b7
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: HT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85273501"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871110"
 ---
-# <a name="quantum-trace-simulator"></a>Kvantum-nyomkövetési szimulátor
+# <a name="microsoft-quantum-development-kit-qdk-quantum-trace-simulator"></a>Microsoft Quantum Development Kit (QDK) – Kvantum-nyomkövetési szimulátor
 
-A Microsoft kvantumszámítógépekhez való nyomkövetési szimulátora egy kvantumprogramot hajt végre a kvantumszámítógép állapotának tényleges szimulálása nélkül.  Emiatt a nyomkövetési szimulátor olyan kvantumprogramokat is futtathat, amelyek több ezer qubitet használnak.  Ez két főbb okból lehet hasznos: 
+A QDK <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> osztály kvantumprogramot futtat a kvantumszámítógép állapotának tényleges szimulálása nélkül. Emiatt a kvantum-nyomkövetési szimulátor olyan kvantumprogramokat is futtathat, amelyek több ezer qubitet használnak.  Ez két főbb okból lehet hasznos: 
 
 * Olyan klasszikus kódok hibakeresésekor, amelyek egy kvantumprogram részei. 
-* Annak a megbecsléséhez, mennyi erőforrásra van szükség a kvantumprogramok egy adott példányának a kvantumszámítógépen való futtatásához.
+* Annak a megbecsléséhez, mennyi erőforrásra van szükség a kvantumprogramok egy adott példányának a kvantumszámítógépen való futtatásához. Az [Erőforrásbecslő](xref:microsoft.quantum.machines.resources-estimator), amely metrikák korlátozottabb készletét biztosítja, valójában a nyomkövetési szimulátorra épül.
 
-A nyomkövetési szimulátor a felhasználó által a mérések végrehajtásakor megadandó további információkra támaszkodik. További részletekért tekintse meg a [mérési eredmények valószínűségének biztosításával](#providing-the-probability-of-measurement-outcomes) foglalkozó témakört. 
+## <a name="invoking-the-quantum-trace-simulator"></a>A kvantum-nyomkövetési szimulátor meghívása
 
-## <a name="providing-the-probability-of-measurement-outcomes"></a>Mérési eredmények valószínűségének biztosítása
+A kvantum-nyomkövetési szimulátorral bármilyen Q#-művelet futtatható.
 
-A kvantumalgoritmusokban kétféle mérték szerepel. Az első kiegészítő szerepet tölt be, mert a felhasználó általában ismeri a kimenetel valószínűségét. Ebben az esetben a felhasználó beírhat egy <xref:microsoft.quantum.intrinsic.assertprob> műveletet a <xref:microsoft.quantum.intrinsic> névtérből, hogy kifejezze a birtokában lévő tudást. A következő példa ezt illusztrálja:
+Ahogy más célgépek esetében is, először a `QCTraceSimulator` osztály egy példányát kell létrehoznia, majd azt kell megadnia a művelet `Run` metódusának első paramétereként.
 
-```qsharp
-operation TeleportQubit(source : Qubit, target : Qubit) : Unit {
-    using (qubit = Qubit()) {
-        H(qubit);
-        CNOT(qubit, target);
-        CNOT(source, qubit);
-        H(source);
-
-        AssertProb([PauliZ], [source], Zero, 0.5, "Outcomes must be equally likely", 1e-5);
-        AssertProb([PauliZ], [q], Zero, 0.5, "Outcomes must be equally likely", 1e-5);
-
-        if (M(source) == One)  { Z(target); X(source); }
-        if (M(q) == One) { X(target); X(q); }
-    }
-}
-```
-
-Amikor a nyomkövetési szimulátor végrehajtja az `AssertProb` műveletet, rögzíti, hogy a `PauliZ` mérése a `source` és az `q` esetében 0,5-ös valószínűséggel `Zero` eredményt ad. Ha a szimulátor később végrehajtja az `M` műveletet, megtalálja a kimeneti valószínűséghez rögzített értékeket, és az `M` 0,5-ös valószínűséggel `Zero` vagy `One` eredményt ad ki. Ha ugyanazt a kódot egy olyan szimulátoron hajtja végre, amely nyomon követi a kvantumállapotot, a szimulátor ellenőrizni fogja, hogy az `AssertProb` megadott valószínűségei helyesek-e.
-
-## <a name="running-your-program-with-the-quantum-computer-trace-simulator"></a>Program futtatása a kvantumszámítógép nyomkövetési szimulátorával 
-
-A kvantumszámítógép nyomkövetési szimulátora tekinthető úgy, mint egy másik célszámítógép. A használatára szolgáló C#-illesztő nagyon hasonló a bármelyik másik kvantumszimulátorhoz használthoz: 
+Vegye figyelembe, hogy a `QuantumSimulator` osztálytól eltérően a `QCTraceSimulator` osztály nem implementálja a <xref:System.IDisposable> felületet, így nem kell azt egy `using` utasításba belefoglalnia.
 
 ```csharp
 using Microsoft.Quantum.Simulation.Core;
@@ -69,18 +48,53 @@ namespace Quantum.MyProgram
 }
 ```
 
-Figyelje meg, hogy ha legalább egy mérést nem látott el jegyzettel az `AssertProb` használatával, a szimulátor `UnconstrainedMeasurementException` kivételt ad vissza a `Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators` névtérből. További részleteket az [UnconstrainedMeasurementException](xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.UnconstrainedMeasurementException) API-dokumentációban találhat.
+## <a name="providing-the-probability-of-measurement-outcomes"></a>Mérési eredmények valószínűségének megadása
 
-A kvantumprogramok futtatása mellett a nyomkövetési szimulátor öt olyan összetevővel is rendelkezik, amelyek képesek a kvantumprogramok hibáinak észlelésére és erőforrás-becsléseinek végrehajtására: 
+Mivel a kvantum-nyomkövetési szimulátor nem szimulálja a tényleges kvantumállapotot, ezért nem tudja kiszámolni a mérési eredmények valószínűségét egy műveletben. 
 
-* [Eltérő bemenetek ellenőrzője](xref:microsoft.quantum.machines.qc-trace-simulator.distinct-inputs)
-* [Érvénytelenített qubithasználat ellenőrzője](xref:microsoft.quantum.machines.qc-trace-simulator.invalidated-qubits)
-* [Primitív műveletek számlálója](xref:microsoft.quantum.machines.qc-trace-simulator.primitive-counter)
-* [Kvantumkörök mélységének számlálója](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter)
-* [Kvantumkörök szélességének számlálója](xref:microsoft.quantum.machines.qc-trace-simulator.width-counter)
+Ezért ha a művelet méréseket tartalmaz, a valószínűségeket explicit módon kell megadnia a <xref:microsoft.quantum.diagnostics.assertmeasurementprobability> művelettel a <xref:microsoft.quantum.diagnostics> névtérből. A következő példa ezt illusztrálja:
 
-Ezek az összetevők a megfelelő jelzők beállításával engedélyezhetők a `QCTraceSimulatorConfiguration` elemnél. Az egyes összetevők használatáról további részleteket a megfelelő referenciafájlokban talál. A részletekért tekintse meg a [QCTraceSimulatorConfiguration](https://docs.microsoft.com/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration) API-dokumentációját.
+```qsharp
+operation TeleportQubit(source : Qubit, target : Qubit) : Unit {
+    using (qubit = Qubit()) {
+        H(qubit);
+        CNOT(qubit, target);
+        CNOT(source, qubit);
+        H(source);
+
+        AssertMeasurementProbability([PauliZ], [source], Zero, 0.5, "Outcomes must be equally likely", 1e-5);
+        AssertMeasurementProbability([PauliZ], [q], Zero, 0.5, "Outcomes must be equally likely", 1e-5);
+
+        if (M(source) == One)  { Z(target); X(source); }
+        if (M(q) == One) { X(target); X(q); }
+    }
+}
+```
+
+Amikor a kvantum-nyomkövetési szimulátor végrehajtja az `AssertMeasurementProbability` műveletet, rögzíti, hogy a `PauliZ` mérése a `source` és a `q` esetében **0,5**-ös valószínűséggel `Zero` eredményt ad. Ha később futtatja az `M` műveletet, megkeresi a kimeneti valószínűségek rögzített értékeit, és az `M` **0,5**-ös valószínűséggel `Zero` vagy `One` eredményt ad. Ha ugyanazt a kódot egy olyan szimulátoron futtatja, amely nyomon követi a kvantumállapotot, a szimulátor ellenőrzi, hogy az `AssertMeasurementProbability` megadott valószínűségei helyesek-e.
+
+Ügyeljen arra, hogy ha van legalább egy olyan mérési művelet, amely nem lett jegyzettel ellátva az `AssertMeasurementProbability` használatával, a szimulátor [`UnconstrainedMeasurementException`](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.unconstrainedmeasurementexception) kivételt ad vissza.
+
+## <a name="quantum-trace-simulator-tools"></a>Kvantum-nyomkövetési szimulátor – Eszközök
+
+A QDK öt olyan, a kvantum-nyomkövetési szimulátorral használható eszközt foglal magába, amelyekkel észlelhetők a programok hibái és végrehajthatók a kvantumprogramok erőforrás-becslései: 
+
+|Eszköz | Leírás |
+|-----| -----|
+|[Eltérő bemenetek ellenőrzője](xref:microsoft.quantum.machines.qc-trace-simulator.distinct-inputs) |A közös qubitek lehetséges ütközéseit ellenőrzi |
+|[Érvénytelenített qubithasználat ellenőrzője](xref:microsoft.quantum.machines.qc-trace-simulator.invalidated-qubits)  |Ellenőrzi, hogy a program alkalmaz-e műveletet egy már kiadott qubitre |
+|[Primitív műveletek számlálója](xref:microsoft.quantum.machines.qc-trace-simulator.primitive-counter)  | Megszámlálja a kvantumprogramban meghívott összes művelet által használt primitív végrehajtásokat  |
+|[Mélységszámláló](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter)  |Összegyűjti a kvantumprogramban meghívott összes művelet mélysége alsó határértékei darabszámát   |
+|[Szélességszámláló](xref:microsoft.quantum.machines.qc-trace-simulator.width-counter)  |Megszámlálja a kvantumprogram egyes műveletei által lefoglalt és kölcsönzött qubiteket |
+
+Az eszközök engedélyezéséhez be kell állítani a megfelelő jelzőt a `QCTraceSimulatorConfiguration` elemnél, majd meg kell adni a konfigurációt a `QCTraceSimulator` deklarációhoz. Az eszközök használatával kapcsolatos információk az előző listában lévő hivatkozásokon érhetők el. További információk a `QCTraceSimulator` konfigurálásáról: [QCTraceSimulatorConfiguration](xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration).
+
+## <a name="qctracesimulator-methods"></a>A QCTraceSimulator metódusai
+
+A `QCTraceSimulator` többféle beépített metódussal rendelkezik a kvantumművelet során nyomon követett metrikák értékeinek lekéréséhez. A [QCTraceSimulator.GetMetric](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.qctracesimulator.getmetric) és a [QCTraceSimulator.ToCSV](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.qctracesimulator.tocsv) metódusokra a [Primitív műveletek számlálója](xref:microsoft.quantum.machines.qc-trace-simulator.primitive-counter), a [Mélységszámláló](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter) és a [Szélességszámláló](xref:microsoft.quantum.machines.qc-trace-simulator.width-counter) cikkekben talál példákat. Az összes elérhető metódusról a Q# API-referencia [QCTraceSimulator](xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator) szakaszában talál további információkat.  
 
 ## <a name="see-also"></a>Lásd még
-A kvantumszámítógép [nyomkövetési szimulátorának](xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator) C#-referenciája 
 
+- [Kvantumerőforrás-becslő](xref:microsoft.quantum.machines.resources-estimator)
+- [Toffoli-kvantumszimulátor](xref:microsoft.quantum.machines.toffoli-simulator)
+- [Teljes körű funkciókkal rendelkező kvantumszimulátor](xref:microsoft.quantum.machines.full-state-simulator) 

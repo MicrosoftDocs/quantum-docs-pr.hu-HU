@@ -1,5 +1,18 @@
+---
+title: IQ# Magic parancsok
+author: rmshaffer
+uid: microsoft.quantum.iqsharp.magic-ref.index
+ms.author: rmshaffer
+ms.date: 07/21/2020
+ms.topic: article
+ms.openlocfilehash: 971787adae03af35d2e5b408fb88356a8b7df90a
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+ms.translationtype: HT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86870702"
+---
 # <a name="iq-magic-commands"></a>IQ# Magic parancsok
-
 | Magic parancs | Összefoglalás |
 |---------------|---------|
 | [`%azure.connect`](xref:microsoft.quantum.iqsharp.magic-ref.azure.connect) | Kapcsolódás az Azure Quantum-munkaterülethez vagy a kapcsolat jelenlegi állapotának megjelenítése. |
@@ -19,6 +32,7 @@
 | [`%estimate`](xref:microsoft.quantum.iqsharp.magic-ref.estimate) | Futtat egy adott függvényt vagy műveletet a ResourcesEstimator célszámítógépen. |
 | [`%kata`](xref:microsoft.quantum.iqsharp.magic-ref.kata) | Egyetlen tesztet hajt végre. |
 | [`%lsmagic`](xref:microsoft.quantum.iqsharp.magic-ref.lsmagic) | Visszaadja a jelenleg elérhető magic parancsok listáját. |
+| [`%lsopen`](xref:microsoft.quantum.iqsharp.magic-ref.lsopen) | Az aktuálisan megnyitott névtereket és azok aliasait sorolja fel. |
 | [`%package`](xref:microsoft.quantum.iqsharp.magic-ref.package) | Lehetővé teszi NuGet-csomagok betöltését. |
 | [`%performance`](xref:microsoft.quantum.iqsharp.magic-ref.performance) | Jelenti a kernel aktuális teljesítménymetrikáit. |
 | [`%simulate`](xref:microsoft.quantum.iqsharp.magic-ref.simulate) | Futtat egy adott függvényt vagy műveletet a QuantumSimulator célszámítógépen. |
