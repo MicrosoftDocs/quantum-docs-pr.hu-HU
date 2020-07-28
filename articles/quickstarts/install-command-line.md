@@ -6,12 +6,12 @@ ms.date: 4/24/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.standalone
-ms.openlocfilehash: 15015d1673f47faf5a13dde516f834916b4319d6
-ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+ms.openlocfilehash: 3d70838289e72afdd0a48bbdff0bec407428d125
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: HT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85884282"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871433"
 ---
 # <a name="develop-with-q-command-line-applications"></a>Fejlesztés Q# nyelvű parancssori alkalmazásokkal
 
@@ -23,7 +23,7 @@ A Q#-programok külön, illesztő nélkül is végrehajthatók olyan gazdanyelve
 
 ## <a name="installation"></a>Telepítés
 
-Bár Q# parancssori alkalmazásokat bármilyen IDE-ben létrehozhat, javasoljuk, hogy Q#-alkalmazásokhoz használja a Visual Studio Code-ot (VS Code) vagy a Visual Studio IDE-t. Ha ezekben a környezetekben fejleszt, hozzáférhet a QDK-bővítmény széleskörű funkcióihoz, beleértve a figyelmeztetéseket, a szintaxiselemek kiemelését, a projektsablonokat és egyebeket.
+Bár Q# parancssori alkalmazásokat bármilyen IDE-ben létrehozhat, javasoljuk, hogy a Q#-alkalmazások helyi fejlesztéséhez használja a Visual Studio Code-ot (VS Code) vagy a Visual Studio IDE-t. A felhőben, webböngészőn keresztül történő fejlesztéshez a Visual Studio Codespaces használatát javasoljuk. Ha ezekben a környezetekben fejleszt, hozzáférhet a QDK-bővítmény széleskörű funkcióihoz, beleértve a figyelmeztetéseket, a szintaxiselemek kiemelését, a projektsablonokat és egyebeket. 
 
 A VS Code konfigurálása:
 
@@ -34,6 +34,13 @@ A Visual Studio konfigurálása:
 
 1. Töltse le és telepítse a [Visual Studio](https://visualstudio.microsoft.com/downloads/) 16.3-as vagy újabb verzióját, a .NET Core platformfüggetlen fejlesztési tevékenységprofil engedélyezésével.
 2. Töltse le és telepítse a [Microsoft QDK-t](https://marketplace.visualstudio.com/items?itemName=quantum.DevKit).
+
+A Visual Studio Codespaces konfigurálása:
+
+1. Hozzon létre egy [Azure-fiókot](https://azure.microsoft.com/free/).
+2. Hozzon létre egy Codespaces-környezetet. Kövesse a [gyorsútmutatót](https://docs.microsoft.com/visualstudio/online/quickstarts/browser). A Codespace létrehozásakor javasoljuk, hogy a QDK-specifikus beállítások betöltéséhez írja be a `microsoft/Quantum` elemet a „Git-adattár” mezőbe.
+3. Most már elindíthatja az új környezetet, és megkezdheti a fejlesztést a böngészőben a [VS Codespaces Cloud IDE](https://online.visualstudio.com/environments)használatával. Azt is megteheti, hogy a VS Code helyi telepítését használja, a Codespacest pedig [távoli környezetként](https://docs.microsoft.com/visualstudio/online/how-to/vscode) alkalmazza.
+
 
 A QDK egy másik környezetben való telepítéséhez írja a következőt a parancssorba:
 
@@ -46,14 +53,6 @@ dotnet new -i Microsoft.Quantum.ProjectTemplates
 Kövesse a környezetéhez tartozó fülön található utasításokat.
 
 ### <a name="vs-code"></a>[VS Code](#tab/tabid-vscode)
-
-Telepítse a Q#-projektsablonokat:
-
-1. Nyissa meg a VS Code-ot.
-2. Kattintson a **View (Nézet)**  -> **Command Palette (Parancskatalógus)** elemre.
-3. Válassza a **Q#: Install project templates (Q#: Projektsablonok telepítése)** lehetőséget.
-
-A **projektsablonok sikeres telepítése esetén** jelenik meg, a QDK kész az Ön alkalmazásaival és kódtáraival való használatra.
 
 Új projekt létrehozása:
 
@@ -96,24 +95,30 @@ Az alkalmazás futtatása:
 
 Ellenőrizze a telepítést egy `Hello World` Q#-alkalmazás létrehozásával.
 
+1. Telepítse a projektsablonokat.
+
+    ```dotnetcli
+    dotnet new -i Microsoft.Quantum.ProjectTemplates
+    ```
+
 1. Új alkalmazás létrehozása:
     ```dotnetcli
     dotnet new console -lang Q# -o runSayHello
     ```
 
-2. Navigáljon az alkalmazás könyvtárához:
+1. Navigáljon az alkalmazás könyvtárához:
     ```dotnetcli
     cd runSayHello
     ```
 
     A könyvtár egy `Program.qs` nevű fájlt fog tartalmazni, amely egy olyan Q#-program, amely az üzenetek konzolon való megjelenítésének egyszerű műveletét definiálja. Ezt a sablont egy szövegszerkesztővel módosíthatja, és felülírhatja saját kvantumalkalmazásaival. 
 
-3. Futtassa a programot:
+1. Futtassa a programot:
     ```dotnetcli
     dotnet run
     ```
 
-4. A következő szövegnek kell megjelennie: `Hello quantum world!`
+1. A következő szövegnek kell megjelennie: `Hello quantum world!`
 
 ***
 

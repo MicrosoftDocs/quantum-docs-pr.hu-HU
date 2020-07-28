@@ -6,12 +6,12 @@ ms.date: 5/30/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.jupyter
-ms.openlocfilehash: 8a878e8f930f4b898f4de35751e4a39cc8716cec
-ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+ms.openlocfilehash: bbd1f58ba7de205e452be7bac72b5fd78e7acd56
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: HT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85884257"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871450"
 ---
 # <a name="develop-with-q-jupyter-notebooks"></a>Fejlesztés Q# Jupyter-notebookokkal
 
@@ -28,7 +28,7 @@ Az IQ# elsősorban a Jupyter és a Python által a .NET Core SDK-hoz használt b
 
 ### <a name="install-using-conda-recommended"></a>[Telepítés a Conda használatával (ajánlott)](#tab/tabid-conda)
 
-1. Telepítse a [Miniconda](https://docs.conda.io/en/latest/miniconda.html) vagy [Anaconda](https://www.anaconda.com/products/individual#Downloads) telepítőt.
+1. Telepítse a [Miniconda](https://docs.conda.io/en/latest/miniconda.html) vagy [Anaconda](https://www.anaconda.com/products/individual#Downloads) telepítőt. **Megjegyzés:** 64 bites telepítés szükséges.
 
 1. Nyisson meg egy Anaconda-parancssort.
 

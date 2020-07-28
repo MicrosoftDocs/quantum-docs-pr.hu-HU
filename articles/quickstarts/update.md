@@ -7,12 +7,12 @@ ms.date: 5/30/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.update
-ms.openlocfilehash: 457083ea4756d64375834e5a276c2d91031138fe
-ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+ms.openlocfilehash: 69b83997773896583258a4996a61b6f334edf407
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: HT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85885144"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871399"
 ---
 # <a name="update-the-microsoft-quantum-development-kit-qdk"></a>A Microsoft Quantum Development Kit (QDK) frissítése
 
@@ -53,7 +53,7 @@ Függetlenül attól, hogy a C#-ot vagy Pythont használ a Q#-műveleteihez, kö
 5. A .csproj-fájlok mindegyikében, az alábbi sorban látható módon állítsa be az SDK-t a következőre: `Microsoft.Quantum.Sdk`. Vegye figyelembe, hogy a verziószámnak a legfrissebb elérhető verziónak kell lennie, amelyet a [kibocsátási megjegyzések](https://docs.microsoft.com/quantum/relnotes/) áttekintésével állapíthat meg.
 
     ```xml
-    <Project Sdk="Microsoft.Quantum.Sdk/0.11.2006.207">
+    <Project Sdk="Microsoft.Quantum.Sdk/0.12.20072031">
     ```
 
 6. Mentsen, majd zárja be a megoldás összes fájlját.
@@ -93,7 +93,7 @@ Most már továbbléphet a [Visual Studio QDK-bővítmény frissítéséhez](#up
     dotnet clean [project_name].csproj
     ```
 
-3. Állapítsa meg a QDK aktuális verzióját. Ehhez tekintse meg a [kibocsátási megjegyzéseket](https://docs.microsoft.com/quantum/relnotes/). A verzió formátuma a következőhöz hasonló: `0.11.2006.207`.
+3. Állapítsa meg a QDK aktuális verzióját. Ehhez tekintse meg a [kibocsátási megjegyzéseket](https://docs.microsoft.com/quantum/relnotes/). A verzió formátuma a következőhöz hasonló: `0.12.20072031`.
 
 4. Minden `.csproj`-fájl esetében hajtsa végre a következő lépéseket:
 
@@ -108,7 +108,7 @@ Most már továbbléphet a [Visual Studio QDK-bővítmény frissítéséhez](#up
     - Cserélje le az SDK hivatkozását a projekt definíciójában. Ellenőrizze, hogy a verziószám megfelel-e a **3. lépésben** megadott értéknek.
 
         ```xml
-        <Project Sdk="Microsoft.Quantum.Sdk/0.11.2006.207">
+        <Project Sdk="Microsoft.Quantum.Sdk/0.12.20072031">
         ```
 
     - Távolítsa el a `Microsoft.Quantum.Development.Kit` csomagra mutató hivatkozást (ha van ilyen), amely a következő bejegyzésben található:
@@ -127,7 +127,7 @@ Most már továbbléphet a [Visual Studio QDK-bővítmény frissítéséhez](#up
         A csomaghivatkozások formátuma:
 
         ```xml
-        <PackageReference Include="Microsoft.Quantum.Compiler" Version="0.11.2006.207" />
+        <PackageReference Include="Microsoft.Quantum.Compiler" Version="0.12.20072031" />
         ```
 
     - Mentse a módosított fájlt.
@@ -194,7 +194,7 @@ A frissítési eljárás attól függ, hogy a telepítést eredetileg a Conda va
     A következő kimenetnek kell megjelennie:
 
     ```
-    iqsharp: 0.12.20070124
+    iqsharp: 0.12.20072031
     Jupyter Core: 1.4.0.0
     ```
 
@@ -216,7 +216,7 @@ A frissítési eljárás attól függ, hogy a telepítést eredetileg a Conda va
 
     ```
     Name: qsharp
-    Version: 0.12.20070124
+    Version: 0.12.2007.2031
     Summary: Python client for Q#, a domain-specific quantum programming language
     ...
     ```
@@ -267,7 +267,7 @@ A frissítési eljárás attól függ, hogy a telepítést eredetileg a Conda va
     A kimenet az alábbihoz hasonló lesz:
 
     ```
-    iqsharp: 0.12.20070124
+    iqsharp: 0.12.20072031
     Jupyter Core: 1.4.0.0
     ```
 
@@ -302,16 +302,19 @@ Most már használhatja a frissített IQ# kernelt a meglévő Q# Jupyter-noteboo
     - Válassza a **Visual Studio Code-hoz készült Microsoft Quantum Development Kit** bővítményt
     - Töltse be újból a bővítményt
 
-2. Frissítse a Quantum-projektsablonokat:
-
-   - Lépjen a **Nézet** -> **Parancskatalógus** lehetőséghez
-   - Válassza a **Q#: Projektsablonok telepítése** lehetőséget
-   - Néhány másodperc elteltével megjelenik a projektsablonok sikeres telepítésének megerősítését tartalmazó felugró ablak
-
 ### <a name="c-using-the-dotnet-command-line-tool"></a>C#, a `dotnet` parancssori eszköz használatával
 
 1. Frissítse a .NET-hez tartozó Quantum-projektsablonokat
 
+    A parancssorból:
+
     ```dotnetcli
     dotnet new -i Microsoft.Quantum.ProjectTemplates
     ```
+
+   Ha a parancssori sablonokat is használni szeretné, és már telepítve van a VS Code QDK-bővítmény, a projektsablonokat magából a bővítményből is frissítheti:
+
+   - [A QDK-bővítmény frissítése](#update-vs-code-qdk-extension)
+   - A VS Code-ban lépjen a **View** -> **Command Palette** (Nézet > Parancskatalógus) lehetőséghez
+   - Válassza a **Q#: Install command line project templates** (Q#: Parancssori projektsablonok telepítése)
+   - Néhány másodperc elteltével megjelenik a projektsablonok sikeres telepítésének megerősítését tartalmazó felugró ablak
