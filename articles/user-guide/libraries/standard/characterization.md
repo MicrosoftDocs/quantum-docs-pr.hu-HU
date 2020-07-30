@@ -6,12 +6,12 @@ uid: microsoft.quantum.libraries.characterization
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 7ed92c29020ccf389faa099f5bd80516af525578
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: 9d763d11ef9c08cc0941cade217dbb2942ef4bf9
+ms.sourcegitcommit: 2f4c637e194dc2b5d18539469ed37444e2800199
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275020"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87436539"
 ---
 # <a name="quantum-characterization-and-statistics"></a>Quantum jellemzés és statisztika #
 
@@ -96,7 +96,7 @@ A Bayes-következtetések pontos megállapítása a gyakorlatban megoldhatatlan.
 Ehhez Képzelje el, hogy $n $-bit változót szeretne megtanulni $x $-ra.
 A korábbi Distribution $ \Pr (x) $ támogatás több mint $2 ^ n $ feltételezett értéket támogat a $x $ értéknél.
 Ez azt jelenti, hogy ha nagyon pontos becslésre van szükségünk, $x $, akkor a Bayes-fázis becslése tiltó memóriát és feldolgozási időt igényel.
-Egyes alkalmazások, például a kvantum-szimulációk esetében a limitted pontossága nem zárja ki az ilyen metódusokat, például a rövid algoritmust, a szakasz becslésének lépésein belül nem használhatók a pontos Bayes-következtetések.  Ezért megvalósításokat is biztosítunk a Bayes-as módszerekhez, például a [véletlenszerű RWPE-becslésekhez](xref:microsoft.quantum.research.randomwalkphaseestimation.randomwalkphaseestimation) , valamint a nem bayesos megközelítésekhez, például a [robusztus fázisok becsléséhez](xref:microsoft.quantum.characterization.robustphaseestimation).
+Egyes alkalmazások, például a kvantum-szimulációk esetében a limitted pontossága nem zárja ki az ilyen metódusokat, például a rövid algoritmust, a szakasz becslésének lépésein belül nem használhatók a pontos Bayes-következtetések.  Ezért megvalósításokat is biztosítunk a Bayes-as módszerekhez, például a [véletlenszerű RWPE-becslésekhez](xref:microsoft.quantum.research.characterization.randomwalkphaseestimation) , valamint a nem bayesos megközelítésekhez, például a [robusztus fázisok becsléséhez](xref:microsoft.quantum.characterization.robustphaseestimation).
 
 ### <a name="robust-phase-estimation"></a>Robusztus fázis becslése ###
 

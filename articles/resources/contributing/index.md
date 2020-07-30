@@ -6,12 +6,12 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing
-ms.openlocfilehash: 108a50302422e5ae41e14b30ef22169370c2a35a
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+ms.openlocfilehash: c5acd6c2b3163488a9b4c6e52e6d34489a8f4056
+ms.sourcegitcommit: 2f4c637e194dc2b5d18539469ed37444e2800199
 ms.translationtype: HT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871416"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87436561"
 ---
 # <a name="contributing-to-the-quantum-development-kit"></a>Hozzájárulás a Quantum Development Kithez
 
@@ -19,7 +19,7 @@ A Quantum Development Kit több, mint a kvantumprogramok írásához szükséges
 Egy nagy közösséghez tartozik, ahol az emberek felfedezhetik a kvantum-számítástechnikát, kutatást végezhetnek a kvantum-algoritmusokkal, új alkalmazásokat fejleszthetnek a kvantumeszközökre, és egyéb módokon használhatják ki a kvantumprogramozásban rejlő lehetőségeket.
 A közösség részeként a Quantum Development Kit célja, hogy biztosítsa a szükséges funkciókat a legkülönbözőbb háttérrel rendelkező kvantumfejlesztők számára.
 Az Önök Quantum Development Kithez való hozzájárulásai segítenek e cél megvalósításában a kvantumfejlesztők által használt eszközök továbbfejlesztése, az eszközök hatékonyabb dokumentációja, és akár új funkciók létrehozása révén is, amelyek segítségével a kvantumprogramozási közösség a felfedezés és alkotás helye lehet.
-Nagyon hálásak vagyunk az Önök közreműködéséért, és azért is, hogy együtt dolgozhatunk Önökkel a közösség jobbá tételén.
+Nagyon hálásak vagyunk az Önök közreműködéséért, és azért is, hogy együtt dolgozhatunk Önökkel a közösség jobbá tételén. 
 
 Ebben az útmutatóban néhány tanácsot adunk arról, hogy miként teheti hozzájárulását a lehető leghasznosabbá a szélesebb értelemben vett kvantumprogramozási közösség számára.
 
