@@ -6,12 +6,12 @@ ms.date: 5/30/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.python
-ms.openlocfilehash: ec5e66e0c85d89888a8ff1e7d6bf18bf89ff44ac
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+ms.openlocfilehash: 4d148435f01d975e690828dd02335758fc71dfe4
+ms.sourcegitcommit: 2f4c637e194dc2b5d18539469ed37444e2800199
 ms.translationtype: HT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871586"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87436552"
 ---
 # <a name="develop-with-q-and-python"></a>Fejlesztés Q#-pal és Pythonnal
 
@@ -97,7 +97,7 @@ Most már készen áll arra, hogy ellenőrizze a `qsharp` Python-csomag telepít
     import qsharp
     from Qrng import SampleQuantumRandomNumberGenerator
 
-    SampleQuantumRandomNumberGenerator.simulate()
+    print(SampleQuantumRandomNumberGenerator.simulate())
     ```
 
 1. Futtassa a következő programot a telepítés során létrehozott környezetből (azaz a Conda vagy Python-környezetből, ahova a `qsharp`-ot telepítette):
@@ -106,7 +106,7 @@ Most már készen áll arra, hogy ellenőrizze a `qsharp` Python-csomag telepít
     python host.py
     ```
 
-1. Megjelenik a meghívott művelet eredménye. Mivel a művelet egy véletlenszerű eredményt hoz létre, ezért ebben az esetben a képernyőn a `Zero` vagy `One` érték jelenik meg. Ha újra és újra futtatja a programot, mindkét eredményt körülbelül az esetek felében fogja látni.
+1. Megjelenik a meghívott művelet eredménye. Mivel a művelet egy véletlenszerű eredményt hoz létre, ezért ebben az esetben a képernyőn a `0` vagy `1` érték jelenik meg. Ha újra és újra futtatja a programot, mindkét eredményt körülbelül az esetek felében fogja látni.
 
 > [!NOTE]
 > * A Python-kód csak egy szokásos Python-program. Python Jupyter-környezeteket, beleértve Python-alapú Jupyter-notebookokat is használhat klasszikus Python-programok írásához és Q#-műveletek meghívásához. A Python-program képes Q#-műveleteket importálni bármilyen olyan .qs fájlból, amely ugyanabban a mappában található, mint maga a Python-kód.
