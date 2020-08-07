@@ -1,29 +1,32 @@
 ---
-title: 'Kifejezések megadása a Q-ban #'
-description: 'Megtudhatja, hogyan adhat meg, hivatkozhat és egyesíthet állandókat, változókat, operátorokat, műveleteket és függvényeket kifejezésként a Q #-ban.'
+title: Kifejezések aQ#
+description: Megtudhatja, hogyan adhat meg, hivatkozhat és egyesíthet állandókat, változókat, operátorokat, műveleteket és függvényeket kifejezésként a alkalmazásban Q# .
 author: gillenhaalb
 ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.expressions
-ms.openlocfilehash: 1821df6a3a51a62b44f3ccd96b127577c5db990a
-ms.sourcegitcommit: af10179284967bd7a72a52ae7e1c4da65c7d128d
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: b6cc97dfee05dc843e213e84f17043714a8a9656
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85415388"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869613"
 ---
-# <a name="type-expressions-in-q"></a>Kifejezések megadása a Q-ban #
+# <a name="expressions-in-no-locq"></a>Kifejezések aQ#
 
 ## <a name="numeric-expressions"></a>Numerikus kifejezések
 
 A numerikus kifejezések a következő típusú kifejezések:, `Int` `BigInt` vagy `Double` .
 Vagyis egész vagy lebegőpontos számok.
 
-`Int`a Q # literálokat számjegyek sorozatából kell írni.
+`Int`a konstansok Q# számjegyek sorozatából vannak írva.
 A hexadecimális és a bináris egész számok támogatottak, és a `0x` és `0b` előtaggal vannak írva.
 
-`BigInt`a Q # konstansok egy záró `l` vagy `L` utótaggal rendelkeznek.
+`BigInt`a konstansok Q# záró `l` vagy `L` utótaggal rendelkeznek.
 A hexadecimális nagy egész számok támogatottak, és "0x" előtaggal írhatók.
 Így az alábbi értékek érvényesek a literálok összes érvényes használatára `BigInt` :
 
@@ -33,7 +36,7 @@ let bigHex = 0x123456789abcdef123456789abcdefL;
 let bigOne = bigZero + 1L;
 ```
 
-`Double`a Q # literális lebegőpontos számok, amelyek decimális számjegyek használatával íródnak.
+`Double`a-ben a konstansok Q# számjegyek használatával írt lebegőpontos számok.
 Megírhatók decimális ponttal vagy anélkül `.` , illetve az "e" vagy az "e" karakterrel jelzett exponenciális rész (amely után csak egy lehetséges negatív jel és decimális számjegy érvényes).
 A következő érvényes `Double` literálok: `0.0` , `1.2e5` , `1e-5` .
 
@@ -63,7 +66,7 @@ Ez azt jelöli, hogy az egyik lépés balra vagy jobbra való eltolása megegyez
 
 Az egész szám és az Integer modulus ugyanazt a viselkedést követi a negatív számok esetében, mint a C#.
 Vagyis `a % b` mindig ugyanaz a jel, mint a `a` , és `b * (a / b) + a % b` mindig egyenlő `a` .
-Példa:
+Például:
 
  `A` | `B` | `A / B` | `A % B`
 ---------|----------|---------|---------
@@ -86,7 +89,7 @@ A két `Bool` literális érték a `true` és a `false` .
 Az azonos primitív típusú két kifejezés miatt a `==` és a `!=` bináris operátor is használható kifejezés létrehozásához `Bool` .
 A kifejezés értéke igaz, ha a két kifejezés egyenlő és hamis, ha nem.
 
-A felhasználó által definiált típusok értéke nem hasonlítható össze, csak a nem burkolt értékeket lehet összehasonlítani. Például a "kicsomagolás" operátor használatával `!` (részletes magyarázat a [Q # típusokban](xref:microsoft.quantum.guide.types#access-anonymous-items-with-the-unwrap-operator))
+A felhasználó által definiált típusok értéke nem hasonlítható össze, csak a nem burkolt értékeket lehet összehasonlítani. Például a "kicsomagolás" operátor használatával `!` (részletesen lásd [ Q# ](xref:microsoft.quantum.guide.types#access-anonymous-items-with-the-unwrap-operator):),
 
 ```qsharp
 newtype WrappedInt = Int;     // Yes, this is a contrived example
@@ -110,24 +113,24 @@ A logikai kifejezéseket megadva az `not` egyoperandusú operátor felhasználha
 
 ## <a name="string-expressions"></a>Sztringkifejezések
 
-A Q # lehetővé teszi a karakterláncok használatát az `fail` utasításban (a [vezérlési folyamat](xref:microsoft.quantum.guide.controlflow#fail-statement)ismertetése) és a [`Message`](xref:microsoft.quantum.intrinsic.message) standard függvényben. Az utóbbi viselkedése a használt szimulátortól függ, de általában egy üzenetet ír a gazdagép-konzolra, amikor a rendszer a Q # program során hívja meg.
+Q#lehetővé teszi a karakterláncok használatát az `fail` utasításban (a [vezérlési folyamat](xref:microsoft.quantum.guide.controlflow#fail-statement)ismertetése) és a [`Message`](xref:microsoft.quantum.intrinsic.message) standard függvényben. Az utóbbi adott viselkedése a használt szimulátortól függ, de általában egy üzenetet ír a gazdagép-konzolra, amikor egy program során hívja meg Q# .
 
-A Q # sztringek literálok vagy interpolált karakterláncok.
+A karakterláncok Q# literálok vagy interpolált karakterláncok.
 
 A karakterlánc-literálok a legtöbb nyelvben hasonlítanak az egyszerű karakterlánc-literálokra: a Unicode-karakterek egy sorozata dupla idézőjelek közé `" "` .
 Egy karakterláncon belül használja a fordított perjel karaktert `\` egy dupla idézőjeles karakter () elküldéséhez `\"` , vagy egy új vonal ( `\n` ), egy kocsivissza ( `\r` ) vagy egy lap () beszúrásához `\t` .
-Példa:
+Például:
 
 ```qsharp
 "\"Hello world!\", she said.\n"
 ```
 ### <a name="interpolated-strings"></a>Interpolált karakterláncok
 
-A Q # szintaxis a karakterlánc-interpolációhoz a C# szintaxis egy részhalmaza. A következő kulcsfontosságú pontok a Q # esetében vonatkoznak:
+A Q# karakterlánc-Interpolációk szintaxisa a C# szintaxis egy részhalmaza. Az alábbiak a legfontosabb pontok, amelyek a következőkre vonatkoznak Q# :
 
 * Ha egy szövegkonstans-karakterláncot interpolált karakterláncként szeretne azonosítani, a szimbólummal megadhatja azt `$` . A és a közötti térköz nem lehet üres `$` `"` karakterláncot indít.
 
-* A következő példa egy olyan alapszintű példát mutat be, amely a [`Message`](xref:microsoft.quantum.intrinsic.message) mérés eredményét a konzolra írja, más Q # kifejezésekkel együtt.
+* A következő példa egy olyan alapszintű példát [`Message`](xref:microsoft.quantum.intrinsic.message) mutat be, amely egy mérés eredményét írja a konzolra, más Q# kifejezésekkel együtt.
 
 ```qsharp
     let num = 8;       // some Q# expression
@@ -135,9 +138,9 @@ A Q # szintaxis a karakterlánc-interpolációhoz a C# szintaxis egy részhalmaz
     Message($"Number: {num}, Result: {res}");
 ```
 
-* Bármely érvényes Q # kifejezés egy interpolált karakterláncban jelenhet meg.
+* Bármely érvényes Q# kifejezés interpolált karakterláncban jelenhet meg.
 
-* Az interpolált karakterláncban szereplő kifejezések a Q # szintaxist követik, nem a C# szintaxist. A legfontosabb különbség az, hogy a Q # nem támogatja a Verbatim (többsoros) interpolált karakterláncokat.
+* Az interpolált karakterláncban szereplő kifejezések Q# szintaxisát és nem C# szintaxist követik. A legjelentősebb különbség az, hogy nem Q# támogatja a Verbatim (többsoros) interpolált karakterláncokat.
 
 A C# szintaxissal kapcsolatos további információkért lásd: [*interpolált karakterláncok*](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/interpolated-strings).
 
@@ -197,7 +200,7 @@ A konstansok kivételével a felhasználó által definiált típusok egyetlen k
 
 ## <a name="unwrap-expressions"></a>Kifejezések kicsomagolása
 
-A Q # értéknél a kicsomagolás operátor egy záró felkiáltójel `!` .
+A-ben Q# a kicsomagolási operátor egy záró felkiáltójel `!` .
 Ha például `IntPair` egy felhasználó által definiált típus az alapul szolgáló típussal `(Int, Int)` , és `s` egy változó értékkel `IntPair(2, 3)` , akkor `s!` `(2, 3)` a következő:.
 
 Más, felhasználó által definiált típusokban definiált, felhasználó által definiált típusok esetén megismételheti a kicsomagolási operátort. Például `s!!` a kétszeresen kicsomagolt értéket jelöli `s` .
@@ -208,7 +211,7 @@ Az `!` operátor magasabb prioritású, mint az összes többi operátor `[]` , 
 
 Az operátor elsőbbsége `!` egy olyan hatással van, amely esetleg nem nyilvánvaló.
 Ha egy függvény vagy művelet egy értéket ad vissza, amelyet a rendszer kicsomagol, a függvény vagy a művelet hívását zárójelek közé kell foglalni, hogy az argumentum rekordja a kicsomagolás helyett a híváshoz kapcsolódjon.
-Példa:
+Például:
 
 ```qsharp
 let f = (Foo(arg))!;    // Calls Foo(arg), then unwraps the result
@@ -270,7 +273,7 @@ Ha például a `a` és `b` mindkét típusú tömb `Int` , az összefűzésből 
 (a + b)[13]
 ```
 
-A Q # összes tömbje nulla-alapú.
+Az összes tömb Q# nulla-alapú.
 Vagyis a tömb első eleme `a` mindig `a[0]` .
 
 
@@ -318,7 +321,7 @@ let slice10 = arr[...];       // slice10 is [1,2,3,4,5,6];
 
 ### <a name="copy-and-update-expressions"></a>Másolás és frissítés kifejezések
 
-Mivel az összes Q # típus érték típusú (a qubits valamivel speciális szerepkört vesznek fel), az űrlapos másolás akkor jön létre, amikor egy érték egy szimbólumhoz van kötve, vagy ha szimbólum van kötve. Ez azt jelenti, hogy a Q # viselkedése megegyezik azzal, mintha egy másolatot egy hozzárendelési operátor használatával hoztak létre. 
+Mivel Q# az összes típus érték típusú (a qubits valamivel speciális szerepkört vesznek fel), az űrlapos "Copy" (másolás) jön létre, amikor egy érték egy szimbólumhoz van kötve, vagy ha egy szimbólum van kötve. Ez azt jelenti, hogy a viselkedése Q# ugyanaz, mint ha egy példányt egy hozzárendelési operátor használatával hoztak létre. 
 
 Természetesen a gyakorlatban csak az érintett darabok szükségesek újra létrehozva. Ez befolyásolja a tömbök másolásának módját, mert nem lehetséges a tömb elemeinek frissítése. Egy meglévő tömb módosításához a *copy-Update* mechanizmust kell használnia.
 
@@ -381,7 +384,7 @@ Azonban bár a műveletek `(Qubit[] => Unit is Adj)` és `(Qubit[] => Unit is Ct
 
 Például `[[Op1], [Op2]]` jelenleg hiba történt, mert megkísérli létrehozni a két nem kompatibilis tömb típusának tömbjét `(Qubit[] => Unit is Adj)[]` `(Qubit[] => Unit is Ctl)[]` .
 
-A callables kapcsolatos további információkért lásd: [hívható kifejezések](#callable-expressions) ezen az oldalon vagy [műveletek és függvények a Q #-ban](xref:microsoft.quantum.guide.operationsfunctions).
+A callables kapcsolatos további információkért lásd: [hívható kifejezések](#callable-expressions) ezen az oldalon vagy [műveletek és függvények a Q# -ben ](xref:microsoft.quantum.guide.operationsfunctions).
 
 ## <a name="conditional-expressions"></a>Feltételes kifejezések
 
@@ -446,7 +449,7 @@ Egy hívható értékű kifejezés eredményének meghívásához egy további z
 ```
 
 A [típus-paraméteres](xref:microsoft.quantum.guide.operationsfunctions#generic-type-parameterized-callables) metódus meghívásakor megadható, hogy a tényleges Type paraméterek a `< >` meghívásos kifejezés után a szög zárójelben legyenek.
-Ez a művelet általában szükségtelen, mivel a Q # fordítóprogram a tényleges típusokat vezeti le.
+Ez a művelet általában szükségtelen, mert a Q# fordító vezeti a tényleges típusokat.
 Azonban szükség *van* a [részleges alkalmazásra](xref:microsoft.quantum.guide.operationsfunctions#partial-application) , ha egy Type-paraméteres argumentum nincs meghatározva.
 Emellett akkor is hasznos, ha a különböző felhasználók által támogatott műveletek továbbítása meghívásos.
 
@@ -469,7 +472,7 @@ A típus specifikációjának megadása kötelező `Op3` `Op1` , mert különbö
 
 * A művelethez és a függvényhez tartozó zárójelek az operátorok előtt, de a tömb indexelése és a feldolgozók után is kötésben vannak.
 
-Q # operátorok elsőbbségi sorrendben, a legmagasabbtól a legalacsonyabbig:
+Q#az operátorok elsőbbségi sorrendben, a legmagasabbtól a legalacsonyabbig:
 
 Operátor | Aritása | Leírás | Operandusok típusai
 ---------|----------|---------|---------------
@@ -490,6 +493,6 @@ Operátor | Aritása | Leírás | Operandusok típusai
  `?` `|` | Ternáris | Feltételes | `Bool`a bal oldali
 `w/` `<-` | Ternáris | Másolás és frissítés | Lásd: [Másolás és frissítés kifejezések](#copy-and-update-expressions)
 
-## <a name="next-steps"></a>További lépések
+## <a name="next-steps"></a>Következő lépések
 
-Most, hogy a Q # kifejezésekkel tud dolgozni, a Q #-ban lévő [műveletekre és függvényekre](xref:microsoft.quantum.guide.operationsfunctions) való áttéréssel megtudhatja, hogyan határozhat meg és hívhat meg műveleteket és funkciókat.
+Most, hogy együttműködik a kifejezésekkel a alkalmazásban Q# , lépjen be a [műveletekre Q# és a functions](xref:microsoft.quantum.guide.operationsfunctions) szolgáltatásba, ahol megtudhatja, hogyan határozhat meg és hívhat meg műveleteket és funkciókat.

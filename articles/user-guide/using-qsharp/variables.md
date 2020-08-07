@@ -1,28 +1,31 @@
 ---
-title: 'Változók a Q-ban #'
+title: Változók a-benQ#
 description: Kitöltés leírása
 author: gillenhaalb
 ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.variables
-ms.openlocfilehash: 08301f408dcb2211ba25c582a5e5aa43310b714a
-ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 00af0989cd5a1f9ccc7d9f2545acd0d256bc7eb9
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85885278"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87867845"
 ---
-# <a name="variables-in-q"></a>Változók a Q-ban #
+# <a name="variables-in-no-locq"></a>Változók a-benQ#
 
-A Q # megkülönbözteti a változókat, a kifejezésekhez rendelt vagy hozzárendelt *változókat*.
+Q#megkülönbözteti a változókat és a nem módosítható szimbólumokat, illetve a kifejezésekhez hozzárendelt vagy hozzájuk rendelt *változókat*.
 Általánosságban a nem módosítható szimbólumok használata javasolt, mivel lehetővé teszi, hogy a fordító több optimalizációt végezzen.
 
 A kötés bal oldali oldala egy szimbólum és egy kifejezés jobb oldalán áll.
 
 ## <a name="immutable-variables"></a>Megváltoztathatatlan változók
 
-A Q # típusban bármilyen típusú értéket hozzárendelhet egy változóhoz, amely egy műveleten vagy függvényen belül használható a `let` kulcsszó használatával. 
+A kulcsszó használatával bármilyen típusú értéket hozzárendelhet Q# egy változóhoz egy műveleten vagy függvényen belüli újrafelhasználáshoz `let` . 
 
 Egy nem módosítható kötés a kulcsszóból `let` , majd egy szimbólum vagy egy szimbólum, egy egyenlőségjel, egy egyenlőségjelet, egy kifejezés, amely `=` a szimbólum (oka) t és egy lezáró pontosvesszőt tartalmaz.
 
@@ -55,7 +58,7 @@ Az alábbiakban néhány példát talál az újrakötési utasításokra vonatko
 
 #### <a name="apply-and-reassign-statements"></a>Utasítások alkalmazása és újbóli társítása
 
-Egy adott típusú `set` utasítás, az *Apply-and-reassign* utasítás kényelmes módot biztosít az Összefűzésre, ha a jobb oldal egy bináris operátor alkalmazásából áll, és az eredmény az operátorhoz a bal argumentumhoz lesz kötve. Példa:
+Egy adott típusú `set` utasítás, az *Apply-and-reassign* utasítás kényelmes módot biztosít az Összefűzésre, ha a jobb oldal egy bináris operátor alkalmazásából áll, és az eredmény az operátorhoz a bal argumentumhoz lesz kötve. Például:
 
 ```qsharp
 mutable counter = 0;
@@ -107,7 +110,7 @@ function ComplexSum(reals : Double[], ims : Double[]) : Complex[] {
 }
 ```
 
-Tömbök esetén [`Microsoft.Quantum.Arrays`](xref:microsoft.quantum.arrays) a Q # standard Library biztosítja a szükséges eszközöket számos gyakori tömb inicializálási és manipulációs igényeihez, így segít elkerülni a tömb elemeinek frissítését az első helyen. 
+Tömbök esetén a [`Microsoft.Quantum.Arrays`](xref:microsoft.quantum.arrays) Q# standard szintű függvénytárban a szükséges eszközök számos gyakran használt tömb inicializálási és manipulációs igényeihez szükségesek, így elkerülhető, hogy a tömb elemeit az első helyen frissítse. 
 
 Az Update-and-reassign utasítások szükség esetén alternatív megoldást nyújtanak:
 
@@ -236,4 +239,4 @@ if (a == b) {
 
 ## <a name="next-steps"></a>Következő lépések
 
-További információ a [qubits](xref:microsoft.quantum.guide.qubits) használatáról a Q #-ban.
+Ismerje meg, hogyan [dolgozhat a qubits](xref:microsoft.quantum.guide.qubits) a alkalmazásban Q# .

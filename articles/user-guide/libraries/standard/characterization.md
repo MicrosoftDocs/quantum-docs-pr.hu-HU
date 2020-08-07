@@ -6,12 +6,15 @@ uid: microsoft.quantum.libraries.characterization
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 9d763d11ef9c08cc0941cade217dbb2942ef4bf9
-ms.sourcegitcommit: 2f4c637e194dc2b5d18539469ed37444e2800199
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 0090fb2b9ac5f3c9d195a3ab02dcd21c848d8ef7
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87436539"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868627"
 ---
 # <a name="quantum-characterization-and-statistics"></a>Quantum jellemzés és statisztika #
 
@@ -19,7 +22,7 @@ Fontos, hogy képes legyen jellemezni a műveletek hatásait a hasznos kvantum-a
 Ez kihívást jelenthet, mivel a kvantumrendszer minden mérése legfeljebb egy kis mennyiségű adatot eredményez.
 Egy sajátérték megismeréséhez, amely lehetővé teszi a kvantum-állapotot, a számos mérés eredményét össze kell keverni, hogy a felhasználó fel tudja venni az ilyen fogalmak ábrázolásához szükséges sok bitet.
 A kvantum-állapotok különösen bosszantóak, mert a [nem klónozási tétel](xref:microsoft.quantum.concepts.pauli#the-no-cloning-theorem) azt jelzi, hogy az állapot egyetlen példányáról sem lehet tetszőleges kvantum-állapotot betanulni, mert ezzel az állapot másolatait is lehetővé tenné.
-A rendszer a kvantum-állapotnak a felhasználótól való összezavarodott állapotát tükrözi abban a tényben, hogy a Q # nem tesz elérhetővé vagy nem határozza meg *, hogy milyen állapotban* legyenek a kvantum-programok.
+A kvantum-állapotnak a felhasználótól való elhomályosítása abban a tényben tükröződik, amely Q# nem tesz elérhetővé vagy nem határozza meg, hogy milyen állapotban *van* a kvantum-programok.
 Így a kvantum-jellemzést úgy közelítjük meg, hogy a műveleteket és az állapotokat fekete dobozként kezeli. Ez a megközelítés gyakran osztozik a kvantum-jellemzés, az ellenőrzés és az érvényesítés (QCVV) kísérleti gyakorlatával.
 
 A jellemzés különbözik a korábban tárgyalt többi könyvtártól.
@@ -36,7 +39,7 @@ Ennek az az előnye, hogy csak egyetlen további qubit van szükség a kvantum-e
 Az alábbiakban javasolt módszerek mindegyike egy másik stratégiát használ a kísérletek tervezéséhez és a különböző adatfeldolgozási módszerekhez a fázis megismerése érdekében.  Ezek mindegyike egyedi előnnyel rendelkezik, és a szigorú hibákra, a képességekre, az előzetes információk bevezetésére, a hibák elmulasztására vagy a limitted klasszikus számítógépeken való futtatására van szükség.
 
 Az iterációs fázisok becslésének megvitatásakor egy egységes $U $ értéket fogunk figyelembe venni, amely egy fekete dobozból álló művelet.
-Ahogy az az Oracles in [adatstruktúrákban](xref:microsoft.quantum.libraries.data-structures)című szakaszban leírtak szerint, a Q # Canon a <xref:microsoft.quantum.oracles.discreteoracle> felhasználó által definiált típus szerint, a rekord típusával definiált műveleteket végzi el `((Int, Qubit[]) => Unit : Adjoint, Controlled)` .
+Az [adatstruktúrákban](xref:microsoft.quantum.libraries.data-structures)található Oracle-adatokról szóló szakaszban leírtaknak megfelelően a Q# Canon modelleket a <xref:microsoft.quantum.oracles.discreteoracle> felhasználó által definiált típus alapján, a rekord típusa határozza meg `((Int, Qubit[]) => Unit : Adjoint, Controlled)` .
 Konkrétan, ha `U : DiscreteOracle` , akkor `U(m)` a $U ^ millió $ értéket implementál a következőhöz: `m : Int` .
 
 Ennek a definíciónak a helyén az ismétlődő fázisok becslésének minden lépése a $ \ket{+} $ állapotú kiegészítő qubit előkészítésével jár együtt, a kezdeti állapot pedig az $ \ket{\phi} $, amelyet feltételezzük, [hogy az $U](xref:microsoft.quantum.concepts.matrix-advanced) (m) $, azaz $U (m) \ket{\phi} = e ^ {im\phi} \ ket {\ Phi} $.  
@@ -47,7 +50,7 @@ A vezérlőként használt kiegészítő qubit a `U(m)` rendszer a $X $ alapon m
 
 Ezen a ponton az `Result` iterációs fázis becslése által beszerzett értékek fázisának újraépítése a klasszikus statisztikai következtetési probléma.
 A $m $ értékének megkeresése, amely maximalizálja a szerzett adatokat, mivel a rögzített következtetési módszer miatt egyszerűen probléma van a statisztikában.
-Ezt úgy hangsúlyozzuk, hogy röviden leírja az iterációs fázisok becslését elméleti szinten a Bayes-as paraméter alapján, mielőtt folytatná a Q # Canonban található statisztikai algoritmusok leírását a klasszikus következtetési probléma megoldásához.
+Ezt úgy hangsúlyozzuk, hogy röviden leírja az iterációs fázisok becslését elméleti szinten a Bayes-as paraméter alapján, mielőtt a Canonban ismertetjük a Q# klasszikus következtetési probléma megoldásához szükséges statisztikai algoritmusokat.
 
 ### <a name="iterative-phase-estimation-without-eigenstates"></a>Iterációs fázis becslése Eigenstates nélkül ###
 
@@ -127,7 +130,7 @@ $ $ Továbbá, ha $U $ egy dinamikus generátor szimulációja, mint a [Hamilton
 
 ### <a name="random-walk-phase-estimation"></a>Véletlenszerű séta fázisának becslése ###
 
-A Q # hasznos közelítést nyújt a Bayes-fázis becsléséhez, amelyet úgy terveztek, hogy olyan kvantum-eszközökhöz közelítse a használatot, amelyek az iterációs fázis becslése által beszerzett adatrekordon egy véletlenszerű sétával működnek.
+Q#hasznos közelítést nyújt a Bayes-fázis becsléséhez, amelyet úgy terveztek, hogy az olyan kvantum-eszközökhöz közelítse a használatot, amelyek az iterációs fázis becslése alapján kapott adatrekordon véletlenszerű sétával működnek.
 Ez a módszer egyaránt adaptív és teljes mértékben determinisztikus, ami lehetővé teszi a hibák közel optimális méretezését a becsült "\hat{\phi} $" fázisban, nagyon alacsony memóriával.
 
 A protokoll egy hozzávetőleges Bayes-következtetési módszert használ, amely feltételezi, hogy az előző eloszlás a Gauss.
@@ -141,7 +144,7 @@ A visszafelé lépés lehetővé teszi, hogy az algoritmus még akkor is tudjon 
 
 ## <a name="calling-phase-estimation-algorithms"></a>Hívási fázisok becslési algoritmusai ##
 
-A Q # Canon által biztosított minden fázis-becslési művelet különböző bemeneti adatokat vesz igénybe, amelyek a végleges becslés $ \hat{\phi} $ parameterizing.
+A Canon által biztosított minden fázis-becslési művelet Q# különböző bemeneteket használ a parameterizing, amelyet a végleges becslés $ \hat{\phi} $ értékkel együtt igényel.
 Ezek a különböző bemenetek azonban a közösen több bemenetet is megosztanak, például a minőségi paraméterekben lévő részleges alkalmazások közös aláírást eredményeznek.
 A <xref:microsoft.quantum.characterization.robustphaseestimation> következő szakaszban tárgyalt művelet például a következő aláírással rendelkezik:
 

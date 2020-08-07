@@ -6,30 +6,33 @@ ms.author: mamykhai@microsoft.com
 ms.date: 06/01/2020
 ms.topic: article
 uid: microsoft.quantum.guide.testingdebugging
-ms.openlocfilehash: db6e49e94e5ceb3b1b0b2d6ab57391618084072b
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 2b5276da594ba263177d435c1153f6d96e29c4e8
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86870974"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87867913"
 ---
 # <a name="testing-and-debugging"></a>Tesztelés és hibakeresés
 
 A klasszikus programozáshoz hasonlóan elengedhetetlen, hogy a kvantum-programok a kívánt módon működjenek, és hogy képes legyen diagnosztizálni a helytelen viselkedést.
-Ebben a szakaszban a Q # által nyújtott eszközöket fogjuk kiszolgálni a kvantum-programok teszteléséhez és hibakereséséhez.
+Ebben a szakaszban a Q# kvantum-programok tesztelésére és hibakeresésére szolgáló eszközöket ismertetjük.
 
 ## <a name="unit-tests"></a>Egység tesztek
 
 A klasszikus programok tesztelésének egyik gyakori módszere, ha olyan kisméretű programokat *ír,* amelyekben a kód egy könyvtárban fut, és a kimenetét egy bizonyos várt kimenethez hasonlítja össze.
 Például gondoskodhat arról, hogy a visszaadott érték a következőt jeleníti meg: `Square(2)` `4` 1 – 2 ^ 2 = $4. *a priori*
 
-A Q # támogatja az egységek tesztelését a kvantum-programokhoz, amelyek a [xUnit](https://xunit.github.io/) egység tesztelése keretén belül tesztekként is futtathatók.
+Q#támogatja az egységek tesztelését a kvantum-programokhoz, és amelyek a [xUnit](https://xunit.github.io/) -egység tesztelési keretrendszerén belül is futtathatnak teszteket.
 
 ### <a name="creating-a-test-project"></a>Tesztelési projekt létrehozása
 
 #### <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
 
-Nyissa meg a Visual Studio 2019 alkalmazást. Lépjen a **fájl** menüre, és válassza az **új > projekt...** lehetőséget. A jobb felső sarokban keresse meg a `Q#` elemet, majd kattintson a **Q # test Project** sablonra.
+Nyissa meg a Visual Studio 2019 alkalmazást. Lépjen a **fájl** menüre, és válassza az **új > projekt...** lehetőséget. A jobb felső sarokban keresse meg a `Q#` elemet, és válassza ki a ** Q# teszt projekt** sablonját.
 
 #### <a name="command-line--visual-studio-code"></a>[Parancssor / Visual Studio Code](#tab/tabid-vscode)
 
@@ -42,7 +45,7 @@ $ code . # To open in Visual Studio Code
 
 ****
 
-Az új projekt egyetlen fájllal rendelkezik `Tests.qs` , amely kényelmes helyet biztosít az új Q # egység tesztek definiálásához.
+Az új projekt egyetlen fájllal rendelkezik `Tests.qs` , amely kényelmes helyet biztosít az új egység-tesztek definiálásához Q# .
 Kezdetben ez a fájl egy minta egység tesztet tartalmaz, `AllocateQubit` amely ellenőrzi, hogy az újonnan lefoglalt qubit a $ \ket $ állapotban van-e, {0} és kinyomtat egy üzenetet:
 
 ```qsharp
@@ -57,7 +60,7 @@ Kezdetben ez a fájl egy minta egység tesztet tartalmaz, `AllocateQubit` amely 
     }
 ```
 
-Minden olyan Q # művelet vagy függvény, amely `Unit` a Type és a Returns argumentumot veszi fel, `Unit` az attribútumon keresztül lehet kijelölni egység tesztként `@Test("...")` . Az előző példában az attribútum argumentuma `"QuantumSimulator"` meghatározza azt a célt, amelyen a teszt fut. Egyetlen teszt több célponton is futhat. Adjon meg például egy attribútumot a `@Test("ResourcesEstimator")` előtt `AllocateQubit` . 
+Q#A Type és Returns argumentumot használó műveletek vagy függvények `Unit` `Unit` az attribútumon keresztül is megjelölhetik egységként `@Test("...")` . Az előző példában az attribútum argumentuma `"QuantumSimulator"` meghatározza azt a célt, amelyen a teszt fut. Egyetlen teszt több célponton is futhat. Adjon meg például egy attribútumot a `@Test("ResourcesEstimator")` előtt `AllocateQubit` . 
 ```qsharp
     @Test("QuantumSimulator")
     @Test("ResourcesEstimator")
@@ -66,9 +69,9 @@ Minden olyan Q # művelet vagy függvény, amely `Unit` a Type és a Returns arg
 ```
 Mentse a fájlt, és futtassa az összes tesztet. Ekkor két egységre vonatkozó tesztnek kell lennie, amelyek közül az egyik, a pedig az `AllocateQubit` `QuantumSimulator` , ahol a fut `ResourcesEstimator` . 
 
-A Q # Compiler felismeri a beépített célokat `"QuantumSimulator"` , `"ToffoliSimulator"` és `"ResourcesEstimator"` érvényes végrehajtási célokat az egység tesztek számára. A teljes nevet is megadhatja egy egyéni végrehajtási cél definiálásához. 
+A Q# fordító felismeri a beépített célokat `"QuantumSimulator"` , `"ToffoliSimulator"` és `"ResourcesEstimator"` érvényes végrehajtási célokat az egység tesztek számára. A teljes nevet is megadhatja egy egyéni végrehajtási cél definiálásához. 
 
-### <a name="running-q-unit-tests"></a>Q # egység tesztek futtatása
+### <a name="running-no-locq-unit-tests"></a>Futó Q# egység tesztek
 
 #### <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
 
@@ -137,9 +140,9 @@ A sikertelen tesztek esetén a kimenetek a konzolon is kinyomtathatók a hiba di
 
 ## <a name="facts-and-assertions"></a>Tények és kijelentések
 
-Mivel a Q # függvényeknek nincs _logikai_ mellékhatása, a q # programon belül soha nem figyelheti meg, hogy milyen típusú effektusok futnak az üres rekord kimenetével `()` .
-Vagyis a célszámítógép dönthet úgy, hogy nem futtat olyan függvényt, amely visszaadja `()` azt a garanciát, hogy ez a mulasztás nem módosítja a következő Q # kód viselkedését.
-Ez a viselkedés lehetővé teszi, hogy a függvény visszaadja `()` (például `Unit` ) egy hasznos eszközt az érvényesítési és a hibakeresési logikának a Q # programokba való beágyazásához. 
+Mivel a függvények Q# nem rendelkeznek _logikai_ mellékhatásokkal, a programon belül soha nem figyelheti meg, hogy egy adott Q# alkalmazásból más típusú effektusok is futnak, amelyek kimeneti típusa az üres rekord `()` .
+Vagyis a célszámítógép dönthet úgy, hogy nem futtat olyan függvényt, amely visszaadja `()` azt a garanciát, hogy ez a mulasztás nem módosítja a következő Q# kódok viselkedését.
+Ez a viselkedés lehetővé teszi, hogy a függvény visszaadja `()` (például `Unit` ) egy hasznos eszközt a bejelentésekhez és a hibakeresési logikához a Q# programokba. 
 
 Vegyünk egy egyszerű példát:
 
@@ -153,8 +156,8 @@ function PositivityFact(value : Double) : Unit
 }
 ```
 
-Itt a kulcsszó `fail` azt jelzi, hogy a számítás nem folytatódhat, és kivételt vet fel a Q # programot futtató célszámítógépen.
-Definíció szerint az ilyen típusú hibák nem figyelhetők meg a Q #-on belül, mert a célszámítógép már nem futtatja a Q # kódot, miután elérte az `fail` utasítást.
+Itt a kulcsszó `fail` azt jelzi, hogy a számítás nem folytatódhat, és kivételt vet fel a programot futtató célszámítógépen Q# .
+Definíció szerint az ilyen típusú hibák nem figyelhetők meg a belülről Q# , mert a célszámítógép már nem futtatja a Q# kódot egy utasítás elérése után `fail` .
 Így ha folytatunk egy hívást a szolgáltatásba `PositivityFact` , biztos lehet abban, hogy a bemenete pozitív volt.
 
 Vegye figyelembe, hogy ugyanaz a viselkedés valósítható meg, mint a `PositivityFact` [`Fact`](xref:microsoft.quantum.diagnostics.fact) névtérből származó függvény használatával <xref:microsoft.quantum.diagnostics> :
@@ -354,7 +357,7 @@ ezt a <xref:microsoft.quantum.diagnostics.dumpregister> kimenetet a következőr
 Qubits provided (0;) are entangled with some other qubit.
 ```
 
-Az alábbi példa bemutatja, hogyan használhatja a <xref:microsoft.quantum.diagnostics.dumpregister> <xref:microsoft.quantum.diagnostics.dumpmachine> Q # kódját:
+Az alábbi példa bemutatja, hogyan használható a kód a <xref:microsoft.quantum.diagnostics.dumpregister> és <xref:microsoft.quantum.diagnostics.dumpmachine> a Q# kódban:
 
 ```qsharp
 namespace app
@@ -381,6 +384,6 @@ namespace app
 
 ## <a name="debugging"></a>Hibakeresés
 
-A (z `Assert` ) és a `Dump` functions és az Operations (feladatok és műveletek) esetében a Q # a standard Visual Studio hibakeresési képességeinek egy részhalmazát támogatja: a [vonali töréspontok beállítását](https://docs.microsoft.com/visualstudio/debugger/using-breakpoints), a [kód az F10 használatával](https://docs.microsoft.com/visualstudio/debugger/navigating-through-code-with-the-debugger)való megadását, valamint a [klasszikus változók értékének vizsgálatát](https://docs.microsoft.com/visualstudio/debugger/autos-and-locals-windows) a szimulátoron végzett kódfuttatást
+A (z `Assert` ) és a `Dump` functions és az Operations (funkciók és műveletek) esetében a Q# Visual Studio szabványos hibakeresési képességeinek egy részét támogatja: [sor töréspontok beállítása](https://docs.microsoft.com/visualstudio/debugger/using-breakpoints), az [F10 használatával történő léptetés](https://docs.microsoft.com/visualstudio/debugger/navigating-through-code-with-the-debugger), valamint a [klasszikus változók értékeinek vizsgálata](https://docs.microsoft.com/visualstudio/debugger/autos-and-locals-windows) mind lehetséges a szimulátorban.
 
 A Visual Studio Code-ban a hibakeresés a C# által a OmniSharp által működtetett Visual Studio Code-bővítmény által biztosított hibakeresési képességeket használja, és a [legújabb verziót](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp)kell telepítenie. 

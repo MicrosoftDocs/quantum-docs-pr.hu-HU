@@ -1,17 +1,20 @@
 ---
-title: 'Adatstruktúrák a Q # standard könyvtárakban'
-description: 'Ismerje meg az adatstruktúrákat, az Oracle-ket és a dinamikus generátorokat a Microsoft Q # standard könyvtáraiban.'
+title: Adatstruktúrák a Q# standard könyvtárakban
+description: Ismerje meg az adatstruktúrákat, az Oracle-ket és a dinamikus generátorokat a Microsoft Q# szabványos könyvtáraiban.
 author: QuantumWriter
 uid: microsoft.quantum.libraries.data-structures
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 46ac6794d1e21e111aa1d98e11a6f83194f8d54e
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 222fa7d0d33d4ac6c15e9ee9e6e97f380867a145
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275000"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868519"
 ---
 # <a name="data-structures-and-modeling"></a>Adatstruktúrák és-modellezés #
 
@@ -34,7 +37,7 @@ ApplyToEach(H, Snd(pair)); // No need to deconstruct to access the register.
 ### <a name="arrays"></a>Tömbök ###
 
 A Canon számos funkciót biztosít a tömbök manipulálására.
-Ezek a függvények Type-paraméteres, így bármilyen Q # típusú tömbökkel használhatók.
+Ezek a függvények Type-paraméteres, így bármilyen típusú tömbökkel használhatók Q# .
 A <xref:microsoft.quantum.arrays.reversed> függvény például egy olyan új tömböt ad vissza, amelynek elemei fordított sorrendben vannak a bemenettől.
 Ezzel megváltoztathatja, hogy a rendszer hogyan jelenítse meg a kvantum-regisztereket a műveletek meghívásakor:
 
@@ -72,7 +75,7 @@ A [fázisok becslése](https://en.wikipedia.org/wiki/Quantum_phase_estimation_al
 Itt az Oracle kifejezés olyan tábla-kvantum-alrutint jelöl, amely qubits végez, és a választ fázisként adja vissza.
 Ez az alrutin gyakran úgy gondolja, mint egy olyan kvantum-algoritmus bemenete, amely más paraméterek mellett is elfogadja az Oracle-t, és egy sor kvantum-műveletet alkalmaz, és a kvantum-alrutin hívását kezeli, mintha egy alapvető kapu lenne.
 Természetesen ahhoz, hogy a nagyobb algoritmus ténylegesen megvalósítható legyen, meg kell adni az Oracle-nek az alapvető kapuk konkrét összetételét, de az Oracle-t meghívó algoritmus megismeréséhez nincs szükség ilyen felbomlásra.
-A Q # esetében ezt az absztrakciót a művelet az első osztályú értékekkel jelöli, így a műveletek a kvantum-algoritmusok megvalósításához fekete dobozos módon adhatók át.
+A-ben Q# Ez a művelet az első osztályú értékeket használja, így a műveletek átadhatók a kvantum-algoritmusok megvalósításához a fekete dobozos módon.
 Emellett a felhasználó által definiált típusok a különböző Oracle-adatábrázolások típusos biztonságos módon történő címkézésére szolgálnak, így megnehezítik a különböző típusú fekete Box-műveletek véletlen kicsomagolását.
 
 Az ilyen Oracle-k számos különböző kontextusban jelennek meg, beleértve az olyan híres példákat is, mint például a a a megtalált [Keresés](https://en.wikipedia.org/wiki/Grover%27s_algorithm) és a Quantum szimulációs algoritmusok.
@@ -189,7 +192,7 @@ Az ilyen kvantum-dinamika leírása $U (t) = R_z (2 \ Omega t) $ az Evolution Ti
 Ebben a kontextusban a $U (t) $ értéket szimulálhatja bármely $t $-hez egyetlen $R _z $ Gate használatával, és így nem kell korlátoznia magunkat arra, hogy csak a különálló lekérdezésekre korlátozódjon.
 Az ilyen folyamatos modell azt a tulajdonságot is megtudhatja, hogy a $2 \ PI $-nál nagyobb frekvenciákon a folyamatos lekérdezéseket használó fázis-becslési folyamatokból megtudhatja, hogy milyen fázis-információk láthatók a logaritmus-függvény elágazásával, a $t $ nem arányos értékeit érintő kísérletek eredményeiből.
 Így olyan problémákhoz, mint például az Oracle fázis-becsléshez kapcsolódó folyamatos lekérdezési modellek, nem csupán megfelelőek, de a diszkrét lekérdezési modell esetében is előnyösek.
-Ebben az esetben a Q # a lekérdezések mindkét formájára vonatkozik, és hagyja azt a felhasználónak, hogy eldöntse, hogy az igényeinek megfelelő fázis-becslési algoritmust és az elérhető Oracle-típust.
+Emiatt a Q# lekérdezések mindkét formájához van funkció, és a felhasználónak el kell döntenie, hogy egy fázis-becslési algoritmust válasszon az igényeinek megfelelően, valamint a rendelkezésre álló Oracle típusát.
 
 ## <a name="dynamical-generator-modeling"></a>Dinamikus generátor modellezése ##
 

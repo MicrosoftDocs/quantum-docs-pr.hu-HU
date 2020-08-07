@@ -6,12 +6,15 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.pulls
-ms.openlocfilehash: 82af3b5123588cc06882f746ffcb0402ad3f0f2e
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 8e04e6502e0a6005dfdf0f93450bf3ffd5aaa672
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274845"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866927"
 ---
 # <a name="opening-pull-requests"></a>Lekéréses kérelmek megnyitása #
 
@@ -84,7 +87,7 @@ This way, you can edit your personal fork to your heart's content before making 
 
 -->
 
-## <a name="next-steps"></a>További lépések ##
+## <a name="next-steps"></a>Következő lépések ##
 
 Gratulálunk a git használatával, hogy segítse a Quantum Development Kit közösségét!
 Ha többet szeretne megtudni a kód beszerzéséről, folytassa az alábbi útmutatóval.

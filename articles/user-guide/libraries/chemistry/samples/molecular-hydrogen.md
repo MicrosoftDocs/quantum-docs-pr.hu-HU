@@ -1,17 +1,20 @@
 ---
 title: Energiaszint-becslések lekérése
-description: 'Haladjon végig a Q # programon, amely a molekuláris hidrogén energia szintjének értékeit becsüli meg.'
+description: A Q# molekuláris hidrogén energiagazdálkodási szintjeinek becslésére szolgáló minta program végigvezeti.
 author: guanghaolow
 ms.author: gulow
 ms.date: 07/02/2020
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.examples.energyestimate
-ms.openlocfilehash: b26538980366cf4cbe01fc2ef59580ae182f1e8a
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: a2df4b829a3f4946c6de6e6b80ad72a5bc192b2c
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871568"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869205"
 ---
 # <a name="obtaining-energy-level-estimates"></a>Energiaszint-becslések lekérése
 Az energia szintjeinek becslése a Quantum kémiájának egyik fő alkalmazása. Ez a cikk ismerteti, hogyan hajthatja végre ezt a molekuláris hidrogén kanonikus példáján. Az ebben a szakaszban hivatkozott minta a [`MolecularHydrogen`](https://github.com/microsoft/Quantum/tree/master/samples/chemistry/MolecularHydrogen) kémia Samples repositoryban található. Egy több vizualizációs példa, amely a kimenetet ábrázolja a [`MolecularHydrogenGUI`](https://github.com/microsoft/Quantum/tree/master/samples/chemistry/MolecularHydrogenGUI) bemutatóban.
@@ -121,7 +124,7 @@ operation GetEnergyByTrotterization (
 }
 ```
 
-Most meghívhatja a Q # kódot a gazda programból. A következő C#-kód egy teljes állapotú szimulátort hoz létre `GetEnergyByTrotterization` , amely a terepi állapot megszerzéséhez szükséges.
+Most meghívhatja a Q# kódot a gazda programból. A következő C#-kód egy teljes állapotú szimulátort hoz létre `GetEnergyByTrotterization` , amely a terepi állapot megszerzéséhez szükséges.
 
 ```csharp
 using (var qsim = new QuantumSimulator())

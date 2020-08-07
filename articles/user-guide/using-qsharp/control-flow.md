@@ -1,19 +1,22 @@
 ---
-title: 'Vezérlési folyamat a Q-ban #'
+title: Folyamat vezérléseQ#
 description: Hurkok, feltételesség stb.
 author: gillenhaalb
 ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.controlflow
-ms.openlocfilehash: b652736168a71b905deaf7c4fdb29a8751b3dfaf
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: fc619d64bfebfc27d7feac6dafb2dd4cf22825d6
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86870991"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87867947"
 ---
-# <a name="control-flow-in-q"></a>Vezérlési folyamat a Q-ban #
+# <a name="control-flow-in-no-locq"></a>Folyamat vezérléseQ#
 
 Egy műveleten vagy függvényen belül minden utasítás sorrendben fut, hasonlóan más gyakori klasszikus nyelvekhez.
 A vezérlés folyamatát azonban három különböző módon módosíthatja:
@@ -104,12 +107,12 @@ Vegye figyelembe, hogy a végén a számtani-SHIFT-Left bináris operátort hasz
 
 ## <a name="repeat-until-success-loop"></a>REPEAT-ig-Success hurok
 
-A Q # nyelv lehetővé teszi, hogy a klasszikus vezérlési folyamat a qubits mérési eredményeitől függ.
+A Q# nyelv lehetővé teszi, hogy a klasszikus vezérlési folyamat a qubits mérési eredményeitől függ.
 Ez a funkció lehetővé teszi, hogy a hatékony valószínűséggel rendelkező minialkalmazások megvalósításával csökkentse a unitaries megvalósításához szükséges számítási költségeket.
-Ilyenek például a Q #-ban a *REPEAT-ig-Success* (RUS) minták.
+Ilyenek például a *REPEAT-ig-Success* (RUS) minták a alkalmazásban Q# .
 Ezek az RUS-minták olyan valószínűségi programok, amelyek az alapvető kapuk szempontjából *várhatóan* alacsony költségeket mutatnak; a felmerülő költségek a tényleges futtatástól és a több lehetséges ág közötti összekapcsolástól függenek.
 
-A REPEAT-ig-Success (RUS) minták megkönnyítése érdekében a Q # támogatja a szerkezeteket
+A sikeres ismétléses (RUS) minták megkönnyítése érdekében Q# támogatja a szerkezeteket
 
 ```qsharp
 repeat {
@@ -147,9 +150,9 @@ További példákért és részletekért tekintse meg a jelen cikk [REPEAT-amíg
 
 ## <a name="while-loop"></a>Ciklus közben
 
-A REPEAT-ig-Success mintázat nagyon Quantum-specifikus konnotációval rendelkezik. Ezek széles körben használatosak a kvantum-algoritmusok bizonyos osztályaiban – ezért a dedikált nyelvi összeállítás Q #-ban. Azonban az olyan hurkok, amelyek egy adott feltétel alapján törnek át, és amelynek végrehajtási hosszát a fordítási időben nem ismeri, a rendszer a kvantum-futtatókörnyezetben különösen körültekintően kezeli. Azonban a függvényeken belüli használatuk nem problémamentes, mivel ezek a hurkok csak a hagyományos (nem Quantum) hardveren futó kódokat tartalmaznak. 
+A REPEAT-ig-Success mintázat nagyon Quantum-specifikus konnotációval rendelkezik. Ezek széles körben használatosak a kvantum-algoritmusok bizonyos osztályaiban – ezért a dedikált nyelvi konstrukciója Q# . Azonban az olyan hurkok, amelyek egy adott feltétel alapján törnek át, és amelynek végrehajtási hosszát a fordítási időben nem ismeri, a rendszer a kvantum-futtatókörnyezetben különösen körültekintően kezeli. Azonban a függvényeken belüli használatuk nem problémamentes, mivel ezek a hurkok csak a hagyományos (nem Quantum) hardveren futó kódokat tartalmaznak. 
 
-A Q # lehetővé teszi, hogy a csak a functions-ben lévő hurkokat használja. Egy `while` utasítás a kulcsszóból `while` , egy logikai kifejezésből áll zárójelben, és egy utasítás blokkot.
+Q#Ezért a csak a functions-ben lévő hurkok használatát támogatja. Egy `while` utasítás a kulcsszóból `while` , egy logikai kifejezésből áll zárójelben, és egy utasítás blokkot.
 Az utasítás blokkja (a hurok törzse) mindaddig fut, amíg a feltétel kiértékelése megtörténik `true` .
 
 ```qsharp
@@ -205,7 +208,7 @@ fail $"Syndrome {syn} is incorrect";
 
 ### <a name="rus-pattern-for-single-qubit-rotation-about-an-irrational-axis"></a>RUS-minta egyetlen qubit elforgatásához egy irracionális tengelyen 
 
-Egy tipikus használati eset esetében a következő Q # művelet végrehajt egy, az/\sqrt $ (I + 2i Z) és a Bloch gömb közötti irracionális tengely körüli rotációt {5} . A megvalósítás egy ismert RUS mintát használ:
+Tipikus használati eset esetén a következő művelet a Q# (Z) $ (I + 2i Z)/\sqrt $, a Bloch szférán belüli irracionális tengely körüli rotációt valósít {5} meg. A megvalósítás egy ismert RUS mintát használ:
 
 ```qsharp
 operation ApplyVRotationUsingRUS(qubit : Qubit) : Unit {
@@ -329,6 +332,6 @@ operation PrepareStateUsingRUS(target : Qubit) : Unit {
 
 További információkért lásd: [Unit Testing Sample a standard Library](https://github.com/microsoft/Quantum/blob/master/samples/diagnostics/unit-testing/RepeatUntilSuccessCircuits.qs):
 
-## <a name="next-steps"></a>További lépések
+## <a name="next-steps"></a>Következő lépések
 
-A [tesztelés és a hibakeresés](xref:microsoft.quantum.guide.testingdebugging) megismertetése a Q #-ban.
+További információ a [teszteléséről és hibakereséséről](xref:microsoft.quantum.guide.testingdebugging) Q# .

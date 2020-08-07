@@ -1,30 +1,33 @@
 ---
-title: 'Qubit-szintű programok írása és szimulálása a Q-ban #'
+title: Qubit programok írása és szimulálása a-benQ#
 description: Lépésenkénti oktatóanyag egy olyan kvantum-program írásához és szimulálásához, amely az egyes qubit szintjén működik
 author: gillenhaalb
 ms.author: a-gibec@microsoft.com
 ms.date: 10/06/2019
 uid: microsoft.quantum.circuit-tutorial
 ms.topic: tutorial
-ms.openlocfilehash: e7ebdec4cd1aa201030d82759a3aa56473b26417
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 22c79e4e01db1a0d0c291d0dcff81dbfa8df5cd3
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274781"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869715"
 ---
 # <a name="tutorial-write-and-simulate-qubit-level-programs-in-q"></a>Oktatóanyag: qubit-szintű programok írása és szimulálása a Q-ban\#
 
 Üdvözöljük a Quantum Development Kit oktatóanyagban, amely egy alapszintű, egyedi qubits működő kvantum-program írását és szimulálása. 
 
-Bár a Q # elsődlegesen a nagyméretű kvantum-programok magas szintű programozási nyelve volt, a legkönnyebben használható a kvantum-programok alacsonyabb szintjének feltárására: adott qubits közvetlen kezelése.
-A Q # rugalmassága lehetővé teszi a felhasználók számára, hogy bármely ilyen szintű absztrakcióból megközelítsék a kvantum-rendszereket, és ebben az oktatóanyagban a qubits magukat.
+Bár Q# elsődlegesen a nagy léptékű kvantum-programok magas szintű programozási nyelve lett létrehozva, a kvantum-programok alacsonyabb szintjének feltárására is használható: közvetlenül az adott qubits kezelése.
+A rugalmasság Q# lehetővé teszi, hogy a felhasználók bármilyen ilyen szintű absztrakciót megközelítsék a kvantum-rendszereket, és ebben az oktatóanyagban magukra a qubits.
 Pontosabban tekintse meg a [Quantum Fourier-transzformáció](https://en.wikipedia.org/wiki/Quantum_Fourier_transform)csuklyáját, amely egy olyan alrutin, amely a sok nagyobb kvantum-algoritmus szerves részét képezi.
 
 Vegye figyelembe, hogy a kvantum-adatok feldolgozásának alacsony szintű nézetét gyakran a "[Quantum áramkörök](xref:microsoft.quantum.concepts.circuits)" kifejezés írja le, amely a kapuk szekvenciális alkalmazását jelöli a rendszer adott qubits.
 
 Így az egy-és többqubitos műveletek, amelyeket szekvenciálisan alkalmazunk, könnyen szerepelhetnek egy "áramköri diagramban".
-A mi esetünkben a Q # műveletet fogjuk meghatározni a teljes három qubit Quantum Fourier-transzformáció végrehajtásához, amely a következő, áramkörként ábrázolt állapottal rendelkezik:
+Ebben az esetben egy műveletet határozunk meg Q# a teljes három qubit Quantum Fourier-transzformáció végrehajtásához, amely az alábbi, áramkörként szolgáló módon működik:
 
 <br/>
 <img src="../media/qft_full.PNG" alt="Three qubit quantum Fourier transform circuit diagram" width="600">
@@ -35,36 +38,36 @@ A mi esetünkben a Q # műveletet fogjuk meghatározni a teljes három qubit Qua
 * Ha a QDK már telepítve van, győződjön meg arról, hogy a legújabb verzióra van [frissítve](xref:microsoft.quantum.update).
 
 
-## <a name="in-this-tutorial-youll-learn-how-to"></a>Az oktatóanyag segítségével megtanulhatja a következőket:
+## <a name="in-this-tutorial-youll-learn-how-to"></a>Ebből az oktatóanyagból az alábbiakat sajátíthatja el:
 
 > [!div class="checklist"]
-> * Kvantum-műveletek definiálása a Q-ban #
-> * A Q # műveletek hívása közvetlenül a parancssorból vagy egy klasszikus gazda program használatával
+> * Adja meg a kvantum-műveleteket a benQ#
+> * Műveletek meghívása Q# közvetlenül a parancssorból vagy klasszikus gazda program használatával
 > * Quantum művelet szimulálása qubit-kiosztásból a mérési kimenetre
 > * Figyelje meg, hogyan fejlődik a Quantum System szimulált wavefunction a művelet során
 
 A Quantum program a Microsoft Quantum Development Kit-vel való futtatása általában két részből áll:
-1. Maga a program, amely a Q # Quantum programozási nyelv használatával lett megvalósítva, majd egy kvantum-számítógépen vagy kvantum-szimulátoron való futtatásra hív meg. Ezek a következőkből állnak 
-    - Q # műveletek: a kvantum-regisztereken eljáró alrutinok, és 
-    - Q # függvények: a kvantum-algoritmuson belül használt klasszikus alrutinok.
+1. Maga a program, amely a Quantum programozási nyelv használatával lett megvalósítva Q# , majd egy kvantum-számítógépen vagy kvantum-szimulátoron futtatva fut. Ezek a következőkből állnak 
+    - Q#műveletek: a kvantum-regisztráción alapuló alrutinok, és 
+    - Q#függvények: a kvantum-algoritmuson belül használt klasszikus alrutinok.
 2. A kvantum-program meghívásához használt belépési pont, és annak a célként megadott számítógépnek a megadása, amelyen futnia kell.
     Ezt közvetlenül a parancssorból vagy a klasszikus programozási nyelv, például a Python vagy a C# használatával írt gazda program segítségével végezheti el.
     Ez az oktatóanyag a tetszőleges módszerre vonatkozó utasításokat tartalmazza.
 
 ## <a name="allocate-qubits-and-define-quantum-operations"></a>Qubits foglalása és a kvantum-műveletek definiálása
 
-Az oktatóanyag első része a Q # művelet definiálásával áll `Perform3qubitQFT` , amely a Quantum Fourier-transzformációt három qubits hajtja végre. 
+Az oktatóanyag első része a művelet definiálását jelenti Q# `Perform3qubitQFT` , amely a Quantum Fourier-transzformációt három qubits hajtja végre. 
 
 Emellett a [`DumpMachine`](xref:microsoft.quantum.diagnostics.dumpmachine) függvény segítségével megfigyelheti, hogy a három qubit szimulált wavefunction hogyan fejlődik a művelet során.
 
-Első lépésként hozza létre a Q # projektet és a fájlt.
+Az első lépés a Q# projekt és a fájl létrehozása.
 Az ehhez szükséges lépések a program meghívásához használt környezettől függenek, és a részleteket a megfelelő [telepítési útmutatókban](xref:microsoft.quantum.install)találja.
 
 Lépésről lépésre végigvezeti a fájl összetevőin, de a kód az alábbi teljes blokkként is elérhető.
 
-### <a name="namespaces-to-access-other-q-operations"></a>Névterek a többi Q # művelet eléréséhez
+### <a name="namespaces-to-access-other-no-locq-operations"></a>Névterek más műveletekhez való hozzáféréshez Q#
 Először a fájlban definiáljuk a névteret, `NamespaceQFT` amelyet a fordító fog elérni.
-A meglévő Q # műveletek végrehajtásához a művelethez meg kell nyitnia a kapcsolódó `Microsoft.Quantum.<>` névtereket.
+A meglévő műveletek használatának elvégzéséhez Q# nyissa meg a megfelelő `Microsoft.Quantum.<>` névtereket.
 
 ```qsharp
 namespace NamespaceQFT {
@@ -90,7 +93,7 @@ Egyelőre a művelet nem vesz fel argumentumokat, és nem ad vissza semmit---ebb
 Később módosítjuk, hogy a mérési eredmények tömbjét adja vissza, ekkor a rendszer a következőt váltja ki: `Unit` `Result[]` . 
 
 ### <a name="allocate-qubits-with-using"></a>Qubits foglalása a`using`
-A Q # művelet keretében először három qubits-regisztrációt osztunk ki az `using` utasítással:
+Q#A művelet keretében először három qubits-regisztrációt osztunk ki a `using` nyilatkozattal:
 
 ```qsharp
         using (qs = Qubit[3]) {
@@ -104,16 +107,16 @@ A Q # művelet keretében először három qubits-regisztrációt osztunk ki az 
 A `using` esetében a qubits automatikusan le lesznek foglalva a $ \ket {0} $ állapotba. Ezt a és a használatával is [`Message(<string>)`](xref:microsoft.quantum.intrinsic.message) ellenőrizheti [`DumpMachine()`](xref:microsoft.quantum.diagnostics.dumpmachine) , amely kinyomtat egy karakterláncot és a rendszer aktuális állapotát a konzolra.
 
 > [!NOTE]
-> A `Message(<string>)` és a `DumpMachine()` függvények (és/ [`Microsoft.Quantum.Intrinsic`](xref:microsoft.quantum.intrinsic) vagy [`Microsoft.Quantum.Diagnostics`](xref:microsoft.quantum.diagnostics) ) egyaránt közvetlenül a konzolra nyomtathatnak. A tényleges kvantum-számításokhoz hasonlóan a Q # nem teszi lehetővé az qubit-állapotok közvetlen elérését.
+> A `Message(<string>)` és a `DumpMachine()` függvények (és/ [`Microsoft.Quantum.Intrinsic`](xref:microsoft.quantum.intrinsic) vagy [`Microsoft.Quantum.Diagnostics`](xref:microsoft.quantum.diagnostics) ) egyaránt közvetlenül a konzolra nyomtathatnak. A tényleges kvantum-számításokhoz hasonlóan a nem Q# teszi lehetővé, hogy közvetlenül hozzáférhessenek a qubit állapotokhoz.
 > `DumpMachine`A célszámítógép aktuális állapotának kinyomtatásakor azonban értékes információkat biztosíthat a hibakereséshez és a tanuláshoz, amikor a teljes állapotú szimulátorral együtt használja.
 
 
 ### <a name="applying-single-qubit-and-controlled-gates"></a>Qubit és vezérelt kapuk alkalmazása
 
 Ezután alkalmazzuk a kaput, amely magában foglalja a műveletet.
-A Q # már számos alapvető kvantum-kaput tartalmaz, mint a [`Microsoft.Quantum.Intrinsic`](xref:microsoft.quantum.intrinsic) névtérben végzett műveletek, és ezek nem kivételek. 
+Q#a névtérben már számos alapvető kvantum-kapu található [`Microsoft.Quantum.Intrinsic`](xref:microsoft.quantum.intrinsic) , és ezek nem kivételek. 
 
-A Q # műveleten belül a callables meghívására szolgáló utasítások sorrendben lesznek végrehajtva.
+Egy Q# műveleten belül a callables meghívására szolgáló utasítások sorrendben lesznek végrehajtva.
 Ezért az elsőként alkalmazandó kapu a [`H`](xref:microsoft.quantum.intrinsic.h) (Hadamard) az első qubit:
 
 <br/>
@@ -131,7 +134,7 @@ Egy `R1(θ, <qubit>)` általános művelet változatlanul hagyja a qubit $ \ket 
 
 #### <a name="controlled-operations"></a>Vezérelt műveletek
 
-A Q # lehetővé teszi a művelet végrehajtásának feltételét egy vagy több vezérlő qubits.
+Q#lehetővé teszi a művelet végrehajtásának feltételét egy vagy több vezérlő qubits.
 Általánosságban elmondható, hogy a hívás a következővel van ellátva `Controlled` , és a Műveleti argumentumok a következőképpen változnak:
 
  `Op(<normal args>)`$ \to $ `Controlled Op([<control qubits>], (<normal args>))` .
@@ -176,12 +179,12 @@ A kapcsolódó `H` műveletek és a vezérelt rotációk alkalmazása után a m�
 
 Erre azért van szükség, mert a Quantum Fourier-transzformáció természete fordított sorrendben jeleníti meg a qubits, így a Swapek lehetővé teszik a rutinok zökkenőmentes integrálását a nagyobb algoritmusokra.
 
-Ezért befejeztük a Quantum Fourier-transzformáció qubit műveletének írását a Q # műveletbe:
+Ezért befejeztük a Quantum Fourier-transzformáció qubit-műveletének írását a Q# műveletbe:
 
 <img src="../media/qft_full.PNG" alt="Three qubit quantum Fourier transform circuit diagram" width="600">
 
 De nem hívhatunk meg egy napot.
-A qubits a {0} (z) $ \ket $ állapotban voltak, amikor kiosztottuk őket, és hasonlóan az életben is, a Q #-ban ugyanúgy kell elhagyni a dolgokat, ahogy azt találtuk (vagy még jobb!).
+A qubits a \ket $ állapotban voltak {0} , amikor kiosztottuk őket, és hasonlóan az életben is, ugyanúgy Q# kell elhagyni a dolgokat, ahogy azt találtuk (vagy még jobb!).
 
 ### <a name="deallocate-qubits"></a>Qubits felszabadítása
 
@@ -194,11 +197,11 @@ A [`DumpMachine()`](xref:microsoft.quantum.diagnostics.dumpmachine) művelet elv
             ResetAll(qs);
 ```
 
-Ha azt szeretné, hogy az összes fel nem foglalt qubits legyen explicit módon beállítva a $ \ket $ értékre, {0} a Q # alapszintű funkciója, mivel lehetővé teszi, hogy más műveletek pontosan megismerjék az állapotukat, amikor megkezdik az azonos qubits (a szűkös erőforrás) használatát.
+Annak megkövetelése, hogy az összes fel nem foglalt qubits legyen explicit módon beállítva a $ \ket $ értékre {0} Q# , mivel ez lehetővé teszi, hogy más műveletek pontosan megismerjék az állapotukat, amikor megkezdik az azonos qubits (kevés erőforrás) használatát.
 Ez azt is biztosítja, hogy a rendszer semmilyen más qubits ne legyen összekeverve.
 Ha az alaphelyzetbe állítást a foglalási blokk végén nem hajtja végre, a rendszer `using` futásidejű hibát jelez.
 
-A teljes Q # fájlnak így kell kinéznie:
+A teljes Q# fájlnak így kell kinéznie:
 
 ```qsharp
 namespace NamespaceQFT {
@@ -239,18 +242,18 @@ namespace NamespaceQFT {
 ```
 
 
-A Q # fájl és a művelet befejezése után a Quantum program készen áll a meghívni és szimulálni.
+A Q# fájl és a művelet befejezése után a Quantum program készen áll a hívásra és a szimulált állapotra.
 
-## <a name="execute-the-program"></a>A program végrehajtása
+## <a name="execute-the-program"></a>A program futtatása
 
-Miután meghatározta a Q # műveletet egy `.qs` fájlban, most meg kell hívni a műveletet, és meg kell figyelni a visszaadott klasszikus adattípusokat.
-Egyelőre nem ad vissza semmit (ne felejtse el, hogy a fent megadott művelet visszaadja `Unit` a műveletet), de ha később módosítjuk a Q # műveletet, hogy a mérési eredmények tömbjét adja vissza ( `Result[]` ), ezt fogjuk kezelni.
+Miután definiálta a Q# műveletet egy `.qs` fájlban, most meg kell hívnia ezt a műveletet, és figyelnie kell a visszaadott klasszikus adattípusokat.
+Egyelőre nem ad vissza semmit (ne felejtse el, hogy a fent megadott művelet visszaadja `Unit` a műveletet), de ha később módosítjuk a Q# műveletet a mérési eredmények () egy tömbje visszaadására `Result[]` , ezt a megoldást fogjuk kezelni.
 
-Míg a Q # program a híváshoz használt környezetek között mindenütt elérhető, ennek a módja természetesen eltérő lesz. Ennek megfelelően egyszerűen kövesse a beállításnak megfelelő lapon található utasításokat: a Q # parancssori alkalmazásban, vagy egy, a Pythonban vagy a C#-ban található gazda program használatával.
+Míg a Q# program a meghívásához használt környezetek között mindenütt elérhető, ennek a módja természetesen változhat. Ezért egyszerűen kövesse a beállításnak megfelelő lapon található utasításokat: a Q# parancssori alkalmazás használatával vagy a Pythonban vagy C#-ban futtatott gazda programmal.
 
 #### <a name="command-line"></a>[Parancssor](#tab/tabid-cmdline)
 
-A Q # program parancssorból való futtatásához csak kis módosításra van szükség a Q # fájlra.
+A Q# program parancssorból való futtatásához csak kis módosításra van szükség a Q# fájlban.
 
 Egyszerűen vegyen fel `@EntryPoint()` egy sort a művelet definícióját megelőzően:
 
@@ -274,17 +277,17 @@ Végrehajtáskor a `Message` - `DumpMachine` konzolon az alábbi és kimeneteket
 Hozzon létre egy Python-gazda fájlt: `host.py` .
 
 A gazda fájl a következőképpen lett kiépítve: 
-1. Először importáljuk a `qsharp` modult, amely a Q # együttműködési képességhez regisztrálja a modul betöltőjét. 
-    Ez lehetővé teszi, hogy a q # névterek (például a `NamespaceQFT` q # fájlban definiált) Python-modulokként jelenjenek meg, amelyből a q # műveletei importálhatók.
-2. Ezután importálja a Q # azon műveleteit, amelyeket a rendszer közvetlenül meghív---ebben az esetben: `Perform3qubitQFT` .
-    Csak a beléptetési pontot kell importálni a Q # programba (azaz _nem_ a ( `H` z `R1` ) és a (z).
-3. A Q # műveletek vagy függvények szimulálása esetén az űrlap használatával `<Q#callable>.simulate(<args>)` futtassa őket a `QuantumSimulator()` célszámítógépen. 
+1. Először importáljuk a `qsharp` modult, amely regisztrálja a modul-betöltőt az Q# együttműködési képességhez. 
+    Ez lehetővé teszi Q# , hogy a névterek (például a `NamespaceQFT` fájlban definiált Q# ) Python-modulokként jelenjenek meg, amelyből importálhat Q# műveleteket.
+2. Ezután importálja Q# azokat a műveleteket, amelyeket a rendszer közvetlenül hív meg---ebben az esetben `Perform3qubitQFT` .
+    Csak a beléptetési pontot kell importálnia egy Q# programba (például _nem_ olyan műveletekre, mint a `H` és `R1` , amelyeket más műveletek hívnak meg, Q# de a klasszikus gazdagép soha nem).
+3. A Q# műveletek vagy függvények szimulálása során az űrlap használatával `<Q#callable>.simulate(<args>)` futtassa őket a `QuantumSimulator()` célszámítógépen. 
 
 > [!NOTE]
 > Ha azt szeretnénk, hogy egy másik gépen, például a-ben hívjuk a műveletet, `ResourceEstimator()` egyszerűen használjuk a következőt: `<Q#callable>.estimate_resources(<args>)` .
-> Általánosságban elmondható, hogy a Q # műveletei a futtatott gépektől függetlenek, de bizonyos funkciók, például `DumpMachine` eltérően viselkednek.
+> Általánosságban elmondható, Q# hogy a műveletek a futtatott gépektől függetlenek, de bizonyos funkciók, például `DumpMachine` eltérően viselkednek.
 
-4. A szimuláció végrehajtásakor a művelet hívása a Q # fájlban meghatározott értékeket fogja visszaadni.
+4. A szimuláció végrehajtásakor a művelet hívása a fájlban meghatározott értékeket ad vissza Q# .
     Egyelőre nem tért vissza, de később láthatjuk az értékek hozzárendelésének és feldolgozásának példáját.
     A kezünkben és a klasszikusan megjelenő eredményekkel bármit megtehetünk, amit szeretne.
 
@@ -310,7 +313,7 @@ A C#-gazdagép négy részből áll:
 2. A kvantumalgoritmushoz szükséges összes argumentum kiszámítása.
     Ebben a példában nincs ilyen.
 3. A kvantumalgoritmus futtatása. 
-    Mindegyik Q#-művelet létrehoz egy azonos nevű C#-osztályt. 
+    Minden Q# művelet létrehoz egy azonos nevű C#-osztályt. 
     Ez az osztály olyan `Run` metódussal rendelkezik, amely **aszinkron módon** hajtja végre a műveletet.
     A végrehajtás azért aszinkron módú, mert a tényleges hardveren végzett végrehajtás aszinkron módon fog történni. 
     Mivel a `Run` metódus aszinkron módon van meghívva, a `Wait()` metódust hívjuk. Ez a művelet addig blokkolja a végrehajtást, amíg a feladat befejeződik, és szinkron módon visszaadja az eredményt. 
@@ -393,7 +396,7 @@ A kinyomtatott kimenet tehát azt szemlélteti, hogy a programozott kapuk átala
 
 $ $ \ket{\psi} \_ {Initial} = \ket {000} $ $
 
-erre: 
+a következőre: 
 
 $ $ \begin{align} \ket{\psi} \_ {Final} &= \frac {1} {\sqrt {8} } \left (\ket {000} + \ket {001} + \ket {010} + \ket {011} + \ket {100} + \ket {101} + \ket {110} + \ket {111} \right) \\ \\ &= \frac {1} {\sqrt{2 ^ n}} \sum \_ {j = 0} ^ {2 ^ n-1} \ket{j}, \end{align} $ $
 
@@ -407,7 +410,7 @@ Sajnos a kvantummechanika sarokköve azt jelzi, hogy egy valódi Quantum rendsze
 Számos kvantum-mérés létezik, de az alapszintű: az egyetlen qubits kivetítéses mérésekre koncentrálunk.
 A mérések egy adott alapon (például a $ \{ \ket {0} , \ket {1} \} $) számított érték alapján a qubit-állapotot a rendszer az adott állapotban mérte meg,---így megsemmisíti a kettő közötti felfekvést.
 
-A Q # programon belüli mérések megvalósításához a `M` (from) műveletet használjuk `Microsoft.Quantum.Intrinsic` , amely egy `Result` típust ad vissza.
+A programokon belüli mérések megvalósításához Q# a `M` (kezdő) műveletet használjuk `Microsoft.Quantum.Intrinsic` , amely egy `Result` típust ad vissza.
 
 Először is módosítjuk a `Perform3QubitQFT` műveletet, hogy a függvény helyett a mérési eredmények egy tömbjét adják vissza `Result[]` `Unit` .
 
@@ -438,7 +441,7 @@ A tömbben [`IndexRange`](xref:microsoft.quantum.arrays.indexrange) hívott füg
 Az egyes mért `Result` típusok ( `Zero` vagy `One` ) bekerülnek a megfelelő index helyére `resultArray` egy Update-and-reassign utasítással.
 
 > [!NOTE]
-> Ennek az utasításnak a szintaxisa egyedi a Q # típushoz, de megfelel a hasonló változó ismételt hozzárendelésének, `resultArray[i] <- M(qs[i])` más nyelveken, például F # és R nyelven.
+> Az utasítás szintaxisa egyedi Q# , de megfelel a hasonló változó ismételt hozzárendelésének, `resultArray[i] <- M(qs[i])` más nyelveken, például F # és R nyelven.
 
 A kulcsszó `set` mindig a használatával kötött változók ismételt hozzárendelésére szolgál `mutable` .
 
@@ -501,7 +504,7 @@ Ellenkező esetben frissítse a gazdagép programját a visszaadott tömb feldol
 
 #### <a name="command-line"></a>[Parancssor](#tab/tabid-cmdline)
 
-Ha jobban meg szeretné ismerni a visszaadott tömböt, amely a konzolon lesz kinyomtatva, a Q # fájlban is hozzáadhat egy másikat, `Message` közvetlenül a következő `return` utasítás előtt:
+Ha jobban meg szeretné ismerni a visszaadott tömböt, amelyet a konzolon fog kinyomtatni, a `Message` következő utasítás előtt hozzáadhat egy másikat a Q# fájlhoz `return` :
 
 ```qsharp
         Message("Post-QFT measurement results [qubit0, qubit1, qubit2]: ");
@@ -694,12 +697,12 @@ a többi névtér- `open` utasítással.
 Az eredményül kapott kimenetben látni fogja a fokozatos kivetítést az alterületekre, ahogy az egyes qubit mérik.
 
 
-## <a name="use-the-q-libraries"></a>A Q # kódtárak használata
-Ahogy azt a bevezetésben is említettük, a Q # nagyobb teljesítményének köszönhetően a tény, hogy lehetővé teszi, hogy elvonta az egyes qubits foglalkozó gondokat.
+## <a name="use-the-no-locq-libraries"></a>A Q# kódtárak használata
+Ahogy azt a bevezetésben is említettük, a nagy része az, Q# hogy lehetővé teszi, hogy elvonta az egyes qubits foglalkozó aggodalmakat.
 Ha teljes körű, alkalmazható kvantum-programokat szeretne fejleszteni, ne aggódjon, hogy egy `H` adott művelet egy adott rotáció előtt vagy után leáll-e. 
 
-A Q # függvénytárak tartalmazzák a [QFT](xref:microsoft.quantum.canon.qft) műveletet, amely egyszerűen elvégezhető, és tetszőleges számú qubits alkalmazható.
-A kipróbáláshoz adjon meg egy új műveletet a Q # fájlban, amelynek tartalma megegyezik `Perform3QubitQFT` , de az elsőtől `H` a `SWAP` helyébe két egyszerű vonal lép:
+A Q# kódtárak tartalmazzák a [QFT](xref:microsoft.quantum.canon.qft) műveletet, amely egyszerűen elvégezhető, és tetszőleges számú qubits alkalmazható.
+A kipróbáláshoz adjon meg egy új műveletet a Q# fájlban, amelynek a tartalma megegyezik `Perform3QubitQFT` , de az elsőtől `H` a `SWAP` helyébe két egyszerű sor lép:
 ```qsharp
             let register = BigEndian(qs);    //from Microsoft.Quantum.Arithmetic
             QFT(register);                   //from Microsoft.Quantum.Canon
@@ -707,7 +710,7 @@ A kipróbáláshoz adjon meg egy új műveletet a Q # fájlban, amelynek tartalm
 Az első sor egyszerűen létrehoz egy [`BigEndian`](xref:microsoft.quantum.arithmetic.bigendian) kifejezést a qubits lefoglalt tömbből, `qs` amely a [QFT](xref:microsoft.quantum.canon.qft) művelet argumentumként való végrehajtása.
 Ez megfelel a regisztrációban szereplő qubits index szerinti rendezésének.
 
-Ahhoz, hogy hozzáférhessenek ezekhez a műveletekhez, adja hozzá a `open` megfelelő névterekhez tartozó utasításokat a Q # fájl elején:
+Ahhoz, hogy hozzáférhessenek ezekhez a műveletekhez, adja hozzá a `open` megfelelő névterekhez tartozó utasításokat a fájl elejéhez Q# :
 ```qsharp
     open Microsoft.Quantum.Canon;
     open Microsoft.Quantum.Arithmetic;
@@ -715,7 +718,7 @@ Ahhoz, hogy hozzáférhessenek ezekhez a műveletekhez, adja hozzá a `open` meg
 
 Most állítsa be úgy a gazda programot, hogy meghívja az új művelet nevét (pl. `PerformIntrinsicQFT` ), és adjon neki egy örvényt.
 
-Ha meg szeretné tekinteni a Q # Library-műveletek használatának valódi előnyeit, módosítsa a qubits számát a következőre `3` :
+Ha szeretné megtekinteni a Q# könyvtári műveletek valódi előnyeit, módosítsa a qubits számát a következőre `3` :
 ```qsharp
         mutable resultArray = new Result[4]; 
 

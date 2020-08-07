@@ -1,23 +1,26 @@
 ---
-title: 'Quantum-algoritmusok a Q-ban #'
+title: Quantum-algoritmusok a-benQ#
 description: Ismerje meg az alapvető kvantum-számítási algoritmusokat, beleértve az amplitúdó-erősítést, a Fourier-transzformációt, a drapériát és a Beauregard-kiegészítéseket, valamint a fázisok
 author: QuantumWriter
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.libraries.standard.algorithms
-ms.openlocfilehash: 7f4916353c53d6459356243098281ccb16b17278
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 0b5972480061c460345057285bbfe53305acc122
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871314"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868814"
 ---
 # <a name="quantum-algorithms"></a>Quantum algoritmusok #
 
 ## <a name="amplitude-amplification"></a>Amplitúdó-erősítés ##
 
-Az *amplitúdó-erősítés* a kvantum-számítástechnika alapvető eszközeinek egyike. Ez az alapvető elképzelés, hogy a megalapozott kutatás, az amplitúdó-becslés és számos Quantum Machine learning algoritmus.  Számos változat létezik, és a Q #-ban egy általános verziót biztosítunk, amely a részleges reflexiókkal ellátott, részben az alkalmazás legszélesebb területét lehetővé tevő, részleges reflexiókkal rendelkező, általánosan elérhető verzión alapul.
+Az *amplitúdó-erősítés* a kvantum-számítástechnika alapvető eszközeinek egyike. Ez az alapvető elképzelés, hogy a megalapozott kutatás, az amplitúdó-becslés és számos Quantum Machine learning algoritmus.  Számos változat létezik, és a-ben Q# egy általános verziót biztosítunk, amely a részleges reflexiókkal ellátott, az alkalmazás legszélesebb területét lehetővé tevő, részben megjelenő, a teljes adatmennyiséget eredményező,
 
 Az amplitúdó-erősítés mögötti központi elképzelés az, hogy kiterjesztheti a kívánt eredmény valószínűségét a reflexiók sorrendjének végrehajtásával.  Ezek a reflexiók a kezdeti állapotot közelebb viszik a kívánt cél állapothoz, amelyet gyakran jelölt állapotnak nevezünk.  Pontosabban, ha a kiindulási állapot jelölésének valószínűsége jelölt állapotban van, a $ \sin ^ 2 (\theta) $, majd az amplitúdó-$m erősítés alkalmazása után a siker valószínűsége $ \sin ^ 2 ((2m + 1) \theta) $ lesz.  Ez azt jelenti, hogy ha a $ \theta = \ Pi/[2 (2n + 1)] $ értéket adja meg a $ $n $ értéknél, akkor az amplitúdó-erősítés képes növelni a siker valószínűségét $100 \\ % $ után $n $ iterációk amplitúdó-erősítéssel.  Mivel a $ \theta = \sin ^ {-1} (\sqrt{\Pr (sikeres)}) $ Ez azt jelenti, hogy a sikeres determinisztikus módon beszerzéséhez szükséges Ismétlések száma másodfokúan alacsonyabb, mint a várt szám, amely nem determinisztikus módon véletlenszerű mintavétel használatával.
 
@@ -27,7 +30,7 @@ Az amplitúdó-erősítés mögötti logika közvetlenül a $Q $ Eigen-felbomlá
 
 Egy másik hasznos tulajdonság, amely abból ered, hogy a sajátérték $ \theta $ közvetlenül kapcsolódik annak valószínűségéhez, hogy a kezdeti állapot meg lesz jelölve (abban az esetben, ha $P _0 $ egy kivetítő csak a kezdeti állapotra).  Mivel a eigenphases $Q $ a $2 \ THÉTA = 2 \ Sin ^ {-1} (\sqrt{\Pr (sikeres)}) $, akkor a következő lépés az, hogy ha a fázisok becslését $Q $ értékre alkalmazzuk, akkor megtudhatjuk, hogy mi a siker valószínűsége egy egységes kvantum-eljárás esetében.  Ez azért hasznos, mert a kvantum-eljáráshoz tartozó, másodfokú módon kevesebb alkalmazásra van szükség, hogy megismerje a siker valószínűségét, mint egyébként.
 
-A Q # amplitúdó-erősítést mutat be a feledékenység amplitúdó-erősítésének specializációja.  A feledékenység amplitúdó-erősítése ezt a monikert keresi, mert a kezdeti eigenspace kivetítőnek nem kell kivetítőnek lennie a kezdeti állapothoz.  Ebben az értelemben a protokoll a kezdeti állapotba kerül.  A feledékenység amplitúdó-erősítésének legfontosabb alkalmazása az egységes Hamilton-szimulációs módszerek bizonyos *lineáris kombinációjában* van, amelyben a kezdeti állapot ismeretlen, de a szimulált Ancilla-regiszterrel együtt válik elérhetővé a szimulációs protokollban.  Ha a Ancilla-regisztrációt rögzített értékre kell mérni, tegyük fel, hogy az $0 $, majd az ilyen szimulációs módszerek alkalmazza a kívánt egységes átalakítást a fennmaradó qubits (ezt a rendszerregisztrációnak nevezik).  Az összes többi mérési eredmény azonban sikertelen.  A feledékenység amplitúdó-erősítése lehetővé teszi a mérés sikerességének valószínűségét a $100 \\ % $ értékre a fenti indokok használatával.  Emellett a hagyományos amplitúdó-erősítés abban az esetben is megfelel, ha a rendszer regisztrálása üres.  Ezért a Q # a megfeledkezett az amplitúdó erősítését használja az alapvető amplitúdó-erősítési alrutinként.
+Q#bevezeti az amplitúdó-erősítést a feledékenység amplitúdó-erősítésének specializációja.  A feledékenység amplitúdó-erősítése ezt a monikert keresi, mert a kezdeti eigenspace kivetítőnek nem kell kivetítőnek lennie a kezdeti állapothoz.  Ebben az értelemben a protokoll a kezdeti állapotba kerül.  A feledékenység amplitúdó-erősítésének legfontosabb alkalmazása az egységes Hamilton-szimulációs módszerek bizonyos *lineáris kombinációjában* van, amelyben a kezdeti állapot ismeretlen, de a szimulált Ancilla-regiszterrel együtt válik elérhetővé a szimulációs protokollban.  Ha a Ancilla-regisztrációt rögzített értékre kell mérni, tegyük fel, hogy az $0 $, majd az ilyen szimulációs módszerek alkalmazza a kívánt egységes átalakítást a fennmaradó qubits (ezt a rendszerregisztrációnak nevezik).  Az összes többi mérési eredmény azonban sikertelen.  A feledékenység amplitúdó-erősítése lehetővé teszi a mérés sikerességének valószínűségét a $100 \\ % $ értékre a fenti indokok használatával.  Emellett a hagyományos amplitúdó-erősítés abban az esetben is megfelel, ha a rendszer regisztrálása üres.  Ez az oka, hogy az amplitúdó-erősítést az Q# alapvető amplitúdó-erősítési alrutinként használja.
 
 Az általános rutin ( `AmpAmpObliviousByReflectionPhases` ) két regisztert tartalmaz, amelyek hívására `ancillaRegister` és `systemRegister` . Emellett két Oracle-t is elfogad a szükséges tükrözésekhez. A `ReflectionOracle` csak a `ancillaRegister` két regisztráción alapuló műveleteket végezheti el `ObliviousOracle` . A bemenetet az `ancillaRegister` első reflexiós operátor ($ \boldone-2P_1 $) 1 eigenstate kell inicializálni.
 
@@ -116,4 +119,4 @@ Mivel a vezérlés és a cél regisztrálása a folyamat után nem látható, a 
 Ha feltételezzük, hogy a $ \phi = 2 \pi p/2 ^ k $ értéket egy egész szám $p $ értékre, akkor ezt a következőt ismerjük fel: $ \ket{\psi} = \operatorname{QFT} \ket{p_0 p_1 \dots p_n} $, ahol $p _j $ a $j ^ {\textrm{th}} $ bit of $2 \pi \phi $.
 A Quantum Fourier-transzformáció adjoint alkalmazásával ezért a rendszer kvantum-állapotként kódolja a fázis bináris ábrázolását.
 
-A Q #-ban ezt a művelet valósítja meg <xref:microsoft.quantum.characterization.quantumphaseestimation> , amely a <xref:microsoft.quantum.oracles.discreteoracle> $U ^ millió $ $m $ pozitív egész számú függvényének megvalósítását végzi.
+A-ben Q# ezt a műveletet hajtja végre <xref:microsoft.quantum.characterization.quantumphaseestimation> , amely a <xref:microsoft.quantum.oracles.discreteoracle> $U ^ m $ implementációs alkalmazást alkalmazza $m $ pozitív egész számok függvényében.

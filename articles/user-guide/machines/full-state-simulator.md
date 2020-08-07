@@ -1,25 +1,28 @@
 ---
 title: Teljes állapotú Quantum Simulator – Quantum Development Kit
-description: 'Megtudhatja, hogyan futtathatja a Q # programokat a Microsoft Quantum Development Kit teljes állapotú szimulátoron.'
+description: Ismerje meg, hogyan futtathatja a Q# programokat a Microsoft Quantum Development Kit teljes állapotú szimulátoron.
 author: anpaz-msft
 ms.author: anpaz@microsoft.com
 ms.date: 06/26/2020
 ms.topic: article
 uid: microsoft.quantum.machines.full-state-simulator
-ms.openlocfilehash: 563fdbd2a45461d112e4c46651eddd75c6fc3db2
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: b15af66123dadae09815cde1966c69b3ce2e9e64
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871178"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868338"
 ---
 # <a name="quantum-development-kit-qdk-full-state-simulator"></a>Quantum Development Kit (QDK) teljes állapotú szimulátor
 
-A QDK teljes állapotú szimulátort biztosít, amely a helyi számítógépen lévő kvantum-gépet szimulálja. A teljes állapot szimulátorral a Q #-ban írt kvantum-algoritmusokat futtathat és hibakeresést végezhet, akár 30 qubits is felhasználhatja. A teljes állapot szimulátor hasonló a [LIQ $ UI | \rangle $](http://stationq.github.io/Liquid/) platformon a Microsoft Research szolgáltatásban használt kvantum-szimulátorhoz.
+A QDK teljes állapotú szimulátort biztosít, amely a helyi számítógépen lévő kvantum-gépet szimulálja. A teljes állapot szimulátorral futtathatja és hibakeresést végezhet a-ben írt kvantum-algoritmusokkal, és akár 30 qubits is felhasználhat Q# . A teljes állapot szimulátor hasonló a [LIQ $ UI | \rangle $](http://stationq.github.io/Liquid/) platformon a Microsoft Research szolgáltatásban használt kvantum-szimulátorhoz.
 
 ## <a name="invoking-and-running-the-full-state-simulator"></a>A teljes állapotú szimulátor meghívása és futtatása
 
-A teljes állapotú szimulátort a osztályon keresztül teheti elérhetővé `QuantumSimulator` . További részleteket a [Q # program futtatásának módjai](xref:microsoft.quantum.guide.host-programs)című témakörben talál.
+A teljes állapotú szimulátort a osztályon keresztül teheti elérhetővé `QuantumSimulator` . További részletekért tekintse [meg a Q# programok futtatásának módjait](xref:microsoft.quantum.guide.host-programs).
 
 ### <a name="invoking-the-simulator-from-c"></a>A szimulátor meghívása C-ről #
 
@@ -36,7 +39,7 @@ Mivel az `QuantumSimulator` osztály implementálja az <xref:System.IDisposable>
 
 ### <a name="invoking-the-simulator-from-python"></a>A szimulátor meghívása a Pythonból
 
-Használja a Q # Python könyvtár [szimulálása ()](https://docs.microsoft.com/python/qsharp/qsharp.loader.qsharpcallable) metódusát az importált q # művelettel:
+Használja a [szimulálás ()](https://docs.microsoft.com/python/qsharp/qsharp.loader.qsharpcallable) metódust a Q# Python-könyvtárból az importált Q# művelettel:
 
 ```python
 qubit_result = myOperation.simulate()
@@ -44,7 +47,7 @@ qubit_result = myOperation.simulate()
 
 ### <a name="invoking-the-simulator-from-the-command-line"></a>A szimulátor meghívása a parancssorból
 
-Ha Q # programot futtat a parancssorból, a teljes állapot szimulátor az alapértelmezett célszámítógép. Igény szerint a **--Simulator** (vagy **-s** parancsikon) paraméterrel megadhatja a kívánt célszámítógépet. Mindkét alábbi parancs a teljes állapotú szimulátor használatával futtat egy programot. 
+Ha a Q# parancssorból futtat egy programot, a teljes állapot szimulátor az alapértelmezett célszámítógép. Igény szerint a **--Simulator** (vagy **-s** parancsikon) paraméterrel megadhatja a kívánt célszámítógépet. Mindkét alábbi parancs a teljes állapotú szimulátor használatával futtat egy programot. 
 
 ```dotnetcli
 dotnet run
@@ -53,7 +56,7 @@ dotnet run -s QuantumSimulator
 
 ### <a name="invoking-the-simulator-from-juptyer-notebooks"></a>A szimulátor meghívása Juptyer-jegyzetfüzetekről
 
-A Q # művelet futtatásához használja az IQ # Magic Command [% szimulálása](xref:microsoft.quantum.iqsharp.magic-ref.simulate) parancsot.
+A Q# művelet futtatásához használja a I Magic Command [% szimulálás](xref:microsoft.quantum.iqsharp.magic-ref.simulate) parancsot Q# .
 
 ```
 %simulate myOperation
@@ -76,6 +79,6 @@ A teljes körű állapot szimulátor a [OpenMP dokumentáció](http://www.openmp
 
 ## <a name="see-also"></a>Lásd még
 
-- [Quantum-erőforrások kalkulátora](xref:microsoft.quantum.machines.resources-estimator)
-- [Quantum Toffoli szimulátor](xref:microsoft.quantum.machines.toffoli-simulator)
+- [Kvantumerőforrás-becslő](xref:microsoft.quantum.machines.resources-estimator)
+- [Toffoli-kvantumszimulátor](xref:microsoft.quantum.machines.toffoli-simulator)
 - [Quantum Trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro)

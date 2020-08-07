@@ -6,18 +6,21 @@ ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.qubits
-ms.openlocfilehash: 1655d18ab9d8638ad356e6fb90994b5c1fd76a25
-ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 6808a852ee0de7d3a38ea44e9637eeaa6bea382a
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85885294"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87867862"
 ---
 # <a name="working-with-qubits"></a>Munkavégzés qubitekkel
 
 A qubits a kvantum-számítástechnika alapvető információi. A qubits általános bemutatása: a kvantum- [számítástechnika ismertetése](xref:microsoft.quantum.overview.understanding), valamint a matematikai ábrázolás mélyebb megismerése [a Qubit](xref:microsoft.quantum.concepts.qubit). 
 
-Ez a cikk bemutatja, hogyan használható a qubits, és hogyan használható a Q # programban. 
+Ez a cikk azt ismerteti, hogyan használható a qubits egy Q# programban. 
 
 > [!IMPORTANT]
 >A cikkben tárgyalt utasítások egyike sem érvényes a függvények törzsében. Csak a műveleteken belül érvényesek.
@@ -25,7 +28,7 @@ Ez a cikk bemutatja, hogyan használható a qubits, és hogyan használható a Q
 ## <a name="allocating-qubits"></a>Qubits foglalása
 
 Mivel a fizikai qubits értékes erőforrások a kvantum-számítógépeken, a fordító feladata, hogy a lehető leghatékonyabban használják őket.
-Ezért meg kell adnia a Q #-t, hogy *lefoglalja* a qubits egy adott utasítás blokkon belül.
+Ezért meg kell adnia, hogy a Q# qubits egy adott utasítás blokkon belül kell-e *lefoglalni* .
 A qubits kioszthatja egyetlen qubit, vagy qubits tömbként is, amely *regisztrálható*. 
 
 ### <a name="clean-qubits"></a>Qubits tisztítása
@@ -36,7 +39,7 @@ Az utasítás a kulcsszót tartalmazza `using` , majd egy kötést zárójelek k
 A kötés ugyanazt a mintát követi, mint az utasítások: egy vagy több szimbólumot `let` vagy egy szimbólumot, majd egy egyenlőségjelet `=` , és egy értéket, vagy az *inicializálók*egyező rekordját.
 
 Az inicializálók a következők lehetnek: egyetlen qubit, `Qubit()` vagy qubits tömbje, `Qubit[n]` ahol `n` a `Int` kifejezés szerepel.
-Példa:
+Például:
 
 ```qsharp
 using (qubit = Qubit()) {
@@ -65,7 +68,7 @@ Ezek a qubits általában nem tiszta állapotban vannak, azaz nem feltétlenül 
 Ezeket gyakran "piszkos" qubits nevezik, mert az állapotuk ismeretlen, és a kvantum-számítógép memóriájának más részeivel is összekeverhető.
 
 A kötés ugyanazokat a mintákat és szabályokat követi, mint az `using` utasítás.
-Példa:
+Például:
 ```qsharp
 borrowing (qubit = Qubit()) {
     // ...
@@ -82,17 +85,17 @@ A qubits hitelfelvételkor a rendszer először megpróbálja betölteni a kér�
 Ha nincs elég ilyen qubits, akkor az új qubits foglal le a kérelem teljesítéséhez.
 
 A piszkos qubits ismert használati esetei közül a több vezérelt CNEM-kapuk olyan implementációi, amelyek csak nagyon kevés qubits és a növekményes implementációt igénylik.
-Ha példát kíván használni a Q #-ban, tekintse meg a [hitelfelvételi qubits példát](#borrowing-qubits-example) ebben a cikkben, vagy a [*2n + 2 qubits a Toffoli-alapú moduláris szorzást*](https://arxiv.org/abs/1611.07995) (, Roetteler és Svore 2017) használó algoritmust, amely a kölcsönzött qubits használja.
+A alkalmazásban való használatáról például a Q# cikk a [qubits](#borrowing-qubits-example) című cikkben, a [*2n + 2 qubits pedig a Toffoli-alapú moduláris szorzás*](https://arxiv.org/abs/1611.07995) (a Roetteler és a Svore 2017) használatával című témakörben találhat példát a kölcsönzött qubits használó algoritmusra.
 
 ## <a name="intrinsic-operations"></a>Belső műveletek
 
 A foglalást követően átadhat egy qubit a functions és a Operations szolgáltatásnak.
-Bizonyos értelemben ez azt eredményezi, hogy a Q # program egy qubit tud csinálni, mivel a végrehajtandó műveletek mindegyike műveletként van definiálva.
+Bizonyos értelemben ez azt eredményezi, hogy egy Q# program qubit végezhető el, mivel az elvégezhető műveletek mindegyike műveletként van definiálva.
 
-Ez a cikk néhány hasznos Q # műveletet ismertet, amelyek segítségével használhatja a qubits.
+Ez a cikk néhány hasznos műveletet mutat be, amelyek segítségével használhatja a Q# qubits.
 Ezekről és másokról a [belső műveletek és függvények](xref:microsoft.quantum.libraries.standard.prelude)című témakörben olvashat részletesebben. 
 
-Először is a qubit Pauli-operátorok $X $, $Y $ és $Z $ a belső műveletek [`X`](xref:microsoft.quantum.intrinsic.x) , a [`Y`](xref:microsoft.quantum.intrinsic.y) és a [`Z`](xref:microsoft.quantum.intrinsic.z) , amelyek mindegyike rendelkezik típussal `(Qubit => Unit is Adj + Ctl)` .
+Első lépésként a qubit Pauli-operátorok $X $, $Y $ és $Z $ a Q# belső műveletek, a és a [`X`](xref:microsoft.quantum.intrinsic.x) [`Y`](xref:microsoft.quantum.intrinsic.y) [`Z`](xref:microsoft.quantum.intrinsic.z) , amelyek mindegyike rendelkezik típussal `(Qubit => Unit is Adj + Ctl)` .
 
 A [belső műveletek és függvények](xref:microsoft.quantum.libraries.standard.prelude)című témakörben leírtak szerint $X $-t és így tovább, `X` mint egy kicsit flip művelet vagy nem kapu.
 A `X` művelettel előkészítheti a (z) $ \ket{s_0 s_1 \dots s_n} $ formátumú állapotokat néhány klasszikus bites sztring $s $ esetén:
@@ -124,7 +127,7 @@ operation RunExample() : Unit {
 > [!TIP]
 > Később további kompakt módszereket láthat a művelet megírásához, amelyek nem igénylik a kézi vezérlés folyamatát.
 
-Az olyan állapotokat is előkészítheti, mint például a $ \ket{+} = \left (\ket {0} + \ket {1} \right)/\sqrt {2} $ és a $ \ket {-} = \left (\ket {0} -\ket {1} \Right)/\sqrt {2} $ a Hadamard Transform $H $ paranccsal, amely a Q # által a belső műveletben [`H`](xref:microsoft.quantum.intrinsic.h) (Qubit => egység: Adj + CTL)
+Az olyan állapotokat is előkészítheti, mint például a $ \ket{+} = \left (\ket {0} + \ket {1} \right)/\sqrt {2} $ és a $ \ket {-} = \left (\ket {0} -\ket {1} \Right)/\sqrt {2} $ a Hadamard Transform $H $ paranccsal, amelyet Q# a belső művelet [`H`](xref:microsoft.quantum.intrinsic.h) (Qubit => egység: Adj + CTL) ") használ:
 
 ```qsharp
 operation PreparePlusMinusState(bitstring : Bool[], register : Qubit[]) : Unit {
@@ -242,4 +245,4 @@ Ez a kód egy másik Canon-függvénnyel hasonlítható össze `MultiControlledX
 
 ## <a name="next-steps"></a>Következő lépések
 
-Tudnivalók a [vezérlési folyamatról](xref:microsoft.quantum.guide.controlflow) a Q #-ban.
+Ismerje meg a [vezérlés folyamatát](xref:microsoft.quantum.guide.controlflow) a alkalmazásban Q# .

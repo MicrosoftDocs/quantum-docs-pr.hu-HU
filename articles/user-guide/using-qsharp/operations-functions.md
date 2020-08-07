@@ -1,28 +1,31 @@
 ---
-title: 'Műveletek és függvények a Q-ban #'
+title: Műveletek és függvények a-benQ#
 description: Műveletek és függvények definiálása és hívása, valamint az ellenőrzött és adjoint műveletekre vonatkozó specializációk.
 author: gillenhaalb
 ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.operationsfunctions
-ms.openlocfilehash: 08eaf150a38afd789f8a23f567ff111d002bac07
-ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 76437c83df894fa86409e680f961d97e267c6869
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85884213"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87867879"
 ---
-# <a name="operations-and-functions-in-q"></a>Műveletek és függvények a Q-ban #
+# <a name="operations-and-functions-in-no-locq"></a>Műveletek és függvények a-benQ#
 
 ## <a name="defining-new-operations"></a>Új műveletek definiálása
 
-A műveletek a Q # legfontosabbak.
-A bejelentést követően meghívhatók a klasszikus .NET-alkalmazásokból, például szimulátor használatával vagy a Q #-on belüli egyéb műveletekkel.
-A Q # által definiált minden művelet tetszőleges számú egyéb műveletet hívhat meg, beleértve a nyelv által meghatározott beépített belső műveleteket is. A Q # konkrét módon határozza meg, hogy ezek a belső műveletek a célszámítógéptől függenek.
+A műveletek a legfontosabbak Q# .
+A bejelentést követően meghívhatók a klasszikus .NET-alkalmazásokból, például szimulátor vagy más, a alkalmazáson belüli műveletekkel Q# .
+A ben definiált minden művelet Q# tetszőleges számú egyéb műveletet hívhat meg, beleértve a nyelv által meghatározott beépített belső műveleteket is. A belső műveletek meghatározásának konkrét módja a Q# célszámítógéptől függ.
 A fordítás során az egyes műveletek .NET-osztályként jelennek meg, amely megadható a célszámítógép számára.
 
-Minden Q # forrásfájl tetszőleges számú műveletet meghatározhat.
+Minden Q# forrásfájl tetszőleges számú műveletet meghatározhat.
 A művelet nevének a névtéren belül egyedinek kell lennie, és nem ütközhet a típus vagy a függvény nevével.
 
 A műveleti deklaráció a kulcsszóból áll, amelyet a művelet nevét, a művelethez tartozó `operation` argumentumokat definiáló típust, egy kettőspontot, egy Type jegyzetet ad meg, amely a művelet `:` eredményének típusát írja le, opcionálisan megadhatja a műveleti jellemzőket, egy nyitó kapcsos zárójelet, majd a műveleti deklaráció törzsét kapcsos zárójelek közé `{ }` .
@@ -61,16 +64,16 @@ operation DecodeSuperdense(here : Qubit, there : Qubit) : (Result, Result) {
 ```
 
 > [!NOTE]
-> A Q # minden művelete pontosan egy bemenetet vesz igénybe, és pontosan egy kimenetet ad vissza.
+> A minden művelete Q# pontosan egy bemenetet vesz fel, és pontosan egy kimenetet ad vissza.
 > Több bemenet és kimenet is szerepel a *rekordok*használatával, amely egyszerre több értéket gyűjt össze egyetlen értékkel.
-> Ebben a tekintetben a Q # egy "rekordból álló rekord kijelentkezés" nyelv.
+> Ebben a tekintetben Q# a egy "rekordos kijelentkezés" nyelv.
 > Ezt a fogalmat követve az üres zárójelek egy halmaza, `()` amelynek a típusa "Empty" (üres `Unit` ) rekord.
 
 ## <a name="controlled-and-adjoint-operations"></a>Vezérelt és Adjoint műveletek
 
-Ha egy művelet egy egységes átalakítást valósít meg, a Q # számos műveletének esetében, akkor megadható, hogy a művelet hogyan *adjointed* vagy *vezérelve*legyen. Egy művelet *adjoint* -specializálása meghatározza, hogy a művelet milyen hatással van az "inverz" értékre, míg a *szabályozott* specializáció meghatározza, hogy a művelet hogyan működik, ha az alkalmazás egy adott kvantum-regiszter állapotára van feltétele.
+Ha egy művelet egy egységes átalakítást valósít meg, mint a számos művelet esetében, Q# akkor megadható, hogy a művelet hogyan *adjointed* vagy *vezérelve*legyen. Egy művelet *adjoint* -specializálása meghatározza, hogy a művelet milyen hatással van az "inverz" értékre, míg a *szabályozott* specializáció meghatározza, hogy a művelet hogyan működik, ha az alkalmazás egy adott kvantum-regiszter állapotára van feltétele.
 
-A Adjoints elengedhetetlen a kvantum-számítási feladatok számos aspektusa szempontjából. Ha például egy hasznos Q # programozási technikával kapcsolatos példát tárgyal, tekintse meg a jelen cikk [conjugations](#conjugations) . 
+A Adjoints elengedhetetlen a kvantum-számítási feladatok számos aspektusa szempontjából. A hasznos programozási technikák mellett egy ilyen helyzetre például a Q# jelen cikk [conjugations](#conjugations) című szakaszában olvashat. 
 
 Egy művelet ellenőrzött verziója olyan új művelet, amely hatékonyan alkalmazza az alapműveletet, ha az összes vezérlő qubits megadott állapotban van.
 Ha a vezérlő qubits van, akkor az alapszintű műveletet a rendszer következetesen alkalmazza a Felfekvés megfelelő részére.
@@ -83,15 +86,15 @@ Természetesen egy *vezérelt adjoint* specializáció is létezhet, amely megha
 > Egy művelet egymást követő alkalmazása után a adjoint állapota változatlan marad, ahogy azt az a tény mutatja, hogy $UU ^ \dagger = U ^ \dagger U = \id $, az Identity Matrix.
 > Egy vezérelt művelet egységes ábrázolása valamivel árnyaltabb, de további részleteket a [Quantum Computing-fogalmak: több qubits](xref:microsoft.quantum.concepts.multiple-qubits)is talál.
 
-A következő szakasz ismerteti, hogyan hívhatja meg ezeket a különböző specializációkat a Q # kódjában, és hogyan határozhat meg műveleteket a támogatásához.
+A következő szakasz ismerteti, hogyan hívhatja meg ezeket a különféle szakkifejezéseket a Q# kódban, és hogyan határozhat meg műveleteket a támogatásához.
 
 ### <a name="calling-operation-specializations"></a>Hívási művelet specializációi
 
-A *Q # egy olyan* gyár, amely új műveletet határoz meg egy másik műveletből.
-A Q # két standard, a és a `Adjoint` `Controlled` .
+A *-ben egy olyan* Q# gyár, amely új műveletet határoz meg egy másik műveletből.
+A két szabványos, a Q# és a `Adjoint` `Controlled` .
 
 Az új művelet megvalósításának meghatározásakor az üzemben lévők az alapművelet megvalósításához férnek hozzá.
-Így a fellépők összetettebb funkciókkal rendelkezhetnek, mint a hagyományos magasabb szintű függvények. A Q # Type rendszer nem rendelkezik képviselettel a következőben:. Ezért jelenleg nem lehet őket egy változóhoz kötni, vagy argumentumként átadni őket. 
+Így a fellépők összetettebb funkciókkal rendelkezhetnek, mint a hagyományos magasabb szintű függvények. A rendszer nem rendelkezik képviselettel a Q# típusban. Ezért jelenleg nem lehet őket egy változóhoz kötni, vagy argumentumként átadni őket. 
 
 Használjon egy olyan műveletet, amely egy olyan műveletre alkalmazza, amely egy új műveletet ad vissza.
 Ha például a műveletet a `Adjoint` művelettel alkalmazza, az `Y` új műveletet adja vissza `Adjoint Y` . Az új műveletet más műveletekhez hasonlóan hívhatja meg.
@@ -109,7 +112,7 @@ A kihasználó a `Adjoint` saját inverze, azaz `Adjoint Adjoint Op` mindig ugya
 Hasonlóképpen `Controlled X(controls, target)` alkalmazza a `Controlled` műveletet a `X` műveletre egy új művelet létrehozásához, és az új műveletet a és a rendszerre alkalmazza `controls` `target` .
 
 > [!NOTE]
-> A Q # esetében az ellenőrzött verziók mindig a vezérlési qubits tömbjét foglalják magukban, és az ellenőrzés mindig a számítási ( `PauliZ` ) `One` állapot, a $ \ket $ qubits összes vezérlője alapján történik {1} .
+> A-ben az Q# ellenőrzött verziók mindig a vezérlési qubits egy tömbjét használják, és az ellenőrzés mindig a számítási ( `PauliZ` ) `One` állapot, a $ \ket $ qubits összes vezérlője alapján zajlik {1} .
 > A más állapotokon alapuló vezérlést úgy érheti el, hogy a megfelelő egységes műveletet alkalmazza a vezérlési qubits az ellenőrzött művelet előtt, majd alkalmazza az egységes művelet inverzét az ellenőrzött művelet után.
 > Ha például egy `X` műveletet egy vezérlő qubit egy vezérelt művelet előtt és után alkalmaz, akkor a művelet az `Zero` adott qubit állapotára ($ \ket $) irányítja a műveletet, és az állapotra vonatkozó {0} `H` vezérlők előtt és után alkalmaz egy műveletet `PauliX` `One` , azaz az-1 sajátérték a Pauli X, a $ \ket {-} \mathrel{: =} (\ket {0} -\ket {1} )/\sqrt $ helyett, nem pedig {2} az `PauliZ` `One` állapotot.
 
@@ -140,7 +143,7 @@ Az előző példákban szereplő első művelet deklarációjában a műveletek 
 A `DecodeSuperdense` mértékek beleszámítása nem egy egységes művelet, ezért nem léteznek szabályozott, nem adjoint specializációk (az ilyen művelet visszaadására vonatkozó követelmény visszahívása `Unit` ).
 Mivel azonban `BitFlip` egyszerűen végrehajtja az egységes <xref:microsoft.quantum.intrinsic.x> műveletet, megadhatja azt mindkét specializációval.
 
-Ez a szakasz részletesen ismerteti, hogyan lehet felvenni a szakosodások létezését a Q # műveleti deklarációba, így lehetővé teszi számukra, hogy meghívják őket a vagy a-rel együtt `Adjoint` `Controlled` .
+Ez a szakasz részletesen ismerteti, hogyan lehet felvenni a specializációkat a Q# műveleti deklarációkban, így lehetővé teszi számukra, hogy meghívják őket a vagy a-rel együtt `Adjoint` `Controlled` .
 Ha további információt szeretne arról, hogy milyen helyzetek érvényesek, vagy nem érvényesek bizonyos specializációk bejelentésére, tekintse meg a jelen cikkben szereplő, [a specializációk érvényességét meghatározó körülményeket](#circumstances-for-validly-defining-specializations) .
 
 A művelet jellemzői határozzák meg, hogy milyen típusú elválasztók alkalmazhatók a deklarált műveletre, és milyen hatással vannak rájuk. Ezeknek a specializációknak a megléte a művelet aláírásának részeként deklarálható, pontosabban a következő műveletekkel kapcsolatos megjegyzésekkel: vagy `is Adj` , `is Ctl` vagy `is Adj + Ctl` .
@@ -189,7 +192,7 @@ A következőkben a lehetőségek teljes köre látható, néhány példa a expl
 
 #### <a name="explicit-specialization-declarations"></a>Explicit specializációs deklarációk
 
-A Q # műveletei a következő explicit specializációs deklarációkat tartalmazhatják:
+Q#a műveletek a következő explicit specializációs deklarációkat tartalmazhatják:
 
 - A `body` specializáció meghatározza a művelet végrehajtását, és nem alkalmazta a műveletet.
 - A `adjoint` specializáció meghatározza a művelet megvalósítását az `Adjoint` alkalmazottal.
@@ -224,7 +227,7 @@ Az `auto` irányelv a következő létrehozott irányelvre lesz feloldva, ha a m
 > [!TIP]   
 > Ha egy művelet önadjoint, explicit módon megadhatja a adjoint vagy az irányított adjoint specializációt az `self` előállítási irányelv alapján, hogy a fordító felhasználhassa ezeket az információkat optimalizálási célokra.
 
-A felhasználó által definiált implementációt tartalmazó specializációs nyilatkozat egy argumentumból áll, amelyet a specializációt megvalósító Q # kóddal rendelkező utasítási blokk követ.
+A felhasználó által definiált implementációt tartalmazó specializációs nyilatkozat egy olyan argumentumot tartalmaz, amelyet a Q# specializációt megvalósító kóddal rendelkező utasítás követ.
 A argumentumok listájában `...` a rendszer a művelet egészére vonatkozóan deklarált argumentumokat jelöli.
 `body`És esetében `adjoint` az argumentumok listájának mindig a `(...)` következőnek kell lennie: és esetében `controlled` `adjoint controlled` az argumentumok listájának olyan szimbólumnak kell lennie, amely a vezérlési qubits tömbjét jelöli, majd a jelet `...` zárójelek közé kell tenni, például: `(controls,...)` .
 
@@ -326,9 +329,9 @@ Egy olyan művelet esetében, amelynek a törzse olyan más műveletekre irányu
 
 Használjon olyan műveletet, amelyben további, a rendszer által támogatott, de az aláírással rendelkező művelet is használható. Ha például egy típusú műveletet használ, bárhol használhatja a `(Qubit => Unit is Adj)` típusú műveletet `(Qubit => Unit)` .
 
-A Q # *a* hívható visszatérési típusok tekintetében a következő: egy típust visszaadó meghívható, amely `'A` kompatibilis az ugyanazzal a bemeneti típussal és a (z) rendszerrel kompatibilis eredményhalmaz típussal `'A` .
+Q#a *covariant* meghívásos visszatérési típusok esetében: egy típust visszaadó meghívót, amely `'A` azonos típusú bemeneti típussal és az azzal kompatibilis eredményhalmaz típussal kompatibilis `'A` .
 
-A Q # *contravariant típusparamétert* a bemeneti típusok tekintetében: egy olyan meghívót, amely bemenetként fogadja a típust, `'A` és kompatibilis az ugyanazzal az eredménnyel, és egy olyan bemeneti típussal, amely kompatibilis a szolgáltatással `'A` .
+Q#a *contravariant típusparamétert* a bemeneti típusokra vonatkozik: egy olyan típusú hívás, amely bemenetként fogadja az adott típust, és kompatibilis a alkalmazással `'A` kompatibilis bemeneti típussal `'A` .
 
 Ez a következő definíciók miatt történik.
 
@@ -357,7 +360,7 @@ képes vagy
 - Egy típus értékének visszaadása a következőből: `(Qubit[] => Unit is Adj + Ctl)` `ConjugateInvertWith` .
 
 > [!IMPORTANT]
-> A Q # 0,3 jelentős változást vezetett be a felhasználó által definiált típusok viselkedésében.
+> Q#0,3 jelentős különbség mutatkozott a felhasználó által definiált típusok viselkedésében.
 
 A felhasználó által definiált típusokat az alapul szolgáló típus burkolt verziójaként, nem pedig altípusként kezeli a rendszer.
 Ez azt jelenti, hogy a felhasználó által definiált típus értéke nem használható, ha a mögöttes típus értéke a várt érték.
@@ -380,7 +383,7 @@ operation ApplyWith<'T>(
 }
 ```
 
-A 0,9-es kiadástól kezdve a Q # támogatja az előző transzformációt megvalósító ragozó utasítást. Az utasítás használatával a művelet a `ApplyWith` következő módon valósítható meg:
+A 0,9-es verziótól kezdődően a Q# támogatja az előző transzformációt megvalósító ragozás utasítást. Az utasítás használatával a művelet a `ApplyWith` következő módon valósítható meg:
 
 ```qsharp
 operation ApplyWith<'T>(
@@ -405,12 +408,12 @@ Mivel a blokk részeként használt változó változók nem használhatók fel 
 
 ## <a name="defining-new-functions"></a>Új függvények definiálása
 
-A functions kizárólag determinisztikus, a klasszikus rutinok a Q #-ban, amelyek különböznek a műveletektől, és nem megengedett, hogy a kimeneti érték kiszámításán kívül más effektusok is legyenek.
+A függvények tisztán determinisztikus, klasszikus rutinok, amelyek a-ben Q# különböznek, és nem megengedett, hogy a kimeneti érték kiszámításán kívül más effektusok is legyenek.
 Különösen a függvények nem hívhatnak meg műveleteket; qubits bevonása, lefoglalása vagy kölcsönzése; véletlenszerű számok mintavételezése; Ellenkező esetben a bemeneti értéken kívüli állapot függ egy függvénynek.
-Ennek következményeként a Q # függvények *tisztán*vannak rendelve, hogy mindig ugyanazokat a bemeneti értékeket rendelik ugyanahhoz a kimeneti értékekhez.
-Ez a viselkedés lehetővé teszi, hogy a Q # fordítóprogram biztonságosan átrendezje a függvények meghívását a műveleti specializációk létrehozásakor.
+Ennek következményeként a Q# függvények *tisztán*vannak rendelve, hogy mindig ugyanazokat a bemeneti értékeket rendelik ugyanahhoz a kimeneti értékekhez.
+Ez a viselkedés lehetővé teszi Q# , hogy a fordító biztonságosan átrendezje a függvények meghívását a műveleti szakosodások létrehozásakor.
 
-Minden Q # forrásfájl tetszőleges számú funkciót meghatározhat.
+Minden Q# forrásfájl tetszőleges számú funkciót meghatározhat.
 A függvények nevének egyedinek kell lennie a névtéren belül, és nem ütközhet a művelet vagy a típus nevével.
 
 A függvények definiálása hasonlóan működik a művelet definiálásához, azzal a kivétellel, hogy egy függvényhez nem lehet adjoint vagy vezérelt specializációt meghatározni.
@@ -442,7 +445,7 @@ function DotProduct(a : Double[], b : Double[]) : Double {
 
 Ha ez lehetséges, hasznos lehet a klasszikus logikát kiírni a függvények helyett, hogy a műveletek könnyebben használhassák azt. Ha például a korábbi `Square` deklarációt *műveletként*írta volna, akkor a fordító nem tudta garantálni, hogy ugyanazt a bemenetet ugyanazzal a kimenettel fogja létrehozni.
 
-A függvények és a műveletek közötti különbség kihangsúlyozása érdekében vegye figyelembe, hogy egy véletlenszerűen kiválasztott számnak a Q #-műveletből való klasszikus mintavételezési problémája:
+A függvények és a műveletek közötti különbség kihangsúlyozása érdekében vegye figyelembe, hogy az adott műveletből klasszikusan mintavételezésre kerül egy véletlenszerű szám Q# .
 
 ```qsharp
 operation U(target : Qubit) : Unit {
@@ -464,7 +467,7 @@ Másfelől pedig lehetővé teszi, hogy a függvények olyan hívásokat engedé
 
 Számos, a definiálni kívánt függvény és művelet ténylegesen nem támaszkodik a bemenetek típusaira, hanem csak egy másik függvényen vagy műveleten keresztül implicit módon használják a saját típusait.
 Tegyük fel például, hogy a *Térkép* fogalma számos funkcionális nyelvhez közös. a függvény $f (x) $ és Values $ \{ x_1, x_2, \dots, x_n \} $, Map egy új gyűjteményt ad vissza: $ \{ f (x_1), f (x_2), \dots, f (x_n) \} $.
-Ha ezt a Q #-ban szeretné megvalósítani, használja ki azt a tényt, hogy a functions első osztályú.
+Ennek megvalósításához Q# használja ki azt a tényt, hogy a functions első osztályú.
 Íme egy gyors példa, amely `Map` `T` helyőrzőként használja a szükséges típusokat.
 
 ```qsharp
@@ -504,17 +507,17 @@ Emellett, ha új rekordot vagy UDT hoz létre, akkor az új típussal együtt l�
 Ez egy kis mennyiségű ilyen funkció esetében is eltartható, mivel a több és több funkciója is ugyanolyan formában van, mint az `Map` , hogy az új típusok bevezetésének díja aránytalanul nagy lesz a meglehetősen rövid sorrendben.
 
 A probléma nagy része azonban abból ered, hogy nem adta meg a fordítónak a különböző verzióinak felismeréséhez szükséges információkat `Map` .
-Gyakorlatilag azt szeretné, hogy a fordító a `Map` q # *types* és a q # függvények közül valamilyen matematikai függvényt kezelje.
+Gyakorlatilag azt szeretné, hogy a fordító a `Map` Q# függvények *típusaként* valamilyen matematikai függvényt kezelje Q# .
 
-A Q # formalizes ezt a fogalmat azáltal, hogy lehetővé teszi a függvények és műveletek *típus paramétereit*, valamint a szokásos rekord paramétereit.
+Q#ezt a fogalmat úgy formalizes meg, hogy a functions és a Operations függvények *típus paraméterekkel*, valamint a szokásos rekordos paraméterekkel rendelkeznek.
 Az előző példákban úgy gondolja, hogy `Map` `Int, Pauli` az első esetben, a második esetben pedig a type paramétert adja meg `Double, String` .
 A legtöbb esetben használja ezeket a típusú paramétereket, mintha a szokásos típusok lennének. Paraméterek típusú értékek használata tömbök és rekordok, a függvények és a műveletek hívásához, valamint a szokásos vagy változtatható változókhoz való hozzárendeléshez.
 
 > [!NOTE]
-> A közvetett függőség legszélsőségesebb esete a qubits, ahol a Q # program nem hivatkozhat közvetlenül a típus struktúrájára, `Qubit` azonban ezeket a típusokat más műveletekre és funkciókra **kell** átadnia.
+> A közvetett függőség legszélsőségesebb esete a qubits, ahol a Q# program nem hivatkozhat közvetlenül a típus struktúrájára, `Qubit` azonban ezeket a típusokat más műveletekre és funkciókra **kell** átadnia.
 
 Ha visszatér a korábbi példához, akkor láthatja, hogy a `Map` Type paraméterrel kell rendelkeznie, az egyik pedig a bemenet, a másik pedig a `fn` kimenetét jelöli `fn` .
-A Q #-ban ez a szög zárójelek (azaz `<>` nem brakets $ \braket $!) hozzáadásával történik, {} a deklarációban szereplő függvény vagy művelet neve után, valamint az egyes típusparaméter-paraméterek listázásával.
+A alkalmazásban Q# Ez a szögletes zárójelek (azaz `<>` nem brakets $ \braket $!) hozzáadásával történik, {} a deklarációban szereplő függvény vagy művelet neve után, valamint az egyes Típusparaméterek listázásával.
 Az egyes típusparaméter-paraméterek nevének egy kullancstal kell kezdődnie `'` , amely azt jelzi, hogy ez egy típusparaméter, nem pedig egy egyszerű típus (más néven *konkrét* típus).
 Így `Map` van írva:
 
@@ -541,8 +544,8 @@ let paulis = Map(IntToPauli, ints);
 ```
 
 > [!TIP]
-> Az általános függvények és műveletek írása egy olyan hely, ahol a "rekord-in rekord kijelentkezése" nagyon hasznos módszer a Q # függvények és műveletek gondolkodására.
-> Mivel minden függvény pontosan egy bemenetet vesz át, és pontosan egy kimenetet ad vissza, a típus bemenete `'T -> 'U` *bármilyen* Q # függvénynek felel meg.
+> Az általános függvények és műveletek írása egy olyan hely, ahol a "rekord-in rekord kijelentkezése" nagyon hasznos módszer a Q# függvények és műveletek gondolkodására.
+> Mivel minden függvény pontosan egy bemenetet vesz át, és pontosan egy kimenetet ad vissza, a típus bemenete `'T -> 'U` *bármilyen* Q# függvénynek megfelel.
 > Hasonlóképpen bármilyen műveletet átadhat egy típusú bemenetnek `'T => 'U` .
 
 Második példaként vegye figyelembe, hogy milyen kihívással kell elírnia egy olyan függvényt, amely két másik függvény összeállítását adja vissza:
@@ -571,15 +574,15 @@ function Compose<'A, 'B, 'C>(outerFn : ('B -> 'C), innerFn : ('A -> 'B)) : ('A -
 }
 ```
 
-A Q # standard kódtárak számos ilyen típusú paraméterrel rendelkező műveletet és funkciót biztosítanak, hogy a magasabb rendű vezérlési folyamat könnyebben kifejezhető legyen.
-Ezeket a [Q # standard Library útmutatóban](xref:microsoft.quantum.libraries.standard.intro)tovább tárgyaljuk.
+A Q# standard szintű kódtárak számos ilyen típusú paraméteres műveletet és függvényt biztosítanak, így könnyebben kipróbálható a magasabb rendű vezérlési folyamat.
+Ezeket a [ Q# standard szintű könyvtár útmutatója ismerteti](xref:microsoft.quantum.libraries.standard.intro).
 
 
 ## <a name="callables-as-first-class-values"></a>Callables első osztályú értékként
 
-Az egyik kritikus módszer, amellyel a vezérlési folyamat és a klasszikus logika a függvények helyett functions használatával történik, hogy a Q # *első osztályú*műveleteit és funkcióit használják.
+Az egyik kritikus módszer, amellyel a vezérlési folyamat és a klasszikus logika a függvények helyett functions használatával történik, így a műveletek és a függvények az Q# *első osztályúak*.
 Ez azt eredményezi, hogy a nyelv minden értéke a saját jobb oldalán van.
-Például a következőkben teljesen érvényes Q # kód van, ha egy kicsit indirekt:
+A következők például tökéletesen érvényes Q# kód, ha kicsit közvetett:
 
 ```qsharp
 operation FirstClassExample(target : Qubit) : Unit {
@@ -649,12 +652,12 @@ function SquareOperation(op : (Qubit => Unit)) : (Qubit => Unit) {
 }
 ```
 
-Elméletileg a klasszikus logika `SquareOperation` sokkal jobban érintett, de továbbra is el van különítve a többi művelettől, mert az garantálja, hogy a fordító a functions szolgáltatással kapcsolatban tud nyújtani. A Q # standard könyvtár ezt a módszert használja a klasszikus vezérlési folyamat kifejezésére, így a kvantum-programok könnyen használhatók.
+Elméletileg a klasszikus logika `SquareOperation` sokkal jobban érintett, de továbbra is el van különítve a többi művelettől, mert az garantálja, hogy a fordító a functions szolgáltatással kapcsolatban tud nyújtani. A Q# standard könyvtár ezt a módszert használja a klasszikus vezérlési folyamat kifejezésére, így a kvantum-programok könnyen használhatók.
 
 
 ## <a name="recursion"></a>Rekurzió
 
-A Q # callables közvetlenül vagy közvetve rekurzívak.
+Q#a callables közvetlenül vagy közvetve rekurzívak.
 Vagyis egy művelet vagy függvény meghívhatja önmagát, vagy hívhat egy másik meghívót, amely közvetlenül vagy közvetett módon hívja meg a meghívásos műveletet.
 
 A rekurzió használatának két fontos megjegyzése van, azonban:
@@ -662,8 +665,8 @@ A rekurzió használatának két fontos megjegyzése van, azonban:
 - A rekurzió a műveletekben való használata valószínűleg ütközik bizonyos optimalizálásokkal.
   Ez az interferencia jelentős hatással lehet az algoritmus végrehajtási idejére.
 - Ha a tényleges kvantum-eszközön fut, előfordulhat, hogy a rendelkezésre állási terület korlátozott, ezért a mélyebb rekurzió hibát okozhat.
-  A Q # Compiler és a Runtime nem azonosítja és optimalizálja a farok rekurzióját.
+  Különösen a Q# fordító és a futtatókörnyezet nem azonosítja és optimalizálja a farok rekurzióját.
 
 ## <a name="next-steps"></a>Következő lépések
 
-További tudnivalók a Q #-ban található [változókról](xref:microsoft.quantum.guide.variables) .
+További tudnivalók a [változóinak](xref:microsoft.quantum.guide.variables) használatáról Q# .

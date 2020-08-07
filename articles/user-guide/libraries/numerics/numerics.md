@@ -1,17 +1,20 @@
 ---
-title: 'A Microsoft Q # numerikus könyvtár használata'
+title: A Microsoft Q# numerikus könyvtárának használata
 description: Ismerje meg a Microsoft Quantum numerikus könyvtárában elérhető típusokat és műveleteket.
 author: thomashaener
 ms.author: thhaner
 ms.date: 5/14/2019
 ms.topic: article
 uid: microsoft.quantum.numerics.usage
-ms.openlocfilehash: 10d5675e0ef182211a38db4d09347b05afe109c3
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 474fc74b9c92fbf28c0618a3090905d025699d32
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275184"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868797"
 ---
 # <a name="using-the-numerics-library"></a>A numerikus könyvtár használata
 
@@ -36,7 +39,7 @@ A numerikus könyvtár a következő típusokat támogatja
 1. **`SignedLittleEndian`**: Ugyanaz, mint `LittleEndian` a kivételével, hogy a két kiegészítésben tárolt, aláírt egész számot jelöli.
 1. **`FixedPoint`**: Egy qubit tömbből `qArr2 : Qubit[]` és egy bináris pont pozícióból álló valós számot képvisel `pos` , amely a bináris pont bal oldalán lévő bináris számjegyek számát számlálja. `qArr2`a tárolása ugyanúgy történik, mint a `SignedLittleEndian` .
 
-## <a name="operations"></a>Üzemeltetés
+## <a name="operations"></a>Műveletek
 
 A fenti három típus mindegyikéhez számos művelet érhető el:
 
@@ -64,7 +67,7 @@ A fenti három típus mindegyikéhez számos művelet érhető el:
     - Kölcsönös (1/x)
     - Mérés (klasszikus dupla)
 
-Az egyes műveletekkel kapcsolatos további információkért és részletes dokumentációért tekintse meg a Q # Library dokumentációs dokumentumait a következő címen: [docs.microsoft.com](https://docs.microsoft.com/quantum)
+Az egyes műveletekkel kapcsolatos további információkért és részletes dokumentációért tekintse meg a Q# könyvtár-dokumentációt a [docs.microsoft.com](https://docs.microsoft.com/quantum) címen.
 
 ## <a name="sample-integer-addition"></a>Minta: egész szám hozzáadása
 
@@ -99,7 +102,7 @@ EvaluatePolynomialFxP([1.0, 2.0], x, y);
 Az eredmény, $P (x) = 1 + 2x $, a következő helyen lesz tárolva: `yFxP` .
 
 A második, `EvaluateEvenPolynomialFxP` és a harmadik, a `EvaluateOddPolynomialFxP` páros és páratlan függvények esetében is specializálódott. Ez a páros/páratlan függvény esetében $f (x) $ és $ $ P_ {even} (x) = a_0 + a_1 x ^ 2 + a_2 x ^ 4 + \cdots + a_d x ^ {2D}, a $ $ $f (x) $ megközelítő értéke $P _ {even} (x) $ vagy $P _ {odd} (x): = x\cdot P_ {even} (x) $, ill.
-A Q #-ban ez a két eset a következőképpen kezelhető:
+A-ben Q# Ez a két eset a következőképpen kezelhető:
 ```qsharp
 EvaluateEvenPolynomialFxP([1.0, 2.0], x, y);
 ```

@@ -6,12 +6,15 @@ ms.author: ageller@microsoft.com
 ms.date: 6/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.toffoli-simulator
-ms.openlocfilehash: a6ceee592e628215511ec83475d9e25bf54674f7
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 8a981645703423856e667be7c3dccf5270a5885f
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86870617"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868100"
 ---
 # <a name="quantum-development-kit-qdk-toffoli-simulator"></a>Quantum Development Kit (QDK) Toffoli szimulátor
 
@@ -21,13 +24,13 @@ Habár a Toffoli-szimulátor a [teljes állapotú szimulátornál](xref:microsof
 
 ## <a name="invoking-the-toffoli-simulator"></a>A Toffoli szimulátor meghívása
 
-A Toffoli szimulátort a osztályon keresztül teheti elérhetővé `ToffoliSimulator` . További részleteket a [Q # program futtatásának módjai](xref:microsoft.quantum.guide.host-programs)című témakörben talál.
+A Toffoli szimulátort a osztályon keresztül teheti elérhetővé `ToffoliSimulator` . További részletekért tekintse [meg a Q# programok futtatásának módjait](xref:microsoft.quantum.guide.host-programs).
 
 ### <a name="invoking-the-toffoli-simulator-from-c"></a>A Toffoli szimulátor meghívása a C-ből #
 
-A többi célszámítógépen hasonlóan először létre kell hoznia a osztály egy példányát, `ToffoliSimulator` majd át kell adni a művelet metódusának első paramétereként `Run` .
+Ahogy más célgépek esetében is, először a `ToffoliSimulator` osztály egy példányát kell létrehoznia, majd azt kell megadnia a művelet `Run` metódusának első paramétereként.
 
-Vegye figyelembe, hogy az osztálytól eltérően `QuantumSimulator` az `ToffoliSimulator` osztály nem valósítja <xref:System.IDisposable> meg a felületet, így nem kell azt egy utasításon belül csatolnia `using` .
+Vegye figyelembe, hogy a `QuantumSimulator` osztálytól eltérően a `ToffoliSimulator` osztály nem implementálja a <xref:System.IDisposable> felületet, így nem kell azt egy `using` utasításba belefoglalnia.
 
 ```csharp
     var sim = new ToffoliSimulator();
@@ -37,7 +40,7 @@ Vegye figyelembe, hogy az osztálytól eltérően `QuantumSimulator` az `Toffoli
 
 ### <a name="invoking-the-toffoli-simulator-from-python"></a>A Toffoli szimulátor meghívása a Pythonból
 
-Használja az [toffoli_simulate ()](https://docs.microsoft.com/python/qsharp/qsharp.loader.qsharpcallable) metódust a Python-könyvtárból az importált Q # művelettel:
+Használja az [toffoli_simulate ()](https://docs.microsoft.com/python/qsharp/qsharp.loader.qsharpcallable) metódust a Python-könyvtárból az importált Q# művelettel:
 
 ```python
 qubit_result = myOperation.toffoli_simulate()
@@ -45,7 +48,7 @@ qubit_result = myOperation.toffoli_simulate()
 
 ### <a name="invoking-the-toffoli-simulator-from-the-command-line"></a>A Toffoli szimulátor meghívása a parancssorból
 
-Ha Q # programot futtat a parancssorból, a **--Simulator** (vagy **-s** parancsikon) paraméterrel adhatja meg a Toffoli Simulator célszámítógép értékét. A következő parancs egy programot futtat az erőforrás-kalkulátor használatával: 
+Ha a Q# parancssorból futtat egy programot, a **--Simulator** (vagy a **-s** parancsikon) paraméterrel adhatja meg a Toffoli Simulator célszámítógép értékét. A következő parancs egy programot futtat az erőforrás-kalkulátor használatával: 
 
 ```dotnetcli
 dotnet run -s ToffoliSimulator
@@ -53,7 +56,7 @@ dotnet run -s ToffoliSimulator
 
 ### <a name="invoking-the-toffoli-simulator-from-juptyer-notebooks"></a>A Toffoli szimulátor meghívása a Juptyer-jegyzetfüzetekről
 
-A Q # művelet futtatásához használja a [(z)% TOFFOLI](xref:microsoft.quantum.iqsharp.magic-ref.toffoli) IQ # Magic-parancsot.
+A Q# művelet futtatásához használja a [(z)% toffoli](xref:microsoft.quantum.iqsharp.magic-ref.toffoli) I Magic-parancsot Q# .
 
 ```
 %toffoli myOperation
@@ -81,7 +84,7 @@ Például:
     var res = myLargeOperation.Run(sim).Result;
 ```
 
-## <a name="see-also"></a>Lásd még
+## <a name="see-also"></a>További információ
 
 - [Quantum-erőforrások kalkulátora](xref:microsoft.quantum.machines.resources-estimator)
 - [Quantum Trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro)

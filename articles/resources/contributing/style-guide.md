@@ -1,22 +1,25 @@
 ---
-title: 'Microsoft Q # Style útmutató'
-description: 'A Q # programok és könyvtárak elnevezési, bemeneti, dokumentációs és formázási konvencióinak megismerése.'
+title: Microsoft Q# stílusú útmutató
+description: A programok és könyvtárak elnevezési, bemeneti, dokumentációs és formázási konvencióinak megismerése Q# .
 author: cgranade
 ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.style
-ms.openlocfilehash: 26de7d5f639ea1b4df24232127b6f95cee3a041e
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 27a2ae5ae9d00329fc369268edae24228a9a9d0d
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871382"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87867589"
 ---
-# <a name="q-style-guide"></a>Q # Style útmutató #
+# <a name="no-locq-style-guide"></a>Q#Stílus útmutató #
 ## <a name="general-conventions"></a>Általános konvenciók ##
 
-Az ebben az útmutatóban javasolt konvenciók célja, hogy a Q # könnyebben olvasható és értelmezhető programokat és kódtárakat segítse.
+Az útmutatóban javasolt konvenciók célja, hogy megkönnyítse a programok és a kódtárak írását Q# és értelmezését.
 
 ## <a name="guidance"></a>Útmutató
 
@@ -29,13 +32,13 @@ Javasoljuk, hogy:
 A Quantum Development Kit szolgáltatásban a függvény-és műveleti nevekre törekszünk, amelyek segítenek a kvantum-fejlesztőknek olyan programok írásához, amelyek könnyen olvashatóak, és a lehető legkevesebb meglepetést okozzák.
 Fontos része annak, hogy ha a függvények, műveletek és típusok neveit választjuk, a programozók a Quantum fogalmak kifejezéséhez használt *szókincset* hoznak létre. a választásunk során segítünk vagy meggátoljuk őket abban, hogy világosan kommunikáljanak.
 Ez felelősséget vállal a számunkra, hogy megbizonyosodjon róla, hogy az általunk bevezetett nevek egyértelműek és nem homályosak.
-Ebben a szakaszban részletesen ismertetjük, hogyan teljesítjük ezt a kötelezettséget olyan explicit útmutatás szempontjából, amely segít a legjobb megoldás a Q # fejlesztői közösség számára.
+Ebben a szakaszban részletesen ismertetjük, hogyan teljesítjük ezt a kötelezettséget olyan explicit útmutatás szempontjából, amely segít a fejlesztő Közösség által nyújtott legjobb megoldásban Q# .
 
 ### <a name="operations-and-functions"></a>Műveletek és függvények ###
 
 Az egyik első dolog, amit a névnek meg kell állapítania, hogy egy adott szimbólum függvényt vagy műveletet jelöl.
 A függvények és a műveletek közötti különbség elengedhetetlen a kód egy blokkjának megismeréséhez.
-A függvények és a műveletek a felhasználók közötti megkülönböztetésének közléséhez a Q # modellek kvantum-műveleteire támaszkodunk a mellékhatások használatával.
+A függvények és a műveletek közötti különbségtételt a felhasználók számára is Q# felhasználjuk.
 *Ez egy művelet végrehajtása* .
 
 Ezzel szemben a függvények leírják az adatok közötti matematikai kapcsolatokat.
@@ -97,8 +100,8 @@ Javasoljuk, hogy:
 |---|------|-------------|
 | ☑ | `operation ReflectAboutStart` | A művelet hatásának jelzéséhez törölje a műveletet ("tükrözze"). |
 | ☒ | <s>`operation XRotation`</s> | A főnévi kifejezés a művelet helyett a függvényt javasolja. |
-| ☒ | <s>`operation search_oracle`</s> | Az `snake_case` ellentétes Q # jelölés használata. |
-| ☒ | <s>`operation Search_Oracle`</s> | A belső és a műveleti név közötti aláhúzás használata a Q # jelöléssel ellentétes. |
+| ☒ | <s>`operation search_oracle`</s> | `snake_case`Ellentétes Q# jelölés használata. |
+| ☒ | <s>`operation Search_Oracle`</s> | A belső és a műveleti név közötti aláhúzások használatának Q# megjelölése. |
 | ☑ | `function StatePreparationOracle` | A főnévi kifejezés használata azt sugallja, hogy a függvény egy műveletet ad vissza. |
 | ☑ | `function EqualityFact` | A főnév ("Fact") egyértelmű használata annak jelzésére, hogy ez egy függvény, míg a melléknév. |
 | ☒ | <s>`function GetRotationAngles`</s> | Az ige ("Get") használata azt jelzi, hogy ez egy művelet. |
@@ -110,9 +113,9 @@ Javasoljuk, hogy:
 
 ### <a name="entry-points"></a>Belépési pontok
 
-Amikor egy belépési pontot egy Q # programba definiál, a Q # Compiler felismeri az [ `@EntryPoint()` attribútumot](xref:microsoft.quantum.core.entrypoint) , ami azt igényli, hogy a belépési pontoknak egy adott névvel kell rendelkezniük (például: `main` , `Main` vagy `__main__` ).
-Vagyis a Q # fejlesztő szemszögéből a belépési pontok a következőhöz fűzött általános műveletek: `@EntryPoint()` .
-Emellett a Q # belépési pontok a teljes alkalmazás (például a Q # önálló végrehajtható fájlok) belépési pontjai lehetnek, vagy a Q # program és az alkalmazáshoz tartozó gazda program (például a Q # Python vagy .NET használatával történő használata esetén) közötti kapcsolat lehet, hogy a "Main" név félrevezető lenne, ha a Q # belépési pontra alkalmazza őket.
+Egy belépési pont programba való definiálásakor Q# a Q# fordító felismeri az [ `@EntryPoint()` attribútumot](xref:microsoft.quantum.core.entrypoint) , ami azt igényli, hogy a belépési pontok egy adott névvel rendelkezzenek (például: `main` , `Main` , vagy `__main__` ).
+Ez a fejlesztő szemszögéből a Q# beléptetési pontok a következőhöz fűzött általános műveletek: `@EntryPoint()` .
+Emellett a Q# belépési pontok egy teljes alkalmazáshoz (például Q# önálló végrehajtható fájlokban), vagy a Q# program és az alkalmazáshoz tartozó gazda program (például a Python vagy a .net használata esetén) közötti illesztőfelületek lehetnek Q# , így a "Main" név félrevezető lehet, ha egy Q# belépési pontra alkalmazva van.
 
 Javasoljuk, hogy az elnevezési belépési pontok használatával tükrözze az `@EntryPoint()` attribútum használatát a fent felsorolt elnevezési műveletek általános tanácsainak használatával.
 
@@ -190,11 +193,11 @@ Especially in a field such as quantum computing that is rich with domain experti
 In naming code symbols, one way that this cognizance expresses itself is as an awareness of the convention from physics of adopting as the names of algorithms and operations the names of their original publishers.
 While we must maintain the history and intellectual provenance of concepts in quantum computing, demanding that all users be versed in this history to use even the most basic of functions and operations places a barrier to entry that is in most cases severe enough to even present an ethical compromise. -->
 Ezért azt javasoljuk, hogy ha ésszerű, a fogalmakat leíró általános nevek erős előnyben legyenek kitéve a fogalmak közzétételének előzményeit leíró földrajzi nevek iránt.
-Egy adott példának megfelelően az "Fredkin" és a "Toffoli" műveletet gyakran nevezik a tudományos irodalomban, de a Q # elsődlegesen a és a kifejezéssel azonosítják őket `CSWAP` `CCNOT` .
+Ebben az esetben a nem megfelelően vezérelt SWAP-és kettős vezérlésű, nem műveleti műveleteket gyakran a tudományos irodalomban található "Fredkin" és "Toffoli" műveletnek nevezzük, de a rendszer elsősorban a és a esetében azonosítja őket Q# `CSWAP` `CCNOT` .
 Az API-dokumentációs megjegyzések mindkét esetben a megfelelő neveken alapuló szinonimákat biztosítanak az összes megfelelő hivatkozással együtt.
 
-Ez a beállítás különösen fontos, mivel a megfelelő főnevek bizonyos használata mindig szükséges – a Q # a sok klasszikus nyelv által meghatározott hagyományt követi, és a `Bool` logikai logikára hivatkozó típusokra hivatkozik, ami pedig George Boole tiszteletében megnevezett.
-Ehhez hasonló módon kell megneveznie a kvantum-fogalmakat, beleértve a `Pauli` Q # nyelv beépített típusát is.
+Ez a beállítás különösen fontos, hogy a megfelelő főnevek bizonyos használata mindig kötelező legyen – Q# a számos klasszikus nyelv által meghatározott hagyományt követi, és a `Bool` típusokat a logikai logikára mutató hivatkozásokra utal, amely George Boole tiszteletben tartásával lett elnevezve.
+Ehhez hasonló módon kell elnevezni néhány kvantum-fogalmat, például a `Pauli` nyelvhez beépített típust Q# .
 A megfelelő főnevek használatának minimalizálása, ha az ilyen használat nem alapvető fontosságú, csökkentik annak a hatását, hogy a megfelelő földrajzi nevek ne legyenek ésszerűen elkerülhetők.
 
 # <a name="guidance"></a>[Útmutató](#tab/guidance) 
@@ -209,9 +212,9 @@ Javasoljuk, hogy:
 
 ### <a name="type-conversions"></a>Típus konverziója ###
 
-Mivel a Q # egy erősen és statikusan beírt nyelv, az egyik típusú érték csak egy másik típusú értékként használható egy típus-átalakítási függvény kifejezett hívásával.
+Mivel a Q# egy erősen és statikusan beírt nyelv, az egyik típus értéke csak más típusú érték lehet, mint egy típus-átalakítási függvény kifejezett hívása.
 Ez ellentétben áll azokkal a nyelvekkel, amelyek lehetővé teszik, hogy az értékek implicit módon módosítsák a típusokat (pl.: Type Promotion) vagy a casting használatával.
-Ennek eredményeképpen az átalakítási függvények fontos szerepet játszanak a Q # könyvtár fejlesztésében, és az elnevezéssel kapcsolatban leggyakrabban felmerülő döntések egyikét alkotják.
+Ennek eredményeképpen a konvertálási függvények fontos szerepet játszanak a Q# kódtár fejlesztésében, és az elnevezéssel kapcsolatban leggyakrabban felmerülő döntések egyikét alkotják.
 Azonban ez azt jelzi, hogy mivel a Type konverziók mindig _determinisztikus_, a függvények is megírhatók, ezért a fenti tanács alá tartoznak.
 Különösen azt javasoljuk, hogy a Type konverziós függvények soha ne legyenek elnevezve műveleteknek (pl.: `ConvertToX` ) vagy a határozószók előírási kifejezéseknek ( `ToX` ), hanem a forrás és a cél típusokat () jelző, melléknévi előírási kifejezéseknek kell nevezni `XAsY` .
 Ha a tömb típusait a konverziós függvények neveiben listázza, javasoljuk a gyorsírást `Arr` .
@@ -244,7 +247,7 @@ Ha egy művelet vagy függvény nem közvetlen használatra készült, hanem egy
 
 Javasoljuk, hogy:
 
-- Ha egy függvény, művelet vagy felhasználó által definiált típus nem része a Q # függvénytárának vagy programjának a nyilvános API-nak, ügyeljen arra, hogy belső jelöléssel lássa el a `internal` kulcsszót a `function` , `operation` vagy a `newtype` deklaráció előtt.
+- Ha egy függvény, művelet vagy felhasználó által definiált típus nem része a nyilvános API-nak egy Q# könyvtár vagy program számára, győződjön meg arról, hogy belső jelöléssel van megjelölve, ha a `internal` , vagy a deklaráció előtt elhelyezi a kulcsszót `function` `operation` `newtype` .
 
 # <a name="examples"></a>[Példák](#tab/examples)
 
@@ -256,7 +259,7 @@ Javasoljuk, hogy:
 ***
 ### <a name="variants"></a>Változatok ###
 
-Bár ez a korlátozás nem szűnik meg a Q # jövőbeli verzióiban, jelenleg a kapcsolódó műveletek vagy függvények olyan csoportjai lesznek, amelyek megkülönböztetni egymástól a bemenők által támogatott, illetve az argumentumok konkrét típusait.
+Bár ez a korlátozás nem szűnik meg a későbbi verzióiban Q# , jelenleg a kapcsolódó műveletek vagy függvények olyan csoportjai lesznek, amelyek megkülönböztetni a bemenetek támogatását, illetve az argumentumok konkrét típusait.
 Ezek a csoportok megkülönböztetni ugyanazt a legfelső szintű nevet, majd egy vagy két betűt, amelyek jelzik a változatát.
 
 | Utótag | Értelmezés |
@@ -281,7 +284,7 @@ Javasoljuk, hogy:
 
 ### <a name="arguments-and-variables"></a>Argumentumok és változók ###
 
-Egy függvény vagy művelet Q # kódjának fő célja, hogy könnyen olvasható és értelmezhető legyen.
+Egy Q# függvény vagy művelet kódjának kulcsfontosságú célja, hogy könnyen olvasható és értelmezhető legyen.
 Hasonlóképpen, a bemenetek és a Type argumentumok neveinek kell megadniuk, hogy a rendszer hogyan használja a függvényt vagy az argumentumot.
 
 
@@ -380,10 +383,10 @@ Javasoljuk, hogy:
 
 ## <a name="documentation-conventions"></a>Dokumentációs konvenciók ##
 
-A Q # nyelv lehetővé teszi a dokumentáció csatolását a műveletekhez, a függvényekhez és a felhasználó által definiált típusokhoz a speciálisan formázott dokumentációs megjegyzések használatával.
+A Q# nyelv lehetővé teszi a dokumentáció csatolását a műveletekhez, a függvényekhez és a felhasználó által definiált típusokhoz a speciálisan formázott dokumentációs megjegyzések használatával.
 A Triple-ferde ( `///` ) függvényekkel ezek a dokumentációs megjegyzések kisméretű, [DocFX Markdown](https://dotnet.github.io/docfx/spec/docfx_flavored_markdown.html) dokumentumok, amelyek az egyes műveletek, függvények és felhasználó által definiált típusok, valamint a várt bemeneti adatok céljának leírására használhatók.
 A Quantum Development Kit által biztosított fordító kibontja ezeket a megjegyzéseket, és a segítségével a következőhöz hasonló dokumentációt videótartalmakban https://docs.microsoft.com/quantum .
-Hasonlóképpen, a Quantum Development Kit által biztosított nyelvi kiszolgáló ezeket a megjegyzéseket használja, hogy segítséget nyújtson a felhasználóknak a Q # kódjában lévő szimbólumok fölé helyezve.
+Hasonlóképpen, a Quantum Development Kit által biztosított nyelvi kiszolgáló ezeket a megjegyzéseket használja, hogy segítséget nyújtson a felhasználóknak a kódban lévő szimbólumok fölé helyezve Q# .
 A dokumentációs megjegyzések használata így segítheti a felhasználókat a kód értelmezésében azáltal, hogy a jelen dokumentum többi konvenciója alapján nem könnyen elérhetővé tett részletekre vonatkozó hasznos hivatkozást biztosítanak.
 
 > [!div class="nextstepaction"]
@@ -397,7 +400,7 @@ Javasoljuk, hogy:
 
 - Minden nyilvános funkciót, műveletet és felhasználó által definiált típust közvetlenül a dokumentációs Megjegyzés előtt kell megadni.
 - Az egyes dokumentációs megjegyzéseknek legalább a következő részeket kell tartalmazniuk:
-    - Összegzés
+    - Összefoglalás
     - Input (Bemenet)
     - Kimenet (ha van ilyen)
 - Győződjön meg arról, hogy minden összefoglaló két mondat vagy kevesebb. Ha további helyiségre van szükség, adjon meg egy szakaszt, amely `# Description` azonnal követi a `# Summary` teljes részleteket.
@@ -454,8 +457,8 @@ is Adj + Ctl {
 
 Az előző javaslatok mellett hasznos lehet a kód a lehető legkönnyebben felismerhetővé tétele a konzisztens formázási szabályok használatához.
 A természet szerinti formázási szabályok általában némileg önkényesak és szigorúan személyes esztétikai jellegűek.
-Ugyanakkor javasolt a formázási konvenciók egységes csoportjának fenntartása a közreműködők csoportjain belül, és különösen a nagy Q # projektekhez, például a Quantum Development Kit-hoz.
-Ezek a szabályok automatikusan alkalmazhatók a Q # fordítóprogrammal integrált formázó eszköz használatával.
+Ugyanakkor javasolt a formázási konvenciók egységes csoportjának fenntartása a közreműködők csoportjain belül, és különösen a nagy Q# projektek, például a Quantum Development Kit esetében.
+Ezek a szabályok automatikusan alkalmazhatók a fordítóval integrált formázó eszköz használatával Q# .
 
 # <a name="guidance"></a>[Útmutató](#tab/guidance) 
 

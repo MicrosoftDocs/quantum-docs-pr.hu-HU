@@ -1,101 +1,93 @@
 ---
-title: Quantum Computing – Szószedet
-description: A Quantum computingban használt általános feltételek, műveletek és objektumok glosszáriuma.
-author: QuantumWriter
-ms.author: Alan.Geller@microsoft.com
-ms.date: 12/11/2017
-ms.topic: article
-uid: microsoft.quantum.glossary
-no-loc:
-- $
-- $
-- $
-- $
-- $
-- $
-- '\cdots'
-- bmatrix
-- '\ddots'
-- '\equiv'
-- '\sum'
-- '\begin'
-- '\end'
-- '\sqrt'
-- '\otimes'
-- '{'
-- '}'
-- '\text'
-- '\phi'
-- '\kappa'
-- '\psi'
-- '\alpha'
-- '\beta'
-- '\gamma'
-- '\delta'
-- '\omega'
-- '\bra'
-- '\ket'
-- '\boldone'
-- '\\\\'
-- '\\'
-- =
-- '\frac'
-- '\text'
-- '\mapsto'
-- '\dagger'
-- '\to'
+title: Quantum Computing Szószedet leírása: A kvantum-számítástechnika során használt általános feltételek, műveletek és objektumok glosszáriuma.
+Szerző: QuantumWriter MS. Author: Alan.Geller@microsoft.com MS. Date: 12/11/2017 MS. topic: cikk UID: Microsoft. Quantum. Szószedet No-Loc:
+- "Q#"
+- "$$v"
+- "$$"
+- "$$"
+- "$"
+- "$"
+- "$"
+- "$$"
+- "\cdots"
+- "bmatrix"
+- "\ddots"
+- "\equiv"
+- "\sum"
+- "\begin"
+- "\end"
+- "\sqrt"
+- "\otimes"
+- "{"
+- "}"
+- "\text"
+- "\phi"
+- "\kappa"
+- "\psi"
+- "\alpha"
+- "\beta"
+- "\gamma"
+- "\delta"
+- "\omega"
+- "\bra"
+- "\ket"
+- "\boldone"
+- "\\\\"
+- "\\"
+- "="
+- "\frac"
+- "\text"
+- "\mapsto"
+- "\dagger"
+- "\to"
 - "\begin{cases}"
 - "\end{cases}"
-- '\operatorname'
-- '\braket'
-- '\id'
-- '\expect'
-- '\defeq'
-- '\variance'
-- '\dd'
-- '&'
+- "\operatorname"
+- "\braket"
+- "\id"
+- "\expect"
+- "\defeq"
+- "\variance"
+- "\dd"
+- "&"
 - "\begin{align}"
 - "\end{align}"
-- '\Lambda'
-- '\lambda'
-- '\Omega'
-- '\mathrm'
-- '\left'
-- '\right'
-- '\qquad'
-- '\times'
-- '\big'
-- '\langle'
-- '\rangle'
-- '\bigg'
-- '\Big'
-- '|'
-- '\mathbb'
-- '\vec'
-- '\in'
-- '\texttt'
-- '\ne'
-- <
-- '>'
-- '\leq'
-- '\geq'
-- ~~
+- "\Lambda"
+- "\lambda"
+- "\Omega"
+- "\mathrm"
+- "\left"
+- "\right"
+- "\qquad"
+- "\times"
+- "\big"
+- "\langle"
+- "\rangle"
+- "\bigg"
+- "\Big"
+- "|"
+- "\mathbb"
+- "\vec"
+- "\in"
+- "\texttt"
+- "\ne"
+- "<"
+- ">"
+- "\leq"
+- "\geq"
+- "~~"
 - "~"
 - "\begin{bmatrix}"
 - "\end{bmatrix}"
-- '\_'
-ms.openlocfilehash: ba4d171d84d808f082b919dcc6156d9c65df7c05
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
-ms.translationtype: MT
-ms.contentlocale: hu-HU
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274789"
+- "\_"
+
 ---
+
 # <a name="quantum-computing-glossary"></a>Quantum Computing – Szószedet
 
 ## <a name="adjoint"></a>Adjoint
 
-Egy [művelet](xref:microsoft.quantum.glossary#operation)összetett konjugált átültetése. Az [egységes](xref:microsoft.quantum.glossary#unitary-operator) operátort megvalósító műveletek esetében a adjoint a művelet inverze, és egy tőr szimbólum jelzi. Ha például a művelet `U` a $U egységes operátort jelöli $ , akkor a `Adjoint U` $U ^ \dagger jelöli $ . További információ: [Adjoint](xref:microsoft.quantum.guide.operationsfunctions#controlled-and-adjoint-operations).
+Egy [művelet](xref:microsoft.quantum.glossary#operation)összetett konjugált átültetése. Az [egységes](xref:microsoft.quantum.glossary#unitary-operator) operátort megvalósító műveletek esetében a adjoint a művelet inverze, és egy tőr szimbólum jelzi. Ha például a művelet `U` az u egységes operátort jelöli $ $ , akkor `Adjoint U` az $ u ^ \dagger $ érték jelenik meg. További információ: [Adjoint](xref:microsoft.quantum.guide.operationsfunctions#controlled-and-adjoint-operations).
 
 ## <a name="ancilla"></a>Ancilla
 
@@ -103,7 +95,7 @@ Egy [qubit](xref:microsoft.quantum.glossary#qubit) , amely ideiglenes memóriát
 
 ## <a name="bell-state"></a>Harang állapota
 
-Két qubits négy specifikus, maximálisan [összekeverhető](xref:microsoft.quantum.glossary#entanglement) [Quantum állapotának](xref:microsoft.quantum.glossary#quantum-state) egyike. A négy állapot definiálva van: $ \ket { \ beta_ {ij } } = (\Mathbb{I } \Otimes X ^ iZ ^ j) (\ket{00 } + \ket{11 } )/\sqrt{2 } $. A Bell-állapotot [EPR-pároknak](xref:microsoft.quantum.glossary#epr-pair)is nevezzük.
+Két qubits négy specifikus, maximálisan [összekeverhető](xref:microsoft.quantum.glossary#entanglement) [Quantum állapotának](xref:microsoft.quantum.glossary#quantum-state) egyike. A négy állam meghatározása: $ \ket { \beta _ { ij } } = ( \mathbb { I } \otimes X ^ iZ ^ j) ( \ket { 00 }  +  \ket { 11 } )/ \sqrt { 2 } $ . A Bell-állapotot [EPR-pároknak](xref:microsoft.quantum.glossary#epr-pair)is nevezzük.
 
 ## <a name="bloch-sphere"></a>Bloch gömb
 
@@ -111,11 +103,11 @@ Egy[qubit](xref:microsoft.quantum.glossary#qubit) [kvantum-állapot](xref:micros
 
 ## <a name="callable"></a>Használata hívható
 
-Egy [művelet](xref:microsoft.quantum.glossary#operation) vagy [függvény](xref:microsoft.quantum.glossary#function) a Q # nyelven. További információ: [Operations and functions](xref:microsoft.quantum.guide.operationsfunctions).
+Egy [művelet](xref:microsoft.quantum.glossary#operation) vagy [függvény](xref:microsoft.quantum.glossary#function) a Q# nyelven. További információ: [Operations and functions](xref:microsoft.quantum.guide.operationsfunctions).
 
 ## <a name="clifford-group"></a>Clifford-csoport
 
-Azok a műveletek [összessége, amelyek](xref:microsoft.quantum.glossary#bloch-sphere) elfoglalják a octants és a [Pauli-operátorok](xref:microsoft.quantum.glossary#pauli-operators)hatását. Ezek közé tartoznak az Operations [$X $ ](xref:microsoft.quantum.intrinsic.x), [$Y $ ](xref:microsoft.quantum.intrinsic.y), [$Z $ ](xref:microsoft.quantum.intrinsic.z), [$H $ ](xref:microsoft.quantum.intrinsic.h) és [$S $ ](xref:microsoft.quantum.intrinsic.s).
+Azok a műveletek [összessége, amelyek](xref:microsoft.quantum.glossary#bloch-sphere) elfoglalják a octants és a [Pauli-operátorok](xref:microsoft.quantum.glossary#pauli-operators)hatását. Ezek közé tartoznak a következő műveletek: [ $ X $ ](xref:microsoft.quantum.intrinsic.x), [ $ Y $ ](xref:microsoft.quantum.intrinsic.y), [ $ Z $ ](xref:microsoft.quantum.intrinsic.z), [ $ H $ ](xref:microsoft.quantum.intrinsic.h) és [ $ S $ ](xref:microsoft.quantum.intrinsic.s).
 
 ## <a name="controlled"></a>Ellenőrzött
 
@@ -123,15 +115,15 @@ Olyan Quantum [művelet](xref:microsoft.quantum.glossary#operation) , amely egy 
 
 ## <a name="dirac-notation"></a>Dirac jelölése
 
-Egy szimbolikus Gyorsírás, amely leegyszerűsíti a [kvantum-állapotok](xref:microsoft.quantum.glossary#quantum-state), más néven a *Bra-ket* jelölések megjelenítését.  A *melltartó* része egy sor vektort jelöl, például: $ \bra{A } = \begin{ bmatrix } a {_1 } & a {_2 } \end{$, bmatrix } és a *ket* rész egy oszlop vektort jelöl, $ \ket{B } = \begin{ bmatrix } b {_1 } \\ \\ b {_2 } \end{ bmatrix } $. További információ: Dirac- [jelölés](xref:microsoft.quantum.concepts.dirac).
+Egy szimbolikus Gyorsírás, amely leegyszerűsíti a [kvantum-állapotok](xref:microsoft.quantum.glossary#quantum-state), más néven a *Bra-ket* jelölések megjelenítését.  A *melltartó* a sor vektort jelöli, például a $ \bra { } = \begin{bmatrix} { _1 egy } & { _2, } \end{bmatrix} $ a *ket* pedig egy oszlop vektort, $ \ket { b } = \begin{bmatrix} b { _1 } \\\\ b { _2 } \end{bmatrix} $ . További információ: Dirac- [jelölés](xref:microsoft.quantum.concepts.dirac).
 
 ## <a name="eigenvalue"></a>Sajátérték
 
-Az a tényező, amellyel egy adott átalakítás [eigenvector](xref:microsoft.quantum.glossary#eigenvector) nagysága megváltozik az átalakítás alkalmazásával.  Egy négyzetes mátrix $M $ és egy eigenvector $v $ , majd $MV = CV $ , ahol $c $ a sajátérték, és az argumentumok összetett száma lehet. További információ: [speciális mátrix – fogalmak](xref:microsoft.quantum.concepts.matrix-advanced).
+Az a tényező, amellyel egy adott átalakítás [eigenvector](xref:microsoft.quantum.glossary#eigenvector) nagysága megváltozik az átalakítás alkalmazásával.  A Square Matrix $ M $ és egy eigenvector $ v $ , majd az $ MV = CV $ , ahol a $ c $ a sajátérték, és az argumentumok összetett száma lehet. További információ: [speciális mátrix – fogalmak](xref:microsoft.quantum.concepts.matrix-advanced).
 
 ## <a name="eigenvector"></a>Eigenvector
 
-Egy olyan vektor, amelynek irányát egy adott átalakítás nem változtatja meg, és amelynek nagyságrendjét a vektor [sajátérték](xref:microsoft.quantum.glossary#eigenvalue)megfelelő tényező módosítja. A négyzetes mátrix $M $ és egy sajátérték $c $ , majd $MV = CV $ , ahol $ a $v a mátrix eigenvector, és az argumentumok összetett száma lehet. További információ: [speciális mátrix – fogalmak](xref:microsoft.quantum.concepts.matrix-advanced).
+Egy olyan vektor, amelynek irányát egy adott átalakítás nem változtatja meg, és amelynek nagyságrendjét a vektor [sajátérték](xref:microsoft.quantum.glossary#eigenvalue)megfelelő tényező módosítja. A Square Matrix $ M $ és a sajátérték $ c $ , majd az $ MV = CV $ , ahol $ a v a $ mátrix eigenvector, és az argumentumok összetett száma lehet. További információ: [speciális mátrix – fogalmak](xref:microsoft.quantum.concepts.matrix-advanced).
 
 ## <a name="entanglement"></a>Összefonódás
 
@@ -139,14 +131,14 @@ A *kvantum-részecskék* (például a [qubits](xref:microsoft.quantum.glossary#q
 
 ## <a name="epr-pair"></a>EPR pár
 
-Két [qubits](xref:microsoft.quantum.glossary#qubit)négy specifikus, maximálisan összekeverhető [Quantum állapotának](xref:microsoft.quantum.glossary#quantum-state) egyike. A négy állapot definiálva van: $ \ket { \ beta_ {ij } } = (\Mathbb{1 } \Otimes X ^ iZ ^ j) (\ket{00 } + \ket{11 } )/\sqrt{2 } $. Egy EPR pár más néven [Bell-állapot](xref:microsoft.quantum.glossary#bell-state)
+Két [qubits](xref:microsoft.quantum.glossary#qubit)négy specifikus, maximálisan összekeverhető [Quantum állapotának](xref:microsoft.quantum.glossary#quantum-state) egyike. A négy állam meghatározása: $ \ket { \beta _ { ij } } = ( \mathbb { 1 } \otimes X ^ iZ ^ j) ( \ket { 00 }  +  \ket { 11 } )/ \sqrt { 2 } $ . Egy EPR pár más néven [Bell-állapot](xref:microsoft.quantum.glossary#bell-state)
 
 ## <a name="evolution"></a>Evolution
 
 A [kvantum-állapot](xref:microsoft.quantum.glossary#quantum-state) időbeli változásának módja. További információ: [mátrix exponenciálisok](xref:microsoft.quantum.concepts.matrix-advanced#matrix-exponentials).
 
 ## <a name="function"></a>Függvény
-A Q # nyelvben található, tisztán klasszikus (nem Quantum) típusú alrutin. Míg a függvények a kvantum-algoritmusokon belül vannak használatban, nem működhetnek [qubits](xref:microsoft.quantum.glossary#qubit) vagy hívási [műveleteken](xref:microsoft.quantum.glossary#operation). További információ: [Operations and functions](xref:microsoft.quantum.guide.operationsfunctions).
+A Q# tisztán klasszikus (nem Quantum) nyelvben használt alrutin típusa. Míg a függvények a kvantum-algoritmusokon belül vannak használatban, nem működhetnek [qubits](xref:microsoft.quantum.glossary#qubit) vagy hívási [műveleteken](xref:microsoft.quantum.glossary#operation). További információ: [Operations and functions](xref:microsoft.quantum.guide.operationsfunctions).
 
 ## <a name="gate"></a>Kapu
 
@@ -154,15 +146,15 @@ Egy kvantum- [művelet](xref:microsoft.quantum.glossary#operation)örökölt kif
 
 ## <a name="global-phase"></a>Globális fázis
 
-Ha két [állapot](xref:microsoft.quantum.glossary#quantum-state) megegyezik egy összetett szám többszörösével, $e ^ {i \phi } $, azt mondják, hogy eltérnek a globális fázistól. A helyi fázisokkal ellentétben a globális fázisok nem figyelhetők meg semmilyen [méréssel](xref:microsoft.quantum.glossary#measurement). További információ: [Qubit](xref:microsoft.quantum.concepts.qubit).
+Ha két [állam](xref:microsoft.quantum.glossary#quantum-state) azonos egy összetett számú $ e ^ i értékkel, azt { \phi } $ mondják, hogy eltérnek a globális fázistól. A helyi fázisokkal ellentétben a globális fázisok nem figyelhetők meg semmilyen [méréssel](xref:microsoft.quantum.glossary#measurement). További információ: [Qubit](xref:microsoft.quantum.concepts.qubit).
 
 ## <a name="hadamard"></a>Hadamard
 
-A Hadamard művelet (más néven Hadamard-kapu vagy átalakító) egyetlen [qubit](xref:microsoft.quantum.glossary#qubit) viselkedik, és a $ \ket{0 $ vagy $ \ket{1 $ páros [pozícióba](xref:microsoft.quantum.glossary#superposition) helyezi, } } Ha a qubit kezdetben $ \ket{0 } $ állapotban van. A Q # esetében ezt a műveletet az előre definiált művelet alkalmazza [`H`](xref:microsoft.quantum.intrinsic.h) .
+A Hadamard művelet (más néven Hadamard-kapu vagy átalakító) egyetlen [qubit](xref:microsoft.quantum.glossary#qubit) viselkedik, és 0 vagy 1 páros [felállásba](xref:microsoft.quantum.glossary#superposition) helyezi, $ \ket { } $ $ \ket { } $ Ha a qubit kezdetben $ \ket { 0 } $ állapotban van. A-ben Q# ezt a műveletet az előre meghatározott művelet alkalmazza [`H`](xref:microsoft.quantum.intrinsic.h) .
 
 ## <a name="immutable"></a>Nem módosítható
 
-Olyan változó, amelynek értéke nem módosítható. A Q #-ban egy nem módosítható változó jön létre a `let` kulcsszó használatával. A *módosítható* változók bejelentéséhez használja a [változékony](xref:microsoft.quantum.glossary#immutable) kulcsszót a bevalláshoz, és a `set` kulcsszót az érték módosításához. 
+Olyan változó, amelynek értéke nem módosítható. A alkalmazásban egy nem módosítható változó Q# jön létre a `let` kulcsszó használatával. A *módosítható* változók bejelentéséhez használja a [változékony](xref:microsoft.quantum.glossary#immutable) kulcsszót a bevalláshoz, és a `set` kulcsszót az érték módosításához. 
 
 ## <a name="measurement"></a>Mérés
 
@@ -170,7 +162,7 @@ A megfigyelés eredményét eredményező [qubit](xref:microsoft.quantum.glossar
 
 ## <a name="mutable"></a>Változtatható
 
-Egy változó, amelynek az értéke a létrehozása után módosítható. A Q # változóban változtatható változót a kulcsszó használatával kell deklarálni, `mutable` és a kulcsszó használatával kell módosítani `set` . A `let` kulcsszóval létrehozott változók nem [változtathatók](xref:microsoft.quantum.glossary#immutable) meg, és az értékük nem módosítható.
+Egy változó, amelynek az értéke a létrehozása után módosítható. A-ben változtatható változót Q# a kulcsszó használatával deklaráljuk, `mutable` és a kulcsszó használatával módosították `set` . A `let` kulcsszóval létrehozott változók nem [változtathatók](xref:microsoft.quantum.glossary#immutable) meg, és az értékük nem módosítható.
 
 ## <a name="namespace"></a>Névtér
 
@@ -178,7 +170,7 @@ A kapcsolódó nevek (például [műveletek](xref:microsoft.quantum.glossary#ope
 
 ## <a name="operation"></a>Művelet
 
-A Quantum végrehajtás alapegysége a Q #-ban. Ez nagyjából megfelel a C, C++ vagy Python függvénynek, illetve a C# vagy a Java statikus metódusának. További információ: [Operations and functions](xref:microsoft.quantum.guide.operationsfunctions).
+A kvantum-végrehajtás alapegysége a-ben Q# . Ez nagyjából megfelel a C, C++ vagy Python függvénynek, illetve a C# vagy a Java statikus metódusának. További információ: [Operations and functions](xref:microsoft.quantum.guide.operationsfunctions).
 
 ## <a name="operator-application"></a>Kezelő alkalmazás
 
@@ -194,7 +186,7 @@ Egy olyan alrutin, amely Adatfüggő adatokat biztosít a kvantum-algoritmusnak 
 
 ## <a name="pauli-operators"></a>Pauli-operátorok
 
-Három 2 x 2 egységes mátrix, azaz a `X` `Y` és a `Z` Quantum művelet. Az Identity Matrix, $I $ , is gyakran szerepel a készletben is.  $I = \begin{ bmatrix } 1 & 0 \\ \\ 0 & 1 \end{ bmatrix } $, $X = \begin{ bmatrix } 0 & 1 \\ \\ 1 & 0 \end{ bmatrix } $, $Y = \begin{ bmatrix } 0 &-i \\ \\ & 0 \end{ bmatrix } $, $Z = \begin{ bmatrix } 1 & 0 \\ \\ 0 &-1 \end{ bmatrix } $.   További információ: [qubit műveletek](xref:microsoft.quantum.concepts.qubit#single-qubit-operations).
+Három 2 x 2 egységes mátrix, azaz a `X` `Y` és a `Z` Quantum művelet. Az Identity Matrix ( $ I $ ) gyakran szerepel a készletben is.  $= \begin{bmatrix} 1 & 0 0 \\\\ & 1 \end{bmatrix} $ , $ X 0 1 = \begin{bmatrix} & \\\\ & 0 \end{bmatrix} $ , $ Y = \begin{bmatrix} 0 & – i 0 \\\\ & \end{bmatrix} $ , $ Z = \begin{bmatrix} 1 & 0 \\\\ 0 & -1 \end{bmatrix} $ .   További információ: [qubit műveletek](xref:microsoft.quantum.concepts.qubit#single-qubit-operations).
 
 ## <a name="quantum-circuit-diagram"></a>Quantum Circuit diagram
 
@@ -206,7 +198,7 @@ További információ: kvantum- [áramkörök](xref:microsoft.quantum.concepts.c
 
 ## <a name="quantum-libraries"></a>Kvantum-kódtárak
 
-A Q # programok létrehozásához használható [műveletek](xref:microsoft.quantum.glossary#operation), [függvények](xref:microsoft.quantum.glossary#function) és [felhasználó által definiált típusok](xref:microsoft.quantum.glossary#user-defined-type) gyűjteményei. A [standard szintű függvénytár](xref:microsoft.quantum.libraries.standard.intro) alapértelmezés szerint telepítve van. A rendelkezésre álló további könyvtárak a [kémiai könyvtár](xref:microsoft.quantum.chemistry.concepts.intro), a [numerikus könyvtár](xref:microsoft.quantum.numerics.intro) és a [Machine learning-könyvtár](xref:microsoft.quantum.machine-learning.concepts.intro).
+A programok létrehozásához szükséges [műveletek](xref:microsoft.quantum.glossary#operation), [függvények](xref:microsoft.quantum.glossary#function) és [felhasználó által definiált típusok](xref:microsoft.quantum.glossary#user-defined-type) gyűjteményei Q# . A [standard szintű függvénytár](xref:microsoft.quantum.libraries.standard.intro) alapértelmezés szerint telepítve van. A rendelkezésre álló további könyvtárak a [kémiai könyvtár](xref:microsoft.quantum.chemistry.concepts.intro), a [numerikus könyvtár](xref:microsoft.quantum.numerics.intro) és a [Machine learning-könyvtár](xref:microsoft.quantum.machine-learning.concepts.intro).
 
 ## <a name="quantum-state"></a>Kvantum állapota
 
@@ -222,11 +214,11 @@ A probabilistically által sikeresnek bizonyuló kvantum-algoritmus. Hiba eseté
 
 ## <a name="standard-libraries"></a>Szabványos kódtárak
 
-A telepítés során a Q # fordítóprogrammal együtt telepített [műveletek](xref:microsoft.quantum.glossary#operation), [függvények](xref:microsoft.quantum.glossary#function) és [felhasználó által definiált típusok](xref:microsoft.quantum.glossary#user-defined-type) . A standard szintű függvénytár-implementáció agnosztikus a célszámítógépek tekintetében. További információ: [standard könyvtárak](xref:microsoft.quantum.libraries.standard.intro).
+A telepítés során a fordítóval együtt telepített [műveletek](xref:microsoft.quantum.glossary#operation), [függvények](xref:microsoft.quantum.glossary#function) és [felhasználó által definiált típusok](xref:microsoft.quantum.glossary#user-defined-type) Q# . A standard szintű függvénytár-implementáció agnosztikus a célszámítógépek tekintetében. További információ: [standard könyvtárak](xref:microsoft.quantum.libraries.standard.intro).
 
 ## <a name="superposition"></a>Szuperpozíció
 
-A Quantum Computing koncepciója, amely szerint a [qubit](xref:microsoft.quantum.glossary#qubit) két állapot lineáris kombinációja, $ \ket{0 } $ és $ \ket{1 } $, amíg meg nem történik a [mérés](xref:microsoft.quantum.glossary#measurement).  További információ: a [kvantum-számítástechnika ismertetése](xref:microsoft.quantum.overview.understanding).
+A Quantum Computing koncepciója, amely szerint a [qubit](xref:microsoft.quantum.glossary#qubit) két állapot lineáris kombinációja, $ \ket { 0 } $ és $ \ket { 1 } $ , amíg meg nem történik a [mérés](xref:microsoft.quantum.glossary#measurement).  További információ: a [kvantum-számítástechnika ismertetése](xref:microsoft.quantum.overview.understanding).
 
 ## <a name="target-machine"></a>Célszámítógép
 
@@ -238,11 +230,11 @@ Az egyik [qubit](xref:microsoft.quantum.glossary#qubit) az adatok vagy a kvantum
 
 ## <a name="tuple"></a>Rekord
 
-Vesszővel tagolt értékek gyűjteménye, amely egyetlen értékként viselkedik. A rekord *típusát* a benne található értékek típusai határozzák meg. A Q #- [ban a rekordok](xref:microsoft.quantum.glossary#immutable) nem módosítható, és beágyazható, tömböket tartalmazhat, vagy egy tömbben használható. További információ: a [rekord típusai](xref:microsoft.quantum.guide.types#tuple-types).
+Vesszővel tagolt értékek gyűjteménye, amely egyetlen értékként viselkedik. A rekord *típusát* a benne található értékek típusai határozzák meg. A-ben a Q# rekordok nem módosítható, és beágyazható, tömböket tartalmazhat, vagy egy tömbben használható. [immutable](xref:microsoft.quantum.glossary#immutable) További információ: a [rekord típusai](xref:microsoft.quantum.guide.types#tuple-types).
 
 ## <a name="unitary-operator"></a>Egységes operátor
 
-Egy operátor, amelynek inverze egyenlő a [adjoint](xref:microsoft.quantum.glossary#adjoint), azaz $uu ^ {\dagger } = \id $ .
+Egy operátor, amelynek inverze megegyezik a [adjoint](xref:microsoft.quantum.glossary#adjoint), azaz a $ uu ^ értékkel { \dagger } = \id $ .
 
 ## <a name="user-defined-type"></a>Felhasználó által definiált típus
 

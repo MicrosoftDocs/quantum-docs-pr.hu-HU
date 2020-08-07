@@ -1,17 +1,20 @@
 ---
 title: Mélységi számláló – Quantum Development Kit
-description: 'Ismerje meg a Microsoft QDK mélységi számlálóját, amely a Quantum Trace Simulator használatával gyűjti össze a Q # programban meghívott összes művelet mélységét.'
+description: Ismerje meg a Microsoft QDK mélységi számlálóját, amely a Quantum Trace Simulator használatával gyűjti össze a programban meghívott összes művelet mélységét Q# .
 author: vadym-kl
 ms.author: vadym@microsoft.com
 ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.depth-counter
-ms.openlocfilehash: 811e387fedf547d2681518ae0bb525c13dc84ff4
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 5c54f6fc479203d30c68c4958329605d4323f9ea
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871127"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868321"
 ---
 # <a name="quantum-trace-simulator-depth-counter"></a>Quantum Trace Simulator: mélységi számláló
 
@@ -36,7 +39,7 @@ var sim = new QCTraceSimulator(config);
 
 ## <a name="using-the-depth-counter-in-a-c-host-program"></a>A mélység számláló használata C# gazda programban
 
-Az ebben a szakaszban szereplő C#-példa a `T` `CCNOT` következő Q # mintakód alapján kiszámítja a művelet mélységét:
+Az ebben a szakaszban szereplő C#-példa a következő mintakód alapján kiszámítja a `T` művelet mélységét `CCNOT` Q# :
 
 ```qsharp
 open Microsoft.Quantum.Intrinsic;
@@ -70,7 +73,7 @@ Végezetül a következő lépésekkel állíthatja be az összes, a mélységi 
 string csvSummary = sim.ToCSV()[MetricsCountersNames.depthCounter];
 ```
 
-## <a name="see-also"></a>Lásd még
+## <a name="see-also"></a>További információ
 
 - A Quantum Development Kit [Quantum Trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro) áttekintése.
 - Az <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> API-hivatkozás.

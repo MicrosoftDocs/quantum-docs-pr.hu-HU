@@ -1,6 +1,8 @@
 ---
 title: vektorok és mátrixok a kvantum-számítástechnikai leírásban: megismerheti a vektorok és mátrixok használatának alapjait.
 Szerző: QuantumWriter UID: Microsoft. Quantum. Concepts. vectors MS. Author: nawiebe@microsoft.com MS. Date: 12/11/2017 MS. topic: cikk No-Loc:
+- "Q#"
+- "$$v"
 - "$$"
 - "$$"
 - "$"
@@ -87,7 +89,7 @@ A kvantum-számítástechnika megismeréséhez elengedhetetlen a vektorok és m�
 
 A dimenzió (vagy a méret) n egy oszlop vektora (vagy egy egyszerű [*vektora*](https://en.wikipedia.org/wiki/Vector_(mathematics_and_physics))) $ $ $ $ egy $ $ oszlopként rendezett, n komplex szám $ (v_1, v_2, \ldots, v_n) gyűjteménye $ :
 
-$$v=\begin{bmatrix}
+$$v =\begin{bmatrix}
 v_1\\\\
 v_2\\\\
 \vdots\\\\

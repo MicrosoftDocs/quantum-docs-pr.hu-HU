@@ -1,17 +1,20 @@
 ---
 title: DISTINCT Inputs-Dámajáték – Quantum Development Kit
-description: 'Ismerje meg a Microsoft QDK DISTINCT input-ellenőrzését, amely a Quantum Trace Simulator használatával vizsgálja meg a Q # kódját a megosztott qubits lehetséges ütközések esetén.'
+description: Ismerkedjen meg a Microsoft QDK DISTINCT input-ellenőrzési szolgáltatásával, amely a Quantum Trace Simulator használatával vizsgálja meg, hogy milyen Q# ütközések lehetségesek a megosztott qubits.
 author: vadym-kl
 ms.author: vadym@microsoft.com
 ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.distinct-inputs
-ms.openlocfilehash: 49a1ccc5f37acfeaa1ee08bd974be45a40a76f93
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 750c94e7f861678d37f051619ff5b29bf4fd3d3e
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871144"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868270"
 ---
 # <a name="quantum-trace-simulator-distinct-inputs-checker"></a>Quantum Trace Simulator: különálló bemenet-ellenőrzési
 
@@ -19,7 +22,7 @@ A DISTINCT input-ellenőrök a Quantum Development Kit [Quantum Trace Simulator]
 
 ## <a name="conflicts-with-shared-qubits"></a>Ütközés megosztott qubits
 
-Vegye figyelembe a következő Q #-kódrészletet a különböző input-ellenőrök által észlelt problémák szemléltetése érdekében:
+Vegye figyelembe a következő Q# kódrészletet a különböző input-ellenőrök által észlelt problémák szemléltetéséhez:
 
 ```qsharp
 operation ApplyBoth(
@@ -47,7 +50,7 @@ operation ApplyWithNonDistinctInputs() : Unit {
 }
 ```
 
-Vegye figyelembe, hogy `op1` `op2` mindkettő részleges alkalmazás használatával és a qubit megosztásával is beszerezhető. Ha ezt a `ApplyBoth` példát hívja meg, a művelet eredménye a és a belső sorrendtől függ, `op1` és nem az, `op2` `ApplyBoth` ami várható. Ha engedélyezi a különböző bemenet-ellenőröket, az észleli az ilyen helyzeteket, és eldönti a `DistinctInputsCheckerException` . További információ: a <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.DistinctInputsCheckerException> Q # API Library.
+Vegye figyelembe, hogy `op1` `op2` mindkettő részleges alkalmazás használatával és a qubit megosztásával is beszerezhető. Ha ezt a `ApplyBoth` példát hívja meg, a művelet eredménye a és a belső sorrendtől függ, `op1` és nem az, `op2` `ApplyBoth` ami várható. Ha engedélyezi a különböző bemenet-ellenőröket, az észleli az ilyen helyzeteket, és eldönti a `DistinctInputsCheckerException` . További információ: az <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.DistinctInputsCheckerException> Q# API-függvénytárban.
 
 ## <a name="invoking-the-distinct-inputs-checker"></a>A különböző bemenet-ellenőrök meghívása
 
@@ -85,7 +88,7 @@ namespace Quantum.MyProgram
 }
 ```
 
-## <a name="see-also"></a>Lásd még
+## <a name="see-also"></a>További információ
 
 - A Quantum Development Kit [Quantum Trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro) áttekintése.
 - Az <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> API-hivatkozás.

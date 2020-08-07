@@ -1,6 +1,8 @@
 ---
 title: Quantum Oracles Description: megtudhatja, hogyan dolgozhat és határozhat meg a Quantum Oracles, Black Box műveleteit, amelyeket egy másik algoritmus bemenetként használ.
 Szerző: cgranade UID: Microsoft. Quantum. Concepts. Oracles MS. Author: Christopher.Granade@microsoft.com MS. Date: 07/11/2018 MS. topic: No-Loc:
+- "Q#"
+- "$$v"
 - "$$"
 - "$$"
 - "$"
@@ -105,7 +107,7 @@ $$
 Most $ o = o ^ \dagger $ by Construction, így mindkét korábbi problémát megoldottuk.
 
 > [!TIP]
->Ha szeretné látni, hogy o $ = o ^ { \dagger } $ , vegye figyelembe, hogy $ o ^ 2, = \boldone $ mivel $ a \oplus b \oplus b a a = $ $ , b \in \[ ! OP. NO-LOC ({)] 0, 1 \[ ! OP. NEM-LOC (})] $ .
+>Ha szeretné megtekinteni, hogy az o $ = { \dagger } $ $ ^ 2 = \boldone $ $ egy \oplus b \oplus = , b:: $ $ \in \: No-Loc ({)::: 0, 1 \: :: No-Loc (}) $ :::.
 >Ennek eredményeképpen az $ O \ket { x } \ket { y \oplus f (x) } = \ket { x } \ket { y \oplus f (x) \oplus f (x) } = \ket { x } \ket { y } $ .
 
 Fontos, hogy az Oracle ily módon történő meghatározása az egyes számítási állapotok esetében $ \ket { x } \ket { y azt } $ is meghatározza, hogy az $ O hogyan $ viselkedik bármely más államban.

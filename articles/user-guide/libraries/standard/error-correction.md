@@ -1,17 +1,20 @@
 ---
-title: 'Hibajavítás a Q # standard kódtárakban'
-description: 'Megtudhatja, hogyan használhatja a Q # programokban a hiba javítására szolgáló kódokat a qubits állapotának védelme mellett.'
+title: Hibajavítás a Q# standard könyvtárakban
+description: Megtudhatja, hogyan használhatja a hibák helyességét a Q# programokban, miközben védi a qubits állapotát.
 author: QuantumWriter
 uid: microsoft.quantum.libraries.error-correction
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 514fe68f603b9a3a0b4607390719b08a43fe4967
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 8b1f008793281121bc547d1a6ac3b960feb082ab
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274997"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868491"
 ---
 # <a name="error-correction"></a>Hibajavítás #
 
@@ -48,7 +51,7 @@ Vegye figyelembe, hogy $Z _0 Z_1 \ket {000} = \ket {000} $ és a $Z _0 Z_1 \ket 
 Másfelől $Z _0 Z_1 \ket {100} =-\ket {100} $ és $Z _0 Z_1 \ket {011} =-\ket {011} $, így a $Z _0 Z_1 $ mérésének eredménye azt mutatja, hogy milyen hiba történt.
 
 Ennek kihangsúlyozása érdekében ismételje meg a fenti táblázatot, de adja hozzá a $Z _0 Z_1 $ és $Z _1 Z_2 $ mérésének eredményét minden egyes sorban.
-Az egyes mérések eredményeit a megfigyelt sajátérték ($ + $ vagy $-$) jelöléssel jelöljük meg, amely a Q # és a ( `Result` ) értékének felel meg `Zero` `One` .
+Az egyes mérések eredményeit a megfigyelt sajátérték ($ + $ vagy $-$) jelöléssel jelöljük meg, amely a és a Q# `Result` értékének felel meg `Zero` `One` .
 
 | Hiba $E $ | $E \ket{\overline {0} } $ | $E \ket{\overline {1} } $ | $Z _0 eredménye Z_1 $ | $Z _1 eredménye Z_2 $ |
 | --- | --- | --- | --- | --- |
@@ -68,16 +71,16 @@ Különösen hangsúlyozjuk, hogy a helyreállítás egy *klasszikus* következt
 > Általánosabban a kódok nagyobb számú hiba kezelésére és $Z $ hibák, valamint $X $ hibák kezelésére használhatók.
 
 A *stabilizátorok formalitásának*lényege, hogy betekintést nyerhetünk a kvantum-hibák kijavításának olyan mértékére, amely az összes kód állapotával azonos módon működik.
-A Q # Canon olyan keretrendszert biztosít, amely leírja a stabilizátor-kódok kódolását és dekódolását, valamint leírja, hogyan történik az egyik helyreállítás a hibákból.
+A Q# Canon olyan keretrendszert biztosít, amely leírja a stabilizátor-kódok kódolását és dekódolását, valamint leírja, hogy az egyes hibák hogyan állíthatók vissza.
 Ebben a szakaszban ezt a keretrendszert és annak alkalmazását néhány egyszerű kvantum-hiba – a kódok kijavítani.
 
 > [!TIP]
 > A stabilizátorok formális bevezetésének teljes bemutatása meghaladja a jelen szakasz hatókörét.
 > A [Gottesman 2009](https://arxiv.org/abs/0904.2557)-re vonatkozó további információkért tekintse meg az olvasók érdeklődését.
 
-## <a name="representing-error-correcting-codes-in-q"></a>Hibakódot jelölő kód kijavítani a Q-ban # ##
+## <a name="representing-error-correcting-codes-in-no-locq"></a>Hiba történt a kódok helyesbítésében a következőben:Q# ##
 
-A Q # Canon számos különböző, felhasználó által definiált típust biztosít a hibák kijavított kódjának megadásához:
+A hibakódok megadásához a Q# Canon számos különböző, felhasználó által definiált típust biztosít:
 
 - <xref:microsoft.quantum.errorcorrection.logicalregister>`= Qubit[]`: Azt jelzi, hogy a qubits-regisztrációt egy hibajavítási kód kódjának blokkjának kell értelmezni.
 - <xref:microsoft.quantum.errorcorrection.syndrome>`= Result[]`: Azt jelzi, hogy a mérési eredmények tömbjét úgy kell értelmezni, mint a kód blokkban mért szindrómát.
@@ -119,4 +122,4 @@ using (scratch = Qubit[nScratch]) {
 
 Ezt részletesebben is megvizsgáljuk a [bit flip Code-mintában](https://github.com/microsoft/Quantum/tree/master/samples/error-correction/bit-flip-code).
 
-A bit-flip code-on kívül a Q # Canon az [öt qubit tökéletes kód](https://arxiv.org/abs/quant-ph/9602019)megvalósításával és a [Seven-qubit kóddal](https://arxiv.org/abs/quant-ph/9705052)van ellátva, amelyek közül mindkettő kiválaszthat egy tetszőleges, egyetlen qubit hibát.
+A bit-flip kód mellett a Canon az Q# [öt qubit tökéletes kód](https://arxiv.org/abs/quant-ph/9602019)és a [Seven-qubit kód](https://arxiv.org/abs/quant-ph/9705052)megvalósításával érhető el, amelyek közül mindkettő kijavítani egy tetszőleges, egyqubitos hibát.

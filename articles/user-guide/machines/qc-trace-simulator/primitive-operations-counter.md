@@ -1,17 +1,20 @@
 ---
 title: Primitív művelet számláló – Quantum Development Kit
-description: 'Ismerje meg a Microsoft QDK primitív műveleti számlálóját, amely a Quantum Trace Simulator használatával követi nyomon a Q # programban végzett műveletek által használt primitív végrehajtásokat.'
+description: Ismerje meg a Microsoft QDK primitív műveleti számlálóját, amely a Quantum Trace Simulator használatával követi nyomon a programok műveletei által használt primitív végrehajtásokat Q# .
 author: vadym-kl
 ms.author: vadym@microsoft.com
 ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.primitive-counter
-ms.openlocfilehash: ea022d499354f7cefd60da690466496e0ce7c336
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: ceb70cef6dc0a4530b992b5a529248a8b283c17f
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871025"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868236"
 ---
 # <a name="quantum-trace-simulator-primitive-operations-counter"></a>Quantum Trace Simulator: primitív műveleti számláló
 
@@ -31,7 +34,7 @@ var sim = new QCTraceSimulator(config);
 
 ## <a name="using-the-primitive-operation-counter-in-a-c-host-program"></a>A primitív műveleti számláló használata C#-gazdagép programban
 
-Az ebben a szakaszban szereplő C#-példa azt mutatja, hogy hány <xref:microsoft.quantum.intrinsic.t> műveletre van szükség a művelet megvalósításához a <xref:microsoft.quantum.intrinsic.ccnot> következő Q # mintakód alapján:
+Az ebben a szakaszban szereplő C#-példa azt mutatja, hogy hány <xref:microsoft.quantum.intrinsic.t> műveletre van szükség a művelet megvalósításához a <xref:microsoft.quantum.intrinsic.ccnot> következő Q# mintakód alapján:
 
 ```qsharp
 open Microsoft.Quantum.Intrinsic;
@@ -72,7 +75,7 @@ Végezetül a következő paranccsal állíthatja be a primitív műveleti szám
 string csvSummary = sim.ToCSV()[MetricsCountersNames.primitiveOperationsCounter];
 ```
 
-## <a name="see-also"></a>Lásd még
+## <a name="see-also"></a>További információ
 
 - A Quantum Development Kit [Quantum Trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro) áttekintése.
 - Az <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> API-hivatkozás.

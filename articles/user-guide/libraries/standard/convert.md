@@ -1,22 +1,25 @@
 ---
-title: 'Típus konverziók a Q # standard könyvtárakban'
-description: 'Az általános és a felhasználó által definiált típusú átalakítási függvények ismertetése a Q # standard kódtárakban.'
+title: Írja be a konverziókat a Q# standard könyvtárakba
+description: Ismerje meg az általános és a felhasználó által definiált típusú átalakítási funkciókat a Q# standard könyvtárakban.
 author: cgranade
 uid: microsoft.quantum.libraries.convert
 ms.author: chgranad@microsoft.com
 ms.topic: article
-ms.openlocfilehash: e941d7e3d76459546861410e91a03d7315183867
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 2319bf453f5fbf6bd068859ea65562423d3ff4d0
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275007"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868513"
 ---
 # <a name="type-conversions"></a>Típus konverziója #
 
-A Q # egy **határozottan gépelt** nyelv.
-Különösen a Q # nem végez implicit módon különböző típusok között. Például `1 + 2.0` nem érvényes Q # kifejezés.
-A Q # Ehelyett számos különböző típusú átalakítási függvényt biztosít egy adott típus új értékeinek létrehozásához.
+Q#egy **erősen gépelt** nyelv.
+A nem Q# implicit módon a különböző típusok között történik. Például `1 + 2.0` nem érvényes Q# kifejezés.
+Ehelyett Q# számos különböző típusú átalakítási függvényt biztosít egy adott típus új értékeinek létrehozásához.
 
 A <xref:microsoft.quantum.core.length> kimeneti típusa például a kimenet `Int` , ezért a kimenetét először át kell alakítani, mielőtt egy `Double` lebegőpontos kifejezés részeként lehessen használni.
 Ezt a következő függvény használatával teheti meg <xref:microsoft.quantum.convert.intasdouble> :
@@ -39,7 +42,7 @@ let indices = Convert.RangeAsIntArray(0..4); // [0, 1, 2, 3, 4]
 
 A <xref:microsoft.quantum.convert> névtér további egzotikus konverziókat is biztosít, például a `FunctionAsOperation` függvényeket `'T -> 'U` új műveletekre alakítja át `'T => 'U` .
 
-Végül a Q # standard Library számos felhasználó által definiált típust biztosít, például a <xref:microsoft.quantum.math.complex> és a <xref:microsoft.quantum.arithmetic.littleendian> .
+Végül a Q# standard könyvtár számos felhasználó által definiált típust biztosít, például a <xref:microsoft.quantum.math.complex> és a <xref:microsoft.quantum.arithmetic.littleendian> .
 Ezen típusok mellett a standard könyvtár a következő funkciókat nyújtja <xref:microsoft.quantum.arithmetic.bigendianaslittleendian> :
 
 ```Q#

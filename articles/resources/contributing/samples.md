@@ -6,12 +6,15 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.samples
-ms.openlocfilehash: 3bd0de04a448c74eea6c3e8e3a15dcbb19f9d705
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 20da0e1765a242c172cc595f03d7791a0e8b8d2d
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274805"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87867510"
 ---
 # <a name="contributing-samples-to-the-quantum-development-kit"></a>Közreműködő minták a Quantum Development Kit-hez
 
@@ -47,8 +50,8 @@ Tekintse át az egyes mappákat alkotó fájlokat, tekintsük át a [`algorithms
 
 | Fájl              | Leírás                                                |
 |-------------------|------------------------------------------------------------|
-| `CHSHGame.csproj` | Q # projekt a minta létrehozásához a .NET Core SDK használatával |
-| `Game.qs`         | Q # műveletek és függvények a mintához                 |
+| `CHSHGame.csproj` | Q#a minta létrehozásához használt projekt .NET Core SDK |
+| `Game.qs`         | Q#a mintához tartozó műveletek és függvények                 |
 | `Host.cs`         | A minta futtatására szolgáló C#-gazda program                     |
 | `host.py`         | A minta futtatásához használt Python-gazda program                 |
 | `README.md`       | Dokumentáció a minta működéséről és használatáról    |

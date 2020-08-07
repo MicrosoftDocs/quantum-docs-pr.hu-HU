@@ -1,21 +1,24 @@
 ---
 title: Szélesség számláló – Quantum Development Kit
-description: 'Ismerkedjen meg a Microsoft QDK szélességi számlálójának használatával, amely a Quantum Trace Simulator használatával számítja ki, hogy hány qubits van kiosztva, és hogyan kölcsönzött a Q # programban végzett műveletek.'
+description: Ismerkedjen meg a Microsoft QDK szélességi számlálójának használatával, amely a Quantum Trace Simulator használatával számítja ki, hogy hány qubits van kiosztva, és hogyan kölcsönzött a program műveletei által Q# .
 author: vadym-kl
 ms.author: vadym@microsoft.com
 ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.width-counter
-ms.openlocfilehash: af8609dc5c05f7a19b8d21755281427feb29b84c
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 02f4937aaccf7bf49d6450355c6b42b273071b2e
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871519"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868202"
 ---
 # <a name="quantum-trace-simulator-width-counter"></a>Quantum Trace Simulator: szélesség számláló
 
-A szélesség számláló a Quantum Development Kit [Quantum Trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro)részét képezi. Felhasználhatja a Q # program egyes műveletei által lefoglalt qubits számának megszámlálására. Néhány primitív művelet több qubits is kioszthat, például szorzásra vezérelt `X` vagy vezérelt `T` műveleteket.
+A szélesség számláló a Quantum Development Kit [Quantum Trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro)részét képezi. A használatával megszámolhatja a program egyes műveletei által lefoglalt qubits számát Q# . Néhány primitív művelet több qubits is kioszthat, például szorzásra vezérelt `X` vagy vezérelt `T` műveleteket.
 
 ## <a name="invoking-the-width-counter"></a>A szélességi számláló meghívása
 
@@ -29,7 +32,7 @@ var sim = new QCTraceSimulator(config);
 
 ## <a name="using-the-width-counter-in-a-c-host-program"></a>A szélesség számláló használata C#-gazdagép programban
 
-Az ebben a szakaszban ismertetett C#-példa a <xref:microsoft.quantum.intrinsic.x> következő Q # mintakód alapján kiszámítja a szorzás által vezérelt művelet megvalósításával lefoglalt extra qubits számát:
+Az ebben a szakaszban ismertetett C#-példa a következő mintakód alapján kiszámítja a szorzás által vezérelt művelet megvalósításával lefoglalt extra qubits számát <xref:microsoft.quantum.intrinsic.x> Q# :
 
 ```qsharp
 open Microsoft.Quantum.Intrinsic;
@@ -68,7 +71,7 @@ Végezetül a következő paranccsal állíthatja be az összes olyan statisztik
 string csvSummary = sim.ToCSV()[MetricsCountersNames.widthCounter];
 ```
 
-## <a name="see-also"></a>Lásd még
+## <a name="see-also"></a>További információ
 
 - A Quantum Development Kit [Quantum Trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro) áttekintése.
 - Az <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> API-hivatkozás.

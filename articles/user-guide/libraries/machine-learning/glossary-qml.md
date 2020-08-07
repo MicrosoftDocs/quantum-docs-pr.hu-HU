@@ -5,12 +5,15 @@ ms.author: alexei.bocharov@microsoft.com
 ms.date: 2/27/2020
 ms.topic: article
 uid: microsoft.quantum.libraries.machine-learning.training
-ms.openlocfilehash: f9b33a607a892179795d0700ba3080f9a24ab94a
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 52c3f69fb99384270a27e57c4f32212d18bee1a4
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275224"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868899"
 ---
 # <a name="quantum-machine-learning-glossary"></a>Quantum Machine Learning Szószedet
 
@@ -48,7 +51,7 @@ A szabály a kezdeti mérések száma körülbelül $1/\ mbox {tolerancia} ^ 2 $
 
 ### <a name="training-threads"></a>Betanítási szálak
 
-A valószínűségi függvény, amely az osztályozó betanítási segédprogramja, nagyon ritkán domború, ami azt jelenti, hogy általában számos helyi Optima szerepel a paraméterben, amely jelentősen különbözhet a minőségtől. Mivel az SGD-folyamat csak egy adott optimális értékre konvergál, fontos felderíteni több kezdő paraméteres vektort is. A gépi tanulás gyakori gyakorlata, hogy az ilyen kezdő vektorokat véletlenszerűen inicializálja. A Q # betanítási API tetszőleges tömböt fogad az ilyen kezdő vektorokból, de az alapul szolgáló kód szekvenciálisan tárja fel őket. A többtényezős számítógépeken vagy a párhuzamos számítástechnikai architektúrák esetében ajánlott több hívást végrehajtani a Q # betanítási API-val párhuzamosan a hívások különböző paramétereinek inicializálásával.
+A valószínűségi függvény, amely az osztályozó betanítási segédprogramja, nagyon ritkán domború, ami azt jelenti, hogy általában számos helyi Optima szerepel a paraméterben, amely jelentősen különbözhet a minőségtől. Mivel az SGD-folyamat csak egy adott optimális értékre konvergál, fontos felderíteni több kezdő paraméteres vektort is. A gépi tanulás gyakori gyakorlata, hogy az ilyen kezdő vektorokat véletlenszerűen inicializálja. A Q# betanítási API-k tetszőleges tömböt fogadnak el az ilyen kiindulási vektorokból, de az alapul szolgáló kód szekvenciálisan tárja fel őket. Egy többplatformos számítógépen vagy a párhuzamos számítástechnikai architektúrával kapcsolatban ajánlott több hívást végrehajtani Q# az API-t párhuzamosan a hívások különböző paramétereinek inicializálásával.
 
 #### <a name="how-to-modify-the-hyperparameters"></a>A hiperparaméterek beállítása módosítása
 

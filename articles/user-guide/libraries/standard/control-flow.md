@@ -1,22 +1,25 @@
 ---
-title: 'A Q # standard libararies lévő flow-vezérlők'
-description: 'Ismerkedjen meg a Microsoft Q # standard Library folyamat-vezérlési műveleteivel és funkcióival.'
+title: A standard libararies a flow-vezérlők Q#
+description: Ismerje meg a Flow Control műveleteit és funkcióit a Microsoft Q# standard Library-ben.
 author: QuantumWriter
 uid: microsoft.quantum.concepts.control-flow
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: b41b3edd7a3e3ac13dbda106a869f4cba8183600
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: a440f1ef2b901b18593816ca27aeadf7ab827104
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275017"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868576"
 ---
 # <a name="higher-order-control-flow"></a>Magasabb rendű vezérlési folyamat #
 
 A standard szintű kódtár egyik elsődleges szerepköre, hogy könnyebb legyen a [kvantum-programok](https://en.wikipedia.org/wiki/Quantum_programming)segítségével kifejezni a magas szintű algoritmusos ötleteket.
-Így a Q # Canon számos különböző Flow Control-szerkezetet biztosít, amelyek mindegyike a függvények és műveletek részleges alkalmazásával valósítható meg.
+Így a Q# Canon számos különböző flow-vezérlési szerkezetet biztosít, amelyek mindegyike a függvények és műveletek részleges alkalmazásával valósítható meg.
 Tekintse át azonnal a példát, és vegye figyelembe, hogy az egyik "CNEM-létrát" szeretné létrehozni egy regiszteren:
 
 ```qsharp
@@ -47,7 +50,7 @@ A szakasz további részében számos példát ismertetünk arra, hogy miként h
 
 A Canon által biztosított elsődleges absztrakciók egyike az iteráció.
 Vegyünk például egy egységes formát, $U \otimes U \otimes \cdots \otimes U $-t egyetlen qubit egységes $U $-ra.
-A Q #-ban felhasználhatjuk, <xref:microsoft.quantum.arrays.indexrange> hogy ezt a következő módon használjuk `for` hurokként egy regiszterben:
+A-ben a Q# következő módon lehet ezt a lehetőséget használni a <xref:microsoft.quantum.arrays.indexrange> `for` regisztrálási hurokként:
 
 ```qsharp
 /// # Summary
@@ -88,7 +91,7 @@ Hasonlóképpen, az <xref:microsoft.quantum.canon.applytoeachindex> űrlap mint�
 > Ezután `ApplyToEach(Recover(code, recoveryFn, _), codeBlocks)` alkalmazza a hiba – a kód és a `code` helyreállítási függvényt az `recoveryFn` egyes blokkokra egymástól függetlenül.
 > Ez a klasszikus bemenetek esetében is `ApplyToEach(R(_, _, qubit), [(PauliX, PI() / 2.0); (PauliY(), PI() / 3.0]))` érvényes: a $ \pi/$2 rotációját alkalmazza a $X $ értékre, amelyet a $PI/$3 $Y $ értékkel való elforgatása követ.
 
-A Q # Canon Emellett támogatja a funkcionális programozáshoz ismert klasszikus enumerálási mintákat is.
+A Q# Canon Emellett támogatja a funkcionális programozáshoz ismert klasszikus enumerálási mintákat is.
 Például <xref:microsoft.quantum.arrays.fold> implementálja a mintát $f (f (f (s \_ {\text{Initial}}, x \_ 0), x \_ 1), \dots) $, hogy csökkentse a függvények listáját.
 Ez a minta összegek, termékek, minimumok, Maxima és más hasonló függvények megvalósítására használható:
 
@@ -100,7 +103,7 @@ function Sum(xs : Int[]) {
 }
 ```
 
-Hasonlóképpen, a (z <xref:microsoft.quantum.arrays.mapped> ) és a függvények <xref:microsoft.quantum.arrays.mappedbyindex> a funkcionális programozási fogalmakat is kihasználhatják a Q #-ban.
+Hasonlóképpen, a (z <xref:microsoft.quantum.arrays.mapped> ) és a függvények <xref:microsoft.quantum.arrays.mappedbyindex> is használhatók a funkcionális programozási fogalmak kifejezésére a alkalmazásban Q# .
 
 ## <a name="composing-operations-and-functions"></a>Műveletek és függvények összeállítása ##
 
@@ -170,7 +173,7 @@ Ezt az iterációs mintát a következő implementálja <xref:microsoft.quantum.
 DecomposeIntoTimeStepsCA((2, U), 1);
 ```
 
-Az aláírás a `DecomposeIntoTimeStepsCA` következő általános mintát követi a Q #-ban, ahol olyan gyűjtemények jelenhetnek meg, amelyek a tömbökben vagy a menet közbeni elemek kiszámításához használhatók, és amelyek az első elemek rekordok jelölik `Int`
+Az aláírás a `DecomposeIntoTimeStepsCA` következő általános mintát követi Q# , ahol olyan gyűjtemények szerepelnek, amelyekben tömbök vagy a menet közbeni elemek is lehetnek, amelyek az első elemek a rekordok jelölik `Int` .
 
 ## <a name="putting-it-together-controlling-operations"></a>Összerakva: vezérlési műveletek ##
 
@@ -215,7 +218,7 @@ Vegye figyelembe azonban, hogy a *vezérlő* regisztrációját át kell alakít
 
 Ezen a ponton megtehetjük, de valahogy nem teljesül, hogy az új műveletünk nem "érzi", mint az elmaradó alkalmazása `Controlled` .
 Így az új vezérlési folyamat fogalmának meghatározása egy olyan függvény megírásával történik, amely az Oracle felügyeletét végzi, és új műveletet ad vissza.
-Így úgy tűnik, hogy az új függvény nagyon hasonlít `Controlled` , és bemutatjuk, hogy könnyen definiáljuk a Q # és a Canon együttes használatával a hatékony új vezérlési folyamatokat:
+Így úgy tűnik, hogy az új függvény nagyon hasonlít `Controlled` , és bemutatjuk, hogy könnyen definiáljuk a hatékony új vezérlési folyamatokat Q# a és a Canon együttes használatával:
 
 ```qsharp
 function ControlledOnBitString(

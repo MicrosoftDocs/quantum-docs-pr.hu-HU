@@ -1,18 +1,21 @@
 ---
-title: IQ# Magic parancsok
-description: 'Gyors hivatkozási oldal az IQ # Magic parancsaihoz Q # Jupyter notebookokkal'
+title: Q#Magic-parancsok
+description: A Q# Jupyter notebookokkal ellátott Magic-parancsok gyors referenciájának lapja Q#
 author: gillenhaalb
 ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 uid: microsoft.quantum.guide.quickref.iqsharp
-ms.openlocfilehash: 2fb542df8723fa437c82b4a1dfada77e22c1d6e4
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: fb7b5543ef9222e6bab2b1cbbc7e3ebb54863438
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86870540"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87867981"
 ---
-# <a name="iq-magic-commands"></a>IQ# Magic parancsok
+# <a name="ino-locq-magic-commands"></a>Q#Magic-parancsok
 
 ### <a name="general"></a>Általános kérdések
 
@@ -23,7 +26,7 @@ ms.locfileid: "86870540"
 - [`%performance`](xref:microsoft.quantum.iqsharp.magic-ref.performance): A kernel aktuális teljesítmény-metrikáit jelenti.
 - [`%simulate`](xref:microsoft.quantum.iqsharp.magic-ref.simulate): Egy adott függvény vagy művelet futtatása a QuantumSimulator célszámítógépen.
 - [`%toffoli`](xref:microsoft.quantum.iqsharp.magic-ref.toffoli): Egy adott függvény vagy művelet futtatása a ToffoliSimulator célszámítógépen.
-- [`%who`](xref:microsoft.quantum.iqsharp.magic-ref.who): Az aktuális munkamenetben elérhető Q # műveletek listája.
+- [`%who`](xref:microsoft.quantum.iqsharp.magic-ref.who): Az Q# aktuális munkamenetben elérhető műveletek felsorolása.
 - [`%workspace`](xref:microsoft.quantum.iqsharp.magic-ref.workspace): Az aktuális munkaterülettel kapcsolatos műveleteket biztosít.
 
 ### <a name="azure-quantum-integration"></a>Azure Quantum-integráció
@@ -34,12 +37,12 @@ ms.locfileid: "86870540"
 - [`%azure.output`](xref:microsoft.quantum.iqsharp.magic-ref.azure.output): Az aktuális Azure Quantum-munkaterületen lévő feladatok eredményét jeleníti meg.
 - [`%azure.status`](xref:microsoft.quantum.iqsharp.magic-ref.azure.status): Az aktuális Azure Quantum-munkaterületen a feladatok állapotát jeleníti meg.
 - [`%azure.submit`](xref:microsoft.quantum.iqsharp.magic-ref.azure.submit): Elküld egy feladatot egy Azure Quantum-munkaterületre.
-- [`%azure.target`](xref:microsoft.quantum.iqsharp.magic-ref.azure.target): Beállítja vagy megjeleníti a Q # Job beküldésének aktív végrehajtási célját egy Azure Quantum-munkaterületen.
+- [`%azure.target`](xref:microsoft.quantum.iqsharp.magic-ref.azure.target): Beállítja vagy megjeleníti a Q# feladatok beküldésének aktív végrehajtási célját egy Azure Quantum-munkaterületen.
 
 ### <a name="chemistry-from-microsoftquantumchemistry-package"></a>Kémia (a Microsoft. Quantum. kémia csomagból)
 
 - [`%chemistry.broombridge`](xref:microsoft.quantum.iqsharp.magic-ref.chemistry.broombridge): Betölti és visszaadja a Broombridge elektronikus szerkezetének problémás ábrázolását egy adott. YAML fájlból.
-- [`%chemistry.encode`](xref:microsoft.quantum.iqsharp.magic-ref.chemistry.encode): Egy Fermion Hamilton kódol a Q # használatával.
+- [`%chemistry.encode`](xref:microsoft.quantum.iqsharp.magic-ref.chemistry.encode): Egy Fermion-Hamilton kódol egy formátumba Q# .
 - [`%chemistry.fh.add_terms`](xref:microsoft.quantum.iqsharp.magic-ref.chemistry.fh.add_terms): Feltételt hoz létre egy Fermion-Hamilton.
 - [`%chemistry.fh.load`](xref:microsoft.quantum.iqsharp.magic-ref.chemistry.fh.load): Betölti a Fermion Hamilton egy elektronikus szerkezettel kapcsolatos problémára. A probléma betöltése egy fájlból történik, vagy argumentumként van megadva.
 - [`%chemistry.inputstate.load`](xref:microsoft.quantum.iqsharp.magic-ref.chemistry.inputstate.load): Betölti a Broombridge elektronikus szerkezetével kapcsolatos problémát, és visszaadja a kiválasztott bemeneti állapotot.

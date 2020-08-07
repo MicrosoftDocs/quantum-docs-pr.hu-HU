@@ -6,16 +6,19 @@ uid: microsoft.quantum.libraries.standard.prelude
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 19674620475e68b41c855023807a5fd1f7945ec9
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 283504a5f5635a4996c804e514a6f52eb4966d22
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274960"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868440"
 ---
 # <a name="the-prelude"></a>A bevezetés #
 
-A Q # fordítóprogram és a Quantum Development Kit részét képező cél gépek olyan belső funkciókat és műveleteket biztosítanak, amelyek a Quantum-programok a Q #-ban való írásakor használhatók.
+A Q# Quantum Development Kit részét képező fordítóprogram és a célként megadott gépek olyan belső funkciókat és műveleteket biztosítanak, amelyek a kvantum-programok írásakor használhatók a alkalmazásban Q# .
 
 ## <a name="intrinsic-operations-and-functions"></a>Belső műveletek és függvények ##
 
@@ -27,11 +30,11 @@ A standard könyvtárban definiált belső műveletek nagyjából a különböz�
 - A méréseket végrehajtó műveletek.
 
 Mivel a Clifford + $T $ Gate készlet [univerzális](xref:microsoft.quantum.concepts.multiple-qubits) a kvantum-számítástechnika számára, ezek a műveletek elegendőek ahhoz, hogy nagyjából implementálják a elhanyagolható mértékben kis hibán belüli kvantum-algoritmusokat.
-A Q # lehetővé teszi, hogy a programozók a single qubit egységes és CNEM Gate könyvtárán belül is működjenek. Ez a kódtár sokkal könnyebben gondolkodik, mert nem igényli, hogy a programozó közvetlenül fejezzék ki a Clifford + $T $ dekompozíciót, és mivel igen hatékony módszerek léteznek az egyetlen qubit-unitaries a Clifford és a $T $ gatesbe való fordításához (további információt [itt](xref:microsoft.quantum.more-information) talál).
+A forgatások is Q# lehetővé teszik, hogy a programozó az egységes qubit-és cnem Gate-könyvtáron belül is működjön. Ez a kódtár sokkal könnyebben gondolkodik, mert nem igényli, hogy a programozó közvetlenül fejezzék ki a Clifford + $T $ dekompozíciót, és mivel igen hatékony módszerek léteznek az egyetlen qubit-unitaries a Clifford és a $T $ gatesbe való fordításához (további információt [itt](xref:microsoft.quantum.more-information) talál).
 
 Ha lehetséges, az qubits-ben a bevezetés során meghatározott műveletek lehetővé teszik a Variant alkalmazását `Controlled` , így a célszámítógép a megfelelő dekompozíciót fogja végezni.
 
-Az előzetes verzió ezen részében meghatározott függvények és műveletek többsége a @"microsoft.quantum.intrinsic" névtérben található, így a legtöbb Q # forrásfájlokat tartalmazó `open Microsoft.Quantum.Intrinsic;` direktíva közvetlenül a kezdeti névtér deklarációja után fog rendelkezni.
+Az előzetes verzió ezen részében definiált függvények és műveletek többsége a @"microsoft.quantum.intrinsic" névtérben található, így a legtöbb Q# forrásfájl a `open Microsoft.Quantum.Intrinsic;` kezdeti névtér deklarációja után azonnal egy direktívával fog rendelkezni.
 A <xref:microsoft.quantum.core> rendszer automatikusan megnyitja a névteret, így a <xref:microsoft.quantum.core.length> (z) függvény, amely nem tartalmaz `open` utasítást.
 
 ### <a name="common-single-qubit-unitary-operations"></a>Közös Qubit – egységes műveletek ###
@@ -96,9 +99,9 @@ Aláírással rendelkezik `(Qubit => Unit is Adj + Ctl)` , és az egységes qubi
 \begin{Equation} \begin{bmatrix} 1 & 0 \\ \\ % FIXME: ez jelenleg a quadwhack Hack-t használja.
 0 & \end{bmatrix} \end{Equation}
 
-#### <a name="rotations"></a>Cserélgetésére ####
+#### <a name="rotations"></a>Beosztások ####
 
-A fenti Pauli és Clifford műveleteken kívül a Q # Prelude számos módszert kínál a Forgások kifejezésére.
+A fenti, a Pauli és a Clifford műveleteken kívül a Q# Bevezetés számos módszert kínál a Forgások kifejezésére.
 Az [qubit műveletekben](xref:microsoft.quantum.concepts.qubit#single-qubit-operations)leírtak szerint az elforgatási képesség kritikus fontosságú a kvantum-algoritmusok számára.
 
 Kezdjük azzal, hogy a $H $ és a $T $ Gates használatával bármilyen egyetlen qubit műveletet kifejezzük, ahol $H $ a Hadamard művelet, és ahol a \begin{Equation} T \mathrel{: =} \begin{bmatrix} 1 & 0 \\ \\ % FIXME: ez jelenleg a quad back Hack-T használja.
@@ -229,7 +232,7 @@ return rs;
 
 ## <a name="extension-functions-and-operations"></a>Bővítmény-függvények és-műveletek ##
 
-Emellett a bevezetés a matematikai és a típusú átalakítási függvények gazdag készletét határozza meg a .NET-szinten a Q # kódban való használatra.
+Emellett a bevezetés a matematikai és a típusú átalakítási függvények széles választékát határozza meg a .NET-szinten a kódban való használatra Q# .
 A névtér például olyan <xref:microsoft.quantum.math> hasznos műveleteket határoz meg, mint a <xref:microsoft.quantum.math.sin> és a <xref:microsoft.quantum.math.log> .
 A Quantum Development Kit által biztosított implementáció a klasszikus .NET alaposztály-függvénytárat használja, így további kommunikációs kört eredményezhet a kvantum-programok és a klasszikus illesztőprogramjaik között.
 Habár ez nem jelent problémát a helyi szimulátor esetében, ez a probléma akkor lehet teljesítményproblémák, ha távoli szimulátort vagy tényleges hardvert használ célként.
@@ -238,7 +241,7 @@ Ez azt is okozhatja, hogy az adott rendszer esetében az egyes célszámítógé
 ### <a name="math"></a>Matematikai ###
 
 A <xref:microsoft.quantum.math> névtér számos hasznos funkciót biztosít a .net alaposztály könyvtárának [ `System.Math` osztályában](https://docs.microsoft.com/dotnet/api/system.math?view=netframework-4.7.1).
-Ezek a függvények ugyanúgy használhatók, mint bármely más Q # függvény:
+Ezek a függvények ugyanúgy használhatók, mint bármely más Q# függvény:
 
 ```qsharp
 open Microsoft.Quantum.Math;
@@ -246,7 +249,7 @@ open Microsoft.Quantum.Math;
 let y = Sin(theta);
 ```
 
-Ha a .NET statikus metódus túlterhelt az argumentumok típusa alapján, a megfelelő Q # függvényt a rendszer a bemenetének típusát jelző utótaggal jelöli meg:
+Ha a .NET statikus metódus túlterhelt az argumentumok típusa alapján, a megfelelő Q# függvényt a rendszer a bemenetének típusát jelző utótaggal jelöli meg:
 
 ```qsharp
 let x = AbsI(-3); // x : Int = 3

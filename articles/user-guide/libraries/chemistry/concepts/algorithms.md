@@ -6,18 +6,21 @@ ms.author: nawiebe@microsoft.com
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.simulationalgorithms
-ms.openlocfilehash: 5dad4e4a77eea99e72eb2efac52eec61ebbdb21c
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 40f79a66ae95e20a8b1c19af735eedca5e3c15ef
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275103"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869528"
 ---
 # <a name="simulating-hamiltonian-dynamics"></a>Hamilton Dynamics szimulálása
 
 Ha a Hamilton az elemi operátorok összegeként van kifejezve, a Dynamics a jól ismert módszerek egyikének használatával lefordítható az alapvető kapu műveleteibe.
 Három hatékony megközelítés: Trotter – Suzuki-képletek, unitaries lineáris kombinációi és qubitization.
-Ismertetjük az alábbi három megközelítést, és konkrét Q # példákat adunk arra, hogyan valósíthatók meg ezek a módszerek a Hamilton szimulációs kódtár használatával.
+Ezt az alábbi három megközelítést ismertetjük, és konkrét Q# példákat mutatunk be ezeknek a módszereknek a megvalósítására a Hamilton szimulációs kódtár használatával.
 
 
 ## <a name="trottersuzuki-formulas"></a>Trotter – Suzuki-képletek
@@ -49,7 +52,7 @@ Például $ $ e ^ {-iX\otimes X t} = (H\otimes H) e ^ {-iZ\otimes Z t} (H\otimes
         0 & 0 & 0 & e ^ {-it} \end{bmatrix}.
 $ $ Itt, $e ^ {-iHt} \ket {00} = e ^ {it} \ket {00} $ és $e ^ {-iHt} \ket {01} = e ^ {-it} \ket {01} $, amely közvetlenül látható annak következményeként, hogy a $0 $ $0 $ paritása, míg a bit sztring $1 $ értéke $1 $.
 
-A Pauli operátorok exponenciálisan valósíthatók meg közvetlenül a Q # használatával a <xref:microsoft.quantum.intrinsic.exp> művelettel:
+A Pauli-operátorok exponenciálisan valósíthatók meg közvetlenül Q# a <xref:microsoft.quantum.intrinsic.exp> művelet használatával:
 ```qsharp
     using(qubits = Qubit[2]){
         let pauliString = [PauliX, PauliX];
@@ -86,8 +89,8 @@ A kiindulási pont a Fermionic Hamilton [Jordánia – Wigner kódolása](xref:m
     var qSharpData = jordanWignerEncoding.ToQSharpFormat();
 ```
 
-A Wigner-ábrázolás ezen formátuma, amely a Q # szimulációs algoritmusok által fogyasztható, felhasználó által definiált típus `JordanWignerEncodingData` .
-A Q #-ban ez a formátum egy olyan kényelmi függvénynek felel meg, `TrotterStepOracle` amely egy operátort ad vissza a Trotter – Suzuki integrátor használatával, a végrehajtáshoz szükséges egyéb paraméterek mellett.
+A Wigner-ábrázolás ezen formátuma, amely a szimulációs algoritmusok által fogyasztott, Q# felhasználó által definiált típus `JordanWignerEncodingData` .
+Q#Ez a formátum egy olyan kényelmi függvény, `TrotterStepOracle` amely egy operátort ad vissza a Trotter – Suzuki integrátor használatával, a végrehajtásához szükséges egyéb paraméterek mellett.
 
 ```qsharp
 // qSharpData passed from driver
@@ -151,10 +154,10 @@ A $ \operatorname{Prepare} $ művelet nem használható közvetlenül a qubitiza
 
 A Walk operátor ($W $) a $ \operatorname{Select} $ és a $R $ műveletekben kifejezhető a $ $ W = \operatorname{Select} R, $ $ értékkel, amely ismét látható egy olyan operátor megvalósításához, amely egyenértékű (legfeljebb egy isometry) $e ^ {\pm i \cos ^ {-1} (h/| H | _1)} $.
 
-Ezek az alrutinok egyszerűen beállíthatók a Q #-ban.
+Ezek az alrutinok egyszerűen beállíthatók a alkalmazásban Q# .
 Vegyük például az egyszerű qubit keresztirányú-Ising Hamilton, ahol a $H = X_1 + X_2 + Z_1 Z_2 $ értéket.
-Ebben az esetben a $ \operatorname{Select} $ műveletet megvalósító Q # kód meghívása a <xref:microsoft.quantum.canon.multiplexoperations> , míg a $ \operatorname{Prepare} $ művelet a használatával valósítható meg <xref:microsoft.quantum.preparation.preparearbitrarystate> .
-A Hubbard-modell szimulálása például [Q # mintaként](https://github.com/microsoft/Quantum/tree/master/samples/simulation/hubbard)is megtalálható.
+Ebben az esetben a Q# $ \operatorname{Select} $ művelet megvalósítására szolgáló kódot a rendszer meghívja <xref:microsoft.quantum.canon.multiplexoperations> , míg a $ \operatorname{Prepare} $ műveletet a használatával lehet megvalósítani <xref:microsoft.quantum.preparation.preparearbitrarystate> .
+Az Hubbard-modell szimulálása például [ Q# mintaként](https://github.com/microsoft/Quantum/tree/master/samples/simulation/hubbard)is megtalálható.
 
 Ha manuálisan szeretné megadni ezeket a lépéseket az önkényes kémiai problémákhoz, nagy erőfeszítést igényel, ami elkerülhető a kémiai könyvtár használatával.
 A fenti Trotter – Suzuki szimulációs algoritmushoz hasonlóan a `JordanWignerEncodingData` rendszer `QubitizationOracle` átadja a Walk-operátort visszaadó kényelmi függvénynek, a végrehajtásához szükséges egyéb paraméterek mellett.

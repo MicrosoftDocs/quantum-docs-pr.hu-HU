@@ -1,21 +1,24 @@
 ---
-title: A keresési Grover-algoritmus futtatása Q#-ban – Quantum Development Kit
-description: Állítson össze egy Q#-projektet, amely bemutatja a Grover-algoritmus, a bevett kvantumalgoritmusok egyikének működését.
+title: A saját keresési algoritmusának futtatása a Q# Quantum Development Kit-ben
+description: Hozzon létre egy Q# projektet, amely bemutatja a a "a" és a "a" típusú, kanonikus algoritmusok egyikét.
 author: cgranade
 ms.author: chgranad@microsoft.com
 ms.date: 10/19/2019
 ms.topic: article
 uid: microsoft.quantum.quickstarts.search
-ms.openlocfilehash: 9e4c53b4d5159cf07f0654603c1d477ad09eb7c6
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 5c23d71209eb484a510f102e8b581ba4ec21829a
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274741"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869664"
 ---
 # <a name="tutorial-implement-grovers-search-algorithm-in-q"></a>Oktatóanyag: A keresési Grover-algoritmus implementálása Q#-ban\#
 
-Ebből az oktatóanyagból megtudhatja, hogyan hozhat létre és futtathat Grover-keresést a strukturálatlan adatok keresésének felgyorsításához.  A Grover-keresés az egyik legnépszerűbb kvantum-számítástechnikai algoritmus, és ebből a viszonylag kicsi Q#-implementációból megtapasztalhatja, hogy milyen előnyökkel jár a kvantummegoldások magas szintű Q# kvantumprogramozási nyelven történő programozása a kvantumalgoritmusok kifejezéséhez.  Az útmutató végén találja annak bemutatását, hogy a szimulációkimenet hogyan talál meg sikeresen egy sztringet egy rendezetlen bejegyzéslistában annak az időnek a töredéke alatt, amennyi a teljes lista klasszikus számítógépen történő áttekintéséhez kellene.
+Ebből az oktatóanyagból megtudhatja, hogyan hozhat létre és futtathat Grover-keresést a strukturálatlan adatok keresésének felgyorsításához.  A a a legelterjedtebb kvantummechanika-algoritmusok egyike, és ez a viszonylag kis megvalósítás számos előnyt jelent a kvantum Q# -megoldások magas szintű kvantum-programozási nyelvvel való programozásának számos előnye, Q# hogy kifejezze a kvantum-algoritmusokat.  Az útmutató végén találja annak bemutatását, hogy a szimulációkimenet hogyan talál meg sikeresen egy sztringet egy rendezetlen bejegyzéslistában annak az időnek a töredéke alatt, amennyi a teljes lista klasszikus számítógépen történő áttekintéséhez kellene.
 
 Grover algoritmusa egy strukturálatlan adatlistában keres bizonyos tételeket. Választ adhat például a következő kérdésre: A kártyapakliból húzott kártya egy kőr ász? Az adott tétel címkéjét _megjelölt bemenetnek_ hívják.
 
@@ -39,7 +42,7 @@ A fokozatos növekedések száma kevesebb, mint a lista tételeinek száma. Grov
 
 ## <a name="write-the-code"></a>A kód írása
 
-1. A Quantum Development Kit használatával [hozzon létre egy új Q#-projektet a parancssori alkalmazáshoz](xref:microsoft.quantum.install.standalone). A projektnek adja a következő címet: `Grover`.
+1. A Quantum Development Kit használatával [hozzon létre egy új Q# projektet a parancssori alkalmazáshoz](xref:microsoft.quantum.install.standalone). A projektnek adja a következő címet: `Grover`.
 
 1. Az új projektjében adja a következő kódot az `Program.qs` fájlhoz:
 
@@ -51,9 +54,9 @@ A fokozatos növekedések száma kevesebb, mint a lista tételeinek száma. Grov
 
     A `ReflectAboutMarked` művelet meghatározza az Ön által keresett megjelölt bemenetet, a nullák és egyek váltakozásából álló sztringet. Ez a minta szoftveresen rögzíti a megjelölt bemenetet, amely kiterjeszthető más bemenetek keresésére, vagy általánosítható bármilyen bemenetre.
 
-1. Ezután futtassa új Q#-programját a `ReflectAboutMarked` által jelölt tétel megtalálásához.
+1. Ezután futtassa az új Q# programot, és keresse meg a által megjelölt elemet `ReflectAboutMarked` .
 
-### <a name="q-command-line-applications-with-visual-studio-or-visual-studio-code"></a>Q# nyelvű parancssori alkalmazások a Visual Studióval vagy a Visual Studio Code-dal
+### <a name="no-locq-command-line-applications-with-visual-studio-or-visual-studio-code"></a>Q#Visual Studióval vagy Visual Studio Code-val rendelkező parancssori alkalmazások
 
 A végrehajtható fájl a projekt konfigurációja és a parancssori lehetőségek függvényében egy szimulátoron vagy egy erőforrásbecslőn futtatja az `@EntryPoint()` attribútummal jelölt műveletet vagy függvényt.
 
@@ -104,7 +107,7 @@ Reflecting about marked state...
 
 ## <a name="next-steps"></a>További lépések
 
-Ha hasznosnak találta ezt az oktatóanyagot, tekintsen meg néhányat a lenti források közül, amelyek azzal foglalkoznak, hogyan írhat saját kvantumalkalmazásokat a Q# segítségével:
+Ha ezt az oktatóanyagot élvezte, tekintse meg az alábbi források némelyikét, ha többet szeretne megtudni arról, hogyan használható a Q# saját kvantum-alkalmazások írására:
 
 - [Vissza a QDK-val való ismerkedésről szóló útmutatóhoz](xref:microsoft.quantum.welcome)
 - Egy általánosabb [példa](https://github.com/microsoft/Quantum/tree/master/samples/algorithms/database-search) a keresési Grover-algoritmusra

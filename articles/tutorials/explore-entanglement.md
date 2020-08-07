@@ -1,21 +1,24 @@
 ---
-title: Összefonódások megismerése Q# nyelven
-description: Ismerje meg, hogyan írhat kvantumprogramot Q# nyelven. Bell-állapotot jelző alkalmazás fejlesztése a Quantum Development Kit (QDK) használatával
+title: A felakadás megismeréseQ#
+description: Megtudhatja, hogyan írhat Quantum programot a alkalmazásban Q# . Bell-állapotot jelző alkalmazás fejlesztése a Quantum Development Kit (QDK) használatával
 author: geduardo
 ms.author: v-edsanc@microsoft.com
 ms.date: 05/29/2020
 ms.topic: tutorial
 uid: microsoft.quantum.write-program
-ms.openlocfilehash: 16c93b3dd17363c06602529cb34e8fc84aadc7a8
-ms.sourcegitcommit: af10179284967bd7a72a52ae7e1c4da65c7d128d
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: c66d26b5ea253d6fc2633fbe52fa35ba703d185d
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85415422"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869698"
 ---
 # <a name="tutorial-explore-entanglement-with-q"></a>Oktatóanyag: Összefonódások megismerése Q\# nyelven
 
-Ebben az oktatóanyagban bemutatjuk, hogyan írhat olyan Q# nyelvű programot, amely qubiteket manipulál és mér meg, valamint szemlélteti a szuperpozíció és az összefonódás hatásait.
+Ebben az oktatóanyagban bemutatjuk, hogyan írhat olyan Q# programot, amely manipulálja és méri a qubits, és bemutatja a Felfekvés és a felakadás hatásait.
 
 Írni fog egy Bell nevű alkalmazást a kvantum-összefonódás szemléltetése céljából.
 A Bell név a Bell-állapotokra utal. Ezek két qubit konkrét kvantumállapotát jelentik, amelyekkel szemléltethetők a szuperpozíció és a kvantum-összefonódás legegyszerűbb példái.
@@ -27,14 +30,14 @@ Ha készen áll a kódolásra, először végezze el a következő lépéseket:
 * [Telepítse](xref:microsoft.quantum.install) a Quantum Development Kit-t az előnyben részesített nyelvi és fejlesztési környezet használatával.
 * Ha a QDK már telepítve van, győződjön meg arról, hogy a legújabb verzióra van [frissítve](xref:microsoft.quantum.update).
 
-A QDK telepítése nélkül is követheti az elbeszélést, így áttekintheti a Q # programozási nyelv és a kvantum-számítástechnika első fogalmait.
+A QDK telepítése nélkül is követheti az elbeszélést, így áttekintheti a Q# programozási nyelv áttekintését és a kvantum-számítástechnika első fogalmait.
 
-## <a name="in-this-tutorial-youll-learn-how-to"></a>Az oktatóanyag segítségével megtanulhatja a következőket:
+## <a name="in-this-tutorial-youll-learn-how-to"></a>Ebből az oktatóanyagból az alábbiakat sajátíthatja el:
 
 > [!div class="checklist"]
 > * Műveletek létrehozása és egyesítése a Q-ban\#
 > * Hozzon létre olyan műveleteket, amelyek a qubits a helyükre helyezik, összekeverik és mérik.
-> * Bemutatjuk, hogy a kvantum-felakadás egy Q # program fut egy szimulátorban. 
+> * Bemutatja a kvantum-felakadás egy Q# program futtatásával szimulátorban. 
 
 ## <a name="demonstrating-qubit-behavior-with-the-qdk"></a>A qubit viselkedésének bemutatása a QDK
 
@@ -45,20 +48,20 @@ A mérés bináris értéket állít elő (0 vagy 1).  A qubit a szuperpozíció
 
 Több qubit [**össze is fonható**](xref:microsoft.quantum.glossary#entanglement).  Ha az összefonódott qubitek egyikéről mérést készítünk, a másik/többi állapotáról is információt kapunk.
 
-Most már készen állunk annak szemléltetésére, hogy a Q# hogyan fejezi ki ezt a viselkedést.  A lehető legegyszerűbb programmal kezd, és azt építi fel a kvantum-szuperpozíció és a kvantum-összefonódás bemutatásához.
+Most már készen áll annak bemutatására, hogy Q# ez hogyan fejezi ki ezt a viselkedést.  A lehető legegyszerűbb programmal kezd, és azt építi fel a kvantum-szuperpozíció és a kvantum-összefonódás bemutatásához.
 
-## <a name="creating-a-q-project"></a>Q # projekt létrehozása
+## <a name="creating-a-no-locq-project"></a>Projekt létrehozása Q#
 
-Első lépésként hozzon létre egy új Q # projektet. Ebben az oktatóanyagban a környezetet a VS Code-ot használó [parancssori alkalmazások](xref:microsoft.quantum.install.standalone)alapján fogjuk használni.
+Első lépésként hozzon létre egy új Q# projektet. Ebben az oktatóanyagban a környezetet a VS Code-ot használó [parancssori alkalmazások](xref:microsoft.quantum.install.standalone)alapján fogjuk használni.
 
 Új projekt létrehozásához a VS Code-ban: 
 
-1. Kattintson **View**  ->  a**parancs paletta** megtekintése elemre, és válassza a **Q #: új projekt létrehozása**lehetőséget.
-2. Kattintson a **különálló konzol alkalmazás**lehetőségre.
-3. Navigáljon a projekt mentéséhez és a **projekt létrehozása**elemre.
-4. A projekt sikeres létrehozása után kattintson a jobb alsó sarokban található **új projekt megnyitása..** . elemre.
+1. Kattintson **View**  ->  a**parancs paletta** megtekintése elemre, majd válassza a ** Q# : új projekt létrehozása**lehetőséget.
+2. Kattintson a **Standalone console application (Különálló konzolalkalmazás)** elemre.
+3. Keresse meg a projekt mentési helyét, majd kattintson a **Create Project (Projekt létrehozása)** lehetőségre.
+4. A projekt sikeres létrehozását követően kattintson az **Open new project... (Új projekt megnyitása...)** lehetőségre a jobb alsó sarokban.
 
-Ebben az esetben a projektet hívjuk `Bell` . Ez két fájlt hoz létre: `Bell.csproj` a projektfájlt és egy `Program.qs` Q # alkalmazás sablonját, amelyet az alkalmazás írásához fogunk használni. A tartalomnak a `Program.qs` következőket kell tartalmaznia:
+Ebben az esetben a projektet hívjuk `Bell` . Ez két fájlt hoz létre: `Bell.csproj` a projektfájlt és egy olyan `Program.qs` alkalmazás sablonját, Q# amelyet az alkalmazás írásához fogunk használni. A tartalomnak a `Program.qs` következőket kell tartalmaznia:
 
 ```qsharp
    namespace Bell {
@@ -76,11 +79,11 @@ Ebben az esetben a projektet hívjuk `Bell` . Ez két fájlt hoz létre: `Bell.c
 
 ## <a name="write-the-q-application"></a>A Q- \# alkalmazás írása
  
-A célunk, hogy előkészítsünk két adott kvantumállapotú qubitet, és ezzel bemutassuk, hogyan módosítható a Q# használatával a qubitek állapota, és hogyan szemléltethetők a szuperpozíció és az összefonódás hatásai. A qubit-állapotok, a műveletek és a mérések bevezetéséhez egy darabot hozunk létre.
+Célunk, hogy előkészítsünk két qubits egy konkrét kvantum-állapotban, amely azt mutatja be, hogyan lehet a qubits-ben működni, Q# hogy megváltoztassák az állapotukat, és bemutatják a Felfekvés és a felakadás hatását. A qubit-állapotok, a műveletek és a mérések bevezetéséhez egy darabot hozunk létre.
 
 ### <a name="initialize-qubit-using-measurement"></a>Qubit inicializálása mérés használatával
 
-Az alább látható első kódban bemutatjuk, hogyan használható a Q# a qubitekhez.  Két műveletet fogunk bevezetni [`M`](xref:microsoft.quantum.intrinsic.m) , [`X`](xref:microsoft.quantum.intrinsic.x) amely átalakítja a qubit állapotát. Ebben a kódrészletben meghatározunk egy `SetQubitState` műveletet, amelynek egyik paramétere egy qubit, a másik pedig a `desired`, amely a qubit kívánt állapotát jelöli.  A `SetQubitState` művelet elvégez egy mérést a qubiten az `M` művelet használatával.  A Q #-ban a qubit-mérések mindig a vagy a értéket adja vissza `Zero` `One` .  Ha a mérés olyan értéket ad vissza, amely nem egyenlő a kívánt értékkel, a `SetQubitState` "megfordítja" a qubit, azaz végrehajt egy `X` műveletet, amely a qubit állapotát olyan új állapotra módosítja, amelyben a visszaadott mérés valószínűsége `Zero` és fordított állapotú `One` . Így mindig a `SetQubitState` kívánt állapotba helyezi a cél qubit.
+Az alábbi első kódban bemutatjuk, hogyan dolgozhat a qubits a alkalmazásban Q# .  Két műveletet fogunk bevezetni [`M`](xref:microsoft.quantum.intrinsic.m) , [`X`](xref:microsoft.quantum.intrinsic.x) amely átalakítja a qubit állapotát. Ebben a kódrészletben meghatározunk egy `SetQubitState` műveletet, amelynek egyik paramétere egy qubit, a másik pedig a `desired`, amely a qubit kívánt állapotát jelöli.  A `SetQubitState` művelet elvégez egy mérést a qubiten az `M` művelet használatával.  A-ben Q# a qubit-mérések mindig a vagy a értéket adja vissza `Zero` `One` .  Ha a mérés olyan értéket ad vissza, amely nem egyenlő a kívánt értékkel, a `SetQubitState` "megfordítja" a qubit, azaz végrehajt egy `X` műveletet, amely a qubit állapotát olyan új állapotra módosítja, amelyben a visszaadott mérés valószínűsége `Zero` és fordított állapotú `One` . Így mindig a `SetQubitState` kívánt állapotba helyezi a cél qubit.
 
 Cserélje le a tartalmát a `Program.qs` következő kódra:
 
@@ -103,15 +106,15 @@ A `Zero` és az `One` állandók, amelyek a qubit mérésének két lehetséges 
 
 A `SetQubitState` művelet elvégzi a qubit mérését. Ha a qubit a kívánt állapotban van, a `SetQubitState` művelet békén hagyja. Ha nem, akkor pedig végrehajtja az `X` műveletet, amely a kívánt állapotba állítja a qubitet.
 
-#### <a name="about-q-operations"></a>A Q#-műveletek bemutatása
+#### <a name="about-no-locq-operations"></a>Tudnivalók a Q# műveletekről
 
-A Q#-műveletek kvantum-alrutinok. Ez egy meghívásos rutin, amely más kvantum-műveletekre irányuló hívásokat is tartalmaz.
+A Q# művelet egy kvantum-alrutin. Ez egy meghívásos rutin, amely más kvantum-műveletekre irányuló hívásokat is tartalmaz.
 
 A műveletek argumentumai rekordként vannak meghatározva, zárójelek között.
 
-A művelet visszatérési típusa a kettőspont után van meghatározva. Ebben az esetben a `SetQubitState` művelet nem ad vissza semmit, ezért a jelölése a következőt adja vissza: `Unit`. Ez a Q# nyelvű megfelelője az F# `unit` elemének, amely nagyjából hasonló a C# `void` és eleméhez a Python üres rekordjaihoz (`Tuple[()]`).
+A művelet visszatérési típusa a kettőspont után van meghatározva. Ebben az esetben a `SetQubitState` művelet nem ad vissza semmit, ezért a jelölése a következőt adja vissza: `Unit`. Ez egyenértékű az Q# `unit` F #-ban, amely nagyjából a C#-ban van, `void` és egy üres rekord ( `Tuple[()]` ) a Pythonban.
 
-Az első Q#-műveletben két kvantumműveletet használt:
+Az első művelet során két Quantum műveletet használt Q# :
 
 * A [`M`](xref:microsoft.quantum.intrinsic.m) művelet, amely a qubit állapotát méri
 * A [`X`](xref:microsoft.quantum.intrinsic.x) qubit állapotát tükröző művelet
@@ -154,19 +157,19 @@ Ennek a műveletnek (`TestBellState`) `count` iterációja ismétlődik, beáll�
 
 #### <a name="about-variables-in-q"></a>A Q változók\#
 
-A Q# változói alapértelmezés szerint nem módosíthatók; a kötésük után nem változtatható az értékük. A nem módosítható változók kötése a `let` kulcsszóval jelölhető. A műveleti argumentumok soha nem módosíthatók.
+Alapértelmezés szerint a változói Q# nem változtathatók meg; az értékük a kötés után nem módosítható. A nem módosítható változók kötése a `let` kulcsszóval jelölhető. A műveleti argumentumok soha nem módosíthatók.
 
 Ha olyan változóra van szüksége, amelynek értéke módosítható (mint a `numOnes` a fenti példában), a `mutable` kulcsszóval deklarálhatja a változót. A módosítható változók értéke a `setQubitState` utasítással módosítható.
 
-A változó típusát mindkét esetben a fordító következteti ki. A Q#-ban nincs szükség a változók jegyzetekkel való ellátására.
+A változó típusát mindkét esetben a fordító következteti ki. Q#a változókhoz nem szükséges semmilyen típusú Megjegyzés.
 
 #### <a name="about-using-statements-in-q"></a>A `using` Q utasításai\#
 
-A `using` utasítás szintén a Q# nyelvre jellemző. Ezzel foglalhatók le qubitek a kódblokkokhoz. A Q#-ban az összes qubit lefoglalása és felszabadítása dinamikusan történik, tehát nem rögzített erőforrások, amelyek az összetett algoritmusok teljes élettartamára érvényesek. A `using` utasítás a blokk elején foglal le qubiteket, és a blokk végén felszabadítja őket.
+Az `using` utasítás szintén speciális Q# . Ezzel foglalhatók le qubitek a kódblokkokhoz. A-ben az Q# összes qubits dinamikusan van lefoglalva és felszabadítva, ahelyett, hogy rögzített erőforrásokkal rendelkezik egy összetett algoritmus teljes élettartama alatt. A `using` utasítás a blokk elején foglal le qubiteket, és a blokk végén felszabadítja őket.
 
 ## <a name="execute-the-code-from-the-command-line"></a>A kód végrehajtása a parancssorból
 
-A kód futtatásához meg kell adnia azt a fordítót, *amely* a parancs megadásakor hívható `dotnet run` . Ez a Q # fájl egy egyszerű módosításával történik egy olyan vonal hozzáadásával, amely `@EntryPoint()` közvetlenül megelőzi a meghívót: a művelet ebben az `TestBellState` esetben. A teljes kódnak a következőket kell tennie:
+A kód futtatásához meg kell adnia azt a fordítót, *amely* a parancs megadásakor hívható `dotnet run` . Ez a fájl egyszerű módosításával történik Q# egy olyan vonal hozzáadásával, amely `@EntryPoint()` közvetlenül megelőzi a meghívót: a művelet ebben az `TestBellState` esetben. A teljes kódnak a következőket kell tennie:
 
 ```qsharp
 namespace Bell {
@@ -230,7 +233,7 @@ Test results (# of 0s, # of 1s):
 
 ## <a name="prepare-superposition"></a>Szuperpozíció előkészítése
 
-Most nézzük meg, hogy a Q # milyen módon helyezi el a qubits a saját pozícióban.  Emlékezzünk arra, hogy a qubitek állapota a 0 és az 1 értéket egyszerre lefedő szuperpozícióban is lehet.  Ennek eléréséhez a `Hadamard` műveletet használjuk. Ha a qubit valamelyik klasszikus állapotban van (amikor a mérések mindig `Zero` vagy mindig `One` értéket adnak vissza), akkor a `Hadamard` vagy `H` művelet olyan állapotba helyezi a qubitet, amelyben a mérések 50%-ban `Zero` és 50%-ban `One` eredményt adnak.  Alapjában véve a qubit úgy képzelhető el, hogy félúton van a `Zero` és az `One` között.  Ilyenkor a `TestBellState` művelet szimulálása esetén azt fogjuk látni, hogy a mérések nagyjából azonos alkalommal adják ki a `Zero` és az `One` értéket.  
+Most nézzük meg, hogyan Q# fejezheti be a qubits a saját pozícióban.  Emlékezzünk arra, hogy a qubitek állapota a 0 és az 1 értéket egyszerre lefedő szuperpozícióban is lehet.  Ennek eléréséhez a `Hadamard` műveletet használjuk. Ha a qubit valamelyik klasszikus állapotban van (amikor a mérések mindig `Zero` vagy mindig `One` értéket adnak vissza), akkor a `Hadamard` vagy `H` művelet olyan állapotba helyezi a qubitet, amelyben a mérések 50%-ban `Zero` és 50%-ban `One` eredményt adnak.  Alapjában véve a qubit úgy képzelhető el, hogy félúton van a `Zero` és az `One` között.  Ilyenkor a `TestBellState` művelet szimulálása esetén azt fogjuk látni, hogy a mérések nagyjából azonos alkalommal adják ki a `Zero` és az `One` értéket.  
 
 ### <a name="x-flips-qubit-state"></a>`X`qubit állapotának tükrözése
 
@@ -296,7 +299,7 @@ Ez az úgynevezett **szuperpozíció**, és az első valódi betekintést nyújt
 
 ## <a name="prepare-entanglement"></a>Az összefonódás előkészítése
 
-Most nézzek meg, hogyan fejezi ki a Q# a qubitek összefonódásának különböző módjait.
+Most nézzük meg, hogyan Q# fejezi ki a qubits-k összekeverhető módjait.
 Először is az első qubitet a kezdeti állapotba, majd a `H` művelettel szuperpozícióba kell állítanunk.  Ezután az első qubit mérése előtt egy új műveletet () használunk `CNOT` , amely a vezérlést nem jelenti.  Ha ezt a műveletet végrehajtjuk két qubiten, akkor a második qubit át lesz állítva, ha az első qubit `One` volt.  Ekkor a két qubit összefonódik.  Az első qubit statisztikái nem változnak (mérés esetén 50%-os eséllyel lesz `Zero` vagy `One`), de a második qubit mérésekor __mindig__ ugyanaz az eredmény, mint amit az elsőnél mértünk. A `CNOT` összekapcsolta a két qubitet, így bármi is történik az egyikkel, ugyanaz történik a másikkal is. Ha felcseréli a méréseket (a második qubitet mérve az első előtt), akkor is ugyanez történik. Az első mérés eredménye véletlenszerű lesz, a második pedig mindig ugyanaz, mint amit az elsőnél kaptunk.
 
 Első lépésként két qubits kell lefoglalni a következő helyett `TestBellState` :
@@ -410,8 +413,8 @@ Test results (# of 0s, # of 1s, # of agreements)
 
 Ahogy az áttekintésben is említettük, az első qubit statisztikái nem változnak (50%-os eséllyel lesz 0 vagy 1), de a második qubit mérésekor __mindig__ ugyanaz az eredmény, mint amit az elsőnél mértünk, mivel a két qubit össze van fonódva!
 
-## <a name="next-steps"></a>További lépések
+## <a name="next-steps"></a>Következő lépések
 
-A [Grover-keresés](xref:microsoft.quantum.quickstarts.search) című oktatóanyag ismerteti, hogyan lehet létrehozni és futtatni egy Grover-keresést, amely az egyik legnépszerűbb kvantum-számítástechnikai algoritmus, és remekül példázza, hogyan oldhatók meg valós problémák egy Q#-programmal és a kvantum-számítástechnika segítségével.  
+A megjelenő "a"-ben a a legelterjedtebb számítási algoritmusok segítségével [megtudhatja](xref:microsoft.quantum.quickstarts.search) , hogyan hozhatja létre és futtathatja a következőt: a a legtöbbet használt, legtöbbet a legtöbbet Q# kihasználó program, amely a kvantum-számítástechnikai  
 
-A [Bevezetés a Quantum Development Kit használatába](xref:microsoft.quantum.welcome) című cikkben további módszereket is talál a Q# és a kvantumprogramozás elsajátítására.
+[A Quantum Development Kit első lépéseinek](xref:microsoft.quantum.welcome) megismerése és a kvantummechanika további módjai Q# .

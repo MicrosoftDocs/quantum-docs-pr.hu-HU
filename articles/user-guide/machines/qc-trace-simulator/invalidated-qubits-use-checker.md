@@ -1,17 +1,20 @@
 ---
 title: Érvénytelenített qubits-használat ellenőrzője – Quantum Development Kit
-description: 'Ismerje meg a Microsoft QDK érvénytelenített qubits használatát ellenőrzőt, amely a Quantum Trace Simulator használatával ellenőrzi a Q # kódját a potenciálisan érvénytelen qubits.'
+description: Ismerkedjen meg a Microsoft QDK által érvénytelenített qubits-ellenőrzővel, amely a Quantum Trace Simulator használatával ellenőrzi, hogy a Q# kód esetleg érvénytelen qubits-e.
 author: vadym-kl
 ms.author: vadym@microsoft.com
 ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.invalidated-qubits
-ms.openlocfilehash: fccf6d5784b587f4ad9b659e23027619acd06ffa
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: c451747badba03801bd4ecd419420f131ac502d6
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871093"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868287"
 ---
 # <a name="quantum-trace-simulator-invalidated-qubits-use-checker"></a>Quantum Trace Simulator: érvénytelenített qubits-ellenőrző használata
 
@@ -19,7 +22,7 @@ A nem érvényesített qubits használja az ellenőrzőt a Quantum Development K
 
 ## <a name="invalid-qubits"></a>Érvénytelen qubits
 
-Vegye figyelembe a következő Q # Code-kódot, hogy bemutassa a invalidated qubits use ellenőrző által észlelt problémákat:
+Vegye figyelembe a következő Q# kódrészletet a nem érvényesített qubits-ellenőrző által észlelt problémák szemléltetéséhez:
 
 ```qsharp
 operation UseReleasedQubit() : Unit {
@@ -70,7 +73,7 @@ namespace Quantum.MyProgram
 }
 ```
 
-## <a name="see-also"></a>Lásd még
+## <a name="see-also"></a>További információ
 
 - A Quantum Development Kit [Quantum Trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro) áttekintése.
 - Az <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> API-hivatkozás.

@@ -6,12 +6,15 @@ ms.author: nawiebe@microsoft.com
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.jordanwigner
-ms.openlocfilehash: 17cb473c6d33e3356d5da886f47985c3828d4d1f
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 9f1455ebbecf6a3500ec11a5196e7662455c9a78
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275096"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869511"
 ---
 # <a name="jordan-wigner-representation"></a>Jordánia – Wigner-képviselet
 
@@ -28,7 +31,7 @@ Ezután $a ^ \ dagger_j \ket {0} _j = \ket {1} _j $ és $a ^ \ dagger_j \ket {1}
 Könnyen ellenőrizhető, hogy \begin{align}-e a következő: ^ \ dagger_j &= \begin{bmatrix}0 & 0 \\ \ 1 &0 \end{bmatrix} = \frac{X_j-iY_j} {2} , \nonumber \\ \\ a_j &= \begin{bmatrix}0 & 1 \\ \ 0 &0 \end{bmatrix} = \frac{X_j + iY_j} {2} , \end{align}, ahol $X _j $ és $Y _j $ a Qubit $X $-on működő Pauli-$Y $ és-$j $ operátorok.
 
 >[!NOTE]
-> A Q # a $ \ket {0} $ állapot a $Z $ operátor + 1 eigenstate jelöli. A \ket $ fizika egyes területein {0} az alacsony energiájú terepi állapot, így az $Z $ operátor-1 eigenstate. Ezért előfordulhat, hogy egyes képletek eltérhetnek a népszerű irodalomtól.
+> A Q# $ \ket {0} $ állapotban a $Z $ operátor + 1 eigenstate jelöli. A \ket $ fizika egyes területein {0} az alacsony energiájú terepi állapot, így az $Z $ operátor-1 eigenstate. Ezért előfordulhat, hogy egyes képletek eltérhetnek a népszerű irodalomtól.
 
 A kémia könyvtárában a $ \ket $ értéket használjuk a nem {0} foglalt spin-Orbit jelölésére.
 Ez azt mutatja, hogy egyetlen spin-orbitális esetében könnyen ábrázolható a létrehozási és a megsemmisítési operátor a kvantum-számítógépek által értelmezhető, egységes mátrixok tekintetében.

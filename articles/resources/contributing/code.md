@@ -6,12 +6,15 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.code
-ms.openlocfilehash: edc52dc4434e91258bece28812fd76b66329c6f9
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 956b0957a5261b8a77bf18d776fbcc2853bfbfe7
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274850"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866909"
 ---
 # <a name="contributing-code"></a>Hozzájárulás a kódhoz
 
@@ -28,10 +31,10 @@ Ha elfogadjuk a kód bevonását, az a Quantum Development Kit részévé válik
 
 ### <a name="unit-tests"></a>Egység tesztek
 
-A Q # functions, Operations és felhasználó által definiált típusokat, amelyek a tárakat (például a canonot) a fejlesztés részeként automatikusan tesztelik a [**Microsoft/QuantumLibraries**](https://github.com/Microsoft/QuantumLibraries/) adattárban.
+A Q# könyvtárakat, például a canont alkotó függvények, műveletek és felhasználó által definiált típusok a [**Microsoft/QuantumLibraries**](https://github.com/Microsoft/QuantumLibraries/) adattár fejlesztésének részeként automatikusan tesztelésre kerülnek.
 Új lekéréses kérelem megnyitásakor – például az Azure- [folyamatok](https://azure.microsoft.com/services/devops/pipelines/) konfigurációjában – a lekéréses kérelem módosításai nem bontják le azokat a meglévő funkciókat, amelyekre a Quantum programozási Közösség függ.
 
-A legújabb Q # verziónál az egység tesztelése az attribútum használatával van definiálva `@Test("QuantumSimulator")` . Az argumentum lehet "QuantumSimulator", "ToffoliSimulator", "TraceSimulator" vagy bármely teljesen minősített név, amely meghatározza a végrehajtási célt. Több, különböző végrehajtási célokat meghatározó attribútum is csatlakoztatható ugyanahhoz a meghívóhoz. A tesztek némelyike továbbra is az elavult [Microsoft. Quantum. xUnit](https://www.nuget.org/packages/Microsoft.Quantum.Xunit/) csomagot használja, amely `Test` a [xUnit](https://xunit.github.io/) -keretrendszerbe végződő összes Q # függvényt és műveletet teszi elérhetővé. Ez a csomag már nem szükséges az egységbeli tesztek definiálásához. 
+A legújabb Q# verzióban az egység tesztelése az attribútummal van definiálva `@Test("QuantumSimulator")` . Az argumentum lehet "QuantumSimulator", "ToffoliSimulator", "TraceSimulator" vagy bármely teljesen minősített név, amely meghatározza a végrehajtási célt. Több, különböző végrehajtási célokat meghatározó attribútum is csatlakoztatható ugyanahhoz a meghívóhoz. A tesztek némelyike továbbra is az elavult [Microsoft. Quantum. xUnit](https://www.nuget.org/packages/Microsoft.Quantum.Xunit/) csomagot használja, amely Q# `Test` a [xUnit](https://xunit.github.io/) -keretrendszerbe végződő összes funkciót és műveletet elérhetővé teszi. Ez a csomag már nem szükséges az egységbeli tesztek definiálásához. 
 
 A következő függvény használatával biztosítható, hogy a <xref:microsoft.quantum.canon.fst> és a <xref:microsoft.quantum.canon.snd> függvények a megfelelő kimeneteket adják vissza egy reprezentatív példában.
 Ha a vagy a kimenete `Fst` `Snd` helytelen, a `fail` rendszer az utasítást használja, hogy a teszt sikertelen legyen.
@@ -92,20 +95,20 @@ Nehéz lehet mindent megtenni, ezért tervezzük meg, hogy milyen funkciókra va
 Ez lehet egy másik eset, amikor egy funkciót külső gyártótól származó könyvtárként szabadít fel.
 Azt is megteheti, hogy segít a szolgáltatás módosításában, hogy jobban illeszkedjen az ütemtervhez, hogy a lehető legjobb munkát végezzük.
 
-A lekéréses kérelem módosításait is kérik, ha több dokumentációra vagy egységre vonatkozó tesztre van szükség, amely segít a használatában, vagy ha a Q # könyvtáraiban lévő többitől függően nem elég, hogy a felhasználók megtalálják a funkciót.
+A lekéréses kérelem módosításait is kérik, ha több dokumentációra vagy egységre vonatkozó tesztre van szükség, amely segít a használatában, vagy ha a többi könyvtárból nem tér el eléggé, akkor a Q# felhasználók megkereshetik a szolgáltatást.
 Ezekben az esetekben megpróbálunk néhány tanácsot készíteni a kód felülvizsgálatáról arról, hogy milyen felvehetők vagy módosíthatók, hogy a hozzájárulása könnyebb legyen a számunkra.
 
 Végül a [Microsoft nyílt forráskódjának viselkedési szabályzatában](https://opensource.microsoft.com/codeofconduct/)ismertetett módon nem fogadhatunk olyan hozzájárulásokat, amelyek kárt okoznak a kvantum-számítástechnikai Közösség számára.
 Szeretnénk biztosítani, hogy a hozzájárulások a teljes kvantum-számítástechnikai Közösséget, a jelenlegi csodálatos sokféleségben és a jövőben is kiszolgálják, ahogy az egyre nagyobb mértékben növekszik.
 Nagyra értékeljük segítségét ennek a célnak a megvalósításában.
 
-## <a name="next-steps"></a>További lépések
+## <a name="next-steps"></a>Következő lépések
 
 Köszönjük, hogy a Quantum Development Kit nagyszerű erőforrást biztosít a teljes kvantum-programozási Közösség számára!
-További információért folytassa a következő útmutatóval a Q # Style-on.
+További információt a következő útmutatóban talál a Q# stílussal kapcsolatban.
 
 > [!div class="nextstepaction"]
-> [A Q # Style irányelvek ismertetése](xref:microsoft.quantum.contributing.style)
+> [A Q# Style irányelvek ismertetése](xref:microsoft.quantum.contributing.style)
 
 Attól függően, hogy milyen kóddal járul hozzá, lehet, hogy további szempontokat is figyelembe kell vennie, amelyek segítségével a lehető legtöbb jót teheti a Közösségnek.
 

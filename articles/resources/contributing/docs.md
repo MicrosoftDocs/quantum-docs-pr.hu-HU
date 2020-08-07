@@ -6,12 +6,15 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.docs
-ms.openlocfilehash: ed5ab5df9de5d71ccd922cd430cf15779806dd6a
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 1110f32a6486de1a346b115fa928a098749b6690
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274858"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866876"
 ---
 # <a name="improving-documentation"></a>A dokumentáció továbbfejlesztése
 
@@ -25,7 +28,7 @@ Hasonlóképpen fogadjuk el a [MathJax](https://www.mathjax.org/) -függvénytá
 Így a dokumentáció minden formája némileg eltér a részletektől:
 
 - A **koncepcionális dokumentáció** a közzétett cikkekből áll, amelyek a kvantum- https://docs.microsoft.com/quantum számítástechnika alapjait ismertetik a Interchange formats technikai előírásai alapján. Ezek a cikkek a [DocFX-stílusú Markdown (DFM)](https://dotnet.github.io/docfx/spec/docfx_flavored_markdown.html), a gazdag dokumentációs készletek létrehozásához használt Markdown-változatok.
-- Az **API-hivatkozás** az egyes Q # függvényekhez, műveletekhez és felhasználó által definiált típusokhoz tartozó lapok összessége https://docs.microsoft.com/qsharp/api/ . Ezek az oldalak dokumentálják az összes meghívható bemenetet és műveletet, valamint példákat és további információkra mutató hivatkozásokat. Az API-referenciát a rendszer automatikusan Kinyeri a kis DFM-dokumentumokból a Q # forráskódban az egyes verziók részeként.
+- Az **API-hivatkozás** az egyes Q# függvényekhez, műveletekhez és felhasználó által definiált típusokhoz tartozó lapok összessége https://docs.microsoft.com/qsharp/api/ . Ezek az oldalak dokumentálják az összes meghívható bemenetet és műveletet, valamint példákat és további információkra mutató hivatkozásokat. Az API-referenciát a rendszer automatikusan Kinyeri a forráskódban lévő kis DFM-dokumentumokból az Q# egyes kiadások részeként.
 - Az egyes mintákhoz és Kata-hoz tartozó **readme <!----> . MD** fájlok azt írják le, hogyan használható a minta vagy a Kata, mit takar, és hogyan kapcsolódik a Quantum Development Kit további részeihez. Ezek a fájlok a GitHub-stílusú [Markdown (GFM)](https://github.github.com/gfm/)használatával íródnak, amely egy egyszerűbb alternatíva a DFM, amely a dokumentáció közvetlen csatolásához használható a kódokhoz.
 
 ## <a name="contributing-to-the-conceptual-documentation"></a>A fogalmi dokumentációhoz való hozzájárulás
@@ -49,7 +52,7 @@ Ha a [Samples adattárból](https://github.com/Microsoft/Quantum)szeretne kódot
 :::code language="qsharp" source="~/quantum/samples/algorithms/chsh-game/Game.qs" range="4-8":::
 ```
 
-Ez a parancs a [ `Game.qs` `chsh-game` mintából a fájl](https://github.com/microsoft/Quantum/blob/master/samples/algorithms/chsh-game/Game.qs)4 – 8. sorát importálja, a szintaxis kiemelése pedig Q # kódként jelöli meg őket.
+Ez a parancs a [ `Game.qs` `chsh-game` mintából a fájl](https://github.com/microsoft/Quantum/blob/master/samples/algorithms/chsh-game/Game.qs)4 – 8. sorait importálja a Q# szintaxis kiemelése céljából, kódként megjelölve.
 Ezzel a paranccsal elkerülhető a kód duplikálása a koncepcionális cikkek és a minták tárháza között, így a dokumentációban található mintakód mindig a lehető legnaprakészebb.
 
 ## <a name="contributing-to-the-api-references"></a>Hozzájárulás az API-hivatkozásokhoz
@@ -64,7 +67,7 @@ A Quantum Development Kit minden kiadásának fordításakor ezek a megjegyzése
 
 Vegyük például a függvényt `ControlledOnBitString<'T> (bits : Bool[], oracle : ('T => Unit is Adj + Ctl)) : ((Qubit[], 'T) => Unit is Adj + Ctl)` .
 A dokumentációs megjegyzéseknek segíteniük kell a felhasználó számára, hogy megismerjék, hogyan értelmezhető `bits` és `oracle` milyen funkciói vannak.
-Ezek a különböző információk a Q # Compiler számára a dokumentációs Megjegyzés speciális elnevezett Markdown szakaszában adhatók meg.
+Ezek a különböző információk a Q# fordítók számára a dokumentációs Megjegyzés speciális elnevezett Markdown szakaszában adhatók meg.
 A példa a `ControlledOnBitString` következőhöz hasonló lehet:
 
 ```qsharp
@@ -139,7 +142,7 @@ A [ `ControlledOnBitString` függvény API-dokumentációjában](xref:microsoft.
 
 A dokumentáció írásának általános gyakorlata mellett az API-dokumentációs megjegyzések írásakor a következő szempontokat is segít megőrizni:
 
-- Az egyes dokumentációs megjegyzések formátumának egyeznie kell azzal, amit a Q # fordító a dokumentáció megfelelő megjelenítésére vár. Bizonyos szakaszok, például a `/// # Remarks` szabadkézi tartalmak engedélyezése, míg a szakaszok (például a `/// # See Also` szakasz) szigorúbbak.
+- Az egyes dokumentációs megjegyzések formátumának egyeznie kell azzal, amit a fordító arra vár, hogy a Q# dokumentáció helyesen jelenjen meg. Bizonyos szakaszok, például a `/// # Remarks` szabadkézi tartalmak engedélyezése, míg a szakaszok (például a `/// # See Also` szakasz) szigorúbbak.
 - Az olvasó elolvashatja az API-dokumentációt a fő API-referenciát tartalmazó helyen, az egyes névterek összegzésén, vagy akár az IDE-n belül, a hover-információk használatával. Győződjön meg arról, hogy a `/// # Summary` mondatok nem hosszabbak, így az olvasó gyorsan rendezheti, hogy szükség van-e további vagy máshol való keresésre, és segíthet a névtér-összegzések gyors vizsgálatában.
 - Előfordulhat, hogy a dokumentáció jóval hosszabb ideig tart, mint maga a kód, de ez rendben van. Még egy kis kódrészlet is váratlan hatással lehet a felhasználókra, akik nem ismerik azt a kontextust, amelyben a kód létezik. A konkrét példákkal és a egyértelmű magyarázatokkal segítheti a felhasználókat abban, hogy a lehető leghatékonyabban használják a számukra elérhető kódot.
 

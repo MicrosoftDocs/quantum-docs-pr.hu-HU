@@ -1,21 +1,24 @@
 ---
-title: 'Diagnosztika a Q # standard könyvtárakban'
-description: 'Ismerje meg, hogy milyen diagnosztikai funkciókkal és műveletekkel lehet elsajátítani a kvantum-programok hibáit vagy hibáit a Q # standard kódtárakban.'
+title: Diagnosztika a Q# standard könyvtárakban
+description: A Q# kvantum-programokban a hibák és hibák észleléséhez használt standard könyvtárak diagnosztikai funkcióinak és műveleteinek megismerése.
 author: cgranade
 uid: microsoft.quantum.libraries.diagnostics
 ms.author: chgranad@microsoft.com
 ms.topic: article
-ms.openlocfilehash: 324753cfa1b7d940bf5a0bbe7665f19cc6dda82c
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 4a98795b2459adaa4e47c888751121fffdc70971
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86870634"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868542"
 ---
 # <a name="diagnostics"></a>Diagnosztika #
 
 A klasszikus fejlesztéshez hasonlóan fontos, hogy képes legyen diagnosztizálni a kvantum-programok hibáit és hibáit.
-A Q # standard kódtárak számos különböző módszert biztosítanak a kvantum-programok helyességének biztosításához <xref:microsoft.quantum.guide.testingdebugging> .
+A Q# standard szintű kódtárak számos különböző módszert biztosítanak a kvantum-programok helyességének biztosításához <xref:microsoft.quantum.guide.testingdebugging> .
 Ez a támogatás nagyrészt olyan függvények és műveletek formájában érhető el, amelyek a célszámítógép számára arra utasítja a további diagnosztikai adatokat, hogy a gazda programhoz vagy a fejlesztőhöz, vagy a függvény vagy a művelet hívása által kifejezett feltételek és invariánsok helyességét érvényesítsék.
 
 ## <a name="machine-diagnostics"></a>Gépi diagnosztika ##
@@ -30,7 +33,7 @@ Message($"About to rotate by an angle of {angle}...");
 ```
 
 > [!NOTE]
-> `Message`a rendelkezik aláírással `(String -> Unit)` , amely azt jelenti, hogy a hibakeresési napló üzenete nem figyelhető meg a Q #-on belül.
+> `Message`rendelkezik aláírással `(String -> Unit)` , amely azt jelenti, hogy a hibakeresési napló üzenetének kibocsátása nem figyelhető meg a belülről Q# .
 
 A <xref:microsoft.quantum.diagnostics.dumpmachine> és a <xref:microsoft.quantum.diagnostics.dumpregister> callables utasíthatja a megcélzott gépeket arra, hogy diagnosztikai adatokat szolgáltassanak a jelenleg lefoglalt qubits vagy a qubits egy adott regiszteréről.
 Az egyes célszámítógépeken eltérő diagnosztikai információk szerepelnek a dump utasításra adott válaszban.
@@ -49,7 +52,7 @@ Ezek a feltételek akár _tények_formájában is megtekinthetők, amelyek bemut
 Például `EqualityFactI(1 + 1, 2, "1 + 1 != 2")` az a matematikai tény, hogy a $1 + 1 = $2, míg `AssertQubit(One, qubit)` a mérési feltételt jelzi, hogy a mérés `qubit` visszaadja a megfelelő `One` bizonyosságot.
 Az előző esetben ellenőrizhető, hogy a feltétel helyes értéke csak az értékekre vonatkozik-e, míg az utóbbiban tudnia kell valamit a qubit állapotáról az érvényesítés kiértékelése érdekében.
 
-A Q # standard könyvtárak számos különböző funkciót biztosítanak a tények ábrázolásához, többek között:
+A Q# standard könyvtárak számos különböző funkciót biztosítanak a tények ábrázolásához, többek között a következőket:
 
 - <xref:microsoft.quantum.diagnostics.fact>
 - <xref:microsoft.quantum.diagnostics.equalitywithintolerancefact>
@@ -67,7 +70,7 @@ Azokon a célszámítógépeken, amelyek nem engedélyezik az állítások kiér
 Ha az állítás sikertelen, a végrehajtás a `fail` megadott üzenettel való meghívásával végződik.
 Alapértelmezés szerint ez a művelet nincs implementálva; a-t támogató szimulátoroknak olyan implementációt kell biztosítaniuk, amely a futtatókörnyezet ellenőrzését végzi.
 `AssertMeasurement`aláírással rendelkezik `((Pauli[], Qubit[], Result, String) -> ())` .
-Mivel a `AssertMeasurement` függvény egy üres rekord kimenetének típusa, a rendszer semmilyen, `AssertMeasurement` a Q # programon belül megfigyelhető hatást sem tartalmaz.
+Mivel a `AssertMeasurement` függvény egy üres rekordot tartalmaz a kimeneti típusként, a rendszer semmilyen hatást sem `AssertMeasurement` figyel a Q# programon belül.
 
 A <xref:microsoft.quantum.diagnostics.assertmeasurementprobability> Operation függvény azt állítja be, hogy a megadott Pauli-alapú qubits mérése a megadott valószínűséggel az adott tűréshatáron belül megtörténik.
 A tolerancia adalékanyag (például `abs(expected-actual) < tol` ).

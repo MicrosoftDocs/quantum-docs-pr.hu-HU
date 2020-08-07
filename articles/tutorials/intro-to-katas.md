@@ -6,16 +6,19 @@ ms.author: bradben
 ms.date: 06/02/2020
 ms.topic: overview
 uid: microsoft.quantum.overview.katas
-ms.openlocfilehash: 1c4dfa5c47aa38935cd5936cd256e357b6605371
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: b2a3b25bf90109468f02c98c6c687befb83648bc
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275231"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869681"
 ---
 # <a name="learn-quantum-computing-with-the-quantum-katas"></a>Ismerkedés a kvantum-számítástechnikával a Kvantum Katák segítségével
 
-[A Quantum katas](https://github.com/Microsoft/QuantumKatas/) olyan nyílt forráskódú, saját tempóban elsajátított oktatóanyagok és programozási gyakorlatok, amelyek a Quantum Computing és a Q # programozási elemek egyidejű tanítására szolgálnak.
+[A Quantum katas](https://github.com/Microsoft/QuantumKatas/) olyan nyílt forráskódú, saját tempóban elsajátított oktatóanyagok és programozási gyakorlatok, amelyek célja a kvantum-számítástechnika és Q# a programozás elemeinek egyidejű tanítása.
 
 ## <a name="learning-by-doing"></a>Gyakorlati tanulás
 
@@ -42,15 +45,15 @@ Ismerkedjen meg a kvantum-számítástechnika alapjaival és alapjaival, vagy m�
 |[Lineáris algebra](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/LinearAlgebra)|A lineáris algebra a Quantum állapotok és a kvantum-számítástechnikai műveletek ábrázolására szolgál. Ez az oktatóanyag az alapokat, például a mátrixokat és a vektorokat ismerteti.|
 |[A qubit fogalma](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/Qubit)|A qubits megismerése – a Quantum Computing legfontosabb alapfogalmai. |
 |[Egyqubites kvantumkapuk](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/SingleQubitGates)|Ez az oktatóanyag egy qubit kvantum-kaput vezet be, amely a kvantum-algoritmusok építőelemeként működik, és különböző módokon alakítja át a Quantum qubit-állapotokat.|
-|[Többqubites rendszerek](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/MultiQubitSystems)|Ez az oktatóanyag bemutatja a qubit rendszereket, azok ábrázolását matematikai jelöléssel és Q # kódban, valamint a felakadás koncepcióját.|
+|[Többqubites rendszerek](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/MultiQubitSystems)|Ez az oktatóanyag bemutatja a qubit rendszereket, azok ábrázolását matematikai jelöléssel és Q# kódban, valamint a felakadás koncepcióját.|
 |[Több qubit Quantum Gates](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/MultiQubitGates)|Ez az oktatóanyag az [qubit Quantum Gates](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/SingleQubitGates) oktatóanyagát követi, és a Quantum Gates több qubit rendszerre való alkalmazására koncentrál.|
 
 ### <a name="quantum-computing-fundamentals"></a>Kvantum-számítástechnikai alapfogalmak
 
 | Kata | Leírás |
 |:-----|-------------|
-|[Kvantumkapuk felismerése](https://github.com/microsoft/QuantumKatas/tree/master/BasicGates)|A Q #-ban az alapszintű kvantum-kapuk megismerésére tervezett gyakorlatok sorozata. Az alapszintű qubit-és qubit-kapuk, adjoint és vezérelt kapuk, valamint a kapuk használata a qubit állapotának módosításához.|
-|[Kvantum-szuperpozíció létrehozása](https://github.com/microsoft/QuantumKatas/tree/master/Superposition)|Ezekkel a gyakorlatokkal megismerheti a Felfekvés és a programozás fogalmát a Q # használatával. Az alapszintű egyqubitű és több qubit kapuk, a túlterhelések és a folyamatok vezérlésének és rekurziójának gyakorlata a Q #-ban.|
+|[Kvantumkapuk felismerése](https://github.com/microsoft/QuantumKatas/tree/master/BasicGates)|Az alapszintű kvantum-kapuk megismerését célzó gyakorlatok sorozata Q# . Az alapszintű qubit-és qubit-kapuk, adjoint és vezérelt kapuk, valamint a kapuk használata a qubit állapotának módosításához.|
+|[Kvantum-szuperpozíció létrehozása](https://github.com/microsoft/QuantumKatas/tree/master/Superposition)|Ezekkel a gyakorlatokkal megismerheti a Felfekvés és a programozás fogalmát Q# . Az alapszintű egyqubitű és több qubit kapuk, a túlterhelések és a folyamatok vezérlésének és rekurziójának gyakorlatát foglalja magában Q# .|
 |[Kvantumállapotok megkülönböztetése mérésekkel](https://github.com/microsoft/QuantumKatas/tree/master/Measurements)|Oldja meg ezeket a gyakorlatokat a kvantum-mérések, valamint a merőleges és nem merőleges állapotok megismerése során. |
 |[Közös mérések](https://github.com/microsoft/QuantumKatas/tree/master/JointMeasurements)|Ismerje meg a közös paritásos méréseket, és azt, hogyan használható a [mérték](xref:microsoft.quantum.intrinsic.measure) művelet a kvantum-állapotok megkülönböztetéséhez.|
 
@@ -72,7 +75,7 @@ Ismerkedjen meg a kvantum-számítástechnika alapjaival és alapjaival, vagy m�
 |:-----|-------------|
 |[BB84 protokoll a kvantumkulcs-elosztáshoz](https://github.com/microsoft/QuantumKatas/tree/master/KeyDistribution_BB84)|Ismerje meg és implementálja a Quantum Key Distribution Protocol, a [BB84](https://en.wikipedia.org/wiki/BB84), a qubits használatával a titkosítási kulcsok cseréjét. |
 |[Bit-flip hiba a kód kijavítani](https://github.com/microsoft/QuantumKatas/tree/master/QEC_BitFlipCode)|Ismerje meg a kvantum-hibajavítást a Quantum Error-Correction (KARANTÉNKÉNYSZERÍTÉSI) kódok közül a legegyszerűbben a három qubit-kód megadásával.|
-|[Fázisbecslés](https://github.com/microsoft/QuantumKatas/blob/master/PhaseEstimation)|A fázis-becslési algoritmusok a kvantum-számítástechnika egyik legalapvetőbb építőelemei. Ismerje meg a fázisok becslését ezekkel a gyakorlatokkal, amelyek a kvantum fázisok becslését és a fázis-becslési rutinok előkészítését és futtatását ismertetik a Q #|
+|[Fázisbecslés](https://github.com/microsoft/QuantumKatas/blob/master/PhaseEstimation)|A fázis-becslési algoritmusok a kvantum-számítástechnika egyik legalapvetőbb építőelemei. Ismerje meg a fázisok becslését ezekkel a gyakorlatokkal, amelyek a kvantum fázisok becslésére és a fázis-becslési rutinok előkészítésére és futtatására vonatkoznak Q# .|
 |[Quantum aritmetika: a lüktetés kiépítése – kiegészítések készítése](https://github.com/microsoft/QuantumKatas/blob/master/RippleCarryAdder)|Részletes sorozat, amely a rendszerhullám-számítógépeken is felderíti a [hullámok folytatását](https://en.wikipedia.org/wiki/Adder_(electronics)#Ripple-carry_adder) . Hozzon létre egy helybeni kvantum-kiegészítést, bontsa ki azt egy másik algoritmussal, és végül hozzon létre egy helyi kvantum-altraktort.   |
 
 ### <a name="entanglement-games"></a>Összefonódási játékok

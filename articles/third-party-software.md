@@ -7,24 +7,27 @@ author: QuantumWriter
 ms.author: MSFT-alias-person-or-DL
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
-ms.openlocfilehash: 84d83bf65b3c01a630d98210a5ac3fe322fa501f
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 1d76e9c8532dd7818941d182773a8f85a86becee
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77906814"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869749"
 ---
 # <a name="third-party-software-notices-and-information"></a>HARMADIK FÉLTŐL SZÁRMAZÓ SZOFTVEREKKEL KAPCSOLATOS MEGJEGYZÉSEK ÉS INFORMÁCIÓK
 
 Ez a fájl az alább felsorolt projektekkel (harmadik féltől származó IP-címmel) kapcsolatos anyagokon alapul. Az eredeti szerzői jogi nyilatkozat és a Microsoft által a harmadik fél IP-címéhez kapott licencek az alábbiakban vannak meghatározva. Az ilyen licencek és értesítések csak tájékoztató jellegűek. Microsoft-licencek a harmadik féltől származó IP-címet a Microsoft-termék licencelési feltételeinek megfelelően. A Microsoft fenntartja a jelen szerződés keretében kifejezetten nem biztosított összes egyéb jogot, legyen az a következménye, estoppel vagy egyéb módon.
 
-1. YamlDotNet. aláírt 4.2.2-es verzió (https://www.nuget.org/packages/YamlDotNet.Signed/4.2.2)
+1. YamlDotNet. aláírt verzió 4.2.2 (https://www.nuget.org/packages/YamlDotNet.Signed/4.2.2)
 2. xUnit. Runner. VisualStudio 2.3.1 (https://www.nuget.org/packages/xunit.runner.visualstudio/2.3.1)
-3. xUnit. Runner. Console 2.3.1 (https://www.nuget.org/packages/xunit.runner.console/2.3.1)
-4. xUnit. bővíthetőség. végrehajtás 2.3.1 (https://www.nuget.org/packages/xunit.extensibility.execution/2.3.1)
+3. xUnit. Runner. Console 2.3.1 ( https://www.nuget.org/packages/xunit.runner.console/2.3.1 )
+4. xunit.extensibility.execution 2.3.1 (https://www.nuget.org/packages/xunit.extensibility.execution/2.3.1)
 5. xUnit. bővíthetőség. Core 2.3.1 (https://www.nuget.org/packages/xunit.extensibility.core/2.3.1)
 6. xUnit. Core 2.3.1 (https://www.nuget.org/packages/xunit.core/2.3.1)
-7. xUnit.-érvényesítő 2.3.1 (https://www.nuget.org/packages/xunit.assert/2.3.1)
+7. xUnit.-érvényesítés 2.3.1 (https://www.nuget.org/packages/xunit.assert/2.3.1)
 8. xUnit. analizátorok 0.7.0 (https://www.nuget.org/packages/xunit.analyzers/0.7.0)
 9. xUnit. absztrakciós 2.0.1 (https://www.nuget.org/packages/xunit.abstractions/2.0.1)
 10. xUnit 2.3.1 (https://www.nuget.org/packages/xunit/2.3.1)
@@ -32,7 +35,7 @@ Ez a fájl az alább felsorolt projektekkel (harmadik féltől származó IP-cí
 12. FSharp. Core 4.2.3 (https://www.nuget.org/packages/FSharp.Core/4.2.3)
 13. FSharp. Diagraming 0.91.1 (https://www.nuget.org/packages/FSharp.Charting/0.91.1)
 14. FsCheck 2.10.4 (https://www.nuget.org/packages/FsCheck/2.10.4)
-15. Vitatott 3.7.0 (https://www.nuget.org/packages/Argu/3.7.0)
+15. 3.7.0 érvelő (https://www.nuget.org/packages/Argu/3.7.0)
 16. FParsec 1.0.3 (https://www.nuget.org/packages/FParsec/1.0.3)
 
 ## <a name="yamldotnetsigned-notices-and-information"></a>YamlDotNet. aláírt értesítések és információk
@@ -75,7 +78,7 @@ Tekintse meg a licencet, amely az adott nyelvre vonatkozó engedélyeket és kor
 
 
 
-## <a name="xunitextensibilityexecution-notices-and-information"></a>xUnit. bővíthetőség. végrehajtási megjegyzések és információk
+## <a name="xunitextensibilityexecution-notices-and-information"></a>xunit.extensibility.execution kapcsolatos megjegyzések és információk
 ---------------------------------------
 Copyright (c) .NET Foundation és közreműködők minden jog fenntartva
 
@@ -166,7 +169,7 @@ Microsoft nyilvános licenc (MS-PL)
 
 Ez a licenc a kapcsolódó szoftver használatát szabályozza. Ha a szoftvert használja, elfogadja ezt a licencet. Ha nem fogadja el a licencet, ne használja a szoftvert.
 
-1. Meghatározások
+1. Definíciók
 
 A "reprodukálása", a "reprodukció", a "származtatott művek" és a "terjesztés" kifejezéseknek ugyanezt a jelentését kell megadniuk az USA szerzői jogi törvényei szerint.
 
@@ -178,7 +181,7 @@ A "licencelt szabadalmak" olyan közreműködő szabadalmi jogcímek, amelyek k�
 
 2. Jogosultságok megadása
 
-(A) szerzői jogi támogatás – a licenc feltételei, beleértve a 3. szakaszban foglalt licencfeltételeket és korlátozásokat, az egyes közreműködők nem kizárólagos, globális, jogdíjmentes szerzői licencet biztosítanak a hozzájárulásuk visszavonásához, a származtatott termékek előkészítéséhez együttműködik a hozzájárulásával, és terjesztheti a hozzá tartozó hozzájárulást, illetve a létrehozott származtatott munkákat.
+(A) szerzői jogi támogatás – a licenc feltételei, beleértve a 3. szakaszban foglalt licencfeltételeket és korlátozásokat, az egyes közreműködők nem kizárólagos, globális, jogdíjmentes szerzői licencet biztosítanak a hozzájárulásuk visszavonásához, a hozzájárulás származtatott funkcióinak előkészítéséhez, valamint az Ön által létrehozott származtatott munkák terjesztéséhez.
 
 (B) szabadalmi támogatás – a licenc feltételeitől függően a 3. szakaszban foglalt licencfeltételeket és korlátozásokat is beleértve, az egyes közreműködők nem kizárólagos, globális, jogdíjmentes licencet biztosítanak a licenccel rendelkező szabadalmaik számára, hogy a szoftverben vagy más származékos termékben való hozzájárulását a szoftverben vagy a származékos alkalmazásban a szoftverben vagy a származtatott szolgáltatásban.
 
@@ -192,14 +195,14 @@ A "licencelt szabadalmak" olyan közreműködő szabadalmi jogcímek, amelyek k�
 
 (D) Ha a szoftver bármely részét a forráskód űrlapon terjeszti ki, ezt a licencet csak akkor hajthatja végre, ha a licenc teljes másolatát tartalmazza a disztribúcióban. Ha a szoftver bármely részét lefordított vagy Object Code űrlapon terjeszti ki, akkor csak ezt a licencet tartalmazó licenc alatt teheti meg.
 
-(E) a szoftver licenccel rendelkezik. A használat kockázatát Ön viseli. A közreműködők nem biztosítanak kifejezett szavatosságot, garanciát vagy feltételt. A helyi törvények szerint további fogyasztói jogokkal is rendelkezhet, amelyeket ez a licenc nem tud megváltoztatni. A helyi törvények által megengedett mértékig a közreműködők kizárják a eladhatóságra, az adott célra való alkalmasságra és a nem jogsértésre vonatkozó garanciákat.
+(E) a szoftver licenccel rendelkezik. Ezeket csak saját felelősségre használhatja. A közreműködők nem biztosítanak kifejezett szavatosságot, garanciát vagy feltételt. A helyi törvények szerint további fogyasztói jogokkal is rendelkezhet, amelyeket ez a licenc nem tud megváltoztatni. A helyi törvények által megengedett mértékig a közreműködők kizárják a eladhatóságra, az adott célra való alkalmasságra és a nem jogsértésre vonatkozó garanciákat.
 
 ## <a name="fsharpcore-notices-and-information"></a>FSharp. Core-megjegyzések és információk
 ---------------------------------------
 Az MIT licenc (MIT)
 
 Copyright (c) Microsoft Corporation.
-Minden jog fenntartva.
+All rights reserved.
 
 A jelen szoftver és a kapcsolódó dokumentációs fájlok (a "szoftver") másolatának beszerzéséhez ingyenesen biztosítjuk az engedélyt. Ha korlátozás nélkül szeretné kezelni a szoftvereket, beleértve a használati jogot, a másolást, a módosítást, az egyesítést, a közzétételt, a terjesztést, a licencek kiosztását és/vagy a szoftver példányainak értékesítését, valamint annak engedélyezését, hogy a szoftver mely személyeknek van berendezve, a következő feltételek vonatkoznak rá:
 
@@ -218,7 +221,7 @@ A jelen szoftver és a kapcsolódó dokumentációs fájlok (a "szoftver") máso
 A fenti szerzői jogi nyilatkozat és ez az engedély a szoftver összes példányában vagy jelentős részében szerepel.
 
 A SZOFTVERT "ADOTT ÁLLAPOTBAN" BIZTOSÍTJUK, BÁRMIFÉLE KIFEJEZETT VAGY VÉLELMEZETT SZAVATOSSÁG NÉLKÜL, BELEÉRTVE A ELADHATÓSÁGRA, AZ ADOTT CÉLRA VALÓ ALKALMASSÁGRA ÉS A NEM JOGSÉRTÉSRE VONATKOZÓ GARANCIÁT IS. A SZERZŐK ÉS A SZERZŐI JOGOK TULAJDONOSAI SEMMILYEN ESETBEN NEM VONHATÓK FELELŐSSÉGRE A JOGCÍMEK, A KÁROKÉRT VAGY EGYÉB FELELŐSSÉGÉRT, AKÁR A SZOFTVER, AKÁR A SZOFTVER, SEM A HASZNÁLATI, AKÁR MÁS, A SZOFTVERBEN VAGY A HASZNÁLATBAN LÉVŐ, ILLETVE MÁS ÜGYLETEKKEL KAPCSOLATBAN FELMERÜLŐ, ILLETVE NEM KAPCSOLÓDÓ JOGCÍMEK, KÁROKÉRT VAGY EGYÉB KÁROKÉRT
-A szoftver csomagolt verziói tartalmazhatják a OxyPlot. Core. dll és a OxyPlot. GtkSharp. dll fájl példányait, az alábbi licenceket.
+A szoftver csomagolt verziója OxyPlot.Core.dll és OxyPlot.GtkSharp.dll, az alábbi licenccel rendelkező példányokat is tartalmazhat.
 
 ---
 
@@ -236,7 +239,7 @@ A SZOFTVERT "ADOTT ÁLLAPOTBAN" BIZTOSÍTJUK, BÁRMIFÉLE KIFEJEZETT VAGY VÉLEL
 ---------------------------------------
 Copyright (c) 2008-2014, Kurt Schelfthout
 
-Minden jog fenntartva.
+All rights reserved.
 
 A forrás-és bináris űrlapokon a módosítással vagy anélkül történő újraterjesztés és használat megengedett, ha a következő feltételek teljesülnek:
 
@@ -265,22 +268,22 @@ A SZOFTVERT "ADOTT ÁLLAPOTBAN" BIZTOSÍTJUK, BÁRMIFÉLE KIFEJEZETT VAGY VÉLEL
 
 Ha másként nincs megjelölve, a forrás-és bináris formátumú FParsec-függvénytár az egyszerűsített BSD-licenc alá kerül. Az egyszerűsített BSD-licenc (más néven "a 2. záradék BSD-licence") egy egyszerű, az OSI-kompatibilis licenc. 
 
-A FParsec a következő Unicode-karakterből származtatott adatokkal rendelkezik:. 8.0.0, Copyright (c) 1991 \ u20122015 Unicode, Inc., amely a következő feltételekkel terjeszthető: http://www.unicode.org/terms_of_use.html#Exhibit1 
+A FParsec a következő Unicode-karakterből származtatott adatokkal rendelkezik:. 8.0.0, Copyright (c) 1991 \ u20122015 Unicode, Inc., amely a következő feltételekkel terjeszthető:http://www.unicode.org/terms_of_use.html#Exhibit1 
 
 A doc mappában található dokumentáció a Creative Commons Attribution-NonCommercial 3,0 unportolt licenccel rendelkezik. Ez a Creative Commons Licence nem teszi lehetővé, hogy a dokumentációt kereskedelmi célokra ne használja engedéllyel. Ez azt jelenti, hogy például nem tudja eladni a dokumentációt könyv formájában a nyereségért, vagy egy webtartalom-farmon helyezheti el, hogy pénzt gyűjtsön a hirdetésekkel. Természetesen a dokumentációt a kereskedelmi kontextusban is használhatja (például egy kereskedelmi vállalat intranetén helyezheti el), feltéve, hogy nem próbál közvetlenül pénzt keresni a dokumentáció szövege alapján. 
 
 2,1 egyszerűsített BSD-licenc
 
-Copyright (c) 2007 \ u20122017, Stephan Tolksdorf. Minden jog fenntartva.
+Copyright (c) 2007 \ u20122017, Stephan Tolksdorf. All rights reserved.
 
 A forrás-és bináris űrlapokon a módosítással vagy anélkül történő újraterjesztés és használat megengedett, ha a következő feltételek teljesülnek: 
 * A forráskód újraelosztásának meg kell őriznie a fenti Copyright-értesítést, a feltételek listáját és a következő jogi nyilatkozatot.
 * A bináris formában lévő újraelosztásnak a fenti szerzői jogi nyilatkozatnak, a feltételek listájának és a következő, a terjesztéshez biztosított egyéb anyagoknak a dokumentációjában és/vagy más, 
 
-Ezt a szoftvert a szerzői jog tulajdonosai, valamint az olyan kifejezett vagy vélelmezett szavatosságok biztosítják, mint például a eladhatóságra és az adott célra való alkalmasságra vonatkozó garanciák. A szerzői jog tulajdonosai semmilyen esetben nem vállalnak felelősséget semmilyen közvetlen, közvetett, véletlen, különleges, példaértékű vagy következményes kárért (beleértve a helyettesítő termékek vagy szolgáltatások beszerzését, a használat elvesztését, az adatvesztést vagy a vállalatot). megszakadás miatt azonban a felelősség, a szerződés, a szigorú felelősség vagy a károkozás (beleértve a gondatlanságot vagy más módon) a jelen szoftver használatából eredő bármilyen módon, még akkor is, ha az ilyen károk lehetségesek. 
+Ezt a szoftvert a szerzői jog tulajdonosai, valamint az olyan kifejezett vagy vélelmezett szavatosságok biztosítják, mint például a eladhatóságra és az adott célra való alkalmasságra vonatkozó garanciák. A szerzői jog tulajdonosai semmilyen esetben sem vonhatók felelősségre közvetlen, közvetett, véletlen, különleges, példaértékű vagy következményes károkért (beleértve a helyettesítő termékek vagy szolgáltatások beszerzését, a használat elvesztését, az adatmennyiséget vagy a nyereséget, vagy az üzleti megszakítást) a szoftver használatából fakadó bármilyen módon felmerülő felelősségre, akár szerződésre, szigorú felelősségre vagy károkozásra (beleértve a gondatlanságra vagy egyéb célra) is kiváltanak. , még akkor is, ha az ilyen károk lehetségesek. 
 
 2,2 Creative Commons Attribution-NonCommercial 3,0 nem portolt licenc
 
-Összefoglalás: https://creativecommons.org/licenses/by-nc/3.0/
+Összegzésehttps://creativecommons.org/licenses/by-nc/3.0/
 
-A teljes licenc szövege: https://creativecommons.org/licenses/by-nc/3.0/legalcode 
+A teljes licenc szövege:https://creativecommons.org/licenses/by-nc/3.0/legalcode 

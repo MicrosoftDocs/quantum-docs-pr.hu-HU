@@ -1,6 +1,8 @@
 ---
 title: részletes mátrix – fogalmak leírása: Ismerje meg a eigenvectors, a eigenvalues és a mátrix exponenciálisait, a kvantum-algoritmusok leírásához és szimulálásához használt alapvető eszközöket.
 Szerző: QuantumWriter UID: Microsoft. Quantum. Concepts. Matrix – speciális MS. Author: nawiebe@microsoft.com MS. Date: 12/11/2017 MS. topic: No-Loc:
+- "Q#"
+- "$$v"
 - "$$"
 - "$$"
 - "$"
@@ -124,7 +126,7 @@ $$
 e ^ A = \boldone + a + a \frac { ^ 2 } { 2! } + \frac { ^ 3 } { 3!}+\cdots
 $$
 
-Ez azért fontos, mert a Quantum Mechanical Time Evolution leírását az $ e ^ { } $ Hermitian Matrix $ B $ .  Emiatt a Matrix exponenciálisok végrehajtása a kvantum-számítástechnika alapvető részét képezi, és a Q # olyan belső rutinokat kínál, amelyek ezeknek a műveleteknek a leírására szolgálnak.
+Ez azért fontos, mert a Quantum Mechanical Time Evolution leírását az $ e ^ { } $ Hermitian Matrix $ B $ .  Emiatt a Matrix exponenciálisok végrehajtása a kvantum-számítástechnika alapvető része, és mint ilyen, Q# belső rutinokat kínál ezeknek a műveleteknek a leírásához.
 A mátrix exponenciális felszámításának számos módja van a klasszikus számítógépeken, és általában számszerűen közelíthető meg egy ilyen exponenciális megoldás.  Lásd: [*Cleve moleer és Charles van Loan. "Tizenkilenc kétes módszer a mátrix exponenciális kiszámítására." SIAM Review 20,4 (1978): 801-836*](https://doi.org/10.1137/S00361445024180) az érintett kihívásokkal kapcsolatos további információkért.
 
 A mátrix exponenciális kiszámításának legegyszerűbb módja a mátrix eigenvalues és eigenvectors.  Pontosabban, a fentiekben tárgyalt spektrális tétel azt mondja, hogy minden Hermitian vagy egységes mátrixnál $ $ létezik egy egységes mátrix $ U $ és egy átlós mátrix $ d, $ például $ egy = u ^ \dagger D u $ .  A unitarity tulajdonságai miatt $ egy ^ 2 = u ^ d ^ \dagger 2 u $ , és hasonlóképpen bármely Power $ p a $ $ ^ = \dagger $ p u ^ p ^ p u.  Ha ezt a műveletet behelyettesítjük az operátor definíciójában, a következőt kapjuk:

@@ -1,21 +1,24 @@
 ---
-title: 'Q # fájl szerkezete'
-description: 'A Q # fájl szerkezetét és szintaxisát ismerteti.'
+title: Q#Fájl szerkezete
+description: Leírja egy fájl szerkezetét és szintaxisát Q# .
 author: gillenhaalb
 ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.filestructure
-ms.openlocfilehash: 54efc2b9d6b7f1956cdf9a335c88620b29f7729d
-ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: ac73962b1a718cd04aa87ee3476c66781fe3ac2b
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85884177"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87867930"
 ---
-# <a name="q-file-structure"></a>Q # fájl szerkezete
+# <a name="no-locq-file-structure"></a>Q#Fájl szerkezete
 
-A Q # fájl *névtér-deklarációk*sorozatából áll.
+A Q# fájlok *névtér-deklarációk*sorozatából állnak.
 Minden névtér-deklaráció a felhasználó által definiált típusokra, műveletekre és függvényekre vonatkozó deklarációkat tartalmaz, és tetszőleges számú deklarációt és sorrendet is tartalmazhat.
 A névtéren belüli deklarációkkal kapcsolatos további információkért lásd: [felhasználó által definiált típusok](xref:microsoft.quantum.guide.types#user-defined-types), [műveletek](xref:microsoft.quantum.guide.operationsfunctions#defining-new-operations)és [függvények](xref:microsoft.quantum.guide.operationsfunctions#defining-new-functions).
 
@@ -24,10 +27,10 @@ Különösen a deklaráció előtt a névtérhez tartozó dokumentációs megjeg
 
 ## <a name="namespace-declarations"></a>Névtér-deklarációk
 
-A Q # fájlnak általában csak egy névtér-deklarációja van, de a none (és nem lehet üres, vagy csak megjegyzéseket tartalmazhat), vagy több névteret tartalmazhat.
+Egy Q# fájl általában csak egy névtér-deklarációval rendelkezik, de a none (és nem lehet üres, vagy csak megjegyzéseket tartalmazhat), vagy több névteret tartalmazhat.
 A névtér deklarációi nem ágyazhatók egymásba.
 
-Megadhatja ugyanazt a névteret több, egymással összeállított Q #-fájlban, feltéve, hogy nincs ilyen nevű típus, művelet vagy függvény deklarációja.
+Ugyanazokat a névtereket deklarálhatja több Q# , összeállított fájlban is, ha nincs ilyen nevű típus-, művelet-vagy Function deklaráció.
 Bizonyos esetben a több fájl azonos névterében lévő azonos típust nem lehet megadnia, még akkor is, ha a deklarációk azonosak.
 
 A névtér deklarációja a kulcsszóból áll `namespace` , amelyet a névtér neve, valamint a névtérben található, kapcsos zárójelek közé tartozó deklarációk követnek `{ }` .
@@ -61,7 +64,7 @@ Ha egy deklarált művelet `Op` a-ból származó műveletet használ `Microsoft
 Ahhoz azonban, hogy egy bizonyos függvényt meghívjon `Fn` `Microsoft.Quantum.Math` , azt a használatával kell meghívnia `Math.Fn` .
 
 Az `open` irányelv a teljes névtér-blokkra vonatkozik egy fájlon belül.
-Ezért ha egy további névteret határoz meg ugyanabban a Q # fájlban, mint `NS` korábban, akkor a második névtérben definiált összes művelet/függvény/típus nem fér hozzá semmihez, `Microsoft.Quantum.Intrinsic` vagy `Microsoft.Quantum.Math` csak abban az esetben, ha megismétli a megnyitott irányelveket. 
+Ezért ha egy további névteret ad meg a korábban megegyező Q# fájlban `NS` , akkor a második névtérben definiált minden művelet/függvény/típus nem fér hozzá semmihez, `Microsoft.Quantum.Intrinsic` vagy `Microsoft.Quantum.Math` csak abban az esetben, ha megismétli a megnyitott irányelveket. 
 
 Ha olyan típusra vagy hívható hivatkozásra szeretne hivatkozni, amely *nem* az aktuális névtérben van megnyitva, akkor azt a teljesen minősített névvel kell megadnia.
 Például `Op` a névtérből megnevezett művelet miatt `X.Y` :
@@ -73,13 +76,13 @@ Például `Op` a névtérből megnevezett művelet miatt `X.Y` :
 Általában jobb, ha egy direktíva segítségével egy névteret is tartalmaz `open` .
 Teljesen minősített név használata kötelező, ha két névtér definiálja ugyanazt a nevet, és a jelenlegi forrás mindkettőből származó szerkezeteket használ.
 
-A Q # ugyanazokat a szabályokat követi, mint az egyéb .NET-nyelvek elnevezése.
-A Q # azonban nem támogatja a névterek relatív hivatkozásait.
+Q#ugyanazokat a szabályokat követi, mint a többi .NET-nyelv elnevezése.
+A azonban Q# nem támogatja a névterek relatív hivatkozásait.
 Ha például a névtér `a.b` meg van nyitva, egy nevű műveletre mutató hivatkozás `c.d` *nem* oldható fel teljes nevű műveletre `a.b.c.d` .
 
 ## <a name="formatting"></a>Formátum
 
-A legtöbb Q # utasítás és direktíva véget ér a záró pontosvesszővel `;` .
+A legtöbb Q# utasítás és direktíva véget ér a záró pontosvesszővel `;` .
 Az olyan utasítások és deklarációk, mint a `for` és az `operation` egy utasítás blokkja (lásd a következő szakaszt) nem igénylik a megszakítást pontosvesszővel.
 Minden utasítás leírása megállapítja, hogy kötelező-e lezáró pontosvessző.
 
@@ -88,14 +91,14 @@ Kerülje a több utasítás egyetlen sorra való elhelyezését.
 
 ## <a name="statement-blocks"></a>Utasítások blokkja
 
-A Q # utasítások a kapcsos zárójelek közé tartozó utasítási blokkokba vannak csoportosítva `{ }` . Egy utasítás-blokk egy nyitó karakterrel kezdődik, `{` és egy zárással végződik `}` .
+Q#a utasítások a kapcsos zárójelek közé sorolhatók `{ }` . Egy utasítás-blokk egy nyitó karakterrel kezdődik, `{` és egy zárással végződik `}` .
 
 Egy másik blokkban található, lexikálisan zárt utasítási blokk a tartalmazó blokk alblokkjának tekintendő; a és az alblokkokat külső és belső blokkoknak is nevezik.
 
 ## <a name="comments"></a>Megjegyzések
 
 A megjegyzések két továbbítási perjeltel kezdődnek, `//` és a sor végéig folytatódnak.
-A megjegyzések bárhol megjelenhetnek a Q # forrásfájlban.
+Egy Megjegyzés bárhol megjelenhet a Q# forrásfájlban.
 
 ## <a name="documentation-comments"></a>Dokumentációs megjegyzések
 
@@ -103,7 +106,7 @@ A három továbbítási perjeltel kezdődő megjegyzéseket `///` a fordító ki
 Ebben az esetben a fordító dokumentációként kezeli őket a definiált vagy felhasználó által definiált típushoz, ugyanúgy, mint a többi .NET-nyelvre.
 
 A `///` megjegyzéseken belül az API dokumentációjának részeként megjelenő szöveg [Markdown](https://daringfireball.net/projects/markdown/syntax)van formázva, a dokumentáció különböző részeivel, amelyeket a speciális névvel ellátott fejlécek jeleznek.
-A Markdown használja a `@"<ref target>"` bővítményt a Q #-ban a kereszthivatkozási műveletekhez, a függvényekhez és a felhasználó által definiált típusokhoz. Cserélje le a helyére a `<ref target>` hivatkozott kód objektum teljes nevét.
+A Markdown használja a `@"<ref target>"` bővítményt a kereszthivatkozási műveletekhez, a függvényekhez és a felhasználó által definiált típusokhoz Q# . Cserélje le a helyére a `<ref target>` hivatkozott kód objektum teljes nevét.
 A különböző dokumentációs motorok további Markdown-bővítményeket is támogatnak.
 
 Például:
@@ -153,4 +156,4 @@ A következő nevek érvényesek a dokumentációs Megjegyzés fejlécei.
 
 ## <a name="next-steps"></a>Következő lépések
 
-További információ a Q #-ban [végzett műveletekről és függvényekről](xref:microsoft.quantum.guide.operationsfunctions) .
+Ismerje meg a [műveleteit és funkcióit](xref:microsoft.quantum.guide.operationsfunctions) a-ben Q# .
