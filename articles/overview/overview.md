@@ -6,12 +6,15 @@ ms.author: bradben
 ms.date: 05/05/2020
 ms.topic: overview
 uid: microsoft.quantum.overview.introduction
-ms.openlocfilehash: 7c55420bd35f9b6e0e7ec80ddffe8a861cb7df39
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 59cb595ac207d6e84358fc6ba742e0e0019c76f9
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: HT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83430781"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866978"
 ---
 # <a name="introduction-to-quantum-computing-and-the-quantum-development-kit"></a>A kvantum-számítástechnika és a Quantum Development Kit bemutatása
 
@@ -62,9 +65,9 @@ A klasszikus számítógépekkel végzett gépi tanulás forradalmasítja a tudo
 
 A Quantum Development Kit tartalmaz egy [kvantum gépi tanulási kódtárat](xref:microsoft.quantum.machine-learning.concepts.intro), amely segítségével hibrid kvantum/klasszikus gépi tanulási kísérletek futtathatók. A kódtár mintákat és oktatóanyagokat is tartalmaz, továbbá biztosítja a szükséges eszközöket az új hibrid kvantum/klasszikus algoritmus, a körközpontú kvantumosztályozó implementálásához, amely a felügyelt osztályozási problémák megoldására szolgál.
 
-## <a name="q-and-the-microsoft-quantum-development-kit-qdk"></a>A Q# nyelv és a Microsoft Quantum Development Kit (QDK)
+## <a name="no-locq-and-the-microsoft-quantum-development-kit-qdk"></a>A Q# és a Microsoft Quantum Development Kit (QDK)
 
-A Q# a Microsoft nyílt forráskódú programozási nyelve, amely kvantumalgoritmusok fejlesztésére és futtatására szolgál. A [QDK](https://docs.microsoft.com/quantum/) része, amely egy, a Q# nyelvhez készült teljes körű fejlesztői készlet, amelyet általános eszközökkel és nyelvekkel együtt használhat a különböző környezetekben, például a beépített, teljes körű funkciókkal rendelkező kvantumszimulátoron futtatható kvantumalkalmazások fejlesztéséhez.
+A Q# a Microsoft nyílt forráskódú programozási nyelve, amely kvantumalgoritmusok fejlesztésére és futtatására szolgál. A [QDK](https://docs.microsoft.com/quantum/) része, amely a Q# nyelvhez készült teljes körű fejlesztői készlet, amelyet általános eszközökkel és nyelvekkel együtt használhat a különböző környezetekben, például a beépített, teljes körű funkciókkal rendelkező kvantumszimulátoron futtatható kvantumalkalmazások fejlesztéséhez.
 
 Rendelkezésre állnak bővítmények a Visual Studióhoz és a VS Code-hoz, valamint a Python és Jupyter Notebookokhoz használható csomagok is elérhetők.
 

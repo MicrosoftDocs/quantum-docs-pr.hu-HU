@@ -6,23 +6,26 @@ ms.date: 5/30/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.jupyter
-ms.openlocfilehash: bbd1f58ba7de205e452be7bac72b5fd78e7acd56
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 10b1faafa70c87a99ea09916e2c386b32f9a570f
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: HT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871450"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866808"
 ---
-# <a name="develop-with-q-jupyter-notebooks"></a>Fejlesztés Q# Jupyter-notebookokkal
+# <a name="develop-with-no-locq-jupyter-notebooks"></a>Fejlesztés Q# Jupyter-notebookokkal
 
 Telepítse a QDK-t a Q#-műveletek Q# Jupyter-notebookokon történő fejlesztéséhez.
 
 A Jupyter-notebookok helyszíni kódvégrehajtást tesznek lehetővé utasításokkal, megjegyzésekkel és egyéb tartalmakkal együtt. Ez a környezet megfelelő a beágyazott magyarázatokkal ellátott Q#-kód írásához vagy kvantum-számítástechnikai interaktív oktatóanyagokhoz. Az alábbiakat kell elvégeznie a saját Q#-notebookok létrehozásának megkezdéséhez.
 
 > [!NOTE]
-> * A Q# Jupyter-notebookokban csak Q#-kódot futtathat, és a műveletek nem hívhatók meg külső gazdaprogramokból (pl. Python- vagy C#-fájlokból). Ez a környezet nem megfelelő, ha egy külső klasszikus gazdaprogrammal együtt szeretné használni a kvantumprogramot.
+> * A Q# Jupyter-notebookokban csak Q#-kódot futtathat, és a műveletek nem hívhatók meg külső gazdaprogramokból (például Python- vagy C#-fájlokból). Ez a környezet nem megfelelő, ha egy külső klasszikus gazdaprogrammal együtt szeretné használni a kvantumprogramot.
 
-## <a name="install-the-iq-jupyter-kernel"></a>Az IQ# Jupyter kernel telepítése
+## <a name="install-the-ino-locq-jupyter-kernel"></a>Az IQ# Jupyter kernel telepítése
 
 Az IQ# elsősorban a Jupyter és a Python által a .NET Core SDK-hoz használt bővítmény, amely a Q#-műveletek összeállításának és szimulálásának alapvető funkcióit nyújtja.
 
@@ -70,9 +73,9 @@ Az IQ# elsősorban a Jupyter és a Python által a .NET Core SDK-hoz használt b
     
 ***
 
-Ennyi az egész! Most már a Jupyterhez tartozó IQ# kernel is telepítve van, amely a Q#-műveletek Jupyter-notebookokból való fordításához és végrehajtásához szükséges fő funkciókat biztosítja.
+Ennyi az egész! Most már a Jupyterhez tartozó IQ# kernel is telepítve van, amely a Q#-műveletek Q# Jupyter-notebookokból való fordításához és végrehajtásához szükséges fő funkciókat biztosítja.
 
-## <a name="create-your-first-q-notebook"></a>Az első Q#-notebook létrehozása
+## <a name="create-your-first-no-locq-notebook"></a>Az első Q# notebook létrehozása
 
 Most már készen áll arra, hogy ellenőrizze a Q# Jupyter Notebook telepítését egy egyszerű Q#-művelet írásával és futtatásával.
 
@@ -90,9 +93,9 @@ Most már készen áll arra, hogy ellenőrizze a Q# Jupyter Notebook telepítés
 
 1. Futtassa a notebook következő celláját:
 
-    ![Jupyter Notebook-cella Q#-kóddal](~/media/install-guide-jupyter.png)
+    ![Jupyter notebookcella Q# kóddal](~/media/install-guide-jupyter.png)
 
-    A cella kimenetében a következőnek kell megjelennie: `SampleQuantumRandomNumberGenerator`. A Jupyter Notebookban való futtatáskor a Q#-kód le lesz fordítva, és a cella kiadja a talált műveletek nevét.
+    A cella kimenetében a következőnek kell megjelennie: `SampleQuantumRandomNumberGenerator`. A Jupyter-notebookban való futtatáskor a Q#-kód le lesz fordítva, és a cella kiadja a talált műveletek nevét.
 
 1. Egy új cellában, a `%simulate` paranccsal hajtsa végre az imént létrehozott műveletet (szimulátorban):
 

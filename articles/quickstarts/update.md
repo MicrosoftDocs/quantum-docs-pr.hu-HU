@@ -7,12 +7,15 @@ ms.date: 5/30/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.update
-ms.openlocfilehash: 69b83997773896583258a4996a61b6f334edf407
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: dd7360961aa728a6aa63b8d8c4e4840f5bf2afe8
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: HT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871399"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866757"
 ---
 # <a name="update-the-microsoft-quantum-development-kit-qdk"></a>A Microsoft Quantum Development Kit (QDK) frissítése
 
@@ -24,7 +27,7 @@ Azt javasoljuk, hogy mindig a QDK legújabb kiadását használja. A QDK legúja
 1. A meglévő Q#-fájlok és -projektek frissítéséből, hogy a kód az összes frissített szintaxisnak megfeleljen.
 2. A QDK a kiválasztott fejlesztési környezethez történő frissítéséből.
 
-## <a name="updating-q-projects"></a>Q#-projektek frissítése 
+## <a name="updating-no-locq-projects"></a>Q#-projektek frissítése 
 
 Függetlenül attól, hogy a C#-ot vagy Pythont használ a Q#-műveleteihez, kövesse ezeket az utasításokat a Q#-projektek frissítéséhez.
 
@@ -36,7 +39,7 @@ Függetlenül attól, hogy a C#-ot vagy Pythont használ a Q#-műveleteihez, kö
 
     Győződjön meg arról, hogy a kimenet `3.1.100` vagy nagyobb. Ha nem, telepítse a [legújabb verziót](https://dotnet.microsoft.com/download), és ellenőrizze még egyszer. Ezután a környezetétől (Visual Studio, Visual Studio Code vagy közvetlenül a parancssor) függően kövesse az alábbi utasításokat.
 
-### <a name="update-q-projects-in-visual-studio"></a>Q#-projektek frissítése a Visual Studióban
+### <a name="update-no-locq-projects-in-visual-studio"></a>Q#-projektek frissítése a Visual Studióban
  
 1. Frissítés a Visual Studio 2019 legújabb verziójára – a kapcsolódó utasításokat [itt](https://docs.microsoft.com/visualstudio/install/update-visual-studio?view=vs-2019) találja.
 2. Nyissa meg a megoldást a Visual Studióban.
@@ -77,13 +80,13 @@ Függetlenül attól, hogy a C#-ot vagy Pythont használ a Q#-műveleteihez, kö
 Most már továbbléphet a [Visual Studio QDK-bővítmény frissítéséhez](#update-visual-studio-qdk-extension).
 
 
-### <a name="update-q-projects-in-visual-studio-code"></a>Q#-projektek frissítése a Visual Studio Code-ban
+### <a name="update-no-locq-projects-in-visual-studio-code"></a>Q#-projektek frissítése a Visual Studio Code-ban
 
 1. Nyissa meg a frissíteni kívánt projektet tartalmazó mappát a Visual Studio Code-ban.
 2. Válassza a **Terminal (Terminál)**  -> **New Terminal (Új terminál)** lehetőséget.
 3. Kövesse a parancssor használatával történő frissítéshez tartozó utasításokat (közvetlenül ez alatt látható).
 
-### <a name="update-q-projects-using-the-command-line"></a>Q#-projektek frissítése a parancssor használatával
+### <a name="update-no-locq-projects-using-the-command-line"></a>Q#-projektek frissítése a parancssor használatával
 
 1. Nyissa meg a fő projektfájlt tartalmazó mappát.
 
@@ -231,7 +234,7 @@ A frissítési eljárás attól függ, hogy a telepítést eredetileg a Conda va
 
 Most már használhatja a frissített `qsharp` Python-csomagot a meglévő kvantumprogramok futtatásához.
 
-### <a name="update-the-iq-jupyter-kernel"></a>Az IQ# Jupyter kernel frissítése
+### <a name="update-the-ino-locq-jupyter-kernel"></a>Az IQ# Jupyter kernel frissítése
 
 A frissítési eljárás attól függ, hogy a telepítést eredetileg a Conda vagy a .NET CLI és a pip használatával végezte.
 
@@ -285,7 +288,7 @@ Most már használhatja a frissített IQ# kernelt a meglévő Q# Jupyter-noteboo
 
 ### <a name="update-visual-studio-qdk-extension"></a>A Visual Studio QDK-bővítmény frissítése
 
-1. Frissítse Q# Visual Studio-bővítményt
+1. A Q# Visual Studio-bővítmény frissítése
 
     - A Visual Studio arra kéri, hogy fogadja a [Quantum Visual Studio-bővítmény](https://marketplace.visualstudio.com/items?itemName=quantum.DevKit) frissítéseit
     - Fogadja el a frissítést
@@ -316,5 +319,5 @@ Most már használhatja a frissített IQ# kernelt a meglévő Q# Jupyter-noteboo
 
    - [A QDK-bővítmény frissítése](#update-vs-code-qdk-extension)
    - A VS Code-ban lépjen a **View** -> **Command Palette** (Nézet > Parancskatalógus) lehetőséghez
-   - Válassza a **Q#: Install command line project templates** (Q#: Parancssori projektsablonok telepítése)
+   - Válassza a következőt **Q#: Install command line project templates** (Q#: Parancssori projektsablonok telepítése)
    - Néhány másodperc elteltével megjelenik a projektsablonok sikeres telepítésének megerősítését tartalmazó felugró ablak

@@ -6,27 +6,30 @@ ms.date: 5/30/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.cs
-ms.openlocfilehash: 714c15d9589095f0fe395fcd6941672167879dca
-ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 13d73bdf0287941c89e03ba63869095e5fca4e70
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: HT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85885500"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87867556"
 ---
-# <a name="develop-with-q-and-net"></a>Fejlesztés Q#-pal és .NET-tel
+# <a name="develop-with-no-locq-and-net"></a>Fejlesztés Q#-pal és .NET-tel
 
-A Q# úgy lett kifejlesztve, hogy a .NET-nyelvekkel, például C# és F#, jól együttműködjön.
+A Q# úgy lett kifejlesztve, hogy jól együttműködjön a .NET-alapú nyelvekkel, például a C#-pal és az F#-pal.
 Ebben az útmutatóban bemutatjuk, hogyan használhatja a Q#-ot egy .NET-nyelven írt gazdaprogrammal.
 
-Először létrehozunk egy Q#-alkalmazást és egy .NET-gazdagépet, majd bemutatjuk, hogyan hívhat meg egy Q#-ot a gazdagépről.
+Először létrehozunk egy Q#-alkalmazást és egy .NET-gazdagépet, majd bemutatjuk, hogyan hívható meg a Q# a gazdagépről.
 
 ## <a name="prerequisites"></a>Előfeltételek
 
-- Telepítse a [Q# parancssori projektekhez készült](xref:microsoft.quantum.install.standalone) Quantum Development Kitet.
+- Telepítse a [Q#-alapú parancssori projektekhez készült](xref:microsoft.quantum.install.standalone) Quantum Development Kitet.
 
-## <a name="creating-a-q-library-and-a-net-host"></a>Q#-kódtár és .NET-gazdagép létrehozása
+## <a name="creating-a-no-locq-library-and-a-net-host"></a>Q#-kódtár és .NET-gazdagép létrehozása
 
-Első lépésként hozzon létre projekteket a Q#-kódtár és a .NET-gazdagép számára. Utóbbi a Q#-kódtárban definiált műveleteket és függvényeket hívja meg.
+Első lépésként hozzon létre projekteket a Q#-kódtárhoz és a .NET-gazdagéphez, amely Q#-kódtárban definiált műveleteket és függvényeket hívja meg.
 
 Kövesse a fejlesztési környezetéhez tartozó fülön található utasításokat.
 Ha a Visual Studiótól vagy a VS Code-tól eltérő szerkesztőt használ, egyszerűen kövesse a parancssor lépéseit.
@@ -64,8 +67,8 @@ Ha a Visual Studiótól vagy a VS Code-tól eltérő szerkesztőt használ, egys
 
 - Új Q#-kódtár létrehozása
   - Lépjen a **Fájl** -> **Új** -> **Projekt** lehetőséghez
-  - A keresőmezőbe írja be a Q# kifejezést
-  - Válassza a **Q# Library (Q#-kódtár)** lehetőséget
+  - A keresőmezőbe írja be a következőt: Q#
+  - Válassza a **Q# Library (Q#-kódtár) lehetőséget**
   - Kattintson a **Tovább** gombra.
   - Adja meg a kódtár nevét és helyét
   - Győződjön meg arról, hogy a Place project and solution in same directory (Projekt és megoldás azonos kódtárba helyezése) beállítás **nincs bejelölve**
@@ -80,16 +83,16 @@ Ha a Visual Studiótól vagy a VS Code-tól eltérő szerkesztőt használ, egys
 
 ***
 
-## <a name="calling-into-q-from-net"></a>Meghívás Q#-ba .NET-ből
+## <a name="calling-into-no-locq-from-net"></a>A Q# meghívása a .NET-ből
 
-Miután beállította a projekteket a fenti utasítások követésével, meghívhat Q#-ba a .NET-konzolalkalmazásból.
-A Q#-fordító minden Q#-művelethez és -függvényhez .NET-osztályokat hoz létre, amelyek lehetővé teszik, hogy kvantumprogramokat futtathasson szimulátoron.
+Miután a fenti utasítások szerint beállította a projekteket, a .NET-konzolalkalmazásból meghívhatja a Q#-ot.
+A Q#-fordító minden Q#-művelethez és -függvényhez .NET-osztályokat hoz létre, amelyek lehetővé teszik, hogy kvantumprogramokat futtathasson egy szimulátoron.
 
 A [.NET-együttműködési minta](https://github.com/microsoft/Quantum/tree/master/samples/interoperability/dotnet) például a következő Q#-műveletet tartalmazza:
 
 :::code language="qsharp" source="~/quantum/samples/interoperability/dotnet/qsharp/Operations.qs" range="67-75":::
 
-Ha ezt a műveletet .NET-ből szeretné meghívni egy kvantumszimulátoron, használhatja a Q#-fordító által létrehozott `Run` .NET-osztály `RunAlgorithm` módszerét:
+Ha ezt a műveletet .NET-ből szeretné meghívni egy kvantumszimulátoron, használhatja a Q#-fordító által létrehozott `RunAlgorithm` .NET-osztály `Run` metódusát:
 
 ### <a name="c"></a>[C#](#tab/tabid-csharp)
 
@@ -103,4 +106,4 @@ Ha ezt a műveletet .NET-ből szeretné meghívni egy kvantumszimulátoron, hasz
     
 ## <a name="next-steps"></a>További lépések
 
-Most, hogy a Quantum Development Kit mindkét Q# parancssori programhoz, valamint a .NET-tel való együttműködéshez is be van állítva, megírhatja és futtathatja [az első kvantumprogramját](xref:microsoft.quantum.quickstarts.qrng).
+Most, hogy a Quantum Development Kit a Q# parancssori programokhoz, valamint a .NET-tel való együttműködéshez is be van állítva, megírhatja és futtathatja [az első kvantumprogramját](xref:microsoft.quantum.quickstarts.qrng).

@@ -6,14 +6,17 @@ ms.author: bradben
 ms.date: 5/5/2020
 ms.topic: overview
 uid: microsoft.quantum.overview.q-sharp
-ms.openlocfilehash: ede4ad005090e4ac8ffd9b05d27edfa91f8c50ab
-ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 3ee9e897eb142bbc9503a617cc3e25c1a665ff35
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: HT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84327704"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866944"
 ---
-# <a name="what-are-the-q-programming-language-and-qdk"></a>Mi az a Q# programozási nyelv és a QDK?
+# <a name="what-are-the-no-locq-programming-language-and-qdk"></a>Mi az a Q# programozási nyelv és a QDK?
 
 A Q# a Microsoft nyílt forráskódú programozási nyelve, amely kvantumalgoritmusok fejlesztésére és futtatására szolgál. Ez a Quantum Development Kit (QDK) része, amelyben [Q#-kódtárak](xref:microsoft.quantum.libraries), [kvantumszimulátorok](xref:microsoft.quantum.machines), [más programozási környezetekhez használható bővítmények](xref:microsoft.quantum.install) és [API-dokumentáció](xref:microsoft.quantum.standardlibsintro) található. A standard Q#-kódtár mellett a QDK kémiai, gépi tanulási és numerikus kódtárakat is tartalmaz.
 
@@ -43,7 +46,7 @@ A kvantumprogramokat egy teljes körű kvantumszimulátoron vagy egy korlátozot
 | **Részletesebben meg szeretném ismerni a Q# nyelvet** | [A Q# használati útmutatójában](xref:microsoft.quantum.guide) megismerheti a típusokat, a kifejezéseket, a változókat és a kvantumprogramok struktúráját.|
 | **Csak el szeretnék kezdeni kvantumprogramokat írni** | A [Gyorsútmutatókban](xref:microsoft.quantum.install) beállíthatja a Q#-környezetet, és megkezdheti a kvantumprogramok írását.|
 
-## <a name="how-does-q-work"></a>Hogyan működik a Q#?
+## <a name="how-does-no-locq-work"></a>Hogyan működik a Q#?
 
 A Q#-programok önálló parancssori alkalmazásba fordíthatók, de egy Python vagy .NET nyelven írt gazdaprogram által is meghívhatók.
 
@@ -57,13 +60,13 @@ A Q#-kód a szimulátoron belüli elkülönítése biztosítja, hogy az algoritm
 
 A helyi számítógépre telepíthető és onnan futtatható minden, amire szüksége lehet a Q#-programok írásához és futtatásához, beleértve a Q#-fordítót, a Q#-kódtárakat és a kvantumszimulátorokat. Előbb-utóbb távolról is futtathatja majd a Q#-programokat egy valódi kvantumszámítógépen, de addig is a QDK által biztosított kvantumszimulátorok pontos és megbízható eredményeket nyújtanak.
 
-- A leggyorsabban úgy láthat neki, ha [a parancssorból futtatja a Q#-t](xref:microsoft.quantum.install.standalone).
+- A leggyorsabban úgy láthat neki, ha [a parancssorból futtatja a Q#-ot](xref:microsoft.quantum.install.standalone).
 
-- Futtasson önálló [Jupyter-notebookokat az IQ#-val](xref:microsoft.quantum.install.jupyter), amely a Q#-programok fordítására, szimulálására és megjelenítésére szolgáló Jupyter-bővítmény.
+- Futtasson önálló [Jupyter-notebookokat az IQ#-pal](xref:microsoft.quantum.install.jupyter), amely a Q#-programok fordítására, szimulálására és megjelenítésére szolgáló Jupyter-bővítmény.
 
 - Ha ismeri a [Python](xref:microsoft.quantum.install.python) nyelvet, a kezdéshez használhatja gazda programozási platformként. A Pythont nem csak a fejlesztők használják széles körben, hanem a tudósok, kutatók és tanárok is.
 
-- Ha már van tapasztalata a [C#, F# vagy VB.NET](xref:microsoft.quantum.install.cs) nyelvekkel, és ismeri a Visual Studio fejlesztési környezetet, csak néhány bővítményt kell adnia a Visual Studióhoz, hogy előkészítse a Q#-hoz.  
+- Ha már van tapasztalata a [C#, F# vagy VB.NET](xref:microsoft.quantum.install.cs) nyelvekkel, és ismeri a Visual Studio fejlesztési környezetet, csak néhány bővítményt kell adnia a Visual Studióhoz, hogy előkészítse a Q# nyelvhez.  
 
 ## <a name="summary"></a>Összefoglalás
 

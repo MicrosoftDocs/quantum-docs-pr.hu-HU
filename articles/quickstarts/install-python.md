@@ -6,14 +6,17 @@ ms.date: 5/30/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.python
-ms.openlocfilehash: 4d148435f01d975e690828dd02335758fc71dfe4
-ms.sourcegitcommit: 2f4c637e194dc2b5d18539469ed37444e2800199
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 01a5c31a7a920a69f4f90701d370f3a772d2c4d2
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: HT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87436552"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866740"
 ---
-# <a name="develop-with-q-and-python"></a>Fejlesztés Q#-pal és Pythonnal
+# <a name="develop-with-no-locq-and-python"></a>Fejlesztés Q#-pal és Pythonnal
 
 Telepítse a QDK-t a Python-gazdaprogramok fejlesztéséhez Q#-műveletek meghívása céljával.
 
@@ -74,7 +77,7 @@ Ennyi az egész! Most már a `qsharp` Python-csomag és a Jupyterhez tartozó IQ
 
 ## <a name="choose-your-ide"></a>Az IDE kiválasztása
 
-Bár a Q#-ot bármilyen IDE-ben használhatja a Pythonnal, határozottan javasoljuk, hogy Q#- és Python-alkalmazásokhoz használja a Visual Studio Code (VS Code) IDE-t. A QDK Visual Studio Code-bővítmény használatával olyan további funkciókhoz férhet hozzá, mint a figyelmeztetések, a szintaxiselemek kiemelése, a projektsablonok és egyebek.
+Bár a Q#-t bármilyen IDE-ben használhatja a Pythonnal, határozottan javasoljuk, hogy Q#- és Python-alkalmazásokhoz használja a Visual Studio Code (VS Code) IDE-t. A QDK Visual Studio Code-bővítmény használatával olyan további funkciókhoz férhet hozzá, mint a figyelmeztetések, a szintaxiselemek kiemelése, a projektsablonok és egyebek.
 
 Ha a VS Code-ot szeretné használni:
 
@@ -83,11 +86,11 @@ Ha a VS Code-ot szeretné használni:
 
 Ha másik szerkesztőt szeretne használni, a fenti utasítások minden tudnivalót tartalmaznak.
 
-## <a name="write-your-first-q-program"></a>Az első Q#-program megírása
+## <a name="write-your-first-no-locq-program"></a>Az első Q#-program megírása
 
 Most már készen áll arra, hogy ellenőrizze a `qsharp` Python-csomag telepítését egy egyszerű Q#-program írásával és futtatásával.
 
-1. Hozzon létre egy minimális Q#-műveletet egy `Operation.qs` nevű fájl létrehozásával, majd adja hozzá a következő kódot:
+1. Hozzon létre egy minimális Q# műveletet egy `Operation.qs` nevű fájl létrehozásával, majd adja hozzá a következő kódot:
 
     :::code language="qsharp" source="~/quantum/samples/interoperability/qrng/Qrng.qs" range="3-14":::
 

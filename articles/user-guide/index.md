@@ -6,14 +6,17 @@ ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide
-ms.openlocfilehash: 078d86c808b26c7f0b7b2577020cd9cef9491a9d
-ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 4fae2949bdcab0c3735b40ef029d70bf7ea3fb9f
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: HT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85885014"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869630"
 ---
-# <a name="the-q-user-guide"></a>A Q# használati útmutatója
+# <a name="the-no-locq-user-guide"></a>A Q# használati útmutatója
 
 Üdvözli Önt a Q# használati útmutatója! 
 
@@ -25,13 +28,13 @@ A jelen útmutató különböző témaköreiben részletesen ismertetjük a Q# n
 
 - [A Q#-programok futtatásának módjai](xref:microsoft.quantum.guide.host-programs): a Q#-programok végrehajtásának módját ismerteti, valamint áttekintést nyújt a program meghívásának különböző módjairól: a parancssorból, a Q# Jupyter-notebookokból vagy a Python vagy .NET nyelven írt klasszikus gazdaprogramokból.
 
-### <a name="q-language"></a>A Q# nyelv
+### <a name="no-locq-language"></a>Q# nyelv
 
 - [Típusok a Q#-ban](xref:microsoft.quantum.guide.types): Ismerteti a Q#-típusmodellt, és bemutatja a típusok megadásának és használatának szintaxisát.
 
 - [Típuskifejezések](xref:microsoft.quantum.guide.expressions): Részletesen ismerteti az értékek megadását, hivatkozását, összevonását és a rajtuk végzett műveletek végrehajtását a Q# minden típusához. 
 
-### <a name="using-q"></a>A Q# használata
+### <a name="using-no-locq"></a>Az Q# használata
 
 - [Q#-fájlstruktúra](xref:microsoft.quantum.guide.filestructure): Egy `*.qs` Q#-fájl struktúráját és szintaxisát ismerteti.
 
