@@ -7,212 +7,215 @@ ms.date: 5/30/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.update
-ms.openlocfilehash: 69b83997773896583258a4996a61b6f334edf407
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: dd7360961aa728a6aa63b8d8c4e4840f5bf2afe8
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: HT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871399"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866757"
 ---
-# <a name="update-the-microsoft-quantum-development-kit-qdk"></a><span data-ttu-id="4bc7c-103">A Microsoft Quantum Development Kit (QDK) frissítése</span><span class="sxs-lookup"><span data-stu-id="4bc7c-103">Update the Microsoft Quantum Development Kit (QDK)</span></span>
+# <a name="update-the-microsoft-quantum-development-kit-qdk"></a><span data-ttu-id="3435e-103">A Microsoft Quantum Development Kit (QDK) frissítése</span><span class="sxs-lookup"><span data-stu-id="3435e-103">Update the Microsoft Quantum Development Kit (QDK)</span></span>
 
-<span data-ttu-id="4bc7c-104">Ismerje meg, hogy frissítheti a Microsoft Quantum Development Kitet (QDK) a legújabb verzióra.</span><span class="sxs-lookup"><span data-stu-id="4bc7c-104">Learn how to update the Microsoft Quantum Development Kit (QDK) to the latest version.</span></span>
+<span data-ttu-id="3435e-104">Ismerje meg, hogy frissítheti a Microsoft Quantum Development Kitet (QDK) a legújabb verzióra.</span><span class="sxs-lookup"><span data-stu-id="3435e-104">Learn how to update the Microsoft Quantum Development Kit (QDK) to the latest version.</span></span>
 
-<span data-ttu-id="4bc7c-105">A cikk feltételezi, hogy már telepítette a QDK-t.</span><span class="sxs-lookup"><span data-stu-id="4bc7c-105">This article assumes that you already have the QDK installed.</span></span> <span data-ttu-id="4bc7c-106">Ha most telepíti először, tekintse meg a [telepítési útmutatót](xref:microsoft.quantum.install).</span><span class="sxs-lookup"><span data-stu-id="4bc7c-106">If you are installing for the first time, then please refer to the [installation guide](xref:microsoft.quantum.install).</span></span>
+<span data-ttu-id="3435e-105">A cikk feltételezi, hogy már telepítette a QDK-t.</span><span class="sxs-lookup"><span data-stu-id="3435e-105">This article assumes that you already have the QDK installed.</span></span> <span data-ttu-id="3435e-106">Ha most telepíti először, tekintse meg a [telepítési útmutatót](xref:microsoft.quantum.install).</span><span class="sxs-lookup"><span data-stu-id="3435e-106">If you are installing for the first time, then please refer to the [installation guide](xref:microsoft.quantum.install).</span></span>
 
-<span data-ttu-id="4bc7c-107">Azt javasoljuk, hogy mindig a QDK legújabb kiadását használja.</span><span class="sxs-lookup"><span data-stu-id="4bc7c-107">We recommend keeping up to date with the latest QDK release.</span></span> <span data-ttu-id="4bc7c-108">A QDK legújabb verziójára való frissítéshez kövesse ezt a frissítési útmutatót.</span><span class="sxs-lookup"><span data-stu-id="4bc7c-108">Follow this update guide to upgrade to the most recent QDK version.</span></span> <span data-ttu-id="4bc7c-109">A folyamat két részből áll:</span><span class="sxs-lookup"><span data-stu-id="4bc7c-109">The process consists of two parts:</span></span>
-1. <span data-ttu-id="4bc7c-110">A meglévő Q#-fájlok és -projektek frissítéséből, hogy a kód az összes frissített szintaxisnak megfeleljen.</span><span class="sxs-lookup"><span data-stu-id="4bc7c-110">Updating your existing Q# files and projects to align your code with any updated syntax.</span></span>
-2. <span data-ttu-id="4bc7c-111">A QDK a kiválasztott fejlesztési környezethez történő frissítéséből.</span><span class="sxs-lookup"><span data-stu-id="4bc7c-111">Updating the QDK itself for your chosen development environment.</span></span>
+<span data-ttu-id="3435e-107">Azt javasoljuk, hogy mindig a QDK legújabb kiadását használja.</span><span class="sxs-lookup"><span data-stu-id="3435e-107">We recommend keeping up to date with the latest QDK release.</span></span> <span data-ttu-id="3435e-108">A QDK legújabb verziójára való frissítéshez kövesse ezt a frissítési útmutatót.</span><span class="sxs-lookup"><span data-stu-id="3435e-108">Follow this update guide to upgrade to the most recent QDK version.</span></span> <span data-ttu-id="3435e-109">A folyamat két részből áll:</span><span class="sxs-lookup"><span data-stu-id="3435e-109">The process consists of two parts:</span></span>
+1. <span data-ttu-id="3435e-110">A meglévő Q#-fájlok és -projektek frissítéséből, hogy a kód az összes frissített szintaxisnak megfeleljen.</span><span class="sxs-lookup"><span data-stu-id="3435e-110">Updating your existing Q# files and projects to align your code with any updated syntax.</span></span>
+2. <span data-ttu-id="3435e-111">A QDK a kiválasztott fejlesztési környezethez történő frissítéséből.</span><span class="sxs-lookup"><span data-stu-id="3435e-111">Updating the QDK itself for your chosen development environment.</span></span>
 
-## <a name="updating-q-projects"></a><span data-ttu-id="4bc7c-112">Q#-projektek frissítése</span><span class="sxs-lookup"><span data-stu-id="4bc7c-112">Updating Q# Projects</span></span> 
+## <a name="updating-no-locq-projects"></a><span data-ttu-id="3435e-112">Q#-projektek frissítése</span><span class="sxs-lookup"><span data-stu-id="3435e-112">Updating Q# Projects</span></span> 
 
-<span data-ttu-id="4bc7c-113">Függetlenül attól, hogy a C#-ot vagy Pythont használ a Q#-műveleteihez, kövesse ezeket az utasításokat a Q#-projektek frissítéséhez.</span><span class="sxs-lookup"><span data-stu-id="4bc7c-113">Regardless of whether you are using C# or Python to host Q# operations, follow these instructions to update your Q# projects.</span></span>
+<span data-ttu-id="3435e-113">Függetlenül attól, hogy a C#-ot vagy Pythont használ a Q#-műveleteihez, kövesse ezeket az utasításokat a Q#-projektek frissítéséhez.</span><span class="sxs-lookup"><span data-stu-id="3435e-113">Regardless of whether you are using C# or Python to host Q# operations, follow these instructions to update your Q# projects.</span></span>
 
-1. <span data-ttu-id="4bc7c-114">Először is ellenőrizze, hogy a [.NET Core SDK 3.1](https://dotnet.microsoft.com/download) legújabb verzióját használja-e.</span><span class="sxs-lookup"><span data-stu-id="4bc7c-114">First, check that you have the latest version of the [.NET Core SDK 3.1](https://dotnet.microsoft.com/download).</span></span> <span data-ttu-id="4bc7c-115">Futtassa az alábbi parancsot a parancssorban:</span><span class="sxs-lookup"><span data-stu-id="4bc7c-115">Run the following command in the command prompt:</span></span>
+1. <span data-ttu-id="3435e-114">Először is ellenőrizze, hogy a [.NET Core SDK 3.1](https://dotnet.microsoft.com/download) legújabb verzióját használja-e.</span><span class="sxs-lookup"><span data-stu-id="3435e-114">First, check that you have the latest version of the [.NET Core SDK 3.1](https://dotnet.microsoft.com/download).</span></span> <span data-ttu-id="3435e-115">Futtassa az alábbi parancsot a parancssorban:</span><span class="sxs-lookup"><span data-stu-id="3435e-115">Run the following command in the command prompt:</span></span>
 
     ```dotnetcli
     dotnet --version
     ```
 
-    <span data-ttu-id="4bc7c-116">Győződjön meg arról, hogy a kimenet `3.1.100` vagy nagyobb.</span><span class="sxs-lookup"><span data-stu-id="4bc7c-116">Verify the output is `3.1.100` or higher.</span></span> <span data-ttu-id="4bc7c-117">Ha nem, telepítse a [legújabb verziót](https://dotnet.microsoft.com/download), és ellenőrizze még egyszer.</span><span class="sxs-lookup"><span data-stu-id="4bc7c-117">If not, install the [latest version](https://dotnet.microsoft.com/download) and check again.</span></span> <span data-ttu-id="4bc7c-118">Ezután a környezetétől (Visual Studio, Visual Studio Code vagy közvetlenül a parancssor) függően kövesse az alábbi utasításokat.</span><span class="sxs-lookup"><span data-stu-id="4bc7c-118">Then follow the instructions below depending on your setup (Visual Studio, Visual Studio Code, or directly the command line).</span></span>
+    <span data-ttu-id="3435e-116">Győződjön meg arról, hogy a kimenet `3.1.100` vagy nagyobb.</span><span class="sxs-lookup"><span data-stu-id="3435e-116">Verify the output is `3.1.100` or higher.</span></span> <span data-ttu-id="3435e-117">Ha nem, telepítse a [legújabb verziót](https://dotnet.microsoft.com/download), és ellenőrizze még egyszer.</span><span class="sxs-lookup"><span data-stu-id="3435e-117">If not, install the [latest version](https://dotnet.microsoft.com/download) and check again.</span></span> <span data-ttu-id="3435e-118">Ezután a környezetétől (Visual Studio, Visual Studio Code vagy közvetlenül a parancssor) függően kövesse az alábbi utasításokat.</span><span class="sxs-lookup"><span data-stu-id="3435e-118">Then follow the instructions below depending on your setup (Visual Studio, Visual Studio Code, or directly the command line).</span></span>
 
-### <a name="update-q-projects-in-visual-studio"></a><span data-ttu-id="4bc7c-119">Q#-projektek frissítése a Visual Studióban</span><span class="sxs-lookup"><span data-stu-id="4bc7c-119">Update Q# projects in Visual Studio</span></span>
+### <a name="update-no-locq-projects-in-visual-studio"></a><span data-ttu-id="3435e-119">Q#-projektek frissítése a Visual Studióban</span><span class="sxs-lookup"><span data-stu-id="3435e-119">Update Q# projects in Visual Studio</span></span>
  
-1. <span data-ttu-id="4bc7c-120">Frissítés a Visual Studio 2019 legújabb verziójára – a kapcsolódó utasításokat [itt](https://docs.microsoft.com/visualstudio/install/update-visual-studio?view=vs-2019) találja.</span><span class="sxs-lookup"><span data-stu-id="4bc7c-120">Update to the latest version of Visual Studio 2019, see [here](https://docs.microsoft.com/visualstudio/install/update-visual-studio?view=vs-2019) for instructions.</span></span>
-2. <span data-ttu-id="4bc7c-121">Nyissa meg a megoldást a Visual Studióban.</span><span class="sxs-lookup"><span data-stu-id="4bc7c-121">Open your solution in Visual Studio.</span></span>
-3. <span data-ttu-id="4bc7c-122">A menüben válassza a **Build (Létrehozás)**  -> **Clean Solution (Megoldás eltávolítása)** elemet.</span><span class="sxs-lookup"><span data-stu-id="4bc7c-122">From the menu, select **Build** -> **Clean Solution**.</span></span>
-4. <span data-ttu-id="4bc7c-123">A .csproj-fájlok mindegyikében frissítse a célkeretrendszert a következőre: `netcoreapp3.1` (kódtárprojekt esetén a következőre: `netstandard2.1`).</span><span class="sxs-lookup"><span data-stu-id="4bc7c-123">In each of your .csproj files, update the target framework to `netcoreapp3.1` (or `netstandard2.1` if it is a library project).</span></span>
-    <span data-ttu-id="4bc7c-124">Szerkessze az űrlap sorait:</span><span class="sxs-lookup"><span data-stu-id="4bc7c-124">That is, edit lines of the form:</span></span>
+1. <span data-ttu-id="3435e-120">Frissítés a Visual Studio 2019 legújabb verziójára – a kapcsolódó utasításokat [itt](https://docs.microsoft.com/visualstudio/install/update-visual-studio?view=vs-2019) találja.</span><span class="sxs-lookup"><span data-stu-id="3435e-120">Update to the latest version of Visual Studio 2019, see [here](https://docs.microsoft.com/visualstudio/install/update-visual-studio?view=vs-2019) for instructions.</span></span>
+2. <span data-ttu-id="3435e-121">Nyissa meg a megoldást a Visual Studióban.</span><span class="sxs-lookup"><span data-stu-id="3435e-121">Open your solution in Visual Studio.</span></span>
+3. <span data-ttu-id="3435e-122">A menüben válassza a **Build (Létrehozás)**  -> **Clean Solution (Megoldás eltávolítása)** elemet.</span><span class="sxs-lookup"><span data-stu-id="3435e-122">From the menu, select **Build** -> **Clean Solution**.</span></span>
+4. <span data-ttu-id="3435e-123">A .csproj-fájlok mindegyikében frissítse a célkeretrendszert a következőre: `netcoreapp3.1` (kódtárprojekt esetén a következőre: `netstandard2.1`).</span><span class="sxs-lookup"><span data-stu-id="3435e-123">In each of your .csproj files, update the target framework to `netcoreapp3.1` (or `netstandard2.1` if it is a library project).</span></span>
+    <span data-ttu-id="3435e-124">Szerkessze az űrlap sorait:</span><span class="sxs-lookup"><span data-stu-id="3435e-124">That is, edit lines of the form:</span></span>
 
     ```xml
     <TargetFramework>netcoreapp3.1</TargetFramework>
     ```
 
-    <span data-ttu-id="4bc7c-125">A célkeretrendszer megadásáról további információt [itt](https://docs.microsoft.com/dotnet/standard/frameworks#how-to-specify-target-frameworks) talál.</span><span class="sxs-lookup"><span data-stu-id="4bc7c-125">You can find more details on specifying target frameworks [here](https://docs.microsoft.com/dotnet/standard/frameworks#how-to-specify-target-frameworks).</span></span>
+    <span data-ttu-id="3435e-125">A célkeretrendszer megadásáról további információt [itt](https://docs.microsoft.com/dotnet/standard/frameworks#how-to-specify-target-frameworks) talál.</span><span class="sxs-lookup"><span data-stu-id="3435e-125">You can find more details on specifying target frameworks [here](https://docs.microsoft.com/dotnet/standard/frameworks#how-to-specify-target-frameworks).</span></span>
 
-5. <span data-ttu-id="4bc7c-126">A .csproj-fájlok mindegyikében, az alábbi sorban látható módon állítsa be az SDK-t a következőre: `Microsoft.Quantum.Sdk`.</span><span class="sxs-lookup"><span data-stu-id="4bc7c-126">In each of the .csproj files, set the SDK to `Microsoft.Quantum.Sdk`, as indicated in the line below.</span></span> <span data-ttu-id="4bc7c-127">Vegye figyelembe, hogy a verziószámnak a legfrissebb elérhető verziónak kell lennie, amelyet a [kibocsátási megjegyzések](https://docs.microsoft.com/quantum/relnotes/) áttekintésével állapíthat meg.</span><span class="sxs-lookup"><span data-stu-id="4bc7c-127">Please notice that the version number should be the latest available, and you can determine it by reviewing the [release notes](https://docs.microsoft.com/quantum/relnotes/).</span></span>
+5. <span data-ttu-id="3435e-126">A .csproj-fájlok mindegyikében, az alábbi sorban látható módon állítsa be az SDK-t a következőre: `Microsoft.Quantum.Sdk`.</span><span class="sxs-lookup"><span data-stu-id="3435e-126">In each of the .csproj files, set the SDK to `Microsoft.Quantum.Sdk`, as indicated in the line below.</span></span> <span data-ttu-id="3435e-127">Vegye figyelembe, hogy a verziószámnak a legfrissebb elérhető verziónak kell lennie, amelyet a [kibocsátási megjegyzések](https://docs.microsoft.com/quantum/relnotes/) áttekintésével állapíthat meg.</span><span class="sxs-lookup"><span data-stu-id="3435e-127">Please notice that the version number should be the latest available, and you can determine it by reviewing the [release notes](https://docs.microsoft.com/quantum/relnotes/).</span></span>
 
     ```xml
     <Project Sdk="Microsoft.Quantum.Sdk/0.12.20072031">
     ```
 
-6. <span data-ttu-id="4bc7c-128">Mentsen, majd zárja be a megoldás összes fájlját.</span><span class="sxs-lookup"><span data-stu-id="4bc7c-128">Save and close all files in your solution.</span></span>
+6. <span data-ttu-id="3435e-128">Mentsen, majd zárja be a megoldás összes fájlját.</span><span class="sxs-lookup"><span data-stu-id="3435e-128">Save and close all files in your solution.</span></span>
 
-7. <span data-ttu-id="4bc7c-129">Válassza a **Tools (Eszközök)**  -> **Command Line (Parancssor)**  -> **Developer Command Prompt (Fejlesztői parancssor)** lehetőséget.</span><span class="sxs-lookup"><span data-stu-id="4bc7c-129">Select **Tools** -> **Command Line** -> **Developer Command Prompt**.</span></span> <span data-ttu-id="4bc7c-130">Használhatja a Visual Studio csomagkezelési konzolját is.</span><span class="sxs-lookup"><span data-stu-id="4bc7c-130">Alternatively, you can use the package management console in Visual Studio.</span></span>
+7. <span data-ttu-id="3435e-129">Válassza a **Tools (Eszközök)**  -> **Command Line (Parancssor)**  -> **Developer Command Prompt (Fejlesztői parancssor)** lehetőséget.</span><span class="sxs-lookup"><span data-stu-id="3435e-129">Select **Tools** -> **Command Line** -> **Developer Command Prompt**.</span></span> <span data-ttu-id="3435e-130">Használhatja a Visual Studio csomagkezelési konzolját is.</span><span class="sxs-lookup"><span data-stu-id="3435e-130">Alternatively, you can use the package management console in Visual Studio.</span></span>
 
-8. <span data-ttu-id="4bc7c-131">A megoldásban található összes projekt esetében az alábbi parancs futtatásával **távolítsa el** ezt a csomagot:</span><span class="sxs-lookup"><span data-stu-id="4bc7c-131">For each project in the solution, run the following command to **remove** this package:</span></span>
+8. <span data-ttu-id="3435e-131">A megoldásban található összes projekt esetében az alábbi parancs futtatásával **távolítsa el** ezt a csomagot:</span><span class="sxs-lookup"><span data-stu-id="3435e-131">For each project in the solution, run the following command to **remove** this package:</span></span>
 
     ```dotnetcli
     dotnet remove [project_name].csproj package Microsoft.Quantum.Development.Kit
     ```
 
-   <span data-ttu-id="4bc7c-132">Ha a projektek más Microsoft.Quantum- vagy Microsoft.Azure.Quantum-csomagot is használnak (pl. Microsoft.Quantum.Numerics), futtassa az **add** parancsot az általuk használt verzió frissítéséhez.</span><span class="sxs-lookup"><span data-stu-id="4bc7c-132">If your projects use any other Microsoft.Quantum or Microsoft.Azure.Quantum packages (e.g. Microsoft.Quantum.Numerics), run the **add** command for these to update the version used.</span></span>
+   <span data-ttu-id="3435e-132">Ha a projektek más Microsoft.Quantum- vagy Microsoft.Azure.Quantum-csomagot is használnak (pl. Microsoft.Quantum.Numerics), futtassa az **add** parancsot az általuk használt verzió frissítéséhez.</span><span class="sxs-lookup"><span data-stu-id="3435e-132">If your projects use any other Microsoft.Quantum or Microsoft.Azure.Quantum packages (e.g. Microsoft.Quantum.Numerics), run the **add** command for these to update the version used.</span></span>
 
     ```dotnetcli
     dotnet add [project_name].csproj package [package_name]
     ```
 
-9. <span data-ttu-id="4bc7c-133">Zárja be a parancssort, és válassza a **Build (Létrehozás)**  -> **Build Solution (Megoldás létrehozása)** lehetőséget (*ne* a Rebuild Solution (Megoldás újrafordítása) lehetőséget válassza).</span><span class="sxs-lookup"><span data-stu-id="4bc7c-133">Close the command prompt and select **Build** -> **Build Solution** (do *not* select Rebuild Solution).</span></span>
+9. <span data-ttu-id="3435e-133">Zárja be a parancssort, és válassza a **Build (Létrehozás)**  -> **Build Solution (Megoldás létrehozása)** lehetőséget (*ne* a Rebuild Solution (Megoldás újrafordítása) lehetőséget válassza).</span><span class="sxs-lookup"><span data-stu-id="3435e-133">Close the command prompt and select **Build** -> **Build Solution** (do *not* select Rebuild Solution).</span></span>
 
-<span data-ttu-id="4bc7c-134">Most már továbbléphet a [Visual Studio QDK-bővítmény frissítéséhez](#update-visual-studio-qdk-extension).</span><span class="sxs-lookup"><span data-stu-id="4bc7c-134">You can now skip ahead to [update your Visual Studio QDK extension](#update-visual-studio-qdk-extension).</span></span>
+<span data-ttu-id="3435e-134">Most már továbbléphet a [Visual Studio QDK-bővítmény frissítéséhez](#update-visual-studio-qdk-extension).</span><span class="sxs-lookup"><span data-stu-id="3435e-134">You can now skip ahead to [update your Visual Studio QDK extension](#update-visual-studio-qdk-extension).</span></span>
 
 
-### <a name="update-q-projects-in-visual-studio-code"></a><span data-ttu-id="4bc7c-135">Q#-projektek frissítése a Visual Studio Code-ban</span><span class="sxs-lookup"><span data-stu-id="4bc7c-135">Update Q# projects in Visual Studio Code</span></span>
+### <a name="update-no-locq-projects-in-visual-studio-code"></a><span data-ttu-id="3435e-135">Q#-projektek frissítése a Visual Studio Code-ban</span><span class="sxs-lookup"><span data-stu-id="3435e-135">Update Q# projects in Visual Studio Code</span></span>
 
-1. <span data-ttu-id="4bc7c-136">Nyissa meg a frissíteni kívánt projektet tartalmazó mappát a Visual Studio Code-ban.</span><span class="sxs-lookup"><span data-stu-id="4bc7c-136">In Visual Studio Code, open the folder containing the project to update.</span></span>
-2. <span data-ttu-id="4bc7c-137">Válassza a **Terminal (Terminál)**  -> **New Terminal (Új terminál)** lehetőséget.</span><span class="sxs-lookup"><span data-stu-id="4bc7c-137">Select **Terminal** -> **New Terminal**.</span></span>
-3. <span data-ttu-id="4bc7c-138">Kövesse a parancssor használatával történő frissítéshez tartozó utasításokat (közvetlenül ez alatt látható).</span><span class="sxs-lookup"><span data-stu-id="4bc7c-138">Follow the instructions for updating using the command line (directly below).</span></span>
+1. <span data-ttu-id="3435e-136">Nyissa meg a frissíteni kívánt projektet tartalmazó mappát a Visual Studio Code-ban.</span><span class="sxs-lookup"><span data-stu-id="3435e-136">In Visual Studio Code, open the folder containing the project to update.</span></span>
+2. <span data-ttu-id="3435e-137">Válassza a **Terminal (Terminál)**  -> **New Terminal (Új terminál)** lehetőséget.</span><span class="sxs-lookup"><span data-stu-id="3435e-137">Select **Terminal** -> **New Terminal**.</span></span>
+3. <span data-ttu-id="3435e-138">Kövesse a parancssor használatával történő frissítéshez tartozó utasításokat (közvetlenül ez alatt látható).</span><span class="sxs-lookup"><span data-stu-id="3435e-138">Follow the instructions for updating using the command line (directly below).</span></span>
 
-### <a name="update-q-projects-using-the-command-line"></a><span data-ttu-id="4bc7c-139">Q#-projektek frissítése a parancssor használatával</span><span class="sxs-lookup"><span data-stu-id="4bc7c-139">Update Q# projects using the command line</span></span>
+### <a name="update-no-locq-projects-using-the-command-line"></a><span data-ttu-id="3435e-139">Q#-projektek frissítése a parancssor használatával</span><span class="sxs-lookup"><span data-stu-id="3435e-139">Update Q# projects using the command line</span></span>
 
-1. <span data-ttu-id="4bc7c-140">Nyissa meg a fő projektfájlt tartalmazó mappát.</span><span class="sxs-lookup"><span data-stu-id="4bc7c-140">Navigate to the folder containing your main project file.</span></span>
+1. <span data-ttu-id="3435e-140">Nyissa meg a fő projektfájlt tartalmazó mappát.</span><span class="sxs-lookup"><span data-stu-id="3435e-140">Navigate to the folder containing your main project file.</span></span>
 
-2. <span data-ttu-id="4bc7c-141">Futtassa az alábbi parancsot:</span><span class="sxs-lookup"><span data-stu-id="4bc7c-141">Run the following command:</span></span>
+2. <span data-ttu-id="3435e-141">Futtassa az alábbi parancsot:</span><span class="sxs-lookup"><span data-stu-id="3435e-141">Run the following command:</span></span>
 
     ```dotnetcli
     dotnet clean [project_name].csproj
     ```
 
-3. <span data-ttu-id="4bc7c-142">Állapítsa meg a QDK aktuális verzióját.</span><span class="sxs-lookup"><span data-stu-id="4bc7c-142">Determine the current version of the QDK.</span></span> <span data-ttu-id="4bc7c-143">Ehhez tekintse meg a [kibocsátási megjegyzéseket](https://docs.microsoft.com/quantum/relnotes/).</span><span class="sxs-lookup"><span data-stu-id="4bc7c-143">To find it, you can review the [release notes](https://docs.microsoft.com/quantum/relnotes/).</span></span> <span data-ttu-id="4bc7c-144">A verzió formátuma a következőhöz hasonló: `0.12.20072031`.</span><span class="sxs-lookup"><span data-stu-id="4bc7c-144">The version will be in a format similar to `0.12.20072031`.</span></span>
+3. <span data-ttu-id="3435e-142">Állapítsa meg a QDK aktuális verzióját.</span><span class="sxs-lookup"><span data-stu-id="3435e-142">Determine the current version of the QDK.</span></span> <span data-ttu-id="3435e-143">Ehhez tekintse meg a [kibocsátási megjegyzéseket](https://docs.microsoft.com/quantum/relnotes/).</span><span class="sxs-lookup"><span data-stu-id="3435e-143">To find it, you can review the [release notes](https://docs.microsoft.com/quantum/relnotes/).</span></span> <span data-ttu-id="3435e-144">A verzió formátuma a következőhöz hasonló: `0.12.20072031`.</span><span class="sxs-lookup"><span data-stu-id="3435e-144">The version will be in a format similar to `0.12.20072031`.</span></span>
 
-4. <span data-ttu-id="4bc7c-145">Minden `.csproj`-fájl esetében hajtsa végre a következő lépéseket:</span><span class="sxs-lookup"><span data-stu-id="4bc7c-145">In each of your `.csproj` files, go through the following steps:</span></span>
+4. <span data-ttu-id="3435e-145">Minden `.csproj`-fájl esetében hajtsa végre a következő lépéseket:</span><span class="sxs-lookup"><span data-stu-id="3435e-145">In each of your `.csproj` files, go through the following steps:</span></span>
 
-    - <span data-ttu-id="4bc7c-146">Frissítse célkeretrendszert a következőre: `netcoreapp3.1` (kódtárprojekt esetén a következőre: `netstandard2.1`).</span><span class="sxs-lookup"><span data-stu-id="4bc7c-146">Update the target framework to `netcoreapp3.1` (or `netstandard2.1` if it is a library project).</span></span> <span data-ttu-id="4bc7c-147">Szerkessze az űrlap sorait:</span><span class="sxs-lookup"><span data-stu-id="4bc7c-147">That is, edit lines of the form:</span></span>
+    - <span data-ttu-id="3435e-146">Frissítse célkeretrendszert a következőre: `netcoreapp3.1` (kódtárprojekt esetén a következőre: `netstandard2.1`).</span><span class="sxs-lookup"><span data-stu-id="3435e-146">Update the target framework to `netcoreapp3.1` (or `netstandard2.1` if it is a library project).</span></span> <span data-ttu-id="3435e-147">Szerkessze az űrlap sorait:</span><span class="sxs-lookup"><span data-stu-id="3435e-147">That is, edit lines of the form:</span></span>
 
         ```xml
         <TargetFramework>netcoreapp3.1</TargetFramework>
         ```
 
-        <span data-ttu-id="4bc7c-148">A célkeretrendszer megadásáról további információt [itt](https://docs.microsoft.com/dotnet/standard/frameworks#how-to-specify-target-frameworks) talál.</span><span class="sxs-lookup"><span data-stu-id="4bc7c-148">You can find more details on specifying target frameworks [here](https://docs.microsoft.com/dotnet/standard/frameworks#how-to-specify-target-frameworks).</span></span>
+        <span data-ttu-id="3435e-148">A célkeretrendszer megadásáról további információt [itt](https://docs.microsoft.com/dotnet/standard/frameworks#how-to-specify-target-frameworks) talál.</span><span class="sxs-lookup"><span data-stu-id="3435e-148">You can find more details on specifying target frameworks [here](https://docs.microsoft.com/dotnet/standard/frameworks#how-to-specify-target-frameworks).</span></span>
 
-    - <span data-ttu-id="4bc7c-149">Cserélje le az SDK hivatkozását a projekt definíciójában.</span><span class="sxs-lookup"><span data-stu-id="4bc7c-149">Replace the reference to the SDK in the project definition.</span></span> <span data-ttu-id="4bc7c-150">Ellenőrizze, hogy a verziószám megfelel-e a **3. lépésben** megadott értéknek.</span><span class="sxs-lookup"><span data-stu-id="4bc7c-150">Make sure that the version number corresponds to the value determined in **step 3**.</span></span>
+    - <span data-ttu-id="3435e-149">Cserélje le az SDK hivatkozását a projekt definíciójában.</span><span class="sxs-lookup"><span data-stu-id="3435e-149">Replace the reference to the SDK in the project definition.</span></span> <span data-ttu-id="3435e-150">Ellenőrizze, hogy a verziószám megfelel-e a **3. lépésben** megadott értéknek.</span><span class="sxs-lookup"><span data-stu-id="3435e-150">Make sure that the version number corresponds to the value determined in **step 3**.</span></span>
 
         ```xml
         <Project Sdk="Microsoft.Quantum.Sdk/0.12.20072031">
         ```
 
-    - <span data-ttu-id="4bc7c-151">Távolítsa el a `Microsoft.Quantum.Development.Kit` csomagra mutató hivatkozást (ha van ilyen), amely a következő bejegyzésben található:</span><span class="sxs-lookup"><span data-stu-id="4bc7c-151">Remove the reference to package `Microsoft.Quantum.Development.Kit` if present, which will be specified in the following entry:</span></span>
+    - <span data-ttu-id="3435e-151">Távolítsa el a `Microsoft.Quantum.Development.Kit` csomagra mutató hivatkozást (ha van ilyen), amely a következő bejegyzésben található:</span><span class="sxs-lookup"><span data-stu-id="3435e-151">Remove the reference to package `Microsoft.Quantum.Development.Kit` if present, which will be specified in the following entry:</span></span>
 
         ```xml
         <PackageReference Include="Microsoft.Quantum.Development.Kit" Version="0.10.1910.3107" />
         ```
 
-    - <span data-ttu-id="4bc7c-152">Frissítse az összes Microsoft Quantum-csomag verzióját a QDK legfrissebb kiadott verziójára (amelyet a **3. lépésben** állapított meg).</span><span class="sxs-lookup"><span data-stu-id="4bc7c-152">Update the version of the all the Microsoft Quantum packages to the most recently released version of the QDK (determined in **step 3**).</span></span> <span data-ttu-id="4bc7c-153">Ezen csomagok elnevezése a következő mintát követi:</span><span class="sxs-lookup"><span data-stu-id="4bc7c-153">Those packages are named with the following patterns:</span></span>
+    - <span data-ttu-id="3435e-152">Frissítse az összes Microsoft Quantum-csomag verzióját a QDK legfrissebb kiadott verziójára (amelyet a **3. lépésben** állapított meg).</span><span class="sxs-lookup"><span data-stu-id="3435e-152">Update the version of the all the Microsoft Quantum packages to the most recently released version of the QDK (determined in **step 3**).</span></span> <span data-ttu-id="3435e-153">Ezen csomagok elnevezése a következő mintát követi:</span><span class="sxs-lookup"><span data-stu-id="3435e-153">Those packages are named with the following patterns:</span></span>
 
         ```
         Microsoft.Quantum.*
         Microsoft.Azure.Quantum.*
         ```
     
-        <span data-ttu-id="4bc7c-154">A csomaghivatkozások formátuma:</span><span class="sxs-lookup"><span data-stu-id="4bc7c-154">References to packages have the following format:</span></span>
+        <span data-ttu-id="3435e-154">A csomaghivatkozások formátuma:</span><span class="sxs-lookup"><span data-stu-id="3435e-154">References to packages have the following format:</span></span>
 
         ```xml
         <PackageReference Include="Microsoft.Quantum.Compiler" Version="0.12.20072031" />
         ```
 
-    - <span data-ttu-id="4bc7c-155">Mentse a módosított fájlt.</span><span class="sxs-lookup"><span data-stu-id="4bc7c-155">Save the updated file.</span></span>
+    - <span data-ttu-id="3435e-155">Mentse a módosított fájlt.</span><span class="sxs-lookup"><span data-stu-id="3435e-155">Save the updated file.</span></span>
 
-    - <span data-ttu-id="4bc7c-156">Az alábbiak elvégzésével állítsa vissza a projekt függőségeit:</span><span class="sxs-lookup"><span data-stu-id="4bc7c-156">Restore the dependencies of the project, by doing the following:</span></span>
+    - <span data-ttu-id="3435e-156">Az alábbiak elvégzésével állítsa vissza a projekt függőségeit:</span><span class="sxs-lookup"><span data-stu-id="3435e-156">Restore the dependencies of the project, by doing the following:</span></span>
 
         ```dotnetcli
         dotnet restore [project_name].csproj
         ```
 
-4. <span data-ttu-id="4bc7c-157">Lépjen vissza a fő projektfájlt tartalmazó mappához, majd futtassa a következőt:</span><span class="sxs-lookup"><span data-stu-id="4bc7c-157">Navigate back to the folder containing your main project and run:</span></span>
+4. <span data-ttu-id="3435e-157">Lépjen vissza a fő projektfájlt tartalmazó mappához, majd futtassa a következőt:</span><span class="sxs-lookup"><span data-stu-id="3435e-157">Navigate back to the folder containing your main project and run:</span></span>
 
     ```dotnetcli
     dotnet build [project_name].csproj
     ```
 
-<span data-ttu-id="4bc7c-158">A Q#-projektek frissítése után kövesse az alábbi utasításokat a QDK frissítéséhez.</span><span class="sxs-lookup"><span data-stu-id="4bc7c-158">With your Q# projects now updated, follow the instructions below to update the QDK itself.</span></span>
+<span data-ttu-id="3435e-158">A Q#-projektek frissítése után kövesse az alábbi utasításokat a QDK frissítéséhez.</span><span class="sxs-lookup"><span data-stu-id="3435e-158">With your Q# projects now updated, follow the instructions below to update the QDK itself.</span></span>
 
-## <a name="updating-the-qdk"></a><span data-ttu-id="4bc7c-159">A QDK frissítése</span><span class="sxs-lookup"><span data-stu-id="4bc7c-159">Updating the QDK</span></span>
+## <a name="updating-the-qdk"></a><span data-ttu-id="3435e-159">A QDK frissítése</span><span class="sxs-lookup"><span data-stu-id="3435e-159">Updating the QDK</span></span>
 
-<span data-ttu-id="4bc7c-160">A QDK frissítési folyamata a fejlesztési nyelvtől és a környezettől függ.</span><span class="sxs-lookup"><span data-stu-id="4bc7c-160">The process to update the QDK varies depending on your development language and environment.</span></span>
-<span data-ttu-id="4bc7c-161">A lenti listából válassza ki a fejlesztőkörnyezetet.</span><span class="sxs-lookup"><span data-stu-id="4bc7c-161">Select your development environment below.</span></span>
+<span data-ttu-id="3435e-160">A QDK frissítési folyamata a fejlesztési nyelvtől és a környezettől függ.</span><span class="sxs-lookup"><span data-stu-id="3435e-160">The process to update the QDK varies depending on your development language and environment.</span></span>
+<span data-ttu-id="3435e-161">A lenti listából válassza ki a fejlesztőkörnyezetet.</span><span class="sxs-lookup"><span data-stu-id="3435e-161">Select your development environment below.</span></span>
 
-* [<span data-ttu-id="4bc7c-162">Python: frissítse a(z) `qsharp` csomagot</span><span class="sxs-lookup"><span data-stu-id="4bc7c-162">Python: update the `qsharp` package</span></span>](#update-the-qsharp-python-package)
-* [<span data-ttu-id="4bc7c-163">Jupyter-notebookok: frissítse az IQ#-kernelt</span><span class="sxs-lookup"><span data-stu-id="4bc7c-163">Jupyter Notebooks: update the IQ# kernel</span></span>](#update-the-iq-jupyter-kernel)
-* [<span data-ttu-id="4bc7c-164">Visual Studio: a QDK-bővítmény frissítése</span><span class="sxs-lookup"><span data-stu-id="4bc7c-164">Visual Studio: update the QDK extension</span></span>](#update-visual-studio-qdk-extension)
-* [<span data-ttu-id="4bc7c-165">VS Code: a QDK-bővítmény frissítése</span><span class="sxs-lookup"><span data-stu-id="4bc7c-165">VS Code: update the QDK extension</span></span>](#update-vs-code-qdk-extension)
-* [<span data-ttu-id="4bc7c-166">Parancssor és C#: projektsablonok frissítése</span><span class="sxs-lookup"><span data-stu-id="4bc7c-166">Command-line and C#: update project templates</span></span>](#c-using-the-dotnet-command-line-tool)
+* [<span data-ttu-id="3435e-162">Python: frissítse a(z) `qsharp` csomagot</span><span class="sxs-lookup"><span data-stu-id="3435e-162">Python: update the `qsharp` package</span></span>](#update-the-qsharp-python-package)
+* [<span data-ttu-id="3435e-163">Jupyter-notebookok: frissítse az IQ#-kernelt</span><span class="sxs-lookup"><span data-stu-id="3435e-163">Jupyter Notebooks: update the IQ# kernel</span></span>](#update-the-iq-jupyter-kernel)
+* [<span data-ttu-id="3435e-164">Visual Studio: a QDK-bővítmény frissítése</span><span class="sxs-lookup"><span data-stu-id="3435e-164">Visual Studio: update the QDK extension</span></span>](#update-visual-studio-qdk-extension)
+* [<span data-ttu-id="3435e-165">VS Code: a QDK-bővítmény frissítése</span><span class="sxs-lookup"><span data-stu-id="3435e-165">VS Code: update the QDK extension</span></span>](#update-vs-code-qdk-extension)
+* [<span data-ttu-id="3435e-166">Parancssor és C#: projektsablonok frissítése</span><span class="sxs-lookup"><span data-stu-id="3435e-166">Command-line and C#: update project templates</span></span>](#c-using-the-dotnet-command-line-tool)
 
 
-### <a name="update-the-qsharp-python-package"></a><span data-ttu-id="4bc7c-167">A(z) `qsharp` Python-csomag frissítése</span><span class="sxs-lookup"><span data-stu-id="4bc7c-167">Update the `qsharp` Python package</span></span>
+### <a name="update-the-qsharp-python-package"></a><span data-ttu-id="3435e-167">A(z) `qsharp` Python-csomag frissítése</span><span class="sxs-lookup"><span data-stu-id="3435e-167">Update the `qsharp` Python package</span></span>
 
-<span data-ttu-id="4bc7c-168">A frissítési eljárás attól függ, hogy a telepítést eredetileg a Conda vagy a .NET CLI és a pip használatával végezte.</span><span class="sxs-lookup"><span data-stu-id="4bc7c-168">The update procedure depends on whether you originally installed using conda or using the .NET CLI and pip.</span></span>
+<span data-ttu-id="3435e-168">A frissítési eljárás attól függ, hogy a telepítést eredetileg a Conda vagy a .NET CLI és a pip használatával végezte.</span><span class="sxs-lookup"><span data-stu-id="3435e-168">The update procedure depends on whether you originally installed using conda or using the .NET CLI and pip.</span></span>
 
-#### <a name="update-using-conda-recommended"></a>[<span data-ttu-id="4bc7c-169">Frissítés a Conda használatával (ajánlott)</span><span class="sxs-lookup"><span data-stu-id="4bc7c-169">Update using conda (recommended)</span></span>](#tab/tabid-conda)
+#### <a name="update-using-conda-recommended"></a>[<span data-ttu-id="3435e-169">Frissítés a Conda használatával (ajánlott)</span><span class="sxs-lookup"><span data-stu-id="3435e-169">Update using conda (recommended)</span></span>](#tab/tabid-conda)
 
-1. <span data-ttu-id="4bc7c-170">Aktiválja azt a Conda-környezetet, amelyben a(z) `qsharp` csomagot telepítette, majd futtassa a következő parancsot a frissítéséhez:</span><span class="sxs-lookup"><span data-stu-id="4bc7c-170">Activate the conda environment where you installed the `qsharp` package, and then run this command to update it:</span></span>
+1. <span data-ttu-id="3435e-170">Aktiválja azt a Conda-környezetet, amelyben a(z) `qsharp` csomagot telepítette, majd futtassa a következő parancsot a frissítéséhez:</span><span class="sxs-lookup"><span data-stu-id="3435e-170">Activate the conda environment where you installed the `qsharp` package, and then run this command to update it:</span></span>
 
     ```
     conda update -c quantum-engineering qsharp
     ```
 
-1. <span data-ttu-id="4bc7c-171">Futtassa az alábbi parancsot a(z) `.qs`-fájlok helyéről:</span><span class="sxs-lookup"><span data-stu-id="4bc7c-171">Run the following command from the location of your `.qs` files:</span></span>
+1. <span data-ttu-id="3435e-171">Futtassa az alábbi parancsot a(z) `.qs`-fájlok helyéről:</span><span class="sxs-lookup"><span data-stu-id="3435e-171">Run the following command from the location of your `.qs` files:</span></span>
 
     ```
     python -c "import qsharp; qsharp.reload()"
     ```
 
-#### <a name="update-using-net-cli-and-pip-advanced"></a>[<span data-ttu-id="4bc7c-172">Frissítés a .NET CLI és a pip használatával (haladó)</span><span class="sxs-lookup"><span data-stu-id="4bc7c-172">Update using .NET CLI and pip (advanced)</span></span>](#tab/tabid-dotnetcli)
+#### <a name="update-using-net-cli-and-pip-advanced"></a>[<span data-ttu-id="3435e-172">Frissítés a .NET CLI és a pip használatával (haladó)</span><span class="sxs-lookup"><span data-stu-id="3435e-172">Update using .NET CLI and pip (advanced)</span></span>](#tab/tabid-dotnetcli)
 
-1. <span data-ttu-id="4bc7c-173">Frissítse az `iqsharp` kernelt</span><span class="sxs-lookup"><span data-stu-id="4bc7c-173">Update the `iqsharp` kernel</span></span> 
+1. <span data-ttu-id="3435e-173">Frissítse az `iqsharp` kernelt</span><span class="sxs-lookup"><span data-stu-id="3435e-173">Update the `iqsharp` kernel</span></span> 
 
     ```dotnetcli
     dotnet tool update -g Microsoft.Quantum.IQSharp
     dotnet iqsharp install
     ```
 
-1. <span data-ttu-id="4bc7c-174">Ellenőrizze az `iqsharp` verzióját</span><span class="sxs-lookup"><span data-stu-id="4bc7c-174">Verify the `iqsharp` version</span></span>
+1. <span data-ttu-id="3435e-174">Ellenőrizze az `iqsharp` verzióját</span><span class="sxs-lookup"><span data-stu-id="3435e-174">Verify the `iqsharp` version</span></span>
 
     ```dotnetcli
     dotnet iqsharp --version
     ```
 
-    <span data-ttu-id="4bc7c-175">A következő kimenetnek kell megjelennie:</span><span class="sxs-lookup"><span data-stu-id="4bc7c-175">You should see the following output:</span></span>
+    <span data-ttu-id="3435e-175">A következő kimenetnek kell megjelennie:</span><span class="sxs-lookup"><span data-stu-id="3435e-175">You should see the following output:</span></span>
 
     ```
     iqsharp: 0.12.20072031
     Jupyter Core: 1.4.0.0
     ```
 
-    <span data-ttu-id="4bc7c-176">Ne aggódjon, ha a(z) `iqsharp` verziószáma nagyobb.</span><span class="sxs-lookup"><span data-stu-id="4bc7c-176">Don't worry if your `iqsharp` version is higher.</span></span> <span data-ttu-id="4bc7c-177">Annak meg kell egyeznie a(z) [legújabb kiadással](xref:microsoft.quantum.relnotes).</span><span class="sxs-lookup"><span data-stu-id="4bc7c-177">It should match the [latest release](xref:microsoft.quantum.relnotes).</span></span>
+    <span data-ttu-id="3435e-176">Ne aggódjon, ha a(z) `iqsharp` verziószáma nagyobb.</span><span class="sxs-lookup"><span data-stu-id="3435e-176">Don't worry if your `iqsharp` version is higher.</span></span> <span data-ttu-id="3435e-177">Annak meg kell egyeznie a(z) [legújabb kiadással](xref:microsoft.quantum.relnotes).</span><span class="sxs-lookup"><span data-stu-id="3435e-177">It should match the [latest release](xref:microsoft.quantum.relnotes).</span></span>
 
-1. <span data-ttu-id="4bc7c-178">Frissítse a(z) `qsharp` csomagot:</span><span class="sxs-lookup"><span data-stu-id="4bc7c-178">Update the `qsharp` package:</span></span>
+1. <span data-ttu-id="3435e-178">Frissítse a(z) `qsharp` csomagot:</span><span class="sxs-lookup"><span data-stu-id="3435e-178">Update the `qsharp` package:</span></span>
 
     ```
     pip install qsharp --upgrade
     ```
 
-1. <span data-ttu-id="4bc7c-179">Ellenőrizze a(z) `qsharp` verzióját:</span><span class="sxs-lookup"><span data-stu-id="4bc7c-179">Verify the `qsharp` version:</span></span>
+1. <span data-ttu-id="3435e-179">Ellenőrizze a(z) `qsharp` verzióját:</span><span class="sxs-lookup"><span data-stu-id="3435e-179">Verify the `qsharp` version:</span></span>
 
     ```
     pip show qsharp
     ```
 
-    <span data-ttu-id="4bc7c-180">A következő kimenetnek kell megjelennie:</span><span class="sxs-lookup"><span data-stu-id="4bc7c-180">You should see the following output:</span></span>
+    <span data-ttu-id="3435e-180">A következő kimenetnek kell megjelennie:</span><span class="sxs-lookup"><span data-stu-id="3435e-180">You should see the following output:</span></span>
 
     ```
     Name: qsharp
@@ -221,7 +224,7 @@ ms.locfileid: "86871399"
     ...
     ```
 
-1. <span data-ttu-id="4bc7c-181">Futtassa az alábbi parancsot a(z) `.qs`-fájlok helyéről:</span><span class="sxs-lookup"><span data-stu-id="4bc7c-181">Run the following command from the location of your `.qs` files:</span></span>
+1. <span data-ttu-id="3435e-181">Futtassa az alábbi parancsot a(z) `.qs`-fájlok helyéről:</span><span class="sxs-lookup"><span data-stu-id="3435e-181">Run the following command from the location of your `.qs` files:</span></span>
 
     ```
     python -c "import qsharp; qsharp.reload()"
@@ -229,51 +232,51 @@ ms.locfileid: "86871399"
 
 ***
 
-<span data-ttu-id="4bc7c-182">Most már használhatja a frissített `qsharp` Python-csomagot a meglévő kvantumprogramok futtatásához.</span><span class="sxs-lookup"><span data-stu-id="4bc7c-182">You can now use the updated `qsharp` Python package to run your existing quantum programs.</span></span>
+<span data-ttu-id="3435e-182">Most már használhatja a frissített `qsharp` Python-csomagot a meglévő kvantumprogramok futtatásához.</span><span class="sxs-lookup"><span data-stu-id="3435e-182">You can now use the updated `qsharp` Python package to run your existing quantum programs.</span></span>
 
-### <a name="update-the-iq-jupyter-kernel"></a><span data-ttu-id="4bc7c-183">Az IQ# Jupyter kernel frissítése</span><span class="sxs-lookup"><span data-stu-id="4bc7c-183">Update the IQ# Jupyter kernel</span></span>
+### <a name="update-the-ino-locq-jupyter-kernel"></a><span data-ttu-id="3435e-183">Az IQ# Jupyter kernel frissítése</span><span class="sxs-lookup"><span data-stu-id="3435e-183">Update the IQ# Jupyter kernel</span></span>
 
-<span data-ttu-id="4bc7c-184">A frissítési eljárás attól függ, hogy a telepítést eredetileg a Conda vagy a .NET CLI és a pip használatával végezte.</span><span class="sxs-lookup"><span data-stu-id="4bc7c-184">The update procedure depends on whether you originally installed using conda or using the .NET CLI and pip.</span></span>
+<span data-ttu-id="3435e-184">A frissítési eljárás attól függ, hogy a telepítést eredetileg a Conda vagy a .NET CLI és a pip használatával végezte.</span><span class="sxs-lookup"><span data-stu-id="3435e-184">The update procedure depends on whether you originally installed using conda or using the .NET CLI and pip.</span></span>
 
-#### <a name="update-using-conda-recommended"></a>[<span data-ttu-id="4bc7c-185">Frissítés a Conda használatával (ajánlott)</span><span class="sxs-lookup"><span data-stu-id="4bc7c-185">Update using conda (recommended)</span></span>](#tab/tabid-conda)
+#### <a name="update-using-conda-recommended"></a>[<span data-ttu-id="3435e-185">Frissítés a Conda használatával (ajánlott)</span><span class="sxs-lookup"><span data-stu-id="3435e-185">Update using conda (recommended)</span></span>](#tab/tabid-conda)
 
-1. <span data-ttu-id="4bc7c-186">Aktiválja azt a Conda-környezetet, amelyben a(z) `qsharp` csomagot telepítette, majd futtassa a következő parancsot a frissítéséhez:</span><span class="sxs-lookup"><span data-stu-id="4bc7c-186">Activate the conda environment where you installed the `qsharp` package, and then run this command to update it:</span></span>
+1. <span data-ttu-id="3435e-186">Aktiválja azt a Conda-környezetet, amelyben a(z) `qsharp` csomagot telepítette, majd futtassa a következő parancsot a frissítéséhez:</span><span class="sxs-lookup"><span data-stu-id="3435e-186">Activate the conda environment where you installed the `qsharp` package, and then run this command to update it:</span></span>
 
     ```
     conda update -c quantum-engineering qsharp
     ```
 
-1. <span data-ttu-id="4bc7c-187">Futtassa az alábbi parancsot valamennyi meglévő Q# Jupyter-notebook egy-egy cellájából:</span><span class="sxs-lookup"><span data-stu-id="4bc7c-187">Run the following command from a cell in each of your existing Q# Jupyter Notebooks:</span></span>
+1. <span data-ttu-id="3435e-187">Futtassa az alábbi parancsot valamennyi meglévő Q# Jupyter-notebook egy-egy cellájából:</span><span class="sxs-lookup"><span data-stu-id="3435e-187">Run the following command from a cell in each of your existing Q# Jupyter Notebooks:</span></span>
 
     ```
     %workspace reload
     ```
 
-#### <a name="update-using-net-cli-and-pip-advanced"></a>[<span data-ttu-id="4bc7c-188">Frissítés a .NET CLI és a pip használatával (haladó)</span><span class="sxs-lookup"><span data-stu-id="4bc7c-188">Update using .NET CLI and pip (advanced)</span></span>](#tab/tabid-dotnetcli)
+#### <a name="update-using-net-cli-and-pip-advanced"></a>[<span data-ttu-id="3435e-188">Frissítés a .NET CLI és a pip használatával (haladó)</span><span class="sxs-lookup"><span data-stu-id="3435e-188">Update using .NET CLI and pip (advanced)</span></span>](#tab/tabid-dotnetcli)
 
-1. <span data-ttu-id="4bc7c-189">Frissítse a(z) `Microsoft.Quantum.IQSharp` csomagot:</span><span class="sxs-lookup"><span data-stu-id="4bc7c-189">Update the `Microsoft.Quantum.IQSharp` package:</span></span>
+1. <span data-ttu-id="3435e-189">Frissítse a(z) `Microsoft.Quantum.IQSharp` csomagot:</span><span class="sxs-lookup"><span data-stu-id="3435e-189">Update the `Microsoft.Quantum.IQSharp` package:</span></span>
 
     ```dotnetcli
     dotnet tool update -g Microsoft.Quantum.IQSharp
     dotnet iqsharp install
     ```
 
-1. <span data-ttu-id="4bc7c-190">Ellenőrizze a(z) `iqsharp` verzióját:</span><span class="sxs-lookup"><span data-stu-id="4bc7c-190">Verify the `iqsharp` version:</span></span>
+1. <span data-ttu-id="3435e-190">Ellenőrizze a(z) `iqsharp` verzióját:</span><span class="sxs-lookup"><span data-stu-id="3435e-190">Verify the `iqsharp` version:</span></span>
 
     ```dotnetcli
     dotnet iqsharp --version
     ```
 
-    <span data-ttu-id="4bc7c-191">A kimenet az alábbihoz hasonló lesz:</span><span class="sxs-lookup"><span data-stu-id="4bc7c-191">Your output should be similar to the following:</span></span>
+    <span data-ttu-id="3435e-191">A kimenet az alábbihoz hasonló lesz:</span><span class="sxs-lookup"><span data-stu-id="3435e-191">Your output should be similar to the following:</span></span>
 
     ```
     iqsharp: 0.12.20072031
     Jupyter Core: 1.4.0.0
     ```
 
-    <span data-ttu-id="4bc7c-192">Ne aggódjon, ha a(z) `iqsharp` verziószáma nagyobb.</span><span class="sxs-lookup"><span data-stu-id="4bc7c-192">Don't worry if your `iqsharp` version is higher.</span></span> <span data-ttu-id="4bc7c-193">Annak meg kell egyeznie a(z) [legújabb kiadással](xref:microsoft.quantum.relnotes).</span><span class="sxs-lookup"><span data-stu-id="4bc7c-193">It should match the [latest release](xref:microsoft.quantum.relnotes).</span></span>
+    <span data-ttu-id="3435e-192">Ne aggódjon, ha a(z) `iqsharp` verziószáma nagyobb.</span><span class="sxs-lookup"><span data-stu-id="3435e-192">Don't worry if your `iqsharp` version is higher.</span></span> <span data-ttu-id="3435e-193">Annak meg kell egyeznie a(z) [legújabb kiadással](xref:microsoft.quantum.relnotes).</span><span class="sxs-lookup"><span data-stu-id="3435e-193">It should match the [latest release](xref:microsoft.quantum.relnotes).</span></span>
 
-1. <span data-ttu-id="4bc7c-194">Futtassa az alábbi parancsot valamennyi meglévő Q# Jupyter-notebook egy-egy cellájából:</span><span class="sxs-lookup"><span data-stu-id="4bc7c-194">Run the following command from a cell in each of your existing Q# Jupyter Notebooks:</span></span>
+1. <span data-ttu-id="3435e-194">Futtassa az alábbi parancsot valamennyi meglévő Q# Jupyter-notebook egy-egy cellájából:</span><span class="sxs-lookup"><span data-stu-id="3435e-194">Run the following command from a cell in each of your existing Q# Jupyter Notebooks:</span></span>
 
     ```
     %workspace reload
@@ -281,40 +284,40 @@ ms.locfileid: "86871399"
 
 ***
 
-<span data-ttu-id="4bc7c-195">Most már használhatja a frissített IQ# kernelt a meglévő Q# Jupyter-notebookok futtatásához.</span><span class="sxs-lookup"><span data-stu-id="4bc7c-195">You can now use the updated IQ# kernel to run your existing Q# Jupyter Notebooks.</span></span>
+<span data-ttu-id="3435e-195">Most már használhatja a frissített IQ# kernelt a meglévő Q# Jupyter-notebookok futtatásához.</span><span class="sxs-lookup"><span data-stu-id="3435e-195">You can now use the updated IQ# kernel to run your existing Q# Jupyter Notebooks.</span></span>
 
-### <a name="update-visual-studio-qdk-extension"></a><span data-ttu-id="4bc7c-196">A Visual Studio QDK-bővítmény frissítése</span><span class="sxs-lookup"><span data-stu-id="4bc7c-196">Update Visual Studio QDK extension</span></span>
+### <a name="update-visual-studio-qdk-extension"></a><span data-ttu-id="3435e-196">A Visual Studio QDK-bővítmény frissítése</span><span class="sxs-lookup"><span data-stu-id="3435e-196">Update Visual Studio QDK extension</span></span>
 
-1. <span data-ttu-id="4bc7c-197">Frissítse Q# Visual Studio-bővítményt</span><span class="sxs-lookup"><span data-stu-id="4bc7c-197">Update the Q# Visual Studio extension</span></span>
+1. <span data-ttu-id="3435e-197">A Q# Visual Studio-bővítmény frissítése</span><span class="sxs-lookup"><span data-stu-id="3435e-197">Update the Q# Visual Studio extension</span></span>
 
-    - <span data-ttu-id="4bc7c-198">A Visual Studio arra kéri, hogy fogadja a [Quantum Visual Studio-bővítmény](https://marketplace.visualstudio.com/items?itemName=quantum.DevKit) frissítéseit</span><span class="sxs-lookup"><span data-stu-id="4bc7c-198">Visual Studio prompts you to accept updates to the [Quantum Visual Studio extension](https://marketplace.visualstudio.com/items?itemName=quantum.DevKit)</span></span>
-    - <span data-ttu-id="4bc7c-199">Fogadja el a frissítést</span><span class="sxs-lookup"><span data-stu-id="4bc7c-199">Accept the update</span></span>
+    - <span data-ttu-id="3435e-198">A Visual Studio arra kéri, hogy fogadja a [Quantum Visual Studio-bővítmény](https://marketplace.visualstudio.com/items?itemName=quantum.DevKit) frissítéseit</span><span class="sxs-lookup"><span data-stu-id="3435e-198">Visual Studio prompts you to accept updates to the [Quantum Visual Studio extension](https://marketplace.visualstudio.com/items?itemName=quantum.DevKit)</span></span>
+    - <span data-ttu-id="3435e-199">Fogadja el a frissítést</span><span class="sxs-lookup"><span data-stu-id="3435e-199">Accept the update</span></span>
 
     > [!NOTE]
-    > <span data-ttu-id="4bc7c-200">A rendszer frissíti a projektsablonokat a bővítménnyel.</span><span class="sxs-lookup"><span data-stu-id="4bc7c-200">The project templates are updated with the extension.</span></span> <span data-ttu-id="4bc7c-201">A frissített sablonok csak az újonnan létrehozott projektekre vonatkoznak.</span><span class="sxs-lookup"><span data-stu-id="4bc7c-201">The updated templates apply to newly created projects only.</span></span> <span data-ttu-id="4bc7c-202">A meglévő projektek kódja nem frissül a bővítmény frissítésekor.</span><span class="sxs-lookup"><span data-stu-id="4bc7c-202">The code for your existing projects is not updated when the extension is updated.</span></span>
+    > <span data-ttu-id="3435e-200">A rendszer frissíti a projektsablonokat a bővítménnyel.</span><span class="sxs-lookup"><span data-stu-id="3435e-200">The project templates are updated with the extension.</span></span> <span data-ttu-id="3435e-201">A frissített sablonok csak az újonnan létrehozott projektekre vonatkoznak.</span><span class="sxs-lookup"><span data-stu-id="3435e-201">The updated templates apply to newly created projects only.</span></span> <span data-ttu-id="3435e-202">A meglévő projektek kódja nem frissül a bővítmény frissítésekor.</span><span class="sxs-lookup"><span data-stu-id="3435e-202">The code for your existing projects is not updated when the extension is updated.</span></span>
 
-### <a name="update-vs-code-qdk-extension"></a><span data-ttu-id="4bc7c-203">A VS Code QDK-bővítmény frissítése</span><span class="sxs-lookup"><span data-stu-id="4bc7c-203">Update VS Code QDK extension</span></span>
+### <a name="update-vs-code-qdk-extension"></a><span data-ttu-id="3435e-203">A VS Code QDK-bővítmény frissítése</span><span class="sxs-lookup"><span data-stu-id="3435e-203">Update VS Code QDK extension</span></span>
 
-1. <span data-ttu-id="4bc7c-204">Frissítse a Quantum VS Code-bővítményt</span><span class="sxs-lookup"><span data-stu-id="4bc7c-204">Update the Quantum VS Code extension</span></span>
+1. <span data-ttu-id="3435e-204">Frissítse a Quantum VS Code-bővítményt</span><span class="sxs-lookup"><span data-stu-id="3435e-204">Update the Quantum VS Code extension</span></span>
 
-    - <span data-ttu-id="4bc7c-205">Indítsa újra a VS Code-ot</span><span class="sxs-lookup"><span data-stu-id="4bc7c-205">Restart VS Code</span></span>
-    - <span data-ttu-id="4bc7c-206">Lépjen a **Bővítmények** lapra</span><span class="sxs-lookup"><span data-stu-id="4bc7c-206">Navigate to the **Extensions** tab</span></span>
-    - <span data-ttu-id="4bc7c-207">Válassza a **Visual Studio Code-hoz készült Microsoft Quantum Development Kit** bővítményt</span><span class="sxs-lookup"><span data-stu-id="4bc7c-207">Select the **Microsoft Quantum Development Kit for Visual Studio Code** extension</span></span>
-    - <span data-ttu-id="4bc7c-208">Töltse be újból a bővítményt</span><span class="sxs-lookup"><span data-stu-id="4bc7c-208">Reload the extension</span></span>
+    - <span data-ttu-id="3435e-205">Indítsa újra a VS Code-ot</span><span class="sxs-lookup"><span data-stu-id="3435e-205">Restart VS Code</span></span>
+    - <span data-ttu-id="3435e-206">Lépjen a **Bővítmények** lapra</span><span class="sxs-lookup"><span data-stu-id="3435e-206">Navigate to the **Extensions** tab</span></span>
+    - <span data-ttu-id="3435e-207">Válassza a **Visual Studio Code-hoz készült Microsoft Quantum Development Kit** bővítményt</span><span class="sxs-lookup"><span data-stu-id="3435e-207">Select the **Microsoft Quantum Development Kit for Visual Studio Code** extension</span></span>
+    - <span data-ttu-id="3435e-208">Töltse be újból a bővítményt</span><span class="sxs-lookup"><span data-stu-id="3435e-208">Reload the extension</span></span>
 
-### <a name="c-using-the-dotnet-command-line-tool"></a><span data-ttu-id="4bc7c-209">C#, a `dotnet` parancssori eszköz használatával</span><span class="sxs-lookup"><span data-stu-id="4bc7c-209">C#, using the `dotnet` command-line tool</span></span>
+### <a name="c-using-the-dotnet-command-line-tool"></a><span data-ttu-id="3435e-209">C#, a `dotnet` parancssori eszköz használatával</span><span class="sxs-lookup"><span data-stu-id="3435e-209">C#, using the `dotnet` command-line tool</span></span>
 
-1. <span data-ttu-id="4bc7c-210">Frissítse a .NET-hez tartozó Quantum-projektsablonokat</span><span class="sxs-lookup"><span data-stu-id="4bc7c-210">Update the Quantum project templates for .NET</span></span>
+1. <span data-ttu-id="3435e-210">Frissítse a .NET-hez tartozó Quantum-projektsablonokat</span><span class="sxs-lookup"><span data-stu-id="3435e-210">Update the Quantum project templates for .NET</span></span>
 
-    <span data-ttu-id="4bc7c-211">A parancssorból:</span><span class="sxs-lookup"><span data-stu-id="4bc7c-211">From the command line:</span></span>
+    <span data-ttu-id="3435e-211">A parancssorból:</span><span class="sxs-lookup"><span data-stu-id="3435e-211">From the command line:</span></span>
 
     ```dotnetcli
     dotnet new -i Microsoft.Quantum.ProjectTemplates
     ```
 
-   <span data-ttu-id="4bc7c-212">Ha a parancssori sablonokat is használni szeretné, és már telepítve van a VS Code QDK-bővítmény, a projektsablonokat magából a bővítményből is frissítheti:</span><span class="sxs-lookup"><span data-stu-id="4bc7c-212">Alternatively, if you intend to use the command line templates, and already have the VS Code QDK extension installed, you can update the project templates from the extension itself:</span></span>
+   <span data-ttu-id="3435e-212">Ha a parancssori sablonokat is használni szeretné, és már telepítve van a VS Code QDK-bővítmény, a projektsablonokat magából a bővítményből is frissítheti:</span><span class="sxs-lookup"><span data-stu-id="3435e-212">Alternatively, if you intend to use the command line templates, and already have the VS Code QDK extension installed, you can update the project templates from the extension itself:</span></span>
 
-   - [<span data-ttu-id="4bc7c-213">A QDK-bővítmény frissítése</span><span class="sxs-lookup"><span data-stu-id="4bc7c-213">Update the QDK extension</span></span>](#update-vs-code-qdk-extension)
-   - <span data-ttu-id="4bc7c-214">A VS Code-ban lépjen a **View** -> **Command Palette** (Nézet > Parancskatalógus) lehetőséghez</span><span class="sxs-lookup"><span data-stu-id="4bc7c-214">In VS Code, go to **View** -> **Command Palette**</span></span>
-   - <span data-ttu-id="4bc7c-215">Válassza a **Q#: Install command line project templates** (Q#: Parancssori projektsablonok telepítése)</span><span class="sxs-lookup"><span data-stu-id="4bc7c-215">Select **Q#: Install command line project templates**</span></span>
-   - <span data-ttu-id="4bc7c-216">Néhány másodperc elteltével megjelenik a projektsablonok sikeres telepítésének megerősítését tartalmazó felugró ablak</span><span class="sxs-lookup"><span data-stu-id="4bc7c-216">After a few seconds you should get a popup confirming "project templates installed successfully"</span></span>
+   - [<span data-ttu-id="3435e-213">A QDK-bővítmény frissítése</span><span class="sxs-lookup"><span data-stu-id="3435e-213">Update the QDK extension</span></span>](#update-vs-code-qdk-extension)
+   - <span data-ttu-id="3435e-214">A VS Code-ban lépjen a **View** -> **Command Palette** (Nézet > Parancskatalógus) lehetőséghez</span><span class="sxs-lookup"><span data-stu-id="3435e-214">In VS Code, go to **View** -> **Command Palette**</span></span>
+   - <span data-ttu-id="3435e-215">Válassza a következőt **Q#: Install command line project templates** (Q#: Parancssori projektsablonok telepítése)</span><span class="sxs-lookup"><span data-stu-id="3435e-215">Select **Q#: Install command line project templates**</span></span>
+   - <span data-ttu-id="3435e-216">Néhány másodperc elteltével megjelenik a projektsablonok sikeres telepítésének megerősítését tartalmazó felugró ablak</span><span class="sxs-lookup"><span data-stu-id="3435e-216">After a few seconds you should get a popup confirming "project templates installed successfully"</span></span>
