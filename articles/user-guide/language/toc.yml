@@ -1,4 +1,4 @@
-- name: 'Típusok a Q#-ban'
+- name: Típusok a Q#-ban
   href: types.md
-- name: Típuskifejezések
+- name: Kifejezések
   href: expressions.md
