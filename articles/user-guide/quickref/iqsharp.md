@@ -8,12 +8,12 @@ uid: microsoft.quantum.guide.quickref.iqsharp
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: fb7b5543ef9222e6bab2b1cbbc7e3ebb54863438
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 1d2d092588e1a5c69d12e5d50377e3e26412c094
+ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87867981"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88863696"
 ---
 # <a name="ino-locq-magic-commands"></a>Q#Magic-parancsok
 
@@ -22,8 +22,10 @@ ms.locfileid: "87867981"
 - [`%config`](xref:microsoft.quantum.iqsharp.magic-ref.config): Lehetővé teszi a konfigurációs beállítások beállítását vagy lekérdezését.
 - [`%estimate`](xref:microsoft.quantum.iqsharp.magic-ref.estimate): Egy adott függvény vagy művelet futtatása a ResourcesEstimator célszámítógépen.
 - [`%lsmagic`](xref:microsoft.quantum.iqsharp.magic-ref.lsmagic): Az aktuálisan elérhető Magic-parancsok listáját adja vissza.
+- [`%lsopen`](xref:microsoft.quantum.iqsharp.magic-ref.lsopen): A jelenleg megnyitott névtereket és azok aliasait listázza.
 - [`%package`](xref:microsoft.quantum.iqsharp.magic-ref.package): Lehetővé teszi a NuGet-csomagok betöltését.
 - [`%performance`](xref:microsoft.quantum.iqsharp.magic-ref.performance): A kernel aktuális teljesítmény-metrikáit jelenti.
+- [`%project`](xref:microsoft.quantum.iqsharp.magic-ref.project): Lehetővé teszi a projekt-referenciák megtekintését vagy hozzáadását Q# . 
 - [`%simulate`](xref:microsoft.quantum.iqsharp.magic-ref.simulate): Egy adott függvény vagy művelet futtatása a QuantumSimulator célszámítógépen.
 - [`%toffoli`](xref:microsoft.quantum.iqsharp.magic-ref.toffoli): Egy adott függvény vagy művelet futtatása a ToffoliSimulator célszámítógépen.
 - [`%who`](xref:microsoft.quantum.iqsharp.magic-ref.who): Az Q# aktuális munkamenetben elérhető műveletek felsorolása.

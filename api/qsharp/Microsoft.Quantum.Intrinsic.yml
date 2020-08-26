@@ -86,12 +86,7 @@ operations:
 
     > Ezzel a művelettel a-től **eltérő aláírási** konvenciót használ @"microsoft.quantum.intrinsic.r" , és nem tartalmazza a következőhöz tartozó $1/2 $ faktort: @"microsoft.quantum.intrinsic.r1" .
 - uid: microsoft.quantum.intrinsic.random
-  summary: >-
-    A véletlenszerű művelet a bemenetek tömbjét veszi igénybe, és egy véletlenszerűen kiválasztott indexet ad vissza a tömbben `Int` .
-
-    Egy adott index kiválasztásának valószínűsége az adott indexben lévő tömb elem értékével arányos.
-
-    A nullával egyenlő tömb elemek figyelmen kívül lesznek hagyva, és a rendszer soha nem adja vissza az indexeket. Ha bármely tömb elem nullánál kisebb, vagy ha egy tömb elem nem nullánál nagyobb, akkor a művelet meghiúsul.
+  summary: "\n> [!WARNING]\n> Elavult\n\nA véletlenszerűség elavult. Használja @\"microsoft.quantum.random.drawcategorical\" helyette."
 - uid: microsoft.quantum.intrinsic.reset
   summary: Egyetlen qubit esetén a méri azt, és gondoskodik róla, hogy a (z) | 0 ⟩ állapotban legyen, hogy biztonságosan kiszabadítható legyen.
 - uid: microsoft.quantum.intrinsic.resetall
@@ -157,9 +152,9 @@ operations:
 
     \end{align}
 metadata:
-  ms.openlocfilehash: c0be1da035393f32fa2949214d79ecb8a4c5ccb3
-  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.openlocfilehash: 87002c73fd66a4b05e690daec1bed37d09708118
+  ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 07/02/2020
-  ms.locfileid: "85885236"
+  ms.lasthandoff: 08/25/2020
+  ms.locfileid: "88862711"

@@ -1,6 +1,7 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.diagnostics
 name: Microsoft.Quantum.Diagnostics
+summary: " # <a name=\"summary\"></a>Összegzés\n Ez a névtér diagnosztikai célokra használható függvényeket és műveleteket tartalmaz, beleértve az érvényesítési műveleteket és a jogcím-függvényeket."
 functions:
 - uid: microsoft.quantum.diagnostics.allequalityfactb
   summary: Azt állítja, hogy a logikai értékek két tömbje egyenlő.
@@ -35,6 +36,10 @@ functions:
 - uid: microsoft.quantum.diagnostics.nearequalityfactd
   summary: Azt állítja, hogy egy klasszikus lebegőpontos érték a várt értékkel rendelkezik a 1e-10 kis tűréshatára alapján.
 operations:
+- uid: microsoft.quantum.diagnostics.allowatmostncallsca
+  summary: A művelet és a adjoint egyik hívása között azt állítja be, hogy egy adott művelet csak bizonyos számú alkalommal legyen meghívva.
+- uid: microsoft.quantum.diagnostics.allowatmostnqubits
+  summary: A művelet és a adjoint meghívása között a azt állítja, hogy a további qubits száma a using utasítások használatával történik.
 - uid: microsoft.quantum.diagnostics.assertallzero
   summary: Azt állítja, hogy a megadott qubits mind a $ \ket {0} $ állapotban vannak.
 - uid: microsoft.quantum.diagnostics.assertallzerowithintolerance
@@ -67,6 +72,8 @@ operations:
     Ezért ennek a műveletnek csak egyetlen hívással kell rendelkeznie minden tesztelt művelethez, de kétszer annyi qubits kell lefoglalni.
 
     Ezzel az állítással biztosítható például, hogy egy adott művelet optimalizált verziója azonos módon viselkedik a naiv megvalósításával, vagy egy olyan művelet, amely egy tartományon kívüli adatbevitelt hajt végre, ismert esetekkel egyetért.
+- uid: microsoft.quantum.diagnostics.assertphase
+  summary: Azt állítja be, hogy az egyenlő prioritású állapot fázisában a várt érték szerepel.
 - uid: microsoft.quantum.diagnostics.assertqubit
   summary: Azt állítja be, hogy a qubit a `q` Pauli Z operátor várt eigenstate van.
 - uid: microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance
@@ -74,23 +81,24 @@ operations:
     Azt állítja be, hogy a qubit a várt állapotú.
 
 
-    `expected`összetett vektort jelöl: $ \ket{\psi} = \begin{bmatrix}a & b\end {bmatrix} ^ {\mathrm{T}} $.
+    `expected` összetett vektort jelöl: $ \ket{\psi} = \begin{bmatrix}a & b\end {bmatrix} ^ {\mathrm{T}} $.
 
     A $a $, $b $ értéket képviselő rekordok első eleme a komplex szám valódi része, míg a második a képzeletbeli rész.
 
     Az utolsó argumentum meghatározza azt a tűréshatárt, amellyel az érvényesítés történik.
 - uid: microsoft.quantum.diagnostics.assertqubitwithintolerance
   summary: Azt állítja, hogy a qubit a `q` Pauli Z operátor várt eigenstate található, egy adott toleranciával.
+- uid: microsoft.quantum.diagnostics.dumpoperation
+  summary: A művelet végrehajtásakor az aktuális végrehajtási cél által elérhetővé tett művelet diagnosztika jelenik meg.
 newtypes:
 - uid: microsoft.quantum.diagnostics.enabletestingvianame
   summary: A fordító által felismert attribútum, amelyen keresztül egy alternatív név meghatározható, amelyet a rendszer a típus vagy a meghívásos tesztelési célú betöltéskor használhat.
 - uid: microsoft.quantum.diagnostics.test
   summary: A fordító által felismert attribútum, amely egy egység tesztének megjelölésére szolgál.
-summary: " # <a name=\"summary\"></a>Összefoglalás\n Ez a névtér diagnosztikai célokra használható függvényeket és műveleteket tartalmaz, beleértve az érvényesítési műveleteket és a jogcím-függvényeket."
 metadata:
-  ms.openlocfilehash: c8e1cd7f3458e736a47749dd057174eb4961c31d
-  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.openlocfilehash: 16c457188160a3e0d2b4d04b40af0dabbbdc0f0a
+  ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 07/02/2020
-  ms.locfileid: "85884579"
+  ms.lasthandoff: 08/25/2020
+  ms.locfileid: "88863050"

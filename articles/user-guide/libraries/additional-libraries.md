@@ -9,20 +9,20 @@ uid: microsoft.quantum.libraries.using
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: ef88ca765a394a7092eb0a60bf6f3615c082ef6a
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: c558e25bf0d906ba6480cd7c41d3ece4ea97c2d1
+ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869579"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88863087"
 ---
 # <a name="using-additional-no-locq-libraries"></a>További Q# kódtárak használata
 
 A Quantum Development Kit további, tartományra jellemző funkciókat biztosít a projektekhez adható _NuGet-csomagokon_ keresztül Q# .
 
-| Q#Erőforrástár  | NuGet-csomag | Megjegyzések |
+| Q# Erőforrástár  | NuGet-csomag | Jegyzetek |
 |---------|---------|--------|
-| [Q#Standard könyvtár](xref:microsoft.quantum.libraries.standard.intro) | [**Microsoft. Quantum. Standard**](https://www.nuget.org/packages/Microsoft.Quantum.Standard) | Alapértelmezés szerint tartalmazza |
+| [Q# Standard könyvtár](xref:microsoft.quantum.libraries.standard.intro) | [**Microsoft. Quantum. Standard**](https://www.nuget.org/packages/Microsoft.Quantum.Standard) | Alapértelmezés szerint tartalmazza |
 | [Kvantumkémiai kódtár](xref:microsoft.quantum.chemistry.concepts.intro) | [**Microsoft.Quantum.Chemistry**](https://www.nuget.org/packages/Microsoft.Quantum.Chemistry) | |
 | [Kvantumnumerikus kódtár](xref:microsoft.quantum.numerics.intro) | [**Microsoft. Quantum. numerikus számok**](https://www.nuget.org/packages/Microsoft.Quantum.Numerics) | |
 | [Kvantum gépi tanulási kódtár](xref:microsoft.quantum.libraries.machine-learning.intro) | [**Microsoft.Quantum.MachineLearning**](https://www.nuget.org/packages/Microsoft.Quantum.MachineLearning) | |
@@ -33,7 +33,7 @@ Miután telepítette a Quantum Development Kit-t az előnyben részesített kör
 > Egyes Q# könyvtárak jól használhatók olyan további eszközökkel, amelyek a programok mellett működnek Q# , vagy amelyek integrálva vannak a gazdagép alkalmazásaival.
 > A [kémia könyvtár telepítési útmutatója](xref:microsoft.quantum.chemistry.concepts.installation) például leírja, hogyan használhatja a [ **Microsoft. Quantum. kémia** csomagot](https://www.nuget.org/packages/Microsoft.Quantum.Chemistry) a NWChem számítási kémia platformmal, és hogyan telepítheti a `qdk-chem` parancssori eszközöket a kvantum-kémiai adatmennyiségek használatához.
 
-## <a name="no-locq-command-line-applications-or-net-interopability"></a>[Q#parancssori alkalmazások vagy .NET-együttműködés](#tab/tabid-csproj)
+## <a name="no-locq-applications-or-net-interopability"></a>[Q# alkalmazások vagy .NET-együttműködés](#tab/tabid-csproj)
 
 **Parancssor vagy Visual Studio code:** Ha a parancssort saját vagy a Visual Studio Code-ból szeretné használni, a `dotnet` paranccsal hozzáadhat egy NuGet-csomagot a projekthez.
 A [**Microsoft. Quantum. numerikus**](https://www.nuget.org/packages/Microsoft.Quantum.Numerics) csomagok hozzáadásához például futtassa a következő parancsot:

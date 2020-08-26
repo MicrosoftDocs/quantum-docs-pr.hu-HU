@@ -9,12 +9,12 @@ uid: microsoft.quantum.quickstarts.qrng
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 8db892091794cb1166e41744572d8938d975abf2
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: d80f1c640ac7ddb0104ccbbb6de6d0e26ba05fd6
+ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869766"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88863625"
 ---
 # <a name="tutorial-implement-a-quantum-random-number-generator-in-q"></a>Oktatóanyag: Kvantum-véletlenszámgenerátor implementálása a Q#-ban\#
 
@@ -23,11 +23,11 @@ A-ben írt kvantum-algoritmus egyszerű példája Q# egy kvantum véletlenszám-
 ## <a name="prerequisites"></a>Előfeltételek
 
 - A Microsoft [Quantum Development Kit](xref:microsoft.quantum.install).
-- Hozzon létre egy Q# projektet [ Q# a parancssorból](xref:microsoft.quantum.install.standalone)vagy egy [Python-gazda program](xref:microsoft.quantum.install.python) vagy [C#-gazda program](xref:microsoft.quantum.install.cs)használatával.
+- Hozzon létre egy Q# projektet egy [ Q# alkalmazáshoz](xref:microsoft.quantum.install.standalone), egy [Python-gazda programhoz](xref:microsoft.quantum.install.python)vagy egy [C#-gazdagéphez](xref:microsoft.quantum.install.cs).
 
 ## <a name="write-a-no-locq-operation"></a>Művelet írása Q#
 
-### <a name="no-locq-operation-code"></a>Q#műveleti kód
+### <a name="no-locq-operation-code"></a>Q# műveleti kód
 
 1. Cserélje le a Program.qs fájl tartalmát a következő kódra:
 
@@ -64,13 +64,13 @@ A mérés eredménye teljesen véletlen, tehát egy véletlen bitből kaptuk meg
 
 ## <a name="creating-a-complete-random-number-generator"></a>Teljes körű véletlenszám-generátor létrehozása
 
-Most, hogy egy Q# véletlenszerű bitet generáló művelettel rendelkezik, felhasználhatjuk egy teljes kvantum véletlenszám-generátor létrehozásához. Használhatjuk a Q# parancssori alkalmazásokat, vagy használhatunk egy gazda programot.
+Most, hogy egy Q# véletlenszerű bitet generáló művelettel rendelkezik, felhasználhatjuk egy teljes kvantum véletlenszám-generátor létrehozásához. Használhatunk egy Q# alkalmazást, vagy használhatunk egy gazda programot.
 
 
 
-### <a name="no-locq-command-line-applications-with-visual-studio-or-visual-studio-code"></a>[Q#Visual Studióval vagy Visual Studio Code-val rendelkező parancssori alkalmazások](#tab/tabid-qsharp)
+### <a name="no-locq-applications-with-visual-studio-or-visual-studio-code"></a>[Q# alkalmazások Visual Studióval vagy Visual Studio Code-ban](#tab/tabid-qsharp)
 
-A teljes Q# parancssori alkalmazás létrehozásához adja hozzá a következő belépési pontot a Q# programhoz: 
+A teljes alkalmazás létrehozásához Q# adja hozzá a következő belépési pontot a Q# programhoz: 
 
 :::code language="qsharp" source="~/quantum/samples/getting-started/qrng/Qrng.qs" range="17-33":::
 
@@ -92,13 +92,13 @@ A későbbi futtatásokhoz az összeállítást nem kell megismételni. Futtatá
 dotnet run --no-build
 ```
 
-### <a name="python-with-visual-studio-code-or-the-command-line"></a>[Python a Visual Studio Code-dal vagy a parancssorból](#tab/tabid-python)
+### <a name="python-with-visual-studio-code-or-the-command-prompt"></a>[Python a Visual Studio Code vagy a parancssorral](#tab/tabid-python)
 
 Ha az új Q# programot a Pythonból szeretné futtatni, mentse a következő kódot `host.py` :
 
 :::code language="python" source="~/quantum/samples/interoperability/qrng/host.py" range="11-30":::
 
-Ezután a parancssorból futtathatja a Python-gazdaprogramot:
+Ezután futtathatja a Python-gazda programot a parancssorból:
 
 ```bash
 $ python host.py
@@ -112,7 +112,7 @@ Az új Q# program c#-ból való futtatásához módosítsa `Driver.cs` a követk
 
 :::code language="csharp" source="~/quantum/samples/interoperability/qrng/Host.cs" range="4-39":::
 
-Ezután a parancssorból futtathatja a C#-gazdaprogramot (Visual Studióban nyomja le az F5 billentyűt):
+Ezután futtathatja a C#-gazda programot a parancssorból (a Visual Studióban nyomja le az F5 billentyűt):
 
 ```bash
 $ dotnet run

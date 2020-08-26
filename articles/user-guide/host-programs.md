@@ -9,12 +9,12 @@ uid: microsoft.quantum.guide.host-programs
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 8e3fa83700417a4ffaf9e3be91796c9e9513b253
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: e44a366b7eea133499beb44dbb338a02174c0073
+ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869732"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88863207"
 ---
 # <a name="ways-to-run-a-no-locq-program"></a>Programok futtatásának módjai Q#
 
@@ -25,7 +25,7 @@ Ezen az oldalon elmagyarázza, hogy mi történik a Q# program futtatásakor, é
 Az elsődleges különbség az, hogy a Q# következőket lehet futtatni:
 - önálló alkalmazásként, ahol az az Q# egyetlen érintett nyelv, és a program közvetlenül hívja meg a programot. Két metódus valójában a következő kategóriába tartozik:
   - a parancssori felület
-  - Q#Jupyter notebookok
+  - Q# Jupyter notebookok
 - egy további, Pythonban vagy .NET nyelven írt (pl. C# vagy F #) *befogadó programmal*, amely ezután meghívja a programot, és folytatja a visszaadott eredmények feldolgozását.
 
 Ha szeretné jobban megérteni ezeket a folyamatokat és azok különbségeit, tekintse meg Q# az egyszerű programot, és hasonlítsa össze a végrehajtható módszereket.
@@ -122,7 +122,7 @@ Fenntartjuk a Jupyter-jegyzetfüzetek önálló alkalmazását az Q# utolsó sz�
 > [!NOTE]
 > Habár nem mutatjuk be ezeket a példákat, a végrehajtási módszerek közötti egyetlen egység, hogy a programon belülről kinyomtatott összes üzenet Q# (például: [`Message`](xref:microsoft.quantum.intrinsic.message) vagy [`DumpMachine`](xref:microsoft.quantum.diagnostics.dumpmachine) ) általában mindig a megfelelő konzolra lesz kinyomtatva.
 
-## <a name="no-locq-from-the-command-line"></a>Q#a parancssorból
+## <a name="no-locq-from-the-command-prompt"></a>Q# a parancssorból
 A programok írásához legkönnyebben elsajátíthatja az első lépéseket, Q# hogy elkerülje a különálló fájlok és a második nyelv használatának elkerülését.
 A Visual Studio Code vagy a Visual Studio és a QDK bővítmény lehetővé teszi a zökkenőmentes munkafolyamatot, amelyben a Q# callables-t csak egyetlen Q# fájlból futtatjuk.
 
@@ -130,7 +130,7 @@ Ebben az esetben végső soron a program végrehajtásának meghívása a követ
 ```dotnetcli
 dotnet run
 ```
-a parancssorban.
+parancsot a parancssorban.
 A legegyszerűbb munkafolyamat az, amikor a terminál címtárának helye megegyezik a fájl nevével Q# , amely könnyen kezelhető a Q# fájl szerkesztésével együtt a vs Code integrált termináljának használatával, például:.
 A [ `dotnet run` parancs](https://docs.microsoft.com/dotnet/core/tools/dotnet-run) azonban számos lehetőséget is elfogad, és a program más helyről is futtatható, ha egyszerűen megadja a `--project <PATH>` Q# fájl helyét.
 
@@ -157,7 +157,7 @@ namespace NamespaceName {
 }
 ```
 
-Most pedig a `dotnet run` parancssorból érkező hívás `MeasureSuperposition` fut, és a visszaadott érték közvetlenül a terminálra lesz kinyomtatva.
+Most a `dotnet run` parancssorból érkező hívás a `MeasureSuperposition` futtatáshoz vezet, és a visszaadott érték közvetlenül a terminálra lesz kinyomtatva.
 Így a rendszer `One` vagy kinyomtatja a következőt: `Zero` . 
 
 Vegye figyelembe, hogy nem számít, hogy ha több callables van definiálva, csak a `MeasureSuperposition` futtatásra kerül.
@@ -179,7 +179,7 @@ Egy ilyen művelet a következőképpen írható
 ahol a visszaadott érték a mérési eredmények tömbje.
 Vegye figyelembe, hogy [`ApplyToEach`](xref:microsoft.quantum.canon.applytoeach) [`ForEach`](xref:microsoft.quantum.arrays.foreach) a és [`Microsoft.Quantum.Canon`](xref:microsoft.quantum.canon) a [`Microsoft.Quantum.Arrays`](xref:microsoft.quantum.arrays) névterek esetében további `open` utasításokra van szükség mindegyikhez.
 
-Ha az `@EntryPoint()` attribútumot az új művelet előtt helyezi át (vegye figyelembe, hogy egy fájlban csak egy ilyen sor lehet), és a futtatásának megkísérlése egyszerűen `dotnet run` olyan hibaüzenetet eredményez, amely azt jelzi, hogy milyen további parancssori kapcsolók szükségesek, és hogyan fejezheti ki őket.
+Ha az `@EntryPoint()` attribútumot az új művelet előtt helyezi át (vegye figyelembe, hogy egy fájlban csak egy ilyen sor lehet), és a futtatására tett kísérlet egyszerűen `dotnet run` olyan hibaüzenetet eredményez, amely azt jelzi, hogy milyen további parancssori kapcsolók szükségesek, és hogyan fejezheti ki őket.
 
 A parancssor általános formátuma ténylegesen `dotnet run [options]` , a hívható argumentumok pedig itt vannak megadva.
 Ebben az esetben az argumentum `n` hiányzik, és azt mutatja, hogy meg kell adnia a beállítást `-n <n>` . A qubits való futtatáshoz `MeasureSuperpositionArray` ezért használjuk a következőt: `n=4`
@@ -203,7 +203,7 @@ A hibaüzenet más lehetőségeket is tartalmaz, amelyek használhatók, beleér
 
 ### <a name="different-target-machines"></a>Különböző célszámítógépek
 
-Mivel a műveleteik eredményei a tényleges qubits a várt eredmények voltak, egyértelmű, hogy a parancssorból az alapértelmezett célszámítógép a teljes állapotú quauntum szimulátor `QuantumSimulator` .
+Mivel a műveleteik eredményei a tényleges qubits a várt eredmények voltak, egyértelmű, hogy a parancssorból az alapértelmezett célszámítógép a teljes állapotú kvantum-szimulátor `QuantumSimulator` .
 Azonban arra is utasíthatja a callables, hogy egy adott célszámítógépen fusson a `--simulator` (vagy a gyorsírással) lehetőséggel `-s` .
 
 Futtathatja például a következőt [`ResourcesEstimator`](xref:microsoft.quantum.machines.resources-estimator) :
@@ -238,7 +238,7 @@ Ahogy azt röviden említettük a `--project` kapcsolóval, a [ `dotnet run` par
 Ha mindkét típusú beállítást megadja, a `dotnet` -specifikus beállításokat elsőként kell megadni, majd egy elválasztó karakter `--` , majd a Q# -specifikus beállításokat.
 Például a specifiying egy elérési utat a fenti művelethez tartozó qubits együtt hajthat végre `dotnet run --project <PATH> -- -n <n>` .
 
-## <a name="no-locq-with-host-programs"></a>Q#gazdagép-programokkal
+## <a name="no-locq-with-host-programs"></a>Q# gazdagép-programokkal
 
 Ha a Q# fájl a kezünkben van, a művelet vagy a függvény közvetlenül a parancssorból való meghívására szolgáló alternatíva egy másik klasszikus nyelven üzemelő *gazda program* használata. Pontosabban megteheti a Python vagy a .NET nyelv, például a C# vagy az F # kombinációját (a rövidség kedvéért csak a C# adatokat fogjuk részletezni).
 Az együttműködési képesség engedélyezéséhez valamivel több beállítás szükséges, de ezek a részletek a [telepítési útmutatókban](xref:microsoft.quantum.install)találhatók.
@@ -256,7 +256,7 @@ Az általános séma itt látható, és megbeszéljük a Python és a C# adott i
 <img src="../media/hostprograms_host_program_diagram.png" alt="Q# program from a host program" width="700">
 
 > [!NOTE]
-> A `@EntryPoint()` Q# parancssori alkalmazásokhoz használt attribútum nem használható gazda programokkal.
+> Az `@EntryPoint()` Q# alkalmazásokhoz használt attribútum nem használható a gazdagép-programokkal.
 > A rendszer hibát jelez, ha az Q# egy gazdagép által hívott fájlban szerepel. 
 
 A különböző gazdagépekkel való munkavégzéshez nincs szükség módosításra a `*.qs` Q# fájlokhoz.
@@ -332,7 +332,7 @@ print(multi_qubit_resources)
 
 a következőhöz hasonló kimenetet eredményez:
 
-```python
+```output
 Single qubit:
 1
 {'CNOT': 0, 'QubitClifford': 1, 'R': 0, 'Measure': 1, 'T': 0, 'Depth': 0, 'Width': 1, 'BorrowedWidth': 0}
@@ -341,6 +341,56 @@ Multiple qubits:
 [0, 1, 1, 1]
 {'CNOT': 0, 'QubitClifford': 4, 'R': 0, 'Measure': 4, 'T': 0, 'Depth': 0, 'Width': 4, 'BorrowedWidth': 0}
 ```
+
+#### <a name="using-no-locq-code-from-other-projects-or-packages"></a>Q#Kód használata más projektekről vagy csomagokból
+
+Alapértelmezés szerint a `import qsharp` parancs betölti az `.qs` aktuális mappában található összes fájlt, és a Q# műveleteit és funkcióit elérhetővé teszi a Python-szkripten belülről való használatra.
+
+Q#A kód egy másik mappából való betöltéséhez az [ `qsharp.projects` API](https://docs.microsoft.com/python/qsharp/qsharp.projects.projects) -val egy projektre mutató hivatkozást adhat hozzá `.csproj` Q# (azaz egy projekt, amely hivatkozik `Microsoft.Quantum.Sdk` ).
+Ez a parancs lefordítja a `.qs` mappában található összes fájlt, amely tartalmazza a `.csproj` és almappáit. Emellett rekurzív módon betölti az `PackageReference` adott fájlban hivatkozott vagy projekteken keresztül hivatkozott csomagokat is Q# `ProjectReference` `.csproj` .
+
+A következő Python-kód például egy külső projektet importál, amely az aktuális mappához viszonyított elérési útra hivatkozik, és meghívja az egyik Q# műveletét:
+
+```python
+import qsharp
+qsharp.projects.add("../qrng/Qrng.csproj")
+from Qrng import SampleQuantumRandomNumberGenerator
+print(f"Qrng result: {SampleQuantumRandomNumberGenerator.simulate()}")
+```
+
+Ez a következőhöz hasonló kimenetet eredményez:
+
+```output
+Adding reference to project: ../qrng/Qrng.csproj
+Qrng result: 0
+```
+
+A kódot tartalmazó külső csomagok betöltéséhez Q# használja az [ `qsharp.packages` API](https://docs.microsoft.com/python/qsharp/qsharp.packages.packages)-t.
+
+Ha az Q# aktuális mappában található kód külső projekttől vagy csomagtól függ, a futtatásakor hibák jelenhetnek meg `import qsharp` , mivel a függőségek még nincsenek betöltve.
+A szükséges külső csomagok vagy projektek a parancsban való betöltéséhez győződjön meg arról, Q# `import qsharp` hogy a Python-szkripttel rendelkező mappa tartalmaz egy `.csproj` hivatkozást tartalmazó fájlt `Microsoft.Quantum.Sdk` . A ben `.csproj` adja hozzá a tulajdonságot a következőhöz: `<IQSharpLoadAutomatically>true</IQSharpLoadAutomatically>` `<PropertyGroup>` . Ez Q# a művelet arra utasítja, hogy rekurzív módon töltse be `ProjectReference` `PackageReference` `.csproj` a parancsban található összes vagy elemet `import qsharp` .
+
+Íme például egy egyszerű `.csproj` fájl, amely a Q# csomag automatikus betöltését okozza `Microsoft.Quantum.Chemistry` :
+
+```xml
+<Project Sdk="Microsoft.Quantum.Sdk/0.12.20072031">
+    <PropertyGroup>
+        <OutputType>Library</OutputType>
+        <TargetFramework>netstandard2.1</TargetFramework>
+        <IQSharpLoadAutomatically>true</IQSharpLoadAutomatically>
+    </PropertyGroup>
+    <ItemGroup>
+        <PackageReference Include="Microsoft.Quantum.Chemistry" Version="0.12.20072031" />
+    </ItemGroup>
+</Project>
+```
+
+> [!NOTE]
+> Jelenleg ezt az egyéni `<IQSharpLoadAutomatically>` tulajdonságot a Python-gazdagépek igénylik, de a jövőben ez a `.csproj` Python-szkripttel megegyező mappában található fájl alapértelmezett viselkedése lehet.
+
+> [!NOTE]
+> A rendszer jelenleg a `<QsharpCompile>` `.csproj` következő beállítást veszi figyelembe a Python-gazdagépek esetében, és a mappában található összes `.qs` fájl `.csproj` (beleértve az almappákat is) be van töltve és le van fordítva. `.csproj`A beállítások támogatása a jövőben is javulni fog (további részletekért lásd: [iqsharp # 277](https://github.com/microsoft/iqsharp/issues/277) ).
+
 
 ### <a name="c"></a>[C#](#tab/tabid-csharp)
 
@@ -359,7 +409,7 @@ using NamespaceName;                              // make the Q# namespace avail
 ```
 
 Ezután deklaráljuk a C#-névteret, néhány más bitet és darabot (lásd az alábbi teljes kódrészletet), majd a klasszikus programozást (például a callables vonatkozó számítási argumentumokat Q# ).
-Az utóbbi nem szükséges az esetünkben, de az ilyen jellegű használatról a .net-es [együttműködési minta](https://github.com/microsoft/Quantum/tree/master/samples/interoperability/dotnet)tartalmaz példát.
+Az utóbbi nem szükséges az esetünkben, de az ilyen jellegű használatról a .net-es  [együttműködési minta](https://github.com/microsoft/Quantum/tree/master/samples/interoperability/dotnet)tartalmaz példát.
 
 #### <a name="target-machines"></a>Célgépek
 
@@ -526,8 +576,8 @@ BorrowedWidth   0
 
 ***
 
-## <a name="no-locq-jupyter-notebooks"></a>Q#Jupyter notebookok
-Q#A Jupyter notebookok az I Q# kernelt használják, amely lehetővé teszi az callables egyetlen jegyzetfüzetben való definiálását, fordítását és futtatását Q# ---az összes útmutató, Megjegyzés és egyéb tartalom mellett.
+## <a name="no-locq-jupyter-notebooks"></a>Q# Jupyter notebookok
+Q# A Jupyter notebookok az I Q# kernelt használják, amely lehetővé teszi az callables egyetlen jegyzetfüzetben való definiálását, fordítását és futtatását Q# ---az összes útmutató, Megjegyzés és egyéb tartalom mellett.
 Ez azt jelenti, hogy habár lehetséges a fájlok tartalmának importálása és használata `*.qs` Q# , nem szükségesek a végrehajtási modellben.
 
 Itt részletesen ismertetjük, hogyan futtatjuk a Q# fent meghatározott műveleteket, de a Jupyter notebookok használatának szélesebb körű bemutatása a Q# [notebookok bevezetője Q# és Jupyter](https://github.com/microsoft/Quantum/blob/master/samples/getting-started/intro-to-iqsharp/Notebook.ipynb).
@@ -546,7 +596,7 @@ Ha egy cellát egy ilyen utasítással futtat, a névterek definíciói a munkat
 
 Hasonlóképpen, a definiált műveletekhez csak a Q# kód írása és a cella futtatása szükséges.
 
-<img src="../media/hostprograms_jupyter_op_def_crop.png" alt="Jupyter cell defining Q# operations" width="600">
+<img src="../media/hostprograms_jupyter_op_def_crop.png" alt="Jupyter cell defining Q# operations" width="773">
 
 A kimenet ezután felsorolja ezeket a műveleteket, amelyek ezután meghívhatók a jövőbeli cellákból.
 
@@ -555,12 +605,49 @@ A kimenet ezután felsorolja ezeket a műveleteket, amelyek ezután meghívható
 Az adott célszámítógépeken futó műveletek futtatásának funkciói az [I Q# Magic parancsok](xref:microsoft.quantum.guide.quickref.iqsharp)segítségével érhetők el.
 Például a a (z) `%simulate` `QuantumSimulator` és a következőt `%estimate` használja `ResourcesEstimator` :
 
-<img src="../media/hostprograms_jupyter_no_args_sim_est_crop.png" alt="Simulate and estimate resources Jupyter cell" width="500">
+<img src="../media/hostprograms_jupyter_no_args_sim_est_crop.png" alt="Jupyter cell simulating a Q# operation and running resource estimation" width="773">
 
 ### <a name="passing-inputs-to-functions-and-operations"></a>Bemenetek átadása a függvényeknek és műveleteknek
 
-Jelenleg a végrehajtási mágikus parancsok csak olyan műveletekkel használhatók, amelyek nem rendelkeznek argumentumokkal. Tehát a futtatáshoz `MeasureSuperpositionArray` definiálnia kell egy "burkoló" műveletet, amely ezután meghívja a műveletet a következő argumentumokkal:
+Ahhoz, hogy a műveletek továbbítva legyenek a Q# műveletekhez, az argumentumok párokként adhatók át `key=value` a végrehajtási Magic parancsnak.
+Tehát a következő `MeasureSuperpositionArray` négy qubits futtatható `%simulate MeasureSuperpositionArray n=4` :
 
-<img src="../media/hostprograms_jupyter_wrapper_def_sim_crop.png" alt="Wrapper function and simulate Jupyter cell" width="550">
+<img src="../media/hostprograms_jupyter_args_sim_crop.png" alt="Jupyter cell simulating a Q# operation with arguments" width="773">
 
-Ez a művelet természetesen a `%estimate` és más végrehajtási parancsokkal is használható.
+Ez a minta a `%estimate` és más végrehajtási parancsokkal is használható.
+
+### <a name="using-no-locq-code-from-other-projects-or-packages"></a>Q#Kód használata más projektekről vagy csomagokból
+
+Alapértelmezés szerint a Q# Jupyter notebook betölti az `.qs` aktuális mappában található összes fájlt, és a Q# műveleteit és funkcióit elérhetővé teszi a notebookon belülről való használatra. A [ `%who` Magic parancs](xref:microsoft.quantum.iqsharp.magic-ref.who) felsorolja az összes jelenleg elérhető Q# műveletet és funkciót.
+
+Q#A kód egy másik mappából való betöltéséhez használhatja a [ `%project` Magic parancsot](xref:microsoft.quantum.iqsharp.magic-ref.project) a `.csproj` projekthez tartozó fájlra mutató hivatkozás hozzáadásához Q# (azaz a projekt, amely hivatkozik `Microsoft.Quantum.Sdk` ). Ez a parancs lefordítja a `.qs` `.csproj` (és almappákat) tartalmazó mappában található összes fájlt. Emellett rekurzív módon betölti az `PackageReference` adott fájlban hivatkozott vagy projekteken keresztül hivatkozott csomagokat is Q# `ProjectReference` `.csproj` . 
+
+A következő cellák például egy Q# külső projektből származó műveletet szimulálnak, ahol a projekt elérési útja az aktuális mappához képest hivatkozik:
+
+<img src="../media/hostprograms_jupyter_project_crop.png" alt="Jupyter cell simulating a Q# operation from an external project" width="773">
+
+A kódot tartalmazó külső csomagok betöltéséhez Q# használja a [ `%package` Magic parancsot](xref:microsoft.quantum.iqsharp.magic-ref.package).
+A csomagok betöltése a csomag részét képező szerelvényekben található bármely egyéni mágikus parancsot vagy kódolókat is elérhetővé tesz.
+
+Ha külső csomagokat vagy projekteket szeretne betölteni a Q# Jegyzetfüzet intialization, győződjön meg arról, hogy a notebook mappa tartalmaz egy `.csproj` hivatkozást tartalmazó fájlt `Microsoft.Quantum.Sdk` . A ben `.csproj` adja hozzá a tulajdonságot a következőhöz: `<IQSharpLoadAutomatically>true</IQSharpLoadAutomatically>` `<PropertyGroup>` . Ez Q# arra utasítja a rendszer, hogy rekurzív módon töltse be a `ProjectReference` `PackageReference` `.csproj` Jegyzetfüzet betöltési idején található bármely vagy elemeket.
+
+Íme például egy egyszerű `.csproj` fájl, amely a Q# csomag automatikus betöltését okozza `Microsoft.Quantum.Chemistry` :
+
+```xml
+<Project Sdk="Microsoft.Quantum.Sdk/0.12.20072031">
+    <PropertyGroup>
+        <OutputType>Library</OutputType>
+        <TargetFramework>netstandard2.1</TargetFramework>
+        <IQSharpLoadAutomatically>true</IQSharpLoadAutomatically>
+    </PropertyGroup>
+    <ItemGroup>
+        <PackageReference Include="Microsoft.Quantum.Chemistry" Version="0.12.20072031" />
+    </ItemGroup>
+</Project>
+```
+
+> [!NOTE]
+> Jelenleg ezt az egyéni `<IQSharpLoadAutomatically>` tulajdonságot Q# Jupyter notebook gazdagépek igénylik, de a jövőben ez lehet egy, a `.csproj` Jegyzetfüzet-fájllal azonos mappában található fájl alapértelmezett viselkedése.
+
+> [!NOTE]
+> Jelenleg a `<QsharpCompile>` `.csproj` Jupyter notebook gazdagépek figyelmen kívül hagyják a beállítást Q# , és a `.qs` mappában található összes fájl `.csproj` (beleértve az almappákat is) be van töltve és le van fordítva. `.csproj`A beállítások támogatása a jövőben is javulni fog (további részletekért lásd: [iqsharp # 277](https://github.com/microsoft/iqsharp/issues/277) ).

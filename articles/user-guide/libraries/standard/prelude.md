@@ -2,19 +2,19 @@
 title: Belső műveletek és függvények a QDK
 description: Ismerje meg a QDK belső műveleteit és funkcióit, beleértve a klasszikus funkciókat, valamint az egységes, rotációs és mérési műveleteket.
 author: QuantumWriter
-uid: microsoft.quantum.libraries.standard.prelude
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
+uid: microsoft.quantum.libraries.standard.prelude
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 283504a5f5635a4996c804e514a6f52eb4966d22
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 4eb10e82a64381c503703be440be90e60f3a8622
+ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868440"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88863730"
 ---
 # <a name="the-prelude"></a>A bevezetés #
 
@@ -128,27 +128,27 @@ A <xref:microsoft.quantum.intrinsic.rfrac> művelet a megadott Pauli-tengely kö
 Eltér attól, <xref:microsoft.quantum.intrinsic.r> hogy az elforgatási szög két típusú bemenetként van megadva `Int` , dyadic-frakcióként értelmezve.
 Így `RFrac` az aláírással rendelkezik `((Pauli, Int, Int, Qubit) => Unit is Adj + Ctl)` .
 Implementálja az qubit egységes $ \exp (i \pi k \sigma/2 ^ n) $ értéket, ahol a $ \sigma $ az első argumentumnak megfelelő Pauli-mátrix, $k $ a második argumentum, és $n $ a harmadik argumentum.
-`RFrac(_,k,n,_)`ugyanaz, mint a ( `R(_,-πk/2^n,_)` ). Megjegyzendő, hogy a szög a frakció *negatív* értéke.
+`RFrac(_,k,n,_)` ugyanaz, mint a ( `R(_,-πk/2^n,_)` ). Megjegyzendő, hogy a szög a frakció *negatív* értéke.
 
 A <xref:microsoft.quantum.intrinsic.rx> művelet egy rotációs műveletet valósít meg a Pauli $X $ tengely körül.
 Aláírással rendelkezik `((Double, Qubit) => Unit is Adj + Ctl)` .
-`Rx(_, _)`ugyanaz, mint `R(PauliX, _, _)` .
+`Rx(_, _)` ugyanaz, mint `R(PauliX, _, _)` .
 
 A <xref:microsoft.quantum.intrinsic.ry> művelet egy rotációs műveletet valósít meg a Pauli $Y $ tengely körül.
 Aláírással rendelkezik `((Double, Qubit) => Unit is Adj + Ctl)` .
-`Ry(_, _)`ugyanaz, mint `R(PauliY,_ , _)` .
+`Ry(_, _)` ugyanaz, mint `R(PauliY,_ , _)` .
 
 A <xref:microsoft.quantum.intrinsic.rz> művelet egy rotációs műveletet valósít meg a Pauli $Z $ tengely körül.
 Aláírással rendelkezik `((Double, Qubit) => Unit is Adj + Ctl)` .
-`Rz(_, _)`ugyanaz, mint `R(PauliZ, _, _)` .
+`Rz(_, _)` ugyanaz, mint `R(PauliZ, _, _)` .
 
 A <xref:microsoft.quantum.intrinsic.r1> művelet egy rotációt valósít meg a $ \ket {1} $, a $-$1 eigenstate $Z $ érték körüli megadott összeggel.
 Aláírással rendelkezik `((Double, Qubit) => Unit is Adj + Ctl)` .
-`R1(phi,_)`ugyanaz, mint amit a `R(PauliZ,phi,_)` követ `R(PauliI,-phi,_)` .
+`R1(phi,_)` ugyanaz, mint amit a `R(PauliZ,phi,_)` követ `R(PauliI,-phi,_)` .
 
 A <xref:microsoft.quantum.intrinsic.r1frac> művelet egy töredékes rotációt valósít meg a Z = 1 eigenstate körüli megadott összeggel.
 Aláírással rendelkezik `((Int,Int, Qubit) => Unit is Adj + Ctl)` .
-`R1Frac(k,n,_)`ugyanaz, mint amit a `RFrac(PauliZ,-k.n+1,_)` követ `RFrac(PauliI,k,n+1,_)` .
+`R1Frac(k,n,_)` ugyanaz, mint amit a `RFrac(PauliZ,-k.n+1,_)` követ `RFrac(PauliI,k,n+1,_)` .
 
 Alább látható egy példa egy rotációs műveletre (az ebben az esetben a Pauli $Z $ tengelyen, ebben a példányban), amely a Bloch szférára van leképezve:
 
@@ -160,17 +160,17 @@ A fenti qubit műveletek mellett a Prelude számos több qubit műveletet is meg
 
 Először a <xref:microsoft.quantum.intrinsic.cnot> művelet elvégzi a standard szintű vezérelt- `NOT` Gate, \begin{Equation} \operatorname{CNOT} \mathrel{: =} \begin{bmatrix} 1 & 0 & 0 & 0 \\ \\ 0 & 1 & 0 & 0 \\ \\ 0 & 0 & 0 & 1 \\ \\ 0 & 0 & 1 & 0 \end{bmatrix}.
 \end{Equation} aláírással rendelkezik `((Qubit, Qubit) => Unit is Adj + Ctl)` , ami azt jelenti, hogy a $ \operatorname{CNOT} $ unitarily két önálló qubits.
-`CNOT(q1, q2)`ugyanaz, mint `(Controlled X)([q1], q2)` .
+`CNOT(q1, q2)` ugyanaz, mint `(Controlled X)([q1], q2)` .
 Mivel az elválasztó `Controlled` lehetővé teszi a regisztrációt, a tömb szövegkonstans használatával `[q1]` jelezheti, hogy csak az egyetlen vezérlőt szeretnénk használni.
 
 A <xref:microsoft.quantum.intrinsic.ccnot> művelet kétszeresen vezérelt nem kaput, más néven a Toffoli kaput hajt végre.
 Aláírással rendelkezik `((Qubit, Qubit, Qubit) => Unit is Adj + Ctl)` .
-`CCNOT(q1, q2, q3)`ugyanaz, mint `(Controlled X)([q1, q2], q3)` .
+`CCNOT(q1, q2, q3)` ugyanaz, mint `(Controlled X)([q1, q2], q3)` .
 
 A <xref:microsoft.quantum.intrinsic.swap> művelet felcseréli a két qubits Quantum állapotait.
 Ez azt is megvalósítja, hogy implementálja az egységes mátrix \begin{Equation} \operatorname{SWAP} \mathrel{: =} \begin{bmatrix} 1 & 0 & 0 & 0 \\ \\ 0 & 0 & 1 & 0 \\ \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 0 & \\ 1 \end{bmatrix}.
 \end{Equation} aláírása `((Qubit, Qubit) => Unit is Adj + Ctl)` .
-`SWAP(q1,q2)`egyenértékű a következővel, `CNOT(q1, q2)` `CNOT(q2, q1)` és utána `CNOT(q1, q2)` .
+`SWAP(q1,q2)` egyenértékű a következővel, `CNOT(q1, q2)` `CNOT(q2, q1)` és utána `CNOT(q1, q2)` .
 
 > [!NOTE]
 > A SWAP-kapu *nem* egyezik meg a típussal rendelkező változó elemeinek átrendezésével `Qubit[]` .
@@ -202,7 +202,7 @@ A mérési műveletek sem a, `Adjoint` sem a nem működőt támogatják `Contro
 
 A <xref:microsoft.quantum.intrinsic.measure> művelet egy vagy több qubits közös mérését végzi a Pauli-operátorok megadott termékében.
 Ha a Pauli tömb és a qubit tömb eltérő hosszúságú, akkor a művelet sikertelen lesz.
-`Measure`aláírással rendelkezik `((Pauli[], Qubit[]) => Result)` .
+`Measure` aláírással rendelkezik `((Pauli[], Qubit[]) => Result)` .
 
 Vegye figyelembe, hogy a közös mérések nem egyeznek meg egyenként a qubit mérésével.
 Vegyük például a következő állapotot: $ \ket {11} = \ket {1} \otimes \Ket {1} = X\otimes X \ket {00} $.
@@ -215,11 +215,11 @@ Ezt a tulajdonságot később kell megtekinteni, ahogy a hibajavításról van s
 A kényelem érdekében a bevezetés két további műveletet is biztosít a qubits méréséhez.
 Először is, mivel az qubit mérések végrehajtása meglehetősen gyakori, a bevezetés egy gyorsírást határoz meg ebben az esetben.
 A <xref:microsoft.quantum.intrinsic.m> művelet a Pauli $Z $ operátort méri egyetlen qubit, és aláírással rendelkezik `(Qubit => Result)` .
-`M(q)`egyenértékű a következővel: `Measure([PauliZ], [q])` .
+`M(q)` egyenértékű a következővel: `Measure([PauliZ], [q])` .
 
 A a <xref:microsoft.quantum.measurement.multim> Pauli $Z $ operátort a qubits minden egyes tömbje számára *külön* méri, és az egyes qubit kapott értékek *tömbjét* adja vissza `Result` .
 Bizonyos esetekben ez optimalizálható. Rendelkezik aláírással ( `Qubit[] => Result[])` .
-`MultiM(qs)`egyenértékű a következővel:
+`MultiM(qs)` egyenértékű a következővel:
 
 ```qsharp
 mutable rs = new Result[Length(qs)];

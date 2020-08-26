@@ -1,0 +1,64 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.diagnostics.allowatmostncallsca
+name: AllowAtMostNCallsCA
+type: operation
+namespace: Microsoft.Quantum.Diagnostics
+summary: A művelet és a adjoint egyik hívása között azt állítja be, hogy egy adott művelet csak bizonyos számú alkalommal legyen meghívva.
+remarks: Lehetséges, hogy ezt a műveletet egy nem op-vel rendelkező célok helyettesítik, amelyek nem támogatják azt.
+examples: >-
+  A következő kódrészlet meghiúsul, amikor a rendszer végrehajtja a diagnosztikai szolgáltatást támogató gépeken:
+
+
+  ```Q#
+
+  using (register = Qubit[4]) {
+      within {
+          AllowAtMostNCallsCA(3, H, "Too many calls to H.");
+      } apply {
+          // Fails since this calls H four times, rather than the
+          // allowed maximum of three.
+          ApplyToEach(H, register);
+      }
+  }
+
+  ```
+syntax: "operation AllowAtMostNCallsCA (nTimes : Int, op : ('TInput => 'TOutput is Adj + Ctl), message : String) : Unit"
+input:
+  content: "(nTimes : Int, op : ('TInput => 'TOutput is Adj + Ctl), message : String)"
+  types:
+  - name: nTimes
+    summary: A meghívható maximális számú idő `op` .
+    isPrimitive: true
+    uid: Int
+  - name: op
+    summary: Egy művelet, amelynek a hívásait korlátozni kell.
+    isOperation: true
+    input:
+      types:
+      - uid: "'TInput"
+        isLocal: true
+    output:
+      types:
+      - uid: "'TOutput"
+        isLocal: true
+    functors:
+    - Adjoint
+    - Controlled
+  - name: message
+    summary: Hiba esetén megjelenítendő üzenet.
+    isPrimitive: true
+    uid: String
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+metadata:
+  ms.openlocfilehash: 05a5791a9ec42aad2a2e90bb048204c642e68511
+  ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+  ms.translationtype: MT
+  ms.contentlocale: hu-HU
+  ms.lasthandoff: 08/25/2020
+  ms.locfileid: "88864182"

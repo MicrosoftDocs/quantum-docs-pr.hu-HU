@@ -1,5 +1,5 @@
 ---
-title: A felakadás megismeréseQ#
+title: A felakadás megismerése Q#
 description: Megtudhatja, hogyan írhat Quantum programot a alkalmazásban Q# . Bell-állapotot jelző alkalmazás fejlesztése a Quantum Development Kit (QDK) használatával
 author: geduardo
 ms.author: v-edsanc@microsoft.com
@@ -9,12 +9,12 @@ uid: microsoft.quantum.write-program
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: c66d26b5ea253d6fc2633fbe52fa35ba703d185d
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: d815a9a25b8ba5e9489b6d3d27fb0d64ab4aaa1d
+ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869698"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88863436"
 ---
 # <a name="tutorial-explore-entanglement-with-q"></a>Oktatóanyag: Összefonódások megismerése Q\# nyelven
 
@@ -52,11 +52,11 @@ Most már készen áll annak bemutatására, hogy Q# ez hogyan fejezi ki ezt a v
 
 ## <a name="creating-a-no-locq-project"></a>Projekt létrehozása Q#
 
-Első lépésként hozzon létre egy új Q# projektet. Ebben az oktatóanyagban a környezetet a VS Code-ot használó [parancssori alkalmazások](xref:microsoft.quantum.install.standalone)alapján fogjuk használni.
+Első lépésként hozzon létre egy új Q# projektet. Ebben az oktatóanyagban ezt a környezetet fogjuk használni a [ Q# vs Code-alkalmazások](xref:microsoft.quantum.install.standalone)alapján.
 
 Új projekt létrehozásához a VS Code-ban: 
 
-1. Kattintson **View**  ->  a**parancs paletta** megtekintése elemre, majd válassza a ** Q# : új projekt létrehozása**lehetőséget.
+1. Kattintson a **View (Nézet)**  -> **Command Palette (Parancskatalógus)** elemre, és válassza a **Q#: Create New Project (Q#: Új projekt létrehozása)** lehetőséget.
 2. Kattintson a **Standalone console application (Különálló konzolalkalmazás)** elemre.
 3. Keresse meg a projekt mentési helyét, majd kattintson a **Create Project (Projekt létrehozása)** lehetőségre.
 4. A projekt sikeres létrehozását követően kattintson az **Open new project... (Új projekt megnyitása...)** lehetőségre a jobb alsó sarokban.
@@ -125,7 +125,7 @@ A kvantumműveletek átalakítják a qubitek állapotát. Bizonyos esetekben a h
 
 Ezután a `SetQubitState` művelet hatásának szemléltetésére a rendszer hozzáad egy `TestBellState` műveletet. Ennek a műveletnek a bemenete egy `Zero` vagy `One`. A művelet néhányszor meghívja a `SetQubitState` műveletet ezzel a bemenettel, és megszámolja, hogy a qubit mérése hányszor adott `Zero`, és hányszor `One` eredményt. Természetesen a `TestBellState` művelet első szimulációjától egy olyan kimenetet várunk, amely azt mutatja, hogy minden `Zero` bemeneti paraméterrel rendelkező qubit a `Zero` eredményt adja vissza, és minden `One` bemeneti paraméterrel rendelkező qubit az `One` eredményt. További bekapcsolás esetén a rendszer hozzáad egy kódot, amely `TestBellState` bemutatja a felfekvést és a felakadás.
 
-Adja hozzá az alábbi műveletet a `SetQubitState` fájlhoz, a névtéren belül, a `Bell.qs` művelet végén:
+Adja hozzá az alábbi műveletet a `SetQubitState` fájlhoz, a névtéren belül, a `Program.qs` művelet végén:
 
 ```qsharp
    operation TestBellState(count : Int, initial : Result) : (Int, Int) {
@@ -161,13 +161,13 @@ Alapértelmezés szerint a változói Q# nem változtathatók meg; az értékük
 
 Ha olyan változóra van szüksége, amelynek értéke módosítható (mint a `numOnes` a fenti példában), a `mutable` kulcsszóval deklarálhatja a változót. A módosítható változók értéke a `setQubitState` utasítással módosítható.
 
-A változó típusát mindkét esetben a fordító következteti ki. Q#a változókhoz nem szükséges semmilyen típusú Megjegyzés.
+A változó típusát mindkét esetben a fordító következteti ki. Q# a változókhoz nem szükséges semmilyen típusú Megjegyzés.
 
 #### <a name="about-using-statements-in-q"></a>A `using` Q utasításai\#
 
 Az `using` utasítás szintén speciális Q# . Ezzel foglalhatók le qubitek a kódblokkokhoz. A-ben az Q# összes qubits dinamikusan van lefoglalva és felszabadítva, ahelyett, hogy rögzített erőforrásokkal rendelkezik egy összetett algoritmus teljes élettartama alatt. A `using` utasítás a blokk elején foglal le qubiteket, és a blokk végén felszabadítja őket.
 
-## <a name="execute-the-code-from-the-command-line"></a>A kód végrehajtása a parancssorból
+## <a name="run-the-code-from-the-command-prompt"></a>Futtassa a kódot a parancssorból.
 
 A kód futtatásához meg kell adnia azt a fordítót, *amely* a parancs megadásakor hívható `dotnet run` . Ez a fájl egyszerű módosításával történik Q# egy olyan vonal hozzáadásával, amely `@EntryPoint()` közvetlenül megelőzi a meghívót: a művelet ebben az `TestBellState` esetben. A teljes kódnak a következőket kell tennie:
 
@@ -208,7 +208,7 @@ namespace Bell {
 }
 ```
 
-A program futtatásához `count` a parancssorból meg kell adni és `initial` argumentumokat kell megadni. Választhatja például a következőt: `count = 1000` és `initial = One` . Írja be a következő parancsot:
+A program futtatásához meg kell adni a `count` parancssorból a és a `initial` argumentumot. Választhatja például a következőt: `count = 1000` és `initial = One` . Írja be a következő parancsot:
 
 ```dotnetcli
 dotnet run --count 1000 --initial One
@@ -235,7 +235,7 @@ Test results (# of 0s, # of 1s):
 
 Most nézzük meg, hogyan Q# fejezheti be a qubits a saját pozícióban.  Emlékezzünk arra, hogy a qubitek állapota a 0 és az 1 értéket egyszerre lefedő szuperpozícióban is lehet.  Ennek eléréséhez a `Hadamard` műveletet használjuk. Ha a qubit valamelyik klasszikus állapotban van (amikor a mérések mindig `Zero` vagy mindig `One` értéket adnak vissza), akkor a `Hadamard` vagy `H` művelet olyan állapotba helyezi a qubitet, amelyben a mérések 50%-ban `Zero` és 50%-ban `One` eredményt adnak.  Alapjában véve a qubit úgy képzelhető el, hogy félúton van a `Zero` és az `One` között.  Ilyenkor a `TestBellState` művelet szimulálása esetén azt fogjuk látni, hogy a mérések nagyjából azonos alkalommal adják ki a `Zero` és az `One` értéket.  
 
-### <a name="x-flips-qubit-state"></a>`X`qubit állapotának tükrözése
+### <a name="x-flips-qubit-state"></a>`X` qubit állapotának tükrözése
 
 Először csak megpróbáljuk átállítani a qubitet (tehát ha `Zero` állapotban van, `One` állapotba állítjuk, és fordítva). Ezt úgy érhetjük el, ha végrehajtunk egy `X` műveletet, mielőtt megmérnénk az `TestBellState`-ben:
 
@@ -265,7 +265,7 @@ Test results (# of 0s, # of 1s):
 
 Most vizsgáljuk meg a qubits kvantum-tulajdonságait.
 
-### <a name="h-prepares-superposition"></a>`H`felkészíti a felfekvést
+### <a name="h-prepares-superposition"></a>`H` felkészíti a felfekvést
 
 Mindössze le kell cserélnünk az előző futtatás `X` műveletét egy `H` vagy egy Hadamard-műveletre. Ahelyett, hogy 0-ról 1-re teljesen átállítani a qubitet, csak félig fordítjuk át. A `TestBellState`-ben most így néznek ki a lecserélt sorok:
 
@@ -413,7 +413,7 @@ Test results (# of 0s, # of 1s, # of agreements)
 
 Ahogy az áttekintésben is említettük, az első qubit statisztikái nem változnak (50%-os eséllyel lesz 0 vagy 1), de a második qubit mérésekor __mindig__ ugyanaz az eredmény, mint amit az elsőnél mértünk, mivel a két qubit össze van fonódva!
 
-## <a name="next-steps"></a>Következő lépések
+## <a name="next-steps"></a>További lépések
 
 A megjelenő "a"-ben a a legelterjedtebb számítási algoritmusok segítségével [megtudhatja](xref:microsoft.quantum.quickstarts.search) , hogyan hozhatja létre és futtathatja a következőt: a a legtöbbet használt, legtöbbet a legtöbbet Q# kihasználó program, amely a kvantum-számítástechnikai  
 

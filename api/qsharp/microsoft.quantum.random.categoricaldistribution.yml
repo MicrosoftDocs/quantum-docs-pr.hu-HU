@@ -1,0 +1,41 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.random.categoricaldistribution
+name: CategoricalDistribution
+type: function
+namespace: Microsoft.Quantum.Random
+summary: Egy diszkrét kategorikus eloszlást ad vissza, amely során a rendszer explicit módon megadja az adott kimenetek véges listájának valószínűségét.
+examples: >-
+  A következő Q # kód a 0 értéket jeleníti meg, amelynek a valószínűsége 30% és 1 a valószínűséggel 70%:
+
+
+  ```Q#
+
+  let dist = CategoricalDistribution([0.3, 0.7]);
+
+  Message($"Got sample: {dist::Sample()}");
+
+  ```
+syntax: 'function CategoricalDistribution (probs : Double[]) : Microsoft.Quantum.Random.DiscreteDistribution'
+input:
+  content: '(probs : Double[])'
+  types:
+  - name: probs
+    summary: >-
+      A kategorikus eloszlás minden egyes eredményének valószínűsége.
+
+      Előfordulhat, hogy ezek a valószínűségek nem normalizáltak, de mindegyiknek nem negatívnak kell lennie.
+    isArray: true
+    isPrimitive: true
+    uid: Double
+output:
+  content: Microsoft.Quantum.Random.DiscreteDistribution
+  types:
+  - summary: Az index a `i` valószínűséggel `probs[i] / sum` , ahol `sum` a a `probs` által megadott összeg `Fold(PlusD, 0.0, probs)` .
+    uid: microsoft.quantum.random.discretedistribution
+metadata:
+  ms.openlocfilehash: e81b286a1268e9ad1819a8f77bb375760f95af71
+  ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+  ms.translationtype: MT
+  ms.contentlocale: hu-HU
+  ms.lasthandoff: 08/25/2020
+  ms.locfileid: "88864363"

@@ -1,0 +1,48 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.diagnostics.allowatmostnqubits
+name: AllowAtMostNQubits
+type: operation
+namespace: Microsoft.Quantum.Diagnostics
+summary: A művelet és a adjoint meghívása között a azt állítja, hogy a további qubits száma a using utasítások használatával történik.
+remarks: Lehetséges, hogy ezt a műveletet egy nem op-vel rendelkező célok helyettesítik, amelyek nem támogatják azt.
+examples: >-
+  A következő kódrészlet meghiúsul, amikor a rendszer végrehajtja a diagnosztikai szolgáltatást támogató gépeken:
+
+
+  ```Q#
+
+  within {
+      AllowAtMostNQubits(3, "Too many qubits allocated.");
+  } apply {
+      // Fails since this allocates four qubits.
+      using (register = Qubit[4]) {
+      }
+  }
+
+  ```
+syntax: 'operation AllowAtMostNQubits (nQubits : Int, message : String) : Unit'
+input:
+  content: '(nQubits : Int, message : String)'
+  types:
+  - name: nQubits
+    summary: A lefoglalható qubits maximális száma.
+    isPrimitive: true
+    uid: Int
+  - name: message
+    summary: Hiba esetén megjelenítendő üzenet.
+    isPrimitive: true
+    uid: String
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+metadata:
+  ms.openlocfilehash: 154bcc5f67a44e436e42907d8679c14f68c88021
+  ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+  ms.translationtype: MT
+  ms.contentlocale: hu-HU
+  ms.lasthandoff: 08/25/2020
+  ms.locfileid: "88864157"

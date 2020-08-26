@@ -91,8 +91,8 @@ A használata során Q# a leggyakrabban a legelterjedtebb típusú mérések les
 Ilyen esetekben gyakori, hogy megbeszéljük a Pauli-operátorok mérését, általában egy operátort, például az $ x, Y, z $ vagy $ z \otimes z, x \otimes x, x \otimes Y $ és így tovább.
 
 > [!TIP]
->A-ben a Q# multi-Qubit Pauli-operátorokat általában típusú tömbök jelölik `Pauli[]` .
->Például az $ X \otimes Z Y jelöléséhez \otimes $ használhatja a tömböt `[PauliX, PauliZ, PauliY]` .
+> A-ben a Q# multi-Qubit Pauli-operátorokat általában típusú tömbök jelölik `Pauli[]` .
+> Például az $ X \otimes Z Y jelöléséhez \otimes $ használhatja a tömböt `[PauliX, PauliZ, PauliY]` .
 
 A kiértékelése a Pauli-operátorok esetében különösen gyakori a kvantum-hibák helyesbítésének almezőjében.
 A-ben Q# egy hasonló konvenciót követünk, amely a mérések alternatív nézetét ismerteti.
@@ -122,7 +122,7 @@ A Pauli-mérések jelölése erre az egységes egyenértékűségre hivatkozik, 
 Ezek a mérések az alábbiakban láthatók a kényelem érdekében.
 
 
-|Pauli-mérés – | egységes átalakítás|
+|Pauli-mérés –  | egységes átalakítás  |
 |-------------------|------------------------|
 |$ $ Z |               $\boldone$             |
 |$ $ X | $H               $                    |
@@ -173,15 +173,15 @@ Például:
 $$
 \begin{align}
     \otimes \boldone Z =\begin{bmatrix}
-        1 & 0 & 0 & 0\\\\
-        0 & 1 & 0 & 0\\\\
-        0 & 0 & – 1 & 0\\\\
-        0 & 0 & & – 1 \end{bmatrix} .
+        1 &  0 &  0 &  0 \\\\
+        0 &  1 &  0 &  0 \\\\
+        0 &  0 & – 1 &  0 \\\\
+        0 &  0 & & – 1 \end{bmatrix} .
 \end{align}
 $$
 
 Ahogy korábban is, az ilyen mátrixok egységes átalakítása a \pm 1 eigenvalues által megcímkézett két fél szóközt is ismerteti $ $ .
-Például: $ X \otimes x h = h \otimes (z \otimes z) h h \otimes , $ az identitástól, amely a $ z = HXH $ .
+Például: $ X \otimes x h = h \otimes (z \otimes z) h h \otimes , $  az identitástól, amely a $ z = HXH $ .
 Az qubit esethez hasonlóan mind a kétqubit Pauli-mérések $ u ^ (Z) u-vel írhatók \dagger \otimes \id $ $ 4 \times 4 $ egységes mátrixhoz $ u $ . A következő táblázatban szereplő transzformációk enumerálása.
 
 > [!NOTE]
@@ -189,16 +189,15 @@ Az qubit esethez hasonlóan mind a kétqubit Pauli-mérések $ u ^ (Z) u-vel ír
 > \begin{align}
 >     \operatorname{SWAP } &=
 >     \left( \begin { mátrix}
->1 & 0 & 0 & 0\\\\
->0 & 0 & 1 & 0\\\\
->0 & 1 & 0 & 0\\\\
+>         1 & 0 & 0 & 0 \\\\
+>         0 & 0 & 1 & 0 \\\\
+>         0 & 1 & 0 & 0 \\\\
 >0 & 0 & 0 & 1 > \end { mátrix } \right ) >     \end{align}
 > $$
->a belső művelet szimulálására szolgál [`SWAP`](xref:microsoft.quantum.intrinsic) .
+> a belső művelet szimulálására szolgál [`SWAP`](xref:microsoft.quantum.intrinsic) .
 
-|Pauli-mérés – | egységes átalakítás|
+|Pauli-mérés –     | egységes átalakítás  |
 |----------------------|------------------------|
-|$ \otimes \boldone Z $ | $\boldone \otimes \boldone$|
 |$ \otimes \boldone Z $ | $\boldone\otimes \boldone$|
 |$ \otimes \boldone X $ | $ \otimes \boldone H $|
 |$ \otimes \boldone Y $ | $ HS \dagger \otimes \boldone ^ $|
@@ -240,7 +239,7 @@ A Pauli-operátorok összes ilyen tenser-terméke csak két eigenvalues $ \pm 1 
 A-ben az Q# ilyen mérések a j értéket adják vissza, $ $ Ha a mérés eredménye a $ következő: eigenspace (-1) ^ j $ .
 Mivel a Pauli-mérések beépített funkciója hasznos, Q# mert az ilyen operátorok méréséhez hosszú láncú vezérelt, nem kapuk és átalakítások szükségesek, hogy leírják a diagonalizing U Gate, amely a művelet kiépítéséhez $ $ szükséges a $ Z és a $ $ \id $ .
 Az előre definiált mérések egyikének megadásához nem kell aggódnia, hogy hogyan alakíthatja át az adatokat, hogy a számítási alap a szükséges információkat tartalmazza.
-Q#automatikusan kezeli az összes szükséges átalakítást.
+Q# automatikusan kezeli az összes szükséges átalakítást.
 További információ: [`Measure`](xref:microsoft.quantum.intrinsic.measure) és [`MeasurePaulis`](xref:microsoft.quantum.measurement.measurepaulis) műveletek.
 
 ## <a name="the-no-cloning-theorem"></a>A klónozás nélküli tétel
@@ -257,7 +256,7 @@ Habár a nem klónozási tétel teljes bizonyítéka egy kicsit túl technikai a
 
 Egy ilyen kvantum-számítógép esetében a klónozási műveletet egy egységes mátrixtal kell ismertetni.
 Megtiltjuk a mérést, mivel az sérült a klónozott állapotot.
-A klónozási művelet szimulálása érdekében azt szeretnénk, hogy az egységes mátrix a következő tulajdonságot használja.$$
+A klónozási művelet szimulálása érdekében azt szeretnénk, hogy az egységes mátrix a következő tulajdonságot használja. $$
   U \ket { \psi } \ket { 0 } = \ket { \psi }\ket{\psi}
 $$
 bármilyen állapothoz $ \ket { \psi } $ .
