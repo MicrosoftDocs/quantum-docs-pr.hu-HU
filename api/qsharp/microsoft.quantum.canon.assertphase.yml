@@ -3,42 +3,18 @@ uid: microsoft.quantum.canon.assertphase
 name: AssertPhase
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: >-
-  Azt állítja be, hogy az egyenlő prioritású állapot fázisában a várt érték szerepel.
-
-
-  Pontosabban azt állítja, hogy a $ \frac{e ^ {i t}} {\sqrt{2}} (e ^ {i\phi} \ ket{0} + e ^ {-i\phi} \ ket{1}) $ értékű Quantum állapot $ \phi $ értéke a várt értékkel rendelkezik.
-examples: >-
-  A következő érvényesítés sikeres: `qubit` állapot $ \ket{\psi} = e ^ {i 0.5} \ SQRT {1/2} \ ket{0}+ e ^ {i 0.5} \ SQRT {1/2} \ ket{1}$;
-
-
-  - `AssertPhase(0.0,qubit,10e-10);`
-
-
-  `qubit`állapotban van $ \ket{\psi} = e ^ {i 0.5} \ SQRT {1/2} \ ket{0}+ e ^ {-i 0.5} \ SQRT {1/2} \ ket{1}$;
-
-
-  - `AssertPhase(0.5,qubit,10e-10);`
-
-
-  `qubit`állapotban van $ \ket{\psi} = e ^ {-i 2.2} \ SQRT {1/2} \ ket{0}+ e ^ {i 0.2} \ SQRT {1/2} \ ket{1}$;
-
-
-  - `AssertPhase(-1.2,qubit,10e-10);`
+summary: A AssertPhase elavult. Használja @"microsoft.quantum.diagnostics.assertphase" helyette.
 syntax: 'operation AssertPhase (expected : Double, qubit : Qubit, tolerance : Double) : Unit'
 input:
   content: '(expected : Double, qubit : Qubit, tolerance : Double)'
   types:
   - name: expected
-    summary: 'A várt érték: $ \phi \in (-\pi, \pi] $.'
     isPrimitive: true
     uid: Double
   - name: qubit
-    summary: A várt állapotot tároló qubit.
     isPrimitive: true
     uid: Qubit
   - name: tolerance
-    summary: A tényleges és a várt érték közötti különbség abszolút tűréshatára.
     isPrimitive: true
     uid: Double
 output:
@@ -47,9 +23,9 @@ output:
   - isPrimitive: true
     uid: Unit
 metadata:
-  ms.openlocfilehash: ecfc39806fb1ffe504c76889fb36949b4fee2ed4
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 17fa383f5fd8e710f8c83920abe0727663506bfb
+  ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82674320"
+  ms.lasthandoff: 08/25/2020
+  ms.locfileid: "88863287"

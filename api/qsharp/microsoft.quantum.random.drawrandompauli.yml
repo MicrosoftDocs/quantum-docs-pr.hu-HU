@@ -1,0 +1,23 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.random.drawrandompauli
+name: DrawRandomPauli
+type: operation
+namespace: Microsoft.Quantum.Random
+summary: Egy véletlenszerű Pauli-értéket rajzol.
+syntax: 'operation DrawRandomPauli () : Pauli'
+input:
+  content: ()
+  types: []
+output:
+  content: Pauli
+  types:
+  - summary: '`PauliI` `PauliX` Egyenlő valószínűséggel,,, `PauliY` vagy `PauliZ` értékű.'
+    isPrimitive: true
+    uid: Pauli
+metadata:
+  ms.openlocfilehash: 65fd410442afc0c12e625f38353c86bd1cf053ee
+  ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+  ms.translationtype: MT
+  ms.contentlocale: hu-HU
+  ms.lasthandoff: 08/25/2020
+  ms.locfileid: "88864242"

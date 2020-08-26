@@ -53,9 +53,9 @@ functions:
 - uid: microsoft.quantum.math.complexpolarascomplex
   summary: Komplex számú típust alakít át összetett típusúra `ComplexPolar` `Complex` .
 - uid: microsoft.quantum.math.continuedfractionconvergenti
-  summary: Megkeresi a legközelebb `fraction` lévő, kisebb vagy egyenlő nevezőből álló nevezőt`denominatorBound`
+  summary: Megkeresi a legközelebb `fraction` lévő, kisebb vagy egyenlő nevezőből álló nevezőt `denominatorBound`
 - uid: microsoft.quantum.math.continuedfractionconvergentl
-  summary: Megkeresi a legközelebb `fraction` lévő, kisebb vagy egyenlő nevezőből álló nevezőt`denominatorBound`
+  summary: Megkeresi a legközelebb `fraction` lévő, kisebb vagy egyenlő nevezőből álló nevezőt `denominatorBound`
 - uid: microsoft.quantum.math.cos
   summary: A megadott szög koszinuszát adja vissza.
 - uid: microsoft.quantum.math.cosh
@@ -240,20 +240,20 @@ newtypes:
     Egy összetett szám poláris ábrázolása $c = r e ^ {i t} $.
 - uid: microsoft.quantum.math.fraction
   summary: Az űrlap racionális számát jelöli `p/q` . Az egész szám a `p` rekord első eleme, `q` amely a rekord második eleme.
-summary: " # <a name=\"summary\"></a>Összefoglalás\n Ez a névtér klasszikus matematikai függvényeket és adattípusokat tartalmaz."
+summary: " # <a name=\"summary\"></a>Összegzés\n Ez a névtér klasszikus matematikai függvényeket és adattípusokat tartalmaz."
 operations:
 - uid: microsoft.quantum.math.randomint
-  summary: Egy, a nullánál nagyobb vagy azzal egyenlő, és a megadott felső határértéknél kisebb, egyforma, véletlenszerűen kiválasztott véletlenszerű egész számot hoz létre.
+  summary: "\n> [!WARNING]\n> Elavult\n\nA RandomInt elavult. Használja @\"microsoft.quantum.random.drawrandomint\" helyette."
 - uid: microsoft.quantum.math.randomintpow2
-  summary: Egy véletlenszerű egész számot hoz létre, amely az összes olyan egész számból, amely egy adott számú biten megjeleníthető.
+  summary: "\n> [!WARNING]\n> Elavult\n\nA RandomIntPow2 elavult. Használja @\"microsoft.quantum.random.drawrandomint\" helyette."
 - uid: microsoft.quantum.math.randomreal
-  summary: Egy véletlenszerű valós számot ad vissza, amely nullánál nagyobb vagy egyenlő, és kevesebb mint egy.
+  summary: "\n> [!WARNING]\n> Elavult\n\nA RandomReal elavult. Használja @\"microsoft.quantum.random.drawrandomdouble\" helyette."
 - uid: microsoft.quantum.math.randomsinglequbitpauli
-  summary: A qubit Pauli-operátorok egyikét adja vissza egységesen véletlenszerűen.
+  summary: "\n> [!WARNING]\n> Elavult\n\nA RandomSingleQubitPauli elavult. Használja @\"microsoft.quantum.random.drawrandompauli\" helyette."
 metadata:
-  ms.openlocfilehash: 03b75e3dbaa8be699e58fcbcd13db4fbf1c82f12
-  ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+  ms.openlocfilehash: 9df4513399d0b2d1ac534c7ba106189483ef49cc
+  ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 06/03/2020
-  ms.locfileid: "84326492"
+  ms.lasthandoff: 08/25/2020
+  ms.locfileid: "88863068"

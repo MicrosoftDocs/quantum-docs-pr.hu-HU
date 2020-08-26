@@ -1,0 +1,36 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.random.drawcategorical
+name: DrawCategorical
+type: operation
+namespace: Microsoft.Quantum.Random
+summary: >-
+  Véletlenszerű mintát rajzol egy probablities által meghatározott kategorikus eloszlásból.
+
+
+  Egy adott index kiválasztásának valószínűsége az adott indexben lévő tömb elem értékével arányos.
+
+  A nullával egyenlő tömb elemek figyelmen kívül lesznek hagyva, és a rendszer soha nem adja vissza az indexeket. Ha bármely tömb elem nullánál kisebb, vagy ha egy tömb elem nem nullánál nagyobb, akkor a művelet meghiúsul.
+syntax: 'operation DrawCategorical (probs : Double[]) : Int'
+input:
+  content: '(probs : Double[])'
+  types:
+  - name: probs
+    summary: Egy lebegőpontos számokból álló tömb, amely az egyes indexek kiválasztásának valószínűségével arányos.
+    isArray: true
+    isPrimitive: true
+    uid: Double
+output:
+  content: Int
+  types:
+  - summary: 'Egy egész szám $i $, a következő valószínűséggel: $ \Pr (i) = p_i/\ sum_i p_i $, ahol $p _i $ a $i $ th eleme `probs` .'
+    isPrimitive: true
+    uid: Int
+seeAlso:
+- microsoft.quantum.random.categoricaldistribution
+metadata:
+  ms.openlocfilehash: 1389b62eb1e5e1749abbb605cd7be8ef3925b167
+  ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+  ms.translationtype: MT
+  ms.contentlocale: hu-HU
+  ms.lasthandoff: 08/25/2020
+  ms.locfileid: "88864278"
