@@ -9,12 +9,12 @@ uid: microsoft.quantum.relnotes
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: f94c20281c5a242aac6a731a5091264dc2847712
-ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+ms.openlocfilehash: 70d0c9b61e49d4ee6142edbe2767310403885f01
+ms.sourcegitcommit: 11bd357baeb6ab53a402882979e75964d0869b57
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88863766"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88992258"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>A Microsoft Quantum Development Kit kibocsátási megjegyzései
 
@@ -32,7 +32,7 @@ A verzió a következőket tartalmazza:
 
 - Új [Microsoft. Quantum. Random névtér](xref:microsoft.quantum.random), amely megkönnyíti a véletlenszerű értékek mintavételezését a Q# programokon belülről. ([QuantumLibraries # 311](https://github.com/microsoft/QuantumLibraries/pull/311), [qsharp-Runtime # 328](https://github.com/microsoft/qsharp-runtime/pull/328))
 - Javította a [Microsoft. Quantum. Diagnostics névteret](xref:microsoft.quantum.diagnostics) új [ `DumpOperation` művelettel](xref:microsoft.quantum.diagnostics.dumpoperation), valamint új műveleteket a qubit-kiosztási és az Oracle-hívások korlátozásához. ([QuantumLibraries # 302](https://github.com/microsoft/QuantumLibraries/pull/302))
-- Új [ `%project` Magic-parancs](xref:microsoft.quantum.iqsharp.magic-ref.project) a Q# Pythonban és az [ `qsharp.projects` API](https://docs.microsoft.com/python/qsharp/qsharp.projects.projects) -ban, hogy támogassa az Q# aktuális munkaterület-mappán kívüli projektekre való hivatkozásokat. A szolgáltatás jelenlegi korlátaihoz lásd: [iqsharp # 277](https://github.com/microsoft/iqsharp/issues/277) . 
+- Új [ `%project` Magic-parancs](xref:microsoft.quantum.iqsharp.magic-ref.project) a Q# Pythonban és az [ `qsharp.projects` API](https://docs.microsoft.com/python/qsharp-core/qsharp.projects.projects) -ban, hogy támogassa az Q# aktuális munkaterület-mappán kívüli projektekre való hivatkozásokat. A szolgáltatás jelenlegi korlátaihoz lásd: [iqsharp # 277](https://github.com/microsoft/iqsharp/issues/277) . 
 - Támogatja a fájlok automatikus betöltését `.csproj` az I Q# /Python gazdagépek számára, amely lehetővé teszi, hogy a külső projekt vagy csomag hivatkozásait inicializálási időben lehessen betölteni. További részletekért tekintse meg a [ Q# Python és a Jupyter notebookok](xref:microsoft.quantum.guide.host-programs) használatát ismertető útmutatót.
 - Hozzáadott ErrorCorrection. szindróma minta.
 - A SimpleIsing-hez hangolt kapcsolást adott hozzá.

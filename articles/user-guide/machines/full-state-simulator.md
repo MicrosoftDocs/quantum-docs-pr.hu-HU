@@ -9,16 +9,16 @@ uid: microsoft.quantum.machines.full-state-simulator
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: b15af66123dadae09815cde1966c69b3ce2e9e64
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: a27cece9858d62814b9d80c47e61c5d7d3b8c885
+ms.sourcegitcommit: 11bd357baeb6ab53a402882979e75964d0869b57
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868338"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88992222"
 ---
 # <a name="quantum-development-kit-qdk-full-state-simulator"></a>Quantum Development Kit (QDK) teljes állapotú szimulátor
 
-A QDK teljes állapotú szimulátort biztosít, amely a helyi számítógépen lévő kvantum-gépet szimulálja. A teljes állapot szimulátorral futtathatja és hibakeresést végezhet a-ben írt kvantum-algoritmusokkal, és akár 30 qubits is felhasználhat Q# . A teljes állapot szimulátor hasonló a [LIQ $ UI | \rangle $](http://stationq.github.io/Liquid/) platformon a Microsoft Research szolgáltatásban használt kvantum-szimulátorhoz.
+A QDK teljes állapotú szimulátort biztosít, amely a helyi számítógépen lévő kvantum-gépet szimulálja. A teljes állapot szimulátorral futtathatja és hibakeresést végezhet a-ben írt kvantum-algoritmusokkal, és akár 30 qubits is felhasználhat Q# . A teljes állapot szimulátor hasonló a  [LIQ $ UI | \rangle $](http://stationq.github.io/Liquid/) platformon a Microsoft Research szolgáltatásban használt kvantum-szimulátorhoz.
 
 ## <a name="invoking-and-running-the-full-state-simulator"></a>A teljes állapotú szimulátor meghívása és futtatása
 
@@ -39,7 +39,7 @@ Mivel az `QuantumSimulator` osztály implementálja az <xref:System.IDisposable>
 
 ### <a name="invoking-the-simulator-from-python"></a>A szimulátor meghívása a Pythonból
 
-Használja a [szimulálás ()](https://docs.microsoft.com/python/qsharp/qsharp.loader.qsharpcallable) metódust a Q# Python-könyvtárból az importált Q# művelettel:
+Használja a [szimulálás ()](https://docs.microsoft.com/python/qsharp-core/qsharp.loader.qsharpcallable) metódust a Q# Python-könyvtárból az importált Q# művelettel:
 
 ```python
 qubit_result = myOperation.simulate()

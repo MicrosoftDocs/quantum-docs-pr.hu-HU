@@ -9,12 +9,12 @@ uid: microsoft.quantum.libraries.using
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: c558e25bf0d906ba6480cd7c41d3ece4ea97c2d1
-ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+ms.openlocfilehash: 39bf7dc52f4670a6e4536efc437d001c96f9584a
+ms.sourcegitcommit: 11bd357baeb6ab53a402882979e75964d0869b57
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88863087"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88992139"
 ---
 # <a name="using-additional-no-locq-libraries"></a>További Q# kódtárak használata
 
@@ -83,7 +83,7 @@ Ahhoz, hogy a csomag elérhető legyen a Q# jelenlegi munkaterületen találhat�
 ## <a name="python-interoperability"></a>[Python-együttműködés](#tab/tabid-python)
 
 
-A metódus használatával további csomagokat is használhat egy Python-gazda programban [`qsharp.packages.add`](https://docs.microsoft.com/python/qsharp/qsharp.packages.packages) .
+A metódus használatával további csomagokat is használhat egy Python-gazda programban [`qsharp.packages.add`](https://docs.microsoft.com/python/qsharp-core/qsharp.packages.packages) .
 Ha például a [**Microsoft. Quantum. numerikus**](https://www.nuget.org/packages/Microsoft.Quantum.Numerics) csomagokat szeretné felvenni egy I jegyzetfüzetben való használatra Q# , futtassa a következő Python-kódot:
 
 ```python

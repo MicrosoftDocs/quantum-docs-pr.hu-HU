@@ -9,12 +9,12 @@ uid: microsoft.quantum.guide.host-programs
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: e44a366b7eea133499beb44dbb338a02174c0073
-ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+ms.openlocfilehash: f1eca44dabd72cd107d72d3b9e3ad1081c19c27d
+ms.sourcegitcommit: 11bd357baeb6ab53a402882979e75964d0869b57
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88863207"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88992190"
 ---
 # <a name="ways-to-run-a-no-locq-program"></a>Programok futtatásának módjai Q#
 
@@ -346,7 +346,7 @@ Multiple qubits:
 
 Alapértelmezés szerint a `import qsharp` parancs betölti az `.qs` aktuális mappában található összes fájlt, és a Q# műveleteit és funkcióit elérhetővé teszi a Python-szkripten belülről való használatra.
 
-Q#A kód egy másik mappából való betöltéséhez az [ `qsharp.projects` API](https://docs.microsoft.com/python/qsharp/qsharp.projects.projects) -val egy projektre mutató hivatkozást adhat hozzá `.csproj` Q# (azaz egy projekt, amely hivatkozik `Microsoft.Quantum.Sdk` ).
+Q#A kód egy másik mappából való betöltéséhez az [ `qsharp.projects` API](https://docs.microsoft.com/python/qsharp-core/qsharp.projects.projects) -val egy projektre mutató hivatkozást adhat hozzá `.csproj` Q# (azaz egy projekt, amely hivatkozik `Microsoft.Quantum.Sdk` ).
 Ez a parancs lefordítja a `.qs` mappában található összes fájlt, amely tartalmazza a `.csproj` és almappáit. Emellett rekurzív módon betölti az `PackageReference` adott fájlban hivatkozott vagy projekteken keresztül hivatkozott csomagokat is Q# `ProjectReference` `.csproj` .
 
 A következő Python-kód például egy külső projektet importál, amely az aktuális mappához viszonyított elérési útra hivatkozik, és meghívja az egyik Q# műveletét:
@@ -365,7 +365,7 @@ Adding reference to project: ../qrng/Qrng.csproj
 Qrng result: 0
 ```
 
-A kódot tartalmazó külső csomagok betöltéséhez Q# használja az [ `qsharp.packages` API](https://docs.microsoft.com/python/qsharp/qsharp.packages.packages)-t.
+A kódot tartalmazó külső csomagok betöltéséhez Q# használja az [ `qsharp.packages` API](https://docs.microsoft.com/python/qsharp-core/qsharp.packages.packages)-t.
 
 Ha az Q# aktuális mappában található kód külső projekttől vagy csomagtól függ, a futtatásakor hibák jelenhetnek meg `import qsharp` , mivel a függőségek még nincsenek betöltve.
 A szükséges külső csomagok vagy projektek a parancsban való betöltéséhez győződjön meg arról, Q# `import qsharp` hogy a Python-szkripttel rendelkező mappa tartalmaz egy `.csproj` hivatkozást tartalmazó fájlt `Microsoft.Quantum.Sdk` . A ben `.csproj` adja hozzá a tulajdonságot a következőhöz: `<IQSharpLoadAutomatically>true</IQSharpLoadAutomatically>` `<PropertyGroup>` . Ez Q# a művelet arra utasítja, hogy rekurzív módon töltse be `ProjectReference` `PackageReference` `.csproj` a parancsban található összes vagy elemet `import qsharp` .

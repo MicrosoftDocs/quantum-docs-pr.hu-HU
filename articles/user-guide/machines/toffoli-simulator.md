@@ -9,12 +9,12 @@ uid: microsoft.quantum.machines.toffoli-simulator
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 8a981645703423856e667be7c3dccf5270a5885f
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 6a0885035c12a99ae43533f04cdc95c5c529380a
+ms.sourcegitcommit: 11bd357baeb6ab53a402882979e75964d0869b57
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868100"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88992208"
 ---
 # <a name="quantum-development-kit-qdk-toffoli-simulator"></a>Quantum Development Kit (QDK) Toffoli szimulátor
 
@@ -40,7 +40,7 @@ Vegye figyelembe, hogy a `QuantumSimulator` osztálytól eltérően a `ToffoliSi
 
 ### <a name="invoking-the-toffoli-simulator-from-python"></a>A Toffoli szimulátor meghívása a Pythonból
 
-Használja az [toffoli_simulate ()](https://docs.microsoft.com/python/qsharp/qsharp.loader.qsharpcallable) metódust a Python-könyvtárból az importált Q# művelettel:
+Használja az [toffoli_simulate ()](https://docs.microsoft.com/python/qsharp-core/qsharp.loader.qsharpcallable) metódust a Python-könyvtárból az importált Q# művelettel:
 
 ```python
 qubit_result = myOperation.toffoli_simulate()
@@ -68,7 +68,7 @@ A Toffoli Simulator a következőket támogatja:
 
 * A Forgások és a exponentiated Paulis, `R` például `Exp` a és a, ha az eredményül kapott művelet egyenlő `X` vagy az Identity Matrix.
 * Mérési és [érvényesítési](xref:microsoft.quantum.diagnostics.assertmeasurement) műveletek, de csak a Pauli `Z` alapján. Vegye figyelembe, hogy a mérési művelet valószínűsége mindig **0** vagy **1**; nincs véletlenszerűség a Toffoli-szimulátorban.
-* `DumpMachine`és `DumpRegister` függvények.
+* `DumpMachine` és `DumpRegister` függvények.
 Mindkét függvény az `Z` egyes qubit aktuális állapotának kimenetét adja eredményül, soronként egy qubit.
 
 ## <a name="specifying-the-number-of-qubits"></a>A qubits számának meghatározása
@@ -84,7 +84,7 @@ Például:
     var res = myLargeOperation.Run(sim).Result;
 ```
 
-## <a name="see-also"></a>További információ
+## <a name="see-also"></a>Lásd még
 
 - [Quantum-erőforrások kalkulátora](xref:microsoft.quantum.machines.resources-estimator)
 - [Quantum Trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro)
