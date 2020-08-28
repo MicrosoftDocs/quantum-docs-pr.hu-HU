@@ -10,12 +10,12 @@ uid: microsoft.quantum.install
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 378970dc911ea5a794590f8336ffc6d3f9673285
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 3aafe78d5910027e2836f7dce72c064e75fc4436
+ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
 ms.translationtype: HT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87867573"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88863713"
 ---
 # <a name="install-the-microsoft-quantum-development-kit-qdk"></a>A Microsoft Quantum Development Kit (QDK) telepítése
 
@@ -33,7 +33,7 @@ Az egyes beállításokhoz tartozó munkafolyamatok leírása és összehasonlí
 
 A QDK telepítéséhez és a Q#-projektek létrehozásához válassza ki az Ön által előnyben részesített beállítást:
 
-[Fejlesztés Q# nyelvű parancssori alkalmazásokkal](xref:microsoft.quantum.install.standalone) – Ezt a megközelítést választva a parancssorból használhatja a Q#-ot. Ehhez nincs szükség illesztőprogramra vagy gazdaprogramra, mint az alábbi lehetőségek esetében.
+[Fejlesztés Q#-alkalmazásokkal](xref:microsoft.quantum.install.standalone) – Ezt a megközelítést választva a parancssorból használhatja a Q#-ot. Ehhez nincs szükség illesztőprogramra vagy gazdaprogramra, mint az alábbi lehetőségek esetében.
 
 [Fejlesztés Q# Jupyter-notebookokkal](xref:microsoft.quantum.install.jupyter) – Ezt a környezetet választva Q#-kódot futtathat beágyazott szöveggel rendelkező cellákban, vagy létrehozhat kvantum-számítástechnikai interaktív oktatóanyagokat. 
 

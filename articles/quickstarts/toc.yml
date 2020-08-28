@@ -6,7 +6,7 @@ items:
     items:
       - name: A telepítés áttekintése
         href: index.md
-      - name: Q# nyelvű parancssori alkalmazások
+      - name: Q#-alkalmazások
         href: install-command-line.md
       - name: Q# nyelvű Jupyter-notebookok
         href: install-jupyter.md
