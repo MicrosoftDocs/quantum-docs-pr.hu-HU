@@ -9,12 +9,12 @@ uid: microsoft.quantum.install.cs
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 13d73bdf0287941c89e03ba63869095e5fca4e70
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 24318380e0e63957a51961762a33446fe0121b21
+ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
 ms.translationtype: HT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87867556"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88863669"
 ---
 # <a name="develop-with-no-locq-and-net"></a>Fejlesztés Q#-pal és .NET-tel
 
@@ -25,7 +25,7 @@ Először létrehozunk egy Q#-alkalmazást és egy .NET-gazdagépet, majd bemuta
 
 ## <a name="prerequisites"></a>Előfeltételek
 
-- Telepítse a [Q#-alapú parancssori projektekhez készült](xref:microsoft.quantum.install.standalone) Quantum Development Kitet.
+- Telepítse a [Q#-projektekhez készült](xref:microsoft.quantum.install.standalone) Quantum Development Kitet.
 
 ## <a name="creating-a-no-locq-library-and-a-net-host"></a>Q#-kódtár és .NET-gazdagép létrehozása
 
@@ -34,7 +34,7 @@ Első lépésként hozzon létre projekteket a Q#-kódtárhoz és a .NET-gazdag�
 Kövesse a fejlesztési környezetéhez tartozó fülön található utasításokat.
 Ha a Visual Studiótól vagy a VS Code-tól eltérő szerkesztőt használ, egyszerűen kövesse a parancssor lépéseit.
 
-### <a name="visual-studio-code-or-command-line"></a>[Visual Studio Code vagy parancssor](#tab/tabid-cmdline)
+### <a name="visual-studio-code-or-command-prompt"></a>[Visual Studio Code vagy parancssor](#tab/tabid-cmdline)
 
 - Új Q#-kódtár létrehozása
 
@@ -106,4 +106,4 @@ Ha ezt a műveletet .NET-ből szeretné meghívni egy kvantumszimulátoron, hasz
     
 ## <a name="next-steps"></a>További lépések
 
-Most, hogy a Quantum Development Kit a Q# parancssori programokhoz, valamint a .NET-tel való együttműködéshez is be van állítva, megírhatja és futtathatja [az első kvantumprogramját](xref:microsoft.quantum.quickstarts.qrng).
+Most, hogy a Quantum Development Kit a Q#-alkalmazásokhoz, valamint a .NET-tel való együttműködéshez is be van állítva, megírhatja és futtathatja [az első kvantumprogramját](xref:microsoft.quantum.quickstarts.qrng).

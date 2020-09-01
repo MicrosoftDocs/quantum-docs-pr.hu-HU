@@ -9,12 +9,12 @@ ms.topic: overview
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: ff5eb9984da0b22a65f3919599ee18605a206fa0
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 06198f3b5b806bab49abf9fca38b5d2f15cfb65f
+ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
 ms.translationtype: HT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87867515"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88863743"
 ---
 # <a name="get-started-with-the-quantum-development-kit-qdk"></a>Bevezetés a Quantum Development Kit (QDK) használatába
 
@@ -36,7 +36,7 @@ A kvantumprogramozás gyors megkezdéséhez érdemes kipróbálni az oktatóanya
 * [Az összefonódás megismerése a Q# segítségével](xref:microsoft.quantum.write-program) – Ez az oktatóanyag végigvezeti Önt egy Q#-program megírásán, amely során megismerkedhet a kvantumprogramozás alapvető fogalmaival.
     Ha még nem áll készen a programozásra, akkor is követheti az útmutatót a QDK telepítése nélkül, hogy áttekintést kapjon a Q# programozási nyelvről és a kvantum-számítástechnika alapvető fogalmairól.
 * [Grover keresési algoritmusa](xref:microsoft.quantum.quickstarts.search) – Példaként megismerhet egy olyan Q#-programot, amellyel megtapasztalhatja, hogyan lehet a Q# segítségével olyan kvantumalgoritmusokat összeállítani, amelyek absztrahálják az alacsonyabb szintű kvantumműveleteket.
-    Ez az oktatóanyag végigvezeti a program Q# nyelvű parancssori alkalmazásként való fejlesztésén, amely során a Visual Studiót vagy a Visual Studio Code-ot használhatja.
+    Ez az oktatóanyag végigvezeti a program Q#-alkalmazásként való fejlesztésén, amely során a Visual Studiót vagy a Visual Studio Code-ot használhatja.
 
 ### <a name="learning-further"></a>További ismeretszerzés
 * A [kvantum-számítástechnikával kapcsolatos Microsoft Learn-modulokban](https://docs.microsoft.com/learn/browse/?term=quantum) a saját tempójában, a saját időbeosztása szerint sajátíthatja el a fő alapelveket. Az [első modulban](https://docs.microsoft.com/learn/modules/qsharp-create-first-quantum-development-kit/) megismerheti a kvantumprogramok QDK-val való létrehozásának alapjait.

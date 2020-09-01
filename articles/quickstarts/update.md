@@ -10,12 +10,12 @@ uid: microsoft.quantum.update
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: dd7360961aa728a6aa63b8d8c4e4840f5bf2afe8
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 84782d1628dd100c0939b2b12aa0a9aa8ab2b80e
+ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
 ms.translationtype: HT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87866757"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88863644"
 ---
 # <a name="update-the-microsoft-quantum-development-kit-qdk"></a>A Microsoft Quantum Development Kit (QDK) frissítése
 
@@ -84,9 +84,9 @@ Most már továbbléphet a [Visual Studio QDK-bővítmény frissítéséhez](#up
 
 1. Nyissa meg a frissíteni kívánt projektet tartalmazó mappát a Visual Studio Code-ban.
 2. Válassza a **Terminal (Terminál)**  -> **New Terminal (Új terminál)** lehetőséget.
-3. Kövesse a parancssor használatával történő frissítéshez tartozó utasításokat (közvetlenül ez alatt látható).
+3. Kövesse a parancssorral történő frissítésre vonatkozó utasításokat (közvetlenül ez alatt látható).
 
-### <a name="update-no-locq-projects-using-the-command-line"></a>Q#-projektek frissítése a parancssor használatával
+### <a name="update-no-locq-projects-using-the-command-prompt"></a>Q#-projektek frissítése a parancssor használatával
 
 1. Nyissa meg a fő projektfájlt tartalmazó mappát.
 

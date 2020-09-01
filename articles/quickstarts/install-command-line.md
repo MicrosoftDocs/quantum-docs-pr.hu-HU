@@ -1,5 +1,5 @@
 ---
-title: Fejlesztés Q# nyelvű parancssori alkalmazásokkal
+title: Fejlesztés Q#-alkalmazásokkal
 author: KittyYeungQ
 ms.author: kitty
 ms.date: 4/24/2020
@@ -9,14 +9,14 @@ uid: microsoft.quantum.install.standalone
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 630dc7b8acf2dd8f258eb27dfbc367b812cd1c19
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 6a287dd76162a05d72af7e9d1e46533425283e2a
+ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
 ms.translationtype: HT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87867607"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88863664"
 ---
-# <a name="develop-with-no-locq-command-line-applications"></a>Fejlesztés Q# nyelvű parancssori alkalmazásokkal
+# <a name="develop-with-no-locq-applications"></a>Fejlesztés Q#-alkalmazásokkal
 
 A Q#-programok külön, illesztő nélkül is végrehajthatók olyan gazdanyelveken, mint például a C#, az F# vagy a Python.
 
@@ -26,7 +26,7 @@ A Q#-programok külön, illesztő nélkül is végrehajthatók olyan gazdanyelve
 
 ## <a name="installation"></a>Telepítés
 
-Bár Q# parancssori alkalmazásokat bármilyen IDE-ben létrehozhat, javasoljuk, hogy a Q#-alkalmazások helyi fejlesztéséhez használja a Visual Studio Code-ot (VS Code) vagy a Visual Studio IDE-t. A felhőben, webböngészőn keresztül történő fejlesztéshez a Visual Studio Codespaces használatát javasoljuk. Ha ezekben a környezetekben fejleszt, hozzáférhet a QDK-bővítmény széleskörű funkcióihoz, beleértve a figyelmeztetéseket, a szintaxiselemek kiemelését, a projektsablonokat és egyebeket. 
+Bár Q#-alkalmazásokat bármilyen IDE-ben buildelhet, javasoljuk, hogy a Q#-alkalmazások helyi fejlesztéséhez használja a Visual Studio Code-ot (VS Code) vagy a Visual Studio IDE-t. A felhőben, webböngészőn keresztül történő fejlesztéshez a Visual Studio Codespaces használatát javasoljuk. Ha ezekben a környezetekben fejleszt, hozzáférhet a QDK-bővítmény széleskörű funkcióihoz, beleértve a figyelmeztetéseket, a szintaxiselemek kiemelését, a projektsablonokat és egyebeket. 
 
 A VS Code konfigurálása:
 
@@ -94,7 +94,7 @@ Az alkalmazás futtatása:
 > [!NOTE]
 > Ha egy Visual Studio-megoldásban több projekt is található, a megoldásban foglalt összes projektnek a megoldás mappájában vagy valamelyik almappájában kell lennie.  
 
-### <a name="other-editors-with-the-command-line"></a>[Egyéb, parancssorral rendelkező szerkesztők](#tab/tabid-cmdline)
+### <a name="other-editors-with-the-command-prompt"></a>[Egyéb, parancssorral rendelkező szerkesztők](#tab/tabid-cmdline)
 
 Ellenőrizze a telepítést egy Q# `Hello World`-alkalmazás létrehozásával.
 
