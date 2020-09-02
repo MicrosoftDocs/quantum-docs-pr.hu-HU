@@ -2,24 +2,24 @@
 uid: microsoft.quantum.arithmetic.bigendianaslittleendian
 name: BigEndianAsLittleEndian
 type: function
-namespace: Microsoft.Quantum.Arithmetic
-summary: Egy `BigEndian` qubit-regisztrációt alakít `LittleEndian` át egy qubit-regiszterbe a qubit sorrend megfordításával.
+namespace: microsoft.quantum.arithmetic
+summary: Egy `BigEndian` qubit-regisztrációt alakít át egy `LittleEndian` qubit-regiszterbe a qubit sorrend megfordításával.
 syntax: 'function BigEndianAsLittleEndian (input : Microsoft.Quantum.Arithmetic.BigEndian) : Microsoft.Quantum.Arithmetic.LittleEndian'
 input:
   content: '(input : Microsoft.Quantum.Arithmetic.BigEndian)'
   types:
   - name: input
-    summary: A Qubit- `BigEndian` regisztráció formátuma.
+    summary: A Qubit-regisztráció `BigEndian` formátuma.
     uid: microsoft.quantum.arithmetic.bigendian
 output:
   content: Microsoft.Quantum.Arithmetic.LittleEndian
   types:
-  - summary: A Qubit- `LittleEndian` regisztráció formátuma.
+  - summary: A Qubit-regisztráció `LittleEndian` formátuma.
     uid: microsoft.quantum.arithmetic.littleendian
 metadata:
-  ms.openlocfilehash: 477ddb647a3525a72c98c7c286976ef9efa6ce6f
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 98cbd5e48327c4e8c8a7064e32cf6db8835c93dd
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82675239"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89342346"

@@ -2,19 +2,19 @@
 uid: microsoft.quantum.arithmetic.assertphaselessthan
 name: AssertPhaseLessThan
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
-summary: Azt állítja, hogy `number` a PhaseLittleEndian kódolása kisebb, mint `value`.
+namespace: microsoft.quantum.arithmetic
+summary: Azt állítja, hogy a `number` PhaseLittleEndian kódolása kisebb, mint `value` .
 remarks: A művelet ellenőrzött verziója figyelmen kívül hagyja a vezérlőket.
 syntax: 'operation AssertPhaseLessThan (value : Int, number : Microsoft.Quantum.Arithmetic.PhaseLittleEndian) : Unit'
 input:
   content: '(value : Int, number : Microsoft.Quantum.Arithmetic.PhaseLittleEndian)'
   types:
   - name: value
-    summary: '`number`ennél kisebbnek kell lennie.'
+    summary: '`number` ennél kisebbnek kell lennie.'
     isPrimitive: true
     uid: Int
   - name: number
-    summary: 'Előjel nélküli egész szám, amely a következőhöz képest: `value`.'
+    summary: 'Előjel nélküli egész szám, amely a következőhöz képest: `value` .'
     uid: microsoft.quantum.arithmetic.phaselittleendian
 output:
   content: Unit
@@ -25,9 +25,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: f5943bf2275cf3e94037113595686dd04f12b38e
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 5046e1e5cfb4359f5fa03727fa8da904dde34598
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82679871"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89342465"

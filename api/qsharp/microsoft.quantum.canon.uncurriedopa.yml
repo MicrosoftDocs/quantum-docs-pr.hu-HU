@@ -2,7 +2,7 @@
 uid: microsoft.quantum.canon.uncurriedopa
 name: UncurriedOpA
 type: function
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
   Egy olyan függvény, amely egy műveletet ad vissza, egy új műveletet ad vissza, amely mindkét bemenetet rekordként veszi át.
 
@@ -34,7 +34,7 @@ input:
 output:
   content: (('T, 'U) => Unit is Adj)
   types:
-  - summary: Egy olyan új `op` művelet, `op(t, u)` amely egyenértékű a `(curriedOp(t))(u)`következővel:.
+  - summary: 'Egy olyan új művelet, `op` amely egyenértékű a következővel: `op(t, u)` `(curriedOp(t))(u)` .'
     isOperation: true
     input:
       types:
@@ -56,9 +56,9 @@ typeParameters:
 seeAlso:
 - microsoft.quantum.canon.uncurryop
 metadata:
-  ms.openlocfilehash: 92ec8c1ae333bcd319c7d63f89fb8614f0793d79
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: b85c0be304b8c0fcc2cfa1912445fe45b1347c44
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82677986"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89354841"

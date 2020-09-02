@@ -2,30 +2,30 @@
 uid: microsoft.quantum.simulation.interpolategeneratorsystems
 name: InterpolateGeneratorSystems
 type: function
-namespace: Microsoft.Quantum.Simulation
-summary: A két `TimeDependentGeneratorSystem` `GeneratorSystem`s közötti lineáris interpolációt jelképező értéket adja vissza.
+namespace: microsoft.quantum.simulation
+summary: A `TimeDependentGeneratorSystem` két s közötti lineáris interpolációt jelképező értéket adja vissza `GeneratorSystem` .
 syntax: 'function InterpolateGeneratorSystems (generatorSystemStart : Microsoft.Quantum.Simulation.GeneratorSystem, generatorSystemEnd : Microsoft.Quantum.Simulation.GeneratorSystem) : Microsoft.Quantum.Simulation.TimeDependentGeneratorSystem'
 input:
   content: '(generatorSystemStart : Microsoft.Quantum.Simulation.GeneratorSystem, generatorSystemEnd : Microsoft.Quantum.Simulation.GeneratorSystem)'
   types:
   - name: generatorSystemStart
-    summary: Az indítás `GeneratorSystem`.
+    summary: Az indítás `GeneratorSystem` .
     uid: microsoft.quantum.simulation.generatorsystem
   - name: generatorSystemEnd
-    summary: A vége `GeneratorSystem`.
+    summary: A vége `GeneratorSystem` .
     uid: microsoft.quantum.simulation.generatorsystem
 output:
   content: Microsoft.Quantum.Simulation.TimeDependentGeneratorSystem
   types:
-  - summary: A `TimeDependentGeneratorSystem` egy olyan rendszert képvisel, amely a bemeneti létrehozó rendszerek összege, amelynek súlya $ (1-s) $, `generatorSystemStart` és súlyozás $s $. `generatorSystemEnd`
+  - summary: A egy olyan `TimeDependentGeneratorSystem` rendszert képvisel, amely a bemeneti létrehozó rendszerek összege, amelynek súlya $ (1-s) $, `generatorSystemStart` és súlyozás $s $ `generatorSystemEnd` .
     uid: microsoft.quantum.simulation.timedependentgeneratorsystem
 seeAlso:
 - microsoft.quantum.canon.generatorsystem
 - microsoft.quantum.canon.timedependentgeneratorsystem
 metadata:
-  ms.openlocfilehash: ba7fdf0d9c2a08e8a330700fcab7b54f9347e9cb
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: adced7798e4bdcf9a73cb3a68f6b26302ec8ae5c
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82682631"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89329834"
