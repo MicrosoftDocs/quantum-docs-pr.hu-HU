@@ -2,16 +2,16 @@
 uid: microsoft.quantum.arithmetic.assertprobint
 name: AssertProbInt
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: >-
   Azt állítja, hogy a kvantum-regiszter adott állapotának valószínűsége a várt érték.
 
 
   Adott egy $n $-qubit Quantum State $ \ket{\psi} = \sum ^ {2 ^ n-1} _ {j = 0} \ alpha_j \ket{j} $, azt állítja, hogy a $ | \ alpha_j | ^ 2 $ a (z) $j $ indexelt állapotú $ \ket{j} $ indexben a várt érték szerepel.
 examples: >-
-  Tegyük fel `qubits` , hogy a regisztráció egy 3 qubit Quantum State $ \ket{\psi} = \ SQRT {1/8} \ ket{0}+ \ SQRT {7/8} \ ket{6}$ értékű, kis endian formátumban kódolja.
+  Tegyük fel, hogy a `qubits` regisztráció egy 3 qubit Quantum State $ \ket{\psi} = \ SQRT {1/8} \ ket {0} + \ SQRT {7/8} \ ket {6} $ értékű, kis endian formátumban kódolja.
 
-  Ez azt jelenti, hogy a szám állapota{0}${0}\ket{0}\equiv\ket{0}\ket \ket $ és{6}${0}\ket{1}\equiv\ket{1}\ket \ket $. Ezután a következő érvényesítések sikeresek lesznek:
+  Ez azt jelenti, hogy a szám állapota $ \ket {0} \equiv\ket {0} \ket {0} \ket {0} $ és $ \ket {6} \equiv\ket {0} \ket {1} \ket {1} $. Ezután a következő érvényesítések sikeresek lesznek:
 
 
   - `AssertProbInt(0,0.125,qubits,10e-10);`
@@ -22,7 +22,7 @@ input:
   content: '(stateIndex : Int, expected : Double, qubits : Microsoft.Quantum.Arithmetic.LittleEndian, tolerance : Double)'
   types:
   - name: stateIndex
-    summary: Egy `LittleEndian` regiszter által jelzett, $ \ket{j} $ állapotú $ $j $ index.
+    summary: Egy regiszter által jelzett, $ \ket{j} $ állapotú $ $j $ index `LittleEndian` .
     isPrimitive: true
     uid: Int
   - name: expected
@@ -42,9 +42,9 @@ output:
   - isPrimitive: true
     uid: Unit
 metadata:
-  ms.openlocfilehash: 247dcb78921bfe5df96c56b74e251d0413cfab3d
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: e5269b46849da17602447491e77e756e999cb3d9
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82675251"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89342329"

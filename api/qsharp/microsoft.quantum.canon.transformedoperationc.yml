@@ -2,10 +2,10 @@
 uid: microsoft.quantum.canon.transformedoperationc
 name: TransformedOperationC
 type: function
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: Egy függvény és egy művelet miatt egy új műveletet ad vissza, amelynek a bemenetét az adott függvény átalakítja.
 examples: >-
-  A következő hívás @"Microsoft.Quantum.Arithmetic.LittleEndianAsBigEndian" egy olyan művelet átalakítására szolgál, @"Microsoft.Quantum.Arithmetic.BigEndian" amelynek bemenetei egy olyan műveletbe kerülnek, @"Microsoft.Quantum.Arithmetic.LittleEndian"amely a típusú bemeneteket fogadja el:
+  A következő hívás @"Microsoft.Quantum.Arithmetic.LittleEndianAsBigEndian" egy olyan művelet átalakítására szolgál, amelynek @"Microsoft.Quantum.Arithmetic.BigEndian" bemenetei egy olyan műveletbe kerülnek, amely a típusú bemeneteket fogadja el @"Microsoft.Quantum.Arithmetic.LittleEndian" :
 
 
   ```qsharp
@@ -44,7 +44,7 @@ input:
 output:
   content: ('U => Unit is Ctl)
   types:
-  - summary: Egy új művelet tbat hívja `fn` a bemenetét, majd átadja az eredményül `op`kapott kimenetet.
+  - summary: Egy új művelet tbat hívja a `fn` bemenetét, majd átadja az eredményül kapott kimenetet `op` .
     isOperation: true
     input:
       types:
@@ -63,9 +63,9 @@ seeAlso:
 - applywithinputtransformation
 - compose
 metadata:
-  ms.openlocfilehash: 7f71aa5549ee813d0e53ed5b043479a7e7f3ffb6
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 669504254894fcc4bcde7b7591d3d71d66097b8f
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82678043"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89354960"

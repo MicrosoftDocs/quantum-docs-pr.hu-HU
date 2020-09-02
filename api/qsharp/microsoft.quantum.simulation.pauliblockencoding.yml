@@ -2,13 +2,13 @@
 uid: microsoft.quantum.simulation.pauliblockencoding
 name: PauliBlockEncoding
 type: function
-namespace: Microsoft.Quantum.Simulation
+namespace: microsoft.quantum.simulation
 summary: >-
   Létrehoz egy blokk-Encoding egységes Hamilton.
 
 
   A Hamilton $H = \ sum_ {j} \ alpha_j P_j $ kifejezést $P _j $ értékkel rendelkező, az összes valós hatékonyságú $ \ alpha_j $ nevű összeg írja le.
-remarks: Ezt a rendszer a $ \ sum_ {j} \sqrt{\ alpha_j/\alpha}\ket{j} $ állapotának előkészítésével és előkészítésével, valamint a szorzás által vezérelt egységes <xref:microsoft.quantum.preparation.statepreparationpositivecoefficients> és <xref:microsoft.quantum.canon.multiplexoperationsfromgenerator>a létrehozásával szerzi be.
+remarks: Ezt a rendszer a $ \ sum_ {j} \sqrt{\ alpha_j/\alpha}\ket{j} $ állapotának előkészítésével és előkészítésével, valamint a szorzás által vezérelt egységes és a létrehozásával szerzi be <xref:microsoft.quantum.preparation.statepreparationpositivecoefficients> <xref:microsoft.quantum.canon.multiplexoperationsfromgenerator> .
 syntax: 'function PauliBlockEncoding (generatorSystem : Microsoft.Quantum.Simulation.GeneratorSystem) : (Double, Microsoft.Quantum.Simulation.BlockEncodingReflection)'
 input:
   content: '(generatorSystem : Microsoft.Quantum.Simulation.GeneratorSystem)'
@@ -29,15 +29,15 @@ output:
       ## <a name="second-parameter"></a>Második paraméter
 
 
-      A `BlockEncodingReflection` hamilton egységes $U $ $H $. Mivel ez az egységes megfelel a $U ^ 2 = I $-nek, azt is tükrözi.
+      A `BlockEncodingReflection` Hamilton egységes $U $ $H $. Mivel ez az egységes megfelel a $U ^ 2 = I $-nek, azt is tükrözi.
     types:
     - isPrimitive: true
       uid: Double
     - uid: microsoft.quantum.simulation.blockencodingreflection
 metadata:
-  ms.openlocfilehash: 75b614fa23f2e00a3a960224d79905106fb06070
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: a7d259a2d09cb26d46976132589ab6693530cb63
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82682549"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89329715"

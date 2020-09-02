@@ -2,12 +2,12 @@
 uid: microsoft.quantum.arithmetic.dividei
 name: DivideI
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: >-
   Két kvantum egész számot oszt ki.
 
 
-  `xs`a maradékot `xs - floor(xs/ys) * ys` fogja tárolni `result` , és `floor(xs/ys)`megtartja.
+  `xs` a maradékot fogja tárolni `xs - floor(xs/ys) * ys` , és `result` megtartja `floor(xs/ys)` .
 remarks: >-
   Standard eltolási és kivonási megközelítést használ a divízió megvalósításához.
 
@@ -23,7 +23,7 @@ input:
     summary: $n $ bites osztó
     uid: microsoft.quantum.arithmetic.littleendian
   - name: result
-    summary: $n $-bit eredménynek kezdetben a $ \ket{0}$ állapotban kell lennie, és a rendszer az egész szám felosztásával váltja fel.
+    summary: $n $-bit eredménynek kezdetben a $ \ket $ állapotban kell lennie, {0} és a rendszer az egész szám felosztásával váltja fel.
     uid: microsoft.quantum.arithmetic.littleendian
 output:
   content: Unit
@@ -34,9 +34,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 05f4b6766910af24a956bfa14bca615633ed1031
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 1a426cc92da9db4c1155d2653451031ca37e3965
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82679694"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89342159"
