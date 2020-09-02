@@ -2,14 +2,14 @@
 uid: microsoft.quantum.simulation.quantumwalkbyqubitization
 name: QuantumWalkByQubitization
 type: function
-namespace: Microsoft.Quantum.Simulation
+namespace: microsoft.quantum.simulation
 summary: >-
   A blokk kódolású tükröződést egy Quantum walkre konvertálja.
 
 
-  Egy olyan `BlockEncodingReflection` egységes $U $ által képviselt, amely egyes operátorok $H $ kamatot kódol, egy quantum Walk $W $ értéket tartalmaz, amely a $ \pm e ^ {\pm i\sin ^{-1}(H)} $ spektrumát tartalmazza.
+  Egy olyan `BlockEncodingReflection` egységes $U $ által képviselt, amely egyes operátorok $H $ kamatot kódol, egy Quantum walk $W $ értéket tartalmaz, amely a $ \pm e ^ {\pm i\sin ^ {-1} (H)} $ spektrumát tartalmazza.
 syntax: 'function QuantumWalkByQubitization (blockEncoding : Microsoft.Quantum.Simulation.BlockEncodingReflection) : ((Qubit[], Qubit[]) => Unit is Adj + Ctl)'
-references: '- Hamilton szimuláció a Qubitization Guang felfüggeszti Hao Low, Isaac L. ahttps://arxiv.org/abs/1610.06546'
+references: '- Hamilton szimuláció a Qubitization Guang felfüggeszti Hao Low, Isaac L. a https://arxiv.org/abs/1610.06546'
 input:
   content: '(blockEncoding : Microsoft.Quantum.Simulation.BlockEncodingReflection)'
   types:
@@ -18,7 +18,7 @@ input:
 output:
   content: ((Qubit[], Qubit[]) => Unit is Adj + Ctl)
   types:
-  - summary: Egy Quantum Walk $W $, amely a regisztereken közösen működik, `a` és `s` blokkolja a kódolást $H $, és tartalmazza a $ \pm e ^ {\Pm i\sin ^{-1}(H)} $ spektrumát.
+  - summary: Egy Quantum Walk $W $, amely a regisztereken közösen működik `a` `s` , és blokkolja a kódolást $H $, és tartalmazza a $ \pm e ^ {\pm i\sin ^ {-1} (H)} $ spektrumát.
     isOperation: true
     input:
       types:
@@ -39,9 +39,9 @@ seeAlso:
 - microsoft.quantum.canon.blockencoding
 - microsoft.quantum.canon.blockencodingreflection
 metadata:
-  ms.openlocfilehash: e2a6c0469b730140b8584e8cff2aad2d68254793
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: cbe89f5020c50fc653db7d629e618c317d528d94
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82682500"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89328406"

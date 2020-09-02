@@ -2,7 +2,7 @@
 uid: microsoft.quantum.arithmetic.evaluatepolynomialfxp
 name: EvaluatePolynomialFxP
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: A polinom kiértékelése rögzített pontú ábrázolásban.
 syntax: 'operation EvaluatePolynomialFxP (coefficients : Double[], fpx : Microsoft.Quantum.Arithmetic.FixedPoint, result : Microsoft.Quantum.Arithmetic.FixedPoint) : Unit'
 input:
@@ -17,7 +17,7 @@ input:
     summary: Bemeneti rögzített pont száma, amelynek kiértékeléséhez a polinom szükséges.
     uid: microsoft.quantum.arithmetic.fixedpoint
   - name: result
-    summary: Kimeneti rögzített pont száma, amely $P (x) $ értéket fogja tárolni. Kezdetben a $ \ket{0}$ állapotban kell lennie.
+    summary: Kimeneti rögzített pont száma, amely $P (x) $ értéket fogja tárolni. Kezdetben a $ \ket $ állapotban kell lennie {0} .
     uid: microsoft.quantum.arithmetic.fixedpoint
 output:
   content: Unit
@@ -28,9 +28,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 7907702d8919060c630ce410d1cfcb995b4ed37a
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 5a30a25c7e11c2000abeb9ac4613385666c660fb
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82679641"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89342023"
