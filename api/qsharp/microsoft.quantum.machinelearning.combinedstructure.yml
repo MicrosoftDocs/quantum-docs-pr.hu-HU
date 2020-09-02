@@ -2,7 +2,7 @@
 uid: microsoft.quantum.machinelearning.combinedstructure
 name: CombinedStructure
 type: function
-namespace: Microsoft.Quantum.MachineLearning
+namespace: microsoft.quantum.machinelearning
 summary: Egy vagy több szabályozott rotációs réteg esetében egy olyan réteget ad vissza, amelynek a modell-paraméter indexe úgy lett áthelyezve, hogy a különböző rétegek paraméterei eltérő modell-paraméterekkel legyenek megadva.
 examples: >-
   A következők egyenértékűek:
@@ -41,9 +41,9 @@ output:
     isArray: true
     uid: microsoft.quantum.machinelearning.controlledrotation
 metadata:
-  ms.openlocfilehash: 5395786d7170fd6d360f4cc98177b062ad066ab5
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: d317cb945ed8371b73af9c1dbcc47602184d1220
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82681698"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89344947"

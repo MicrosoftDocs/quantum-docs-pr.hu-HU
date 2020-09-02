@@ -2,19 +2,19 @@
 uid: microsoft.quantum.diagnostics.assertallzerowithintolerance
 name: AssertAllZeroWithinTolerance
 type: operation
-namespace: Microsoft.Quantum.Diagnostics
-summary: Azt állítja, hogy a megadott qubits mind a{0}$ \ket $ állapotba kerülnek egy adott toleranciával.
+namespace: microsoft.quantum.diagnostics
+summary: Azt állítja, hogy a megadott qubits mind a $ \ket {0} $ állapotba kerülnek egy adott toleranciával.
 syntax: 'operation AssertAllZeroWithinTolerance (qubits : Qubit[], tolerance : Double) : Unit'
 input:
   content: '(qubits : Qubit[], tolerance : Double)'
   types:
   - name: qubits
-    summary: A qubits $ \ket{0}$ állapotban kell lennie.
+    summary: A qubits $ \ket $ állapotban kell lennie {0} .
     isArray: true
     isPrimitive: true
     uid: Qubit
   - name: tolerance
-    summary: Pontosság, amellyel az állapotnak $ \ket{0}$ állapotban kell lennie
+    summary: Pontosság, amellyel az állapotnak $ \ket $ állapotban kell lennie {0}
     isPrimitive: true
     uid: Double
 output:
@@ -28,9 +28,9 @@ functors:
 seeAlso:
 - assertqubitwithintolerance
 metadata:
-  ms.openlocfilehash: ae55998333d6bc3a4d8b41341842147d80dcd183
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 547180aac49fde1525a7477d9ec75b302912fe2b
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82677295"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89337563"

@@ -2,16 +2,16 @@
 uid: microsoft.quantum.preparation.quantumrom
 name: QuantumROM
 type: function
-namespace: Microsoft.Quantum.Preparation
+namespace: microsoft.quantum.preparation
 summary: >-
   A Quantum ROM technikát használja egy adott sűrűségű mátrix ábrázolására.
 
 
-  A $N $ együtthatók $ \ alpha_j $ értékének listája esetén ez egy egységes $U $ értéket ad vissza, amely a Quantum-ROM technikát használja a közelítési $ \tilde\rho\ sum_ {j = 0} ^ {N-1} p_j \ket{j}\bra{j} $ megtisztítására a sűrűségi mátrix $ \rho = \ sum_ {j = 0} ^ {N-1} \frac{| alpha_j |} {\ sum_k | \ alpha_k |} \ket{j}\bra{j} $. Ebben a közelítésben a $ \epsilon $ hiba olyan, hogy $ | p_j-\frac{| alpha_j |} {\ sum_k | \ alpha_k |} | \Le \epsilon/N $ és $\|\tilde\rho-\rho\| \Le \epsilon $. Más szóval, $ $ \begin{align} U\ket{0}^ {\Lceil\ log_2 N\rceil} \ s{0}^ {m} = \ sum_ {j = 0} ^ {N-1} \sqrt{p_j} \ket{j}\ket{\text{Garbage} _j}.
+  A $N $ együtthatók $ \ alpha_j $ értékének listája esetén ez egy egységes $U $ értéket ad vissza, amely a Quantum-ROM technikát használja a közelítési $ \tilde\rho\ sum_ {j = 0} ^ {N-1} p_j \ket{j}\bra{j} $ megtisztítására a sűrűségi mátrix $ \rho = \ sum_ {j = 0} ^ {N-1} \frac{| alpha_j |} {\ sum_k | \ alpha_k |} \ket{j}\bra{j} $. Ebben a közelítésben a $ \epsilon $ hiba olyan, hogy $ | p_j-\frac{| alpha_j |} {\ sum_k | \ alpha_k |} | \Le \epsilon/N $ és $ \| \tilde\rho-\rho \| \Le \epsilon $. Más szóval, $ $ \begin{align} U\ket {0} ^ {\lceil\ log_2 N\rceil} \ s {0} ^ {m} = \ sum_ {j = 0} ^ {N-1} \sqrt{p_j} \ket{j}\ket{\text{Garbage} _j}.
 
   \end{align} $ $
 examples: >-
-  A következő kódrészlet felkészíti a $3 $-qubit állapotot $ \rho = \ sum_ {j = 0} ^{4}\frac{| alpha_j |} {\ sum_k | \ alpha_k |} \ket{j}\bra{j} $, ahol a $ \vec\alpha = (1.0, 2.0, 3.0, 4.0, 5.0) $ és a hiba `1e-3`;
+  A következő kódrészlet felkészíti a $3 $-qubit állapotot $ \rho = \ sum_ {j = 0} ^ {4} \frac{| alpha_j |} {\ sum_k | \ alpha_k |} \ket{j}\bra{j} $, ahol a $ \vec\alpha = (1.0, 2.0, 3.0, 4.0, 5.0) $ és a hiba `1e-3` ;
 
 
   ```qsharp
@@ -30,7 +30,7 @@ examples: >-
 
   ```
 syntax: 'function QuantumROM (targetError : Double, coefficients : Double[]) : ((Int, (Int, Int)), Double, ((Microsoft.Quantum.Arithmetic.LittleEndian, Qubit[]) => Unit is Adj + Ctl))'
-references: '- Elektronikus spektrumok kódolása a kvantum-áramkörökben a lineáris T komplexitás Ryan Babbush, Craig Gidney, Dominic W. Berry, Nathan Wiebe, fahamvas McClean, Alexandru Paleer, Austin Fowler, Hartmut nevenhttps://arxiv.org/abs/1805.03662'
+references: '- Elektronikus spektrumok kódolása a kvantum-áramkörökben a lineáris T komplexitás Ryan Babbush, Craig Gidney, Dominic W. Berry, Nathan Wiebe, fahamvas McClean, Alexandru Paleer, Austin Fowler, Hartmut neven https://arxiv.org/abs/1805.03662'
 input:
   content: '(targetError : Double, coefficients : Double[])'
   types:
@@ -53,7 +53,7 @@ output:
       ## <a name="first-parameter"></a>Első paraméter
 
 
-      Az a `(x,(y,z))` rekord `x = y + z` , ahol a qubits teljes száma, `y` a qubits `LittleEndian` száma, valamint `z` a szemetet qubits száma.
+      Az a `(x,(y,z))` rekord `x = y + z` , ahol a qubits teljes száma, a `y` qubits száma `LittleEndian` , valamint `z` a szemetet qubits száma.
 
 
       ## <a name="second-parameter"></a>Második paraméter
@@ -92,9 +92,9 @@ output:
       - Adjoint
       - Controlled
 metadata:
-  ms.openlocfilehash: 9bf373f0cb7c495f8c29a4426861c74fbb0ec7f6
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 6f0626eeccd1c8b411f8210b5e59f0321527a39c
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82686494"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89331280"

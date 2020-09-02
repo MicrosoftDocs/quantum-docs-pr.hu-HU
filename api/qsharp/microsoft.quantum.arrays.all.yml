@@ -2,9 +2,9 @@
 uid: microsoft.quantum.arrays.all
 name: All
 type: function
-namespace: Microsoft.Quantum.Arrays
+namespace: microsoft.quantum.arrays
 summary: Egy tömböt és egy predikátumot adott meg, amely a tömb elemeihez van meghatározva, és ellenőrzi, hogy a tömb összes eleme megfelel-e a predikátumnak.
-remarks: "A függvény általános típusokhoz van definiálva, például `'T[]` ha egy tömb és egy függvény `predicate: 'T -> Bool` is létrehoz egy `Bool` értéket, amely azt jelzi, hogy az összes elem megfelel `predicate`-e."
+remarks: "A függvény általános típusokhoz van definiálva, például ha egy tömb `'T[]` és egy függvény is létrehoz `predicate: 'T -> Bool` egy `Bool` értéket, amely azt jelzi, hogy az összes elem megfelel-e `predicate` ."
 examples: >-
   A következő kód ellenőrzi, hogy a tömb összes eleme nem nulla-e:
 
@@ -28,7 +28,7 @@ input:
   content: "(predicate : ('T -> Bool), array : 'T[])"
   types:
   - name: predicate
-    summary: Az elemekhez `'T` `Bool` tartozó függvény, amely az elemek vizsgálatára szolgál.
+    summary: Az `'T` `Bool` elemekhez tartozó függvény, amely az elemek vizsgálatára szolgál.
     isFunction: true
     input:
       types:
@@ -39,23 +39,23 @@ input:
       - isPrimitive: true
         uid: Bool
   - name: array
-    summary: Elemek tömbje `'T`.
+    summary: Elemek tömbje `'T` .
     isArray: true
     uid: "'T"
     isLocal: true
 output:
   content: Bool
   types:
-  - summary: Az `Bool` összes elemre alkalmazott predikátum és függvényének értéke.
+  - summary: Az `Bool` összes elemre alkalmazott PREDIKÁTUM és függvényének értéke.
     isPrimitive: true
     uid: Bool
 typeParameters:
 - uid: "'T"
-  summary: Az `array` elemek típusa.
+  summary: Az elemek típusa `array` .
 metadata:
-  ms.openlocfilehash: 116a2a537c4712c968187785873c0546ec236762
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 515dcb29844277e626158e44da4202fae0e7fd61
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676585"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89352648"

@@ -2,15 +2,15 @@
 uid: microsoft.quantum.diagnostics.assertqubitwithintolerance
 name: AssertQubitWithinTolerance
 type: operation
-namespace: Microsoft.Quantum.Diagnostics
-summary: Azt állítja, hogy a `q` Qubit a Pauli Z operátor várt eigenstate található, egy adott toleranciával.
-remarks: <xref:microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance>lehetővé teszi tetszőleges qubit-állapotok megadását, nem csak $Z $ eigenstates.
+namespace: microsoft.quantum.diagnostics
+summary: Azt állítja, hogy a qubit a `q` Pauli Z operátor várt eigenstate található, egy adott toleranciával.
+remarks: <xref:microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance> lehetővé teszi tetszőleges qubit-állapotok megadását, nem csak $Z $ eigenstates.
 syntax: 'operation AssertQubitWithinTolerance (expected : Result, q : Qubit, tolerance : Double) : Unit'
 input:
   content: '(expected : Result, q : Qubit, tolerance : Double)'
   types:
   - name: expected
-    summary: 'A qubit várható állapota a következő: `Zero` vagy. `One`'
+    summary: 'A qubit várható állapota a következő: `Zero` vagy `One` .'
     isPrimitive: true
     uid: Result
   - name: q
@@ -29,9 +29,9 @@ output:
 seeAlso:
 - assertqubitisinstatewithintolerance
 metadata:
-  ms.openlocfilehash: 2749c682128e7c67506c2291d7a9e6034998731d
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: e5212b307f6bf90b88194e6e4158f41a0febf059
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82677251"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89337399"

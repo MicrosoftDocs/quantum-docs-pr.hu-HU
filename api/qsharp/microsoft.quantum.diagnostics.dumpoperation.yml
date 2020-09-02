@@ -2,7 +2,7 @@
 uid: microsoft.quantum.diagnostics.dumpoperation
 name: DumpOperation
 type: operation
-namespace: Microsoft.Quantum.Diagnostics
+namespace: microsoft.quantum.diagnostics
 summary: A művelet végrehajtásakor az aktuális végrehajtási cél által elérhetővé tett művelet diagnosztika jelenik meg.
 remarks: >-
   A művelet meghívása nem befolyásolható a Q #-on belül. Ha vannak ilyenek, a pontos diagnosztika az aktuális végrehajtási cél és a szerkesztő környezettől függ.
@@ -55,9 +55,9 @@ output:
   - isPrimitive: true
     uid: Unit
 metadata:
-  ms.openlocfilehash: ba2e3c4dd42faa0919b5777a6db82ce787acb80a
-  ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+  ms.openlocfilehash: c9005373fb2be7bbfcd19870fa741cf4b0d8d754
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 08/25/2020
-  ms.locfileid: "88864143"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89337348"
