@@ -2,10 +2,10 @@
 uid: microsoft.quantum.canon.applywithinputtransformationa
 name: ApplyWithInputTransformationA
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: Egy olyan művelet, amely egy bizonyos bemenetet fogad el, egy olyan függvényt ad vissza, amely kompatibilis a művelettel, és a függvény bemenete a művelettel a művelet által várt űrlapra alakítja át a bemenetet.
 examples: >-
-  A következő hívás @"Microsoft.Quantum.Arithmetic.LittleEndianAsBigEndian" egy olyan művelet alkalmazására szolgál, @"Microsoft.Quantum.Arithmetic.BigEndian" amely bemenetekhez van hozzárendelve @"Microsoft.Quantum.Arithmetic.LittleEndian"egy típusú bemenethez:
+  A következő hívás @"Microsoft.Quantum.Arithmetic.LittleEndianAsBigEndian" egy olyan művelet alkalmazására szolgál, amely @"Microsoft.Quantum.Arithmetic.BigEndian" bemenetekhez van hozzárendelve egy típusú bemenethez @"Microsoft.Quantum.Arithmetic.LittleEndian" :
 
 
   ```qsharp
@@ -58,9 +58,9 @@ seeAlso:
 - applywithinputtransformationca
 - transformedoperation
 metadata:
-  ms.openlocfilehash: bf2e1c808b908ea5e1ad15014b5d7745708d6156
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 7bcc29b8c096b5cb6daf3c5279671f1af3e008df
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676275"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89357119"

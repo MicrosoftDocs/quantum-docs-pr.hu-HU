@@ -2,15 +2,15 @@
 uid: microsoft.quantum.amplitudeamplification.applyobliviousamplitudeamplification
 name: ApplyObliviousAmplitudeAmplification
 type: operation
-namespace: Microsoft.Quantum.AmplitudeAmplification
+namespace: microsoft.quantum.amplitudeamplification
 summary: A részleges reflexiók megadásával megfeledkezett az amplitúdó-erősítésről.
 remarks: >-
-  Egy adott kiegészítő indítási állapothoz $ \ket{\text{Start}}\_a $, egy adott kiegészítő megcélzott állapot $\_\ket{\text{Target}} $ és minden rendszerállapot $ \ket{\psi}\_s $, tegyük fel, hogy a \begin{align} O\ket {\ Text {\_Start}} a\ket {\_\ PSI}\_s = \lambda\ket{\text{Target}}\_a U \ket{\psi} s + \sqrt{1-| \lambda | ^ 2}\_\ket{\text{Target} ^ \perp} a\cdots \end{align} néhány egységes $U $.
+  Egy adott kiegészítő indítási állapothoz $ \ket{\text{Start}} \_ a $, egy adott kiegészítő megcélzott állapot $ \ket{\text{Target}} $ \_ és minden rendszerállapot $ \ket{\psi} \_ s $, tegyük fel, hogy a \begin{align} O\ket {\ Text {Start}} \_ a\ket {\ PSI} \_ s = \lambda\ket{\text{Target}} \_ a U \ket{\psi} \_ s + \sqrt{1-| \lambda | ^ 2} \ket{\text{target} ^ \perp} \_ a\cdots \end{align} néhány egységes $U $.
 
-  A kezdő és a cél állapotokra vonatkozó, az alkalmazások `signalOracle` és a adjoint által összekapcsolt kiegészítő regisztráció során felmerülő reflexiók sorozatából az U alkalmazásának sikerességi valószínűsége módosítható.
+  A kezdő és a cél állapotokra vonatkozó, az alkalmazások és a adjoint által összekapcsolt kiegészítő regisztráció során felmerülő reflexiók sorozatából az `signalOracle` U alkalmazásának sikerességi valószínűsége módosítható.
 
 
-  A legtöbb esetben a `auxiliaryRegister` a $ \ket{\text{Start}}\_állapotban van inicializálva.
+  A legtöbb esetben `auxiliaryRegister` a a $ \ket{\text{Start}} állapotban van inicializálva \_ .
 syntax: 'operation ApplyObliviousAmplitudeAmplification (phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, startStateReflection : Microsoft.Quantum.Oracles.ReflectionOracle, targetStateReflection : Microsoft.Quantum.Oracles.ReflectionOracle, signalOracle : Microsoft.Quantum.Oracles.ObliviousOracle, auxiliaryRegister : Qubit[], systemRegister : Qubit[]) : Unit'
 references: >-
   Lásd:
@@ -53,9 +53,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 7452686a76d9ff89c0eb79290e7dae23347778ac
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 21bdb88716a07c32673425fd4f5276559b56d266
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82672948"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89340527"

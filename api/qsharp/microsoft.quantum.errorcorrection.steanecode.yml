@@ -2,7 +2,7 @@
 uid: microsoft.quantum.errorcorrection.steanecode
 name: SteaneCode
 type: function
-namespace: Microsoft.Quantum.ErrorCorrection
+namespace: microsoft.quantum.errorcorrection
 summary: Egy CSS-értéket ad vissza, amely a ⟦ 7, 1, 3 ⟧ Steane és a dekódert a helyi szindrómás mérésével adja meg.
 remarks: >-
   Ez a kód a következő dokumentumban található:
@@ -19,9 +19,9 @@ output:
   - summary: Egy CSS típusú objektum, amely összegyűjti az összes releváns adatot a ⟦ 7, 1, 3 ⟧ Steane kód kódolásának és hibajavításának elvégzéséhez.
     uid: microsoft.quantum.errorcorrection.css
 metadata:
-  ms.openlocfilehash: fd961a82ad1fb99abc9f4b3d7ba061d10680a3aa
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: af01020f35baa66113ca5e0992e93f8516e4b176
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82682235"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89349775"

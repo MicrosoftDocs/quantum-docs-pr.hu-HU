@@ -3,13 +3,13 @@ uid: microsoft.quantum.chemistry
 name: Microsoft.Quantum.Chemistry
 functions:
 - uid: microsoft.quantum.chemistry.htermstogenidx
-  summary: Egy index átalakítása Hamilton- `HTerm[]` kifejezésre adatformátumban egy GeneratorIndex.
+  summary: Egy index átalakítása Hamilton-kifejezésre `HTerm[]` adatformátumban egy GeneratorIndex.
 - uid: microsoft.quantum.chemistry.htermstogensys
-  summary: Adatformátumba konvertál `HTerm[]` egy Hamilton egy GeneratorSystem.
+  summary: Adatformátumba konvertál egy Hamilton `HTerm[]` egy GeneratorSystem.
 - uid: microsoft.quantum.chemistry.htermtogenidx
-  summary: Hamilton- `HTerm` kifejezést alakít át adatformátumba egy GeneratorIndex.
+  summary: Hamilton-kifejezést alakít át `HTerm` adatformátumba egy GeneratorIndex.
 - uid: microsoft.quantum.chemistry.isnotzero
-  summary: Ellenőrzi, hogy `Double` egy szám nem körülbelül nulla-e.
+  summary: Ellenőrzi, hogy egy `Double` szám nem körülbelül nulla-e.
 newtypes:
 - uid: microsoft.quantum.chemistry.hterm
   summary: >-
@@ -17,9 +17,9 @@ newtypes:
 
     A megjelenített adatmennyiség jelentését az azt fogadó algoritmus határozza meg.
 metadata:
-  ms.openlocfilehash: fda6e5c8daebeae115046771e85e0e49d057e666
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: d39701c0e7ee50a064d24020298bef12406e5728
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82677017"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89340221"

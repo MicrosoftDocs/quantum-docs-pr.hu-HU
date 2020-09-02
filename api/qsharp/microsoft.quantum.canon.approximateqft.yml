@@ -2,7 +2,7 @@
 uid: microsoft.quantum.canon.approximateqft
 name: ApproximateQFT
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: Alkalmazza a becsült kvantum Fourier-transzformációt (AQFT) a kvantum-regiszterre.
 remarks: >-
   A AQFT a 2π/2k és a Hadamard Gates formátumú Z-rotációs kapukat igényli.
@@ -37,9 +37,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 44d6a5937924f13cab04137bd3d0eb81396824c9
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 8e657778669f9b0e8c1b702047a8499b680ee1e0
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82674392"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89357034"

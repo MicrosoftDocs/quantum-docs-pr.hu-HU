@@ -2,7 +2,7 @@
 uid: microsoft.quantum.amplitudeamplification.applyfixedpointamplification
 name: ApplyFixedPointAmplification
 type: operation
-namespace: Microsoft.Quantum.AmplitudeAmplification
+namespace: microsoft.quantum.amplitudeamplification
 summary: Rögzített pont amplitúdó-erősítési algoritmusa
 remarks: A startQubits a $ \ket{0 \cdots 0} $ állapotban kell lennie. Ez a művelet több, $2 $ értékű lekérdezésre mutat be, amíg el nem éri a lekérdezések maximális számát, vagy megtalálhatók a célként megadott állapot.
 syntax: 'operation ApplyFixedPointAmplification (statePrepOracle : Microsoft.Quantum.Oracles.StateOracle, startQubits : Qubit[]) : Unit'
@@ -23,9 +23,9 @@ output:
   - isPrimitive: true
     uid: Unit
 metadata:
-  ms.openlocfilehash: 097e3f67cdecfd0ee31bd48e4f64aec659353159
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 2a2918e6b9e3cf64a3536a6cbecd7432f084494f
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676940"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89340544"
