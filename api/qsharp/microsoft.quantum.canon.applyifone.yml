@@ -2,12 +2,12 @@
 uid: microsoft.quantum.canon.applyifone
 name: ApplyIfOne
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
   Egy olyan műveletet alkalmaz, amely egy klasszikus eredmény értéke egy.
 
 
-  A művelet `op` és az eredmény megadott értéke `result` `op` az `target` if `result` értékre vonatkozik. `One` Ha `Zero`semmi nem történik a `target`következővel:.
+  `op`A művelet és az eredmény megadott értéke `result` az IF értékre vonatkozik `op` `target` `result` `One` . Ha `Zero` semmi nem történik a következővel: `target` .
 syntax: "operation ApplyIfOne (result : Result, (op : ('T => Unit), target : 'T)) : Unit"
 input:
   content: "(result : Result, (op : ('T => Unit), target : 'T))"
@@ -44,9 +44,9 @@ seeAlso:
 - microsoft.quantum.canon.applyifonea
 - microsoft.quantum.canon.applyifoneca
 metadata:
-  ms.openlocfilehash: 1cf549dce4e903810d4c59f8020afb4689c26888
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: ed8054c7d110db9abbeb72ae5f00ac7e669795ec
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82672703"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89350132"

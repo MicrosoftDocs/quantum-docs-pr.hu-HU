@@ -2,12 +2,12 @@
 uid: microsoft.quantum.errorcorrection.knilldistill
 name: KnillDistill
 type: operation
-namespace: Microsoft.Quantum.ErrorCorrection
+namespace: microsoft.quantum.errorcorrection
 summary: >-
   Implementálja a Knill mágikus állapotának kimaradó algoritmusát.
 
 
-  Az $ $ \begin{align}{8} \cos\frac{\pi} \ket{0} + \sin \frac{\pi}{8} \ket{1} \end{align}, $ $ értékű Magic State 15 hozzávetőleges példánya egy magasabb színvonalú másolatot eredményez.
+  Az $ $ \begin{align} \cos\frac{\pi} {8} \ket {0} + \sin \frac{\pi} \ket \end{align}, $ $ értékű Magic State 15 hozzávetőleges példánya {8} {1} egy magasabb színvonalú másolatot eredményez.
 remarks: >-
   Követjük a Knill algoritmusát.
 
@@ -20,20 +20,20 @@ input:
   content: '(roughMagic : Qubit[])'
   types:
   - name: roughMagic
-    summary: Egy olyan tizenöt qubits-bejegyzés, amely a mágikus állapot hozzávetőleges másolatait tartalmazza. A jelen desztilláló eljárás alkalmazása után egy jobb `roughMagic[0]` minőségű másolatot fog tartalmazni, és a regisztráció többi része visszaáll a $ \ket{00\cdots 0} $ állapotra.
+    summary: Egy olyan tizenöt qubits-bejegyzés, amely a mágikus állapot hozzávetőleges másolatait tartalmazza. A jelen desztilláló eljárás alkalmazása után `roughMagic[0]` egy jobb minőségű másolatot fog tartalmazni, és a regisztráció többi része visszaáll a $ \ket{00\cdots 0} $ állapotra.
     isArray: true
     isPrimitive: true
     uid: Qubit
 output:
   content: Bool
   types:
-  - summary: Ha `true`az eljárás sikeres volt, és a jobb minőségű másolatot el kell fogadni. Ha `false`az eljárás sikertelen volt, és a regiszter állapotát nem definiált állapotúnak kell tekinteni.
+  - summary: Ha `true` az eljárás sikeres volt, és a jobb minőségű másolatot el kell fogadni. Ha `false` az eljárás sikertelen volt, és a regiszter állapotát nem definiált állapotúnak kell tekinteni.
     isPrimitive: true
     uid: Bool
 metadata:
-  ms.openlocfilehash: 5a8e4c43ff21491b35efedb8f60717979e44f0ed
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 979a318e036fbe1585809ce7ba0152b68b4a840e
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82682368"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89350115"

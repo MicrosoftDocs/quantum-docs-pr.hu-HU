@@ -2,30 +2,30 @@
 uid: microsoft.quantum.oracles.obliviousoraclefromdeterministicstateoracle
 name: ObliviousOracleFromDeterministicStateOracle
 type: function
-namespace: Microsoft.Quantum.Oracles
-summary: Egyesíti az Oracle `DeterministicStateOracle` -ket `ObliviousOracle`és a-t.
+namespace: microsoft.quantum.oracles
+summary: Egyesíti az Oracle `DeterministicStateOracle` -ket és a-t `ObliviousOracle` .
 syntax: 'function ObliviousOracleFromDeterministicStateOracle (ancillaOracle : Microsoft.Quantum.Oracles.DeterministicStateOracle, signalOracle : Microsoft.Quantum.Oracles.ObliviousOracle) : Microsoft.Quantum.Oracles.ObliviousOracle'
 input:
   content: '(ancillaOracle : Microsoft.Quantum.Oracles.DeterministicStateOracle, signalOracle : Microsoft.Quantum.Oracles.ObliviousOracle)'
   types:
   - name: ancillaOracle
-    summary: Olyan állapot-előkészítési Oracle $A $ `DeterministicStateOracle` , amely a (z) $a $ regiszterben működik.
+    summary: Olyan állapot-előkészítési Oracle $A $, amely a (z `DeterministicStateOracle` ) $a $ regiszterben működik.
     uid: microsoft.quantum.oracles.deterministicstateoracle
   - name: signalOracle
-    summary: Egy Oracle $U $ típusú, `ObliviousOracle` amely a Register $a, s $ címen közösen működik.
+    summary: Egy Oracle $U $ típusú, amely `ObliviousOracle` a register $a, s $ címen közösen működik.
     uid: microsoft.quantum.oracles.obliviousoracle
 output:
   content: Microsoft.Quantum.Oracles.ObliviousOracle
   types:
-  - summary: Egy Oracle $O = UA $ típusú `ObliviousOracle`.
+  - summary: Egy Oracle $O = UA $ típusú `ObliviousOracle` .
     uid: microsoft.quantum.oracles.obliviousoracle
 seeAlso:
 - microsoft.quantum.canon.deterministicstateoracle
 - microsoft.quantum.canon.obliviousoracle
 metadata:
-  ms.openlocfilehash: 036d89ed2a9b3a0db2637964e4fabec7352a67d9
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: b0b900189648ab78d74cc3378528156309c67d0e
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82681246"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89331976"

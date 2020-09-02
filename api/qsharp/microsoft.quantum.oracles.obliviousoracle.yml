@@ -2,7 +2,7 @@
 uid: microsoft.quantum.oracles.obliviousoracle
 name: ObliviousOracle
 type: newtype
-namespace: Microsoft.Quantum.Oracles
+namespace: microsoft.quantum.oracles
 summary: >-
   Egy Oracle for feledékenys amplitúdó-erősítést jelöl.
 
@@ -12,16 +12,16 @@ summary: >-
 
   - A Ancilla regisztrálja $a $-t, amely $O $ műveleteket végez.
 
-  - A rendszer regisztrálja $s $ értéket, amelyre a kívánt egységes $U $ alkalmazás van alkalmazva, majd a Register $a $ bejegyzés után a\_$ \ket{t} $ értékű állapotban van.
+  - A rendszer regisztrálja $s $ értéket, amelyre a kívánt egységes $U $ alkalmazás van alkalmazva, majd a Register $a $ bejegyzés után a $ \ket{t} $ értékű állapotban van \_ .
 remarks: >-
-  Ez az Oracle által definiált $ $ O\ket {\_s} a\ket {\\_PSI} s\_= \lambda\ket{t} a\_U \ket{\psi} s + \sqrt{1-| \lambda | ^ 2} \ket{t\_^ \perp} a\cdots $ $ a Ancilla State $ \ket{s}\_a $ értékkel valósítja meg az egységes $U $\_-\_t a $ \ket{\psi} $ \lambda
+  Ez az Oracle által definiált $ $ O\ket {s} \_ a\ket {\ PSI} \_ s = \Lambda\ket{t} \_ a U \ket{\psi} \_ s + \sqrt{1-| \lambda | ^ 2} \ket{t ^ \perp} \_ a\cdots $ $ a Ancilla State $ \ket{s} a \_ $ értékkel valósítja meg az egységes $U $ \_ - \_ t a $ \ket{\psi} $ \lambda
 
-  Az első paraméter a $ \ket{s}\_$ qubit regisztrálása. A második paraméter a $ \ket{\psi}\_s $ qubit-regisztrációja.
+  Az első paraméter a $ \ket{s} $ qubit regisztrálása \_ . A második paraméter a $ \ket{\psi} s $ qubit-regisztrációja \_ .
 syntax: newtype ObliviousOracle = ((Qubit[], Qubit[]) => Unit is Adj + Ctl);
 metadata:
-  ms.openlocfilehash: 9d7a799a9069e6d7eb3470d62322f803a68eb2e6
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: c88ad3b0a4fe6067a0e52972c23587d5835c779e
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82681259"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89332010"

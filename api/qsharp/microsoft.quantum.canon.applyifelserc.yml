@@ -2,22 +2,22 @@
 uid: microsoft.quantum.canon.applyifelserc
 name: ApplyIfElseRC
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
   A klasszikus eredmények értékétől függően két ellenőrizhető művelet egyikét alkalmazza.
 
 
-  Az `result`eredmény megadásakor a műveletet `zeroOp` `zeroInput` a bemenetként alkalmazza `result` `Zero`, ha az egyenlő, és ha van `oneOp(oneInput)` , `result == One`akkor alkalmazza.
+  Az eredmény megadásakor `result` a műveletet a `zeroOp` `zeroInput` bemenetként alkalmazza, ha `result` az egyenlő `Zero` , és ha van, `oneOp(oneInput)` akkor alkalmazza `result == One` .
 syntax: "operation ApplyIfElseRC (result : Result, (zeroOp : ('T => Unit is Ctl), zeroInput : 'T), (oneOp : ('U => Unit is Ctl), oneInput : 'U)) : Unit"
 input:
   content: "(result : Result, (zeroOp : ('T => Unit is Ctl), zeroInput : 'T), (oneOp : ('U => Unit is Ctl), oneInput : 'U))"
   types:
   - name: result
-    summary: Az a mérési eredmény, amellyel meghatározható, hogy alkalmazva van `zeroOp` -e vagy `oneOp` sem.
+    summary: Az a mérési eredmény, amellyel meghatározható, hogy `zeroOp` alkalmazva van-e vagy sem `oneOp` .
     isPrimitive: true
     uid: Result
   - name: zeroOp
-    summary: Az a művelet, amelyre alkalmazni kell a műveletet `result == Zero`.
+    summary: Az a művelet, amelyre alkalmazni kell a műveletet `result == Zero` .
     isOperation: true
     input:
       types:
@@ -30,11 +30,11 @@ input:
     functors:
     - Controlled
   - name: zeroInput
-    summary: Az a bemenet, amelyet meg `zeroOp` kell `result == Zero`adni.
+    summary: Az a bemenet, amelyet meg kell adni `zeroOp` `result == Zero` .
     uid: "'T"
     isLocal: true
   - name: oneOp
-    summary: Az a művelet, amelyre alkalmazni kell a műveletet `result == One`.
+    summary: Az a művelet, amelyre alkalmazni kell a műveletet `result == One` .
     isOperation: true
     input:
       types:
@@ -47,7 +47,7 @@ input:
     functors:
     - Controlled
   - name: oneInput
-    summary: Az a bemenet, amelyet meg `oneOp` kell `result == One`adni.
+    summary: Az a bemenet, amelyet meg kell adni `oneOp` `result == One` .
     uid: "'U"
     isLocal: true
 output:
@@ -57,9 +57,9 @@ output:
     uid: Unit
 typeParameters:
 - uid: "'T"
-  summary: A feltételesen alkalmazni kívánt `zeroOp` művelet bemeneti típusa.
+  summary: A `zeroOp` feltételesen alkalmazni kívánt művelet bemeneti típusa.
 - uid: "'U"
-  summary: A feltételesen alkalmazni kívánt `oneOp` művelet bemeneti típusa.
+  summary: A `oneOp` feltételesen alkalmazni kívánt művelet bemeneti típusa.
 functors:
 - Controlled
 seeAlso:
@@ -69,9 +69,9 @@ seeAlso:
 - microsoft.quantum.canon.applyifelsera
 - microsoft.quantum.canon.applyifelserca
 metadata:
-  ms.openlocfilehash: aeb4c7f86ac1f41140bb14436d9dee39b4c4d98b
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: b31ace845d04b3c279b54e0dfea575632ce575f8
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82672729"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89350217"

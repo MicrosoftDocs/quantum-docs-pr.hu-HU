@@ -2,7 +2,7 @@
 uid: microsoft.quantum.oracles.stateoracle
 name: StateOracle
 type: newtype
-namespace: Microsoft.Quantum.Oracles
+namespace: microsoft.quantum.oracles
 summary: >-
   Az állapot előkészítésére szolgáló Oracle.
 
@@ -12,16 +12,16 @@ summary: >-
 
   - Egy egész szám, amely indexeli a jelző qubit $f $ értéket.
 
-  - A rendszer regisztrálja $s $, amely a kívánt Quantum State $ \ket{\psi}\_s $ értéket fogja tárolni.
+  - A rendszer regisztrálja $s $, amely a kívánt Quantum State $ \ket{\psi} \_ s $ értéket fogja tárolni.
 remarks: >-
-  Ez az Oracle által meghatározott $ ${0}\_O\ket {f}{0}\_\ket s ={1}\_\lambda\ket f\ket {\ PSI\_} s + \sqrt{1-| \lambda | ^ 2}{0}\_\ket f\cdots, $ $ a számítás alapjául szolgáló állapot ${0}\_\ket {{0}\_f} \ket s $, hogy létrehozta a cél állapot $ \ket{\psi}\_s $ és amplitúdó $ \lambda $ értéket a $ \ket{1}\_f $ jelöléssel.
+  Ez az Oracle által meghatározott $ $ O\ket {0} \_ {f} \ket {0} \_ s = \lambda\ket {1} \_ f\ket {\ PSI} \_ s + \sqrt{1-| \lambda | ^ 2} \ket {0} \_ f\cdots, $ $ a számítás alapjául szolgáló állapot $ \ket {0} \_ {f} \ket {0} \_ s $, hogy létrehozta a cél állapot $ \ket{\psi} \_ s $ és amplitúdó $ \lambda $ értéket a $ \ket {1} \_ f $ jelöléssel.
 
-  Az első paraméter egy index a $ \ket{0}\_f $ qubit-regisztrációhoz. A második paraméter mindkét regisztert magában foglalja.
+  Az első paraméter egy index a $ \ket f $ qubit-regisztrációhoz {0} \_ . A második paraméter mindkét regisztert magában foglalja.
 syntax: newtype StateOracle = ((Int, Qubit[]) => Unit is Adj + Ctl);
 metadata:
-  ms.openlocfilehash: fe7ced83927d709bcc6fe82d8866b221446c7d73
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 1a303e51638a792fb31ee7cca58bd3662d86897b
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82673487"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89331755"

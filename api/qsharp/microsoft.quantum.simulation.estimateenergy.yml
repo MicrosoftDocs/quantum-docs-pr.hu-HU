@@ -2,8 +2,8 @@
 uid: microsoft.quantum.simulation.estimateenergy
 name: EstimateEnergy
 type: operation
-namespace: Microsoft.Quantum.Simulation
-summary: Végrehajtja az állapot-előkészítést, ha a (z `statePrepUnitary` `qpeUnitary` `phaseEstAlgorithm`) alkalmazással automatikusan lefoglalt bemeneti állapotú fázis-becslést alkalmaz az eredményül kapott állapotra vonatkozóan.
+namespace: microsoft.quantum.simulation
+summary: Végrehajtja az állapot-előkészítést, ha a (z) alkalmazással `statePrepUnitary` automatikusan lefoglalt bemeneti állapotú fázis-becslést alkalmaz `qpeUnitary` az eredményül kapott állapotra vonatkozóan `phaseEstAlgorithm` .
 syntax: 'operation EstimateEnergy (nQubits : Int, statePrepUnitary : (Qubit[] => Unit), qpeUnitary : (Qubit[] => Unit is Adj + Ctl), phaseEstAlgorithm : ((Microsoft.Quantum.Oracles.DiscreteOracle, Qubit[]) => Double)) : Double'
 input:
   content: '(nQubits : Int, statePrepUnitary : (Qubit[] => Unit), qpeUnitary : (Qubit[] => Unit is Adj + Ctl), phaseEstAlgorithm : ((Microsoft.Quantum.Oracles.DiscreteOracle, Qubit[]) => Double))'
@@ -25,7 +25,7 @@ input:
       - isPrimitive: true
         uid: Unit
   - name: qpeUnitary
-    summary: Egy egységes operátort jelképező Oracle, $U $, amely a \delta $ \ket{\phi} $ $E és a \phi\\, \delta t $ értékű dinamikus generátor alatt az Evolutiont jelképezi.
+    summary: Egy egységes operátort jelképező Oracle, $U $, amely a \delta $ \ket{\phi} $ $E és a \phi \\ , \delta t $ értékű dinamikus generátor alatt az Evolutiont jelképezi.
     isOperation: true
     input:
       types:
@@ -62,9 +62,9 @@ output:
     isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: d7f32999782763bbb6224afc2c764188c718379b
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 9cd5b90932550d1830cd3a14d3d0688ab9675366
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82686880"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89343383"
