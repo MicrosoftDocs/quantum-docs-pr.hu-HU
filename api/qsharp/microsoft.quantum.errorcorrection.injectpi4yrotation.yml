@@ -2,15 +2,15 @@
 uid: microsoft.quantum.errorcorrection.injectpi4yrotation
 name: InjectPi4YRotation
 type: operation
-namespace: Microsoft.Quantum.ErrorCorrection
+namespace: microsoft.quantum.errorcorrection
 summary: >-
   Egyetlen qubit elforgatása a π/4 értékkel az Y tengelyen.
 
 
-  Egy π/4 rotációs műveletet `Y`hajt végre.
+  Egy π/4 rotációs műveletet hajt végre `Y` .
 
 
-  Az elforgatás a mágikus állapot elfogyasztásával történik. Ez a másolat az állam $ $ \begin{align}{8} \cos\frac{\pi} \ket{0} + \sin \frac{\pi}{8} \ket.{1}
+  Az elforgatás a mágikus állapot elfogyasztásával történik. Ez a másolat az állam $ $ \begin{align} \cos\frac{\pi} {8} \ket {0} + \sin \frac{\pi} {8} \ket {1} .
 
   \end{align} $ $
 remarks: >-
@@ -38,7 +38,7 @@ remarks: >-
   ```
 
 
-  Ez a művelet támogatja `Adjoint` a (z)-t, amely esetében ugyanaz a mágikus állapot használatos, de az adatqubit gyakorolt hatás a $-\ PI/4 $ $Y $-forgás.
+  Ez a művelet támogatja a (z `Adjoint` )-t, amely esetében ugyanaz a mágikus állapot használatos, de az adatqubit gyakorolt hatás a $-\ PI/4 $ $Y $-forgás.
 syntax: 'operation InjectPi4YRotation (data : Qubit, magic : Qubit) : Unit'
 input:
   content: '(data : Qubit, magic : Qubit)'
@@ -48,7 +48,7 @@ input:
     isPrimitive: true
     uid: Qubit
   - name: magic
-    summary: Egy qubit kezdetben a mágikus állapotban van. A művelet végrehajtása után a `magic` rendszer visszaadja a $ \ket{0}$ állapotot.
+    summary: Egy qubit kezdetben a mágikus állapotban van. A művelet végrehajtása után `magic` a rendszer visszaadja a $ \ket {0} $ állapotot.
     isPrimitive: true
     uid: Qubit
 output:
@@ -59,9 +59,9 @@ output:
 functors:
 - Adjoint
 metadata:
-  ms.openlocfilehash: cb0efd896b4d8f9b4b81c061b644a1e2f7f74e96
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: bf39fac578e364b5b228490484525f044d40b29d
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82684884"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89336226"

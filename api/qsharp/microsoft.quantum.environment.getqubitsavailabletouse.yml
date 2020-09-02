@@ -2,7 +2,7 @@
 uid: microsoft.quantum.environment.getqubitsavailabletouse
 name: GetQubitsAvailableToUse
 type: operation
-namespace: Microsoft.Quantum.Environment
+namespace: microsoft.quantum.environment
 summary: A jelenleg használható qubits számát adja vissza.
 syntax: 'operation GetQubitsAvailableToUse () : Int'
 input:
@@ -12,17 +12,17 @@ output:
   content: Int
   types:
   - summary: >-
-      Egy `using` utasításban lefoglalt qubits száma.
+      Egy utasításban lefoglalt qubits száma `using` .
 
-      Ha a használt célszámítógép nem adja meg ezeket az adatokat, akkor `-1` a rendszer visszaadja.
+      Ha a használt célszámítógép nem adja meg ezeket az adatokat, akkor a `-1` rendszer visszaadja.
     isPrimitive: true
     uid: Int
 seeAlso:
 - getqubitsavailabletoborrow
 metadata:
-  ms.openlocfilehash: 82d8c27064cbb234b32707aa31fb0869f66ce23c
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 0a6add52244bc38c3e74e5280c3ef007a22c94c7
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82682399"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89336804"

@@ -2,20 +2,20 @@
 uid: microsoft.quantum.simulation.blockencoding
 name: BlockEncoding
 type: newtype
-namespace: Microsoft.Quantum.Simulation
+namespace: microsoft.quantum.simulation
 summary: >-
   Olyan egységes, amelyben a kamatot egy tetszőleges operátor kódolja a bal felső blokkban.
 
 
-  Ez az `BlockEncoding` egy egységes $U $ $, ahol a rendszerregisztrációt `s` végző tetszőleges operátor $H $ értékű, a \ket{0}_a $ kiegészítő állapotnak megfelelő bal felső blokkban kódolva. az
+  Ez az egy `BlockEncoding` egységes $U $ $, ahol a rendszerregisztrációt végző tetszőleges operátor $H $ értékű, a `s` \ket _a $ kiegészítő állapotnak megfelelő bal felső blokkban kódolva {0} . az
 
 
-  $ $ \begin{align} (\bra{0}_a \otimes I_s) U (\ket{0}_a \Otimes I_s) = H \end{align} $ $.
+  $ $ \begin{align} (\bra {0} _a \otimes I_s) U (\ket {0} _a \otimes I_s) = H \end{align} $ $.
 syntax: newtype BlockEncoding = ((Qubit[], Qubit[]) => Unit is Adj + Ctl);
 metadata:
-  ms.openlocfilehash: 400173be551747127198f8cee52390a2694dbfe4
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 514a67e646d9fa224bc80fdbadef7397f8e23fff
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82681102"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89330225"

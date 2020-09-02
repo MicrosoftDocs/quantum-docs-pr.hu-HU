@@ -2,21 +2,21 @@
 uid: microsoft.quantum.simulation.generatorindex
 name: GeneratorIndex
 type: newtype
-namespace: Microsoft.Quantum.Simulation
+namespace: microsoft.quantum.simulation
 summary: >-
-  Egyetlen primitív kifejezést képvisel az összes dinamikus generátor készletében, például a Hermitian operátorok esetében, amelyekhez az adott generátor által adott idő-evolúciós folyamaton alapuló Térkép áll rendelkezésre `EvolutionSet`.
+  Egyetlen primitív kifejezést képvisel az összes dinamikus generátor készletében, például a Hermitian operátorok esetében, amelyekhez az adott generátor által adott idő-evolúciós folyamaton alapuló Térkép áll rendelkezésre `EvolutionSet` .
 
 
   Az első elem (int [], Double []) indexeli ezt az egyszeri kifejezést – például a 0,5-as együtthatóval rendelkező XXY-karakterláncot ([1, 1, 2], [0,5]) indexeli. Azt is megteheti, hogy egy folytonos változó (például X cos φ + Y Sin φ) által Hamiltonians paramétert a (z) ([], [φ]) által reprezentált példány lehet. A második elem indexeli azt az alrendszert, amelyen a létrehozó működik.
 remarks: >-
   > [!WARNING]
 
-  > Az an `GeneratorIndex` értelmezése nincs definiálva, kivéve a generátorok adott készletére mutató hivatkozást.
+  > Az an értelmezése nincs `GeneratorIndex` definiálva, kivéve a generátorok adott készletére mutató hivatkozást.
 
 
   ### <a name="examples"></a>Példák
 
-  A <xref:microsoft.quantum.simulation.paulievolutionset>használatával a (z) $ \pi X_2 X_5 Y_9 $ operátor a következőképpen jelenik meg:
+  A használatával a (z  <xref:microsoft.quantum.simulation.paulievolutionset> ) $ \pi X_2 X_5 Y_9 $ operátor a következőképpen jelenik meg:
 
 
   ```qsharp
@@ -29,9 +29,9 @@ seeAlso:
 - evolutionset
 - paulievolutionset
 metadata:
-  ms.openlocfilehash: d633ecdc11075eb45a40a58bb2a1ca67af577c3c
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: b291cc0b0adc4799e49403fb76f0f47dbadcaf5c
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82655163"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89330174"
