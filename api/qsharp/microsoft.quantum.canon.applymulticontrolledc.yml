@@ -2,7 +2,7 @@
 uid: microsoft.quantum.canon.applymulticontrolledc
 name: ApplyMultiControlledC
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
   Egy megfelelően vezérelt művelet szorzás vezérelt verzióját alkalmazza.
 
@@ -23,7 +23,7 @@ input:
 
       A művelet argumentumának első qubit a vezérlőnek kell lennie, a többi pedig a célként megadott qubits.
 
-      `ApplyMultiControlled`mindig legalább `singlyControlledOp` 1 argumentummal hívja meg a metódust.
+      `ApplyMultiControlled` mindig legalább 1 argumentummal hívja meg a metódust `singlyControlledOp` .
     isOperation: true
     input:
       types:
@@ -60,9 +60,9 @@ functors:
 seeAlso:
 - microsoft.quantum.canon.applymulticontrolledca
 metadata:
-  ms.openlocfilehash: 3b4398dd3845d8767842acb23da3b7c67c210b78
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 1a8fe743affaa0fda26b4e17e4c5f129b43b7331
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82672549"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89358122"

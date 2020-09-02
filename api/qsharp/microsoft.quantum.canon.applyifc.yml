@@ -2,16 +2,16 @@
 uid: microsoft.quantum.canon.applyifc
 name: ApplyIfC
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
   Egy klasszikus bit-re vonatkozó, ellenőrizhető működést alkalmaz.
 
 
-  Ha egy művelet `op` és egy bit érték `bit`van megadva `op` , az `target` a `bit` if `true`értéke lesz. Ha `false`semmi nem történik a `target`következővel:.
+  Ha egy művelet `op` és egy bit érték `bit` van megadva, `op` az a `target` IF értéke lesz `bit` `true` . Ha `false` semmi nem történik a következővel: `target` .
 
   Az utótag `C` azt jelzi, hogy az alkalmazni kívánt művelet ellenőrizhető.
 examples: >-
-  A következő előkészíti a qubits egy olyan számítási alapon történő regisztrálását, amelyet egy, az `Bool` értékek tömbje megadott klasszikus bit-sztring képvisel:
+  A következő előkészíti a qubits egy olyan számítási alapon történő regisztrálását, amelyet egy, az értékek tömbje megadott klasszikus bit-sztring képvisel `Bool` :
 
 
   ```Q#
@@ -65,9 +65,9 @@ seeAlso:
 - microsoft.quantum.canon.applyifa
 - microsoft.quantum.canon.applyifca
 metadata:
-  ms.openlocfilehash: a41eea8aafeabd5bda6bcc55b958598e58f52184
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 0c4a650eabe75c3ab62556daf19647e63c1a2b46
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680490"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89350523"

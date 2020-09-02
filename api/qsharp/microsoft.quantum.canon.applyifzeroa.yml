@@ -2,12 +2,12 @@
 uid: microsoft.quantum.canon.applyifzeroa
 name: ApplyIfZeroA
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
   Egy olyan adjointable műveletet alkalmaz, amely klasszikus eredmény értéke nulla.
 
 
-  A művelet `op` és az eredmény megadott értéke `result` `op` az `target` if `result` értékre vonatkozik. `Zero` Ha `One`semmi nem történik a `target`következővel:.
+  `op`A művelet és az eredmény megadott értéke `result` az IF értékre vonatkozik `op` `target` `result` `Zero` . Ha `One` semmi nem történik a következővel: `target` .
 
   Az utótag `A` azt jelzi, hogy az alkalmazni kívánt művelet a adjointable.
 syntax: "operation ApplyIfZeroA (result : Result, (op : ('T => Unit is Adj), target : 'T)) : Unit"
@@ -50,9 +50,9 @@ seeAlso:
 - microsoft.quantum.canon.applyifzeroa
 - microsoft.quantum.canon.applyifzeroca
 metadata:
-  ms.openlocfilehash: b8b85714f173e10d3121d6f012fefa76b956686e
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: fe4c995a57e9dc964cb0c7d5e557cc51eca5bf0d
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82672618"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89358173"

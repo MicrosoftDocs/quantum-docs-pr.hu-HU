@@ -2,12 +2,12 @@
 uid: microsoft.quantum.canon.applyifzero
 name: ApplyIfZero
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
   Egy klasszikus eredmény értékének nulla értékű műveletét alkalmazza.
 
 
-  A művelet `op` és az eredmény megadott értéke `result` `op` az `target` if `result` értékre vonatkozik. `Zero` Ha `One`semmi nem történik a `target`következővel:.
+  `op`A művelet és az eredmény megadott értéke `result` az IF értékre vonatkozik `op` `target` `result` `Zero` . Ha `One` semmi nem történik a következővel: `target` .
 syntax: "operation ApplyIfZero (result : Result, (op : ('T => Unit), target : 'T)) : Unit"
 input:
   content: "(result : Result, (op : ('T => Unit), target : 'T))"
@@ -44,9 +44,9 @@ seeAlso:
 - microsoft.quantum.canon.applyifzeroa
 - microsoft.quantum.canon.applyifzeroca
 metadata:
-  ms.openlocfilehash: def6af6461ea91bc1df4ce347a1a35c6fb31cb8a
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 65a20b30d6b0330e870407f31ecb216e2e06cb29
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82672637"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89358190"

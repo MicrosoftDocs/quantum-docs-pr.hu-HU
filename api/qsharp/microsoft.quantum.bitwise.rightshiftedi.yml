@@ -2,7 +2,7 @@
 uid: microsoft.quantum.bitwise.rightshiftedi
 name: RightShiftedI
 type: function
-namespace: Microsoft.Quantum.Bitwise
+namespace: microsoft.quantum.bitwise
 summary: Egy szám bitenkénti-ábrázolását egy adott számú biten keresztül tolja.
 remarks: >-
   A következők egyenértékűek:
@@ -30,13 +30,13 @@ input:
 output:
   content: Int
   types:
-  - summary: A `value`, a bitek által `amount` jobbra eltolt érték.
+  - summary: A, a `value` bitek által jobbra eltolt érték `amount` .
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: 9bf08ce00efc1bc93397c25c1a3ddd4d2432721d
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: c7dc84cff910e641747327ef3cd6fd86e506041a
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680614"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89351152"

@@ -2,7 +2,7 @@
 uid: microsoft.quantum.canon.applydiagonalunitary
 name: ApplyDiagonalUnitary
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
   Összetett fázisokat alkalmaz a qubits regiszterének numerikus állapotára.
 
@@ -15,9 +15,9 @@ summary: >-
   $ $ \begin{align} U = \sum ^ {2 ^ n-1} _ {j = 0} e ^ {i \ theta_j} \ket{j}\bra{j}.
 
   \end{align} $ $
-remarks: '`coefficients`a $ \ theta_j = $0,0 elemekkel lesz feltöltve, ha kevesebb, mint $2 ^ n $ van megadva.'
+remarks: '`coefficients` a $ \ theta_j = $0,0 elemekkel lesz feltöltve, ha kevesebb, mint $2 ^ n $ van megadva.'
 syntax: 'operation ApplyDiagonalUnitary (coefficients : Double[], qubits : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
-references: '- A kvantum-logikai áramkörök összeszintézise: Vivek V. Shende, Stephen S. Bullock, Igor L. Markovhttps://arxiv.org/abs/quant-ph/0406176'
+references: '- A kvantum-logikai áramkörök összeszintézise: Vivek V. Shende, Stephen S. Bullock, Igor L. Markov https://arxiv.org/abs/quant-ph/0406176'
 input:
   content: '(coefficients : Double[], qubits : Microsoft.Quantum.Arithmetic.LittleEndian)'
   types:
@@ -39,9 +39,9 @@ functors:
 seeAlso:
 - approximatelyapplydiagonalunitary
 metadata:
-  ms.openlocfilehash: cb07fa100164b8dc753052b30e444c9df1eb13a1
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 7a0cc1a57d0e8a8e9dcd6dd687acf0da030b24ee
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82675064"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89350591"

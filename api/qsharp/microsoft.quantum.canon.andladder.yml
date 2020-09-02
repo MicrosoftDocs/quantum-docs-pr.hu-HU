@@ -2,14 +2,14 @@
 uid: microsoft.quantum.canon.andladder
 name: AndLadder
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
   Felügyelt "és létra" műveletet hajt végre a célként megadott qubits regisztrálásakor.
 
 
-  Ez a művelet egy átalakítást alkalmaz, amely a következő hozzárendeléssel van elvégezve: számítási alap\_, $ $ \begin{align} \ket{x\_1, \dots\_, x n} \ket{y\_1, \dots, y {n-\_1}} \mapsto \ket{x\_1, \dots,\_x n} \ket{\_y 1 \oplus\_(x 1 \land x 2\_), \dots, y {n-\_1} \oplus\_(x 1 \land x\_2 \land \cdots \land x {n-1}}, \end{align}\_$ $, ahol $\_\ket{x 1, \dots, x n} $ a számítási `controls`állapotára hivatkozik,\_és ahol $ \ket{y 1\_, \dots, y {n-1}} $ a számítási állapotára `targets`hivatkozik.
+  Ez a művelet egy átalakítást alkalmaz, amely a következő hozzárendeléssel van elvégezve: számítási alap, $ $ \begin{align} \ket{x \_ 1, \dots, x \_ n} \ket{y \_ 1, \dots, y \_ {n-1}} \mapsto \ket{x \_ 1, \dots, x \_ n} \ket{y \_ 1 \oplus (x \_ 1 \land x \_ 2), \dots, y \_ {n-1} \oplus (x \_ 1 \land x \_ 2 \land \cdots \land x \_ {n-1}}, \end{align} $ $, ahol $ \ket{x \_ 1, \dots, x \_ n} $ a számítási állapotára hivatkozik `controls` , és ahol $ \ket{y \_ 1, \dots, y \_ {n-1}} $ a számítási állapotára hivatkozik `targets` .
 remarks: >-
-  - A <xref:microsoft.quantum.canon.applymulticontrolledc> és <xref:microsoft.quantum.canon.applymulticontrolledca>a részeként használatos.
+  - A és a részeként használatos <xref:microsoft.quantum.canon.applymulticontrolledc> <xref:microsoft.quantum.canon.applymulticontrolledca> .
 
   - A magyarázathoz és az áramköri diagramhoz lásd a 4,10., 4,3-es szakaszt a Nielsen &.
 syntax: 'operation AndLadder (ccnot : Microsoft.Quantum.Canon.CCNOTop, controls : Qubit[], targets : Qubit[]) : Unit'
@@ -24,14 +24,14 @@ input:
     summary: >-
       A és a létra vezérlőelemként használandó qubits.
 
-      Ezzel a művelettel a `controls` Invariant állapotú számítási alapú állapotok maradnak.
+      Ezzel a művelettel a Invariant állapotú számítási alapú állapotok maradnak `controls` .
 
-      A hosszának `controls` legalább 2 karakterből kell állnia, és a hosszának meg kell egyeznie `targets`.
+      A hosszának legalább 2 karakterből kell állnia, és a hosszának meg kell `controls` egyeznie `targets` .
     isArray: true
     isPrimitive: true
     uid: Qubit
   - name: targets
-    summary: A hosszának `targets` legalább 1-nek kell lennie, és meg kell `controls` egyeznie a mínusz egy hosszával.
+    summary: A hosszának `targets` legalább 1-nek kell lennie, és meg kell egyeznie a `controls` mínusz egy hosszával.
     isArray: true
     isPrimitive: true
     uid: Qubit
@@ -43,9 +43,9 @@ output:
 functors:
 - Adjoint
 metadata:
-  ms.openlocfilehash: 4cc74315145176fd3a2258a3d92b2f2dfb4d66d3
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 194e562588a7ea244b39795ea1c489a07a7fbfba
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676389"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89350880"
