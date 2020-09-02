@@ -2,16 +2,16 @@
 uid: microsoft.quantum.preparation.prepareuniformsuperposition
 name: PrepareUniformSuperposition
 type: operation
-namespace: Microsoft.Quantum.Preparation
+namespace: microsoft.quantum.preparation
 summary: >-
-  A 0 és közötti `nIndices`kódolást biztosító állapotok egységes összeosztását hozza létre.
+  A 0 és közötti kódolást biztosító állapotok egységes összeosztását hozza létre `nIndices` .
 
 
-  Ez azt eredményezi, hogy ez az egységes $U $ a $0 $ és $M-$1 közötti összes számú államban egységes feladatot hoz létre, amely a \ket{0\cdots 0} $ értékű bemeneti állapottal rendelkezik. Más szóval, $ $ \begin{align} U\ket{0}= \Frac{1}{\sqrt{m}}\ sum_ {j = 0} ^ {M-1} \ket{j}.
+  Ez azt eredményezi, hogy ez az egységes $U $ a $0 $ és $M-$1 közötti összes számú államban egységes feladatot hoz létre, amely a \ket{0\cdots 0} $ értékű bemeneti állapottal rendelkezik. Más szóval, $ $ \begin{align} U\ket {0} = \frac {1} {\sqrt{m}}\ sum_ {j = 0} ^ {M-1} \ket{j}.
 
   \end{align} $ $.
 examples: >-
-  Az alábbi példa a $ \frac{1}{\sqrt{6}} \ sum_ {j = 0} ^{5}\ket{j} $ értéket állítja elő $3 $ qubits.
+  Az alábbi példa a $ \frac {1} {\sqrt {6} } \ sum_ {j = 0} ^ \ket{j} $ értéket állítja elő {5} $3 $ qubits.
 
 
   ```Q#
@@ -33,7 +33,7 @@ input:
     uid: Int
   - name: indexRegister
     summary: >-
-      A qubit- `LittleEndian` regisztráció, amely a számot tárolja a formátumban.
+      A qubit-regisztráció, amely a számot tárolja a `LittleEndian` formátumban.
 
       A regisztrációnak képesnek kell lennie a $M-$1 szám tárolására, és a rendszer azt feltételezi, hogy inicializálva van a $ \ket{0\cdots 0} $ állapotban.
     uid: microsoft.quantum.arithmetic.littleendian
@@ -46,9 +46,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: a697f4d410ed47c8be3908e2206080a9393260f7
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 442daa4affb6b59191af9117a8094f7bfbf71302
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82686521"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89331330"

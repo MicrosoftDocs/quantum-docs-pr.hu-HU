@@ -2,17 +2,17 @@
 uid: microsoft.quantum.errorcorrection.recover
 name: Recover
 type: operation
-namespace: Microsoft.Quantum.ErrorCorrection
-summary: Egy adott `QECC` típus által leírt kvantum-kóddal hajtja végre a hibajavítások egy szakaszát.
+namespace: microsoft.quantum.errorcorrection
+summary: Egy adott típus által leírt kvantum-kóddal hajtja végre a hibajavítások egy szakaszát `QECC` .
 syntax: 'operation Recover (code : Microsoft.Quantum.ErrorCorrection.QECC, fn : Microsoft.Quantum.ErrorCorrection.RecoveryFn, logicalRegister : Microsoft.Quantum.ErrorCorrection.LogicalRegister) : Unit'
 input:
   content: '(code : Microsoft.Quantum.ErrorCorrection.QECC, fn : Microsoft.Quantum.ErrorCorrection.RecoveryFn, logicalRegister : Microsoft.Quantum.ErrorCorrection.LogicalRegister)'
   types:
   - name: code
-    summary: Kvantum-hiba – a `QECC` típusként csomagolt kód kijavítani a kvantum-adatok kódolását és dekódolását, valamint a hiba-szindrómák mérésének módját.
+    summary: Kvantum-hiba – a típusként csomagolt kód kijavítani `QECC` a kvantum-adatok kódolását és dekódolását, valamint a hiba-szindrómák mérésének módját.
     uid: microsoft.quantum.errorcorrection.qecc
   - name: fn
-    summary: A `RecoveryFn` az észlelt hibát javító műveletekkel `Pauli[]` leképezi az egyes hibákat.
+    summary: A az `RecoveryFn` `Pauli[]` észlelt hibát javító műveletekkel leképezi az egyes hibákat.
     uid: microsoft.quantum.errorcorrection.recoveryfn
   - name: logicalRegister
     summary: Olyan qubits tömbje, amelyben a stabilizátor kódja van meghatározva.
@@ -27,9 +27,9 @@ seeAlso:
 - microsoft.quantum.canon.recoveryfn
 - microsoft.quantum.canon.logicalregister
 metadata:
-  ms.openlocfilehash: 2a873e06c20bf62c998b1096d862d26ff89aa134
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: b61c7255da3c8c22ffbbf7cd9a739ad4c9cca5d4
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82682292"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89349962"

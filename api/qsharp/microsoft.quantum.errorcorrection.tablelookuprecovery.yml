@@ -2,8 +2,8 @@
 uid: microsoft.quantum.errorcorrection.tablelookuprecovery
 name: TableLookupRecovery
 type: function
-namespace: Microsoft.Quantum.ErrorCorrection
-summary: Egy adott, a qubits adott nyilvántartásába tartozó művelet esetében ez a függvény egy típusú `RecoveryFn` objektumot ad vissza, amely tartalmazza az összes olyan információt, amely egy táblázatos keresési dekódolás végrehajtásához szükséges a Pauli-műveletek adott tömbje tekintetében.
+namespace: microsoft.quantum.errorcorrection
+summary: Egy adott, a qubits adott nyilvántartásába tartozó művelet esetében ez a függvény egy típusú objektumot ad vissza, `RecoveryFn` amely tartalmazza az összes olyan információt, amely egy táblázatos keresési dekódolás végrehajtásához szükséges a Pauli-műveletek adott tömbje tekintetében.
 syntax: 'function TableLookupRecovery (table : Pauli[][]) : Microsoft.Quantum.ErrorCorrection.RecoveryFn'
 input:
   content: '(table : Pauli[][])'
@@ -18,12 +18,12 @@ input:
 output:
   content: Microsoft.Quantum.ErrorCorrection.RecoveryFn
   types:
-  - summary: Egy típusú `RecoveryFn`objektum, azaz egy adott szindrómához társított `Syndrome -> Pauli[]` Térkép egy megfelelő Pauli-javító művelet.
+  - summary: Egy típusú objektum `RecoveryFn` , azaz egy `Syndrome -> Pauli[]` adott szindrómához társított Térkép egy megfelelő Pauli-javító művelet.
     uid: microsoft.quantum.errorcorrection.recoveryfn
 metadata:
-  ms.openlocfilehash: 20400c4afb1819225192ea695e4cc525e0b2f22b
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 25f9fbf5890c28d52552ba7fdc89ab6bb1506f37
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82684806"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89349605"
