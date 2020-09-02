@@ -1,32 +1,32 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.extensions.convert
 name: Microsoft.Quantum.Extensions.Convert
-summary: " # <a name=\"summary\"></a>Összefoglalás\n Ezek a System. functions által használt függvények. a .NET CLR olyan névterét alakítsa át, amelyek relevánsak a Q # Type rendszeren belül.\n\n # <a name=\"remarks\"></a>Megjegyzések\n Ha a függvény több verziója áll rendelkezésre a bool, az int és a Double típusok esetében, a megfelelő függvények a következő utótagot használják: B, I és D."
+summary: " # <a name=\"summary\"></a>Összegzés\n Ezek a System. functions által használt függvények. a .NET CLR olyan névterét alakítsa át, amelyek relevánsak a Q # Type rendszeren belül.\n\n # <a name=\"remarks\"></a>Megjegyzések\n Ha a függvény több verziója áll rendelkezésre a bool, az int és a Double típusok esetében, a megfelelő függvények a következő utótagot használják: B, I és D."
 functions:
 - uid: microsoft.quantum.extensions.convert.biginttobools
-  summary: "\n> [!WARNING]\n> Elavult\n\nA BigIntToBools elavult. Használja @\"microsoft.quantum.convert.bigintasboolarray\" helyette.\nKérjük, @\"microsoft.quantum.convert.bigintasboolarray\"használja."
+  summary: "\n> [!WARNING]\n> Elavult\n\nA BigIntToBools elavult. Használja @\"microsoft.quantum.convert.bigintasboolarray\" helyette.\nHasználja a következőt: @\"microsoft.quantum.convert.bigintasboolarray\"."
 - uid: microsoft.quantum.extensions.convert.boolstobigint
-  summary: "\n> [!WARNING]\n> Elavult\n\nA BoolsToBigInt elavult. Használja @\"microsoft.quantum.convert.boolarrayasbigint\" helyette.\nKérjük, @\"microsoft.quantum.convert.boolarrayasbigint\"használja."
+  summary: "\n> [!WARNING]\n> Elavult\n\nA BoolsToBigInt elavult. Használja @\"microsoft.quantum.convert.boolarrayasbigint\" helyette.\nHasználja a következőt: @\"microsoft.quantum.convert.boolarrayasbigint\"."
 - uid: microsoft.quantum.extensions.convert.pauliarraytoint
-  summary: "\n> [!WARNING]\n> Elavult\n\nA PauliArrayToInt elavult. Használja @\"microsoft.quantum.convert.pauliarrayasint\" helyette.\nKérjük, @\"microsoft.quantum.convert.pauliarrayasint\"használja."
+  summary: "\n> [!WARNING]\n> Elavult\n\nA PauliArrayToInt elavult. Használja @\"microsoft.quantum.convert.pauliarrayasint\" helyette.\nHasználja a következőt: @\"microsoft.quantum.convert.pauliarrayasint\"."
 - uid: microsoft.quantum.extensions.convert.tobigint
-  summary: "\n> [!WARNING]\n> Elavult\n\nA ToBigInt elavult. Használja @\"microsoft.quantum.convert.intasbigint\" helyette.\nKérjük, @\"microsoft.quantum.convert.intasbigint\"használja."
+  summary: "\n> [!WARNING]\n> Elavult\n\nA ToBigInt elavult. Használja @\"microsoft.quantum.convert.intasbigint\" helyette.\nHasználja a következőt: @\"microsoft.quantum.convert.intasbigint\"."
 - uid: microsoft.quantum.extensions.convert.todouble
-  summary: "\n> [!WARNING]\n> Elavult\n\nA ToDouble elavult. Használja @\"microsoft.quantum.convert.intasdouble\" helyette.\nKérjük, @\"microsoft.quantum.convert.intasdouble\"használja."
+  summary: "\n> [!WARNING]\n> Elavult\n\nA ToDouble elavult. Használja @\"microsoft.quantum.convert.intasdouble\" helyette.\nHasználja a következőt: @\"microsoft.quantum.convert.intasdouble\"."
 - uid: microsoft.quantum.extensions.convert.tostringb
-  summary: "\n> [!WARNING]\n> Elavult\n\nA ToStringB elavult. Használja @\"microsoft.quantum.convert.boolasstring\" helyette.\nKérjük, @\"microsoft.quantum.convert.boolasstring\"használja."
+  summary: "\n> [!WARNING]\n> Elavult\n\nA ToStringB elavult. Használja @\"microsoft.quantum.convert.boolasstring\" helyette.\nHasználja a következőt: @\"microsoft.quantum.convert.boolasstring\"."
 - uid: microsoft.quantum.extensions.convert.tostringd
-  summary: "\n> [!WARNING]\n> Elavult\n\nA ToStringD elavult. Használja @\"microsoft.quantum.convert.doubleasstring\" helyette.\nKérjük, @\"microsoft.quantum.convert.doubleasstring\"használja."
+  summary: "\n> [!WARNING]\n> Elavult\n\nA ToStringD elavult. Használja @\"microsoft.quantum.convert.doubleasstring\" helyette.\nHasználja a következőt: @\"microsoft.quantum.convert.doubleasstring\"."
 - uid: microsoft.quantum.extensions.convert.tostringdformat
-  summary: "\n> [!WARNING]\n> Elavult\n\nA ToStringDFormat elavult. Használja @\"microsoft.quantum.convert.doubleasstringwithformat\" helyette.\nKérjük, @\"microsoft.quantum.convert.doubleasstringwithformat\"használja."
+  summary: "\n> [!WARNING]\n> Elavult\n\nA ToStringDFormat elavult. Használja @\"microsoft.quantum.convert.doubleasstringwithformat\" helyette.\nHasználja a következőt: @\"microsoft.quantum.convert.doubleasstringwithformat\"."
 - uid: microsoft.quantum.extensions.convert.tostringi
-  summary: "\n> [!WARNING]\n> Elavult\n\nA ToStringI elavult. Használja @\"microsoft.quantum.convert.intasstring\" helyette.\nKérjük, @\"microsoft.quantum.convert.intasstring\"használja."
+  summary: "\n> [!WARNING]\n> Elavult\n\nA ToStringI elavult. Használja @\"microsoft.quantum.convert.intasstring\" helyette.\nHasználja a következőt: @\"microsoft.quantum.convert.intasstring\"."
 - uid: microsoft.quantum.extensions.convert.tostringiformat
-  summary: "\n> [!WARNING]\n> Elavult\n\nA ToStringIFormat elavult. Használja @\"microsoft.quantum.convert.intasstringwithformat\" helyette.\nKérjük, @\"microsoft.quantum.convert.intasstringwithformat\"használja."
+  summary: "\n> [!WARNING]\n> Elavult\n\nA ToStringIFormat elavult. Használja @\"microsoft.quantum.convert.intasstringwithformat\" helyette.\nHasználja a következőt: @\"microsoft.quantum.convert.intasstringwithformat\"."
 metadata:
-  ms.openlocfilehash: 8196882d8f7edf417f65bcd1651ecb770c4286f4
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 6f307cfeabec132c2b3b3953f30a2b0ad208f57a
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82673290"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89341020"

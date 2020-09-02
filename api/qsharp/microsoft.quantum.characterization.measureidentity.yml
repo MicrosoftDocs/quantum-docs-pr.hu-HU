@@ -2,10 +2,10 @@
 uid: microsoft.quantum.characterization.measureidentity
 name: MeasureIdentity
 type: operation
-namespace: Microsoft.Quantum.Characterization
+namespace: microsoft.quantum.characterization
 summary: Megméri az Identity operátort a qubits-regisztrációban.
 remarks: >-
-  Mivel a $ \boldone $ csak a $1 $ sajátérték, és nem rendelkezik negatív sajátérték, ez a művelet mindig visszatér, `Zero`amely a sajátérték $ + 1 = (-1) ^ 0 $ értéknek felel meg, és nem okozza az állapot összeomlását `register`.
+  Mivel a $ \boldone $ csak a $1 $ sajátérték, és nem rendelkezik negatív sajátérték, ez a művelet mindig visszatér `Zero` , amely a sajátérték $ + 1 = (-1) ^ 0 $ értéknek felel meg, és nem okozza az állapot összeomlását `register` .
 
 
   Önmagában ez a művelet nem hasznos, de a Process tomográfia környezetében hasznos, mivel információt nyújt a kvantum-folyamat nyomon követésének megőrzéséről.
@@ -23,13 +23,13 @@ input:
 output:
   content: Result
   types:
-  - summary: Az eredmény értéke `Zero`.
+  - summary: Az eredmény értéke `Zero` .
     isPrimitive: true
     uid: Result
 metadata:
-  ms.openlocfilehash: 28dd3655c883c02b798e6e4cdf39c70100c6535b
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 9b6b8bfbf8d13bf1415afadd0b520551201cd3d2
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82677640"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89354298"

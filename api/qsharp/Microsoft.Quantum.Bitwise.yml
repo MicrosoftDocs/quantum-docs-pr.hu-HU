@@ -6,7 +6,7 @@ functions:
   summary: >-
     A bitenkénti és két egész számot ad vissza.
 
-    Ez ugyanazokat a számításokat hajtja végre, `&&&` mint a beépített operátor.
+    Ez ugyanazokat a számításokat hajtja végre, mint a beépített `&&&` operátor.
 - uid: microsoft.quantum.bitwise.leftshiftedi
   summary: Egy adott számú biten hagyott szám bitenkénti-ábrázolását tolja át.
 - uid: microsoft.quantum.bitwise.leftshiftedl
@@ -15,12 +15,12 @@ functions:
   summary: >-
     A nem egész szám típusú bitenkénti adja vissza.
 
-    Ez ugyanazokat a számításokat hajtja végre, `~~~` mint a beépített operátor.
+    Ez ugyanazokat a számításokat hajtja végre, mint a beépített `~~~` operátor.
 - uid: microsoft.quantum.bitwise.or
   summary: >-
     A bitenkénti vagy két egész számot ad vissza.
 
-    Ez ugyanazokat a számításokat hajtja végre, `|||` mint a beépített operátor.
+    Ez ugyanazokat a számításokat hajtja végre, mint a beépített `|||` operátor.
 - uid: microsoft.quantum.bitwise.parity
   summary: Egy egész szám bitenkénti PARITÁSát adja vissza (1, ha a bináris ábrázolása páratlan számú vagy 0 értéket tartalmaz).
 - uid: microsoft.quantum.bitwise.rightshiftedi
@@ -33,14 +33,14 @@ functions:
   summary: >-
     Két egész szám bitenkénti kizárólagos vagy (XOR) értékét adja vissza.
 
-    Ez ugyanazokat a számításokat hajtja végre, `^^^` mint a beépített operátor.
+    Ez ugyanazokat a számításokat hajtja végre, mint a beépített `^^^` operátor.
 - uid: microsoft.quantum.bitwise.zbits
   summary: Egy olyan egész számot ad vissza, amely a Pauli operátorok tömbének Z bitejét jelöli.
-summary: " # <a name=\"summary\"></a>Összefoglalás\n Ez a névtér a klasszikus adattípusok bitenkénti ábrázolására szolgáló függvényeket tartalmaz."
+summary: " # <a name=\"summary\"></a>Összegzés\n Ez a névtér a klasszikus adattípusok bitenkénti ábrázolására szolgáló függvényeket tartalmaz."
 metadata:
-  ms.openlocfilehash: fb52d02d38d31b96b46dfc469ee07ee62e29a9d4
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 02fa75fd66a8f6dfeda42bc7e9e8832b34ecba40
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82673383"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89341581"
