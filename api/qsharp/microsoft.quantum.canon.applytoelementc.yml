@@ -2,12 +2,12 @@
 uid: microsoft.quantum.canon.applytoelementc
 name: ApplyToElementC
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
   Egy műveletet alkalmaz egy tömb egy adott elemére.
 
 
-  A művelet `op`, az index `index`és a célok `targets`tömbje is érvényes. `op(targets[index])`
+  A művelet `op` , az index `index` és a célok tömbje is `targets` érvényes `op(targets[index])` .
 syntax: "operation ApplyToElementC (op : ('T => Unit is Ctl), index : Int, targets : 'T[]) : Unit"
 input:
   content: "(op : ('T => Unit is Ctl), index : Int, targets : 'T[])"
@@ -48,9 +48,9 @@ seeAlso:
 - microsoft.quantum.canon.applytoelementa
 - microsoft.quantum.canon.applytoelementca
 metadata:
-  ms.openlocfilehash: 40d608d8dd7def5027ade690a7602c25bb287055
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: bae0b68f5531da2f4109a8f46978365b88cc57a3
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82670010"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89357595"

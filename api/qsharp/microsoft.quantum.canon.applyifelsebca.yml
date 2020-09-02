@@ -2,22 +2,22 @@
 uid: microsoft.quantum.canon.applyifelsebca
 name: ApplyIfElseBCA
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
   Egy klasszikus bites értéktől függően két egységes művelet egyikét alkalmazza.
 
 
-  `bit` `trueOp` Adott esetben a műveletet `trueInput` a bemenetként alkalmazza, ha `bit` a értéke `true`, és ha `falseOp(falseInput)` `bit` a értéke `false`, akkor alkalmazza.
+  Adott `bit` esetben a műveletet a `trueOp` bemenetként alkalmazza, ha a `trueInput` `bit` értéke `true` , és `falseOp(falseInput)` Ha a értéke, akkor alkalmazza `bit` `false` .
 syntax: "operation ApplyIfElseBCA (bit : Bool, (trueOp : ('T => Unit is Adj + Ctl), trueInput : 'T), (falseOp : ('U => Unit is Adj + Ctl), falseInput : 'U)) : Unit"
 input:
   content: "(bit : Bool, (trueOp : ('T => Unit is Adj + Ctl), trueInput : 'T), (falseOp : ('U => Unit is Adj + Ctl), falseInput : 'U))"
   types:
   - name: bit
-    summary: A logikai érték, amellyel megállapítható `trueOp` , `falseOp` hogy alkalmazva van-e vagy sem.
+    summary: A logikai érték, amellyel megállapítható, hogy `trueOp` alkalmazva van-e vagy sem `falseOp` .
     isPrimitive: true
     uid: Bool
   - name: trueOp
-    summary: Az a művelet, amelyre alkalmazni `bit` kell. `true`
+    summary: Az a művelet, amelyre alkalmazni kell `bit` `true` .
     isOperation: true
     input:
       types:
@@ -31,11 +31,11 @@ input:
     - Adjoint
     - Controlled
   - name: trueInput
-    summary: 'A következőhöz megadott `trueOp` `bit` bemenet: `true`.'
+    summary: 'A következőhöz megadott bemenet: `trueOp` `bit` `true` .'
     uid: "'T"
     isLocal: true
   - name: falseOp
-    summary: Az a művelet, amelyre alkalmazni `bit` kell. `false`
+    summary: Az a művelet, amelyre alkalmazni kell `bit` `false` .
     isOperation: true
     input:
       types:
@@ -49,7 +49,7 @@ input:
     - Adjoint
     - Controlled
   - name: falseInput
-    summary: 'A következőhöz megadott `falseOp` `bit` bemenet: `false`.'
+    summary: 'A következőhöz megadott bemenet: `falseOp` `bit` `false` .'
     uid: "'U"
     isLocal: true
 output:
@@ -59,9 +59,9 @@ output:
     uid: Unit
 typeParameters:
 - uid: "'T"
-  summary: A feltételesen alkalmazni kívánt `trueOp` művelet bemeneti típusa.
+  summary: A `trueOp` feltételesen alkalmazni kívánt művelet bemeneti típusa.
 - uid: "'U"
-  summary: A feltételesen alkalmazni kívánt `falseOp` művelet bemeneti típusa.
+  summary: A `falseOp` feltételesen alkalmazni kívánt művelet bemeneti típusa.
 functors:
 - Adjoint
 - Controlled
@@ -72,9 +72,9 @@ seeAlso:
 - microsoft.quantum.canon.applyifelsera
 - microsoft.quantum.canon.applyifelserca
 metadata:
-  ms.openlocfilehash: 3f0d704d33fc1d3e964e804c2ff68cb893069445
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 608808f776ac0d187571adc415abc0c7d1666ef9
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82672773"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89350353"
