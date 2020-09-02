@@ -2,7 +2,7 @@
 uid: microsoft.quantum.machinelearning.trainsequentialclassifieratmodel
 name: TrainSequentialClassifierAtModel
 type: operation
-namespace: Microsoft.Quantum.MachineLearning
+namespace: microsoft.quantum.machinelearning
 summary: Egy szekvenciális osztályozó szerkezete miatt az osztályozó egy adott megcímkézett betanítási készleten, egy adott modelltől indul.
 syntax: 'operation TrainSequentialClassifierAtModel (model : Microsoft.Quantum.MachineLearning.SequentialModel, samples : Microsoft.Quantum.MachineLearning.LabeledSample[], options : Microsoft.Quantum.MachineLearning.TrainingOptions, trainingSchedule : Microsoft.Quantum.MachineLearning.SamplingSchedule, validationSchedule : Microsoft.Quantum.MachineLearning.SamplingSchedule) : (Microsoft.Quantum.MachineLearning.SequentialModel, Int)'
 input:
@@ -16,7 +16,7 @@ input:
     isArray: true
     uid: microsoft.quantum.machinelearning.labeledsample
   - name: options
-    summary: 'A Betanításkor használandó konfiguráció további @"microsoft.quantum.machinelearning.trainingoptions" részletekért lásd: és @"microsoft.quantum.machinelearning.defaulttrainingoptions" .'
+    summary: 'A Betanításkor használandó konfiguráció @"microsoft.quantum.machinelearning.trainingoptions" @"microsoft.quantum.machinelearning.defaulttrainingoptions" További részletekért lásd: és.'
     uid: microsoft.quantum.machinelearning.trainingoptions
   - name: trainingSchedule
     summary: Mintavételezési ütemterv, amely a betanítási adatokban a minták kiválasztásakor használatos a betanítási lépések során.
@@ -39,9 +39,9 @@ seeAlso:
 - microsoft.quantum.machinelearning.trainsequentialclassifier
 - microsoft.quantum.machinelearning.validatesequentialclassifier
 metadata:
-  ms.openlocfilehash: ab30be93a0a1e0b347d2adfe82dbcf07b12d6996
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 36666626d6fb6319fbc62d2d49d5975fe29f8d93
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82684275"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89335478"

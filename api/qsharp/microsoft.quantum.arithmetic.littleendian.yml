@@ -2,14 +2,14 @@
 uid: microsoft.quantum.arithmetic.littleendian
 name: LittleEndian
 type: newtype
-namespace: Microsoft.Quantum.Arithmetic
-summary: Regisztrálja, hogy az előjel nélküli egész számot kódolja kis endian sorrendben. Az indextel `0` rendelkező qubit egy előjel nélküli egész szám legalacsonyabb részét kódolja.
-remarks: A `LittleEndian` dokumentációnak `LE` megfelelően rövidítjük.
+namespace: microsoft.quantum.arithmetic
+summary: Regisztrálja, hogy az előjel nélküli egész számot kódolja kis endian sorrendben. Az indextel rendelkező qubit `0` egy előjel nélküli egész szám legalacsonyabb részét kódolja.
+remarks: '`LittleEndian` `LE` A dokumentációnak megfelelően rövidítjük.'
 syntax: newtype LittleEndian = Qubit[];
 metadata:
-  ms.openlocfilehash: de24c79091da80c2f5e9cbeecc8fe9e4bfb9cb89
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: ac8833cad5eb3f8e9f6de66ebb499d33a1361a26
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676835"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89342737"

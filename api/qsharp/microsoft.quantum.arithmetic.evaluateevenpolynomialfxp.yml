@@ -2,7 +2,7 @@
 uid: microsoft.quantum.arithmetic.evaluateevenpolynomialfxp
 name: EvaluateEvenPolynomialFxP
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: Kiértékeli a páros polinom-t egy rögzített pontos ábrázolásban.
 syntax: 'operation EvaluateEvenPolynomialFxP (coefficients : Double[], fpx : Microsoft.Quantum.Arithmetic.FixedPoint, result : Microsoft.Quantum.Arithmetic.FixedPoint) : Unit'
 input:
@@ -17,7 +17,7 @@ input:
     summary: Bemeneti rögzített pont száma, amelynek kiértékeléséhez a polinom szükséges.
     uid: microsoft.quantum.arithmetic.fixedpoint
   - name: result
-    summary: Kimeneti rögzített pont száma, amely $P (x) $ értéket fogja tárolni. Kezdetben a $ \ket{0}$ állapotban kell lennie.
+    summary: Kimeneti rögzített pont száma, amely $P (x) $ értéket fogja tárolni. Kezdetben a $ \ket $ állapotban kell lennie {0} .
     uid: microsoft.quantum.arithmetic.fixedpoint
 output:
   content: Unit
@@ -28,9 +28,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: dca40d385ca3f63d40e68db4e5cc8b4031990b9a
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 2e7e690e50e8cd621d794e8461ebde49c33ee104
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82679668"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89342890"

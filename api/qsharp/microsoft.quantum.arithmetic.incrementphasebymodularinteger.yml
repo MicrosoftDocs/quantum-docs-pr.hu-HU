@@ -2,16 +2,16 @@
 uid: microsoft.quantum.arithmetic.incrementphasebymodularinteger
 name: IncrementPhaseByModularInteger
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: >-
   Egy qubit-regiszter moduláris növekményét hajtja végre egy egész állandó értékkel.
 
 
-  $A $, `increment` $N $ és Integer `modulus` szerint, $y $ kódolással `target` jelezze nekünk.
+  `increment`$A $, `modulus` $N $ és Integer szerint, $y $ kódolással jelezze nekünk `target` .
 
   Ezután a művelet a következő átalakítást hajtja végre: \begin{align} \ket{y} \mapsto \ket{(y + a) \operatorname{mod} N} \end{align} egész számok kódolása kis endian formátumban történik QFT alapján.
 remarks: >-
-  Feltételezi, `target` hogy a legmagasabb bit 0 értékű.
+  Feltételezi, hogy `target` a legmagasabb bit 0 értékű.
 
   Azt is feltételezi, hogy a célként megadott érték kisebb, mint $N $.
 
@@ -43,9 +43,9 @@ functors:
 seeAlso:
 - microsoft.quantum.arithmetic.incrementbymodularinteger
 metadata:
-  ms.openlocfilehash: e97f88d64d9188d18b10ed7f67adc0225167c466
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 92c20afa6753d80a10a38d8c787efab3a295fc2b
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676854"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89342839"
