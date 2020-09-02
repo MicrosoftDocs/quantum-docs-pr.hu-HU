@@ -1,16 +1,16 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.characterization
 name: Microsoft.Quantum.Characterization
-summary: " # <a name=\"summary\"></a>Összefoglalás\n Ez a névtér a kvantum-állapotok és-folyamatok tanulási tulajdonságainak, például a tomográfia és a fázisok becslésének megismerésére szolgáló függvényeket és műveleteket tartalmaz."
+summary: " # <a name=\"summary\"></a>Összegzés\n Ez a névtér a kvantum-állapotok és-folyamatok tanulási tulajdonságainak, például a tomográfia és a fázisok becslésének megismerésére szolgáló függvényeket és műveleteket tartalmaz."
 operations:
 - uid: microsoft.quantum.characterization.continuousphaseestimationiteration
   summary: Egy iterációs (klasszikusan vezérelt) fázis-értékelési algoritmus egyszeri ismétlését hajtja végre, amely egy egységes Oracle tetszőleges valós hatáskörét használja.
 - uid: microsoft.quantum.characterization.discretephaseestimationiteration
   summary: Egy iterációs (klasszikusan vezérelt) fázis-értékelési algoritmus egyszeri ismétlését hajtja végre egy egységes Oracle egész számú erejével.
 - uid: microsoft.quantum.characterization.estimatefrequency
-  summary: Az előkészítés és a mérés miatt a rendszer a megadott számú próbaverzió elvégzésével megbecsüli a gyakoriságot, amellyel a mérték sikeres (visszatérési `Zero`).
+  summary: Az előkészítés és a mérés miatt a rendszer a `Zero` megadott számú próbaverzió elvégzésével megbecsüli a gyakoriságot, amellyel a mérték sikeres (visszatérési).
 - uid: microsoft.quantum.characterization.estimatefrequencya
-  summary: A adjointable és a mérést követően a rendszer a megadott számú próbaverzió elvégzésével megbecsüli `Zero`a gyakoriságot, amellyel a mérték sikeres (visszaadott) értékkel rendelkezik.
+  summary: A adjointable és a mérést követően a rendszer a `Zero` megadott számú próbaverzió elvégzésével megbecsüli a gyakoriságot, amellyel a mérték sikeres (visszaadott) értékkel rendelkezik.
 - uid: microsoft.quantum.characterization.estimateimagoverlapbetweenstates
   summary: A két művelet, amely az egyes állapotok előkészítését végzi, a megbecsüli az egyes műveletek által előkészített állapotok közötti átfedés képzeletbeli részét.
 - uid: microsoft.quantum.characterization.estimateoverlapbetweenstates
@@ -18,19 +18,19 @@ operations:
 - uid: microsoft.quantum.characterization.estimaterealoverlapbetweenstates
   summary: A két művelet, amely az egyes állapotok előkészítését végzi, az egyes műveletek által előkészített állapotok közötti átfedés valódi részét becsüli meg.
 - uid: microsoft.quantum.characterization.measureallz
-  summary: "\n> [!WARNING]\n> Elavult\n\nA MeasureAllZ elavult. Használja @\"microsoft.quantum.measurement.measureallz\" helyette.\nKérjük, @\"microsoft.quantum.measurement.measureAllZ\"használja."
+  summary: "\n> [!WARNING]\n> Elavult\n\nA MeasureAllZ elavult. Használja @\"microsoft.quantum.measurement.measureallz\" helyette.\nHasználja a következőt: @\"microsoft.quantum.measurement.measureAllZ\"."
 - uid: microsoft.quantum.characterization.measureidentity
   summary: Megméri az Identity operátort a qubits-regisztrációban.
 - uid: microsoft.quantum.characterization.quantumphaseestimation
-  summary: Végrehajtja a kvantum fázis becslési algoritmusát egy `U` adott `targetState`Oracle esetében, és beolvassa a fázist egy nagy endian kvantum-regisztrációba.
+  summary: Végrehajtja a kvantum fázis becslési algoritmusát egy adott Oracle esetében `U` `targetState` , és beolvassa a fázist egy nagy endian kvantum-regisztrációba.
 - uid: microsoft.quantum.characterization.robustphaseestimation
   summary: Elvégzi a robusztus, nem ismétlődő kvantum-értékelési algoritmust egy adott Oracle `U` -és eigenstate esetében, és egyetlen valós értékű becslést nyújt a fázisról a Heisenberg korláton belüli variancia-méretezéssel.
 - uid: microsoft.quantum.characterization.singlequbitprocesstomographymeasurement
   summary: Egy qubit-alapú Process tomográfia-mérést hajt végre Pauli alapon, egy adott érdeklődési csatornán keresztül.
 metadata:
-  ms.openlocfilehash: 2ae4ee28cf6e87a3fde1f8107194760c388b462c
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: b8b7c1b7e6fc3dad00e62d7722ef4cb38b96b82f
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82673361"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89341479"

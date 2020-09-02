@@ -1,18 +1,18 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.oracles
 name: Microsoft.Quantum.Oracles
-summary: " # <a name=\"summary\"></a>Összefoglalás\n Ez a névterek felhasználó által definiált típusokat biztosítanak különféle Oracle-típusok kiépítéséhez a kvantum-algoritmusokban, például a fázisok becslése és az amplitúdó-erősítés alapján."
+summary: " # <a name=\"summary\"></a>Összegzés\n Ez a névterek felhasználó által definiált típusokat biztosítanak különféle Oracle-típusok kiépítéséhez a kvantum-algoritmusokban, például a fázisok becslése és az amplitúdó-erősítés alapján."
 functions:
 - uid: microsoft.quantum.oracles.deterministicstateoraclefromstateoracle
-  summary: Egy típusú `StateOracle` Oracle-t `DeterministicStateOracle`konvertál.
+  summary: Egy típusú Oracle `StateOracle` -t konvertál `DeterministicStateOracle` .
 - uid: microsoft.quantum.oracles.obliviousoraclefromdeterministicstateoracle
-  summary: Egyesíti az Oracle `DeterministicStateOracle` -ket `ObliviousOracle`és a-t.
+  summary: Egyesíti az Oracle `DeterministicStateOracle` -ket és a-t `ObliviousOracle` .
 - uid: microsoft.quantum.oracles.oracletodiscrete
   summary: Egy "Black-Box" Oracle-t jelképező művelet miatt egy diszkrét idejű Oracle-t ad vissza, amely a "fekete doboz" Oracle többször ismétlődik.
 - uid: microsoft.quantum.oracles.reflectionoraclefromdeterministicstateoracle
   summary: Egy Oracle-ből származó adott állapottal kapcsolatos reflexiót hoz létre.
 - uid: microsoft.quantum.oracles.stateoraclefromdeterministicstateoracle
-  summary: Egy típusú `DeterministicStateOracle` Oracle-t `StateOracle`konvertál.
+  summary: Egy típusú Oracle `DeterministicStateOracle` -t konvertál `StateOracle` .
 newtypes:
 - uid: microsoft.quantum.oracles.continuousoracle
   summary: >-
@@ -28,7 +28,7 @@ newtypes:
     Az Oracle $O $ értékre való bemenet a következő:
 
 
-    - Az a regisztráció, amely a kívánt Quantum State $ \ket{\psi}\_s $ értéket fogja tárolni.
+    - Az a regisztráció, amely a kívánt Quantum State $ \ket{\psi} \_ s $ értéket fogja tárolni.
 - uid: microsoft.quantum.oracles.discreteoracle
   summary: >-
     Diszkrét idejű Oracle-t jelöl.
@@ -45,7 +45,7 @@ newtypes:
 
     - A Ancilla regisztrálja $a $-t, amely $O $ műveleteket végez.
 
-    - A rendszer regisztrálja $s $ értéket, amelyre a kívánt egységes $U $ alkalmazás van alkalmazva, majd a Register $a $ bejegyzés után a\_$ \ket{t} $ értékű állapotban van.
+    - A rendszer regisztrálja $s $ értéket, amelyre a kívánt egységes $U $ alkalmazás van alkalmazva, majd a Register $a $ bejegyzés után a $ \ket{t} $ értékű állapotban van \_ .
 - uid: microsoft.quantum.oracles.reflectionoracle
   summary: >-
     Egy reflexiós Oracle-t jelöl.
@@ -67,11 +67,11 @@ newtypes:
 
     - Egy egész szám, amely indexeli a jelző qubit $f $ értéket.
 
-    - A rendszer regisztrálja $s $, amely a kívánt Quantum State $ \ket{\psi}\_s $ értéket fogja tárolni.
+    - A rendszer regisztrálja $s $, amely a kívánt Quantum State $ \ket{\psi} \_ s $ értéket fogja tárolni.
 metadata:
-  ms.openlocfilehash: c1f364d74aab6d318e7b6db078d5532aeae57bcd
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 100ea34895b343c8b24ef4f584bbf534acd9d6ff
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82673104"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89340952"

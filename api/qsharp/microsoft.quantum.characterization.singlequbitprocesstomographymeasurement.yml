@@ -2,7 +2,7 @@
 uid: microsoft.quantum.characterization.singlequbitprocesstomographymeasurement
 name: SingleQubitProcessTomographyMeasurement
 type: operation
-namespace: Microsoft.Quantum.Characterization
+namespace: microsoft.quantum.characterization
 summary: Egy qubit-alapú Process tomográfia-mérést hajt végre Pauli alapon, egy adott érdeklődési csatornán keresztül.
 remarks: A művelet által visszaadott eredmények eloszlása a qubit állami tomográfia különleges esete. Engedje, hogy a $ \rho = J (\Lambda)/$2 legyen a Choi – Jamiłkowski ($ \Lambda $) állapot. Ezután a fenti eloszlás megegyezik a $ $ \begin{align} \Pr (\texttt{Zero} | \rho; M) = \operatorname{Tr} (M \rho), \end{align} $ $, ahol a $M = 2 (\boldone + P) ^ \mathrm{T}/2 \cdot (\boldone + Q)/$2 a $P $ és $Q $ értéknek megfelelő tényleges mérés.
 syntax: 'operation SingleQubitProcessTomographyMeasurement (preparation : Pauli, measurement : Pauli, channel : (Qubit => Unit)) : Result'
@@ -32,15 +32,15 @@ output:
   content: Result
   types:
   - summary: >-
-      Az eredmény `Zero` a következő valószínűséggel: $ $ \begin{align} \Pr (\Texttt{Zero} | \Lambda; P, Q) = \operatorname{Tr}\left (\frac{\boldone + Q}{2} \Lambda\left [\Frac{\boldone + P}{2} \right] \right).
+      Az eredmény a `Zero` következő valószínűséggel: $ $ \Begin{align} \Pr (\texttt{Zero} | \Lambda; P, Q) = \operatorname{Tr}\left (\frac{\boldone + Q} {2} \Lambda\left [\frac{\boldone + P} {2} \right] \right).
 
       \end{align} $ $
     isPrimitive: true
     uid: Result
 metadata:
-  ms.openlocfilehash: f554910a414666c6d61a96932a932b9320426360
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 030ca1ba45df6ea1fc37b994c30bd4f862a6b923
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82677584"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89354246"

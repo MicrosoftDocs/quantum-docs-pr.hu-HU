@@ -3,19 +3,19 @@ uid: microsoft.quantum.chemistry.jordanwigner
 name: Microsoft.Quantum.Chemistry.JordanWigner
 functions:
 - uid: microsoft.quantum.chemistry.jordanwigner.jordanwignerblockencodinggeneratorsystem
-  summary: A által `JWOptimizedHTerms` ismertetett Hamilton a Pauli `GeneratorSystem` `GeneratorIndex`kifejezésben kifejezett értékre alakítja át.
+  summary: A által ismertetett Hamilton `JWOptimizedHTerms` `GeneratorSystem` a Pauli kifejezésben kifejezett értékre alakítja át `GeneratorIndex` .
 - uid: microsoft.quantum.chemistry.jordanwigner.jordanwignerclusteroperatorevolutionset
   summary: A dinamikus generátort szimulálható kapuk készlete jelöli, a JordanWigner pedig kibővíthető.
 - uid: microsoft.quantum.chemistry.jordanwigner.jordanwignerclusteroperatorgeneratorsystem
-  summary: A által `JWOptimizedHTerms` ismertetett Hamilton alakítja `GeneratorSystem` át az `GeneratorIndex` ebben a fájlban meghatározott egyezményben kifejezett kifejezéssel.
+  summary: A által ismertetett Hamilton alakítja át `JWOptimizedHTerms` `GeneratorSystem` az `GeneratorIndex` ebben a fájlban meghatározott egyezményben kifejezett kifejezéssel.
 - uid: microsoft.quantum.chemistry.jordanwigner.jordanwignerfermionevolutionset
   summary: A dinamikus generátort szimulálható kapuk készlete jelöli, a JordanWigner pedig kibővíthető.
 - uid: microsoft.quantum.chemistry.jordanwigner.jordanwignerfermionfunction
   summary: A dinamikus generátort szimulálható kapuk készlete jelöli, a JordanWigner pedig kibővíthető.
 - uid: microsoft.quantum.chemistry.jordanwigner.jordanwignergeneratorsystem
-  summary: A által `JWOptimizedHTerms` ismertetett Hamilton alakítja `GeneratorSystem` át az `GeneratorIndex` ebben a fájlban meghatározott egyezményben kifejezett kifejezéssel.
+  summary: A által ismertetett Hamilton alakítja át `JWOptimizedHTerms` `GeneratorSystem` az `GeneratorIndex` ebben a fájlban meghatározott egyezményben kifejezett kifejezéssel.
 - uid: microsoft.quantum.chemistry.jordanwigner.optimizedblockencodinggeneratorsystem
-  summary: A által `JWOptimizedHTerms` ismertetett Hamilton a Pauli `GeneratorSystem` `GeneratorIndex`kifejezésben kifejezett értékre alakítja át.
+  summary: A által ismertetett Hamilton `JWOptimizedHTerms` `GeneratorSystem` a Pauli kifejezésben kifejezett értékre alakítja át `GeneratorIndex` .
 - uid: microsoft.quantum.chemistry.jordanwigner.optimizedqubitizationoracle
   summary: A T-Count optimalizált Qubitization műveletet és a futtatásához szükséges paramétereket adja vissza.
 - uid: microsoft.quantum.chemistry.jordanwigner.qubitizationoracle
@@ -24,7 +24,7 @@ functions:
   summary: Visszaadja a Trotter lépés műveletét és a futtatásához szükséges paramétereket.
 operations:
 - uid: microsoft.quantum.chemistry.jordanwigner.optimizedbexy
-  summary: 'Egy egységes $U $, amely a Pauli-karakterláncot alkalmazza $ (X ^ {z +\_1} c: ^\_{Z}\_p) z {p-1}... Z_0 $ on qubits $0.. p $ feltétele egy index $z \in\{0, 1\}$ és $p $. Ez a $ $ \begin{align} U\ket {z} \ ket {p} \ ket {\ PSI} = \ket{z}\ket{p} (X ^ {z + 1}\_c: # {z}\_p) z\_{p-1}... Z_0 \ket{\psi} \end{align} $ $'
+  summary: 'Egy egységes $U $, amely a Pauli-karakterláncot alkalmazza $ (X ^ {z + 1} \_ c: ^ {z} \_ p) z \_ {p-1}... Z_0 $ on qubits $0.. p $ feltétele egy index $z \in \{ 0, 1 \} $ és $p $. Ez a $ $ \begin{align} U\ket {z} \ ket {p} \ ket {\ PSI} = \ket{z}\ket{p} (X ^ {z + 1} c: # \_ {z} \_ p) z \_ {p-1}... Z_0 \ket{\psi} \end{align} $ $'
 - uid: microsoft.quantum.chemistry.jordanwigner.preparesingleconfigurationalstatesinglesiteoccupation
   summary: Próbaverziós állapot egyszerű állapotának előkészítése a spin-orbits elfoglalásával
 - uid: microsoft.quantum.chemistry.jordanwigner.preparesparsemulticonfigurationalstate
@@ -34,7 +34,7 @@ operations:
 - uid: microsoft.quantum.chemistry.jordanwigner.prepareunitarycoupledclusterstate
   summary: Egyszintű, a fürt állapotának előkészítési állapota
 - uid: microsoft.quantum.chemistry.jordanwigner.selectz
-  summary: Egy egységes $U $, amely a Pauli $Z $ Gate-t alkalmazza egy qubits, $p $ \ket{p} $ index állapotú. Ez a $ $ \begin{align} U\ket {p} \ ket {\ PSI} = \ket{p}Z\_p\ket {\ PSI} \end{align} $ $
+  summary: Egy egységes $U $, amely a Pauli $Z $ Gate-t alkalmazza egy qubits, $p $ \ket{p} $ index állapotú. Ez a $ $ \begin{align} U\ket {p} \ ket {\ PSI} = \ket{p}Z \_ p\ket {\ PSI} \end{align} $ $
 newtypes:
 - uid: microsoft.quantum.chemistry.jordanwigner.jordanwignerencodingdata
   summary: >-
@@ -49,13 +49,13 @@ newtypes:
 
     A megjelenített adatmennyiség jelentését az azt fogadó algoritmus határozza meg.
 - uid: microsoft.quantum.chemistry.jordanwigner.optimizedbegeneratorsystem
-  summary: Az a függvény `OptimizedBETermIndex` , amely egy `n` egész számra `n`vonatkozó kifejezést ad vissza, és az első `Int` és a kifejezésben szereplő összes kifejezés abszolút értékének összegét adja vissza. `Double`
+  summary: Az a függvény `OptimizedBETermIndex` `n` , amely egy egész számra vonatkozó kifejezést ad vissza `n` , és az első és a `Int` kifejezésben szereplő összes kifejezés abszolút értékének összegét `Double` adja vissza.
 - uid: microsoft.quantum.chemistry.jordanwigner.optimizedbetermindex
   summary: Az optimalizált blokk kódolási algoritmusban található adatok kifejezése.
 metadata:
-  ms.openlocfilehash: bbc51f1ca36c81f15f96d0e526eb15bf79922373
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 0299b01d022eda61772a48ce1cb1bc693ffbdf31
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82677042"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89341445"

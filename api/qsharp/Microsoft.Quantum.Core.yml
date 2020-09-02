@@ -1,7 +1,7 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.core
 name: Microsoft.Quantum.Core
-summary: " # <a name=\"summary\"></a>Összefoglalás\n Ez a névtér Q # Core függvényeket és műveleteket tartalmaz.\n\n # <a name=\"remarks\"></a>Megjegyzések\n A Q # fordítóprogram automatikusan megnyitja ezt a névteret, így a névtér minden eleme mindig elérhető."
+summary: " # <a name=\"summary\"></a>Összegzés\n Ez a névtér Q # Core függvényeket és műveleteket tartalmaz.\n\n # <a name=\"remarks\"></a>Megjegyzések\n A Q # fordítóprogram automatikusan megnyitja ezt a névteret, így a névtér minden eleme mindig elérhető."
 functions:
 - uid: microsoft.quantum.core.default
   summary: A megadott típus alapértelmezett példányát adja vissza.
@@ -23,9 +23,9 @@ newtypes:
 - uid: microsoft.quantum.core.entrypoint
   summary: Egy végrehajtható fájl belépési pontjának megjelölésére használt fordító által felismert attribútum.
 metadata:
-  ms.openlocfilehash: 7533708473cff8902745ed67c235244ea9b2234b
-  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.openlocfilehash: 354a8e2c221007f27ff409dc4b75b0d5953d9f67
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 07/02/2020
-  ms.locfileid: "85885267"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89341258"

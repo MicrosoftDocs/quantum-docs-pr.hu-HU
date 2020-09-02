@@ -3,23 +3,23 @@ uid: microsoft.quantum.extensions.bitwise
 name: Microsoft.Quantum.Extensions.Bitwise
 functions:
 - uid: microsoft.quantum.extensions.bitwise.and
-  summary: "\n> [!WARNING]\n> Elavult\n\nÉs már elavult. Használja @\"microsoft.quantum.bitwise.and\" helyette.\nKérjük, @\"microsoft.quantum.bitwise.and\"használja."
+  summary: "\n> [!WARNING]\n> Elavult\n\nÉs már elavult. Használja @\"microsoft.quantum.bitwise.and\" helyette.\nHasználja a következőt: @\"microsoft.quantum.bitwise.and\"."
 - uid: microsoft.quantum.extensions.bitwise.not
-  summary: "\n> [!WARNING]\n> Elavult\n\nNem elavult. Használja @\"microsoft.quantum.bitwise.not\" helyette.\nKérjük, @\"microsoft.quantum.bitwise.not\"használja."
+  summary: "\n> [!WARNING]\n> Elavult\n\nNem elavult. Használja @\"microsoft.quantum.bitwise.not\" helyette.\nHasználja a következőt: @\"microsoft.quantum.bitwise.not\"."
 - uid: microsoft.quantum.extensions.bitwise.or
-  summary: "\n> [!WARNING]\n> Elavult\n\nVagy elavult. Használja @\"microsoft.quantum.bitwise.or\" helyette.\nKérjük, @\"microsoft.quantum.bitwise.or\"használja."
+  summary: "\n> [!WARNING]\n> Elavult\n\nVagy elavult. Használja @\"microsoft.quantum.bitwise.or\" helyette.\nHasználja a következőt: @\"microsoft.quantum.bitwise.or\"."
 - uid: microsoft.quantum.extensions.bitwise.parity
-  summary: "\n> [!WARNING]\n> Elavult\n\nA paritás elavult. Használja @\"microsoft.quantum.bitwise.parity\" helyette.\nKérjük, @\"microsoft.quantum.bitwise.parity\"használja."
+  summary: "\n> [!WARNING]\n> Elavult\n\nA paritás elavult. Használja @\"microsoft.quantum.bitwise.parity\" helyette.\nHasználja a következőt: @\"microsoft.quantum.bitwise.parity\"."
 - uid: microsoft.quantum.extensions.bitwise.xbits
-  summary: "\n> [!WARNING]\n> Elavult\n\nA XBits elavult. Használja @\"microsoft.quantum.bitwise.xbits\" helyette.\nKérjük, @\"microsoft.quantum.bitwise.xbits\"használja."
+  summary: "\n> [!WARNING]\n> Elavult\n\nA XBits elavult. Használja @\"microsoft.quantum.bitwise.xbits\" helyette.\nHasználja a következőt: @\"microsoft.quantum.bitwise.xbits\"."
 - uid: microsoft.quantum.extensions.bitwise.xor
-  summary: "\n> [!WARNING]\n> Elavult\n\nA XOR elavult. Használja @\"microsoft.quantum.bitwise.xor\" helyette.\nKérjük, @\"microsoft.quantum.bitwise.xor\"használja."
+  summary: "\n> [!WARNING]\n> Elavult\n\nA XOR elavult. Használja @\"microsoft.quantum.bitwise.xor\" helyette.\nHasználja a következőt: @\"microsoft.quantum.bitwise.xor\"."
 - uid: microsoft.quantum.extensions.bitwise.zbits
-  summary: "\n> [!WARNING]\n> Elavult\n\nA ZBits elavult. Használja @\"microsoft.quantum.bitwise.zbits\" helyette.\nKérjük, @\"microsoft.quantum.bitwise.zbits\"használja."
+  summary: "\n> [!WARNING]\n> Elavult\n\nA ZBits elavult. Használja @\"microsoft.quantum.bitwise.zbits\" helyette.\nHasználja a következőt: @\"microsoft.quantum.bitwise.zbits\"."
 metadata:
-  ms.openlocfilehash: 9c5cdc98558deeff0ae92c86abfca1840c568233
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: da1e62f5a6ef09dd6b00ebf7bc59595cb154c536
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82673315"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89341105"

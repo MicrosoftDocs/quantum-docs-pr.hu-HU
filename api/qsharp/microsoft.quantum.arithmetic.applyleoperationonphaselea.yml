@@ -2,9 +2,9 @@
 uid: microsoft.quantum.arithmetic.applyleoperationonphaselea
 name: ApplyLEOperationOnPhaseLEA
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
-summary: Egy olyan műveletet alkalmaz, amely <xref:microsoft.quantum.arithmetic.phaselittleendian> egy típusú <xref:microsoft.quantum.arithmetic.littleendian>cél-regiszterben bemenetként regisztrálja a regisztrációt.
-remarks: A rendszer átalakítja `LittleEndian` a regisztrációt a használatával, <xref:microsoft.quantum.canon.qftle> és ezután visszaküldi az eredeti képviseletét az alkalmazása után `op`.
+namespace: microsoft.quantum.arithmetic
+summary: Egy olyan műveletet alkalmaz, amely egy <xref:microsoft.quantum.arithmetic.phaselittleendian> típusú cél-regiszterben bemenetként regisztrálja a regisztrációt <xref:microsoft.quantum.arithmetic.littleendian> .
+remarks: A rendszer átalakítja a regisztrációt a `LittleEndian` használatával, <xref:microsoft.quantum.canon.qftle> és ezután visszaküldi az eredeti képviseletét az alkalmazása után `op` .
 syntax: 'operation ApplyLEOperationOnPhaseLEA (op : (Microsoft.Quantum.Arithmetic.LittleEndian => Unit is Adj), target : Microsoft.Quantum.Arithmetic.PhaseLittleEndian) : Unit'
 input:
   content: '(op : (Microsoft.Quantum.Arithmetic.LittleEndian => Unit is Adj), target : Microsoft.Quantum.Arithmetic.PhaseLittleEndian)'
@@ -36,9 +36,9 @@ seeAlso:
 - microsoft.quantum.canon.applyleoperationonphaselec
 - microsoft.quantum.canon.applyleoperationonphaseleca
 metadata:
-  ms.openlocfilehash: 01ccb4f493df36be9b9639c081fd933581482f4d
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 8903a967d192d76c654763ce1636ed8439fa5a1a
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82672852"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89341598"
