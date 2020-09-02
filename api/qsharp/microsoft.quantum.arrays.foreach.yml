@@ -2,15 +2,15 @@
 uid: microsoft.quantum.arrays.foreach
 name: ForEach
 type: operation
-namespace: Microsoft.Quantum.Arrays
+namespace: microsoft.quantum.arrays
 summary: Egy tömb és egy olyan művelet, amely a tömb elemeihez van meghatározva, egy új tömböt ad vissza, amely a művelet alatt található eredeti tömb képéből áll.
-remarks: "A művelet általános típusokhoz van definiálva, azaz `'T[]` `action : 'T -> 'U` a tömb elemeinek leképezhetők, illetve egy új típusú `'U[]`tömb létrehozásához."
+remarks: "A művelet általános típusokhoz van definiálva, azaz a tömb `'T[]` `action : 'T -> 'U` elemeinek leképezhetők, illetve egy új típusú tömb létrehozásához `'U[]` ."
 syntax: "operation ForEach (action : ('T => 'U), array : 'T[]) : 'U[]"
 input:
   content: "(action : ('T => 'U), array : 'T[])"
   types:
   - name: action
-    summary: Az összes elemre `'U` alkalmazott művelet `'T` .
+    summary: Az `'T` `'U` összes elemre alkalmazott művelet.
     isOperation: true
     input:
       types:
@@ -21,26 +21,26 @@ input:
       - uid: "'U"
         isLocal: true
   - name: array
-    summary: Elemek tömbje `'T`.
+    summary: Elemek tömbje `'T` .
     isArray: true
     uid: "'T"
     isLocal: true
 output:
   content: "'U[]"
   types:
-  - summary: A `action` művelet `'U[]` által leképezett elemek tömbje.
+  - summary: "`'U[]`A művelet által leképezett elemek tömbje `action` ."
     isArray: true
     uid: "'U"
     isLocal: true
 typeParameters:
 - uid: "'T"
-  summary: Az `array` elemek típusa.
+  summary: Az elemek típusa `array` .
 - uid: "'U"
-  summary: A `action` művelet eredményének típusa.
+  summary: A művelet eredményének típusa `action` .
 metadata:
-  ms.openlocfilehash: af4b6b469017e4cee581a9bdd96ef6171d9b1deb
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: c630f23c57ccba1588e553641acf61312411f146
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82681042"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89352274"

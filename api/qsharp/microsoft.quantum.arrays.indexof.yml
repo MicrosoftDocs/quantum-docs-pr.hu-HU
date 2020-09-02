@@ -2,10 +2,10 @@
 uid: microsoft.quantum.arrays.indexof
 name: IndexOf
 type: function
-namespace: Microsoft.Quantum.Arrays
+namespace: microsoft.quantum.arrays
 summary: Egy olyan tömb első elemének első indexét adja vissza, amely megfelel egy adott predikátumnak. Ha nem létezik ilyen elem, a a-1 értéket adja vissza.
 examples: >-
-  `IsEven : Int -> Bool` Tegyük fel, hogy egy olyan `true` függvény, amely csak akkor adja vissza, ha a bemenete páros. Ezt `IndexOf` követően a használatával megkeresheti a tömb első páros elemét is:
+  Tegyük fel, hogy `IsEven : Int -> Bool` egy olyan függvény, amely `true` csak akkor adja vissza, ha a bemenete páros. Ezt követően a használatával `IndexOf` megkeresheti a tömb első páros elemét is:
 
 
   ```Q#
@@ -42,9 +42,9 @@ output:
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: 6fb95357096751e53f601a9c855ff656e2dd1b34
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 6b0097c4feb41a00f0d9c1fcb4c2b5dbcaa186ef
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82681000"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89352121"

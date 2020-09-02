@@ -2,7 +2,7 @@
 uid: microsoft.quantum.arrays.most
 name: Most
 type: function
-namespace: Microsoft.Quantum.Arrays
+namespace: microsoft.quantum.arrays
 summary: Egy olyan tömböt hoz létre, amely egy bemeneti tömbnek felel meg, kivéve, ha a legutolsó tömb elem el lett dobva.
 syntax: "function Most (array : 'T[]) : 'T[]"
 input:
@@ -16,7 +16,7 @@ input:
 output:
   content: "'T[]"
   types:
-  - summary: Az elemeket `array[0..Length(array) - 2]`tartalmazó tömb.
+  - summary: Az elemeket tartalmazó tömb `array[0..Length(array) - 2]` .
     isArray: true
     uid: "'T"
     isLocal: true
@@ -24,9 +24,9 @@ typeParameters:
 - uid: "'T"
   summary: A tömb elemeinek típusa
 metadata:
-  ms.openlocfilehash: 352e0eb9931b47e14f549828aa2a1c34af8ad901
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: e3580525b0f5851138110c9be2eb09e8deb16379
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680911"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89351900"
