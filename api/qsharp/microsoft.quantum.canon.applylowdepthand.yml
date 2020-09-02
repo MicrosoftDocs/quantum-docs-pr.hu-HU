@@ -2,7 +2,7 @@
 uid: microsoft.quantum.canon.applylowdepthand
 name: ApplyLowDepthAnd
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
   A megadott qubit csak akkor áll le, ha mindkét vezérlő qubits 1 állapotban van, a T-depth 1 értékkel, a adjoint művelet elvégzéséhez használja a mérést.
 
@@ -37,9 +37,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 7c0858443420741968865298e6179c81b8d23ef4
-  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.openlocfilehash: 3513263f2b5fa2877c9642f803f153069a30bb19
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 07/02/2020
-  ms.locfileid: "85885813"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89358105"

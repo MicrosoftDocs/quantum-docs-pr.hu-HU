@@ -2,7 +2,7 @@
 uid: microsoft.quantum.canon.applyand
 name: ApplyAnd
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
   A megadott qubit csak akkor áll le, ha mindkét vezérlő qubits 1 állapotban van, a adjoint művelet végrehajtásához használja a mérést.
 
@@ -42,9 +42,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 2f040fd932236547baecaba241d44a8b9842bbe2
-  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.openlocfilehash: 7c507e8bf535802a4484535e4b608315eca70bba
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 07/02/2020
-  ms.locfileid: "85884594"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89350863"

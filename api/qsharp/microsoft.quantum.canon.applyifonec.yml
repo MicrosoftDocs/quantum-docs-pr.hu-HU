@@ -2,12 +2,12 @@
 uid: microsoft.quantum.canon.applyifonec
 name: ApplyIfOneC
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
   Egy, a klasszikus eredmény értékének egyikét alkalmazza.
 
 
-  A művelet `op` és az eredmény megadott értéke `result` `op` az `target` if `result` értékre vonatkozik. `One` Ha `Zero`semmi nem történik a `target`következővel:.
+  `op`A művelet és az eredmény megadott értéke `result` az IF értékre vonatkozik `op` `target` `result` `One` . Ha `Zero` semmi nem történik a következővel: `target` .
 
   Az utótag `C` azt jelzi, hogy az alkalmazni kívánt művelet ellenőrizhető.
 syntax: "operation ApplyIfOneC (result : Result, (op : ('T => Unit is Ctl), target : 'T)) : Unit"
@@ -50,9 +50,9 @@ seeAlso:
 - microsoft.quantum.canon.applyifonea
 - microsoft.quantum.canon.applyifoneca
 metadata:
-  ms.openlocfilehash: e42bb11c3f3f8cf740bbd619b4388f23c77ed8a5
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 8ec4b6b7baf3571ff259007c15c7c426e502da08
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82672662"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89358224"

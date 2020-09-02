@@ -2,9 +2,9 @@
 uid: microsoft.quantum.bitwise.zbits
 name: ZBits
 type: function
-namespace: Microsoft.Quantum.Bitwise
+namespace: microsoft.quantum.bitwise
 summary: Egy olyan egész számot ad vissza, amely a Pauli operátorok tömbének Z bitejét jelöli.
-remarks: A függvény eldönti, hogy a `paulis` tömb hossza nagyobb-e, mint 63.
+remarks: A függvény eldönti, hogy a tömb hossza nagyobb-e, `paulis` mint 63.
 syntax: 'function ZBits (paulis : Pauli[]) : Int'
 input:
   content: '(paulis : Pauli[])'
@@ -17,15 +17,15 @@ input:
 output:
   content: Int
   types:
-  - summary: Egy egész $x $, bináris ábrázolással $ ({62}\,P_{61}\,P_\,\dots p_0) $, ahol $p _i = $0 `paulis[i]` , `PauliI` ha `PauliX` az vagy, és ahol $p _i `paulis[i]` = `PauliY` $1 `PauliZ`, ha a vagy a.
+  - summary: Egy egész $x $, bináris ábrázolással $ (p_ {62} \, p_ {61} \, \dots \, p_0) $, ahol $p _i = $0 `paulis[i]` , ha az `PauliI` vagy `PauliX` , és ahol $p _i = $1 `paulis[i]` , ha a `PauliY` vagy a `PauliZ` .
     isPrimitive: true
     uid: Int
 seeAlso:
 - xbits
 metadata:
-  ms.openlocfilehash: d7605a48451292792a97e9049125674c6716780f
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 38515f1ad8e6f4a11161f4bea0604a21a61c7546
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676427"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89350914"

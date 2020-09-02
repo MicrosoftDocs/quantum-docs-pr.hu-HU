@@ -2,16 +2,16 @@
 uid: microsoft.quantum.canon.applyifca
 name: ApplyIfCA
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
   Egy klasszikus bites, egységes műveletet alkalmaz.
 
 
-  Ha egy művelet `op` és egy bit érték `bit`van megadva `op` , az `target` a `bit` if `true`értéke lesz. Ha `false`semmi nem történik a `target`következővel:.
+  Ha egy művelet `op` és egy bit érték `bit` van megadva, `op` az a `target` IF értéke lesz `bit` `true` . Ha `false` semmi nem történik a következővel: `target` .
 
   Az utótag `CA` azt jelzi, hogy az alkalmazni kívánt művelet egységes (ellenőrizhető és adjointable).
 examples: >-
-  A következő előkészíti a qubits egy olyan számítási alapon történő regisztrálását, amelyet egy, az `Bool` értékek tömbje megadott klasszikus bit-sztring képvisel:
+  A következő előkészíti a qubits egy olyan számítási alapon történő regisztrálását, amelyet egy, az értékek tömbje megadott klasszikus bit-sztring képvisel `Bool` :
 
 
   ```Q#
@@ -67,9 +67,9 @@ seeAlso:
 - microsoft.quantum.canon.applyifa
 - microsoft.quantum.canon.applyifca
 metadata:
-  ms.openlocfilehash: 2b716ef4a7d429176aa1359fb22b3ce24be0d5f4
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 2d341b8628c8d81fddd480bf47324041d575f1e5
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82675044"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89350506"
