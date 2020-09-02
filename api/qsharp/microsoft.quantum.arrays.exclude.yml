@@ -2,7 +2,7 @@
 uid: microsoft.quantum.arrays.exclude
 name: Exclude
 type: function
-namespace: Microsoft.Quantum.Arrays
+namespace: microsoft.quantum.arrays
 summary: Egy olyan tömböt ad vissza, amely egy másik tömb elemeit tartalmazza, és az indexek adott listáján szereplő elemeket is kizárja.
 examples: >-
   ```qsharp
@@ -31,7 +31,7 @@ input:
 output:
   content: "'T[]"
   types:
-  - summary: Egy olyan `output` tömb `remove`, `output[0]` amely az első eleme, `array` amelynek az indexe nem jelenik meg, például `output[1]` a második ilyen elem, és így tovább.
+  - summary: Egy olyan tömb `output` `output[0]` , amely az első eleme, `array` amelynek az indexe nem jelenik meg `remove` , például `output[1]` a második ilyen elem, és így tovább.
     isArray: true
     uid: "'T"
     isLocal: true
@@ -39,9 +39,9 @@ typeParameters:
 - uid: "'T"
   summary: A tömb elemeinek típusa
 metadata:
-  ms.openlocfilehash: 715610f2e8d0932a22d6dfdd0232e981a495fd6f
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 7e0f978f711962247c08c1b367f3ca62e16cad2c
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676480"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89352342"

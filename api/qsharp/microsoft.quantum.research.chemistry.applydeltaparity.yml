@@ -2,7 +2,7 @@
 uid: microsoft.quantum.research.chemistry.applydeltaparity
 name: ApplyDeltaParity
 type: operation
-namespace: Microsoft.Quantum.Research.Chemistry
+namespace: microsoft.quantum.research.chemistry
 summary: Kiszámítja az előző PQRS paritásos különbözetét... feltételek és a következő PQRS... távú. Ezt a különbözetet egy kiegészítő qubit számítjuk ki.
 remarks: Ez azt feltételezi, hogy a P < Q < R < S <... mind a prevPQ, mind a nextPQ esetében.
 syntax: 'operation ApplyDeltaParity (prevFermionicTerm : Int[], nextFermionicTerm : Int[], aux : Qubit, qubits : Qubit[]) : Unit'
@@ -37,9 +37,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 27d2ce22c9d7281682236b5214c39abf1d352eeb
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: a953418f97a2883d12eb9d415943b8e3f3b24e44
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82687143"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89330548"

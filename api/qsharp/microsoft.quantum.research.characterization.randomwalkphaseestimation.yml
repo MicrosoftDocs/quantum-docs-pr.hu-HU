@@ -2,13 +2,13 @@
 uid: microsoft.quantum.research.characterization.randomwalkphaseestimation
 name: RandomWalkPhaseEstimation
 type: operation
-namespace: Microsoft.Quantum.Research.Characterization
+namespace: microsoft.quantum.research.characterization
 summary: Elvégzi az iterációs fázisok becslését egy véletlenszerű lépéssel, hogy megközelítse az adott Oracle-és eigenstate klasszikus mérési eredményeinek a többhelyes tesztelését.
 remarks: >-
   ### <a name="iterative-phase-estimation-and-eigenstates"></a>Iterációs fázis becslése és Eigenstates
 
 
-  Általánosságban elmondható, hogy `eigenstate` a bemeneti regisztrációnak nem kell eigenstate $ \ket{\phi} $ $U $-nak lennie, de eigenstates is lehet. Tegyük fel, hogy a bemeneti állapotot a \begin{align} \ket{\psi} &\_= \sum {j\_} \alpha\_j \ket{\phi j}, \end{align}\{,\_ahol\}a $ \alpha j $ olyan összetett együtthatók,\_mint a $\_\sum j | \alpha j | ^ 2 = $1\_, ahol $U \ket{\phi\_j} = \phi\_j\ket {\ Phi j} $.
+  Általánosságban elmondható, hogy a bemeneti regisztrációnak `eigenstate` nem kell eigenstate $ \ket{\phi} $ $U $-nak lennie, de eigenstates is lehet. Tegyük fel, hogy a bemeneti állapotot a \begin{align} \ket{\psi} & = \sum \_ {j} \alpha \_ j \ket{\phi \_ j}, \end{align}, ahol a $ \{ \alpha \_ j \} $ olyan összetett együtthatók, mint a $ \sum \_ j | \alpha \_ j | ^ 2 = $1, ahol $U \ket{\phi \_ j} = \phi \_ j\ket {\ Phi \_ j} $.
 
 
   Ezután az iterációs fázis becslésének végrehajtása végül egyetlen eigenstate konvergál, a [fejlesztési útmutatóban](xref:microsoft.quantum.libraries.characterization#iterative-phase-estimation-without-eigenstates)leírtak szerint.
@@ -17,7 +17,7 @@ remarks: >-
   ### <a name="experiment-design"></a>Kísérlet kialakítása
 
 
-  A \begin{align} \theta \sim \Pr (\phi), \quad t \approx \frac `oracle` {1}{\variance{\phi}}.) által megadott mérési idő $t $ és a deverziós $ \theta $ átadott értéknek megfelelően van kiválasztva. *particle guess heuristic*
+  A `oracle` \begin{align} \theta \Sim \Pr (\phi), \quad t \approx \frac {\variance{\phi}}.) által megadott mérési idő $t $ *és a*deverziós $ \theta $ átadott értéknek megfelelően van kiválasztva. {1}
 
   a \end{align} ez a heurisztikus megoldás optimálisan csökkenti a várt posteriori eltérést az iterációs fázisok becslésében a normál előtt.
 
@@ -74,9 +74,9 @@ output:
     isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: 719c8583cb0fe7f0c9c0f7fa617fa469080a9588
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 27841784ec8961f7a5a78c425411fcf0ae8e8f15
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82706737"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89330582"

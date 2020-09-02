@@ -2,8 +2,8 @@
 uid: microsoft.quantum.arrays.fold
 name: Fold
 type: function
-namespace: Microsoft.Quantum.Arrays
-summary: Megismétli a függvényt `f` egy tömbön `array`keresztül `f(f(f(initialState, array[0]), array[1]), ...)`, visszatérve.
+namespace: microsoft.quantum.arrays
+summary: Megismétli a függvényt `f` egy tömbön keresztül `array` , visszatérve `f(f(f(initialState, array[0]), array[1]), ...)` .
 examples: >-
   ```qsharp
 
@@ -45,18 +45,18 @@ input:
 output:
   content: "'State"
   types:
-  - summary: A mappa által a összes elemének megismétlése után visszaadott végső `array`állapot.
+  - summary: A mappa által a összes elemének megismétlése után visszaadott végső állapot `array` .
     uid: "'State"
     isLocal: true
 typeParameters:
 - uid: "'State"
-  summary: A `folder` függvény által működtetett állapotok típusa, azaz az első argumentumként fogadja el az értéket, és visszaadja.
+  summary: A függvény által működtetett állapotok típusa `folder` , azaz az első argumentumként fogadja el az értéket, és visszaadja.
 - uid: "'T"
-  summary: Az `array` elemek típusa.
+  summary: Az elemek típusa `array` .
 metadata:
-  ms.openlocfilehash: d02d20c049e8b8d21214028efcd6a647067bf71f
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 584344137b498a9c5348cb1f0a0cb85aeec127bd
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676448"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89352308"

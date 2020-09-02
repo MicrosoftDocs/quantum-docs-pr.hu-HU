@@ -2,7 +2,7 @@
 uid: microsoft.quantum.math.expmodl
 name: ExpModL
 type: function
-namespace: Microsoft.Quantum.Math
+namespace: microsoft.quantum.math
 summary: >-
   Egy adott hatványra kiváltott egész számot ad vissza egy adott modulusra vonatkozóan.
 
@@ -13,7 +13,7 @@ summary: >-
 
 
   Feltételezzük, hogy $N $, $x $ értéke pozitív, és a teljesítmény nem negatív.
-remarks: Időt vesz igénybe a bitek számával `power`, nem pedig `power` magával.
+remarks: Időt vesz igénybe a bitek számával `power` , nem pedig `power` magával.
 syntax: 'function ExpModL (expBase : BigInt, power : BigInt, modulus : BigInt) : BigInt'
 input:
   content: '(expBase : BigInt, power : BigInt, modulus : BigInt)'
@@ -33,9 +33,9 @@ output:
   - isPrimitive: true
     uid: BigInt
 metadata:
-  ms.openlocfilehash: f694fa792e8aee5846ce6ec2393287eb64aca44d
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: f5f7d5c4a51055583f3c5fd04315af8ee0dfc0c4
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82673869"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89344131"

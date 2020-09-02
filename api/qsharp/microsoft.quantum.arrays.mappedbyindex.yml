@@ -2,7 +2,7 @@
 uid: microsoft.quantum.arrays.mappedbyindex
 name: MappedByIndex
 type: function
-namespace: Microsoft.Quantum.Arrays
+namespace: microsoft.quantum.arrays
 summary: Egy tömb és egy függvény, amely a tömb indexelt elemeihez van definiálva, egy új tömböt ad vissza, amely a függvényben található eredeti tömb képéből áll.
 examples: >-
   A következő két sor egyenértékű:
@@ -28,7 +28,7 @@ input:
   content: "(mapper : ((Int, 'T) -> 'U), array : 'T[])"
   types:
   - name: mapper
-    summary: A- `'U` ből `(Int, 'T)` származó függvény, amely az elemek és az indexek hozzárendelésére szolgál.
+    summary: A-ből származó függvény, `(Int, 'T)` `'U` amely az elemek és az indexek hozzárendelésére szolgál.
     isFunction: true
     input:
       types:
@@ -41,28 +41,28 @@ input:
       - uid: "'U"
         isLocal: true
   - name: array
-    summary: Elemek tömbje `'T`.
+    summary: Elemek tömbje `'T` .
     isArray: true
     uid: "'T"
     isLocal: true
 output:
   content: "'U[]"
   types:
-  - summary: A `mapper` függvény `'U[]` által leképezett elemek tömbje.
+  - summary: "`'U[]`A függvény által leképezett elemek tömbje `mapper` ."
     isArray: true
     uid: "'U"
     isLocal: true
 typeParameters:
 - uid: "'T"
-  summary: Az `array` elemek típusa.
+  summary: Az elemek típusa `array` .
 - uid: "'U"
-  summary: A `mapper` függvény eredményének típusa.
+  summary: A függvény eredményének típusa `mapper` .
 seeAlso:
 - mapped
 metadata:
-  ms.openlocfilehash: 64741df4a3d7b7937f13614ffc9c7c7ec1aa3f7b
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: d6f50c3fe90998431b71050a953ec5dc08e31e92
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680939"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89351934"

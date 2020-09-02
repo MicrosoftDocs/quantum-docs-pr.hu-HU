@@ -2,11 +2,11 @@
 uid: microsoft.quantum.environment.getqubitsavailabletoborrow
 name: GetQubitsAvailableToBorrow
 type: operation
-namespace: Microsoft.Quantum.Environment
+namespace: microsoft.quantum.environment
 summary: >-
   A jelenleg elérhető qubits számát adja vissza.
 
-  Ez magában foglalja a nem használt qubits; Ez magában foglalja a által `GetQubitsAvailableToUse`visszaadott qubits.
+  Ez magában foglalja a nem használt qubits; Ez magában foglalja a által visszaadott qubits `GetQubitsAvailableToUse` .
 syntax: 'operation GetQubitsAvailableToBorrow () : Int'
 input:
   content: ()
@@ -15,17 +15,17 @@ output:
   content: Int
   types:
   - summary: >-
-      Egy `borrowing` utasításban lefoglalt qubits száma.
+      Egy utasításban lefoglalt qubits száma `borrowing` .
 
-      Ha a használt célszámítógép nem adja meg ezeket az adatokat, akkor `-1` a rendszer visszaadja.
+      Ha a használt célszámítógép nem adja meg ezeket az adatokat, akkor a `-1` rendszer visszaadja.
     isPrimitive: true
     uid: Int
 seeAlso:
 - getqubitsavailabletouse
 metadata:
-  ms.openlocfilehash: 99dd2afb66c334b112a2ee511b0437281da6b888
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: fbb0ccdcc17346ba596df537e81aeabb61b135c4
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82682411"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89336872"
