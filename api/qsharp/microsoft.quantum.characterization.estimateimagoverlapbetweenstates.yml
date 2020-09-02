@@ -2,9 +2,9 @@
 uid: microsoft.quantum.characterization.estimateimagoverlapbetweenstates
 name: EstimateImagOverlapBetweenStates
 type: operation
-namespace: Microsoft.Quantum.Characterization
+namespace: microsoft.quantum.characterization
 summary: A két művelet, amely az egyes állapotok előkészítését végzi, a megbecsüli az egyes műveletek által előkészített állapotok közötti átfedés képzeletbeli részét.
-remarks: Ez a művelet a Hadamard teszttel keresi a $ $ \begin{align} \braket{\psi-beli képzeletbeli részét. V ^ {\dagger} U | \psi} \end{align} $ $, ahol a $ \ket{\psi} $ a által `commonPreparation`előkészített állapot, $U $ a művelet egységes ábrázolása `preparation1`, és a $V $ értéknek megfelelő. `preparation2`
+remarks: Ez a művelet a Hadamard teszttel keresi a $ $ \begin{align} \braket{\psi-beli képzeletbeli részét. V ^ {\dagger} U | \psi} \end{align} $ $, ahol a $ \ket{\psi} $ a által előkészített állapot `commonPreparation` , $U $ a művelet egységes ábrázolása `preparation1` , és a $V $ értéknek megfelelő `preparation2` .
 syntax: 'operation EstimateImagOverlapBetweenStates (commonPreparation : (Qubit[] => Unit is Adj), preparation1 : (Qubit[] => Unit is Adj + Ctl), preparation2 : (Qubit[] => Unit is Adj + Ctl), nQubits : Int, nMeasurements : Int) : Double'
 references: '- Aharonov *et al.* [Quant – pH/0511096](https://arxiv.org/abs/quant-ph/0511096).'
 input:
@@ -55,7 +55,7 @@ input:
     - Adjoint
     - Controlled
   - name: nQubits
-    summary: Azon qubits száma, amelyeken `commonPreparation` `preparation1`a, és `preparation2` az összes tevékenység szerepel.
+    summary: Azon qubits száma, amelyeken a, és az összes tevékenység szerepel `commonPreparation` `preparation1` `preparation2` .
     isPrimitive: true
     uid: Int
   - name: nMeasurements
@@ -71,9 +71,9 @@ seeAlso:
 - microsoft.quantum.characterization.estimaterealoverlapbetweenstates
 - microsoft.quantum.characterization.estimateoverlapbetweenstates
 metadata:
-  ms.openlocfilehash: 6885830a644da147b0e9fe4e9efd3b553b15885e
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 1383a83c07db7017926c5fe51b1c73112b2c001d
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82677721"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89354518"

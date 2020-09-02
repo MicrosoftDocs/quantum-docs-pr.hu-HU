@@ -2,14 +2,14 @@
 uid: microsoft.quantum.arithmetic.bigendian
 name: BigEndian
 type: newtype
-namespace: Microsoft.Quantum.Arithmetic
-summary: Regisztrálja, hogy a rendszer egy előjel nélküli egész számot kódol a big-endian sorrendben. Az indextel `0` rendelkező qubit a legmagasabb, előjel nélküli egész számot kódolja.
-remarks: A `BigEndian` dokumentációnak `BE` megfelelően rövidítjük.
+namespace: microsoft.quantum.arithmetic
+summary: Regisztrálja, hogy a rendszer egy előjel nélküli egész számot kódol a big-endian sorrendben. Az indextel rendelkező qubit `0` a legmagasabb, előjel nélküli egész számot kódolja.
+remarks: '`BigEndian` `BE` A dokumentációnak megfelelően rövidítjük.'
 syntax: newtype BigEndian = Qubit[];
 metadata:
-  ms.openlocfilehash: 9c59021955710a182a2315d4e848016f8d13d6fa
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: b8aca5fb596ff61064b7542785d245a3ef7ecace
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82679859"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89327590"
