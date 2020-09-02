@@ -2,10 +2,10 @@
 uid: microsoft.quantum.machinelearning.controlledrotation
 name: ControlledRotation
 type: newtype
-namespace: Microsoft.Quantum.MachineLearning
+namespace: microsoft.quantum.machinelearning
 summary: Egy vezérelt rotációt mutat be a cél és a vezérlési indexek, a rotációs tengely és az index között a modell paraméterének vektora alapján.
 remarks: >-
-  A nem vezérelt Forgások az indexek üres `ControlIndices` tömbje számára állíthatók be `new Int[0]`.
+  A nem vezérelt Forgások az `ControlIndices` indexek üres tömbje számára állíthatók be `new Int[0]` .
 
 
   ### <a name="examples"></a>Példák
@@ -24,9 +24,9 @@ remarks: >-
   ```
 syntax: newtype ControlledRotation = ((Int, Int[]), Pauli, Int);
 metadata:
-  ms.openlocfilehash: 058c1dc75dd169971d0c542d0577d739327e4d56
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 132a69f35e1cbec57c15c3f362a25849e3d66c27
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82681680"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89344913"

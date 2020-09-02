@@ -2,12 +2,12 @@
 uid: microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance
 name: AssertQubitIsInStateWithinTolerance
 type: operation
-namespace: Microsoft.Quantum.Diagnostics
+namespace: microsoft.quantum.diagnostics
 summary: >-
   Azt állítja be, hogy a qubit a várt állapotú.
 
 
-  `expected`összetett vektort jelöl: $ \ket{\psi} = \begin{bmatrix}a & b\end {bmatrix} ^ {\mathrm{T}} $.
+  `expected` összetett vektort jelöl: $ \ket{\psi} = \begin{bmatrix}a & b\end {bmatrix} ^ {\mathrm{T}} $.
 
   A $a $, $b $ értéket képviselő rekordok első eleme a komplex szám valódi része, míg a második a képzeletbeli rész.
 
@@ -37,7 +37,7 @@ remarks: >-
   ```
 
 
-  A tolerancia a\_$L {\infty} $ távolság a 3 dimenziós valós vektor között (x ₂, x ₃, x ₄) a $ \langle\psi | \psi\rangle = x\_1 I + x\_2 x + x\_3 Y + x\_4 Z $ és a Real Vector (y ₂, y ₃, y ₄) által meghatározott ρ = Y ₁ I + y ₂ x + y ₃ Y + y ₄ Z, ahol a ρ a regiszter állapotának megfelelő sűrűségi mátrix.
+  A tolerancia a $L \_ {\infty} $ távolság a 3 dimenziós valós vektor között (x ₂, x ₃, x ₄) a $ \langle\psi | \psi\rangle = x \_ 1 I + x \_ 2 x + x \_ 3 Y + x \_ 4 Z $ és a Real Vector (y ₂, y ₃, y ₄) által meghatározott ρ = Y ₁ I + y ₂ x + y ₃ Y + y ₄ Z, ahol a ρ a regiszter állapotának megfelelő sűrűségi mátrix.
 
   Ez csak abban az esetben igaz, ha a TR (ρ) és a TR (| ψ ⟩ ⟨ ψ |) mindkettő 1 (például x ₁ = 1/2, y ₁ = 1/2).
 
@@ -60,7 +60,7 @@ input:
   content: '(expected : (Microsoft.Quantum.Math.Complex, Microsoft.Quantum.Math.Complex), register : Qubit, tolerance : Double)'
   types:
   - name: expected
-    summary: A várt összetett amplitúdók a ${0}\ket $ és a{1}$ \ket $ értéknél.
+    summary: A várt összetett amplitúdók a $ \ket {0} $ és a $ \ket $ értéknél {1} .
     types:
     - uid: microsoft.quantum.math.complex
     - uid: microsoft.quantum.math.complex
@@ -81,9 +81,9 @@ output:
   - isPrimitive: true
     uid: Unit
 metadata:
-  ms.openlocfilehash: 77d28c122a44f39924242dedb6bd6163974e18c1
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 6517c96e87042948d3e6f235e64c7b3e0dc5d387
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82656598"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89337433"

@@ -2,7 +2,7 @@
 uid: microsoft.quantum.random.categoricaldistribution
 name: CategoricalDistribution
 type: function
-namespace: Microsoft.Quantum.Random
+namespace: microsoft.quantum.random
 summary: Egy diszkrét kategorikus eloszlást ad vissza, amely során a rendszer explicit módon megadja az adott kimenetek véges listájának valószínűségét.
 examples: >-
   A következő Q # kód a 0 értéket jeleníti meg, amelynek a valószínűsége 30% és 1 a valószínűséggel 70%:
@@ -33,9 +33,9 @@ output:
   - summary: Az index a `i` valószínűséggel `probs[i] / sum` , ahol `sum` a a `probs` által megadott összeg `Fold(PlusD, 0.0, probs)` .
     uid: microsoft.quantum.random.discretedistribution
 metadata:
-  ms.openlocfilehash: e81b286a1268e9ad1819a8f77bb375760f95af71
-  ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+  ms.openlocfilehash: a298d84d177c15d67d9d1ec24c8f6a9c11f1cd8b
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 08/25/2020
-  ms.locfileid: "88864363"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89331109"

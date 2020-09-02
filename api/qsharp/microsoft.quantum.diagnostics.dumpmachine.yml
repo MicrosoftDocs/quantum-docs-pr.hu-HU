@@ -2,12 +2,12 @@
 uid: microsoft.quantum.diagnostics.dumpmachine
 name: DumpMachine
 type: function
-namespace: Microsoft.Quantum.Diagnostics
+namespace: microsoft.quantum.diagnostics
 summary: Az aktuális célszámítógép állapotának kiírása.
 remarks: >-
   Ez a módszer lehetővé teszi a célszámítógép aktuális állapotával kapcsolatos információk egy fájlba vagy egy másik helyre való kiírását.
 
-  A ténylegesen létrehozott információk és a szemantikai adatai `location` az egyes célszámítógépeken is jellemzőek. Ha azonban üres rekordot ad meg helyként (`()`), vagy csak a `location` paraméter kihagyása általában azt jelenti, hogy a kimenetet a konzolon hozza elő.
+  A ténylegesen létrehozott információk és a szemantikai adatai az `location` egyes célszámítógépeken is jellemzőek. Ha azonban üres rekordot ad meg helyként ( `()` ), vagy csak a paraméter kihagyása `location` általában azt jelenti, hogy a kimenetet a konzolon hozza elő.
 
 
   A Quantum Development Kit részeként elosztott helyi teljes állapotú szimulátor esetében ez a metódus egy karakterláncot vár egy olyan fájl elérési útjával, amelyben a Wave függvényt összetett számok egydimenziós tömbként fogja írni, amelyben az egyes elemek a megfelelő állapot mérésének valószínűségét jelölik.
@@ -22,13 +22,13 @@ input:
 output:
   content: Unit
   types:
-  - summary: Nincs.
+  - summary: Nincsenek.
     isPrimitive: true
     uid: Unit
 metadata:
-  ms.openlocfilehash: 7511e0bdded689c84cb90794860dd79e48950414
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 7b30ac476cd8c3f5db5344d7ac9cabffd670f1a1
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82656569"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89337365"
