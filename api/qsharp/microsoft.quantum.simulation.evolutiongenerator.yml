@@ -2,7 +2,7 @@
 uid: microsoft.quantum.simulation.evolutiongenerator
 name: EvolutionGenerator
 type: newtype
-namespace: Microsoft.Quantum.Simulation
+namespace: microsoft.quantum.simulation
 summary: >-
   A dinamikus generátort szimulálható kapuk készlete jelöli meg, és ennek az alapja a bővítése.
 
@@ -10,9 +10,9 @@ summary: >-
   A feltételek számának utolsó paramétere.
 syntax: newtype EvolutionGenerator = (Microsoft.Quantum.Simulation.EvolutionSet, Microsoft.Quantum.Simulation.GeneratorSystem);
 metadata:
-  ms.openlocfilehash: 83d2c39d50ce84510ecca7276074287789e1aa8d
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 4015fe9075678e1f2f8f701cfc5373f11384600e
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82686868"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89343230"
