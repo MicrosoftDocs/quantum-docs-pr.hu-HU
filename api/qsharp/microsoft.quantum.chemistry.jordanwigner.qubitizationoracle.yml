@@ -2,19 +2,19 @@
 uid: microsoft.quantum.chemistry.jordanwigner.qubitizationoracle
 name: QubitizationOracle
 type: function
-namespace: Microsoft.Quantum.Chemistry.JordanWigner
+namespace: microsoft.quantum.chemistry.jordanwigner
 summary: A Qubitization műveletet és a futtatásához szükséges paramétereket adja vissza.
 syntax: 'function QubitizationOracle (qSharpData : Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerEncodingData) : (Int, (Double, (Qubit[] => Unit is Adj + Ctl)))'
 input:
   content: '(qSharpData : Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerEncodingData)'
   types:
   - name: qSharpData
-    summary: A Hamilton formátum `JordanWignerEncodingData` szerint van leírva.
+    summary: A Hamilton formátum szerint van leírva `JordanWignerEncodingData` .
     uid: microsoft.quantum.chemistry.jordanwigner.jordanwignerencodingdata
 output:
   content: (Int, (Double, (Qubit[] => Unit is Adj + Ctl)))
   types:
-  - summary: 'Egy rekord, ahol `Int` : a lefoglalt qubits száma, `Double` a Hamilton-együtthatók egyféle normája, a művelet pedig a Qubitization által létrehozott Quantum Walk.'
+  - summary: 'Egy rekord, ahol: `Int` a lefoglalt qubits száma, `Double` a Hamilton-együtthatók egyféle normája, a művelet pedig a Qubitization által létrehozott Quantum Walk.'
     types:
     - isPrimitive: true
       uid: Int
@@ -35,9 +35,9 @@ output:
         - Adjoint
         - Controlled
 metadata:
-  ms.openlocfilehash: 9e58837b8f4d59505a321578cbd9f69b4c849627
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: e4aac826537428f5226b83873beb29a06e21dd75
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82663445"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89339167"

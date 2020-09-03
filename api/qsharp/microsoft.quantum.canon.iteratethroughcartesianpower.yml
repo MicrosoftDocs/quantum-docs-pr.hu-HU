@@ -2,14 +2,14 @@
 uid: microsoft.quantum.canon.iteratethroughcartesianpower
 name: IterateThroughCartesianPower
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
   Végrehajt egy műveletet az egész tartomány Descartes-as teljesítményében lévő minden indexnél.
 
 
-  A iteratív a tartomány `0..(bound - 1)`Descartes-as teljesítményének minden elemére alkalmazza a műveletet.
+  A iteratív a tartomány Descartes-as teljesítményének minden elemére alkalmazza a műveletet `0..(bound - 1)` .
 examples: >-
-  Egy művelet `op`miatt a következő két kódrészlet egyenértékű:
+  Egy művelet miatt `op` a következő két kódrészlet egyenértékű:
 
 
   ```Q#
@@ -66,9 +66,9 @@ output:
 seeAlso:
 - microsoft.quantum.canon.iteratethroughcartesianproduct
 metadata:
-  ms.openlocfilehash: a6f2d0e1f99c6cf7038803271af974a1c5fca465
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: ed106ae6d6b84b2b00644709751e57153aec91fb
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82679056"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89356167"

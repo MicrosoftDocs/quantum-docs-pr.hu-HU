@@ -2,7 +2,7 @@
 uid: microsoft.quantum.canon.qftle
 name: QFTLE
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: Végrehajtja a Quantum Fourier-transzformációt egy olyan kvantum-regiszteren, amely egy egész számot tartalmaz a kis endian ábrázolásban.
 remarks: A bemenet és a kimenet kis endian-kódolásban van feltételezve.
 syntax: 'operation QFTLE (qs : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
@@ -23,9 +23,9 @@ functors:
 seeAlso:
 - microsoft.quantum.canon.qft
 metadata:
-  ms.openlocfilehash: 0c33bf3690a4b2a47a813271aaddfc29cdc09b8b
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: def99a3402c63065d37013b348487c1e26c07090
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82678514"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89355759"
