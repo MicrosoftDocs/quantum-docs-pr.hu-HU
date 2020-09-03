@@ -2,26 +2,26 @@
 uid: microsoft.quantum.canon.isresultzero
 name: IsResultZero
 type: function
-namespace: Microsoft.Quantum.Canon
-summary: Ellenőrzi, hogy egy adott eredmény értéke egyenlő- `Zero`e.
+namespace: microsoft.quantum.canon
+summary: Ellenőrzi, hogy egy adott eredmény értéke egyenlő-e `Zero` .
 syntax: 'function IsResultZero (input : Result) : Bool'
 input:
   content: '(input : Result)'
   types:
   - name: input
-    summary: '`Result`a vizsgálandó érték.'
+    summary: '`Result` a vizsgálandó érték.'
     isPrimitive: true
     uid: Result
 output:
   content: Bool
   types:
-  - summary: A `true` értéket `input` adja vissza, `Zero`ha az egyenlő.
+  - summary: A értéket adja vissza, `true` Ha `input` az egyenlő `Zero` .
     isPrimitive: true
     uid: Bool
 metadata:
-  ms.openlocfilehash: eec7a18daccb41bd29fcd00d139914574488f60f
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 5899f53a7ce1b2398657e728cd410a8cfd0dff2c
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82679078"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89356201"

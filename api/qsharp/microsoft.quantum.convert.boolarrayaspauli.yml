@@ -2,7 +2,7 @@
 uid: microsoft.quantum.convert.boolarrayaspauli
 name: BoolArrayAsPauli
 type: function
-namespace: Microsoft.Quantum.Convert
+namespace: microsoft.quantum.convert
 summary: Egy kis karakterlánc miatt egy qubit Pauli-operátort ad vissza, amely egyetlen qubit Pauli-operátorok tömbje.
 remarks: A logikai tömbnek és a kvantum-regiszternek egyenlő hosszúságú kell lennie.
 syntax: 'function BoolArrayAsPauli (pauli : Pauli, bitApply : Bool, bits : Bool[]) : Pauli[]'
@@ -10,7 +10,7 @@ input:
   content: '(pauli : Pauli, bitApply : Bool, bits : Bool[])'
   types:
   - name: pauli
-    summary: A Pauli operátor a qubits-re `bitsApply == bits[idx]`vonatkozik, ahol.
+    summary: A Pauli operátor a qubits-re vonatkozik, ahol `bitsApply == bits[idx]` .
     isPrimitive: true
     uid: Pauli
   - name: bitApply
@@ -29,9 +29,9 @@ output:
     isPrimitive: true
     uid: Pauli
 metadata:
-  ms.openlocfilehash: c4f43eb0a30e42b6deb28c9910b1c95454b827c8
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: b839b3aec8195ec0240ad16cbc83a0c7a8c83430
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82661356"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89338776"

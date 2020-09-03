@@ -2,14 +2,14 @@
 uid: microsoft.quantum.chemistry.jordanwigner.trottersteporacle
 name: TrotterStepOracle
 type: function
-namespace: Microsoft.Quantum.Chemistry.JordanWigner
+namespace: microsoft.quantum.chemistry.jordanwigner
 summary: Visszaadja a Trotter lépés műveletét és a futtatásához szükséges paramétereket.
 syntax: 'function TrotterStepOracle (qSharpData : Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerEncodingData, trotterStepSize : Double, trotterOrder : Int) : (Int, (Double, (Qubit[] => Unit is Adj + Ctl)))'
 input:
   content: '(qSharpData : Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerEncodingData, trotterStepSize : Double, trotterOrder : Int)'
   types:
   - name: qSharpData
-    summary: A Hamilton formátum `JordanWignerEncodingData` szerint van leírva.
+    summary: A Hamilton formátum szerint van leírva `JordanWignerEncodingData` .
     uid: microsoft.quantum.chemistry.jordanwigner.jordanwignerencodingdata
   - name: trotterStepSize
     summary: A Trotter-integrátor lépésének mérete.
@@ -22,7 +22,7 @@ input:
 output:
   content: (Int, (Double, (Qubit[] => Unit is Adj + Ctl)))
   types:
-  - summary: 'Egy rekord, ahol `Int` a: a lefoglalt `Double` `1.0/trotterStepSize`qubits száma, a művelet pedig a Trotter lépés.'
+  - summary: 'Egy rekord, ahol `Int` a: a lefoglalt qubits száma, `Double` a `1.0/trotterStepSize` művelet pedig a Trotter lépés.'
     types:
     - isPrimitive: true
       uid: Int
@@ -43,9 +43,9 @@ output:
         - Adjoint
         - Controlled
 metadata:
-  ms.openlocfilehash: d78cac1e2f1a3b95007a3572aa7257d1938b97f4
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: bdbe6cd51902f66f732ba4f2d5a86e350f18d9b8
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82662976"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89339099"
