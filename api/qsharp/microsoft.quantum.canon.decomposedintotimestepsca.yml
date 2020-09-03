@@ -2,13 +2,13 @@
 uid: microsoft.quantum.canon.decomposedintotimestepsca
 name: DecomposedIntoTimeStepsCA
 type: function
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: Egy adott művelethez tartozó Trotter – Suzuki integrátort megvalósító műveletet ad vissza.
 remarks: >-
-  Ha `order` egyenlő értékűre van `1`meghívva, ez a függvény egy olyan műveletet ad vissza, amelyet a legalacsonyabb rendű Trotter – Suzuki integrátor $ $ \begin{align} S_1 (\lambda) = \ prod_ {j = 1} ^ {m} e ^ {H_j \lambda}, \end{align} $ $, ahol követte a [Quant-pH/0508139](https://arxiv.org/abs/quant-ph/0508139) jelölését, és hagyja, hogy a $ \lambda $ legyen az evolúciós idő (amelyet a visszaadott művelet első bemenete\{képvisel\}), és engedje, hogy a $ H_j _ {j = 1} ^ {m} $ legyen a (ferde Hermitian) `op(j, lambda, _)` dinamikus generátorok olyan készlete, amely integrálva van, így az egységes operátor szimulálja $e ^ {H_j \lambda} $.
+  Ha `order` egyenlő értékűre van meghívva `1` , ez a függvény egy olyan műveletet ad vissza, amelyet a legalacsonyabb rendű Trotter – Suzuki integrátor $ $ \begin{align} S_1 (\lambda) = \ prod_ {j = 1} ^ {m} e ^ {H_j \lambda}, \end{align} $ $, ahol követte a [Quant-pH/0508139](https://arxiv.org/abs/quant-ph/0508139) jelölését, és hagyja, hogy a $ \lambda $ legyen az evolúciós idő (amelyet a visszaadott művelet első bemenete képvisel), és engedje, hogy \{ a $ H_j \} _ {j = 1} ^ {m} $ legyen a (ferde Hermitian) dinamikus generátorok olyan készlete, amely integrálva van, így `op(j, lambda, _)` az egységes operátor szimulálja $e ^ {H_j \lambda} $.
 
 
-  Hasonlóképpen, a `order` - `2` ból a második sorrend szimmetrikus Trotter – Suzuki integrátor $ $ \begin{align} S_2 (\lambda) = \ prod_ {j = 1} ^ {m} e ^ {H_k \lambda/2} \ prod_ {j ' = m} ^{1} e ^ {H_ {j '} \lambda/2}.
+  Hasonlóképpen, a `order` `2` -ból a második sorrend szimmetrikus Trotter – Suzuki integrátor $ $ \begin{align} S_2 (\lambda) = \ prod_ {j = 1} ^ {m} e ^ {H_k \lambda/2} \ prod_ {j ' = m} ^ {1} e ^ {H_ {j '} \lambda/2}.
 
   \end{align} $ $
 
@@ -24,7 +24,7 @@ input:
     isPrimitive: true
     uid: Int
   - name: op
-    summary: Egy művelet, amely elfogad egy index bemenetet `Int`(típus) és egy időbemenetet (típus `Double`) a dekompozícióhoz.
+    summary: Egy művelet, amely elfogad egy index bemenetet (típus `Int` ) és egy időbemenetet (típus `Double` ) a dekompozícióhoz.
     isOperation: true
     input:
       types:
@@ -51,7 +51,7 @@ input:
 output:
   content: ((Double, 'T) => Unit is Adj + Ctl)
   types:
-  - summary: A Trotter – Suzuki integrátor egységes megvalósítását adja vissza, ahol az első `Double` paraméter az integrációs lépés mérete, a második paraméter pedig a cél.
+  - summary: A Trotter – Suzuki integrátor egységes megvalósítását adja vissza, ahol az első paraméter az `Double` integrációs lépés mérete, a második paraméter pedig a cél.
     isOperation: true
     input:
       types:
@@ -68,11 +68,11 @@ output:
     - Controlled
 typeParameters:
 - uid: "'T"
-  summary: Az a típus, amely az egyes időpontokban cselekszik; általában a `Qubit[]` vagy `Qubit`a.
+  summary: Az a típus, amely az egyes időpontokban cselekszik; általában a `Qubit[]` vagy a `Qubit` .
 metadata:
-  ms.openlocfilehash: 1fdb15e9a28c24ac58f026a89779951b982edb27
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: e3febe45478ca86a36844d6af75884872cb12680
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680255"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89356541"
