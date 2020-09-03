@@ -2,7 +2,7 @@
 uid: microsoft.quantum.bitwise.leftshiftedi
 name: LeftShiftedI
 type: function
-namespace: Microsoft.Quantum.Bitwise
+namespace: microsoft.quantum.bitwise
 summary: Egy adott számú biten hagyott szám bitenkénti-ábrázolását tolja át.
 remarks: >-
   A következők egyenértékűek:
@@ -30,13 +30,13 @@ input:
 output:
   content: Int
   types:
-  - summary: A érték `value`a `amount` biten balra tolódott.
+  - summary: A érték a `value` `amount` biten balra tolódott.
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: e63653304eced80526b26e0ad05d1e4ed4aeb682
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: cab8f84fe6e4b268bb93c555dd58077377d8a9af
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680692"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89351297"

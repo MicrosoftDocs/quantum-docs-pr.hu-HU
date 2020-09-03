@@ -2,17 +2,17 @@
 uid: microsoft.quantum.arrays.subarray
 name: Subarray
 type: function
-namespace: Microsoft.Quantum.Arrays
+namespace: microsoft.quantum.arrays
 summary: Egy tömböt és egy listát hoz létre, és létrehoz egy új tömböt az eredeti tömb elemeiből, amelyek megfelelnek az adott helyeknek.
 remarks: >-
-  A függvény általános típusokhoz van definiálva, azaz, ha van egy tömb `'T[]` , és az altömbet `Int[]` meghatározó helyszínek listája.
+  A függvény általános típusokhoz van definiálva, azaz, ha van egy tömb, `'T[]` és `Int[]` az altömbet meghatározó helyszínek listája.
 
   Az altömb felépítése azon alapul, hogy az adott tömb új, részletes másolatát hozza létre a hivatkozások fenntartása mellett.
 
 
-  Ha `Length(indices) < Length(array)`ez a függvény a következő részhalmazát fogja `array`visszaadni:. Másfelől, ha `indices` ismétlődő elemeket tartalmaz, a megfelelő elemek `array` is megismétlődnek.
+  Ha `Length(indices) < Length(array)` Ez a függvény a következő részhalmazát fogja visszaadni: `array` . Másfelől, ha `indices` ismétlődő elemeket tartalmaz, a megfelelő elemek is `array` megismétlődnek.
 
-  Ha `indices` a `array` és az azonos hosszúságú, akkor ez a függvény a `array`következő funkciókat biztosítja:.
+  Ha `indices` `array` a és az azonos hosszúságú, akkor ez a függvény a következő funkciókat biztosítja: `array` .
 syntax: "function Subarray (indices : Int[], array : 'T[]) : 'T[]"
 input:
   content: "(indices : Int[], array : 'T[])"
@@ -23,24 +23,24 @@ input:
     isPrimitive: true
     uid: Int
   - name: array
-    summary: Elemek tömbje `'T`.
+    summary: Elemek tömbje `'T` .
     isArray: true
     uid: "'T"
     isLocal: true
 output:
   content: "'T[]"
   types:
-  - summary: Olyan elemek `out` tömbje, amelyek indexei az altömbnek felelnek meg, `out[idx] == array[indices[idx]]`például:.
+  - summary: 'Olyan elemek tömbje `out` , amelyek indexei az altömbnek felelnek meg, például: `out[idx] == array[indices[idx]]` .'
     isArray: true
     uid: "'T"
     isLocal: true
 typeParameters:
 - uid: "'T"
-  summary: Az `array` elemek típusa.
+  summary: Az elemek típusa `array` .
 metadata:
-  ms.openlocfilehash: 2740a39d1b7c1c56aed4f9107c65d339c5fb4c1a
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 1d5739f49e32ec4548cb24df2106dec0866a94cb
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82675112"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89351628"
