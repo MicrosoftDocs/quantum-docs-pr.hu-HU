@@ -2,8 +2,8 @@
 uid: microsoft.quantum.arithmetic.multiplysi
 name: MultiplySI
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
-summary: '`xs` Az aláírt egész számot az aláírt `ys` egész számmal szorozza `result`meg, és tárolja az eredményt a értékben, amelynek nullának kell lennie.'
+namespace: microsoft.quantum.arithmetic
+summary: Az aláírt egész számot az aláírt egész számmal szorozza `xs` `ys` meg, és tárolja az eredményt a értékben `result` , amelynek nullának kell lennie.
 syntax: 'operation MultiplySI (xs : Microsoft.Quantum.Arithmetic.SignedLittleEndian, ys : Microsoft.Quantum.Arithmetic.SignedLittleEndian, result : Microsoft.Quantum.Arithmetic.SignedLittleEndian) : Unit'
 input:
   content: '(xs : Microsoft.Quantum.Arithmetic.SignedLittleEndian, ys : Microsoft.Quantum.Arithmetic.SignedLittleEndian, result : Microsoft.Quantum.Arithmetic.SignedLittleEndian)'
@@ -15,7 +15,7 @@ input:
     summary: n bites szorzó (SignedLittleEndian)
     uid: microsoft.quantum.arithmetic.signedlittleendian
   - name: result
-    summary: 'a 2n-bit result (SignedLittleEndian) értékének kezdetben a következő állapotban{0}kell lennie: $ \ket $.'
+    summary: 'a 2n-bit result (SignedLittleEndian) értékének kezdetben a következő állapotban kell lennie: $ \ket {0} $.'
     uid: microsoft.quantum.arithmetic.signedlittleendian
 output:
   content: Unit
@@ -26,9 +26,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: b8710ecce1986b43e50a8b0567ae4746bda1589e
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: e81995b6dfb20ddd3e3e3139831d3cc43bfd60da
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82679458"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89353396"

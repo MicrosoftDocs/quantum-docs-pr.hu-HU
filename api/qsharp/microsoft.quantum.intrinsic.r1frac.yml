@@ -2,9 +2,9 @@
 uid: microsoft.quantum.intrinsic.r1frac
 name: R1Frac
 type: operation
-namespace: Microsoft.Quantum.Intrinsic
+namespace: microsoft.quantum.intrinsic
 summary: >-
-  A $ \ket{1}$ állapotú rotációt alkalmazza egy dyadic-frakcióként megadott szögben.
+  A $ \ket $ állapotú rotációt alkalmazza egy {1} dyadic-frakcióként megadott szögben.
 
 
   \begin{align} R_1 (n, k) \mathrel{: =} \operatorname{diag} (1, e ^ {i \pi k/2 ^ n}).
@@ -14,7 +14,7 @@ summary: >-
 
   > [!WARNING]
 
-  > Ezzel a művelettel a-től **eltérő aláírási** konvenciót használ, és nem tartalmazza a következőhöz @"microsoft.quantum.intrinsic.r"tartozó @"microsoft.quantum.intrinsic.r1"$1/2 $ faktort:.
+  > Ezzel a művelettel a-től **eltérő aláírási** konvenciót használ @"microsoft.quantum.intrinsic.r" , és nem tartalmazza a következőhöz tartozó $1/2 $ faktort: @"microsoft.quantum.intrinsic.r1" .
 remarks: >-
   Egyenértékű a következővel:
 
@@ -51,9 +51,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 45fa756e94be8b580c909004016e0f40861111c1
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 1cfaf195a3c811d43df50548771759f6dbf3fdc6
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82683733"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89346749"

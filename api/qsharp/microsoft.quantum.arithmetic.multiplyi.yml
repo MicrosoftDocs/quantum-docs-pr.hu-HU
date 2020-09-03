@@ -2,8 +2,8 @@
 uid: microsoft.quantum.arithmetic.multiplyi
 name: MultiplyI
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
-summary: Az egész `xs` számot szorozza egész `ys` számmal `result`, és tárolja az eredményt a értékben, amelyeknek kezdetben nullának kell lennie.
+namespace: microsoft.quantum.arithmetic
+summary: Az egész számot szorozza egész számmal `xs` `ys` , és tárolja az eredményt a értékben `result` , amelyeknek kezdetben nullának kell lennie.
 remarks: >-
   A standard eltolási és hozzáadási megközelítést használ a szorzás megvalósításához.
 
@@ -19,7 +19,7 @@ input:
     summary: $n $-bit szorzó (LittleEndian)
     uid: microsoft.quantum.arithmetic.littleendian
   - name: result
-    summary: 'a $2n $-bit result (LittleEndian) értékének kezdetben a következő állapotban{0}kell lennie: $ \ket $.'
+    summary: 'a $2n $-bit result (LittleEndian) értékének kezdetben a következő állapotban kell lennie: $ \ket {0} $.'
     uid: microsoft.quantum.arithmetic.littleendian
 output:
   content: Unit
@@ -30,9 +30,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: fcb55b47c0d5ca82736e8c3da14190daffd2b414
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 67e1ef577bf36cf524d2468bc191d2b381c800df
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82679488"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89353379"

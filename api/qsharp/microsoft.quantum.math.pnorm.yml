@@ -2,12 +2,12 @@
 uid: microsoft.quantum.math.pnorm
 name: PNorm
 type: function
-namespace: Microsoft.Quantum.Math
+namespace: microsoft.quantum.math
 summary: >-
-  Az `L(p)` `Double`s vektorának normáját adja vissza.
+  Az `L(p)` s vektorának normáját adja vissza `Double` .
 
 
-  Ez azt eredményezi, hogy egy tömb $x $ `Double[]`típusú, ez a következőt adja vissza:\|$p\|\_$-norm $ x p = (\ sum_ {j} | x_j | ^ {p}) ^ {1/p} $.
+  Ez azt eredményezi, hogy egy tömb $x $ típusú `Double[]` , ez a következőt adja vissza: $p $-norm $ \| x \| \_ p = (\ sum_ {j} | x_j | ^ {p}) ^ {1/p} $.
 syntax: 'function PNorm (p : Double, array : Double[]) : Double'
 input:
   content: '(p : Double, array : Double[])'
@@ -23,13 +23,13 @@ input:
 output:
   content: Double
   types:
-  - summary: A $p $-norm $\|x\|_p $.
+  - summary: A $p $-norm $ \| x \| _p $.
     isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: 5583e7d14c7363538ca11f48564ebac7240f511b
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 0f267609a04e66b6a445a92473a223a776fdccda
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82684051"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89333506"
