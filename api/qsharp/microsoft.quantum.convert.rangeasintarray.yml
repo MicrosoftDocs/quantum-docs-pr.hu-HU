@@ -2,8 +2,8 @@
 uid: microsoft.quantum.convert.rangeasintarray
 name: RangeAsIntArray
 type: function
-namespace: Microsoft.Quantum.Convert
-summary: A (Start `arr` ) számú egész számok tömbjét hozza létre. lépés.. végén.
+namespace: microsoft.quantum.convert
+summary: A (Start) számú egész számok tömbjét hozza létre `arr` . lépés.. végén.
 examples: >-
   ```qsharp
 
@@ -17,20 +17,20 @@ input:
   content: '(range : Range)'
   types:
   - name: range
-    summary: Egy `Range` tömbre `start..step..end` konvertálandó érték.
+    summary: Egy `Range` `start..step..end` tömbre konvertálandó érték.
     isPrimitive: true
     uid: Range
 output:
   content: Int[]
   types:
-  - summary: Az egész számok új tömbje, amely a által megismétlik `range`által megismételt értékeknek felel meg.
+  - summary: Az egész számok új tömbje, amely a által megismétlik által megismételt értékeknek felel meg `range` .
     isArray: true
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: f909319a624459b2453db2ac73d3ceaec38f6911
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 22077ab84984e3701fef26c28fefefd325ea4627
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82677372"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89338317"

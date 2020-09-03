@@ -2,28 +2,28 @@
 uid: microsoft.quantum.convert.resultarrayasboolarray
 name: ResultArrayAsBoolArray
 type: function
-namespace: Microsoft.Quantum.Convert
-summary: Egy `Result[]` `Bool[]` típusra konvertál egy típust, `One` ahol a le `true` van `Zero` képezve és le `false`van képezve.
+namespace: microsoft.quantum.convert
+summary: Egy típusra konvertál egy típust `Result[]` `Bool[]` , ahol a le `One` van képezve `true` és le `Zero` van képezve `false` .
 syntax: 'function ResultArrayAsBoolArray (input : Result[]) : Bool[]'
 input:
   content: '(input : Result[])'
   types:
   - name: input
-    summary: '`Result[]`a konvertáláshoz.'
+    summary: '`Result[]` a konvertáláshoz.'
     isArray: true
     isPrimitive: true
     uid: Result
 output:
   content: Bool[]
   types:
-  - summary: A `Bool[]` `input`jelölője.
+  - summary: '`Bool[]`A jelölője `input` .'
     isArray: true
     isPrimitive: true
     uid: Bool
 metadata:
-  ms.openlocfilehash: 19a9287931dddf1a302a66cb85d4e925163688ad
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 9eb9414ca3b58dea5c58d0e305a6fddcdf1032c8
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82677357"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89338266"

@@ -2,12 +2,12 @@
 uid: microsoft.quantum.arithmetic.multiplyandaddphasebymodularinteger
 name: MultiplyAndAddPhaseByModularInteger
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: Ugyanaz, mint a MultiplyAndAddByModularInteger, de azt feltételezi, hogy a summand QFT-alapú egész számokat kódol.
 remarks: >-
-  Feltételezi, `phaseSummand` hogy a legmagasabb bit 0 értékű.
+  Feltételezi, hogy `phaseSummand` a legmagasabb bit 0 értékű.
 
-  Azt is feltételezi, hogy a `phaseSummand` értéke kisebb, mint $N $.
+  Azt is feltételezi, hogy a értéke `phaseSummand` kisebb, mint $N $.
 syntax: 'operation MultiplyAndAddPhaseByModularInteger (constMultiplier : Int, modulus : Int, multiplier : Microsoft.Quantum.Arithmetic.LittleEndian, phaseSummand : Microsoft.Quantum.Arithmetic.PhaseLittleEndian) : Unit'
 input:
   content: '(constMultiplier : Int, modulus : Int, multiplier : Microsoft.Quantum.Arithmetic.LittleEndian, phaseSummand : Microsoft.Quantum.Arithmetic.PhaseLittleEndian)'
@@ -20,7 +20,7 @@ input:
     isPrimitive: true
     uid: Int
   - name: multiplier
-    summary: Egy olyan előjel nélküli egész szám, amelynek értékét fel kell venni az egyes alapállapotok címkéjébe `summand`.
+    summary: Egy olyan előjel nélküli egész szám, amelynek értékét fel kell venni az egyes alapállapotok címkéjébe `summand` .
     uid: microsoft.quantum.arithmetic.littleendian
   - name: phaseSummand
     summary: A művelet céljaként használandó, előjel nélküli egész számot jelölő kvantum-regisztráció.
@@ -36,9 +36,9 @@ functors:
 seeAlso:
 - microsoft.quantum.arithmetic.multiplyandaddbymodularinteger
 metadata:
-  ms.openlocfilehash: 029ff8fb767ae018b7462f19a5fe09e83e606c6e
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: c1a7fd9523ee9056215cfbd5f2c89134f250bf1c
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82672801"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89353549"
