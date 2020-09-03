@@ -2,13 +2,13 @@
 uid: microsoft.quantum.chemistry.jordanwigner.optimizedbegeneratorsystem
 name: OptimizedBEGeneratorSystem
 type: newtype
-namespace: Microsoft.Quantum.Chemistry.JordanWigner
-summary: Az a függvény `OptimizedBETermIndex` , amely egy `n` egész számra `n`vonatkozó kifejezést ad vissza, és az első `Int` és a kifejezésben szereplő összes kifejezés abszolút értékének összegét adja vissza. `Double`
+namespace: microsoft.quantum.chemistry.jordanwigner
+summary: Az a függvény `OptimizedBETermIndex` `n` , amely egy egész számra vonatkozó kifejezést ad vissza `n` , és az első és a `Int` kifejezésben szereplő összes kifejezés abszolút értékének összegét `Double` adja vissza.
 syntax: newtype OptimizedBEGeneratorSystem = (Int, Double, (Int -> Microsoft.Quantum.Chemistry.JordanWigner.OptimizedBETermIndex));
 metadata:
-  ms.openlocfilehash: 76e4e810dc31779efcd281c9c132e7f4b97556b9
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 7911ed7672c02ddc7ce15a1d31e3ec51c823bc1d
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82665978"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89339541"

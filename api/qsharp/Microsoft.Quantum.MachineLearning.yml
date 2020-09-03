@@ -1,7 +1,7 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.machinelearning
 name: Microsoft.Quantum.MachineLearning
-summary: " # <a name=\"summary\"></a>Összefoglalás\n Ez a névtér a Quantum Machine learning-alkalmazásokban használt funkciókat és műveleteket biztosítja.\n\n # <a name=\"references\"></a>Hivatkozások\n - Maria Schuld, Alex Bocharov, Garai Viktória Svore, Nathan Wiebe, \"Circuit-centrikus Quantum osztályozók\", https://arxiv.org/abs/1804.00633 ."
+summary: " # <a name=\"summary\"></a>Összegzés\n Ez a névtér a Quantum Machine learning-alkalmazásokban használt funkciókat és műveleteket biztosítja.\n\n # <a name=\"references\"></a>Hivatkozások\n - Maria Schuld, Alex Bocharov, Garai Viktória Svore, Nathan Wiebe, \"Circuit-centrikus Quantum osztályozók\", https://arxiv.org/abs/1804.00633 ."
 functions:
 - uid: microsoft.quantum.machinelearning.approximateinputencoder
   summary: Az egyes együtthatók és a tűréshatárok halmaza egy állapot-előkészítési műveletet ad vissza, amely az egyes együtthatókat a számítási állapot megfelelő amplitúdójának megfelelően, a megadott tűréshatárig állítja elő.
@@ -64,9 +64,9 @@ newtypes:
 - uid: microsoft.quantum.machinelearning.validationresults
   summary: Az eredmények egy adott minta alapján osztályozták a besorolást.
 metadata:
-  ms.openlocfilehash: 85728552e323a640d5abd78f6a2bada5c37e6919
-  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.openlocfilehash: 8d36a7ce9650ab42103e2b22e1e2ec5948d1a0ac
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 07/02/2020
-  ms.locfileid: "85885247"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89340034"

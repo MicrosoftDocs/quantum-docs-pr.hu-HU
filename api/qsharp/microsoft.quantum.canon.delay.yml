@@ -2,16 +2,16 @@
 uid: microsoft.quantum.canon.delay
 name: Delay
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
   Egy megadott műveletet késleltetve alkalmaz.
 
 
   Adott művelet és a művelet bemenete esetén a művelet a további adatok megadása után alkalmazza a műveletet.
 
-  A kifejezés `Delay(op, arg, _)` egy olyan művelet, amely a `op` `arg` hívásakor vonatkozik.
+  A kifejezés `Delay(op, arg, _)` egy olyan művelet, amely `op` a `arg` hívásakor vonatkozik.
 
-  A `Delay(op,arg,_)` kifejezés lehetővé teszi az alkalmazás késleltetését `op`.
+  `Delay(op,arg,_)`A kifejezés lehetővé teszi az alkalmazás késleltetését `op` .
 syntax: "operation Delay (op : ('T => 'U), arg : 'T, aux : Unit) : 'U"
 input:
   content: "(op : ('T => 'U), arg : 'T, aux : Unit)"
@@ -51,9 +51,9 @@ seeAlso:
 - microsoft.quantum.canon.delayca
 - microsoft.quantum.canon.delayed
 metadata:
-  ms.openlocfilehash: d6e9c821bdb21714ee914bc908f6f93222b5c3b6
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 23900b8747d2bbd15357dee1a324ba36c5b0cec4
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680182"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89356507"
