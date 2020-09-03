@@ -2,14 +2,14 @@
 uid: microsoft.quantum.intrinsic.measure
 name: Measure
 type: operation
-namespace: Microsoft.Quantum.Intrinsic
+namespace: microsoft.quantum.intrinsic
 summary: >-
   Egy vagy több qubits közös mérését hajtja végre a megadott Pauli-alapokon.
 
 
-  A kimenet eredményét a következő eloszlás adja meg: \begin{align} \Pr (\texttt{Zero} | \ket{\psi}) = \frac12 \braket{\psi \mid | \left (\boldone + P_0 \otimes P_1 \otimes \cdots \otimes P_ {N-1} \right) \mid | \psi}, \end{align}, ahol $P _i $ a $i $ th eleme `bases`, és ahol $N = \texttt{length} (\texttt{bases}) $.
+  A kimenet eredményét a következő eloszlás adja meg: \begin{align} \Pr (\texttt{Zero} | \ket{\psi}) = \frac12 \braket{\psi \mid | \left (\boldone + P_0 \otimes P_1 \otimes \cdots \otimes P_ {N-1} \right) \mid | \psi}, \end{align}, ahol $P _i $ a $i $ th eleme `bases` , és ahol $N = \texttt{length} (\texttt{bases}) $.
 
-  Ez azt eredményezi, hogy `Result` a mérés egy $d $ értéket ad vissza, hogy a megfigyelt mérési hatás sajátérték értéke $ (-1) ^ d $.
+  Ez azt eredményezi, hogy a mérés egy $d $ értéket ad vissza, `Result` hogy a megfigyelt mérési hatás sajátérték értéke $ (-1) ^ d $.
 remarks: Ha az alap tömb és a qubit tömb eltérő hosszúságú, akkor a művelet sikertelen lesz.
 syntax: 'operation Measure (bases : Pauli[], qubits : Qubit[]) : Result'
 input:
@@ -28,13 +28,13 @@ input:
 output:
   content: Result
   types:
-  - summary: '`Zero`Ha a $ + $1 sajátérték meg van figyelve `One` , és ha a $-$1 sajátérték meg van figyelve.'
+  - summary: '`Zero` Ha a $ + $1 sajátérték meg van figyelve, és `One` Ha a $-$1 sajátérték meg van figyelve.'
     isPrimitive: true
     uid: Result
 metadata:
-  ms.openlocfilehash: a2f89d1eea48ac0a4dab7e35ef661d89a40ae84a
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 24392c0995ca21931d4fa80663f72398c7a9937b
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82682850"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89346834"
