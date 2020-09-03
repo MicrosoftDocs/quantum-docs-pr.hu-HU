@@ -2,9 +2,9 @@
 uid: microsoft.quantum.math.modulusi
 name: ModulusI
 type: function
-namespace: Microsoft.Quantum.Math
-summary: Kiszámítja a `value` többrészes `modulus`adatmennyiség kanonikus maradékát.
-remarks: 'Ez a függvény különbözik attól, hogy az operátor `%` hogyan viselkedik a C#-ban és a Q #-ban, ahogy az eredményben mindig egy `modulus - 1`0 és közötti pozitív egész szám, még akkor is, ha az érték negatív.'
+namespace: microsoft.quantum.math
+summary: Kiszámítja a többrészes adatmennyiség kanonikus maradékát `value` `modulus` .
+remarks: 'Ez a függvény különbözik attól, hogy az operátor hogyan viselkedik a `%` C#-ban és a Q #-ban, ahogy az eredményben mindig egy 0 és közötti pozitív egész szám `modulus - 1` , még akkor is, ha az érték negatív.'
 syntax: 'function ModulusI (value : Int, modulus : Int) : Int'
 input:
   content: '(value : Int, modulus : Int)'
@@ -20,13 +20,13 @@ input:
 output:
   content: Int
   types:
-  - summary: Egész szám $r $0 és `modulus - 1` között, `value - r` amely a modulus alapján osztható
+  - summary: Egész szám $r $0 és között, `modulus - 1` amely a `value - r` modulus alapján osztható
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: d804caa4e5eba1e8d6293d33164255ea4768900c
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 63d8e1ed1083be193b976ea7c4086f7bfdad7a69
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82686636"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89334050"

@@ -2,7 +2,7 @@
 uid: microsoft.quantum.arithmetic.multiplyandaddbymodularinteger
 name: MultiplyAndAddByModularInteger
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: >-
   Egy qubit-regiszterben egy moduláris szorzást és-hozzáadást végez az egész számok állandói alapján.
 
@@ -24,7 +24,7 @@ input:
     isPrimitive: true
     uid: Int
   - name: multiplier
-    summary: Egy olyan előjel nélküli egész szám, amelynek értékét fel kell venni az egyes alapállapotok címkéjébe `summand`.
+    summary: Egy olyan előjel nélküli egész szám, amelynek értékét fel kell venni az egyes alapállapotok címkéjébe `summand` .
     uid: microsoft.quantum.arithmetic.littleendian
   - name: summand
     summary: A művelet céljaként használandó, előjel nélküli egész számot jelölő kvantum-regisztráció.
@@ -40,9 +40,9 @@ functors:
 seeAlso:
 - microsoft.quantum.arithmetic.multiplyandaddphasebymodularinteger
 metadata:
-  ms.openlocfilehash: 38efb2840406fc82b7ae24640bec6641f048a5b2
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: de9bec96048c4c1f8431bdfd831f560e7c1af72c
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676752"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89353532"
