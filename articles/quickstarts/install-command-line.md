@@ -9,12 +9,12 @@ uid: microsoft.quantum.install.standalone
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 6a287dd76162a05d72af7e9d1e46533425283e2a
-ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+ms.openlocfilehash: a630b2307f5d95321fb26f480d7a441ddba846fc
+ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
 ms.translationtype: HT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88863664"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89358258"
 ---
 # <a name="develop-with-no-locq-applications"></a>Fejlesztés Q#-alkalmazásokkal
 
@@ -41,7 +41,7 @@ A Visual Studio konfigurálása:
 A Visual Studio Codespaces konfigurálása:
 
 1. Hozzon létre egy [Azure-fiókot](https://azure.microsoft.com/free/).
-2. Hozzon létre egy Codespaces-környezetet. Kövesse a [gyorsútmutatót](https://docs.microsoft.com/visualstudio/online/quickstarts/browser). A Codespace létrehozásakor javasoljuk, hogy a QDK-specifikus beállítások betöltéséhez írja be a `microsoft/Quantum` elemet a „Git-adattár” mezőbe.
+2. Hozzon létre egy Codespaces-környezetet. Kövesse a [gyorsútmutatót](https://docs.microsoft.com/visualstudio/codespaces/quickstarts/browser). A Codespace létrehozásakor javasoljuk, hogy a QDK-specifikus beállítások betöltéséhez írja be a `microsoft/Quantum` elemet a „Git-adattár” mezőbe.
 3. Most már elindíthatja az új környezetet, és megkezdheti a fejlesztést a böngészőben a [VS Codespaces Cloud IDE](https://online.visualstudio.com/environments)használatával. Azt is megteheti, hogy a VS Code helyi telepítését használja, a Codespacest pedig [távoli környezetként](https://docs.microsoft.com/visualstudio/online/how-to/vscode) alkalmazza.
 
 
