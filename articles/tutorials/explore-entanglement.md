@@ -9,12 +9,12 @@ uid: microsoft.quantum.write-program
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: d815a9a25b8ba5e9489b6d3d27fb0d64ab4aaa1d
-ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+ms.openlocfilehash: 3e95f142572e104fe1e133b109d197ed5bb01d9a
+ms.sourcegitcommit: af2e9691c1900ced7e09d6320255617c9939ed55
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88863436"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90063240"
 ---
 # <a name="tutorial-explore-entanglement-with-q"></a>Oktatóanyag: Összefonódások megismerése Q\# nyelven
 
@@ -112,7 +112,7 @@ A Q# művelet egy kvantum-alrutin. Ez egy meghívásos rutin, amely más kvantum
 
 A műveletek argumentumai rekordként vannak meghatározva, zárójelek között.
 
-A művelet visszatérési típusa a kettőspont után van meghatározva. Ebben az esetben a `SetQubitState` művelet nem ad vissza semmit, ezért a jelölése a következőt adja vissza: `Unit`. Ez egyenértékű az Q# `unit` F #-ban, amely nagyjából a C#-ban van, `void` és egy üres rekord ( `Tuple[()]` ) a Pythonban.
+A művelet visszatérési típusa a kettőspont után van meghatározva. Ebben az esetben a `SetQubitState` művelet nem ad vissza semmit, ezért a jelölése a következőt adja vissza: `Unit`. Ez egyenértékű az Q# `unit` F #-ban, amely nagyjából a C#-ban van, `void` és egy üres rekord a Pythonban (amelyet `()` a Type hint jelöl `Tuple[()]` ).
 
 Az első művelet során két Quantum műveletet használt Q# :
 
@@ -413,7 +413,7 @@ Test results (# of 0s, # of 1s, # of agreements)
 
 Ahogy az áttekintésben is említettük, az első qubit statisztikái nem változnak (50%-os eséllyel lesz 0 vagy 1), de a második qubit mérésekor __mindig__ ugyanaz az eredmény, mint amit az elsőnél mértünk, mivel a két qubit össze van fonódva!
 
-## <a name="next-steps"></a>További lépések
+## <a name="next-steps"></a>Következő lépések
 
 A megjelenő "a"-ben a a legelterjedtebb számítási algoritmusok segítségével [megtudhatja](xref:microsoft.quantum.quickstarts.search) , hogyan hozhatja létre és futtathatja a következőt: a a legtöbbet használt, legtöbbet a legtöbbet Q# kihasználó program, amely a kvantum-számítástechnikai  
 
