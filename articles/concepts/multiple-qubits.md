@@ -1,6 +1,6 @@
 ---
 title: több qubits leírása: megtudhatja, hogyan hajthat végre műveleteket két vagy több qubits.
-Szerző: QuantumWriter UID: Microsoft. Quantum. Concepts. Multiple-qubits MS. Author: nawiebe@microsoft.com MS. Date: 12/11/2017 MS. topic: No-Loc:
+Szerző: bradben UID: Microsoft. Quantum. Concepts. Multiple-qubits MS. Author: v-benbra MS. Date: 12/11/2017 MS. topic: No-Loc:
 - "Q#"
 - "$$v"
 - "$$"
@@ -97,7 +97,7 @@ Ezek az eszközök feltétlenül szükségesek ahhoz, hogy megértsék a kódban
 
 ## <a name="representing-two-qubits"></a>Két qubits képvisel
 Az egy-és qubit állapot közötti fő különbség az, hogy a két qubit állapot nem két dimenziós, hanem négy dimenziós.
-Ennek az az oka, hogy a kétqubitos állapotok számítási alapjait az egy qubit-állapotú transzeurópai termékek alkotják.  Például:\begin{align}
+Ennek az az oka, hogy a kétqubitos állapotok számítási alapjait az egy qubit-állapotú transzeurópai termékek alkotják.  Például: \begin{align}
 00 \equiv \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} \otimes \begin{bmatrix} 1 \\\\ 0 1 0 0 \end{bmatrix} & = \begin{bmatrix} \\\\ \\\\ \\\\ 0 \end{bmatrix} , \qquad 01 \equiv \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} \otimes \begin{bmatrix} 0 \\\\ 1 0 \end{bmatrix} = \begin{bmatrix} \\\\ 1 \\\\ 0 \\\\ 0 \end{bmatrix} ,\\\\
 10 \equiv \begin{bmatrix} 0 \\\\ 1 1 0 0 0 \end{bmatrix} \otimes \begin{bmatrix} \\\\ \end{bmatrix} & = \begin{bmatrix} \\\\ \\\\ 1 \\\\ 0 \end{bmatrix} , \qquad 11 \equiv \begin{bmatrix} 0 1 0 1 0 0 \\\\ \end{bmatrix} \otimes \begin{bmatrix} \\\\ \end{bmatrix} = \begin{bmatrix} \\\\ \\\\ 0 \\\\ 1 \end{bmatrix} .
 \end{align}
@@ -122,7 +122,7 @@ Például nincsenek állapotok, és a $ \psi = \begin{bmatrix} \alpha \\\\ \beta
 
 $$\psi\otimes\phi = \begin{bmatrix} 1/ \sqrt { 2 } \\\\ 0 \\\\ 0 \\\\ 1/ \sqrt { 2 } \end{bmatrix} .$$ 
 
-Ez a két qubit állapot, amely nem írható egyetlen qubit-állapotú tenser-termékként, "kusza állapotnak" nevezzük. azt mondják, hogy a két qubits [*összekeverve*](https://en.wikipedia.org/wiki/Quantum_entanglement)van.  Lazán szólva, mivel a Quantum State nem lehet úgy gondolni, mint egy qubit-állapotú kétféle termék, az állam által birtokolt információk nem korlátozódnak egyetlen qubits sem.  Ehelyett a rendszer nem helyileg tárolja az adatokat a két állapot közötti összefüggésekben.  Ez a nem területi információ a Quantum Computing egyik fő megkülönböztető funkciója a klasszikus számítástechnika terén, és számos kvantum-protokoll esetében elengedhetetlen, beleértve a [kvantum](https://github.com/microsoft/Quantum/tree/master/samples/getting-started/teleportation) -és a [kvantum-hibajavítást](xref:microsoft.quantum.libraries.error-correction)is.
+Ez a két qubit állapot, amely nem írható egyetlen qubit-állapotú tenser-termékként, "kusza állapotnak" nevezzük. azt mondják, hogy a két qubits [*összekeverve*](https://en.wikipedia.org/wiki/Quantum_entanglement)van.  Lazán szólva, mivel a Quantum State nem lehet úgy gondolni, mint egy qubit-állapotú kétféle termék, az állam által birtokolt információk nem korlátozódnak egyetlen qubits sem.  Ehelyett a rendszer nem helyileg tárolja az adatokat a két állapot közötti összefüggésekben.  Ez a nem területi információ a Quantum Computing egyik fő megkülönböztető funkciója a klasszikus számítástechnika terén, és számos kvantum-protokoll esetében elengedhetetlen, beleértve a [kvantum](https://github.com/microsoft/Quantum/tree/main/samples/getting-started/teleportation) -és a [kvantum-hibajavítást](xref:microsoft.quantum.libraries.error-correction)is.
 
 ## <a name="measuring-two-qubit-states"></a>Két Qubit állapot mérése ##
 A két qubit állapot mérése nagyon hasonlít az egyszeres qubit mérésekhez. Az állapot mérése
@@ -137,29 +137,29 @@ $$
 00 ^ 2, $ $ $ | \alpha _ { } | $ $ $ 01 $ valószínűséggel, 01 ^ 2, 10, valószínűség 10 ^ 2 és 11, a 11 ^ 2 valószínűséggel. | \alpha _ { } | $ $ $ $ | \alpha _ { } | $ $ $ $ | \alpha _ { } | $ A $ \alpha _ { 00 } , \alpha _ { 01 } , \alpha _ { 10 } $ és $ 11 változók szándékosan lettek elnevezve, hogy ez a kapcsolódás egyértelmű legyen \alpha _ { } $ . Ha a mérés után az eredmény 00, $ $ akkor a qubit rendszer kvantum állapota összeomlott, és most már
 
 $$
-    00\equiv
+    00 \equiv
     \begin{bmatrix}
-        1\\\\ 
-        0\\\\ 
-        0\\\\ 
+        1 \\\\ 
+        0 \\\\ 
+        0 \\\\ 
         0 \end{bmatrix} .
 $$
 
 Az is lehetséges, hogy csak egy qubit kell mérni egy qubit kvantum-állapotból. Azokban az esetekben, amikor csak az egyik qubits méri, a mérés hatása finoman eltérő, mert a teljes állapot nem a számítási alapú állapotba van csukva, hanem csak egy alrendszerre van összecsukva.  Más szóval, ebben az esetben, ha csak egy qubit kell mérnie, csak az alrendszerek egyikét csukja össze, de nem mindegyiket.  
 
-Ennek megtekintéséhez érdemes megfontolni a következő állapot első qubit mérését, amely a Hadamard átalakítási H két qubits való alkalmazásával jön létre, $ $ kezdetben a "0" állapotra:$$
+Ennek megtekintéséhez érdemes megfontolni a következő állapot első qubit mérését, amely a Hadamard átalakítási H két qubits való alkalmazásával jön létre, $ $ kezdetben a "0" állapotra: $$
 H ^ 2 (1 0 1 0) 1 2 1 1 1 1 1-1-1-1 1-1-1-1-1-1-1 0 0 0 { \otimes } \left \begin{bmatrix} \\\\ \end{bmatrix} \otimes \begin{bmatrix} \\\\ \end{bmatrix} \right = \frac { } { } \begin{bmatrix} & & & \\\\ & & & \\\\ & & & \\\\ & & & \end{bmatrix} \begin{bmatrix} 1 2 1 1 1 1 \\\\ \\\\ \\\\ \end{bmatrix} = \frac { } { } \begin{bmatrix} \\\\ \\\\ \\\\ \end{bmatrix} \mapsto \begin{cases} \text { eredmény } = 0 & \frac { 1 } { \sqrt { 2 } } \begin{bmatrix} 1 \\\\ 1 \\\\ 0 0 \\\\ \end{bmatrix} \\\\ \text { eredmény } = 1 1 & \frac { } { \sqrt { 2 } } \begin{bmatrix} 0 \\\\ 0 1 1 \\\\ \\\\ \end{bmatrix} \\\\ \end{cases} .  
 $$
 Mindkét eredmény 50%-os valószínűséggel rendelkezik.  Az eredmény a 50%-os valószínűsége annak, hogy mindkét eszköz esetében lehetséges, hogy a kezdeti kvantum-állapot vektora invariáns a $ 0 és az 1 érték között $ $ $ az első qubit.
 
-Az első vagy második qubit mérésére szolgáló matematikai szabály egyszerű.  Ha hagyjuk, hogy $ e_k $ legyen a $ k ^ { \rm th } $ számítási alapja vektor, és hagyja, hogy az $ $ összes e_k, $ $ hogy a kérdéses qubit az 1 értéket adja meg a $ $ k értékeként $ $ .  Ha például az első qubit mérését érdeklik, akkor az $ S $ $ e_1 \equiv 10 $ és $ e_3 \equiv 11 $ közé állna.  Hasonlóképpen, ha a második qubit-k érdeklik $ , $ $ e_2 \equiv 01 $ és $ e_3 \equiv 11 $ .  Ezután a kiválasztott qubit 1 értékre való mérésének valószínűsége az $ $ állapot vektoros$\psi$
+Az első vagy második qubit mérésére szolgáló matematikai szabály egyszerű.  Ha hagyjuk, hogy $ e_k $ legyen a $ k ^ { \rm th } $ számítási alapja vektor, és hagyja, hogy az $ $ összes e_k, $ $ hogy a kérdéses qubit az 1 értéket adja meg a $ $ k értékeként $ $ .  Ha például az első qubit mérését érdeklik, akkor az $ S $ $ e_1 \equiv 10 $ és $ e_3 \equiv 11 $ közé állna.  Hasonlóképpen, ha a második qubit-k érdeklik $ , $ $ e_2 \equiv 01 $ és $ e_3 \equiv 11 $ .  Ezután a kiválasztott qubit 1 értékre való mérésének valószínűsége az $ $ állapot vektoros $\psi$
 
 $$
 P ( \text { } = 1. eredmény) = \sum _ { e_k \text { a set } S } \psi ^ \dagger e_k e_k ^ \dagger \psi .
 $$
 
 > [!NOTE]
->Ebben a dokumentumban a kis endian formátumot használjuk a számítási alap címkézéséhez. Kis endian formátumban a legkevésbé jelentős bitek jönnek először. Például a kis endian formátumú négy számot a BITS 001 karakterlánca jelöli.
+> Ebben a dokumentumban a kis endian formátumot használjuk a számítási alap címkézéséhez. Kis endian formátumban a legkevésbé jelentős bitek jönnek először. Például a kis endian formátumú négy számot a BITS 001 karakterlánca jelöli.
 
 Mivel minden qubit-mérés csak $ 0 $ vagy 1 értéket eredményezhet $ $ , a 0 mérési valószínűsége $ $ egyszerűen $ 1 – P (1 – P \text { } = ) $ .  Ezért csak explicit módon adunk meg egy képletet az 1. mérési valószínűséghez $ $ .
 
@@ -198,37 +198,37 @@ Ahogy az egyetlen qubit esetében is, az egységes átalakítás a qubits-on ér
 Például a CNEM (vezérelt-NOT) Gate egy gyakran használt két qubit-kapu, amelyet a következő egységes mátrix képvisel:
 
 $$
-\operatorname{CNEM } = \begin{bmatrix} 1 \ 0 \ 0 \ 0 \\\\ 0 \ 1 \ 0 \ 0 \\\\ 0 \ 0 \ 0 \ 1 \\\\ 0 \ 0 \ 1 \ 0\end{bmatrix}
+\operatorname{CNEM } = \begin{bmatrix} 1 \ 0 \ 0 \ 0  \\\\  0 \ 1 \ 0 \ 0 \\\\  0 \ 0 \ 0 \ 1 \\\\  0 \ 0 \ 1 \ 0 \end{bmatrix}
 $$
 
 Két qubit kapunk is alkotható egyetlen qubit-kapuk mindkét qubits való alkalmazásával. Ha például a kapukat alkalmazzuk 
 
 $$
 \begin{bmatrix}
-a \ b \\\\ c \ d\end{bmatrix}
+a \ b \\\\ c \ d \end{bmatrix}
 $$
 
 és
 
 $$\begin{bmatrix}
-e \ f \\\\ g \ h\end{bmatrix}
+e \ f \\\\ g \ h \end{bmatrix}
 $$
 
-az első és a második qubits ez egyenértékű a kétlépcsős qubit által nyújtott, a kétféle, a kétszintű termékkel való alkalmazásával:$$\begin{bmatrix}
-a \ b \\\\ c \ d\end{bmatrix}
+az első és a második qubits ez egyenértékű a kétlépcsős qubit által nyújtott, a kétféle, a kétszintű termékkel való alkalmazásával: $$\begin{bmatrix}
+a \ b \\\\ c \ d \end{bmatrix}
 \otimes 
 \begin{bmatrix}
-e \ f \\\\ g \ h\end{bmatrix}=
+e \ f \\\\ g \ h \end{bmatrix}=
     \begin{bmatrix}
-    AK \ AF \ be \ BF\\\\
-    AG \ ah \ BG \ BH\\\\
-    CE \ CF \ de \ DF\\\\
+    AK \ AF \ be \ BF \\\\
+    AG \ ah \ BG \ BH \\\\
+    CE \ CF \ de \ DF \\\\
     CG \ CH \ DG \ DH \end{bmatrix} .$$
 Így két qubit kaput lehet kiváltani, ha több ismert qubit kaput használunk. A két qubit kapu például a $ h \otimes h, az $ $ x \otimes \boldone $ és az $ x \otimes Z $ .
 
 Vegye figyelembe, hogy míg a két qubit-kapu két qubit-kaput határoz meg a tízes termékével, a Converse nem igaz. Nem mind a két qubit kapu írható, mint az qubit-kapuk kétszintű szorzata.  Az ilyen kapukat *összekeverő* kapunak nevezzük. Egy összekeverő kapu például a CNEM kapu.
 
-A vezérelt nem kapu mögötti intuíció tetszőleges kapuk általánosítható.  Egy vezérelt kapu általában egy olyan kapu, amely identitásként viselkedik (azaz nincs művelet), kivéve, ha egy adott qubit $ 1 $ .  Ebben az esetben az $ x $ $ \Lambda \_ (U) $ címkével ellátott, qubit jelölésű, ellenőrzött, egységes és szabályozott egységeket jelölünk.  Példaként $ \Lambda _0 (u) e \_ { 1 } \otimes { \psi } = e \_ { 1 } \otimes U { \psi } $ és $ \Lambda \_ 0 (u) e \_ { 0 } \otimes { \psi } = e 0 \_ { } \otimes { \psi } $ , ahol $ az e \_ 0 $ és $ \_ az e 1 $ a számítási alapja a 0 és az 1 értéknek megfelelő egyetlen qubit $ $ $ $ .  Tegyük fel például, hogy a következő felügyelt- $ Z $ kaput fogjuk kifejezni:$$
+A vezérelt nem kapu mögötti intuíció tetszőleges kapuk általánosítható.  Egy vezérelt kapu általában egy olyan kapu, amely identitásként viselkedik (azaz nincs művelet), kivéve, ha egy adott qubit $ 1 $ .  Ebben az esetben az $ x $ $ \Lambda \_ (U) $ címkével ellátott, qubit jelölésű, ellenőrzött, egységes és szabályozott egységeket jelölünk.  Példaként $ \Lambda _0 (u) e \_ { 1 } \otimes { \psi } = e \_ { 1 } \otimes U { \psi } $ és $ \Lambda \_ 0 (u) e \_ { 0 } \otimes { \psi } = e 0 \_ { } \otimes { \psi } $ , ahol $ az e \_ 0 $ és $ \_ az e 1 $ a számítási alapja a 0 és az 1 értéknek megfelelő egyetlen qubit $ $ $ $ .  Tegyük fel például, hogy a következő felügyelt- $ Z $ kaput fogjuk kifejezni: $$
 \Lambda\_0 (Z) 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 = \begin{bmatrix} & & & \\\\ & & & \\\\ & & & \\\\ & & & -1 \end{bmatrix} = ( \boldone \otimes h) \operatorname { cnem } ( \boldone \otimes h).
 $$
 
@@ -251,7 +251,7 @@ A Quantum Gates pontosan ugyanúgy működnek.  Ha például az $ X $ kaput szer
 
 \begin{align}
 &(X \otimes \operatorname { cnem } _ { 12 } \otimes \boldone \otimes \boldone \otimes \boldone \otimes \boldone ) \begin{bmatrix} 0 \\\\ 1 \end{bmatrix} \otimes \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} \otimes \begin{bmatrix} 0 \\\\ 1 \end{bmatrix} \otimes \begin{bmatrix} 0 \\\\ 1 \end{bmatrix} \otimes \begin{bmatrix} 1 \\\\ \end{bmatrix} \otimes \begin{bmatrix} \\\\ \end{bmatrix} \otimes \begin{bmatrix} \\\\ 0 1 0 0 1\end{bmatrix}\\\\
-&\qquad\qquad\equiv0011001.\end{align}
+&\qquad\qquad\equiv 0011001. \end{align}
 
 Számos qubit-rendszerben gyakran szükség van olyan qubits kiosztására és felszabadítására, amelyek ideiglenes memóriát szolgálnak a kvantum-számítógép számára.  Az ilyen qubit neve Ancilla.  Alapértelmezés szerint a rendszer inicializálja a qubit állapotot, hogy $ e_0 a $ foglalás után.  Azt javasoljuk, hogy a felszabadítás előtt ismét visszaadja a $ e_0 $ .  Ez a feltételezés azért fontos, mert ha egy Ancilla-qubit egy másik qubit-regisztrációval válik elérhetővé, amikor felszabadításra kerül, akkor a felszabadítási folyamat károsítja a Ancilla.  Ezért mindig feltételezzük, hogy az ilyen qubits a kiadás előtt visszaállnak a kezdeti állapotukba.
 

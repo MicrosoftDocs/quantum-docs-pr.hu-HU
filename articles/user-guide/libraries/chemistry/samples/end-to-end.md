@@ -8,12 +8,12 @@ uid: microsoft.quantum.chemistry.examples.endtoend
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 78d6488ed5e3972f85f1e6cf1ba2d197596c4cc3
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 528c34ea9b28b2f9b8f9a8bad681557f44bfcdaa
+ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869307"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90759715"
 ---
 # <a name="end-to-end-with-nwchem"></a>Végponttól végpontig az NWChem-mel #
 
@@ -22,7 +22,7 @@ Mielőtt folytatná a példát, ellenőrizze, hogy telepítette-e a Docker-t a [
 
 További információk:
 - [NWChem bemeneti fedélzetek szerkezete](https://github.com/nwchemgit/nwchem/wiki/Getting-Started#input-file-structure)
-    - [Bemeneti fedélzeti parancsok a Quantum Development Kit használatával](https://github.com/nwchemgit/nwchem/tree/master/contrib/quasar)
+    - [Bemeneti fedélzeti parancsok a Quantum Development Kit használatával](https://github.com/nwchemgit/nwchem/tree/main/contrib/quasar)
 - [A kémiai könyvtár és a függőségek telepítése](xref:microsoft.quantum.chemistry.concepts.installation)
 - [Erőforrások számbavétele](xref:microsoft.quantum.chemistry.examples.resourcecounts)
 
@@ -65,7 +65,7 @@ Get-Command -Module InvokeNWChem
 ```
 
 Ezután importáljuk a `Get-GateCount` **GetGateCount** mintával megadott parancsot.
-A részletekért tekintse meg a [minta utasításait](https://github.com/Microsoft/Quantum/tree/master/samples/chemistry/GetGateCount).
+A részletekért tekintse meg a [minta utasításait](https://github.com/Microsoft/Quantum/tree/main/samples/chemistry/GetGateCount).
 Ezután futtassa a következőt, és a (z) vagy a (z), vagy rendszerre való helyettesítését az `<runtime>` `win10-x64` `osx-x64` `linux-x64` operációs rendszertől függően:
 
 ```powershell
@@ -95,7 +95,7 @@ Először a [nwchemgit/nwchem adattár](https://github.com/nwchemgit/nwchem)kló
 git clone https://github.com/nwchemgit/nwchem --depth 1
 ```
 
-A `nwchemgit/nwchem` tárház számos olyan bemeneti paklit tartalmaz, amelyek a Quantum Development Kit használatával használhatók, és a [ `QA/chem_library_tests` mappa](https://github.com/nwchemgit/nwchem/tree/master/QA/chem_library_tests)alatt találhatók.
+A `nwchemgit/nwchem` tárház számos olyan bemeneti paklit tartalmaz, amelyek a Quantum Development Kit használatával használhatók, és a [ `QA/chem_library_tests` mappa](https://github.com/nwchemgit/nwchem/tree/main/QA/chem_library_tests)alatt találhatók.
 Ebben a példában a `H4` bemeneti paklit fogjuk használni:
 
 ```powershell
@@ -167,7 +167,7 @@ Itt számos dolgot tehet:
 - Próbálja ki a különböző előre megadott bemeneti paklikat, például a paramétert a `alpha` alkalmazásban `h4_sto6g_alpha.nw` , 
 - A NWChem-paklik közvetlen szerkesztésével próbálja meg módosítani a paklikat, például az `STO-nG` n, különböző lehetőségeinek modelljeit. 
 - Próbáljon ki más előre definiált NWChem bemeneti paklikat, amelyek a következő címen érhetők el: `nwchem/qa/chem_library_tests`
-- Próbálja ki a NWChem-ból generált, előre definiált Broombridge YAML-teljesítménymutatókat, amelyek a [Microsoft/Quantum adattár](https://github.com/Microsoft/Quantum/tree/master/samples/chemistry/IntegralData/YAML)részeként érhetők el. Ezek a referenciaértékek a következők: 
+- Próbálja ki a NWChem-ból generált, előre definiált Broombridge YAML-teljesítménymutatókat, amelyek a [Microsoft/Quantum adattár](https://github.com/Microsoft/Quantum/tree/main/samples/chemistry/IntegralData/YAML)részeként érhetők el. Ezek a referenciaértékek a következők: 
     - kis molekulák, például molekuláris hidrogén (H2), berillium (be), lítium-hidrid (LiH),
     - nagyobb molekulák, mint például az ózon (O3), a béta-karotin, a citozin és sok más. 
 - Próbálja ki a grafikus előtér- [EMSL nyilait](https://arrows.emsl.pnnl.gov/api/qsharp_chem) , amelyek egy felületet biztosítanak a Microsoft Quantum Development Kithoz. 
@@ -180,7 +180,7 @@ A web-alapú előtér-EMSL-nyilak megkezdéséhez navigáljon [ide](https://arro
 > [!NOTE]
 > A webböngészőben a EMSL-nyilak futtatásához engedélyezni kell a JavaScript használatát. Tekintse meg ezeket az [utasításokat](https://www.enable-javascript.com/) a JavaScript engedélyezéséhez a böngészőben. 
 
-Először adjon meg egy molekulát a lekérdezési mezőben, amely azt írja:``Enter an esmiles, esmiles reaction, or other Arrows input, then push the "Run Arrows" button.`` 
+Először adjon meg egy molekulát a lekérdezési mezőben, amely azt írja: ``Enter an esmiles, esmiles reaction, or other Arrows input, then push the "Run Arrows" button.`` 
 
 Több molekulát is megadhat a nyelvük neve szerint, például "koffein", "1, 3, 7 – trimethylxanthine" helyett. 
 

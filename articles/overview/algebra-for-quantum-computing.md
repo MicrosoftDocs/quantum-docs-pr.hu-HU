@@ -9,12 +9,12 @@ uid: microsoft.quantum.overview.algebra
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 8b06eba9cadce84aca6f87e4451026ca2ffc794f
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: d7a8dff8d491a9ce6451148d2d27121f1c190ed0
+ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
 ms.translationtype: HT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87867641"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90759322"
 ---
 # <a name="linear-algebra-for-quantum-computing"></a>A kvantum-számítástechnika lineáris algebrája
 
@@ -22,8 +22,8 @@ A lineáris algebra a kvantum-számítástechnika nyelve. A kvantumprogramok imp
 
 Ahogy a [kvantumfizika alapfogalmainak](xref:microsoft.quantum.overview.understanding) ismerete is segíthet megérteni a kvantum-számítástechnikát, úgy az alapvető lineáris algebra is segíthet megérteni a kvantumalgoritmusok működését. Legalább a **vektorok** és a **mátrixszorzás** fogalmával érdemes megismerkednie. Ha frissíteni szeretné tudását ezekkel az algebrai fogalmakkal kapcsolatban, az alábbi oktatóanyagok bemutatják az alapokat:
 
-- [Jupyter-notebook-oktatóanyag a lineáris algebráról](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/LinearAlgebra)
-- [Jupyter-notebook-oktatóanyag az összetett aritmetikáról](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/ComplexArithmetic)
+- [Jupyter-notebook-oktatóanyag a lineáris algebráról](https://github.com/microsoft/QuantumKatas/tree/main/tutorials/LinearAlgebra)
+- [Jupyter-notebook-oktatóanyag az összetett aritmetikáról](https://github.com/microsoft/QuantumKatas/tree/main/tutorials/ComplexArithmetic)
 - [A kvantum-számítástechnika lineáris algebrája](https://cds.cern.ch/record/1522001/files/978-1-4614-6336-8_BookBackMatter.pdf)
 - [A lineáris algebra alapjai](https://www.math.ubc.ca/~carrell/NB.pdf)
 - [Kvantumszámítások – Ismertető](https://www.codeproject.com/Articles/5155638/Quantum-Computation-Primer-Part-1#exploring-quantum-superposition)

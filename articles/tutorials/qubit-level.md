@@ -2,19 +2,19 @@
 title: Qubit programok írása és szimulálása a-ben Q#
 description: Lépésenkénti oktatóanyag egy olyan kvantum-program írásához és szimulálásához, amely az egyes qubit szintjén működik
 author: gillenhaalb
-ms.author: a-gibec@microsoft.com
+ms.author: a-gibec
 ms.date: 10/06/2019
 uid: microsoft.quantum.circuit-tutorial
 ms.topic: tutorial
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 39b2d762c0efbfa4bb3a60a1dcee6bcbe2bd91a9
-ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+ms.openlocfilehash: 0dbeee8e092c830576ba8f79733035cdeeac11de
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88863339"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834958"
 ---
 # <a name="tutorial-write-and-simulate-qubit-level-programs-in-q"></a>Oktatóanyag: qubit-szintű programok írása és szimulálása a Q-ban\#
 
@@ -116,7 +116,7 @@ A `using` esetében a qubits automatikusan le lesznek foglalva a $ \ket {0} $ á
 Ezután alkalmazzuk a kaput, amely magában foglalja a műveletet.
 Q# a névtérben már számos alapvető kvantum-kapu található [`Microsoft.Quantum.Intrinsic`](xref:microsoft.quantum.intrinsic) , és ezek nem kivételek. 
 
-Egy Q# műveleten belül a callables meghívására szolgáló utasítások sorrendben lesznek végrehajtva.
+Egy Q# műveleten belül a callables meghívására szolgáló utasítások természetesen szekvenciális sorrendben lesznek futtatva.
 Ezért az elsőként alkalmazandó kapu a [`H`](xref:microsoft.quantum.intrinsic.h) (Hadamard) az első qubit:
 
 <br/>
@@ -134,7 +134,7 @@ Egy `R1(θ, <qubit>)` általános művelet változatlanul hagyja a qubit $ \ket 
 
 #### <a name="controlled-operations"></a>Vezérelt műveletek
 
-Q# lehetővé teszi a művelet végrehajtásának feltételét egy vagy több vezérlő qubits.
+Q# lehetővé teszi a művelet futtatásának feltételét egy vagy több vezérlő qubits.
 Általánosságban elmondható, hogy a hívás a következővel van ellátva `Controlled` , és a Műveleti argumentumok a következőképpen változnak:
 
  `Op(<normal args>)` $ \to $ `Controlled Op([<control qubits>], (<normal args>))` .
@@ -244,7 +244,7 @@ namespace NamespaceQFT {
 
 A Q# fájl és a művelet befejezése után a Quantum program készen áll a hívásra és a szimulált állapotra.
 
-## <a name="execute-the-program"></a>A program futtatása
+## <a name="run-the-program"></a>A program futtatása
 
 Miután definiálta a Q# műveletet egy `.qs` fájlban, most meg kell hívnia ezt a műveletet, és figyelnie kell a visszaadott klasszikus adattípusokat.
 Egyelőre nem ad vissza semmit (ne felejtse el, hogy a fent megadott művelet visszaadja `Unit` a műveletet), de ha később módosítjuk a Q# műveletet a mérési eredmények () egy tömbje visszaadására `Result[]` , ezt a megoldást fogjuk kezelni.
@@ -269,7 +269,7 @@ A program futtatásához nyissa meg a terminált a projekt mappájában, és ír
 dotnet run
 ```
 
-Végrehajtáskor a `Message` - `DumpMachine` konzolon az alábbi és kimeneteket kell látnia.
+A befejezést követően a és a `Message` `DumpMachine` kimenetek a konzolon láthatók.
 
 
 #### <a name="python"></a>[Python](#tab/tabid-python)
@@ -314,9 +314,9 @@ A C#-gazdagép négy részből áll:
     Ebben a példában nincs ilyen.
 3. A kvantumalgoritmus futtatása. 
     Minden Q# művelet létrehoz egy azonos nevű C#-osztályt. 
-    Ez az osztály olyan `Run` metódussal rendelkezik, amely **aszinkron módon** hajtja végre a műveletet.
-    A végrehajtás azért aszinkron módú, mert a tényleges hardveren végzett végrehajtás aszinkron módon fog történni. 
-    Mivel a `Run` metódus aszinkron módon van meghívva, a `Wait()` metódust hívjuk. Ez a művelet addig blokkolja a végrehajtást, amíg a feladat befejeződik, és szinkron módon visszaadja az eredményt. 
+    Ez az osztály olyan `Run` metódust tartalmaz, amely **aszinkron módon**futtatja a műveletet.
+    A Futtatás aszinkron, mert a tényleges hardveren való futtatása aszinkron módon történik. 
+    Mivel a `Run` metódus aszinkron módon van meghívva, a `Wait()` metódust hívjuk. ez letiltja a futtatást, amíg a feladat be nem fejeződik, és szinkron módon visszaadja az eredményt. 
 4. Dolgozza fel a művelet visszaadott eredményét.
     Egyelőre a művelet nem ad vissza semmit.
 
@@ -499,7 +499,7 @@ A végső műveleti kódnak a következőhöz hasonlóan kell kinéznie:
 }
 ```
 
-Ha a parancssorból dolgozik, a visszaadott tömb egyszerűen a végrehajtás végén közvetlenül a konzolra lesz kinyomtatva.
+Ha a parancssorból dolgozik, a visszaadott tömb egyszerűen a Futtatás végén közvetlenül a konzolon jelenik meg.
 Ellenkező esetben frissítse a gazdagép programját a visszaadott tömb feldolgozásához.
 
 #### <a name="command-prompt"></a>[Parancssor](#tab/tabid-cmdline)

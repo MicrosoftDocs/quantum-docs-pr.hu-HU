@@ -1,6 +1,6 @@
 ---
 title: Pauli-mérések leírása: megtudhatja, hogyan dolgozhat az egy-és több qubit Pauli-mérési műveletekkel.
-Szerző: QuantumWriter UID: Microsoft. Quantum. Concepts. Pauli MS. Author: nawiebe@microsoft.com MS. Date: 12/11/2017 MS. topic: No-Loc:
+Szerző: bradben UID: Microsoft. Quantum. Concepts. Pauli MS. Author: v-benbra MS. Date: 12/11/2017 MS. topic: No-Loc:
 - "Q#"
 - "$$v"
 - "$$"
@@ -143,8 +143,8 @@ Emellett a $ HS ^ \dagger $ a Quantum State Vector-re való alkalmazása, majd a
 operation MeasureY(qubit : Qubit) : Result {
     mutable result = Zero;
     within {
-        H(q);
         Adjoint S(q);
+        H(q);
     } apply {
         set result = M(q);
     }
@@ -223,14 +223,14 @@ Egy további Megjegyzés: Ha úgy gondolja, hogy $ a z z 1. és 1. számú mér�
 Ennek az az oka, hogy a $ z \otimes z-ig a eigenstate a $ kvantum-állapotot a $ $ $ fenti operátorok + 1 vagy-1 $ értékére méri.
 $ \otimes \mathbb { } $ $ \mathbb { Az 1. és 1 } \otimes . szám mérésével $ a Quantum State Vector először az $ 1. fele, \otimes \mathbb { } $ majd egy $ \mathbb { 1 } \otimes $ . fél szóközre van húzva. Mivel négy számítási alap vektor létezik, mindkét mérés végrehajtása csökkenti az állapotot egy negyedéves területre, és így csökkenti azt egyetlen számítási célú vektorban.
 
-## <a name="correlations-between-qubits"></a>Qubits közötti korrelációk
+## <a name="correlations-between-qubits"></a>Qubitek közötti korreláció
 A Pauli-mátrixok, például az x x vagy a z z. a tízesebb termékek mérésének egy másik módja, $ \otimes $ $ \otimes $ hogy ezek a méretek lehetővé teszik a két qubits közötti összefüggésekben tárolt információk megtekintését.
 $Az X mérésével \otimes \id $ megtekintheti az első qubit helyileg tárolt adatokat.
 Habár a kvantum-számítástechnika mindkét típusú mérése egyenlően értékes, a korábbi megvilágítja a kvantum-számítástechnika erejét.
 Ez azt mutatja, hogy a kvantum-számítástechnikaban gyakran a tanulni kívánt információ nem egyetlen qubit van tárolva, hanem nem helyileg, hanem az összes qubits, és ezért csak egy közös mérésen (például z z) keresztül történik $ \otimes $ .
 
 A hibajavítás során például gyakran szeretnénk megismerni, hogy milyen hibák történtek, miközben a rendszer nem a védelemmel ellátott állapotról tanul.
-A [bit-flip code minta](https://github.com/microsoft/Quantum/tree/master/samples/error-correction/bit-flip-code) példa arra, hogyan végezhető el a mérések használata, például z z és z z $ \otimes \otimes \id $ $ \id \otimes \otimes $ . < --TODO: változtassa meg a minta böngészőre mutató hivatkozást, amint a bit-flip code minta be van kapcsolva. -->
+A [bit-flip code minta](https://github.com/microsoft/Quantum/tree/main/samples/error-correction/bit-flip-code) példa arra, hogyan végezhető el a mérések használata, például z z és z z $ \otimes \otimes \id $ $ \id \otimes \otimes $ . < --TODO: változtassa meg a minta böngészőre mutató hivatkozást, amint a bit-flip code minta be van kapcsolva. -->
 
 Az önkényes Pauli-operátorok, például az $ X \otimes Y \otimes Z \otimes \boldone $ is mérhetők.
 A Pauli-operátorok összes ilyen tenser-terméke csak két eigenvalues $ \pm 1 $ , és mindkét eigenspaces a teljes vektoros terület felét képezi.

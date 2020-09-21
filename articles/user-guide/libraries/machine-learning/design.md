@@ -9,12 +9,12 @@ uid: microsoft.quantum.libraries.machine-learning.design
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 60e694e9f7c2f01a6679ef960f5a7774c8bd6a62
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: c87a84654cda04f81115a83684f0e125d23a77bc
+ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868940"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90759221"
 ---
 # <a name="design-your-own-classifier"></a>Saját osztályozó tervezése
 
@@ -30,7 +30,7 @@ A klasszikus mély tanuláshoz hasonlóan nincs általános szabály egy adott a
 
 Az osztályozó kiépítéséhez a parametrized-vezérelt rotációkat fogjuk összefűzni az áramköri modellben. Ehhez a [`ControlledRotation`](xref:microsoft.quantum.machinelearning.controlledrotation) Quantum Machine learning könyvtárban definiált típust használhatjuk. Ez a típus négy argumentumot fogad el: a cél qubit indexét, a vezérlőelem qubits indexét, a forgatás tengelyét, valamint a társított paraméter indexét a modellt meghatározó paraméterek tömbben.
 
-Lássunk egy példát a besorolásra. A [Half-Moons mintában](https://github.com/microsoft/Quantum/tree/master/samples/machine-learning/half-moons)a következő, a fájlban definiált osztályozó található `Training.qs` .
+Lássunk egy példát a besorolásra. A [Half-Moons mintában](https://github.com/microsoft/Quantum/tree/main/samples/machine-learning/half-moons)a következő, a fájlban definiált osztályozó található `Training.qs` .
 
 ```qsharp
     function ClassifierStructure() : ControlledRotation[] {
@@ -61,6 +61,6 @@ Tegyük fel, hogy egy 784-es funkciókkal rendelkező adatkészletet használunk
 
 Javasoljuk, hogy ismerkedjen meg a [Quantum Machine learning Library API-referenciával](xref:microsoft.quantum.machinelearning) , és fedezze fel az áramköri terv egyszerűsítéséhez rendelkezésre álló összes eszközt.
 
-## <a name="next-steps"></a>Következő lépések
+## <a name="next-steps"></a>További lépések
 
  Próbálkozzon különböző struktúrákkal a minták által megadott példákban. Megjelenik a modell teljesítményében bekövetkezett változás? A következő oktatóanyagban [`Load your own datasets`](xref:microsoft.quantum.libraries.machine-learning.load) megtudhatja, hogyan tölthet be adatkészleteket az osztályozók új architektúráinak kipróbálásához és megismeréséhez.

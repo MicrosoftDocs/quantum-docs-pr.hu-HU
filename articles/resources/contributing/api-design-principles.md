@@ -1,6 +1,6 @@
 ---
-title: Q#API-tervezési alapelvek
-description: Q#API-tervezési alapelvek
+title: Q# API-tervezési alapelvek
+description: Q# API-tervezési alapelvek
 author: cgranade
 ms.author: chgranad
 ms.date: 3/9/2020
@@ -9,14 +9,14 @@ uid: microsoft.quantum.contributing.api-design
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 580fcaea575ff544ed2c5f31eba7e963bea4534b
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 8714d3290e4099f901dab20a9ee9334699c4ad81
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87866893"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834908"
 ---
-# <a name="no-locq-api-design-principles"></a>Q#API-tervezési alapelvek
+# <a name="no-locq-api-design-principles"></a>Q# API-tervezési alapelvek
 
 ## <a name="introduction"></a>Bevezetés
 
@@ -44,7 +44,7 @@ Ez a cikk felsorolja ezeket az alapelveket, és példákat mutat be arra, hogyan
     Másképpen fogalmazva, ne vezessen be nyilvános API-kat abban az esetben, ha azok hasznosak, de győződjön meg arról, hogy az API-k mindegyik része *konkrét* példát mutat be, amelyben hasznos lehet.
 
   *Példák:*
-  - @"microsoft.quantum.canon.applytoeachca"felhasználható úgy, `ApplyToEachCA(H, _)` hogy a regisztereket egységes, a számos kvantum-algoritmusban közös feladatként készítse elő. Ugyanezt a műveletet számos más feladathoz is felhasználhatja előkészítési, numerikus és Oracle-alapú algoritmusokban.
+  - @"microsoft.quantum.canon.applytoeachca" felhasználható úgy, `ApplyToEachCA(H, _)` hogy a regisztereket egységes, a számos kvantum-algoritmusban közös feladatként készítse elő. Ugyanezt a műveletet számos más feladathoz is felhasználhatja előkészítési, numerikus és Oracle-alapú algoritmusokban.
 
 - ✅A **brainstorming és** a workshop új API-ját úgy tervezze meg, hogy azok intuitívek legyenek, és megfeleljenek a javasolt használati eseteknek.
 
@@ -65,11 +65,11 @@ Ez a cikk felsorolja ezeket az alapelveket, és példákat mutat be arra, hogyan
 - ✅**Olyan "** alátét" műveleteket és függvényeket adjon meg, amelyek lehetővé teszik, hogy a meglévő felhasználói kód megfelelően működjön az elavulás során.
 
   *Példák:*
-  - Egy nevű művelet átnevezése során `EstimateExpectation` `EstimateAverage` egy új műveletet kell meghívnia, `EstimateExpectation` amely új néven hívja meg az eredeti műveletet, hogy a meglévő kód továbbra is megfelelően működjön.
+  - Egy nevű művelet átnevezése során `EstimateExpectation`   `EstimateAverage` egy új műveletet kell meghívnia,   `EstimateExpectation` amely új néven hívja meg az eredeti műveletet, hogy a meglévő kód továbbra is megfelelően működjön.
 
 - ✅**Használja az** @"microsoft.quantum.core.deprecated" attribútumot az elavultak a felhasználóval való kommunikációhoz.
 
-- ✅Egy művelet vagy függvény átnevezése **esetén adja meg** az új nevet karakterlánc-bemenetként `@Deprecated` .
+- ✅ Egy művelet vagy függvény átnevezése **esetén adja meg** az új nevet karakterlánc-bemenetként `@Deprecated` .
 
 - ⛔️ **ne** távolítsa el a meglévő függvényeket vagy műveleteket, ha az előzetes verziónál legalább hat hónapig elavult időszak van, vagy legalább két év a támogatott kiadásokhoz.
 
@@ -91,13 +91,13 @@ Ez a cikk felsorolja ezeket az alapelveket, és példákat mutat be arra, hogyan
 
   *Példák:*
   - Egy olyan alrutin, amely a lebegőpontos bemenetének négyzetes beírását is lehetővé teszi, determinisztikus módon, így nem műveletként kell a felhasználó számára elérhetőnek lennie `Squared : Double -> Double` `Square : Double => Double` . Ez lehetővé teszi, hogy a alrutin több helyen legyen meghívva (pl.: más funkciókon belül), és hasznos optimalizálási információkat biztosít a fordítónak, amely hatással lehet a teljesítményre és az optimalizálásokra.
-  - `ForEach<'TInput, 'TOutput>('TInput => 'TOutput, 'TInput[]) => 'TOutput[]`és `Mapped<'TInput, 'TOutput>('TInput -> 'TOutput, 'TInput[]) -> 'TOutput[]` különbözik a megkötések tekintetében nyújtott garanciákkal; mindkettő különböző helyzetekben hasznos.
-  - A Quantum Operations alkalmazást átalakító API-rutinok gyakran determinisztikus módon hajthatók végre, így olyan függvényként is elérhetők, mint a `CControlled<'T>(op : 'T => Unit) => ((Bool, 'T) => Unit)` .
+  - `ForEach<'TInput, 'TOutput>('TInput => 'TOutput, 'TInput[]) => 'TOutput[]` és `Mapped<'TInput, 'TOutput>('TInput -> 'TOutput, 'TInput[]) -> 'TOutput[]` különbözik a megkötések tekintetében nyújtott garanciákkal; mindkettő különböző helyzetekben hasznos.
+  - A Quantum Operations alkalmazást átalakító API-rutinok gyakran determinisztikus módon hajthatók végre, így olyan függvényként is elérhetők, mint a   `CControlled<'T>(op : 'T => Unit) => ((Bool, 'T) => Unit)` .
 
 - ✅**DO** Az egyes függvényekhez és műveletekhez az adott típus paramétereit igény szerint adja meg, és használja a bemeneti típust.
 
   *Példák:*
-  - `ApplyToEach`a típusa `<'T>(('T => Unit), 'T[]) => Unit` nem a leggyakrabban használt alkalmazás típusa, hanem az adott típus `((Qubit => Unit), Qubit[]) => Unit` .
+  - `ApplyToEach` a típusa `<'T>(('T => Unit), 'T[]) => Unit` nem a leggyakrabban használt alkalmazás típusa, hanem az adott típus `((Qubit => Unit), Qubit[]) => Unit` .
 
 > [!TIP]
 > Fontos, hogy előre jelezze a jövőbeli igényeket, de fontos, hogy konkrét problémák megoldására is szükség van a felhasználók számára.
@@ -121,7 +121,7 @@ Ez a cikk felsorolja ezeket az alapelveket, és példákat mutat be arra, hogyan
 - ✅A bemeneti rekordok **megrendelje** az elemeket úgy, hogy a leggyakrabban alkalmazott bemenetek először (pl.:, hogy a részleges alkalmazás a curry-hez hasonlóan működik).
 
   *Példák:*
-  - Egy `ApplyRotation` lebegőpontos számot és egy qubit tartalmazó műveletet gyakran csak részben lehet a lebegőpontos bemenettel együtt alkalmazni, hogy először a típus bemenetét elvárt műveletekkel használják `Qubit => Unit` . Így a`operation ApplyRotation(angle : Double, target : Qubit) : Unit is Adj + Ctl`
+  - Egy `ApplyRotation` lebegőpontos számot és egy qubit tartalmazó műveletet gyakran csak részben lehet a lebegőpontos bemenettel együtt alkalmazni, hogy először a típus bemenetét elvárt műveletekkel használják `Qubit => Unit` . Így a `operation ApplyRotation(angle : Double, target : Qubit) : Unit is Adj + Ctl`
       a leghatékonyabban együttműködik a részleges alkalmazásokkal.
   - Ez az útmutató általában azt jelenti, hogy az összes klasszikus adatot a bemeneti rekordok összes qubits elé helyezi, de jó ítéletet használ, és megvizsgálja, hogyan hívják meg az API-t a gyakorlatban.
 
@@ -132,7 +132,7 @@ Ez a cikk felsorolja ezeket az alapelveket, és példákat mutat be arra, hogyan
 - ✅Az új, felhasználó által definiált típusok **bevezetésével** hasznos rövidítéseket biztosíthat a hosszú és/vagy bonyolult típusok számára.
 
   *Példák:*
-  - Azokban az esetekben, amikor egy három qubit tömb bemenettel rendelkező Művelettípus általában bemenetként van megadva vagy kimenetként van visszaadva, egy UDT, például`newtype TimeDependentBlockEncoding = ((Qubit[], Qubit[], Qubit[]) => Unit is Adj + Ctl)`
+  - Azokban az esetekben, amikor egy három qubit tömb bemenettel rendelkező Művelettípus általában bemenetként van megadva vagy kimenetként van visszaadva, egy UDT, például `newtype TimeDependentBlockEncoding = ((Qubit[], Qubit[], Qubit[]) => Unit is Adj + Ctl)`
       hasznos rövidítést tud nyújtani.
 
 - ✅Az új, felhasználó által definiált **típusok bevezetése azt** jelzi, hogy egy adott alaptípust csak nagyon konkrét értelemben kell használni.
@@ -143,12 +143,12 @@ Ez a cikk felsorolja ezeket az alapelveket, és példákat mutat be arra, hogyan
 - ✅Új, felhasználó által definiált típusokat **vezessen** be olyan névvel ellátott elemekkel, amelyek lehetővé teszik a későbbi bővíthetőséget (például: egy olyan eredmény-struktúra, amely további megnevezett elemeket tartalmazhat a jövőben).
 
   *Példák:*
-  - Ha egy művelet `TrainModel` nagy számú konfigurációs beállítást tesz elérhetővé, ezeket a beállításokat új UDT teszik közzé, `TrainingOptions` és egy új függvényt biztosítanak, amely `DefaultTrainingOptions : Unit -> TrainingOptions` lehetővé teszi a felhasználók számára, hogy a TrainingOptions UDT értékeiben felülbírálják a meghatározott megnevezett elemeket, miközben továbbra is lehetővé teszik a könyvtár-fejlesztők számára, hogy szükség szerint
+  - Ha egy művelet `TrainModel` nagy számú konfigurációs beállítást tesz elérhetővé, ezeket a beállításokat új UDT teszik közzé,   `TrainingOptions` és egy új függvényt biztosítanak, amely   `DefaultTrainingOptions : Unit -> TrainingOptions` lehetővé teszi a felhasználók számára, hogy a TrainingOptions UDT értékeiben felülbírálják a meghatározott megnevezett elemeket, miközben továbbra is lehetővé teszik a könyvtár-fejlesztők számára, hogy szükség szerint
 
 - ✅Megnevezett **elemek deklarálása** új, felhasználó által definiált típusokhoz, amelyekkel a felhasználóknak ismerniük kell a megfelelő rekord dekonstrukcióját.
 
   *Példák:*
-  - Ha egy összetett számot képvisel a Polar dekompozícióban, inkább a következőhöz: `newtype ComplexPolar = (Magnitude: Double, Argument: Double)` `newtype ComplexPolar = (Double, Double)` .
+  - Ha egy összetett számot képvisel a Polar dekompozícióban, inkább a következőhöz:   `newtype ComplexPolar = (Magnitude: Double, Argument: Double)`   `newtype ComplexPolar = (Double, Double)` .
 
 **Legfontosabb alapelv:** a felhasználó által definiált típusok használata a kognitív terhelés csökkentése és a felhasználónak nem kell további fogalmakat és nómenklatúrát megtanulnia.
 
@@ -167,7 +167,7 @@ Ez a cikk felsorolja ezeket az alapelveket, és példákat mutat be arra, hogyan
 - ⛔️ csak akkor vezessen be hozzáférési feladatokat, **Ha nem feltétlenül** szükséges;   Ebben az esetben az elnevezett elemek erősen előnyben részesítettek.
 
   *Példák:*
-  - A UDT bevezetéséhez `newtype Complex = (Double, Double)` inkább a definíciók módosítását kell módosítania a `newtype Complex = (Real : Double, Imag : Double)` függvények és a funkciók bevezetéséhez `GetReal : Complex -> Double` `GetImag : Complex -> Double` .
+  - A UDT bevezetéséhez `newtype Complex = (Double, Double)` inkább a definíciók módosítását kell módosítania a   `newtype Complex = (Real : Double, Imag : Double)` függvények és a funkciók bevezetéséhez `GetReal : Complex -> Double`   `GetImag : Complex -> Double` .
 
 ## <a name="namespaces-and-organization"></a>Névterek és szervezet
 
@@ -176,29 +176,29 @@ Ez a cikk felsorolja ezeket az alapelveket, és példákat mutat be arra, hogyan
 - ✅**Nevezze el** a névtereket `Publisher.Product.DomainArea` .
 
   *Példák:*
-  - A Microsoft a Quantum Development Kit Quantum szimulációs funkciójának részeként közzétett functions, Operations és UDT a `Microsoft.Quantum.Simulation` névtérbe kerül.
-  - `Microsoft.Quantum.Math`a Microsoft által közzétett, a matematikai tartomány területéhez tartozó Quantum Development-készlet részeként közzétett névteret jelöli.
+  - A Microsoft a Quantum Development Kit Quantum szimulációs funkciójának részeként közzétett functions, Operations és UDT a   `Microsoft.Quantum.Simulation` névtérbe kerül.
+  - `Microsoft.Quantum.Math` a Microsoft által közzétett, a matematikai tartomány területéhez tartozó Quantum Development-készlet részeként közzétett névteret jelöli.
 
 - ✅Az adott funkciókhoz használt műveletekkel, függvényekkel és felhasználó által definiált típusokkal olyan névteret **használhat,** amely leírja ezt a funkciót, még akkor is, ha az adott funkciót a különböző problémás tartományok között használják.
 
   *Példák:*
-  - A Microsoft által a Quantum Development Kit részeként közzétett állapot-előkészítési API-k bekerülnek a szolgáltatásba `Microsoft.Quantum.Preparation` .
-  - A Microsoft által a Quantum Development Kit részeként közzétett Quantum szimulációs API-k bekerülnek a szolgáltatásba `Microsoft.Quantum.Simulation` .
+  - A Microsoft által a Quantum Development Kit részeként közzétett állapot-előkészítési API-k bekerülnek a szolgáltatásba   `Microsoft.Quantum.Preparation` .
+  - A Microsoft által a Quantum Development Kit részeként közzétett Quantum szimulációs API-k bekerülnek a szolgáltatásba   `Microsoft.Quantum.Simulation` .
 
 - ✅**DO** A műveleteket, a függvényeket és a felhasználó által definiált típusokat csak meghatározott tartományokon belül, a segédprogram tartományát jelző névterekben használja. Ha szükséges, használjon alnévtereket az egyes tartományalapú névtereken belüli célzott feladatok jelzéséhez.
 
   *Példák:*
-  - A Microsoft által közzétett Quantum Machine learning-függvénytár nagyrészt a @"microsoft.quantum.machinelearning" névtérbe kerül, de a névtér a példában szereplő adatkészleteket is megadja @"microsoft.quantum.machinelearning.datasets" .
+  - A Microsoft által közzétett Quantum Machine learning-függvénytár nagyrészt a @"microsoft.quantum.machinelearning" névtérbe kerül, de a névtér a példában szereplő adatkészleteket is megadja @"microsoft.quantum.machinelearning.datasets"   .
   - A Microsoft által a Quantum Development Kit részeként közzétett Quantum kémia API-kat be kell helyezni `Microsoft.Quantum.Chemistry` . A Jordan--Wigner-bomlás megvalósítására vonatkozó funkciók a következő helyen helyezhetők el `Microsoft.Quantum.Chemistry.JordanWigner` , így a kvantum-kémia tartomány elsődleges felülete nem vonatkozik a megvalósításokra.
 
 **Kulcs elve:** A névterek és a hozzáférés-módosítók együttes használata szándékos lehet a felhasználók számára elérhető API-felülettel, valamint az API-k megvalósításával és tesztelésével kapcsolatos belső adatok elrejtésével.
 
-- ✅Ha ésszerű, minden olyan funkciót és műveletet helyezzen el, amely ahhoz **szükséges, hogy** az API-t ugyanahhoz a névtérhez adja, mint a megvalósított API-t, de a "Private" vagy a "belső" kulcsszavakkal van megjelölve, hogy azok nem részei a könyvtár nyilvános API-felületének. Az aláhúzás () karakterrel kezdődő nevet használva `_` vizuálisan megkülönböztetheti a privát és belső műveleteket és funkciókat a nyilvános callables.
+- ✅ Ha ésszerű, minden olyan funkciót és műveletet helyezzen el, amely ahhoz **szükséges, hogy** az API-t ugyanahhoz a névtérhez adja, mint a megvalósított API-t, de a "Private" vagy a "belső" kulcsszavakkal van megjelölve, hogy azok nem részei a könyvtár nyilvános API-felületének. Az aláhúzás () karakterrel kezdődő nevet használva `_` vizuálisan megkülönböztetheti a privát és belső műveleteket és funkciókat a nyilvános callables.
 
   *Példák:*
   - A művelet neve `_Features` olyan függvényt jelöl, amely egy adott névtérhez és szerelvényhez tartozik, és a kulcsszónak kell kísérnie `internal` .
 
-- ✅Abban a ritka esetben, ha egy adott névtérhez tartozó API-k megvalósításához szükség van egy kiterjedt privát funkcióra vagy műveletre, **akkor** azokat egy új névtérbe helyezi, amely megfelel a megvalósított névtérnek, és a-ben végződik `.Private` .
+- ✅ Abban a ritka esetben, ha egy adott névtérhez tartozó API-k megvalósításához szükség van egy kiterjedt privát funkcióra vagy műveletre, **akkor** azokat egy új névtérbe helyezi, amely megfelel a megvalósított névtérnek, és a-ben végződik `.Private` .
 
 - ✅Az összes egység tesztet olyan névterekben **Helyezze el** , amelyek megfelelnek a névtérnek a tesztelés és a Befejezés szakaszban `.Tests` .
 
@@ -224,7 +224,7 @@ Ez a cikk felsorolja ezeket az alapelveket, és példákat mutat be arra, hogyan
 
   - **Igék**
 
-    - **Érvényesítés**: Győződjön meg arról, hogy a célszámítógép és a qubits állapotáról feltételezi a feltételezést, valószínűleg a nem fizikai erőforrások használatával. Az ezt a műveletet használó műveleteknek mindig biztonságosan eltávolíthatók, anélkül, hogy ez befolyásolná a kódtárak és a végrehajtható programok működését. Vegye figyelembe, hogy a tényekkel ellentétben az állítások általában külső állapottól függenek, például egy qubit-regisztráció, a végrehajtási környezet vagy így tovább. Mivel a külső állapottól való függőség egyfajta mellékhatás, a kijelentéseket függvények helyett műveleteknek kell kitenni.
+    - **Érvényesítés**: Győződjön meg arról, hogy a célszámítógép és a qubits állapotáról feltételezi a feltételezést, valószínűleg a nem fizikai erőforrások használatával. Az ezt a műveletet használó műveleteknek mindig biztonságosan eltávolíthatók, anélkül, hogy ez befolyásolná a kódtárak és a végrehajtható programok működését. Fontos megjegyezni, hogy a tényekkel ellentétben a kijelentések általában külső állapottól függenek, például egy qubit-regiszter, a futtatási környezet vagy így tovább. Mivel a külső állapottól való függőség egyfajta mellékhatás, a kijelentéseket függvények helyett műveleteknek kell kitenni.
 
     - **Becslés**: egy vagy több valószínűleg ismétlődő mérés használata a mérési eredményekből származó klasszikus mennyiség megbecslése.
 
@@ -268,8 +268,8 @@ Ez a cikk felsorolja ezeket az alapelveket, és példákat mutat be arra, hogyan
     - **A következőképpen:** Azt jelzi, hogy a függvény bemenete és kimenete ugyanazokat az adatokat képviseli, de a kimenet az eredeti ábrázolás helyett *X* - **ként** jelöli meg az adatokat. Ez különösen gyakori a Type Conversion functions esetében.
 
       *Példák:*
-      - `IntAsDouble(2)`azt jelzi, hogy mind a bemenet ( `2` ), mind a kimenet ( `2.0` ) ugyanazt az információt jeleníti meg, de különböző Q \# adattípusokat használ.
+      - `IntAsDouble(2)` azt jelzi, hogy mind a bemenet ( `2` ), mind a kimenet ( `2.0` ) ugyanazt az információt jeleníti meg, de különböző Q \# adattípusokat használ.
 
-    - **Forrás:** A konzisztencia biztosítása érdekében ez az előírás **nem** használható a Type Conversion functions vagy bármely más, a megfelelőnek **minősülő** eset jelzésére.
+    - **Forrás:** A konzisztencia biztosítása érdekében ez az előírás   **nem** használható a Type Conversion functions vagy bármely más, a megfelelőnek **minősülő** eset jelzésére.
 
     - ⛔️ **a** következőhöz: ezt az előfeltételt **nem** szabad használni, mert így elkerülhető, hogy a használatuk ne legyen több programozási nyelvben.

@@ -1,5 +1,5 @@
 ---
-title: Műveletek és függvények a-benQ#
+title: Műveletek és függvények a-ben Q#
 description: Műveletek és függvények definiálása és hívása, valamint az ellenőrzött és adjoint műveletekre vonatkozó specializációk.
 author: gillenhaalb
 ms.author: a-gibec@microsoft.com
@@ -9,14 +9,14 @@ uid: microsoft.quantum.guide.operationsfunctions
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 76437c83df894fa86409e680f961d97e267c6869
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: c2ce999ea2a0fe7204f402fedb4cd3a3c15bd44b
+ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87867879"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90759424"
 ---
-# <a name="operations-and-functions-in-no-locq"></a>Műveletek és függvények a-benQ#
+# <a name="operations-and-functions-in-no-locq"></a>Műveletek és függvények a-ben Q#
 
 ## <a name="defining-new-operations"></a>Új műveletek definiálása
 
@@ -43,12 +43,12 @@ operation BitFlip(target : Qubit) : Unit {
 A kulcsszó `operation` megkezdi a művelet definícióját, amelyet a név követ, itt: `BitFlip` .
 A következő lépés a bemenet típusa ( `Qubit` ), valamint egy név, amely az `target` új műveleten belüli bemenetre hivatkozik.
 Végül `Unit` azt is meghatározza, hogy a művelet kimenete üres.
-`Unit`a használata hasonlóan a `void` C#-ban és más, felszólító nyelvekhez, és az `unit` F # és más funkcionális nyelvekkel egyenértékű.
+`Unit` a használata hasonlóan a `void` C#-ban és más, felszólító nyelvekhez, és az `unit` F # és más funkcionális nyelvekkel egyenértékű.
 
 A műveletek több érdekes típust is visszaadhatnak, mint a `Unit` .
 A <xref:microsoft.quantum.intrinsic.m> művelet például egy típusú kimenetet ad vissza `Result` , amely a mérés végrehajtását jelöli.  Átadhatja egy műveletből egy másik műveletnek, vagy felhasználhatja azt a `let` kulcsszóval egy új változó definiálásához.
 
-Ez a megközelítés lehetővé teszi a klasszikus számítások használatát, amelyek alacsony szinten működnek a kvantum-műveletekkel, például a [sűrűbb kódolásban](https://github.com/microsoft/QuantumKatas/tree/master/SuperdenseCoding):
+Ez a megközelítés lehetővé teszi a klasszikus számítások használatát, amelyek alacsony szinten működnek a kvantum-műveletekkel, például a [sűrűbb kódolásban](https://github.com/microsoft/QuantumKatas/tree/main/SuperdenseCoding):
 
 ```qsharp
 operation DecodeSuperdense(here : Qubit, there : Qubit) : (Result, Result) {
@@ -100,14 +100,14 @@ Használjon egy olyan műveletet, amely egy olyan műveletre alkalmazza, amely e
 Ha például a műveletet a `Adjoint` művelettel alkalmazza, az `Y` új műveletet adja vissza `Adjoint Y` . Az új műveletet más műveletekhez hasonlóan hívhatja meg.
 Ahhoz, hogy egy művelet támogassa a vagy a nem működő példányok alkalmazását `Adjoint` `Controlled` , szükségszerűen a visszatérési típusának kell lennie `Unit` . 
 
-#### <a name="adjoint-functor"></a>`Adjoint`nem aktív
+#### <a name="adjoint-functor"></a>`Adjoint` nem aktív
 
 Ennek megfelelően a `Adjoint Y(q1)` `Adjoint` rendszer a műveletre alkalmazza az `Y` új művelet létrehozását, és az új műveletet a következőre alkalmazza: `q1` .
 Az új művelet ugyanazzal az aláírással és típussal rendelkezik, mint az alapművelet `Y` .
 Ebben az esetben az új művelet is támogatja `Adjoint` , és csak akkor támogatja, `Controlled` Ha az alapművelet nem volt.
 A kihasználó a `Adjoint` saját inverze, azaz `Adjoint Adjoint Op` mindig ugyanaz, mint `Op` .
 
-#### <a name="controlled-functor"></a>`Controlled`nem aktív
+#### <a name="controlled-functor"></a>`Controlled` nem aktív
 
 Hasonlóképpen `Controlled X(controls, target)` alkalmazza a `Controlled` műveletet a `X` műveletre egy új művelet létrehozásához, és az új műveletet a és a rendszerre alkalmazza `controls` `target` .
 
@@ -123,11 +123,11 @@ Az új művelet támogatja a- `Controlled` t, és csak akkor támogatja, `Adjoin
 
 Ha az eredeti művelet csak egyetlen argumentumot vett igénybe, akkor az önálló [rekordos egyenértékűség](xref:microsoft.quantum.guide.types) a játékba kerül.
 Például a a `Controlled X` művelet ellenőrzött verziója `X` . 
-`X`típusa van `(Qubit => Unit is Adj + Ctl)` , ezért `Controlled X` a Type `((Qubit[], (Qubit)) => Unit is Adj + Ctl)` ; egypéldányos egyenértékűség miatt ez megegyezik a következővel: `((Qubit[], Qubit) => Unit is Adj + Ctl)` .
+`X` típusa van `(Qubit => Unit is Adj + Ctl)` , ezért `Controlled X` a Type `((Qubit[], (Qubit)) => Unit is Adj + Ctl)` ; egypéldányos egyenértékűség miatt ez megegyezik a következővel: `((Qubit[], Qubit) => Unit is Adj + Ctl)` .
 
 Ha az alapművelet több argumentumot is vett igénybe, ne felejtse el zárójelek közé helyezni a művelet ellenőrzött verziójának megfelelő argumentumait, hogy azok egy rekordba legyenek konvertálva.
 Például a a `Controlled Rz` művelet ellenőrzött verziója `Rz` . 
-`Rz`típusa van `((Double, Qubit) => Unit is Adj + Ctl)` , ezért `Controlled Rz` típusa van `((Qubit[], (Double, Qubit)) => Unit is Adj + Ctl)` .
+`Rz` típusa van `((Double, Qubit) => Unit is Adj + Ctl)` , ezért `Controlled Rz` típusa van `((Qubit[], (Double, Qubit)) => Unit is Adj + Ctl)` .
 Tehát `Controlled Rz(controls, (0.1, target))` érvényes hívás lenne `Controlled Rz` (jegyezze fel a zárójeleket `0.1, target` ).
 
 Egy másik példaként `CNOT(control, target)` a is megvalósítható `Controlled X([control], target)` . Ha egy célt két vezérlő qubits (CCNOT) vezérel, használjon egy `Controlled X([control1, control2], target)` utasítást.
@@ -192,7 +192,7 @@ A következőkben a lehetőségek teljes köre látható, néhány példa a expl
 
 #### <a name="explicit-specialization-declarations"></a>Explicit specializációs deklarációk
 
-Q#a műveletek a következő explicit specializációs deklarációkat tartalmazhatják:
+Q# a műveletek a következő explicit specializációs deklarációkat tartalmazhatják:
 
 - A `body` specializáció meghatározza a művelet végrehajtását, és nem alkalmazta a műveletet.
 - A `adjoint` specializáció meghatározza a művelet megvalósítását az `Adjoint` alkalmazottal.
@@ -331,7 +331,7 @@ Használjon olyan műveletet, amelyben további, a rendszer által támogatott, 
 
 Q#a *covariant* meghívásos visszatérési típusok esetében: egy típust visszaadó meghívót, amely `'A` azonos típusú bemeneti típussal és az azzal kompatibilis eredményhalmaz típussal kompatibilis `'A` .
 
-Q#a *contravariant típusparamétert* a bemeneti típusokra vonatkozik: egy olyan típusú hívás, amely bemenetként fogadja az adott típust, és kompatibilis a alkalmazással `'A` kompatibilis bemeneti típussal `'A` .
+Q# a *contravariant típusparamétert* a bemeneti típusokra vonatkozik: egy olyan típusú hívás, amely bemenetként fogadja az adott típust, és kompatibilis a alkalmazással `'A` kompatibilis bemeneti típussal `'A` .
 
 Ez a következő definíciók miatt történik.
 
@@ -360,7 +360,7 @@ képes vagy
 - Egy típus értékének visszaadása a következőből: `(Qubit[] => Unit is Adj + Ctl)` `ConjugateInvertWith` .
 
 > [!IMPORTANT]
-> Q#0,3 jelentős különbség mutatkozott a felhasználó által definiált típusok viselkedésében.
+> Q# 0,3 jelentős különbség mutatkozott a felhasználó által definiált típusok viselkedésében.
 
 A felhasználó által definiált típusokat az alapul szolgáló típus burkolt verziójaként, nem pedig altípusként kezeli a rendszer.
 Ez azt jelenti, hogy a felhasználó által definiált típus értéke nem használható, ha a mögöttes típus értéke a várt érték.
@@ -509,7 +509,7 @@ Ez egy kis mennyiségű ilyen funkció esetében is eltartható, mivel a több �
 A probléma nagy része azonban abból ered, hogy nem adta meg a fordítónak a különböző verzióinak felismeréséhez szükséges információkat `Map` .
 Gyakorlatilag azt szeretné, hogy a fordító a `Map` Q# függvények *típusaként* valamilyen matematikai függvényt kezelje Q# .
 
-Q#ezt a fogalmat úgy formalizes meg, hogy a functions és a Operations függvények *típus paraméterekkel*, valamint a szokásos rekordos paraméterekkel rendelkeznek.
+Q# ezt a fogalmat úgy formalizes meg, hogy a functions és a Operations függvények *típus paraméterekkel*, valamint a szokásos rekordos paraméterekkel rendelkeznek.
 Az előző példákban úgy gondolja, hogy `Map` `Int, Pauli` az első esetben, a második esetben pedig a type paramétert adja meg `Double, String` .
 A legtöbb esetben használja ezeket a típusú paramétereket, mintha a szokásos típusok lennének. Paraméterek típusú értékek használata tömbök és rekordok, a függvények és a műveletek hívásához, valamint a szokásos vagy változtatható változókhoz való hozzárendeléshez.
 
@@ -657,7 +657,7 @@ Elméletileg a klasszikus logika `SquareOperation` sokkal jobban érintett, de t
 
 ## <a name="recursion"></a>Rekurzió
 
-Q#a callables közvetlenül vagy közvetve rekurzívak.
+Q# a callables közvetlenül vagy közvetve rekurzívak.
 Vagyis egy művelet vagy függvény meghívhatja önmagát, vagy hívhat egy másik meghívót, amely közvetlenül vagy közvetett módon hívja meg a meghívásos műveletet.
 
 A rekurzió használatának két fontos megjegyzése van, azonban:
@@ -667,6 +667,6 @@ A rekurzió használatának két fontos megjegyzése van, azonban:
 - Ha a tényleges kvantum-eszközön fut, előfordulhat, hogy a rendelkezésre állási terület korlátozott, ezért a mélyebb rekurzió hibát okozhat.
   Különösen a Q# fordító és a futtatókörnyezet nem azonosítja és optimalizálja a farok rekurzióját.
 
-## <a name="next-steps"></a>Következő lépések
+## <a name="next-steps"></a>További lépések
 
 További tudnivalók a [változóinak](xref:microsoft.quantum.guide.variables) használatáról Q# .

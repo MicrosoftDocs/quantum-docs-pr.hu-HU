@@ -4,18 +4,18 @@ description: Microsoft Quantum Development Kit harmadik féltől származó szof
 services: service-name-with-dashes-AZURE-ONLY
 keywords: Ne adjon hozzá kulcsszavakat és ne szerkessze azokat a keresőoptimalizálást végző szakemberrel való egyeztetés nélkül.
 author: QuantumWriter
-ms.author: MSFT-alias-person-or-DL
+ms.author: v-benbra
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 1d76e9c8532dd7818941d182773a8f85a86becee
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 939dc681d6b9a89f02fd1f392b7fd84067d98e8f
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869749"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834125"
 ---
 # <a name="third-party-software-notices-and-information"></a>HARMADIK FÉLTŐL SZÁRMAZÓ SZOFTVEREKKEL KAPCSOLATOS MEGJEGYZÉSEK ÉS INFORMÁCIÓK
 
@@ -268,7 +268,7 @@ A SZOFTVERT "ADOTT ÁLLAPOTBAN" BIZTOSÍTJUK, BÁRMIFÉLE KIFEJEZETT VAGY VÉLEL
 
 Ha másként nincs megjelölve, a forrás-és bináris formátumú FParsec-függvénytár az egyszerűsített BSD-licenc alá kerül. Az egyszerűsített BSD-licenc (más néven "a 2. záradék BSD-licence") egy egyszerű, az OSI-kompatibilis licenc. 
 
-A FParsec a következő Unicode-karakterből származtatott adatokkal rendelkezik:. 8.0.0, Copyright (c) 1991 \ u20122015 Unicode, Inc., amely a következő feltételekkel terjeszthető:http://www.unicode.org/terms_of_use.html#Exhibit1 
+A FParsec a következő Unicode-karakterből származtatott adatokkal rendelkezik:. 8.0.0, Copyright (c) 1991 \ u20122015 Unicode, Inc., amely a következő feltételekkel terjeszthető: http://www.unicode.org/terms_of_use.html#Exhibit1 
 
 A doc mappában található dokumentáció a Creative Commons Attribution-NonCommercial 3,0 unportolt licenccel rendelkezik. Ez a Creative Commons Licence nem teszi lehetővé, hogy a dokumentációt kereskedelmi célokra ne használja engedéllyel. Ez azt jelenti, hogy például nem tudja eladni a dokumentációt könyv formájában a nyereségért, vagy egy webtartalom-farmon helyezheti el, hogy pénzt gyűjtsön a hirdetésekkel. Természetesen a dokumentációt a kereskedelmi kontextusban is használhatja (például egy kereskedelmi vállalat intranetén helyezheti el), feltéve, hogy nem próbál közvetlenül pénzt keresni a dokumentáció szövege alapján. 
 
@@ -284,6 +284,6 @@ Ezt a szoftvert a szerzői jog tulajdonosai, valamint az olyan kifejezett vagy v
 
 2,2 Creative Commons Attribution-NonCommercial 3,0 nem portolt licenc
 
-Összegzésehttps://creativecommons.org/licenses/by-nc/3.0/
+Összegzése https://creativecommons.org/licenses/by-nc/3.0/
 
-A teljes licenc szövege:https://creativecommons.org/licenses/by-nc/3.0/legalcode 
+A teljes licenc szövege: https://creativecommons.org/licenses/by-nc/3.0/legalcode 

@@ -2,19 +2,19 @@
 title: A felakadás megismerése Q#
 description: Megtudhatja, hogyan írhat Quantum programot a alkalmazásban Q# . Bell-állapotot jelző alkalmazás fejlesztése a Quantum Development Kit (QDK) használatával
 author: geduardo
-ms.author: v-edsanc@microsoft.com
+ms.author: v-edsanc
 ms.date: 05/29/2020
 ms.topic: tutorial
 uid: microsoft.quantum.write-program
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 3e95f142572e104fe1e133b109d197ed5bb01d9a
-ms.sourcegitcommit: af2e9691c1900ced7e09d6320255617c9939ed55
+ms.openlocfilehash: 6fd7494d341a83a1354d23a283d21a7ae535e49f
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90063240"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834023"
 ---
 # <a name="tutorial-explore-entanglement-with-q"></a>Oktatóanyag: Összefonódások megismerése Q\# nyelven
 
@@ -83,7 +83,7 @@ Célunk, hogy előkészítsünk két qubits egy konkrét kvantum-állapotban, am
 
 ### <a name="initialize-qubit-using-measurement"></a>Qubit inicializálása mérés használatával
 
-Az alábbi első kódban bemutatjuk, hogyan dolgozhat a qubits a alkalmazásban Q# .  Két műveletet fogunk bevezetni [`M`](xref:microsoft.quantum.intrinsic.m) , [`X`](xref:microsoft.quantum.intrinsic.x) amely átalakítja a qubit állapotát. Ebben a kódrészletben meghatározunk egy `SetQubitState` műveletet, amelynek egyik paramétere egy qubit, a másik pedig a `desired`, amely a qubit kívánt állapotát jelöli.  A `SetQubitState` művelet elvégez egy mérést a qubiten az `M` művelet használatával.  A-ben Q# a qubit-mérések mindig a vagy a értéket adja vissza `Zero` `One` .  Ha a mérés olyan értéket ad vissza, amely nem egyenlő a kívánt értékkel, a `SetQubitState` "megfordítja" a qubit, azaz végrehajt egy `X` műveletet, amely a qubit állapotát olyan új állapotra módosítja, amelyben a visszaadott mérés valószínűsége `Zero` és fordított állapotú `One` . Így mindig a `SetQubitState` kívánt állapotba helyezi a cél qubit.
+Az alábbi első kódban bemutatjuk, hogyan dolgozhat a qubits a alkalmazásban Q# .  Két műveletet fogunk bevezetni [`M`](xref:microsoft.quantum.intrinsic.m) , [`X`](xref:microsoft.quantum.intrinsic.x) amely átalakítja a qubit állapotát. Ebben a kódrészletben meghatározunk egy `SetQubitState` műveletet, amelynek egyik paramétere egy qubit, a másik pedig a `desired`, amely a qubit kívánt állapotát jelöli.  A `SetQubitState` művelet elvégez egy mérést a qubiten az `M` művelet használatával.  A-ben Q# a qubit-mérések mindig a vagy a értéket adja vissza `Zero` `One` .  Ha a mérés olyan értéket ad vissza, amely nem egyenlő a kívánt értékkel, a `SetQubitState` "megfordítja" a qubit, azaz egy `X` műveletet futtat, amely a qubit állapotot olyan új állapotba változtatja, amelyben a visszaadott mérés valószínűsége `Zero` és fordított állapota `One` történik. Így mindig a `SetQubitState` kívánt állapotba helyezi a cél qubit.
 
 Cserélje le a tartalmát a `Program.qs` következő kódra:
 
@@ -104,7 +104,7 @@ Cserélje le a tartalmát a `Program.qs` következő kódra:
 Most már meghívható ez a művelet, hogy egy qubitet egy klasszikus állapotba állítson, és az esetek 100%-ában kizárólag `Zero` vagy `One` eredményt adjon vissza.
 A `Zero` és az `One` állandók, amelyek a qubit mérésének két lehetséges eredményét jelölik.
 
-A `SetQubitState` művelet elvégzi a qubit mérését. Ha a qubit a kívánt állapotban van, a `SetQubitState` művelet békén hagyja. Ha nem, akkor pedig végrehajtja az `X` műveletet, amely a kívánt állapotba állítja a qubitet.
+A `SetQubitState` művelet elvégzi a qubit mérését. Ha a qubit a kívánt állapotban van, `SetQubitState` hagyja békén, ellenkező esetben a művelet futtatásával `X` módosítjuk a qubit állapotát a kívánt állapotra.
 
 #### <a name="about-no-locq-operations"></a>Tudnivalók a Q# műveletekről
 
@@ -300,7 +300,7 @@ Ez az úgynevezett **szuperpozíció**, és az első valódi betekintést nyújt
 ## <a name="prepare-entanglement"></a>Az összefonódás előkészítése
 
 Most nézzük meg, hogyan Q# fejezi ki a qubits-k összekeverhető módjait.
-Először is az első qubitet a kezdeti állapotba, majd a `H` művelettel szuperpozícióba kell állítanunk.  Ezután az első qubit mérése előtt egy új műveletet () használunk `CNOT` , amely a vezérlést nem jelenti.  Ha ezt a műveletet végrehajtjuk két qubiten, akkor a második qubit át lesz állítva, ha az első qubit `One` volt.  Ekkor a két qubit összefonódik.  Az első qubit statisztikái nem változnak (mérés esetén 50%-os eséllyel lesz `Zero` vagy `One`), de a második qubit mérésekor __mindig__ ugyanaz az eredmény, mint amit az elsőnél mértünk. A `CNOT` összekapcsolta a két qubitet, így bármi is történik az egyikkel, ugyanaz történik a másikkal is. Ha felcseréli a méréseket (a második qubitet mérve az első előtt), akkor is ugyanez történik. Az első mérés eredménye véletlenszerű lesz, a második pedig mindig ugyanaz, mint amit az elsőnél kaptunk.
+Először is az első qubitet a kezdeti állapotba, majd a `H` művelettel szuperpozícióba kell állítanunk.  Ezután az első qubit mérése előtt egy új műveletet () használunk `CNOT` , amely a *vezérlést nem*jelenti.  A művelet két qubits való futtatásának eredménye a második qubit tükrözése, ha az első qubit van `One` .  Ekkor a két qubit összefonódik.  Az első qubit statisztikái nem változnak (mérés esetén 50%-os eséllyel lesz `Zero` vagy `One`), de a második qubit mérésekor __mindig__ ugyanaz az eredmény, mint amit az elsőnél mértünk. A `CNOT` összekapcsolta a két qubitet, így bármi is történik az egyikkel, ugyanaz történik a másikkal is. Ha felcseréli a méréseket (a második qubitet mérve az első előtt), akkor is ugyanez történik. Az első mérés eredménye véletlenszerű lesz, a második pedig mindig ugyanaz, mint amit az elsőnél kaptunk.
 
 Első lépésként két qubits kell lefoglalni a következő helyett `TestBellState` :
 

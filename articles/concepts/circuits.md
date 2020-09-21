@@ -1,6 +1,6 @@
 ---
 title: kvantum-áramkörök leírása: megtudhatja, hogyan ábrázolhat egyszerű és összetett kvantum-műveleteket a kvantum-diagramok használatával.
-Szerző: QuantumWriter UID: Microsoft. Quantum. Concepts. áramkörök MS. Author: nawiebe@microsoft.com MS. Date: 12/11/2017 MS. topic: No-Loc:
+Szerző: QuantumWriter UID: Microsoft. Quantum. Concepts. áramkörök MS. Author: v-benbra MS. Date: 12/11/2017 MS. topic: No-Loc:
 - "Q#"
 - "$$v"
 - "$$"
@@ -156,7 +156,7 @@ Azon speciális esetekben, ahol a $ g = X $ és a $ g Z a = következő jelölé
 <A!--nem talál megoldást a középpontba... valószínűleg egy bővítmény szükséges:->
 ![Irányított kapuk speciális eseteinek áramköri diagramja](~/media/6.svg)
 
-Q#a lehetővé teszi egy művelet ellenőrzött verziójának automatikus előállítását, amely elmenti a programozótól, hogy ezeket a műveleteket manuálisan kell megadnia. Alább látható egy példa:
+Q# a lehetővé teszi egy művelet ellenőrzött verziójának automatikus előállítását, amely elmenti a programozótól, hogy ezeket a műveleteket manuálisan kell megadnia. Alább látható egy példa:
 
 ```qsharp
 operation PrepareSuperposition(qubit : Qubit) : Unit
@@ -175,7 +175,7 @@ Az ilyen alhálózatok például a következőkre hasonlítanak:
 <A!--nem talál megoldást a középpontba... valószínűleg egy bővítmény szükséges:->
 ![Mérési műveletet jelölő szimbólum](~/media/7.svg)
 
-Q#erre a célra implementálja a [mérték kezelőjét](xref:microsoft.quantum.intrinsic.measure) .
+Q# erre a célra implementálja a [mérték kezelőjét](xref:microsoft.quantum.intrinsic.measure) .
 További információt a [mérések című szakaszban](xref:microsoft.quantum.libraries.standard.prelude#measurements) talál.
 
 Hasonlóképpen, az aláramkör

@@ -2,19 +2,19 @@
 title: A Quantum Development Kit kibocsátási megjegyzései
 description: Ismerje meg a Microsoft Quantum Development Kit előzetes verziójának legújabb frissítéseit.
 author: bradben
-ms.author: bradben
-ms.date: 5/30/2020
+ms.author: v-benbra
+ms.date: 8/30/2020
 ms.topic: article
 uid: microsoft.quantum.relnotes
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 70d0c9b61e49d4ee6142edbe2767310403885f01
-ms.sourcegitcommit: 11bd357baeb6ab53a402882979e75964d0869b57
+ms.openlocfilehash: 5036b4d401bb775a7fee2252ca26e7725bc19004
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88992258"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834142"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>A Microsoft Quantum Development Kit kibocsátási megjegyzései
 
@@ -48,7 +48,7 @@ Tekintse meg a [kódtárak](https://github.com/Microsoft/QuantumLibraries/pulls?
 
 A verzió a következőket tartalmazza:
 
-- A jegyzetfüzetekben megnyitott névterek Q# mostantól elérhetők az összes jövőbeli cella-végrehajtáshoz. Ez lehetővé teszi például, hogy a névtereket egyszer kell megnyitni a jegyzetfüzet tetején lévő cellában, ahelyett, hogy a megfelelő névtereket meg kellene nyitnia az egyes kódok celláiban. Az új `%lsopen` Magic parancs megjeleníti a jelenleg megnyitott névterek listáját.
+- A jegyzetfüzetekben megnyitott névterek Q# mostantól elérhetők az összes jövőbeli cella-számításhoz. Ez lehetővé teszi például, hogy a névtereket egyszer kell megnyitni a jegyzetfüzet tetején lévő cellában, ahelyett, hogy a megfelelő névtereket meg kellene nyitnia az egyes kódok celláiban. Az új `%lsopen` Magic parancs megjeleníti a jelenleg megnyitott névterek listáját.
 
 Tekintse meg a [kódtárak](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [fordítóprogramok](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [futtatókörnyezetek](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [minták](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed), [I Q# ](https://github.com/microsoft/iqsharp/pulls?q=is%3Apr+is%3Aclosed) és [kataek](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed)teljes listáját.  
 
@@ -132,7 +132,7 @@ A [kódtárak](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%
 
 A verzió a következőket tartalmazza:
 
-- Új Kvantum gépi tanulási kódtár – további információért látogasson el a [QML-dokumentációk oldalára](https://docs.microsoft.com/quantum/libraries/machine-learning/?view=qsharp-preview)
+- Új Kvantum gépi tanulási kódtár – további információért látogasson el a [QML-dokumentációk oldalára](xref:microsoft.quantum.machine-learning.concepts.intro)
 - Hibajavítások Q# , ami akár 10 20x teljesítménybeli növekedést eredményezett a NuGet-csomagok betöltésekor
 
 A [kódtárak](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [fordítók](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [futtatókörnyezetek](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [minták](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed) és [Katák ](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed) lezárt lekéréses kérelmeinek teljes listáját itt tekintheti meg.  
@@ -144,7 +144,7 @@ A [kódtárak](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%
 A verzió a következőket tartalmazza:
 
 - Új Microsoft.Quantum.SDK NuGet-csomag, amely lecseréli a Microsoft.Quantum. Development.Kit NuGet-csomagot új projektek létrehozásakor. A Microsoft.Quantum.Development.Kit NuGet-csomag továbbra is támogatott a meglévő projektek esetében. 
-- Az Q# új Microsoft. Quantum. SDK NuGet csomag által engedélyezett fordítóprogram-bővítmények támogatása további információért lásd a githubon, a [fordítóprogram-bővítmények mintáján](https://github.com/microsoft/qsharp-compiler/tree/master/examples/CompilerExtensions) és a [ Q# fejlesztői blogon](https://devblogs.microsoft.com/qsharp/extending-the-q-compiler/) található [dokumentációt](https://github.com/microsoft/qsharp-compiler/tree/master/src/QuantumSdk#extending-the-q-compiler).
+- Az Q# új Microsoft. Quantum. SDK NuGet csomag által engedélyezett fordítóprogram-bővítmények támogatása további információért lásd a githubon, a [fordítóprogram-bővítmények mintáján](https://github.com/microsoft/qsharp-compiler/tree/main/examples/CompilerExtensions) és a [ Q# fejlesztői blogon](https://devblogs.microsoft.com/qsharp/extending-the-q-compiler/) található [dokumentációt](https://github.com/microsoft/qsharp-compiler/tree/main/src/QuantumSdk#extending-the-q-compiler).
 - Mostantól támogatott a .NET Core 3.1 – erősen ajánlott a 3.1.100-s verzió telepítése, mert a korábbi .NET Core SDK-verziókkal való fejlesztés hibákat eredményezhet.
 - A Microsoft.Quantum.QsCompiler.Experimental alatt új fordítóprogram-transzformációk érhetők el
 - Új funkciók a kimeneti állapot vektorok számára HTML formátumbanQ#
@@ -160,7 +160,7 @@ A [kódtárak](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%
 A verzió a következőket tartalmazza:
 
 - Új tesztelési attribútum az Q# egység teszteléséhez, lásd [itt](https://docs.microsoft.com/qsharp/api/qsharp/microsoft.quantum.diagnostics.test) a frissített API-dokumentációt, [here](xref:microsoft.quantum.guide.testingdebugging) valamint a & hibakeresési útmutatójának frissített tesztelési útmutatóját
-- A program végrehajtási hibája miatt hozzáadta a verem nyomkövetését Q#
+- A verem nyomkövetésének hozzáadása a Q# program futási hibája esetén
 - Töréspontok támogatása a Visual Studio Code-ban az [OmniSharp C# Visual Studio Code-bővítmény](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp) frissítése révén
 
 A [kódtárak](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [fordítók](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [futtatókörnyezetek](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [minták](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed) és [Katák ](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed) lezárt lekéréses kérelmeinek teljes listáját itt tekintheti meg.  
@@ -182,7 +182,7 @@ A [kódtárak](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%
 
 A verzió a következőket tartalmazza:
 
-- A Visual Studio Code és a Visual Studio bővítményeinek frissítései nyelvi kiszolgáló önálló végrehajtható alkalmazásként való üzembe helyezéséhez, kiküszöbölve a .NET Core SDK-verzió függőségét  
+- A Visual Studio Code & Visual Studio Extensions frissítése a nyelvi kiszolgáló önálló végrehajtható fájlként való üzembe helyezéséhez, a .NET Core SDK verziótól való függőség megszüntetéséhez  
 - Migrálás a .NET Core 3.0-ba
 - A Microsoft.Quantum.Simulation.Core.IOperationFactory kompatibilitástörő változása az új `Fail` metódus bevezetésével. Ez csak a SimulatorBase-en nem túllépő egyéni szimulátorokra van hatással. További részletekért [tekintse meg a lekéréses kérelmet a GitHubon](https://github.com/microsoft/qsharp-runtime/pull/59).
 - Az elavult attribútumok új támogatása
@@ -224,7 +224,7 @@ A módosítások és a meglévő programok frissítésére vonatkozó utasítás
 A verzió a következőket tartalmazza:
 
 - Új indexelési helyeket a szeletelőtömbökhöz. További információért [lásd a nyelvi referenciát](xref:microsoft.quantum.guide.expressions#array-slices).
-- A [Microsoft Container Registryban](https://github.com/microsoft/ContainerRegistry)tárolt Docker-k [ Q# További információt az I adattárban](https://github.com/microsoft/iqsharp/blob/master/README.md) talál.
+- A [Microsoft Container Registryban](https://github.com/microsoft/ContainerRegistry)tárolt Docker-k [ Q# További információt az I adattárban](https://github.com/microsoft/iqsharp/blob/main/README.md) talál.
 - A [nyomkövetés-szimulátor](xref:microsoft.quantum.machines.qc-trace-simulator.intro) kompatibilitástörő változása, a konfigurációs beállítások frissítése, névváltozások; a frissített nevek a [.NET API-tallózóban](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.qctracesimulatorconfiguration) találhatók.
 
 A [kódtárak](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed) és a [minták](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed) lezárt lekéréses kérelmeinek teljes listáját itt tekintheti meg.  
@@ -252,14 +252,14 @@ Ez a kiadás új Q# nyelvi szintaxist helyez el:
 
 ### <a name="library"></a>Kódtár 
 
-Ez a kiadás egy új numerikus kódtárat is tartalmaz: Tudjon meg többet az [új numerikus kódtár használatáról](xref:microsoft.quantum.numerics.usage), és próbálja ki az [új mintákat](https://github.com/microsoft/quantum/tree/master/Numerics).  [102. lekéréses kérelem](https://github.com/Microsoft/QuantumLibraries/pull/102).  
+Ez a kiadás egy új numerikus kódtárat is tartalmaz: Tudjon meg többet az [új numerikus kódtár használatáról](xref:microsoft.quantum.numerics.usage), és próbálja ki az [új mintákat](https://github.com/microsoft/quantum/tree/main/Numerics).  [102. lekéréses kérelem](https://github.com/Microsoft/QuantumLibraries/pull/102).  
 
 Ez a kiadás újrarendszerezi, kibővíti és frissíti a kémiai kódtárat:
 * Javítja az összetevők modularitását, a bővíthetőséget, és az általános kódtisztítást.  [58. lekéréses kérelem](https://github.com/microsoft/QuantumLibraries/pull/58).
 * Támogatást nyújt a [többreferenciás hullámfüggvényekhez](xref:microsoft.quantum.chemistry.concepts.multireference) – mind a ritka többreferenciás hullámfüggvényekhez, mind pedig az egységes kötésű fürthöz.  [110. lekéréses kérelem](https://github.com/Microsoft/QuantumLibraries/pull/110).
 * (Köszönjük!) [1QBit](https://1qbit.com)-közreműködő ([@valentinS4t1qbit](https://github.com/ValentinS4t1qbit)): Energiaértékelés variációs kísérletező feltevés segítségével. [120. lekéréses kérelem](https://github.com/Microsoft/QuantumLibraries/pull/120).
 * A [Broombridge-séma](xref:microsoft.quantum.libraries.chemistry.schema.broombridge) frissítése az új [0.2-es verzióra](xref:microsoft.quantum.libraries.chemistry.schema.spec_v_0_2), egységes kötésű fürtspecifikáció hozzáadásával. [65. probléma](https://github.com/microsoft/QuantumLibraries/issues/65).
-* Python-együttműködés hozzáadása a kémiai kódtárbeli függvényekhez. Próbálja ki ezt a [mintát](https://github.com/microsoft/Quantum/tree/master/Chemistry/PythonIntegration). [53. probléma](https://github.com/microsoft/QuantumLibraries/issues/53) [110. lekéréses kérelem](https://github.com/Microsoft/QuantumLibraries/pull/110).
+* Python-együttműködés hozzáadása a kémiai kódtárbeli függvényekhez. Próbálja ki ezt a [mintát](https://github.com/microsoft/Quantum/tree/main/Chemistry/PythonIntegration). [53. probléma](https://github.com/microsoft/QuantumLibraries/issues/53) [110. lekéréses kérelem](https://github.com/Microsoft/QuantumLibraries/pull/110).
 
 ## <a name="version-061905"></a>0\.6.1905-ös verzió
 
@@ -349,7 +349,7 @@ A verzió a következőket tartalmazza:
 
 - Támogatást nyújt a Jupyter Notebookhoz, amely nagyszerű lehetőséget nyújt a megismerésére Q# .  [Nézze meg az új Jupyter Notebook-mintákat, amelyekből megtudhatja, hogyan írhat saját jegyzetfüzeteket](xref:microsoft.quantum.install). 
 
-- Egész szám hozzáadására használható aritmetikai műveletet ad hozzá a Quantum Canon-kódtárhoz.  Ez a Jupyter-notebook [ismerteti az egész számok új összeadóinak használatát](https://github.com/microsoft/Quantum/blob/master/samples/arithmetic/AdderExample.ipynb).
+- Egész szám hozzáadására használható aritmetikai műveletet ad hozzá a Quantum Canon-kódtárhoz.  Ez a Jupyter-notebook [ismerteti az egész számok új összeadóinak használatát](https://github.com/microsoft/Quantum/blob/main/samples/arithmetic/AdderExample.ipynb).
 
 - A közösség által jelentett DumpRegister probléma hibajavítása ([148.](https://github.com/Microsoft/Quantum/issues/148)).
 
@@ -635,7 +635,7 @@ Ez a kiadás a közösség által jelentett problémák javítását tartalmazza
 
 #### <a name="testing"></a>Tesztelés
 
-- A teszteket 64 bites módban kell végrehajtani. Ha a tesztek meghiúsulnak egy BadImageFormatException kivétel miatt, akkor válassza a Teszt menüben a Teszt beállításai > Alapértelmezett processzorarchitektúra > X64 lehetőséget.
+- A teszteket 64 bites módban kell futtatni. Ha a tesztek meghiúsulnak egy BadImageFormatException kivétel miatt, akkor válassza a Teszt menüben a Teszt beállításai > Alapértelmezett processzorarchitektúra > X64 lehetőséget.
 - Bizonyos tesztek futtatása hosszú ideig is eltarthat (a számítógéptől függően akár 5 percig). Ez normális jelenség, mivel némelyik teszt több mint 20 qubitet használ, a legnagyobb közülük jelenleg 23-at.
 
 #### <a name="samples"></a>Példák

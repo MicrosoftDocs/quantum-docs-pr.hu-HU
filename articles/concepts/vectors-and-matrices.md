@@ -1,6 +1,6 @@
 ---
 title: vektorok és mátrixok a kvantum-számítástechnikai leírásban: megismerheti a vektorok és mátrixok használatának alapjait.
-Szerző: QuantumWriter UID: Microsoft. Quantum. Concepts. vectors MS. Author: nawiebe@microsoft.com MS. Date: 12/11/2017 MS. topic: cikk No-Loc:
+Szerző: QuantumWriter UID: Microsoft. Quantum. Concepts. vectors MS. Author: v-benbra MS. Date: 12/11/2017 MS. topic: No-Loc:
 - "Q#"
 - "$$v"
 - "$$"
@@ -93,7 +93,7 @@ $$v =\begin{bmatrix}
 v_1\\\\
 v_2\\\\
 \vdots\\\\
-v_n\end{bmatrix}$$
+v_n \end{bmatrix}$$
 
 A Vector v szabványa $ a $ következőképpen van definiálva: $ \sqrt { \sum \_ i | v \_ i | ^ 2 } $ . A vektorok egység normának számítanak (vagy más néven [*egység vektornak*](https://en.wikipedia.org/wiki/Unit_vector)nevezik), ha a norma értéke $ 1 $ . A [*vektoros v adjoint*](https://en.wikipedia.org/wiki/Adjoint_matrix) $ a $ $ v ^ \dagger $ -t jelöli, és a következő sor-vektorra van beállítva $ \* $ , amely a komplex konjugátumot jelöli.
 
@@ -114,12 +114,12 @@ u_1\\\\
 u_2\\\\
 \vdots\\\\
 u_n \end{bmatrix} ~ \mathrm { és}~
-v=\begin{bmatrix}
+v =\begin{bmatrix}
     v_1\\\\
     v_2\\\\
     \vdots\\\\
     v_n \end{bmatrix} , ~ \mathrm { majd}~
-Au + BV=\begin{bmatrix}
+Au + BV =\begin{bmatrix}
 au_1 + bv_1\\\\
 au_2 + bv_2\\\\
 \vdots\\\\
@@ -128,7 +128,7 @@ $$
 
 Az [*matrix*](https://en.wikipedia.org/wiki/Matrix_(mathematics)) $ m n méretű mátrix \times $ egy olyan MN komplex számokból álló gyűjtemény, amelyeknek $ az értéke $ $ m $ és n oszlopban van rendezve $ $ , ahogy az alábbi ábrán látható:
 
-$$M= 
+$$M = 
 \begin{bmatrix}
 M_ { 11 } ~~ M_ { 12 } ~~ \cdots ~~ M_ { 1N}\\\\
 M_ { 21 } ~~ M_ { 22 } ~~ \cdots ~~ M_ { 2n}\\\\
@@ -183,7 +183,7 @@ Az $ m mátrix $ [*Hermitian*](https://en.wikipedia.org/wiki/Hermitian_matrix) ,
 Végezetül, a kétféle, m n és n méretű, a p-s mérettel rendelkező két mátrixos [*termék (vagy*](https://en.wikipedia.org/wiki/Tensor_product) Kronecker-termék) $ $ $ \times $ $ $ $ \times $ nagyobb $ = \otimes $ $ , mint az MP NQ, a mérete pedig \times $ $ m $ és $ n $ , amely az alábbiak szerint érhető el:
 
 \begin{align}
-    M \otimes N&=
+    M \otimes N &=
     \begin{bmatrix}
         M_ { 11 } ~~ \cdots ~~ M_ { 1N }\\\\
         \ddots\\\\
@@ -221,26 +221,26 @@ $$
 
 $$
     \begin{bmatrix}
-        a \ b \\\\ c \ d\end{bmatrix}
+        a \ b \\\\ c \ d \end{bmatrix}
     \otimes 
     \begin{bmatrix}
-        e \ f \\\\ g \ h\end{bmatrix}
+        e \ f \\\\ g \ h \end{bmatrix}
      =
     \begin{bmatrix}
     egy\begin{bmatrix}
-    e \ f \\\\ g \ h\end{bmatrix}
+    e \ f \\\\ g \ h \end{bmatrix}
     b\begin{bmatrix}
-    e \ f \\\\ g \ h\end{bmatrix}
+    e \ f \\\\ g \ h \end{bmatrix}
     \\\\[1em] c\begin{bmatrix}
-    e \ f \\\\ g \ h\end{bmatrix}
+    e \ f \\\\ g \ h \end{bmatrix}
     d\begin{bmatrix}
-    e \ f \\\\ g \ h\end{bmatrix}
+    e \ f \\\\ g \ h \end{bmatrix}
     \end{bmatrix}
     =
     \begin{bmatrix}
-    AK \ AF \ be \ BF\\\\
-    AG \ ah \ BG \ BH\\\\
-    CE \ CF \ de \ DF\\\\
+    AK \ AF \ be \ BF \\\\
+    AG \ ah \ BG \ BH \\\\
+    CE \ CF \ de \ DF \\\\
     CG \ CH \ DG \ DH \end{bmatrix} .
 $$
 

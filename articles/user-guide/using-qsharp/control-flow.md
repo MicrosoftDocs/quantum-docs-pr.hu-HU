@@ -1,38 +1,39 @@
 ---
-title: Folyamat vezérléseQ#
+title: Folyamat vezérlése Q#
 description: Hurkok, feltételesség stb.
 author: gillenhaalb
-ms.author: a-gibec@microsoft.com
+ms.author: a-gibec
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.controlflow
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: fc619d64bfebfc27d7feac6dafb2dd4cf22825d6
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 547c57cab67443e8b487bf817eb79fc922b43cdc
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87867947"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90833511"
 ---
-# <a name="control-flow-in-no-locq"></a>Folyamat vezérléseQ#
+# <a name="control-flow-in-no-locq"></a>Folyamat vezérlése Q#
 
 Egy műveleten vagy függvényen belül minden utasítás sorrendben fut, hasonlóan más gyakori klasszikus nyelvekhez.
 A vezérlés folyamatát azonban három különböző módon módosíthatja:
 
-* `if`nyilatkozatok
-* `for`hurkok
-* `repeat-until-success`hurkok
+* `if` nyilatkozatok
+* `for` hurkok
+* `repeat-until-success` hurkok
+* conjugations ( `apply-within` utasítások)
 
-A `if` és a `for` vezérlési folyamat szerkezetét a klasszikus programozási nyelvek többsége ismeri. [`Repeat-until-success`](#repeat-until-success-loop)a hurkokat a cikk későbbi részében tárgyaljuk.
+A `if` és a `for` vezérlési folyamat szerkezetét a klasszikus programozási nyelvek többsége ismeri. [`Repeat-until-success`](#repeat-until-success-loop) a hurkokat és a [conjugations](#conjugations) a cikk későbbi részében tárgyaljuk.
 
 Fontos, hogy `for` a hurkok és `if` utasítások olyan műveletekben használhatók, amelyekben automatikusan létrejönnek a [specializációk](xref:microsoft.quantum.guide.operationsfunctions) . Ebben az esetben a `for` hurok adjoint megfordítja az irányt, és az egyes iterációk adjoint veszi át.
 Ez a művelet a "cipők és zoknik" elvét követi: Ha vissza kívánja vonni a SOCKs-t, majd a cipőket, vissza kell vonnia a cipőket, majd vissza kell vonnia a zoknikat. 
 
 ## <a name="if-else-if-else"></a>If, máskülönben
 
-Az `if` utasítás támogatja a feltételes végrehajtást.
+Az `if` utasítás támogatja a feltételes feldolgozást.
 A kulcsszó `if` , a logikai kifejezés zárójelek között, valamint egy utasítás blokkja (az _akkori_ blokk).
 Opcionálisan tetszőleges számú Else-if záradékot követhet, amelyek mindegyike egy kulcsszóból `elif` , egy zárójelben található logikai kifejezésből és egy utasításból álló blokkból áll (a _másik, ha_ blokk).
 Végül az utasítás opcionálisan végződhet más záradékkal is, amely a kulcsszót, `else` majd egy másik utasítás blokkját (az _Else_ blokkot) tartalmazza.
@@ -68,14 +69,14 @@ if (i == 1) {
 }
 ```
 
-## <a name="for-loop"></a>Hurok esetén
+## <a name="for-loop"></a>A for hurok
 
 Az `for` utasítás támogatja az ismétlést egész tartományon vagy tömbön.
 Az utasítás a kulcsszót `for` , majd egy szimbólum vagy egy szimbólumot, a kulcsszót `in` és egy Type `Range` vagy Array kifejezést, valamint az összes zárójelet és egy utasítás blokkját tartalmazza.
 
 Az utasítás blokkja (a hurok törzse) ismétlődően fut, és a megadott szimbólummal (a hurok változóval) a tartomány vagy tömb minden értékéhez kötve van.
 Vegye figyelembe, hogy ha a Range kifejezés üres tartományba vagy tömbbe van kiértékelve, a törzs egyáltalán nem fut.
-A kifejezés teljes mértékben ki van értékelve a hurok megadása előtt, és a hurok végrehajtása közben nem változik.
+A kifejezés teljes mértékben ki van értékelve a hurok megadása előtt, és nem változik, amíg a hurok fut.
 
 A hurok változó a hurok törzsének minden bejáratához van kötve, és a törzs végén van kötve.
 A Loop változó nem kötődik a for ciklus befejeződése után.
@@ -129,7 +130,7 @@ A hurok törzse fut, majd kiértékeli a feltételt.
 Ha a feltétel igaz, az utasítás befejeződött; Ellenkező esetben a javítás lefut, és az utasítás ismét lefut, a hurok törzsének megfelelően.
 
 Egy RUS-hurok (a törzs, a teszt és a javítás) mindhárom része egyetlen hatókörként van kezelve az *egyes ismétlődésekhez*, így a törzsben lévő szimbólumok a tesztben és a javításban is elérhetők.
-A javítás végrehajtásának befejezése azonban befejezi a utasítás hatókörét, így a törzs vagy a javítás során végrehajtott szimbólum-kötések nem érhetők el a későbbi ismétlődések során.
+A javítás futtatása azonban véget ér a utasítás hatókörével, így a törzs vagy a javítás során végrehajtott szimbólum-kötések nem érhetők el a későbbi ismétlődésekben.
 
 Az utasítás továbbá `fixup` gyakran hasznos, de nem mindig szükséges.
 Abban az esetben, ha nincs rá szükség, a szerkezet
@@ -148,11 +149,12 @@ További példákért és részletekért tekintse meg a jelen cikk [REPEAT-amíg
 > [!TIP]   
 > Kerülje a függvényekben a REPEAT-ig-Success hurkok használatát. Használja *a* hurkokat a függvények megfelelő funkcióinak megadásához. 
 
-## <a name="while-loop"></a>Ciklus közben
+## <a name="while-loop"></a>A while hurok
 
-A REPEAT-ig-Success mintázat nagyon Quantum-specifikus konnotációval rendelkezik. Ezek széles körben használatosak a kvantum-algoritmusok bizonyos osztályaiban – ezért a dedikált nyelvi konstrukciója Q# . Azonban az olyan hurkok, amelyek egy adott feltétel alapján törnek át, és amelynek végrehajtási hosszát a fordítási időben nem ismeri, a rendszer a kvantum-futtatókörnyezetben különösen körültekintően kezeli. Azonban a függvényeken belüli használatuk nem problémamentes, mivel ezek a hurkok csak a hagyományos (nem Quantum) hardveren futó kódokat tartalmaznak. 
+A REPEAT-ig-Success mintázat nagyon Quantum-specifikus konnotációval rendelkezik. Ezek széles körben használatosak a kvantum-algoritmusok bizonyos osztályaiban – ezért a dedikált nyelvi konstrukciója Q# . Azonban az olyan hurkok, amelyek egy adott feltétel alapján szakítják meg a futási időtartamot, és így a futtatási hossz nem ismert a fordítási időben, a rendszer a kvantum-futtatókörnyezetben különös gondossággal kezeli. Azonban a függvényeken belüli használatuk nem problémamentes, mivel ezek a hurkok csak a hagyományos (nem Quantum) hardveren futó kódokat tartalmaznak. 
 
-Q#Ezért a csak a functions-ben lévő hurkok használatát támogatja. Egy `while` utasítás a kulcsszóból `while` , egy logikai kifejezésből áll zárójelben, és egy utasítás blokkot.
+Q#Ezért a csak a functions-ben lévő hurkok használatát támogatja.
+Egy `while` utasítás a kulcsszóból `while` , egy logikai kifejezésből áll zárójelben, és egy utasítás blokkot.
 Az utasítás blokkja (a hurok törzse) mindaddig fut, amíg a feltétel kiértékelése megtörténik `true` .
 
 ```qsharp
@@ -163,6 +165,45 @@ while (index < Length(arr) && item < 0) {
     set index += 1;
 }
 ```
+
+## <a name="conjugations"></a>Conjugations
+
+A klasszikus BITS-vel szemben a kvantum-memória felszabadítása valamivel nagyobb mértékben történik, mivel a qubits vakon alaphelyzetbe állítása nem kívánt hatással lehet a fennmaradó számításra, ha a qubits továbbra is összefonódik. Ezek a hatások elkerülhetők a memória felszabadítása előtt végrehajtott számítások megfelelő "visszavonása" esetén. A kvantum-számítástechnika általános mintája a következő: 
+
+```qsharp
+operation ApplyWith<'T>(
+    outerOperation : ('T => Unit is Adj), 
+    innerOperation : ('T => Unit), 
+    target : 'T) 
+: Unit {
+
+    outerOperation(target);
+    innerOperation(target);
+    Adjoint outerOperation(target);
+}
+```
+
+Q# a támogatja az előző transzformációt megvalósító ragozó utasítást. Az utasítás használatával a művelet a `ApplyWith` következő módon valósítható meg:
+
+```qsharp
+operation ApplyWith<'T>(
+    outerOperation : ('T => Unit is Adj), 
+    innerOperation : ('T => Unit), 
+    target : 'T) 
+: Unit {
+
+    within{ 
+        outerOperation(target);
+    }
+    apply {
+        innerOperation(target);
+    }
+}
+```
+Ha a külső és belső átalakítások nem állnak rendelkezésre könnyen elérhető műveletként, akkor az ilyen típusú ragozás akkor válik hasznosnak, ha egy blokk több utasításból áll. 
+
+A blokkon belül definiált utasítások inverz átalakítását a fordító automatikusan hozza létre, és az Apply-Block befejeződése után fut.
+Mivel a blokk részeként használt változó változók nem használhatók fel az alkalmazás-blokkban, a generált transzformáció garantált, hogy a adjoint a blokkon belül. 
 
 ## <a name="return-statement"></a>Visszatérési utasítás
 
@@ -248,7 +289,7 @@ fixup {
 }
 ```
 
-### <a name="rus-without-fixup"></a>RUS nélkül`fixup`
+### <a name="rus-without-fixup"></a>RUS nélkül `fixup`
 
 Ez a példa egy RUS-hurkot mutat be a javítási lépés nélkül. A kód egy olyan valószínűségi áramkör, amely egy fontos rotációs kaput valósít meg $V _3 = (\boldone + 2 i Z)/\sqrt {5} $ a `H` és a Gates használatával `T` .
 A hurok a $ \frac {8} {5} $ Ismétlődések átlagában leáll.
@@ -330,7 +371,7 @@ operation PrepareStateUsingRUS(target : Qubit) : Unit {
 }
 ```
 
-További információkért lásd: [Unit Testing Sample a standard Library](https://github.com/microsoft/Quantum/blob/master/samples/diagnostics/unit-testing/RepeatUntilSuccessCircuits.qs):
+További információkért lásd: [Unit Testing Sample a standard Library](https://github.com/microsoft/Quantum/blob/main/samples/diagnostics/unit-testing/RepeatUntilSuccessCircuits.qs):
 
 ## <a name="next-steps"></a>Következő lépések
 

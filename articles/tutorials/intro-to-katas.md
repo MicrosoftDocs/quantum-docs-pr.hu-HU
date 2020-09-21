@@ -9,12 +9,12 @@ uid: microsoft.quantum.overview.katas
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: b2a3b25bf90109468f02c98c6c687befb83648bc
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 780f04aa941d416032ea3e50b05769f93fae769f
+ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869681"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90759391"
 ---
 # <a name="learn-quantum-computing-with-the-quantum-katas"></a>Ismerkedés a kvantum-számítástechnikával a Kvantum Katák segítségével
 
@@ -41,50 +41,50 @@ Ismerkedjen meg a kvantum-számítástechnika alapjaival és alapjaival, vagy m�
 
 | Kata | Leírás |
 |:-----|-------------|
-|[Összetett aritmetika](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/ComplexArithmetic):|Ez az oktatóanyag a kvantum-számítástechnika, például a képzeletbeli és az összetett számok használatához szükséges matematikai hátteret ismerteti.|
-|[Lineáris algebra](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/LinearAlgebra)|A lineáris algebra a Quantum állapotok és a kvantum-számítástechnikai műveletek ábrázolására szolgál. Ez az oktatóanyag az alapokat, például a mátrixokat és a vektorokat ismerteti.|
-|[A qubit fogalma](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/Qubit)|A qubits megismerése – a Quantum Computing legfontosabb alapfogalmai. |
-|[Egyqubites kvantumkapuk](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/SingleQubitGates)|Ez az oktatóanyag egy qubit kvantum-kaput vezet be, amely a kvantum-algoritmusok építőelemeként működik, és különböző módokon alakítja át a Quantum qubit-állapotokat.|
-|[Többqubites rendszerek](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/MultiQubitSystems)|Ez az oktatóanyag bemutatja a qubit rendszereket, azok ábrázolását matematikai jelöléssel és Q# kódban, valamint a felakadás koncepcióját.|
-|[Több qubit Quantum Gates](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/MultiQubitGates)|Ez az oktatóanyag az [qubit Quantum Gates](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/SingleQubitGates) oktatóanyagát követi, és a Quantum Gates több qubit rendszerre való alkalmazására koncentrál.|
+|[Összetett aritmetika](https://github.com/microsoft/QuantumKatas/tree/main/tutorials/ComplexArithmetic):|Ez az oktatóanyag a kvantum-számítástechnika, például a képzeletbeli és az összetett számok használatához szükséges matematikai hátteret ismerteti.|
+|[Lineáris algebra](https://github.com/microsoft/QuantumKatas/tree/main/tutorials/LinearAlgebra)|A lineáris algebra a Quantum állapotok és a kvantum-számítástechnikai műveletek ábrázolására szolgál. Ez az oktatóanyag az alapokat, például a mátrixokat és a vektorokat ismerteti.|
+|[A qubit fogalma](https://github.com/microsoft/QuantumKatas/tree/main/tutorials/Qubit)|A qubits megismerése – a Quantum Computing legfontosabb alapfogalmai. |
+|[Egyqubites kvantumkapuk](https://github.com/microsoft/QuantumKatas/tree/main/tutorials/SingleQubitGates)|Ez az oktatóanyag egy qubit kvantum-kaput vezet be, amely a kvantum-algoritmusok építőelemeként működik, és különböző módokon alakítja át a Quantum qubit-állapotokat.|
+|[Többqubites rendszerek](https://github.com/microsoft/QuantumKatas/tree/main/tutorials/MultiQubitSystems)|Ez az oktatóanyag bemutatja a qubit rendszereket, azok ábrázolását matematikai jelöléssel és Q# kódban, valamint a felakadás koncepcióját.|
+|[Több qubit Quantum Gates](https://github.com/microsoft/QuantumKatas/tree/main/tutorials/MultiQubitGates)|Ez az oktatóanyag az [qubit Quantum Gates](https://github.com/microsoft/QuantumKatas/tree/main/tutorials/SingleQubitGates) oktatóanyagát követi, és a Quantum Gates több qubit rendszerre való alkalmazására koncentrál.|
 
 ### <a name="quantum-computing-fundamentals"></a>Kvantum-számítástechnikai alapfogalmak
 
 | Kata | Leírás |
 |:-----|-------------|
-|[Kvantumkapuk felismerése](https://github.com/microsoft/QuantumKatas/tree/master/BasicGates)|Az alapszintű kvantum-kapuk megismerését célzó gyakorlatok sorozata Q# . Az alapszintű qubit-és qubit-kapuk, adjoint és vezérelt kapuk, valamint a kapuk használata a qubit állapotának módosításához.|
-|[Kvantum-szuperpozíció létrehozása](https://github.com/microsoft/QuantumKatas/tree/master/Superposition)|Ezekkel a gyakorlatokkal megismerheti a Felfekvés és a programozás fogalmát Q# . Az alapszintű egyqubitű és több qubit kapuk, a túlterhelések és a folyamatok vezérlésének és rekurziójának gyakorlatát foglalja magában Q# .|
-|[Kvantumállapotok megkülönböztetése mérésekkel](https://github.com/microsoft/QuantumKatas/tree/master/Measurements)|Oldja meg ezeket a gyakorlatokat a kvantum-mérések, valamint a merőleges és nem merőleges állapotok megismerése során. |
-|[Közös mérések](https://github.com/microsoft/QuantumKatas/tree/master/JointMeasurements)|Ismerje meg a közös paritásos méréseket, és azt, hogyan használható a [mérték](xref:microsoft.quantum.intrinsic.measure) művelet a kvantum-állapotok megkülönböztetéséhez.|
+|[Kvantumkapuk felismerése](https://github.com/microsoft/QuantumKatas/tree/main/BasicGates)|Az alapszintű kvantum-kapuk megismerését célzó gyakorlatok sorozata Q# . Az alapszintű qubit-és qubit-kapuk, adjoint és vezérelt kapuk, valamint a kapuk használata a qubit állapotának módosításához.|
+|[Kvantum-szuperpozíció létrehozása](https://github.com/microsoft/QuantumKatas/tree/main/Superposition)|Ezekkel a gyakorlatokkal megismerheti a Felfekvés és a programozás fogalmát Q# . Az alapszintű egyqubitű és több qubit kapuk, a túlterhelések és a folyamatok vezérlésének és rekurziójának gyakorlatát foglalja magában Q# .|
+|[Kvantumállapotok megkülönböztetése mérésekkel](https://github.com/microsoft/QuantumKatas/tree/main/Measurements)|Oldja meg ezeket a gyakorlatokat a kvantum-mérések, valamint a merőleges és nem merőleges állapotok megismerése során. |
+|[Közös mérések](https://github.com/microsoft/QuantumKatas/tree/main/JointMeasurements)|Ismerje meg a közös paritásos méréseket, és azt, hogyan használható a [mérték](xref:microsoft.quantum.intrinsic.measure) művelet a kvantum-állapotok megkülönböztetéséhez.|
 
 ### <a name="algorithms"></a>Algoritmusok
 
 | Kata | Leírás |
 |:-----|-------------|
-|[Kvantumteleportáció](https://github.com/microsoft/QuantumKatas/tree/master/Teleportation)|Ez a Kata egy olyan protokollt vizsgál, amely lehetővé teszi, hogy a kvantum-állapotot csak a klasszikus kommunikáció és a korábban megosztott kvantum-felakadás használatával kommunikáljon.|
-|[Szupersűrű kódolás](https://github.com/microsoft/QuantumKatas/tree/master/SuperdenseCoding)|A többszintű kódolás egy olyan protokoll, amely lehetővé teszi két bites klasszikus információ továbbítását úgy, hogy csak egy qubit küld el, amely korábban megosztott kvantum-felakadás használ.  |
-|[A Deutsch–Jozsa-algoritmus](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/ExploringDeutschJozsaAlgorithm)|Ez az algoritmus egy olyan kvantum-algoritmus egyik első példája, amely exponenciálisan gyorsabb, mint bármely klasszikus determinisztikus algoritmus.|
-|[A Grover-féle keresőalgoritmus általános tulajdonságai](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/ExploringGroversAlgorithm)|Magas szintű bevezetés a Quantum Computing egyik legismertebb algoritmusával. Feloldja a problémát, amely egy adott kimenetet eredményező fekete dobozba (Oracle) való bevitelt keres. |
-|[A Grover-féle keresőalgoritmus implementálása](https://github.com/microsoft/QuantumKatas/tree/master/GroversAlgorithm)|Ez a Kata mélyebben felfedi a a a a megkeresését, és leírja az Oracle-ket, az algoritmus lépéseinek elvégzését, végül pedig a teljes összeállítását.|
-|[Valós problémák megoldása a a a (z)-algoritmus használatával: SAT-problémák](https://github.com/microsoft/QuantumKatas/tree/master/SolveSATWithGrover)|Olyan gyakorlatok sorozata, amelyek a a satisfiability-val [kapcsolatos](https://en.wikipedia.org/wiki/Boolean_satisfiability_problem) reális problémák megoldására használják a a a a a a (SAT) algoritmust, amely egy példaként használható.  |
-|[Valós problémák megoldása a a a (z)-algoritmus használatával: gráfok színezésével kapcsolatos problémák](https://github.com/microsoft/QuantumKatas/tree/master/GraphColoring)| Ez a Kata tovább vizsgálja a a a [megkötések megelégedettségével kapcsolatos problémák](https://en.wikipedia.org/wiki/Constraint_satisfaction_problem)megoldására szolgáló, a a a a a megszorítások terén felmerülő problémát. |
+|[Kvantumteleportáció](https://github.com/microsoft/QuantumKatas/tree/main/Teleportation)|Ez a Kata egy olyan protokollt vizsgál, amely lehetővé teszi, hogy a kvantum-állapotot csak a klasszikus kommunikáció és a korábban megosztott kvantum-felakadás használatával kommunikáljon.|
+|[Szupersűrű kódolás](https://github.com/microsoft/QuantumKatas/tree/main/SuperdenseCoding)|A többszintű kódolás egy olyan protokoll, amely lehetővé teszi két bites klasszikus információ továbbítását úgy, hogy csak egy qubit küld el, amely korábban megosztott kvantum-felakadás használ.  |
+|[A Deutsch–Jozsa-algoritmus](https://github.com/microsoft/QuantumKatas/tree/main/tutorials/ExploringDeutschJozsaAlgorithm)|Ez az algoritmus egy olyan kvantum-algoritmus egyik első példája, amely exponenciálisan gyorsabb, mint bármely klasszikus determinisztikus algoritmus.|
+|[A Grover-féle keresőalgoritmus általános tulajdonságai](https://github.com/microsoft/QuantumKatas/tree/main/tutorials/ExploringGroversAlgorithm)|Magas szintű bevezetés a Quantum Computing egyik legismertebb algoritmusával. Feloldja a problémát, amely egy adott kimenetet eredményező fekete dobozba (Oracle) való bevitelt keres. |
+|[A Grover-féle keresőalgoritmus implementálása](https://github.com/microsoft/QuantumKatas/tree/main/GroversAlgorithm)|Ez a Kata mélyebben felfedi a a a a megkeresését, és leírja az Oracle-ket, az algoritmus lépéseinek elvégzését, végül pedig a teljes összeállítását.|
+|[Valós problémák megoldása a a a (z)-algoritmus használatával: SAT-problémák](https://github.com/microsoft/QuantumKatas/tree/main/SolveSATWithGrover)|Olyan gyakorlatok sorozata, amelyek a a satisfiability-val [kapcsolatos](https://en.wikipedia.org/wiki/Boolean_satisfiability_problem) reális problémák megoldására használják a a a a a a (SAT) algoritmust, amely egy példaként használható.  |
+|[Valós problémák megoldása a a a (z)-algoritmus használatával: gráfok színezésével kapcsolatos problémák](https://github.com/microsoft/QuantumKatas/tree/main/GraphColoring)| Ez a Kata tovább vizsgálja a a a [megkötések megelégedettségével kapcsolatos problémák](https://en.wikipedia.org/wiki/Constraint_satisfaction_problem)megoldására szolgáló, a a a a a megszorítások terén felmerülő problémát. |
 
 ### <a name="protocols-and-libraries"></a>Protokollok és kódtárak
 
 | Kata | Leírás |
 |:-----|-------------|
-|[BB84 protokoll a kvantumkulcs-elosztáshoz](https://github.com/microsoft/QuantumKatas/tree/master/KeyDistribution_BB84)|Ismerje meg és implementálja a Quantum Key Distribution Protocol, a [BB84](https://en.wikipedia.org/wiki/BB84), a qubits használatával a titkosítási kulcsok cseréjét. |
-|[Bit-flip hiba a kód kijavítani](https://github.com/microsoft/QuantumKatas/tree/master/QEC_BitFlipCode)|Ismerje meg a kvantum-hibajavítást a Quantum Error-Correction (KARANTÉNKÉNYSZERÍTÉSI) kódok közül a legegyszerűbben a három qubit-kód megadásával.|
-|[Fázisbecslés](https://github.com/microsoft/QuantumKatas/blob/master/PhaseEstimation)|A fázis-becslési algoritmusok a kvantum-számítástechnika egyik legalapvetőbb építőelemei. Ismerje meg a fázisok becslését ezekkel a gyakorlatokkal, amelyek a kvantum fázisok becslésére és a fázis-becslési rutinok előkészítésére és futtatására vonatkoznak Q# .|
-|[Quantum aritmetika: a lüktetés kiépítése – kiegészítések készítése](https://github.com/microsoft/QuantumKatas/blob/master/RippleCarryAdder)|Részletes sorozat, amely a rendszerhullám-számítógépeken is felderíti a [hullámok folytatását](https://en.wikipedia.org/wiki/Adder_(electronics)#Ripple-carry_adder) . Hozzon létre egy helybeni kvantum-kiegészítést, bontsa ki azt egy másik algoritmussal, és végül hozzon létre egy helyi kvantum-altraktort.   |
+|[BB84 protokoll a kvantumkulcs-elosztáshoz](https://github.com/microsoft/QuantumKatas/tree/main/KeyDistribution_BB84)|Ismerje meg és implementálja a Quantum Key Distribution Protocol, a [BB84](https://en.wikipedia.org/wiki/BB84), a qubits használatával a titkosítási kulcsok cseréjét. |
+|[Bit-flip hiba a kód kijavítani](https://github.com/microsoft/QuantumKatas/tree/main/QEC_BitFlipCode)|Ismerje meg a kvantum-hibajavítást a Quantum Error-Correction (KARANTÉNKÉNYSZERÍTÉSI) kódok közül a legegyszerűbben a három qubit-kód megadásával.|
+|[Fázisbecslés](https://github.com/microsoft/QuantumKatas/blob/main/PhaseEstimation)|A fázis-becslési algoritmusok a kvantum-számítástechnika egyik legalapvetőbb építőelemei. Ismerje meg a fázisok becslését ezekkel a gyakorlatokkal, amelyek a kvantum fázisok becslésére és a fázis-becslési rutinok előkészítésére és futtatására vonatkoznak Q# .|
+|[Quantum aritmetika: a lüktetés kiépítése – kiegészítések készítése](https://github.com/microsoft/QuantumKatas/blob/main/RippleCarryAdder)|Részletes sorozat, amely a rendszerhullám-számítógépeken is felderíti a [hullámok folytatását](https://en.wikipedia.org/wiki/Adder_(electronics)#Ripple-carry_adder) . Hozzon létre egy helybeni kvantum-kiegészítést, bontsa ki azt egy másik algoritmussal, és végül hozzon létre egy helyi kvantum-altraktort.   |
 
 ### <a name="entanglement-games"></a>Összefonódási játékok
 
 | Kata | Leírás |
 |:-----|-------------|
-|[CHSH játék](https://github.com/microsoft/QuantumKatas/tree/master/CHSHGame)|Ismerje meg a Quantum felakadás a [chsh](https://en.wikipedia.org/wiki/CHSH_inequality) játék megvalósításával. Ez a nem [helyi](https://en.wikipedia.org/wiki/Quantum_refereed_game) játék azt mutatja be, hogyan használható a Quantum felakadás, hogy növelje a játékosok esélyét arra, hogy a lehető leghatékonyabban klasszikus stratégiával lehessen nyerni.|
-|[GHZ játék](https://github.com/microsoft/QuantumKatas/tree/master/GHZGame)|A GHZ-es játék egy másik nem helyi játék, de három játékost is magában foglal.|
-|[A Mermin–Peres-féle bűvös négyzetek játéka](https://github.com/microsoft/QuantumKatas/tree/master/MagicSquareGame)|Olyan gyakorlatok sorozata, amelyek felderítik a [Quantum pszeudo-telepátiaat](https://en.wikipedia.org/wiki/Quantum_pseudo-telepathy#The_Mermin%E2%80%93Peres_magic_square_game) a Magic Square-játékok megoldásához.  |
+|[CHSH játék](https://github.com/microsoft/QuantumKatas/tree/main/CHSHGame)|Ismerje meg a Quantum felakadás a [chsh](https://en.wikipedia.org/wiki/CHSH_inequality) játék megvalósításával. Ez a nem [helyi](https://en.wikipedia.org/wiki/Quantum_refereed_game) játék azt mutatja be, hogyan használható a Quantum felakadás, hogy növelje a játékosok esélyét arra, hogy a lehető leghatékonyabban klasszikus stratégiával lehessen nyerni.|
+|[GHZ játék](https://github.com/microsoft/QuantumKatas/tree/main/GHZGame)|A GHZ-es játék egy másik nem helyi játék, de három játékost is magában foglal.|
+|[A Mermin–Peres-féle bűvös négyzetek játéka](https://github.com/microsoft/QuantumKatas/tree/main/MagicSquareGame)|Olyan gyakorlatok sorozata, amelyek felderítik a [Quantum pszeudo-telepátiaat](https://en.wikipedia.org/wiki/Quantum_pseudo-telepathy#The_Mermin%E2%80%93Peres_magic_square_game) a Magic Square-játékok megoldásához.  |
 
 ## <a name="resources"></a>További források
 

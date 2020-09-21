@@ -1,19 +1,20 @@
 ---
 title: Kvantum gépi tanulási kódtár
+description: Ismerje meg, hogyan használják a gépi tanulást a kvantum-rendszereken
 author: alexeib2
-ms.author: alexei.bocharov@microsoft.com
+ms.author: alexeib
 ms.date: 11/22/2019
 ms.topic: article
 uid: microsoft.quantum.libraries.machine-learning.intro
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 65b0aa6a7f385765933d4d89ce34901f77cf76ec
-ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+ms.openlocfilehash: 9f7f892fb2b76432942c86163497c22f0c73d51f
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88863102"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90833802"
 ---
 # <a name="introduction-to-quantum-machine-learning"></a>Bevezetés a Quantum Machine Learningba
 
@@ -70,8 +71,8 @@ Egyértelműen $b $ értékének a $ (-0.5, + 0,5) $ értékűnek kell lennie, h
 
 A $ (x, y) \in \mathcal{D} $ betanítási eset nem megfelelő $b *besorolásnak* minősül, mert a ($x $-ként a RULE1 $y-nek). A téves besorolások összesített száma az osztályozó *betanítási pontszáma* , amely a $b $ torzítást adja meg. Az *optimális* osztályozó torzítás $b $ a betanítási pontszám csökkentése. Könnyen látható, hogy az előre számított valószínűségi becslések szerint a $ \{ P (M = y_2 | U (\theta) x) | (x, *) \in\mathcal{D} \} $, az optimális osztályozó torzítást a bináris keresés a $ (-0.5, + 0,5) $ intervallumban találja a legtöbb $ \ log_2 (| \mathcal{D} |) értékkel. $ lépések.
 
-### <a name="reference"></a>Hivatkozás
+### <a name="reference"></a>Referencia
 
 Ennek az információnak elégnek kell lennie ahhoz, hogy megkezdje a kód lejátszását. Ha azonban többet szeretne megtudni erről a modellről, olvassa el az eredeti javaslatot: [ *"Circuit-centrikus Quantum osztályozók", Maria Schuld, Alex Bocharov, Garai Viktória Svore és Nathan Wiebe*](https://arxiv.org/abs/1804.00633)
 
-A következő lépésekben látható mintakód mellett az [oktatóanyagban](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/QuantumClassification) is megkezdheti a kvantum-besorolás felfedezését 
+A következő lépésekben látható mintakód mellett az [oktatóanyagban](https://github.com/microsoft/QuantumKatas/tree/main/tutorials/QuantumClassification) is megkezdheti a kvantum-besorolás felfedezését 

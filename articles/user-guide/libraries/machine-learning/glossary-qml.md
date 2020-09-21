@@ -1,19 +1,20 @@
 ---
 title: Quantum Machine learning könyvtár szószedete
+description: A Quantum Machine learning használati feltételeinek szószedete
 author: alexeib2
-ms.author: alexei.bocharov@microsoft.com
+ms.author: alexeib
 ms.date: 2/27/2020
 ms.topic: article
 uid: microsoft.quantum.libraries.machine-learning.training
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 068fc61d0d7c066df1270384679e13a3b3a8c878
-ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+ms.openlocfilehash: 39974af0121a5167f1965e508cd595535178548b
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88863029"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90833897"
 ---
 # <a name="quantum-machine-learning-glossary"></a>Quantum Machine Learning Szószedet
 
@@ -42,7 +43,7 @@ Meghatározza, hogy hány adatminta van használatban a sztochasztikus gradiens 
 ### <a name="training-epochs-tolerance-gridlocks"></a>Képzési korszakok, tolerancia, gridlocks
 
 Az "EPOCH" kifejezés azt jelenti, hogy az ütemezett betanítási adatszolgáltatások egyike teljes.
-A betanítási szálon (lásd alább) lévő időpontok maximális számát meg kell szabni. A betanítási szál a leálláshoz van definiálva (a legismertebb jelölt paraméterekkel), amikor a rendszer elvégezte az időpontok maximális számát. Az ilyen képzések azonban korábban megszűnnek, ha az érvényesítési ütemterv nem a kiválasztott tűréshatár alá esik. Tegyük fel például, hogy a téves besorolási tűréshatár 0,01 (1%); Ha az 2000-minták érvényesítési készletében kevesebb, mint 20 téves besorolás látható, akkor a rendszer elérte a tűréshatár szintjét. Egy betanítási szál idő előtt leáll, ha a pályázó modell ellenőrzési pontszáma nem mutatott javulást több egymást követő korszakban (egy körbetartozás). A körbetartozás-megszakítás logikája jelenleg hardcoded.
+A betanítási szálon (lásd alább) lévő időpontok maximális számát meg kell szabni. A betanítási szál a leálláshoz van definiálva (a legismertebb jelölt paraméterekkel együtt), amikor a rendszer lefuttatja az alapkorszakok maximális számát. Az ilyen képzések azonban korábban megszűnnek, ha az érvényesítési ütemterv nem a kiválasztott tűréshatár alá esik. Tegyük fel például, hogy a téves besorolási tűréshatár 0,01 (1%); Ha az 2000-minták érvényesítési készletében kevesebb, mint 20 téves besorolás látható, akkor a rendszer elérte a tűréshatár szintjét. Egy betanítási szál idő előtt leáll, ha a pályázó modell ellenőrzési pontszáma nem mutatott javulást több egymást követő korszakban (egy körbetartozás). A körbetartozás-megszakítás logikája jelenleg hardcoded.
 
 ### <a name="measurements-count"></a>Mérések száma
 

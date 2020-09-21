@@ -2,19 +2,19 @@
 title: A saját keresési algoritmusának futtatása a Q# Quantum Development Kit-ben
 description: Hozzon létre egy Q# projektet, amely bemutatja a a "a" és a "a" típusú, kanonikus algoritmusok egyikét.
 author: cgranade
-ms.author: chgranad@microsoft.com
+ms.author: chgranad
 ms.date: 10/19/2019
 ms.topic: article
 uid: microsoft.quantum.quickstarts.search
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: f2ae56bdca893e8a317c16d0a993da15b9f021b5
-ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+ms.openlocfilehash: 86c6a651a117b788eb4c8fdd805ead7ab8f54dd7
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88863119"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834805"
 ---
 # <a name="tutorial-implement-grovers-search-algorithm-in-q"></a>Oktatóanyag: A keresési Grover-algoritmus implementálása Q#-ban\#
 
@@ -58,9 +58,9 @@ A fokozatos növekedések száma kevesebb, mint a lista tételeinek száma. Grov
 
 ### <a name="no-locq-applications-with-visual-studio-or-visual-studio-code"></a>Q# alkalmazások Visual Studióval vagy Visual Studio Code-ban
 
-A végrehajtható fájl a projekt konfigurációja és a parancssori lehetőségek függvényében egy szimulátoron vagy egy erőforrásbecslőn futtatja az `@EntryPoint()` attribútummal jelölt műveletet vagy függvényt.
+A program a `@EntryPoint()` projekt konfigurációjától és a parancssori kapcsolóktól függően a szimulátor vagy erőforrás-kalkulátor attribútummal megjelölt műveletet vagy függvényt fogja futtatni.
 
-A szkript végrehajtásához egyszerűen nyomja le a Ctrl + F5 billentyűkombinációt a Visual Studióban.
+A Visual Studióban egyszerűen nyomja le a CTRL + F5 billentyűkombinációt a szkript futtatásához.
 
 A VS Code-ban a `Program.qs` első alkalommal való összeállításához írja be az alábbiakat a terminálban:
 
@@ -89,7 +89,7 @@ operations.qs [options] [command]
 Commands:
 ```
 
-Ennek az az oka, hogy nem adta meg a használni kívánt qubitek számát, így a terminál kínálja fel a végrehajtható fájlhoz elérhető parancsokat. Ha 5 qubitet szeretnénk használni, a következőt írjuk be:
+Ennek az az oka, hogy nem adta meg a használni kívánt qubits számát, így a terminál megjeleníti a végrehajtható programhoz elérhető parancsokat. Ha 5 qubits szeretnénk használni, írja be a következőt:
 
 ```Command line
 dotnet run --n-qubits 5
@@ -110,7 +110,7 @@ Reflecting about marked state...
 Ha ezt az oktatóanyagot élvezte, tekintse meg az alábbi források némelyikét, ha többet szeretne megtudni arról, hogyan használható a Q# saját kvantum-alkalmazások írására:
 
 - [Vissza a QDK-val való ismerkedésről szóló útmutatóhoz](xref:microsoft.quantum.welcome)
-- Egy általánosabb [példa](https://github.com/microsoft/Quantum/tree/master/samples/algorithms/database-search) a keresési Grover-algoritmusra
+- Egy általánosabb [példa](https://github.com/microsoft/Quantum/tree/main/samples/algorithms/database-search) a keresési Grover-algoritmusra
 - [A Grover-kereséssel és a Kvantum Katákkal kapcsolatos további információk](xref:microsoft.quantum.overview.katas)
 - További információk a Grover keresési algoritmusa mögött álló kvantum-számítástechnikai technikával, az [amplitúdó-erősítéssel][amplitude-amplification] kapcsolatban
 - [Kvantum-számítástechnikai fogalmak](xref:microsoft.quantum.concepts.intro)

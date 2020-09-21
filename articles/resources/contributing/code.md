@@ -9,12 +9,12 @@ uid: microsoft.quantum.contributing.code
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 956b0957a5261b8a77bf18d776fbcc2853bfbfe7
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: b27d084bbe2cda878efa6250c52c0ae628637850
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87866909"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834890"
 ---
 # <a name="contributing-code"></a>Hozzájárulás a kódhoz
 
@@ -34,7 +34,7 @@ Ha elfogadjuk a kód bevonását, az a Quantum Development Kit részévé válik
 A Q# könyvtárakat, például a canont alkotó függvények, műveletek és felhasználó által definiált típusok a [**Microsoft/QuantumLibraries**](https://github.com/Microsoft/QuantumLibraries/) adattár fejlesztésének részeként automatikusan tesztelésre kerülnek.
 Új lekéréses kérelem megnyitásakor – például az Azure- [folyamatok](https://azure.microsoft.com/services/devops/pipelines/) konfigurációjában – a lekéréses kérelem módosításai nem bontják le azokat a meglévő funkciókat, amelyekre a Quantum programozási Közösség függ.
 
-A legújabb Q# verzióban az egység tesztelése az attribútummal van definiálva `@Test("QuantumSimulator")` . Az argumentum lehet "QuantumSimulator", "ToffoliSimulator", "TraceSimulator" vagy bármely teljesen minősített név, amely meghatározza a végrehajtási célt. Több, különböző végrehajtási célokat meghatározó attribútum is csatlakoztatható ugyanahhoz a meghívóhoz. A tesztek némelyike továbbra is az elavult [Microsoft. Quantum. xUnit](https://www.nuget.org/packages/Microsoft.Quantum.Xunit/) csomagot használja, amely Q# `Test` a [xUnit](https://xunit.github.io/) -keretrendszerbe végződő összes funkciót és műveletet elérhetővé teszi. Ez a csomag már nem szükséges az egységbeli tesztek definiálásához. 
+A legújabb Q# verzióban az egység-tesztek az attribútummal vannak meghatározva `@Test("QuantumSimulator")` . Az argumentum lehet "QuantumSimulator", "ToffoliSimulator", "TraceSimulator" vagy bármely teljesen minősített név, amely megadja a Futtatás célját. Több, különböző futtatási célokat meghatározó attribútum is csatlakoztatható ugyanahhoz a meghívóhoz. A tesztek némelyike továbbra is az elavult [Microsoft. Quantum. xUnit](https://www.nuget.org/packages/Microsoft.Quantum.Xunit/) csomagot használja, amely Q# `Test` a [xUnit](https://xunit.github.io/) -keretrendszerbe végződő összes funkciót és műveletet elérhetővé teszi. Ez a csomag már nem szükséges az egységbeli tesztek definiálásához. 
 
 A következő függvény használatával biztosítható, hogy a <xref:microsoft.quantum.canon.fst> és a <xref:microsoft.quantum.canon.snd> függvények a megfelelő kimeneteket adják vissza egy reprezentatív példában.
 Ha a vagy a kimenete `Fst` `Snd` helytelen, a `fail` rendszer az utasítást használja, hogy a teszt sikertelen legyen.

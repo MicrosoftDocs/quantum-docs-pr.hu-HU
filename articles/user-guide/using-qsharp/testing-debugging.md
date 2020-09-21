@@ -2,19 +2,19 @@
 title: Tesztelés és hibakeresés
 description: Megtudhatja, hogyan használhatók az egységes tesztek, a tények és a kijelentések, valamint a kvantum-programok tesztelésére és hibakeresésére szolgáló függvények.
 author: tcNickolas
-ms.author: mamykhai@microsoft.com
+ms.author: mamykhai
 ms.date: 06/01/2020
 ms.topic: article
 uid: microsoft.quantum.guide.testingdebugging
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 2b5276da594ba263177d435c1153f6d96e29c4e8
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 2f2181d388a59c1c6c5a0f13c9aa49d5fa1e51ae
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87867913"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90833175"
 ---
 # <a name="testing-and-debugging"></a>Tesztelés és hibakeresés
 
@@ -26,7 +26,7 @@ Ebben a szakaszban a Q# kvantum-programok tesztelésére és hibakeresésére sz
 A klasszikus programok tesztelésének egyik gyakori módszere, ha olyan kisméretű programokat *ír,* amelyekben a kód egy könyvtárban fut, és a kimenetét egy bizonyos várt kimenethez hasonlítja össze.
 Például gondoskodhat arról, hogy a visszaadott érték a következőt jeleníti meg: `Square(2)` `4` 1 – 2 ^ 2 = $4. *a priori*
 
-Q#támogatja az egységek tesztelését a kvantum-programokhoz, és amelyek a [xUnit](https://xunit.github.io/) -egység tesztelési keretrendszerén belül is futtathatnak teszteket.
+Q# támogatja az egységek tesztelését a kvantum-programokhoz, és amelyek a [xUnit](https://xunit.github.io/) -egység tesztelési keretrendszerén belül is futtathatnak teszteket.
 
 ### <a name="creating-a-test-project"></a>Tesztelési projekt létrehozása
 
@@ -69,7 +69,7 @@ Q#A Type és Returns argumentumot használó műveletek vagy függvények `Unit`
 ```
 Mentse a fájlt, és futtassa az összes tesztet. Ekkor két egységre vonatkozó tesztnek kell lennie, amelyek közül az egyik, a pedig az `AllocateQubit` `QuantumSimulator` , ahol a fut `ResourcesEstimator` . 
 
-A Q# fordító felismeri a beépített célokat `"QuantumSimulator"` , `"ToffoliSimulator"` és `"ResourcesEstimator"` érvényes végrehajtási célokat az egység tesztek számára. A teljes nevet is megadhatja egy egyéni végrehajtási cél definiálásához. 
+A Q# fordító felismeri a beépített célokat `"QuantumSimulator"` , `"ToffoliSimulator"` és `"ResourcesEstimator"` érvényes futtatási célokat az egység-tesztekhez. A teljes nevet is megadhatja egy egyéni futtatási cél definiálásához. 
 
 ### <a name="running-no-locq-unit-tests"></a>Futó Q# egység tesztek
 
@@ -113,7 +113,7 @@ Test Run Successful.
 Test execution time: 1.9607 Seconds
 ```
 
-Az egységbeli tesztek a nevük vagy a végrehajtási cél szerint szűrhetők:
+Az egységbeli tesztek a nevük vagy a futtatási cél szerint szűrhetők:
 
 ```bash 
 $ dotnet test --filter "Target=QuantumSimulator"
@@ -127,7 +127,7 @@ A belső függvény <xref:microsoft.quantum.intrinsic.message> típusa `(String 
 
 #### <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
 
-Miután futtatott egy tesztet a test Explorerben, és rákattint a tesztre, megjelenik egy panel, amely a teszt végrehajtásával kapcsolatos információkat jeleníti meg: a Pass/Fail állapot, az eltelt idő és a kimenetre mutató hivatkozás. A **kimenet** lehetőségre kattintva megnyithatja a teszt kimenetét egy új ablakban.
+Miután futtatott egy tesztet a test Explorerben, és rákattint a tesztre, megjelenik egy panel, amely a teszt futtatásával kapcsolatos információkat jeleníti meg: a Pass/Fail állapot, az eltelt idő és a kimenetre mutató hivatkozás. A **kimenet** lehetőségre kattintva megnyithatja a teszt kimenetét egy új ablakban.
 
 ![teszt kimenete](~/media/unit-test-output.png)
 
@@ -177,7 +177,7 @@ operation AssertQubitsAreAvailable() : Unit
 ```
 
 Itt a műveletet használjuk a <xref:microsoft.quantum.environment.getqubitsavailabletouse> rendelkezésre álló qubits számának visszaküldéséhez.
-Mivel ez a program globális állapotától és a végrehajtási környezettől függ, a definíciójának is `AssertQubitsAreAvailable` egy műveletnek kell lennie.
+Mivel ez a program globális állapotától és a futtatási környezettől függ, a definíciójának is `AssertQubitsAreAvailable` egy műveletnek kell lennie.
 Ezt a globális állapotot azonban használhatja arra, hogy egy egyszerű `Bool` értéket adjon meg bemenetként a `Fact` függvénynek.
 
 Ezen ötletek alapján [a bevezetés](xref:microsoft.quantum.libraries.standard.prelude)két, különösen hasznos állítást kínál, <xref:microsoft.quantum.diagnostics.assertmeasurement> és <xref:microsoft.quantum.diagnostics.assertmeasurementprobability> mindkét modell a műveletekre épül `()` . Ezek a kijelentések mindegyike egy olyan Pauli-operátort mutat be, amely egy adott érdeklődési mérőszámot, egy kvantum-regisztrációt és egy feltételezett eredményt mutat be.
@@ -314,7 +314,7 @@ Az alábbi példák `DumpMachine` néhány gyakori állapotot mutatnak be:
 
 ***
 
-Mivel <xref:microsoft.quantum.diagnostics.dumpmachine> a a névtér része <xref:microsoft.quantum.diagnostics> , hozzá kell adnia egy `open` utasítást az eléréséhez:
+Mivel <xref:microsoft.quantum.diagnostics.dumpmachine> a a névtér része  <xref:microsoft.quantum.diagnostics> , hozzá kell adnia egy `open` utasítást az eléréséhez:
 
 ```qsharp
 namespace Samples {
@@ -333,7 +333,7 @@ namespace Samples {
 
 ### <a name="dumpregister"></a>DumpRegister
 
-<xref:microsoft.quantum.diagnostics.dumpregister>ugyanúgy működik <xref:microsoft.quantum.diagnostics.dumpmachine> , mint az, hogy a qubits egy tömbjét is végrehajtja, amely az adatok mennyiségét csak a megfelelő qubits vonatkozó információkra korlátozza.
+<xref:microsoft.quantum.diagnostics.dumpregister> ugyanúgy működik <xref:microsoft.quantum.diagnostics.dumpmachine> , mint az, hogy a qubits egy tömbjét is végrehajtja, amely az adatok mennyiségét csak a megfelelő qubits vonatkozó információkra korlátozza.
 
 A szolgáltatáshoz hasonlóan <xref:microsoft.quantum.diagnostics.dumpmachine> a által generált információk is a <xref:microsoft.quantum.diagnostics.dumpregister> célszámítógéptől függenek. Ahhoz, hogy a teljes állapotú kvantum-szimulátor a fájlba írja a Wave funkciót, a megadott qubits által generált kvantum alrendszer globális szakaszába kerül, amely ugyanabban a formátumban van <xref:microsoft.quantum.diagnostics.dumpmachine> .  Például: ismételje meg a gépet, amely csak két qubits foglal le, és a Quantum State $ $ \begin{align} \ket{\psi} = \frac {1} {\sqrt {2} } \ket {00} -\frac{(1 + i)} {2} \ket {10} =-e ^ {-i \ PI/4} ((\frac {1} {\sqrt} \ket {2} {0} -\frac{(1 + i)} {2} \ket {1} ) \otimes \frac{-(1 + i)} {\sqrt {2} } \ket {0} ), \end{align} $ $ hívás <xref:microsoft.quantum.diagnostics.dumpregister> a következő kimenet előállítására `qubit[0]` :
 
@@ -384,6 +384,6 @@ namespace app
 
 ## <a name="debugging"></a>Hibakeresés
 
-A (z `Assert` ) és a `Dump` functions és az Operations (funkciók és műveletek) esetében a Q# Visual Studio szabványos hibakeresési képességeinek egy részét támogatja: [sor töréspontok beállítása](https://docs.microsoft.com/visualstudio/debugger/using-breakpoints), az [F10 használatával történő léptetés](https://docs.microsoft.com/visualstudio/debugger/navigating-through-code-with-the-debugger), valamint a [klasszikus változók értékeinek vizsgálata](https://docs.microsoft.com/visualstudio/debugger/autos-and-locals-windows) mind lehetséges a szimulátorban.
+A (z `Assert` ) és a `Dump` functions és az Operations (funkciók és műveletek) esetében a Q# Visual Studio szabványos hibakeresési képességeinek egy részhalmazát támogatja: a [vonali töréspontok beállítása](https://docs.microsoft.com/visualstudio/debugger/using-breakpoints), az [F10 használatával történő léptetés](https://docs.microsoft.com/visualstudio/debugger/navigating-through-code-with-the-debugger), valamint a [klasszikus változók értékeinek vizsgálata](https://docs.microsoft.com/visualstudio/debugger/autos-and-locals-windows) mind lehetséges, ha a kódot a szimulátoron futtatják.
 
 A Visual Studio Code-ban a hibakeresés a C# által a OmniSharp által működtetett Visual Studio Code-bővítmény által biztosított hibakeresési képességeket használja, és a [legújabb verziót](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp)kell telepítenie. 

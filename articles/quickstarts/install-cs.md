@@ -9,12 +9,12 @@ uid: microsoft.quantum.install.cs
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 24318380e0e63957a51961762a33446fe0121b21
-ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+ms.openlocfilehash: 96a1d0d75f3ff7de11407fd76479cbae86ce7571
+ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
 ms.translationtype: HT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88863669"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90759272"
 ---
 # <a name="develop-with-no-locq-and-net"></a>Fejlesztés Q#-pal és .NET-tel
 
@@ -88,7 +88,7 @@ Ha a Visual Studiótól vagy a VS Code-tól eltérő szerkesztőt használ, egys
 Miután a fenti utasítások szerint beállította a projekteket, a .NET-konzolalkalmazásból meghívhatja a Q#-ot.
 A Q#-fordító minden Q#-művelethez és -függvényhez .NET-osztályokat hoz létre, amelyek lehetővé teszik, hogy kvantumprogramokat futtathasson egy szimulátoron.
 
-A [.NET-együttműködési minta](https://github.com/microsoft/Quantum/tree/master/samples/interoperability/dotnet) például a következő Q#-műveletet tartalmazza:
+A [.NET-együttműködési minta](https://github.com/microsoft/Quantum/tree/main/samples/interoperability/dotnet) például a következő Q#-műveletet tartalmazza:
 
 :::code language="qsharp" source="~/quantum/samples/interoperability/dotnet/qsharp/Operations.qs" range="67-75":::
 

@@ -1,6 +1,6 @@
 ---
 title: a qubit a kvantum-számítástechnikai leírásban: Ismerje meg a qubits, a Quantum Computing információinak alapvető egységét.
-Szerző: QuantumWriter UID: Microsoft. Quantum. Concepts. qubit MS. Author: nawiebe@microsoft.com MS. Date: 12/11/2017 MS. topic: cikk No-Loc:
+Szerző: QuantumWriter UID: Microsoft. Quantum. Concepts. qubit MS. Author: v-benbra MS. Date: 12/11/2017 MS. topic: No-Loc:
 - "Q#"
 - "$$v"
 - "$$"
@@ -100,7 +100,7 @@ A kvantum-állapot vektorai $ \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} $ és $ \be
 
 Ezt a két kvantum-állapotot a klasszikus bit két állapotának, azaz $ 0 és 1 értéknek kell megfelelnie $ $ $ . A standard konvenció a következő választás
 
-$$0 \equiv \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} , \qquad 1 \equiv \begin{bmatrix} 0 \\\\ 1 \end{bmatrix} ,$$
+$$0 \equiv \begin{bmatrix} 1 \\\\  0 \end{bmatrix} , \qquad 1 \equiv \begin{bmatrix} 0 \\\\  1 \end{bmatrix} ,$$
 
 Habár a szemközti választási lehetőség is megfelelő lehet. Így a lehetséges qubit kvantum-állapotú vektorok végtelen száma közül csak kettő felel meg a klasszikus bitek állapotának. az összes többi kvantum-állapot nem.
 
@@ -120,7 +120,7 @@ $ $ A qubits a [*Bloch szféra*](https://en.wikipedia.org/wiki/Bloch_sphere) ké
 ![Bloch gömb](~/media/concepts_bloch.png)
 
 Az ábrán látható nyilak azt mutatják be, hogy a kvantum-állapot vektora hogyan mutat, és a nyíl minden átalakítása a kardinális tengelyek egyikére mutat.
-Miközben a kvantum-számítási folyamatra gondol, mivel a Forgások sorozatából egy hatékony intuíció van, nagy kihívást jelent az algoritmusok megtervezése és leírása. Q#a probléma megoldásához adjon meg egy nyelvet az ilyen elforgatások leírásához.
+Miközben a kvantum-számítási folyamatra gondol, mivel a Forgások sorozatából egy hatékony intuíció van, nagy kihívást jelent az algoritmusok megtervezése és leírása. Q# a probléma megoldásához adjon meg egy nyelvet az ilyen elforgatások leírásához.
 
 ## <a name="single-qubit-operations"></a>Qubit műveletek
 
@@ -128,7 +128,7 @@ A kvantum-számítógépek a kvantum-kapuk univerzális készletének használat
 Ez az egyetemességi koncepció hasonlít a hagyományos (azaz klasszikus) számítástechnikai koncepcióhoz, ahol a kapuk univerzálisnak tekintendők, ha a bemeneti bitek minden átalakítása véges hosszúságú áramkör használatával végezhető el.
 A kvantum-számítástechnika esetében a qubit elvégezhető érvényes átalakítások egységes átalakítások és mérések.
 A *adjoint művelet* vagy az összetett konjugátum átültetése rendkívül fontos a Quantum Computing számára, mivel ez szükséges a kvantum-átalakítások megfordításához.
-Q#Ez azt mutatja be, hogy a metódusok automatikusan lefordítják a Gate-sorrendeket a adjoint, így sok esetben menti a programozót a adjoints. Alább látható egy példa:
+Q# Ez azt mutatja be, hogy a metódusok automatikusan lefordítják a Gate-sorrendeket a adjoint, így sok esetben menti a programozót a adjoints. Alább látható egy példa:
 
 ```qsharp
 operation PrepareSuperposition(qubit : Qubit) : Unit
@@ -145,7 +145,7 @@ Az egyetemesség esetében követelmény, hogy a kvantum-számítógép csak a v
 Más szóval, a Gates egy univerzális Gate-készlet, ha bármely egységes átalakítás a készletből származó Gates-termékként is írható. Megköveteljük, hogy az előírt hibákhoz kötve legyenek a Gates $ G_ { 1 } , G_ { 2 } , a \ldots, a G_N a $ Gate készletből, amely
 
 $$
-G_N G_ { N-1 } \cdots G_2 G_1 \approx U.$$
+G_N G_ { N-1 } \cdots G_2 G_1 \approx U. $$
 
 Vegye figyelembe, hogy mivel a mátrixok szorzási konvenciója, hogy a jobbról az első kapu műveletét az ebben a sorozatban, $ G_N $ , valójában az utolsó lett alkalmazva a kvantum-állapot vektorára. Többek között úgy mondhatjuk, hogy egy ilyen Gate-készlet univerzális, ha minden hibatűrési $ \epsilon > 0 $ létezik $ G_1, \ldots, G_N $ úgy, hogy a $ G_N \ldots G_1 és az U közötti távolság a $ $ $ legtöbb $ \epsilon $ . Ideális esetben a $ $ \epsilon ezen távolságának eléréséhez szükséges N értéknek a $ $ poli-logaritmikusan $ 1/\ epszilon kell lennie $ .
 

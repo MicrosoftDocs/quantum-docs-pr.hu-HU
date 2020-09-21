@@ -1,20 +1,20 @@
 ---
 title: Hamilton Dynamics szimulálása
 description: Ismerje meg, hogyan használható a Trotter-Suzuki-képletek és-qubitization a Hamilton-szimulációkkal való együttműködéshez.
-author: nathanwiebe2
-ms.author: nawiebe@microsoft.com
+author: bradben
+ms.author: v-benbra
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.simulationalgorithms
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 40f79a66ae95e20a8b1c19af735eedca5e3c15ef
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 299eb1484a697ad9d1577aabb44ccb61e908bae3
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869528"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834006"
 ---
 # <a name="simulating-hamiltonian-dynamics"></a>Hamilton Dynamics szimulálása
 
@@ -46,9 +46,9 @@ A Hamiltonians legegyszerűbb családja, és vitathatatlanul a leghasznosabb, ho
 A Pauli-operátorok könnyen szimulálható, mert a Clifford-műveletekkel (amelyek standard szintű kapuk a kvantum-számítástechnikai szolgáltatásokban) elhelyezhetők.
 Ha a rendszer ezt követően is elvégezte a eigenvalues, a rendszer az általuk használt qubits paritását is megtalálhatja.
 
-Például $ $ e ^ {-iX\otimes X t} = (H\otimes H) e ^ {-iZ\otimes Z t} (H\otimes H), $ $, ahol $ $ e ^ {-i Z \otimes Z t} = \begin{bmatrix} e ^ {-it} & 0 & 0 & 0\\\
-        0 & e ^ {i t} & 0 & 0\\\
-        0 & 0 & e ^ {it} & 0\\\
+Például $ $ e ^ {-iX\otimes X t} = (H\otimes H) e ^ {-iZ\otimes Z t} (H\otimes H), $ $, ahol $ $ e ^ {-i Z \otimes Z t} = \begin{bmatrix} e ^ {-it} & 0 & 0 & 0 \\\
+        0 & e ^ {i t} & 0 & 0 \\\
+        0 & 0 & e ^ {it} & 0 \\\
         0 & 0 & 0 & e ^ {-it} \end{bmatrix}.
 $ $ Itt, $e ^ {-iHt} \ket {00} = e ^ {it} \ket {00} $ és $e ^ {-iHt} \ket {01} = e ^ {-it} \ket {01} $, amely közvetlenül látható annak következményeként, hogy a $0 $ $0 $ paritása, míg a bit sztring $1 $ értéke $1 $.
 
@@ -65,7 +65,7 @@ A Pauli-operátorok exponenciálisan valósíthatók meg közvetlenül Q# a <xre
 
 A Fermionic Hamiltonians esetében a [Jordan – Wigner elbomlása](xref:microsoft.quantum.chemistry.concepts.jordanwigner) kényelmesen leképezi a Hamilton-t a Pauli-operátorok összegére.
 Ez azt jelenti, hogy a fenti megközelítés könnyen módosítható a kémia szimulálása érdekében.
-Az alábbiakban egy egyszerű példa arra, hogy az ilyen szimulációkat hogyan lehet a kémián belül végrehajtani a Jordan-Wigner ábrázolásban, és nem kell manuálisan összevetnie az összes Pauli kifejezéssel.
+Az alábbiakban egy egyszerű példa arra, hogy az ilyen szimulációk hogyan futnak a kémián belül a Jordan-Wigner ábrázolásban.
 A kiindulási pont a Fermionic Hamilton [Jordánia – Wigner kódolása](xref:microsoft.quantum.chemistry.concepts.jordanwigner) , amely kód formájában szerepel az osztály példányaiban `JordanWignerEncoding` .
 
 ```csharp
@@ -90,7 +90,7 @@ A kiindulási pont a Fermionic Hamilton [Jordánia – Wigner kódolása](xref:m
 ```
 
 A Wigner-ábrázolás ezen formátuma, amely a szimulációs algoritmusok által fogyasztott, Q# felhasználó által definiált típus `JordanWignerEncodingData` .
-Q#Ez a formátum egy olyan kényelmi függvény, `TrotterStepOracle` amely egy operátort ad vissza a Trotter – Suzuki integrátor használatával, a végrehajtásához szükséges egyéb paraméterek mellett.
+Q#Ez a formátum egy olyan kényelmi függvény, `TrotterStepOracle` amely egy operátort ad vissza a Trotter – Suzuki integrátor használatával, a futtatásához szükséges egyéb paraméterek mellett.
 
 ```qsharp
 // qSharpData passed from driver
@@ -145,7 +145,7 @@ Ez azt jelentheti, hogy a $ \operatorname{Select} ^ 2 \ ket {j} \ket{\psi} = \ke
 
 A második alrutin neve $ \operatorname{Prepare} $.
 Míg a Select művelet lehetővé teszi, hogy koherens módon hozzáférhessen a Hamilton egyes használati feltételeihez $H _j $ a felkészülési alrutin lehetővé teszi az együtthatók elérését $h _j $, \begin{Equation} \operatorname{Prepare}\ket {0} = \ sum_j \sqrt{\frac{h_j} {| H | _1}} \ket{j}.
-Ezt követően a \end{Equation} egy szorzás vezérelt fázisú kaput használva láthatjuk, hogy $ $ \Lambda\ket {0} ^ {\otimes n} = \begin{Cases} \- \ket{x} & \text{if} x = 0\\\
+Ezt követően a \end{Equation} egy szorzás vezérelt fázisú kaput használva láthatjuk, hogy $ $ \Lambda\ket {0} ^ {\otimes n} = \begin{Cases} \- \ket{x} & \text{if} x = 0 \\\
         \ket{x} & \text{otherwise} \end{Cases}.
 $$
 
@@ -157,10 +157,10 @@ A Walk operátor ($W $) a $ \operatorname{Select} $ és a $R $ műveletekben kif
 Ezek az alrutinok egyszerűen beállíthatók a alkalmazásban Q# .
 Vegyük például az egyszerű qubit keresztirányú-Ising Hamilton, ahol a $H = X_1 + X_2 + Z_1 Z_2 $ értéket.
 Ebben az esetben a Q# $ \operatorname{Select} $ művelet megvalósítására szolgáló kódot a rendszer meghívja <xref:microsoft.quantum.canon.multiplexoperations> , míg a $ \operatorname{Prepare} $ műveletet a használatával lehet megvalósítani <xref:microsoft.quantum.preparation.preparearbitrarystate> .
-Az Hubbard-modell szimulálása például [ Q# mintaként](https://github.com/microsoft/Quantum/tree/master/samples/simulation/hubbard)is megtalálható.
+Az Hubbard-modell szimulálása például [ Q# mintaként](https://github.com/microsoft/Quantum/tree/main/samples/simulation/hubbard)is megtalálható.
 
 Ha manuálisan szeretné megadni ezeket a lépéseket az önkényes kémiai problémákhoz, nagy erőfeszítést igényel, ami elkerülhető a kémiai könyvtár használatával.
-A fenti Trotter – Suzuki szimulációs algoritmushoz hasonlóan a `JordanWignerEncodingData` rendszer `QubitizationOracle` átadja a Walk-operátort visszaadó kényelmi függvénynek, a végrehajtásához szükséges egyéb paraméterek mellett.
+A fenti Trotter – Suzuki szimulációs algoritmushoz hasonlóan a `JordanWignerEncodingData` rendszer `QubitizationOracle` átadja a Walk-operátort visszaadó kényelmi függvénynek a futtatásához szükséges egyéb paramétereket is.
 
 ```qsharp
 // qSharpData passed from driver

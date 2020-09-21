@@ -1,22 +1,22 @@
 ---
-title: Q#Fájl szerkezete
+title: Q# Fájl szerkezete
 description: Leírja egy fájl szerkezetét és szintaxisát Q# .
 author: gillenhaalb
-ms.author: a-gibec@microsoft.com
+ms.author: a-gibec
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.filestructure
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: ac73962b1a718cd04aa87ee3476c66781fe3ac2b
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 98b3a2e35186989b8191cc566a5d5310bc26eafc
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87867930"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90833311"
 ---
-# <a name="no-locq-file-structure"></a>Q#Fájl szerkezete
+# <a name="no-locq-file-structure"></a>Q# Fájl szerkezete
 
 A Q# fájlok *névtér-deklarációk*sorozatából állnak.
 Minden névtér-deklaráció a felhasználó által definiált típusokra, műveletekre és függvényekre vonatkozó deklarációkat tartalmaz, és tetszőleges számú deklarációt és sorrendet is tartalmazhat.
@@ -76,7 +76,7 @@ Például `Op` a névtérből megnevezett művelet miatt `X.Y` :
 Általában jobb, ha egy direktíva segítségével egy névteret is tartalmaz `open` .
 Teljesen minősített név használata kötelező, ha két névtér definiálja ugyanazt a nevet, és a jelenlegi forrás mindkettőből származó szerkezeteket használ.
 
-Q#ugyanazokat a szabályokat követi, mint a többi .NET-nyelv elnevezése.
+Q# ugyanazokat a szabályokat követi, mint a többi .NET-nyelv elnevezése.
 A azonban Q# nem támogatja a névterek relatív hivatkozásait.
 Ha például a névtér `a.b` meg van nyitva, egy nevű műveletre mutató hivatkozás `c.d` *nem* oldható fel teljes nevű műveletre `a.b.c.d` .
 
@@ -91,7 +91,7 @@ Kerülje a több utasítás egyetlen sorra való elhelyezését.
 
 ## <a name="statement-blocks"></a>Utasítások blokkja
 
-Q#a utasítások a kapcsos zárójelek közé sorolhatók `{ }` . Egy utasítás-blokk egy nyitó karakterrel kezdődik, `{` és egy zárással végződik `}` .
+Q# a utasítások a kapcsos zárójelek közé sorolhatók `{ }` . Egy utasítás-blokk egy nyitó karakterrel kezdődik, `{` és egy zárással végződik `}` .
 
 Egy másik blokkban található, lexikálisan zárt utasítási blokk a tartalmazó blokk alblokkjának tekintendő; a és az alblokkokat külső és belső blokkoknak is nevezik.
 

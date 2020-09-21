@@ -2,19 +2,19 @@
 title: Kvantum-véletlenszámgenerátor létrehozása
 description: Hozzon létre egy olyan Q# projektet, amely az alapvető kvantum-fogalmakat, például a felépítést mutatja be egy kvantum véletlenszám-generátor létrehozásával.
 author: bromeg
-ms.author: megbrow@microsoft.com
+ms.author: megbrow
 ms.date: 10/25/2019
 ms.topic: article
 uid: microsoft.quantum.quickstarts.qrng
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: d80f1c640ac7ddb0104ccbbb6de6d0e26ba05fd6
-ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+ms.openlocfilehash: a0e8933e6a77d017db914e4bb969ea05f760a443
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88863625"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834040"
 ---
 # <a name="tutorial-implement-a-quantum-random-number-generator-in-q"></a>Oktatóanyag: Kvantum-véletlenszámgenerátor implementálása a Q#-ban\#
 
@@ -33,7 +33,7 @@ A-ben írt kvantum-algoritmus egyszerű példája Q# egy kvantum véletlenszám-
 
 :::code language="qsharp" source="~/quantum/samples/getting-started/qrng/Qrng.qs" range="3-15,34":::
 
-Ahogy azt [A kvantum-számítástechnika ismertetése](xref:microsoft.quantum.overview.understanding) című cikkben említettük, a qubit a kvantuminformáció egysége, amely szuperpozícióban lehet. Ha megmérjük, a qubit értéke csak 0 vagy 1 lehet. Végrehajtás során azonban a qubit állapota a 0 vagy 1 érték méréssel történő leolvasásának valószínűségét jelzi. Ezt a valószínűségi állapotot nevezzük szuperpozíciónak. E valószínűség segítségével generálhatunk véletlen számokat.
+Ahogy azt [A kvantum-számítástechnika ismertetése](xref:microsoft.quantum.overview.understanding) című cikkben említettük, a qubit a kvantuminformáció egysége, amely szuperpozícióban lehet. Ha megmérjük, a qubit értéke csak 0 vagy 1 lehet. Ha azonban egy művelet fut, a qubit állapota azt a valószínűséget jelöli, hogy a rendszer 0 vagy 1 értéket olvas be egy méréssel. Ezt a valószínűségi állapotot nevezzük szuperpozíciónak. E valószínűség segítségével generálhatunk véletlen számokat.
 
 A Q# művelet során bemutatjuk a `Qubit` natív adattípust Q# . Egy `Qubit` csak a `using` utasítással foglalható le. Lefoglalás esetén a qubit mindig `Zero` állapotba kerül. 
 
@@ -74,11 +74,11 @@ A teljes alkalmazás létrehozásához Q# adja hozzá a következő belépési p
 
 :::code language="qsharp" source="~/quantum/samples/getting-started/qrng/Qrng.qs" range="17-33":::
 
-A végrehajtható fájl a projekt konfigurációja és a parancssori lehetőségek függvényében egy szimulátoron vagy egy erőforrásbecslőn futtatja az `@EntryPoint()` attribútummal jelölt műveletet vagy függvényt.
+A program a `@EntryPoint()` projekt konfigurációjától és a parancssori kapcsolóktól függően a szimulátor vagy erőforrás-kalkulátor attribútummal megjelölt műveletet vagy függvényt fogja futtatni.
 
 :::code language="qsharp" source="~/quantum/samples/getting-started/qrng/Qrng.qs" range="3-34":::
 
-A szkript végrehajtásához egyszerűen nyomja le a Ctrl + F5 billentyűkombinációt a Visual Studióban.
+A Visual Studióban egyszerűen nyomja le a CTRL + F5 billentyűkombinációt a szkript futtatásához.
 
 A VS Code-ban a Program.qs első alkalommal való összeállításához írja be az alábbiakat a terminálban:
 
