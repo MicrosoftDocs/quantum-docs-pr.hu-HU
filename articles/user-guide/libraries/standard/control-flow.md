@@ -3,18 +3,18 @@ title: A standard libararies a flow-vezérlők Q#
 description: Ismerje meg a Flow Control műveleteit és funkcióit a Microsoft Q# standard Library-ben.
 author: QuantumWriter
 uid: microsoft.quantum.concepts.control-flow
-ms.author: martinro@microsoft.com
+ms.author: martinro
 ms.date: 12/11/2017
 ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: a440f1ef2b901b18593816ca27aeadf7ab827104
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 1cfef50cf2bbecd2043972a662edd8120c5570ec
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868576"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835621"
 ---
 # <a name="higher-order-control-flow"></a>Magasabb rendű vezérlési folyamat #
 
@@ -86,7 +86,7 @@ Ez azt jelenti, hogy a `ApplyToEachCA` megjelenő hívások olyan műveletekben 
 Hasonlóképpen, az <xref:microsoft.quantum.canon.applytoeachindex> űrlap mintázatának ábrázolására is hasznos, `U(0, targets[0]); U(1, targets[1]); ...` és a bemenetek által támogatott összes-kombinációhoz biztosít verziókat.
 
 > [!TIP]
-> `ApplyToEach`a Type-paraméter úgy van megadva, hogy olyan műveletekkel is használható legyen, amelyek nem a (z) értéket használják `Qubit` .
+> `ApplyToEach` a Type-paraméter úgy van megadva, hogy olyan műveletekkel is használható legyen, amelyek nem a (z) értéket használják `Qubit` .
 > Tegyük fel például, hogy a `codeBlocks` <xref:microsoft.quantum.errorcorrection.logicalregister> helyreállításhoz szükséges értékek tömbje.
 > Ezután `ApplyToEach(Recover(code, recoveryFn, _), codeBlocks)` alkalmazza a hiba – a kód és a `code` helyreállítási függvényt az `recoveryFn` egyes blokkokra egymástól függetlenül.
 > Ez a klasszikus bemenetek esetében is `ApplyToEach(R(_, _, qubit), [(PauliX, PI() / 2.0); (PauliY(), PI() / 3.0]))` érvényes: a $ \pi/$2 rotációját alkalmazza a $X $ értékre, amelyet a $PI/$3 $Y $ értékkel való elforgatása követ.
@@ -120,7 +120,7 @@ Mivel a vezérlési műveletek általában költségesek lehetnek, az ellenőrz�
 
 > [!NOTE]
 > A $U $ kiszámításának egyik másik következménye, hogy nem kell még azt is tudnia, hogy hogyan kell alkalmazni az üzemben lévőket `Controlled` `U` .
-> `ApplyWithCA`Ezért a vártnál gyengébb aláírással rendelkezik:
+> `ApplyWithCA` Ezért a vártnál gyengébb aláírással rendelkezik:
 > ```qsharp
 > ApplyWithCA<'T> : (('T => Unit is Adj),
 >     ('T => Unit is Adj + Ctl), 'T) => Unit

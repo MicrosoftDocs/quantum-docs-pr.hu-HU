@@ -1,22 +1,22 @@
 ---
-title: Q#Alapjai
-description: Alapvető fogalmakQ#
+title: Q# Alapjai
+description: Alapvető fogalmak Q#
 author: gillenhaalb
-ms.author: a-gibec@microsoft.com
+ms.author: a-gibec
 ms.date: 02/28/2020
 ms.topic: article
 uid: microsoft.quantum.guide.basics
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 4f4a75cdaaa070fd763d7f75429b7c39357d25a5
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 86f6538cf383f4e7c14255b38cfb1c141c8f991b
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869647"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835519"
 ---
-# <a name="no-locq-basics"></a>Q#Alapjai
+# <a name="no-locq-basics"></a>Q# Alapjai
 
 Ez a cikk röviden bemutatja a alapszintű építőelemeit Q# .
 
@@ -39,7 +39,7 @@ using (qubit = Qubit()) {
 ```
 A qubits inicializálásával és *lefoglalásával*kapcsolatos további információkért lásd: [a qubits használata](xref:microsoft.quantum.guide.qubits).
 
-## <a name="quantum-states-in-no-locq"></a>Quantum állapotok a-benQ#
+## <a name="quantum-states-in-no-locq"></a>Quantum állapotok a-ben Q#
 
 Fontos, hogy az előző program nem hivatkozik explicit módon az állapotra, Q# de azt is ismerteti, hogy a program hogyan *alakította át* az állapotot.
 Ezzel a megközelítéssel teljesen agnosztikus lehet arról, hogy mi *is az egyes* célszámítógépen a kvantum-állapot, ami eltérő értelmezésekkel rendelkezhet a számítógéptől függően. 
@@ -53,7 +53,7 @@ De a jövő irányába szemlélve, amikor a célszámítógép egy valódi kvant
 A Q# program újrakombinálja ezeket a műveleteket a célszámítógép által meghatározott módon, hogy új, magasabb szintű műveleteket hozzon létre a kvantum-számításokhoz.
 Ily módon megkönnyíti Q# a Quantum és a hibrid kvantum – klasszikus algoritmusok kiépítését, valamint a célszámítógép vagy szimulátor struktúrájára vonatkozó általános szempontokat is.
 
-## <a name="no-locq-operations-and-functions"></a>Q#műveletek és függvények
+## <a name="no-locq-operations-and-functions"></a>Q# műveletek és függvények
 
 Konkrétan a Q# program a *műveleteket*, a *függvényeket*és bármely felhasználó által definiált típust magában foglalja. 
 
@@ -65,13 +65,13 @@ Ebben az esetben `Measure` egy *művelet* , amely arra utasítja a célszámít�
 A műveletek és a függvények együtt *callables*néven ismertek. A rendszer az alapul szolgáló struktúrát és viselkedést is bevezeti és részletezi a [alkalmazásban Q# ](xref:microsoft.quantum.guide.operationsfunctions).
 
 
-## <a name="no-locq-syntax-overview"></a>Q#szintaxis áttekintése
+## <a name="no-locq-syntax-overview"></a>Q# szintaxis áttekintése
 
 A nyelv szintaxisa a szintaktikai módon helyes programot alkotó szimbólumok különböző kombinációit írja le.
 A alkalmazásban a Q# szintaktikai elemek három különböző csoportba sorolhatók: típusok, kifejezések és utasítások.
 
 ### <a name="types"></a>Típusok
-Q#a egy erősen gépelt nyelv, amely lehetővé teszi, hogy a típusok körültekintő használata segíthet a fordítónak a programokkal kapcsolatos erős garanciák biztosításában a Q# fordítási idő alatt.
+Q# a egy erősen gépelt nyelv, amely lehetővé teszi, hogy a típusok körültekintő használata segíthet a fordítónak a programokkal kapcsolatos erős garanciák biztosításában a Q# fordítási idő alatt.
 A standard és a kvantum-specifikus beépített primitív típusok (például,,, `Int` `Bool` és) mellett a `Qubit` `Result` Q# felhasználó által definiált típusokhoz is támogatást biztosít.
 
 Az összes primitív típus leírását, a tömb-és a rekordos típusok részleteit, valamint az új típusok fájlon belüli definiálásának lépéseit a következő Q# témakörben talál [ Q# ](xref:microsoft.quantum.guide.types):.
@@ -87,7 +87,7 @@ Például egy másik `Int` kifejezés, amely kiértékeli a következőt: `5` `2
 A kifejezésekkel és a kompatibilis operátorokkal kapcsolatos további információkért Q# lásd: [kifejezések Q# beírása a alkalmazásban ](xref:microsoft.quantum.guide.expressions). 
 
 ### <a name="statements"></a>Utasítások 
-Az utasítás egy kötelező programozási nyelv szintaktikai egysége, amely némi művelet elvégzését fejezi ki. Az utasításokban szereplő kifejezések kontrasztja nem ad eredményül az eredményeket, és kizárólag azok mellékhatásait hajtja végre. A kifejezések azonban mindig visszaadnak egy eredményt, és gyakran nincsenek mellékhatásai. Röviden, a rendszer Q# végrehajtja az utasításokat, míg a kifejezések kiértékelése megtörténik.
+Az utasítás egy kötelező programozási nyelv szintaktikai egysége, amely némi művelet elvégzését fejezi ki. Az utasításokban szereplő kifejezések kontrasztja nem adja vissza az eredményeket, és kizárólag azok mellékhatásait futtatja. A kifejezések azonban mindig visszaadnak egy eredményt, és gyakran nincsenek mellékhatásai. Röviden, az Q# utasítások futnak, míg a kifejezések kiértékelése megtörténik.
 
 Egy utasítás egyszerű példája egy Q# szimbólum társítása egy kifejezéshez:
 ```qsharp

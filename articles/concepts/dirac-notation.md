@@ -1,6 +1,6 @@
 ---
 title: Dirac-jelölés leírása: megismerheti a Dirac-jelölés használatát a kvantum-állapotok, valamint a kvantum-műveletek szimulálása érdekében.
-Szerző: QuantumWriter UID: Microsoft. Quantum. Concepts. Dirac MS. Author: nawiebe@microsoft.com MS. Date: 12/11/2017 MS. topic: cikk No-Loc:
+Szerző: QuantumWriter UID: Microsoft. Quantum. Concepts. Dirac MS. Author: v-benbra MS. Date: 12/11/2017 MS. topic: No-Loc:
 - "Q#"
 - "$$v"
 - "$$"
@@ -230,5 +230,5 @@ Ez a fogalom azt jelenti, hogy az államot mátrixként, nem pedig vektorként j
 A kvantum-számítástechnika egyes területein az általános kvantum-operátorok, a vektorok helyett mindenütt elérhetők, de nem szükségesek a mező alapjaihoz.
 Az érdekelt olvasó számára javasoljuk, hogy olvassa el a [További tudnivalókat ismertető](xref:microsoft.quantum.more-information)füzetek egyikét.
 
-## <a name="no-locq-gate-sequences-equivalent-to-quantum-states"></a>Q#a kvantum-állapotoknak megfelelő Gate-sequencek
+## <a name="no-locq-gate-sequences-equivalent-to-quantum-states"></a>Q# a kvantum-állapotoknak megfelelő Gate-sequencek
 Az utolsó pont a kvantum-jelöléssel és a Q# programozási nyelvvel ér véget: a dokumentum kezdetén megemlítettük, hogy a kvantum-állapot a kvantum-számítástechnikai információk alapvető célja.  Ekkor meglepőnek tűnhet, hogy a kvantum- Q# állapot fogalma nincs.  Ehelyett az összes állapotot csak az előkészítéséhez használt műveletek írják le.  Az előző példa egy kiváló illusztráció.  Ahelyett, hogy egységes, a regiszterben lévő összes kvantum-sztringre kifejezzék a pozíciót, az eredmény a következők egyike lehet: $ H ^ { \otimes n } \ket { 0 } $ .  Ennek az állapotnak az exponenciálisan rövidebb leírása nem csupán az előnye, hogy klasszikusan indokolja, de az algoritmus megvalósításához szükséges műveleteket is tömören definiálja.  Emiatt úgy tervezték, hogy a kiindulási és a Q# kvantum-állapot helyett a Gate-sorozatot bocsátja ki, azonban elméleti szinten a két perspektíva egyenértékű.

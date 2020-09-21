@@ -1,32 +1,32 @@
 ---
-title: Kifejezések aQ#
+title: Kifejezések a Q#
 description: Megtudhatja, hogyan adhat meg, hivatkozhat és egyesíthet állandókat, változókat, operátorokat, műveleteket és függvényeket kifejezésként a alkalmazásban Q# .
 author: gillenhaalb
-ms.author: a-gibec@microsoft.com
+ms.author: a-gibec
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.expressions
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: b6cc97dfee05dc843e213e84f17043714a8a9656
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 9bf28e3854eae1892692d7ca840e1860de2e2934
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869613"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835842"
 ---
-# <a name="expressions-in-no-locq"></a>Kifejezések aQ#
+# <a name="expressions-in-no-locq"></a>Kifejezések a Q#
 
 ## <a name="numeric-expressions"></a>Numerikus kifejezések
 
 A numerikus kifejezések a következő típusú kifejezések:, `Int` `BigInt` vagy `Double` .
 Vagyis egész vagy lebegőpontos számok.
 
-`Int`a konstansok Q# számjegyek sorozatából vannak írva.
+`Int` a konstansok Q# számjegyek sorozatából vannak írva.
 A hexadecimális és a bináris egész számok támogatottak, és a `0x` és `0b` előtaggal vannak írva.
 
-`BigInt`a konstansok Q# záró `l` vagy `L` utótaggal rendelkeznek.
+`BigInt` a konstansok Q# záró `l` vagy `L` utótaggal rendelkeznek.
 A hexadecimális nagy egész számok támogatottak, és "0x" előtaggal írhatók.
 Így az alábbi értékek érvényesek a literálok összes érvényes használatára `BigInt` :
 
@@ -36,7 +36,7 @@ let bigHex = 0x123456789abcdef123456789abcdefL;
 let bigOne = bigZero + 1L;
 ```
 
-`Double`a-ben a konstansok Q# számjegyek használatával írt lebegőpontos számok.
+`Double` a-ben a konstansok Q# számjegyek használatával írt lebegőpontos számok.
 Megírhatók decimális ponttal vagy anélkül `.` , illetve az "e" vagy az "e" karakterrel jelzett exponenciális rész (amely után csak egy lehetséges negatív jel és decimális számjegy érvényes).
 A következő érvényes `Double` literálok: `0.0` , `1.2e5` , `1e-5` .
 
@@ -64,16 +64,14 @@ Mind az egész, mind a Big Integer érték esetén a váltások aritmetikai ért
 A negatív érték balra vagy jobbra való eltolása negatív szám lehet.
 Ez azt jelöli, hogy az egyik lépés balra vagy jobbra való eltolása megegyezik a 2. számú szorzással vagy osztással.
 
-Az egész szám és az Integer modulus ugyanazt a viselkedést követi a negatív számok esetében, mint a C#.
-Vagyis `a % b` mindig ugyanaz a jel, mint a `a` , és `b * (a / b) + a % b` mindig egyenlő `a` .
-Például:
+Az egész szám és az Integer modulus ugyanazt a viselkedést követi a negatív számok esetében, mint a C#. Vagyis `a % b` mindig ugyanaz a jel, mint a `a` , és `b * (a / b) + a % b` mindig egyenlő `a` . Például:
 
- `A` | `B` | `A / B` | `A % B`
----------|----------|---------|---------
- 5 | 2 | 2 | 1
- 5 | -2 | -2 | 1
- -5 | 2 | -2 | -1
- -5 | -2 | 2 | -1
+|`A` | `B` | `A / B` | `A % B`|
+|:---------:|:----------:|:---------:|:---------:|
+| 5 | 2 | 2 | 1 |
+| 5 | -2 | -2 | 1 |
+| -5 | 2 | -2 | -1 |
+| -5 | -2 | 2 | -1 |
 
 A Big Integer osztás és a modulus műveletek ugyanúgy működnek.
 
@@ -113,7 +111,7 @@ A logikai kifejezéseket megadva az `not` egyoperandusú operátor felhasználha
 
 ## <a name="string-expressions"></a>Sztringkifejezések
 
-Q#lehetővé teszi a karakterláncok használatát az `fail` utasításban (a [vezérlési folyamat](xref:microsoft.quantum.guide.controlflow#fail-statement)ismertetése) és a [`Message`](xref:microsoft.quantum.intrinsic.message) standard függvényben. Az utóbbi adott viselkedése a használt szimulátortól függ, de általában egy üzenetet ír a gazdagép-konzolra, amikor egy program során hívja meg Q# .
+Q# lehetővé teszi a karakterláncok használatát az `fail` utasításban (a [vezérlési folyamat](xref:microsoft.quantum.guide.controlflow#fail-statement)ismertetése) és a [`Message`](xref:microsoft.quantum.intrinsic.message) standard függvényben. Az utóbbi adott viselkedése a használt szimulátortól függ, de általában egy üzenetet ír a gazdagép-konzolra, amikor egy program során hívja meg Q# .
 
 A karakterláncok Q# literálok vagy interpolált karakterláncok.
 
@@ -156,14 +154,14 @@ Vegye figyelembe, hogy a vélelmezett `step` érték + 1 `stop` , akkor is, ha k
 
 Néhány példa a tartományokra:
 
-- `1..3`az 1., 2. és 3. tartomány.
-- `2..2..5`a 2. és 4. tartomány.
-- `2..2..6`a 2, 4, 6. tartomány.
-- `6..-2..2`a 6, 4, 2 tartomány.
-- `2..1`az üres tartomány.
-- `2..6..7`a 2. tartomány.
-- `2..2..1`az üres tartomány.
-- `1..-1..2`az üres tartomány.
+- `1..3` az 1., 2. és 3. tartomány.
+- `2..2..5` a 2. és 4. tartomány.
+- `2..2..6` a 2, 4, 6. tartomány.
+- `6..-2..2` a 6, 4, 2 tartomány.
+- `2..1` az üres tartomány.
+- `2..6..7` a 2. tartomány.
+- `2..2..1` az üres tartomány.
+- `1..-1..2` az üres tartomány.
 
 ## <a name="qubit-expressions"></a>Qubit kifejezések
 
@@ -207,7 +205,7 @@ Más, felhasználó által definiált típusokban definiált, felhasználó ált
 Így ha a `WrappedPair` felhasználó által definiált típus egy alapul szolgáló típusú `IntPair` , és `t` egy változó értékkel `WrappedPair(IntPair(1,2))` , akkor a `t!!` következő: `(1,2)` .
 
 Az `!` operátor magasabb prioritású, mint az összes többi operátor `[]` , mint a tömb indexelése és a szeletelése.
-`!`és a `[]` kötés elhelyezése; ez a következő `a[i]![3]` `((a[i])!)[3]` : a (z), a (z), a kicsomagolása `i` , majd a nem `a` burkolt érték harmadik elemének beolvasása (tömbnek kell lennie).
+`!` és a `[]` kötés elhelyezése; ez a következő `a[i]![3]` `((a[i])!)[3]` : a (z), a (z), a kicsomagolása `i` , majd a nem `a` burkolt érték harmadik elemének beolvasása (tömbnek kell lennie).
 
 Az operátor elsőbbsége `!` egy olyan hatással van, amely esetleg nem nyilvánvaló.
 Ha egy függvény vagy művelet egy értéket ad vissza, amelyet a rendszer kicsomagol, a függvény vagy a művelet hívását zárójelek közé kell foglalni, hogy az argumentum rekordja a kicsomagolás helyett a híváshoz kapcsolódjon.
@@ -253,7 +251,7 @@ Típus | Alapértelmezett
  `Qubit` | _Érvénytelen qubit_
  `Pauli` | `PauliI`
  `Result` | `Zero`
- `Range` | Az üres tartomány,`1..1..0`
+ `Range` | Az üres tartomány, `1..1..0`
  `Callable` | _Érvénytelen hívható_
  `Array['T]` | `'T[0]`
 
@@ -328,17 +326,17 @@ Természetesen a gyakorlatban csak az érintett darabok szükségesek újra lét
 Létrehozhat egy új tömböt egy meglévő tömbből *Másolás és frissítés* kifejezések használatával, amelyek a kezelőket és a-t használják `w/` `<-` .
 A copy-Update kifejezés az űrlap kifejezése `expression1 w/ expression2 <- expression3` , ahol
 
-* `expression1`valamilyen típusúnak kell lennie `T[]` `T` .
-* `expression2`meghatározza, hogy mely indexeket kell megadni a tömbben a `expression1` módosításhoz. `expression2`típusnak `Int` vagy típusnak kell lennie `Range` .
-* `expression3`az elemeknek a alkalmazásban való frissítéséhez használt érték (ek) a `expression1` ben megadott indexek alapján `expression2` . Ha `expression2` a típus típusa `Int` , `expression3` típusnak kell lennie `T` . Ha `expression2` a típus típusa `Range` , `expression3` típusnak kell lennie `T[]` .
+* `expression1` valamilyen típusúnak kell lennie `T[]` `T` .
+* `expression2` meghatározza, hogy mely indexeket kell megadni a tömbben a `expression1` módosításhoz. `expression2` típusnak `Int` vagy típusnak kell lennie `Range` .
+* `expression3` az elemeknek a alkalmazásban való frissítéséhez használt érték (ek) a `expression1` ben megadott indexek alapján `expression2` . Ha `expression2` a típus típusa `Int` , `expression3` típusnak kell lennie `T` . Ha `expression2` a típus típusa `Range` , `expression3` típusnak kell lennie `T[]` .
 
 A copy-and-Update kifejezés például `arr w/ idx <- value` egy új tömböt hoz létre, amely a megfelelő elemeire van beállítva `arr` , kivéve a által megadott elem (ek) et, `idx` amely a (z) értékre van beállítva `value` . 
 
 `arr`A megadott tömb tartalmazza `[0,1,2,3]` , majd 
 
-- `arr w/ 0 <- 10`a tömb `[10,1,2,3]` .
-- `arr w/ 2 <- 10`a tömb `[0,1,10,3]` .
-- `arr w/ 0..2..3 <- [10,12]`a tömb `[10,1,12,3]` .
+- `arr w/ 0 <- 10` a tömb `[10,1,2,3]` .
+- `arr w/ 2 <- 10` a tömb `[0,1,10,3]` .
+- `arr w/ 0..2..3 <- [10,12]` a tömb `[10,1,12,3]` .
 
 #### <a name="copy-and-update-expressions-for-named-items"></a>Elnevezett elemek másolási és frissítési kifejezései
 
@@ -376,11 +374,11 @@ A callables tömbjét is létrehozhatja.
 * Ha az általános elemtípus művelet vagy függvény típusú, az összes elemnek azonos bemeneti és kimeneti típussal kell rendelkeznie.
 * A tömb elemének típusa az összes elem által [támogatott összes olyan futtatót](xref:microsoft.quantum.guide.operationsfunctions) támogatja.
 Például ha a `Op1` , a `Op2` és `Op3` az mind `Qubit[] => Unit` művelet, de támogatja, `Op1` `Adjoint` `Op2` támogatja `Controlled` és `Op3` támogatja mind a következőket:
-  * `[Op1, Op2]`a a műveletek tömbje `(Qubit[] => Unit)` .
-  * `[Op1, Op3]`a a műveletek tömbje `(Qubit[] => Unit is Adj)` .
-  * `[Op2, Op3]`a a műveletek tömbje `(Qubit[] => Unit is Ctl)` .
+  * `[Op1, Op2]` a a műveletek tömbje `(Qubit[] => Unit)` .
+  * `[Op1, Op3]` a a műveletek tömbje `(Qubit[] => Unit is Adj)` .
+  * `[Op2, Op3]` a a műveletek tömbje `(Qubit[] => Unit is Ctl)` .
 
-Azonban bár a műveletek `(Qubit[] => Unit is Adj)` és `(Qubit[] => Unit is Ctl)` a közös alaptípusa, a `(Qubit[] => Unit)` műveletek *tömbje* nem osztozik közös alaptípuson.
+Azonban bár a műveletek `(Qubit[] => Unit is Adj)` és  `(Qubit[] => Unit is Ctl)` a közös alaptípusa, a `(Qubit[] => Unit)` műveletek *tömbje* nem osztozik közös alaptípuson.
 
 Például `[[Op1], [Op2]]` jelenleg hiba történt, mert megkísérli létrehozni a két nem kompatibilis tömb típusának tömbjét `(Qubit[] => Unit is Adj)[]` `(Qubit[] => Unit is Ctl)[]` .
 
@@ -395,9 +393,9 @@ Egy adott típus és egy logikai kifejezés két kifejezése is egy feltételes 
 A feltételes kifejezések kiértékelik azokat a műveleteket, amelyek azonos bemenettel és kimenettel rendelkeznek, de támogatják a különböző elhasználókat. Ebben az esetben a feltételes kifejezés típusa egy olyan bemenettel és kimenettel rendelkező művelet, amely támogatja a mindkét kifejezés által támogatott összes feltételt.
 Például, ha, `Op1` `Op2` és `Op3` mind a `Qubit[]=>Unit` , de támogatja `Op1` `Adjoint` , `Op2` támogatja `Controlled` és `Op3` támogatja a következőket:
 
-- `flag ? Op1 | Op2`egy `(Qubit[] => Unit)` művelet.
-- `flag ? Op1 | Op3`egy `(Qubit[] => Unit is Adj)` művelet.
-- `flag ? Op2 | Op3`egy `(Qubit[] => Unit is Ctl)` művelet.
+- `flag ? Op1 | Op2` egy `(Qubit[] => Unit)` művelet.
+- `flag ? Op1 | Op3` egy `(Qubit[] => Unit is Adj)` művelet.
+- `flag ? Op2 | Op3` egy `(Qubit[] => Unit is Ctl)` művelet.
 
 Ha a két lehetséges eredményhalmaz egyike egy függvény vagy művelet hívása, akkor a hívás csak akkor történik meg, ha ez az eredmény a hívás értéke. `a==b ? C(qs) | D(qs)`Ha például `a==b` igaz, akkor a rendszer `C` meghívja a műveletet, és ha az értéke hamis, akkor csak a `D` művelet meghívására kerül sor. Ez a megközelítés hasonló a más nyelveken történő *rövid összekapcsoláshoz* .
 
@@ -472,17 +470,17 @@ A típus specifikációjának megadása kötelező `Op3` `Op1` , mert különbö
 
 * A művelethez és a függvényhez tartozó zárójelek az operátorok előtt, de a tömb indexelése és a feldolgozók után is kötésben vannak.
 
-Q#az operátorok elsőbbségi sorrendben, a legmagasabbtól a legalacsonyabbig:
+Q# az operátorok elsőbbségi sorrendben, a legmagasabbtól a legalacsonyabbig:
 
-Operátor | Aritása | Leírás | Operandusok típusai
+Operátor | Aritása | Description | Operandusok típusai
 ---------|----------|---------|---------------
- záró`!` | Unáris | Kicsomagolása | Bármely felhasználó által definiált típus
+ záró `!` | Unáris | Kicsomagolása | Bármely felhasználó által definiált típus
  `-`, `~~~`, `not` | Unáris | Numerikus negatív, bitenkénti komplement, logikai tagadás | `Int`, `BigInt` vagy `Double` esetén `-` a `Int` `BigInt` `~~~` `Bool``not`
- `^` | Bináris | Egész számú Power | `Int`vagy az `BigInt` alaphoz `Int` a kitevő esetében
+ `^` | Bináris | Egész számú Power | `Int` vagy az `BigInt` alaphoz `Int` a kitevő esetében
  `/`, `*`, `%` | Bináris | Osztás, szorzás, egész szám modulusa | `Int`, `BigInt` vagy `Double` `/` `*` `Int` `BigInt``%`
  `+`, `-` | Bináris | Hozzáadás vagy karakterlánc és tömb összefűzése, kivonás | `Int``BigInt`vagy `Double` , vagy `String` bármely tömb típusa a következőhöz:`+`
  `<<<`, `>>>` | Bináris | Bal SHIFT, jobb SHIFT | `Int` vagy `BigInt`
- `<`, `<=`, `>`, `>=` | Bináris | Kevesebb mint, kisebb vagy egyenlő, több mint, nagyobb, mint vagy egyenlő összehasonlítás | `Int`, `BigInt` vagy`Double`
+ `<`, `<=`, `>`, `>=` | Bináris | Kevesebb mint, kisebb vagy egyenlő, több mint, nagyobb, mint vagy egyenlő összehasonlítás | `Int`, `BigInt` vagy `Double`
  `==`, `!=` | Bináris | egyenlő, nem egyenlő összehasonlítások | bármely primitív típus
  `&&&` | Bináris | Bitenkénti és | `Int` vagy `BigInt`
  `^^^` | Bináris | Bitenkénti XOR | `Int` vagy `BigInt`
@@ -490,7 +488,7 @@ Operátor | Aritása | Leírás | Operandusok típusai
  `and` | Bináris | Logikai ÉS | `Bool`
  `or` | Bináris | Logikai VAGY | `Bool`
  `..` | Bináris/Ternáris | Tartomány operátora | `Int`
- `?` `|` | Ternáris | Feltételes | `Bool`a bal oldali
+ `?` `|` | Ternáris | Feltételes | `Bool` a bal oldali
 `w/` `<-` | Ternáris | Másolás és frissítés | Lásd: [Másolás és frissítés kifejezések](#copy-and-update-expressions)
 
 ## <a name="next-steps"></a>Következő lépések

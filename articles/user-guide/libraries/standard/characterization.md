@@ -9,12 +9,12 @@ ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 0090fb2b9ac5f3c9d195a3ab02dcd21c848d8ef7
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: b226f355771f2b65399ebe00cc3de9429a3cebb0
+ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868627"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90759909"
 ---
 # <a name="quantum-characterization-and-statistics"></a>Quantum jellemzés és statisztika #
 
@@ -74,7 +74,7 @@ Ennek az okának a becslése számos olyan kvantum-algoritmuson belül jelenik m
 ### <a name="bayesian-phase-estimation"></a>A Bayes fázis becslése ###
 
 > [!TIP]
-> A következő témakörben talál további információt a Bayes fázis becsléséről a gyakorlatban: [**PhaseEstimation**](https://github.com/microsoft/Quantum/tree/master/samples/characterization/phase-estimation) minta.
+> A következő témakörben talál további információt a Bayes fázis becsléséről a gyakorlatban: [**PhaseEstimation**](https://github.com/microsoft/Quantum/tree/main/samples/characterization/phase-estimation) minta.
 
 A Bayes-fázis becslésének ötlete egyszerű.
 A fázis-becslési protokollból gyűjti a mérési statisztikát, majd az eredményeket a Bayes-következtetéssel dolgozza fel, és megbecsüli a paramétert.
@@ -112,7 +112,7 @@ A robusztus fázisok becslésének legfontosabb funkciója, amelyet a legtöbb m
 A további releváns részletek közé tartozik például a $1 $ Ancilla qubit, illetve az eljárás nem adaptív, azaz a kvantum-kísérletek szükséges sorozata független a köztes mérési eredményektől. Ebben a és a közelgő példákban a fázis-becslési algoritmus kiválasztása fontos, az egyiknek a dokumentációra, például @"microsoft.quantum.characterization.robustphaseestimation" a hivatkozott kiadványokra, valamint a megvalósítására kell hivatkoznia.
 
 > [!TIP]
-> Számos minta van, ahol robusztus fázis-becslést használunk. A különböző fizikai rendszerek alapvető állapotának kinyeréséhez szükséges fázis-becsléshez tekintse meg a [ **H2-szimulációs** mintát](https://github.com/microsoft/Quantum/tree/master/samples/simulation/h2/command-line), a [ **SimpleIsing** mintát](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/simple)és a [ **Hubbard Model** mintát](https://github.com/microsoft/Quantum/tree/master/samples/simulation/hubbard).
+> Számos minta van, ahol robusztus fázis-becslést használunk. A különböző fizikai rendszerek alapvető állapotának kinyeréséhez szükséges fázis-becsléshez tekintse meg a [ **H2-szimulációs** mintát](https://github.com/microsoft/Quantum/tree/main/samples/simulation/h2/command-line), a [ **SimpleIsing** mintát](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/simple)és a [ **Hubbard Model** mintát](https://github.com/microsoft/Quantum/tree/main/samples/simulation/hubbard).
 
 
 ### <a name="continuous-oracles"></a>Folyamatos Oracle- ###
@@ -130,7 +130,7 @@ $ $ Továbbá, ha $U $ egy dinamikus generátor szimulációja, mint a [Hamilton
 
 ### <a name="random-walk-phase-estimation"></a>Véletlenszerű séta fázisának becslése ###
 
-Q#hasznos közelítést nyújt a Bayes-fázis becsléséhez, amelyet úgy terveztek, hogy az olyan kvantum-eszközökhöz közelítse a használatot, amelyek az iterációs fázis becslése alapján kapott adatrekordon véletlenszerű sétával működnek.
+Q# hasznos közelítést nyújt a Bayes-fázis becsléséhez, amelyet úgy terveztek, hogy az olyan kvantum-eszközökhöz közelítse a használatot, amelyek az iterációs fázis becslése alapján kapott adatrekordon véletlenszerű sétával működnek.
 Ez a módszer egyaránt adaptív és teljes mértékben determinisztikus, ami lehetővé teszi a hibák közel optimális méretezését a becsült "\hat{\phi} $" fázisban, nagyon alacsony memóriával.
 
 A protokoll egy hozzávetőleges Bayes-következtetési módszert használ, amely feltételezi, hogy az előző eloszlás a Gauss.

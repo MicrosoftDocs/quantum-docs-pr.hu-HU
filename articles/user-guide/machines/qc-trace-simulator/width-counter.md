@@ -2,19 +2,19 @@
 title: Szélesség számláló – Quantum Development Kit
 description: Ismerkedjen meg a Microsoft QDK szélességi számlálójának használatával, amely a Quantum Trace Simulator használatával számítja ki, hogy hány qubits van kiosztva, és hogyan kölcsönzött a program műveletei által Q# .
 author: vadym-kl
-ms.author: vadym@microsoft.com
+ms.author: vadym
 ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.width-counter
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 02f4937aaccf7bf49d6450355c6b42b273071b2e
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 701c36dd8c8b087a2728cd935aee0c2ffc4f59f9
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868202"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835944"
 ---
 # <a name="quantum-trace-simulator-width-counter"></a>Quantum Trace Simulator: szélesség számláló
 
@@ -71,7 +71,7 @@ Végezetül a következő paranccsal állíthatja be az összes olyan statisztik
 string csvSummary = sim.ToCSV()[MetricsCountersNames.widthCounter];
 ```
 
-## <a name="see-also"></a>További információ
+## <a name="see-also"></a>Lásd még
 
 - A Quantum Development Kit [Quantum Trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro) áttekintése.
 - Az <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> API-hivatkozás.

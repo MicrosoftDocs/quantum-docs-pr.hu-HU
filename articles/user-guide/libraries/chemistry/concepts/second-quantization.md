@@ -1,20 +1,20 @@
 ---
 title: Második kvantálás
 description: Ismerkedjen meg a második kvantálási megközelítéssel az elektronikus struktúrák modellezéséhez a kvantum-programozásban.
-author: nathanwiebe2
-ms.author: nawiebe@microsoft.com
+author: bradben
+ms.author: v-benbra
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.secondquantization
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: ba77c499d6830b1f78bba39e20b15c4ebe9433fc
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 6becd348f7b3957cb60b16bbd5a28228527e1d4c
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869460"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835808"
 ---
 # <a name="second-quantization"></a>Második kvantálás
 
@@ -77,7 +77,7 @@ A Quantum kémia könyvtára használhatja ezeket az egyezményeket, és az ilye
 ```
 
 A fermionic rendszerek esetében a Pauli kizárási elv megakadályozza, hogy egynél több elektron legyen elérhető a spin-orbitális környezetekben egy időben.
-Ez azt jelenti, hogy megírhatjuk a $ \ psi_1 $ \begin{Equation} \ psi_1 \rightarrow \begin{Cases} \ket {0} _1 & \text{if $ \ psi_1 $ nem foglalt jogi állapotot,}\\\
+Ez azt jelenti, hogy megírhatjuk a $ \ psi_1 $ \begin{Equation} \ psi_1 \rightarrow \begin{Cases} \ket {0} _1 & \text{if $ \ psi_1 $ nem foglalt jogi állapotot,} \\\
 {1}a \ket _1 & \text{if $ \ psi_1 $ foglalt.} \end{Cases} \end{Equation} ez a kódolás nagy a kvantum-számítógépek esetében, mivel ez azt jelenti, hogy az elektronikus foglalkozást egyetlen kvantum-bit-ként tudjuk tárolni.
 
 A $2N $ spin-pályák megfoglalkozási állapota hasonló lehet a $2N $ qubits-ben.

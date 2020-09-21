@@ -2,18 +2,18 @@
 title: Minta NWChem Quantum program
 description: Egy NWChem bemeneti pakli használatával megtudhatja, hogyan számítja ki a kvantum-kémia szimulációjának kapuit.
 author: cgranade
-ms.author: chgranad@microsoft.com
+ms.author: chgranad
 ms.date: 10/23/2018
 uid: microsoft.quantum.chemistry.examples.endtoend
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 528c34ea9b28b2f9b8f9a8bad681557f44bfcdaa
-ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
+ms.openlocfilehash: 986ff2c2ff144c57bd01ddeea0467d0168fd9334
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90759715"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835757"
 ---
 # <a name="end-to-end-with-nwchem"></a>Végponttól végpontig az NWChem-mel #
 
@@ -46,14 +46,14 @@ Import-Module InvokeNWChem.psm1
 ```
 
 > [!NOTE]
-> Alapértelmezés szerint a Windows meggátolja a parancsfájlok vagy modulok biztonsági mértékként való végrehajtását.
-> Ha engedélyezni szeretné, hogy a modulok, például a `Invoke-NWChem.psm1` Windows rendszeren fussanak, módosítania kell a végrehajtási házirendet.
+> Alapértelmezés szerint a Windows meggátolja a parancsfájlok vagy modulok futtatását biztonsági mértékként.
+> Ha engedélyezni szeretné, hogy a modulok `Invoke-NWChem.psm1` Windows rendszeren is futtathatók legyenek, előfordulhat, hogy módosítania kell a szabályzatot.
 > Ehhez futtassa a következő `Set-ExecutionPolicy` parancsot:
 > ```powershell
 > Set-ExecutionPolicy RemoteSigned -Scope Process
 > ```
-> Ekkor a rendszer visszaállít egy végrehajtási házirendet, amikor kilép a PowerShellből.
-> Ha menteni szeretné a végrehajtási szabályzatot, használja a következőt egy másik értékkel `-Scope` :
+> A rendszer a PowerShellből való kilépéskor visszaállít egy házirendet.
+> Ha menteni szeretné a szabályzatot, a következőhöz hasonló értéket kell használnia `-Scope` :
 > ```powershell
 > Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 > ```

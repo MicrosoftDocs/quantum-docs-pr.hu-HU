@@ -2,18 +2,18 @@
 title: Q#Magic-parancsok
 description: A Q# Jupyter notebookokkal ellátott Magic-parancsok gyors referenciájának lapja Q#
 author: gillenhaalb
-ms.author: a-gibec@microsoft.com
+ms.author: a-gibec
 ms.date: 03/05/2020
 uid: microsoft.quantum.guide.quickref.iqsharp
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 1d2d092588e1a5c69d12e5d50377e3e26412c094
-ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+ms.openlocfilehash: 75a1e1820e5ca16268c9b11322eb5653094b1a3c
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88863696"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90833565"
 ---
 # <a name="ino-locq-magic-commands"></a>Q#Magic-parancsok
 
@@ -34,12 +34,12 @@ ms.locfileid: "88863696"
 ### <a name="azure-quantum-integration"></a>Azure Quantum-integráció
 
 - [`%azure.connect`](xref:microsoft.quantum.iqsharp.magic-ref.azure.connect): Csatlakozik egy Azure Quantum-munkaterülethez, vagy megjeleníti a jelenlegi kapcsolati állapotot.
-- [`%azure.execute`](xref:microsoft.quantum.iqsharp.magic-ref.azure.execute): Végrehajt egy feladatot egy Azure Quantum-munkaterületen.
+- [`%azure.execute`](xref:microsoft.quantum.iqsharp.magic-ref.azure.execute): Feladatot futtat egy Azure Quantum-munkaterületen.
 - [`%azure.jobs`](xref:microsoft.quantum.iqsharp.magic-ref.azure.jobs): Az aktuális Azure Quantum-munkaterületen található feladatok listáját jeleníti meg.
 - [`%azure.output`](xref:microsoft.quantum.iqsharp.magic-ref.azure.output): Az aktuális Azure Quantum-munkaterületen lévő feladatok eredményét jeleníti meg.
 - [`%azure.status`](xref:microsoft.quantum.iqsharp.magic-ref.azure.status): Az aktuális Azure Quantum-munkaterületen a feladatok állapotát jeleníti meg.
 - [`%azure.submit`](xref:microsoft.quantum.iqsharp.magic-ref.azure.submit): Elküld egy feladatot egy Azure Quantum-munkaterületre.
-- [`%azure.target`](xref:microsoft.quantum.iqsharp.magic-ref.azure.target): Beállítja vagy megjeleníti a Q# feladatok beküldésének aktív végrehajtási célját egy Azure Quantum-munkaterületen.
+- [`%azure.target`](xref:microsoft.quantum.iqsharp.magic-ref.azure.target): Beállítja vagy megjeleníti a feladatok beküldésének aktív futtatási célját Q# egy Azure Quantum-munkaterületen.
 
 ### <a name="chemistry-from-microsoftquantumchemistry-package"></a>Kémia (a Microsoft. Quantum. kémia csomagból)
 
@@ -51,6 +51,6 @@ ms.locfileid: "88863696"
 
 ### <a name="katas-from-microsoftquantumkatas-package"></a>Katas (a Microsoft. Quantum. katas csomagból)
 
-- [`%kata`](xref:microsoft.quantum.iqsharp.magic-ref.kata): Egyetlen tesztet hajt végre, és jelentést készít arról, hogy a teszt sikeresen sikeres-e.
+- [`%kata`](xref:microsoft.quantum.iqsharp.magic-ref.kata): Egyetlen tesztet futtat, és jelentést készít arról, hogy a teszt sikeresen sikeres-e.
 - [`%check_kata`](xref:microsoft.quantum.iqsharp.magic-ref.check_kata): Egy Kata-tesztre vonatkozó hivatkozás-implementáció ellenőrzése.
     Pontosabban helyettesíti az egyetlen feladatra vonatkozó hivatkozási implementációt a cellába, és azt jelzi, hogy a teszt sikeresen sikeres volt-e.

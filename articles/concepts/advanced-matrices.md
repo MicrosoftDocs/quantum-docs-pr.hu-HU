@@ -1,6 +1,6 @@
 ---
 title: részletes mátrix – fogalmak leírása: Ismerje meg a eigenvectors, a eigenvalues és a mátrix exponenciálisait, a kvantum-algoritmusok leírásához és szimulálásához használt alapvető eszközöket.
-Szerző: QuantumWriter UID: Microsoft. Quantum. Concepts. Matrix – speciális MS. Author: nawiebe@microsoft.com MS. Date: 12/11/2017 MS. topic: No-Loc:
+Szerző: QuantumWriter UID: Microsoft. Quantum. Concepts. Matrix – speciális MS. Author: v-benbra MS. Date: 12/11/2017 MS. topic: No-Loc:
 - "Q#"
 - "$$v"
 - "$$"
@@ -93,7 +93,7 @@ Most kiterjesztjük a mátrixok manipulációját a [*Eigenvalues, a Eigenvector
 
 Legyen $ $ egy négyzetes mátrix, a $ v pedig $ egy olyan vektor, amely nem az összes nulla vektor (azaz a vektor és az összes bejegyzés értéke $ 0 $ ).
 
-Tegyük fel, hogy a $ v $ egy [*eigenvector*](https://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors) , $ Ha az $ $ MV = CV $ néhány c számú $ $ . A $ c érték azt jelenti $ , hogy a [*sajátérték*](https://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors) megfelelő a eigenvector $ v $ . Az M mátrix általában $ egy $ vektort alakíthat át bármilyen más vektorba, de egy eigenvector speciális, mert változatlan marad, kivéve, ha egy szám megszorozza. Vegye figyelembe, hogy ha $ $ a v egy eigenvector a sajátérték $ c $ -vel, akkor $ $ az AV is egy eigenvector (bármilyen nullától $ $ eltérő), ugyanazzal a sajátérték.
+Tegyük fel, hogy a $ v $ egy [*eigenvector*](https://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors) ,  $ Ha az $ $ MV = CV $ néhány c számú $ $ . A $ c érték azt jelenti $ , hogy a [*sajátérték*](https://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors) megfelelő a eigenvector $ v $ . Az M mátrix általában $ egy $ vektort alakíthat át bármilyen más vektorba, de egy eigenvector speciális, mert változatlan marad, kivéve, ha egy szám megszorozza. Vegye figyelembe, hogy ha $ $ a v egy eigenvector a sajátérték $ c $ -vel, akkor $ $ az AV is egy eigenvector (bármilyen nullától $ $ eltérő), ugyanazzal a sajátérték.
 
 Az Identity Matrix esetében például minden vektor $ v $ egy eigenvector, amely sajátérték $ 1 $ .
 
@@ -108,7 +108,7 @@ A vektorok
 
 $$\begin{bmatrix}1 \\\\ 0 \\\\ 0 \end{bmatrix} , \begin{bmatrix} 0 \\\\ 1 \\\\ 0 \end{bmatrix} és \begin{bmatrix} 0 \\\\ 0 \\\\ 1\end{bmatrix}$$
 
-Ennek a mátrixnak a eigenvectors a eigenvalues $ d_1 $ , $ d_2 $ és $ d_3 $ . Ha $ d_1 $ , $ d_2 $ és $ d_3 $ különböző számok, akkor ezek a vektorok (és azok többszörösei) a d mátrix egyetlen eigenvectors $ $ . Az átlós mátrixok esetében általában könnyen olvasható a eigenvalues és a eigenvectors. A eigenvalues az átlóban megjelenő számok, a hozzájuk tartozó eigenvectors pedig az egység vektorok, amelyek egy bejegyzése $ 1 $ , a fennmaradó bejegyzések pedig 0 értékűek $ $ .
+Ennek a mátrixnak a eigenvectors a eigenvalues  $ d_1 $ , $ d_2 $ és $ d_3 $ . Ha $ d_1 $ , $ d_2 $ és $ d_3 $ különböző számok, akkor ezek a vektorok (és azok többszörösei) a d mátrix egyetlen eigenvectors $ $ . Az átlós mátrixok esetében általában könnyen olvasható a eigenvalues és a eigenvectors. A eigenvalues az átlóban megjelenő számok, a hozzájuk tartozó eigenvectors pedig az egység vektorok, amelyek egy bejegyzése $ 1 $ , a fennmaradó bejegyzések pedig 0 értékűek $ $ .
 
 Vegye figyelembe a fenti példában, hogy a D eigenvectors a $ $ $ 3 $ dimenziós vektorok alapját képezi. Az alap olyan vektorok halmaza, amelyekben a vektorok lineáris kombinációként is írhatók. Explicit módon, $ v_1 $ , $ v_2 $ és $ v_3 formában, $ Ha bármelyik Vector $ v $ $ = a_1 v_1 + a_2 v_2 + a_3 v_3 $ néhány szám $ a_1 $ , $ a_2 $ és a_3 számára $ $ .
 

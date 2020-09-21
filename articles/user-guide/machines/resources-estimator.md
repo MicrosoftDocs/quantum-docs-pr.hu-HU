@@ -2,23 +2,23 @@
 title: Quantum erőforrás-kalkulátor – Quantum Development Kit
 description: Ismerje meg a Microsoft QDK erőforrásainak kalkulátorát, amely a művelet adott példányának a kvantum-számítógépen való futtatásához szükséges erőforrásokat becsüli meg Q# .
 author: anpaz-msft
-ms.author: anpaz@microsoft.com
+ms.author: anpaz
 ms.date: 06/26/2020
 ms.topic: article
 uid: microsoft.quantum.machines.resources-estimator
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 1892431c3e332385a5bcefa357eb64a9fac3f381
-ms.sourcegitcommit: 11bd357baeb6ab53a402882979e75964d0869b57
+ms.openlocfilehash: 6138c098a4efe2797c7d7360573ddcb9cb70a6c1
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88992241"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835927"
 ---
 # <a name="quantum-development-kit-qdk-resources-estimator"></a>A Quantum Development Kit (QDK) erőforrásainak kalkulátora
 
-Ahogy a név is jelenti, az `ResourcesEstimator` osztály a művelet adott példányának a kvantum-számítógépen való futtatásához szükséges erőforrásokat becsüli Q# meg. Ezt úgy hajtja végre, hogy végrehajtja a kvantum-műveletet anélkül, hogy ténylegesen szimulálja a kvantum-számítógép állapotát; Emiatt a Q# több ezer qubits-t használó műveletek erőforrásainak becslése, ha a kód klasszikus része ésszerű időn belül fut.
+Ahogy a név is jelenti, az `ResourcesEstimator` osztály a művelet adott példányának a kvantum-számítógépen való futtatásához szükséges erőforrásokat becsüli Q# meg. Ezt a kvantum-művelet futtatásával hajtja végre, a kvantum-számítógép állapotának tényleges szimulálása nélkül. Emiatt a Q# több ezer qubits-t használó műveletek erőforrásainak becslése, ha a kód klasszikus része ésszerű időn belül fut.
 
 Az erőforrások becslése a [kvantum-nyomkövetési szimulátorra](xref:microsoft.quantum.machines.qc-trace-simulator.intro)épül, amely a mérőszámok és eszközök sokoldalú készletét kínálja a programok hibakereséséhez Q# .
 
@@ -127,11 +127,11 @@ Az erőforrások becslése a következő metrikákat követi nyomon:
 |----|----|
 |__CNOT__    |A műveletek futtatási száma `CNOT` (más néven vezérelt Pauli X-műveletek).|
 |__QubitClifford__ |Egyetlen qubit Clifford-és Pauli-művelet futtatási száma.|
-|__Mérték__    |A mérések futtatásának száma.  |
+|__mérték__    |A mérések futtatásának száma.  |
 |__R__    |A qubit-Forgások futtatásának száma, kivéve a `T` Clifford és a Pauli műveletet.  |
 |__T__    |A `T` műveletek és a konjugátumok futtatásának száma, beleértve a `T` műveleteket, a T_x = H. T. h és a T_y = a kifogyott. t. vízterületet.  |
 |__Mélység__|A művelet által futtatott Quantum Circuit mélységének alsó határa Q# . Alapértelmezés szerint a mélységi metrika csak a `T` gateset számolja. További részletekért lásd a [részletes számlálót](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter).   |
-|__Szélesség__    |A művelet futtatása során lefoglalt qubits maximális számának alsó határa Q# . Előfordulhat, hogy a __mélység__ és a __szélesség__ alsó határa nem érhető el egyszerre.  |
+|__Szélessége__    |A művelet futtatása során lefoglalt qubits maximális számának alsó határa Q# . Előfordulhat, hogy a __mélység__ és a __szélesség__ alsó határa nem érhető el egyszerre.  |
 |__BorrowedWidth__    |A műveleten belül kölcsönzött qubits maximális száma Q# .  |
 
 ## <a name="providing-the-probability-of-measurement-outcomes"></a>Mérési eredmények valószínűségének megadása

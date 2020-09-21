@@ -9,14 +9,14 @@ uid: microsoft.quantum.contributing.style
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 27a2ae5ae9d00329fc369268edae24228a9a9d0d
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: fef3cea1c11e4fef49ddbf63adb34e07675049d2
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87867589"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834193"
 ---
-# <a name="no-locq-style-guide"></a>Q#Stílus útmutató #
+# <a name="no-locq-style-guide"></a>Q# Stílus útmutató #
 ## <a name="general-conventions"></a>Általános konvenciók ##
 
 Az útmutatóban javasolt konvenciók célja, hogy megkönnyítse a programok és a kódtárak írását Q# és értelmezését.
@@ -79,7 +79,7 @@ A függvények esetében javasoljuk, hogy kerülje a műveletek használatát a 
 - `LookupFunction`
 
 Különösen, ha szinte minden esetben azt javasoljuk, hogy a múltbeli táblázatos adatok használatával jelezze, hogy egy függvény neve erősen csatlakozik egy művelethez vagy egy mellékhatáshoz a kvantum-programban másutt.
-Például a `ControlledOnInt` "vezérlő" művelet "Control" utasításának "a" kifejezés formája, amely azt jelzi, hogy a függvény melléknévként viselkedik az argumentumának módosításához.
+Például a  `ControlledOnInt` "vezérlő" művelet "Control" utasításának "a" kifejezés formája, amely azt jelzi, hogy a függvény melléknévként viselkedik az argumentumának módosításához.
 Ennek a névnek a további előnye, hogy összefoglalja a beépített felépítmény szemantikai `Controlled` feltételeit, ahogy azt az alábbiakban tárgyaljuk.
 Hasonlóképpen, az _ügynökök_ nevei a függvények és a UDT alapján is felhasználhatók a műveleti nevekből, például egy, a szolgáltatáshoz `Encoder` szorosan társított UDT neve esetén `Encode` .
 
@@ -96,7 +96,7 @@ Javasoljuk, hogy:
 
 # <a name="examples"></a>[Példák](#tab/examples)
 
-|   | Név | Leírás |
+| &nbsp;  | Név | Leírás |
 |---|------|-------------|
 | ☑ | `operation ReflectAboutStart` | A művelet hatásának jelzéséhez törölje a műveletet ("tükrözze"). |
 | ☒ | <s>`operation XRotation`</s> | A főnévi kifejezés a művelet helyett a függvényt javasolja. |
@@ -115,7 +115,7 @@ Javasoljuk, hogy:
 
 Egy belépési pont programba való definiálásakor Q# a Q# fordító felismeri az [ `@EntryPoint()` attribútumot](xref:microsoft.quantum.core.entrypoint) , ami azt igényli, hogy a belépési pontok egy adott névvel rendelkezzenek (például: `main` , `Main` , vagy `__main__` ).
 Ez a fejlesztő szemszögéből a Q# beléptetési pontok a következőhöz fűzött általános műveletek: `@EntryPoint()` .
-Emellett a Q# belépési pontok egy teljes alkalmazáshoz (például Q# önálló végrehajtható fájlokban), vagy a Q# program és az alkalmazáshoz tartozó gazda program (például a Python vagy a .net használata esetén) közötti illesztőfelületek lehetnek Q# , így a "Main" név félrevezető lehet, ha egy Q# belépési pontra alkalmazva van.
+Emellett a Q# belépési pontok egy teljes alkalmazáshoz (például Q# önálló végrehajtható programokban), vagy a Q# program és az alkalmazáshoz tartozó gazda program (azaz a Python vagy a .NET használatával) közötti kapcsolat lehet Q# , ha a "Main" név félrevezető lehet, ha egy Q# belépési pontra alkalmazva van.
 
 Javasoljuk, hogy az elnevezési belépési pontok használatával tükrözze az `@EntryPoint()` attribútum használatát a fent felsorolt elnevezési műveletek általános tanácsainak használatával.
 
@@ -129,7 +129,7 @@ Javasoljuk, hogy:
 
 # <a name="examples"></a>[Példák](#tab/examples)
 
-|   | Név | Leírás |
+| &nbsp;  | Név | Leírás |
 |---|------|-------------|
 | ☑ | `@EntryPoint() operation RunSimulation` | A művelet neve a belépési pont célját egyértelműen közli. |
 | ☒ | <s>`@EntryPoint() operation Main`</s> | A használata `Main` nem jelent egyértelmű kommunikációt a belépési pont céljával, és redundáns az `@EntryPoint()` attribútummal. |
@@ -171,7 +171,7 @@ Javasoljuk, hogy:
 
 # <a name="examples"></a>[Példák](#tab/examples)
 
-|   | Név | Leírás |
+| &nbsp;   | Név | Leírás |
 |---|------|-------------|
 | ☑ | `X` | Jól ismert Gyorsírás a "$X $ átalakítás alkalmazása" |
 | ☑ | `CNOT` | Jól értelmezhető Gyorsírás a "vezérelt – nem" |
@@ -228,7 +228,7 @@ Javasoljuk, hogy:
 
 # <a name="examples"></a>[Példák](#tab/examples)
 
-|   | Név | Leírás |
+| &nbsp;   | Név | Leírás |
 |---|------|-------------|
 | ☒ | <s>`ToDouble`</s> | A "to" utasítás a művelethez tartozó kifejezést eredményez, és nem függvényt jelez. |
 | ☒ | <s>`AsDouble`</s> | A bemeneti típus nem egyértelmű a függvény nevéből. |
@@ -251,7 +251,7 @@ Javasoljuk, hogy:
 
 # <a name="examples"></a>[Példák](#tab/examples)
 
-|   | Név | Leírás |
+| &nbsp;  | Név | Leírás |
 |---|------|-------------|
 | ☒ | <s>`operation _ApplyDecomposedOperation`</s> | Ne használjon aláhúzást `_` annak jelzésére, hogy a művelet csak belső használatra szolgál. |
 | ☑ | `internal operation ApplyDecomposedOperation` | Az `internal` elején lévő kulcsszó egyértelműen azt jelzi, hogy ez a művelet csak belső használatra szolgál. |
@@ -264,12 +264,12 @@ Ezek a csoportok megkülönböztetni ugyanazt a legfelső szintű nevet, majd eg
 
 | Utótag | Értelmezés |
 |--------|---------|
-| `A` | Várhatóan támogatott bemenet`Adjoint` |
-| `C` | Várhatóan támogatott bemenet`Controlled` |
-| `CA` | A várt támogatás `Controlled` és`Adjoint` |
-| `I` | Bemenet vagy bemenet típusa`Int` |
-| `D` | Bemenet vagy bemenet típusa`Double` |
-| `L` | Bemenet vagy bemenet típusa`BigInt` |
+| `A` | Várhatóan támogatott bemenet `Adjoint` |
+| `C` | Várhatóan támogatott bemenet `Controlled` |
+| `CA` | A várt támogatás `Controlled` és `Adjoint` |
+| `I` | Bemenet vagy bemenet típusa `Int` |
+| `D` | Bemenet vagy bemenet típusa `Double` |
+| `L` | Bemenet vagy bemenet típusa `BigInt` |
 
 # <a name="guidance"></a>[Útmutató](#tab/guidance)
 
@@ -323,7 +323,7 @@ Javasoljuk, hogy:
 
 # <a name="examples"></a>[Példák](#tab/examples)
 
-|   | Snippet | Leírás |
+| &nbsp;  | Snippet | Description |
 |---|---------|-------------|
 | ☑ | `newtype Oracle = (Apply : Qubit[] => Unit is Adj + Ctl)` | A név `Apply` egy `CamelCase` formázott igei kifejezés, amely arra utal, hogy az elnevezett elem egy művelet. |
 | ☒ | <s>`newtype Oracle = (apply : Qubit[] => Unit is Adj + Ctl) `</s> | Az elnevezett elemeknek kezdeti nagybetűvel kell kezdődnie. |
@@ -401,7 +401,7 @@ Javasoljuk, hogy:
 - Minden nyilvános funkciót, műveletet és felhasználó által definiált típust közvetlenül a dokumentációs Megjegyzés előtt kell megadni.
 - Az egyes dokumentációs megjegyzéseknek legalább a következő részeket kell tartalmazniuk:
     - Összefoglalás
-    - Input (Bemenet)
+    - Bevitel
     - Kimenet (ha van ilyen)
 - Győződjön meg arról, hogy minden összefoglaló két mondat vagy kevesebb. Ha további helyiségre van szükség, adjon meg egy szakaszt, amely `# Description` azonnal követi a `# Summary` teljes részleteket.
 - Ahol ésszerű, ne szerepeljenek a matematika az összefoglalókban, mivel nem minden ügyfél támogatja a TeX-jelöléseket az összefoglalók között. Vegye figyelembe, hogy a prózai dokumentumok (például a TeX vagy a Markdown) írásakor érdemes lehet hosszabb vonali hosszúságot használni.
@@ -479,7 +479,7 @@ Javasoljuk, hogy:
 
 # <a name="examples"></a>[Példák](#tab/examples)
 
-|   | Snippet | Leírás |
+| &nbsp; | Snippet | Description |
 |---|---------|-------------|
 | ☒ | <s>`2+3`</s> | Használjon szóközöket a bináris operátorok köré. |
 | ☒ | <s>`target:Qubit`</s> | Használjon szóközt a típus megjegyzési kettőspontok használatával. |

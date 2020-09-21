@@ -1,31 +1,31 @@
 ---
-title: TípusokQ#
+title: Típusok Q#
 description: Ismerje meg a programozási nyelvben használt különböző típusokat Q# .
 author: gillenhaalb
-ms.author: a-gibec@microsoft.com
+ms.author: a-gibec
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.types
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: b034af0b1d3b967b5680403341813407e4412f93
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: c4a3e6563b8cabee87d1db6b9cb1c1f1c1a7131b
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869596"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835825"
 ---
-# <a name="types-in-no-locq"></a>TípusokQ#
+# <a name="types-in-no-locq"></a>Típusok Q#
 
 Ez a cikk a Q# típus modelljét és a típusok megadásának és használatának szintaxisát ismerteti. Az ilyen típusú kifejezések létrehozásával és működésével kapcsolatos részletekért lásd: [kifejezések megadása](xref:microsoft.quantum.guide.expressions).
 
 Fontos megjegyezni, hogy ez Q# egy *erősen gépelt* nyelv, amely az ilyen típusú alkalmazások körültekintő használatát segíti a fordítót, hogy erős garanciát nyújtson a Q# programoknak a fordítás ideje alatt.
 A legerősebb garanciák biztosításához a típusok közötti konverziónak explicit módon kell megadnia a Q# függvényeknek a konverziót kifejező hívásait. 
-Q#számos ilyen funkciót biztosít a névtér részeként <xref:microsoft.quantum.convert> .
+Q# számos ilyen funkciót biztosít a névtér részeként <xref:microsoft.quantum.convert> .
 A kompatibilis típusokra való kivezetés viszont implicit módon történik. 
 
-Q#a a közvetlen használatú primitív típusokat, valamint számos különböző módszert biztosít a más típusú új típusok létrehozásához.
+Q# a a közvetlen használatú primitív típusokat, valamint számos különböző módszert biztosít a más típusú új típusok létrehozásához.
 Ezeket a cikk további részében ismertetjük.
 
 ## <a name="primitive-types"></a>Primitív típusok
@@ -34,7 +34,7 @@ A Q# nyelv a következő *primitív típusokat*biztosítja, amelyek mindegyike k
 
 - A `Int` típus 64 bites aláírt egész számot jelöl, például:,, `2` `107` `-5` .
 - A `BigInt` típus tetszőleges méretű aláírt egész számot jelöl, például:,, `2L` `107L` `-5L` .
-   Ez a típus a .NET-alapú<xref:System.Numerics.BigInteger>
+   Ez a típus a .NET-alapú <xref:System.Numerics.BigInteger>
    típusa.
 
 - A `Double` típus egy dupla pontosságú lebegőpontos számot jelöl, például:,, `0.0` `-1.3` `4e-7` .
@@ -53,7 +53,7 @@ A Q# nyelv a következő *primitív típusokat*biztosítja, amelyek mindegyike k
    Ez egy enumerált típus, amely négy lehetséges értéket tartalmaz:,,, `PauliI` `PauliX` `PauliY` és `PauliZ` , amelyek típusú konstansok `Pauli` .
 - A `Result` típus a mérték eredményét jelöli.
    Ez egy enumerált típus, amely két lehetséges értékkel rendelkezik: `One` és `Zero` , amelyek típusú konstansok `Result` .
-   `Zero`azt jelzi, hogy a + 1 sajátérték mérése megtörténik; `One`azt jelzi, hogy a-1 sajátérték mérték.
+   `Zero` azt jelzi, hogy a + 1 sajátérték mérése megtörténik; `One` azt jelzi, hogy a-1 sajátérték mérték.
 
 A konstansok,,,,,,, `true` `false` és az `PauliI` `PauliX` `PauliY` `PauliZ` `One` `Zero` összes foglalt szimbólum szerepel a alkalmazásban Q# .
 
@@ -65,7 +65,7 @@ A konstansok,,,,,,, `true` `false` és az `PauliI` `PauliX` `PauliY` `PauliZ` `O
 * Tömbök tömbje is érvényes. Az előző példát kiterjesztve a tömbök tömbjét `(Bool, Pauli)` jelöli `(Bool, Pauli)[][]` .
 
 > [!NOTE] 
-> Ez a példa `(Bool, Pauli)[][]` a tömbök potenciálisan szaggatott tömbjét jelöli, nem pedig egy téglalap alakú kétdimenziós tömböt. Q#a nem támogatja a négyszögletes többdimenziós tömböket.
+> Ez a példa `(Bool, Pauli)[][]` a tömbök potenciálisan szaggatott tömbjét jelöli, nem pedig egy téglalap alakú kétdimenziós tömböt. Q# a nem támogatja a négyszögletes többdimenziós tömböket.
 
 * A tömb értéke a Q# forráskódban a tömb elemei körül szögletes zárójelek használatával is írható `[PauliI, PauliX, PauliY, PauliZ]` .
 A tömbben lévő összes elem közös alaptípusa határozza meg egy tömb literál típusát. Ezért a tömb olyan elemekkel való létrehozása, amelyek nem rendelkeznek közös alaptípussal, hibát jeleznek.  
@@ -98,7 +98,7 @@ A tömbök alszkriptje nulla-alapú, és típusnak `Int` vagy típusnak kell len
 A rekordok egy hatékony koncepció, amellyel Q# az értékek összegyűjthetők egyetlen értékkel, így könnyebben átadhatók.
 A rekordos jelölések használatával kipróbálhatja, hogy minden művelet és a hívó pontosan egy bemenetet fogadjon, és pontosan egy kimenetet ad vissza.
 
-* Megadott nulla vagy több különböző típus `T0` , `T1` ,..., az `Tn` új *rekord típusát* jelöli `(T0, T1, ..., Tn)` .
+* Megadott nulla vagy több különböző típus `T0` , `T1` ,..., az `Tn` új  *rekord típusát* jelöli `(T0, T1, ..., Tn)` .
 Az új bejegyzéstípus létrehozásához használt típusok maguk is rekordok, például: `(Int, (Qubit, Qubit))` .
 Az ilyen beágyazás mindig véges, azonban a rekord típusú típusok semmilyen körülmények között nem tartalmazhatják magukat.
 
@@ -109,7 +109,7 @@ Létrehozhatók rekordok, rekordok, rekordok, alrekordokek és így tovább.
 * A 0,3-as és az Q# `Unit` üres rekord *típusának* neve az `()` üres rekord *értékéhez* használatos.
 
 * A rekordos példányok nem változtathatók meg.
-Q#a nem biztosít olyan mechanizmust, amely a létrehozott rekord tartalmát egyszer módosítja.
+Q# a nem biztosít olyan mechanizmust, amely a létrehozott rekord tartalmát egyszer módosítja.
 
 
 
@@ -155,10 +155,10 @@ newtype Complex = (Double, Double);
 ```
 Ez az utasítás egy új típust hoz létre két névtelen elem típussal `Double` .   
 
-A névtelen elemektől eltekintve a felhasználó által definiált típusok a 0,7-es vagy újabb verzióként is támogatják az *elnevezett elemeket* Q# . Megadhatja például, hogy az elemek `Re` egy összetett szám valódi részét jelképező dupla érték legyen, a `Im` képzeletbeli rész pedig: 
+A névtelen elemektől eltekintve a felhasználó által definiált típusok a 0,7-es vagy újabb verzióként is támogatják az *elnevezett elemeket* Q# . Megadhatja például, hogy az elemek `Real` egy összetett szám valódi részét jelképező dupla érték legyen, a `Imag` képzeletbeli rész pedig: 
 
 ```qsharp
-newtype Complex = (Re : Double, Im : Double);
+newtype Complex = (Real : Double, Imag : Double);
 ```
 Egy felhasználó által definiált típus egyik elemének elnevezése nem jelenti azt, hogy az összes elemet el kell nevezni – a nevesített és a nem nevezett elemek bármely kombinációja támogatott. Emellett a belső elemek is megadhatók.
 Az `Nested` alább megadott típus például egy alapul szolgáló típussal rendelkezik `(Double, (Int, String))` , amelyből csak a `Int` nevű elem neve szerepel, és minden más elem névtelen. 
@@ -171,18 +171,18 @@ Az elnevezett elemek előnye, hogy közvetlenül a *hozzáférési operátoron* 
 
 ```qsharp
 function ComplexAddition(c1 : Complex, c2 : Complex) : Complex {
-    return Complex(c1::Re + c2::Re, c1::Im + c2::Im);
+    return Complex(c1::Real + c2::Real, c1::Imag + c2::Imag);
 }
 ```
 
 Amellett, hogy rövid aliasokat biztosít a potenciálisan bonyolult rekordokhoz, az ilyen típusok meghatározásának jelentős előnye, hogy dokumentálni tudja egy adott érték szándékát.
-A példára való visszatéréshez a `Complex` 2D poláris koordinátákat is definiálhatja felhasználó által definiált típusként:
+A következő példára visszatérve egy `Complex` Polar koordináta-represenation is definiálhat felhasználó által definiált típusként:
 
 ```qsharp
-newtype Polar = (Radius : Double, Phase : Double);
+newtype ComplexPolar = (Magnitude : Double, Argument : Double);
 ```
 
-Bár mindkettő `Complex` és `Polar` mindkettő rendelkezik egy alapul szolgáló típussal `(Double, Double)` , a két típus teljesen inkompatibilis a-ben Q# , ami minimalizálja annak kockázatát, hogy véletlenül egy összetett matematikai függvényt hív meg a Polar koordinátákkal, és fordítva.
+Bár mindkettő `Complex` és `ComplexPolar` mindkettő rendelkezik egy alapul szolgáló típussal `(Double, Double)` , a két típus teljesen inkompatibilis a-ben Q# , ami minimalizálja annak kockázatát, hogy véletlenül egy összetett matematikai függvényt hív meg a Polar koordinátákkal, és fordítva.
 
 #### <a name="access-anonymous-items-with-the-unwrap-operator"></a>Névtelen elemek elérése a kicsomagolási operátorral
 
@@ -259,8 +259,8 @@ A felhasználó által definiált típusok általában nem lehetnek ciklikus fü
 
 A típusok `'Tinput` és a `'Tresult` :
 
-* `('Tinput => 'Tresult)`a *művelet*alapszintű típusa, például: `((Qubit, Pauli) => Result)` .
-* `('Tinput -> 'Tresult)`a *függvény*alapvető típusa, például: `(Int -> Int)` . 
+* `('Tinput => 'Tresult)` a *művelet*alapszintű típusa, például: `((Qubit, Pauli) => Result)` .
+* `('Tinput -> 'Tresult)` a *függvény*alapvető típusa, például: `(Int -> Int)` . 
 
 Ezeket a meghívásos *aláírásnak* nevezzük.
 
@@ -274,13 +274,13 @@ Ezeket a meghívásos *aláírásnak* nevezzük.
 A *függvények* típusát az aláírása teljesen megadja. Például egy olyan függvény, amely egy szög szinuszát számítja ki, típusnak kellene lennie `(Double -> Double)` . 
 
 A *műveletek* bizonyos további jellemzőkkel rendelkeznek, amelyek a művelet típusának részeként vannak kifejezve. Ezek a tulajdonságok olyan információkat tartalmaznak *, amelyek a* művelet által támogatott operációs rendszerek.
-Ha például a művelet végrehajtása más qubits állapotára támaszkodik, akkor az a következőt támogatja:. `Controlled` Ha a műveletnek van egy inverze, akkor támogatnia kell az elválasztó `Adjoint` .
+Ha például a művelet egy másik qubits állapotára támaszkodik, akkor az a következőt támogatja:. `Controlled` Ha a műveletnek van inverze, akkor támogatnia kell az elválasztó szolgáltatást `Adjoint` .
 
 > [!NOTE]
 > Ez a cikk csak azt tárgyalja, hogyan változtatják meg a műveleti aláírást. További információ a-feladatokról és a műveletekről: [műveletek és Q# függvények a alkalmazásban ](xref:microsoft.quantum.guide.operationsfunctions). 
 
 Ha a `Controlled` és/vagy az `Adjoint` üzemben lévőt egy művelet típusában szeretné támogatni, hozzá kell adnia egy jegyzetet, amely a megfelelő tulajdonságokat jelzi.
-A jegyzet `is Ctl` (például `(Qubit => Unit is Ctl)` ) azt jelzi, hogy a művelet ellenőrizhető. Ez a végrehajtás egy másik qubit vagy qubits állapotára támaszkodik. Hasonlóképpen, a jegyzet `is Adj` azt jelzi, hogy a műveletnek van egy adjoint, azaz "invertált" lehet, például egy művelet egymást követő alkalmazása, majd az állapot adjoint változatlan marad. 
+A jegyzet `is Ctl` (például `(Qubit => Unit is Ctl)` ) azt jelzi, hogy a művelet ellenőrizhető. Ez a Futtatás egy másik qubit vagy qubits állapotára támaszkodik. Hasonlóképpen, a jegyzet `is Adj` azt jelzi, hogy a műveletnek van egy adjoint, azaz "invertált" lehet, például egy művelet egymást követő alkalmazása, majd az állapot adjoint változatlan marad. 
 
 Ha szeretné megkövetelni, hogy egy adott típusú művelet támogassa a és a-kezelőt is, ezt a következő `Adjoint` `Controlled` módon fejezheti ki: `(Qubit => Unit is Adj + Ctl)` . A beépített Pauli-művelet például a <xref:microsoft.quantum.intrinsic.x> következőt írja be: `(Qubit => Unit is Adj + Ctl)` . 
 
@@ -298,7 +298,7 @@ Hasonlóképpen, egy függvény, amely két művelet összeállítását adja vi
 
 Ha egy Type-paraméteres meghívást hív meg, az azonos típusú paraméterrel rendelkező összes argumentumnak azonos típusúnak kell lennie.
 
-Q#a nem biztosít olyan mechanizmust, amely lehetővé teszi, hogy a felhasználók egy típusparaméter esetében helyettesíthetik a lehetséges típusokat.
+Q# a nem biztosít olyan mechanizmust, amely lehetővé teszi, hogy a felhasználók egy típusparaméter esetében helyettesíthetik a lehetséges típusokat.
 
 ## <a name="next-steps"></a>Következő lépések
 

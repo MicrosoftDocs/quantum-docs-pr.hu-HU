@@ -1,6 +1,6 @@
 ---
 title: Quantum Computing Szószedet leírása: A kvantum-számítástechnika során használt általános feltételek, műveletek és objektumok glosszáriuma.
-Szerző: QuantumWriter MS. Author: Alan.Geller@microsoft.com MS. Date: 12/11/2017 MS. topic: cikk UID: Microsoft. Quantum. Szószedet No-Loc:
+Szerző: bradben MS. Author: v-benbra MS. Date: 9/1/2020 MS. topic: cikk UID: Microsoft. Quantum. Szószedet No-Loc:
 - "Q#"
 - "$$v"
 - "$$"
@@ -99,7 +99,7 @@ Két qubits négy specifikus, maximálisan [összekeverhető](xref:microsoft.qua
 
 ## <a name="bloch-sphere"></a>Bloch gömb
 
-Egy[qubit](xref:microsoft.quantum.glossary#qubit) [kvantum-állapot](xref:microsoft.quantum.glossary#quantum-state) grafikus ábrázolása egy háromdimenziós egység gömb elemeként. További információ: [qubits és átalakítások megjelenítése a Bloch szférával](xref:microsoft.quantum.concepts.qubit#visualizing-qubits-and-transformations-using-the-bloch-sphere).
+Egy[qubit](xref:microsoft.quantum.glossary#qubit) [kvantum-állapot](xref:microsoft.quantum.glossary#quantum-state) grafikus ábrázolása egy háromdimenziós egység gömb elemeként. További információ:  [qubits és átalakítások megjelenítése a Bloch szférával](xref:microsoft.quantum.concepts.qubit#visualizing-qubits-and-transformations-using-the-bloch-sphere).
 
 ## <a name="callable"></a>Használata hívható
 
@@ -170,7 +170,7 @@ A kapcsolódó nevek (például [műveletek](xref:microsoft.quantum.glossary#ope
 
 ## <a name="operation"></a>Művelet
 
-A kvantum-végrehajtás alapegysége a-ben Q# . Ez nagyjából megfelel a C, C++ vagy Python függvénynek, illetve a C# vagy a Java statikus metódusának. További információ: [Operations and functions](xref:microsoft.quantum.guide.operationsfunctions).
+A kvantum-számítás alapegysége a-ben Q# . Ez nagyjából megfelel a C, C++ vagy Python függvénynek, illetve a C# vagy a Java statikus metódusának. További információ: [Operations and functions](xref:microsoft.quantum.guide.operationsfunctions).
 
 ## <a name="operator-application"></a>Kezelő alkalmazás
 

@@ -3,18 +3,18 @@ title: Adatstruktúrák a Q# standard könyvtárakban
 description: Ismerje meg az adatstruktúrákat, az Oracle-ket és a dinamikus generátorokat a Microsoft Q# szabványos könyvtáraiban.
 author: QuantumWriter
 uid: microsoft.quantum.libraries.data-structures
-ms.author: martinro@microsoft.com
+ms.author: martinro
 ms.date: 12/11/2017
 ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 222fa7d0d33d4ac6c15e9ee9e6e97f380867a145
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 51eb52d0b8ace972f6a425edba400ca9a8916d2e
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868519"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835587"
 ---
 # <a name="data-structures-and-modeling"></a>Adatstruktúrák és-modellezés #
 
@@ -160,8 +160,8 @@ Ez az egységes szolgáltatás a két Oracle-típus egyikének megfelelően van 
 
 > [!TIP]
 > Az alábbiakban ismertetett Oracle-típusok mindegyike szerepel a mintákban.
-> Ha többet szeretne megtudni a folyamatos lekérdezési Oracle-ról, tekintse meg a [ **PhaseEstimation** mintát](https://github.com/microsoft/Quantum/tree/master/samples/characterization/phase-estimation).
-> Ha többet szeretne megtudni a diszkrét lekérdezési Oracle-ról, tekintse meg a [ **IsingPhaseEstimation** mintát](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/phase-estimation).
+> Ha többet szeretne megtudni a folyamatos lekérdezési Oracle-ról, tekintse meg a [ **PhaseEstimation** mintát](https://github.com/microsoft/Quantum/tree/main/samples/characterization/phase-estimation).
+> Ha többet szeretne megtudni a diszkrét lekérdezési Oracle-ról, tekintse meg a [ **IsingPhaseEstimation** mintát](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/phase-estimation).
 
 Az Oracle első típusa, amely egy különálló lekérdezési Oracle-t hív meg, és a felhasználó által definiált típusnak felel meg <xref:microsoft.quantum.oracles.discreteoracle> , egyszerűen magában foglal egy egységes mátrixot.
 Ha $U $ az az egységes, amelynek a eigenvalues szeretnénk megbecsülni, akkor az Oracle for $U $ egyszerűen egy olyan alrutinra vonatkozik, amely megvalósítja a $U $-t.
@@ -211,8 +211,8 @@ ahol az egész szám $r > $0 a közelítési hibát vezérli.
 A dinamikus generátor modellező könyvtára keretet biztosít a bonyolult generátorok szisztematikus kódolásához az egyszerűbb generátorok szempontjából. Ezt a leírást később átadhatják a szimulációs függvénytárnak, amely egy tetszőleges szimulációs algoritmussal valósítja meg a Time-Evolutiont, számos részletet pedig automatikusan elintéz.
 
 > [!TIP]
-> Az alább ismertetett dinamikus létrehozó függvénytárat a minták tartalmazzák. A Ising modellen alapuló példáért tekintse meg a [ **IsingGenerators** mintát](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/generators).
-> A molekuláris hidrogénen alapuló példákért tekintse meg a [**H2SimulationCmdLine**](https://github.com/microsoft/Quantum/tree/master/samples/simulation/h2/command-line) és a [**H2SimulationGUI**](https://github.com/microsoft/Quantum/tree/master/samples/simulation/h2/gui) mintákat.
+> Az alább ismertetett dinamikus létrehozó függvénytárat a minták tartalmazzák. A Ising modellen alapuló példáért tekintse meg a [ **IsingGenerators** mintát](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/generators).
+> A molekuláris hidrogénen alapuló példákért tekintse meg a [**H2SimulationCmdLine**](https://github.com/microsoft/Quantum/tree/main/samples/simulation/h2/command-line) és a [**H2SimulationGUI**](https://github.com/microsoft/Quantum/tree/main/samples/simulation/h2/gui) mintákat.
 
 ### <a name="complete-description-of-a-generator"></a>Generátor leírásának teljes leírása ###
 

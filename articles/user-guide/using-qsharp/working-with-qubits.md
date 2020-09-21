@@ -1,20 +1,20 @@
 ---
 title: Munkavégzés qubitekkel
-description: Kitöltés leírása
+description: A qubits használatának megismerése Q#
 author: gillenhaalb
-ms.author: a-gibec@microsoft.com
+ms.author: a-gibec
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.qubits
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 6808a852ee0de7d3a38ea44e9637eeaa6bea382a
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: aa942a61280553ae4e51cd5ddcc85c0df935dab1
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87867862"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835859"
 ---
 # <a name="working-with-qubits"></a>Munkavégzés qubitekkel
 
@@ -150,7 +150,7 @@ A *számítási alap* a `PauliZ` mértékre hivatkozik, és a mérések leggyako
 ### <a name="measure-a-single-qubit-in-the-pauliz-basis"></a>Egyetlen qubit mérése az `PauliZ` alapján
 
 A [`M`](xref:microsoft.quantum.intrinsic.m) művelettel, amely egy beépített belső, nem egységes művelet, amely egyetlen qubit mérésére szolgál, `PauliZ` és egy klasszikus értéket rendel hozzá az eredményhez.
-`M`egy fenntartott visszatérési típussal rendelkezik, `Result` amely csak értékeket `Zero` vagy `One` a mért állapotoknak felel meg a $ \ket {0} $ vagy $ \ket $ értékkel, ami {1} azt jelzi, hogy az eredmény már nem kvantum-állapot.
+`M` egy fenntartott visszatérési típussal rendelkezik, `Result` amely csak értékeket `Zero` vagy `One` a mért állapotoknak felel meg a $ \ket {0} $ vagy $ \ket $ értékkel, ami {1} azt jelzi, hogy az eredmény már nem kvantum-állapot.
 
 Egy egyszerű példa a következő művelet, amely egy qubit foglal le a $ \ket {0} $ állapotban, majd Hadamard műveletet alkalmaz `H` rá, és az eredményt az `PauliZ` alapján méri.
 

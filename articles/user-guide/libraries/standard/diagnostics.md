@@ -3,17 +3,17 @@ title: Diagnosztika a Q# standard könyvtárakban
 description: A Q# kvantum-programokban a hibák és hibák észleléséhez használt standard könyvtárak diagnosztikai funkcióinak és műveleteinek megismerése.
 author: cgranade
 uid: microsoft.quantum.libraries.diagnostics
-ms.author: chgranad@microsoft.com
+ms.author: chgranad
 ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 4a98795b2459adaa4e47c888751121fffdc70971
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 11ce1bc86db0c5aa0f81ba7d0f2d6ec3463b178c
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868542"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835570"
 ---
 # <a name="diagnostics"></a>Diagnosztika #
 
@@ -33,7 +33,7 @@ Message($"About to rotate by an angle of {angle}...");
 ```
 
 > [!NOTE]
-> `Message`rendelkezik aláírással `(String -> Unit)` , amely azt jelenti, hogy a hibakeresési napló üzenetének kibocsátása nem figyelhető meg a belülről Q# .
+> `Message` rendelkezik aláírással `(String -> Unit)` , amely azt jelenti, hogy a hibakeresési napló üzenetének kibocsátása nem figyelhető meg a belülről Q# .
 
 A <xref:microsoft.quantum.diagnostics.dumpmachine> és a <xref:microsoft.quantum.diagnostics.dumpregister> callables utasíthatja a megcélzott gépeket arra, hogy diagnosztikai adatokat szolgáltassanak a jelenleg lefoglalt qubits vagy a qubits egy adott regiszteréről.
 Az egyes célszámítógépeken eltérő diagnosztikai információk szerepelnek a dump utasításra adott válaszban.
@@ -67,16 +67,16 @@ A gyakorlatban az állítások arra utalnak, hogy a kvantummechanika klasszikus 
 Azokon a célszámítógépeken, amelyek nem engedélyezik az állítások kiértékelését, <xref:microsoft.quantum.diagnostics.assertmeasurement> nyugodtan figyelmen kívül hagyhatják a hívásokat.
 
 Általánosságban a <xref:microsoft.quantum.diagnostics.assertmeasurement> művelet azt állítja be, hogy a megadott Pauli-alapú qubits mérése mindig a megadott eredménnyel jár.
-Ha az állítás sikertelen, a végrehajtás a `fail` megadott üzenettel való meghívásával végződik.
+Ha az állítás sikertelen, a Futtatás az adott üzenettel meghívásával végződik `fail` .
 Alapértelmezés szerint ez a művelet nincs implementálva; a-t támogató szimulátoroknak olyan implementációt kell biztosítaniuk, amely a futtatókörnyezet ellenőrzését végzi.
-`AssertMeasurement`aláírással rendelkezik `((Pauli[], Qubit[], Result, String) -> ())` .
+`AssertMeasurement` aláírással rendelkezik `((Pauli[], Qubit[], Result, String) -> ())` .
 Mivel a `AssertMeasurement` függvény egy üres rekordot tartalmaz a kimeneti típusként, a rendszer semmilyen hatást sem `AssertMeasurement` figyel a Q# programon belül.
 
 A <xref:microsoft.quantum.diagnostics.assertmeasurementprobability> Operation függvény azt állítja be, hogy a megadott Pauli-alapú qubits mérése a megadott valószínűséggel az adott tűréshatáron belül megtörténik.
-A tolerancia adalékanyag (például `abs(expected-actual) < tol` ).
-Ha az állítás sikertelen, a végrehajtás a `fail` megadott üzenettel való meghívásával végződik.
+A tolerancia adalékanyag (például: `abs(expected-actual) < tol` ).
+Ha az állítás sikertelen, a Futtatás az adott üzenettel meghívásával végződik `fail` .
 Alapértelmezés szerint ez a művelet nincs implementálva; a-t támogató szimulátoroknak olyan implementációt kell biztosítaniuk, amely a futtatókörnyezet ellenőrzését végzi.
-`AssertMeasurementProbability`aláírással rendelkezik `((Pauli[], Qubit[], Result, Double, String, Double) -> Unit)` . Az első `Double` paraméter megadja az eredmény kívánt valószínűségét, a második pedig a tűréshatárt.
+`AssertMeasurementProbability` aláírással rendelkezik `((Pauli[], Qubit[], Result, Double, String, Double) -> Unit)` . Az első `Double` paraméter megadja az eredmény kívánt valószínűségét, a második pedig a tűréshatárt.
 
 Több, mint egy olyan mérést végzünk, amely a szimulátor által a qubit belső állapotának jelzésére használt klasszikus információkat a másolásra alkalmasnak tekinti, így nem kell mérést végeznie az állítás teszteléséhez.
 Ez különösen azt eredményezi, hogy a nem *kompatibilis* mérések oka a tényleges hardverek esetében nem lehetséges.

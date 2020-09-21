@@ -2,19 +2,19 @@
 title: Programok futtatásának módjai Q#
 description: A programok futtatásának különböző módjai – áttekintés Q# . A parancssorból, a Q# Jupyter-jegyzetfüzetből és a klasszikus gazdagép-programokból Python vagy .net nyelven.
 author: gillenhaalb
-ms.author: a-gibec@microsoft.com
+ms.author: a-gibec
 ms.date: 05/15/2020
 ms.topic: article
 uid: microsoft.quantum.guide.host-programs
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: f24c608ffc6522cb50f512de1a02b3db4b290e83
-ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
+ms.openlocfilehash: 2cb02617c81ee8b144ffe933f11b476ba6f4a23e
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90759816"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835961"
 ---
 # <a name="ways-to-run-a-no-locq-program"></a>Programok futtatásának módjai Q#
 
@@ -26,9 +26,9 @@ Az elsődleges különbség az, hogy a Q# következőket lehet futtatni:
 - önálló alkalmazásként, ahol az az Q# egyetlen érintett nyelv, és a program közvetlenül hívja meg a programot. Két metódus valójában a következő kategóriába tartozik:
   - a parancssori felület
   - Q# Jupyter notebookok
-- egy további, Pythonban vagy .NET nyelven írt (pl. C# vagy F #) *befogadó programmal*, amely ezután meghívja a programot, és folytatja a visszaadott eredmények feldolgozását.
+- egy Python-vagy .NET-nyelven írt további *gazdagép-programmal*(például C# vagy F #), amely ezt követően meghívja a programot, és folytatja a visszaadott eredmények feldolgozását.
 
-Ha szeretné jobban megérteni ezeket a folyamatokat és azok különbségeit, tekintse meg Q# az egyszerű programot, és hasonlítsa össze a végrehajtható módszereket.
+Ha szeretné jobban megérteni ezeket a folyamatokat és azok különbségeit, tekintse meg Q# az egyszerű programot, és hasonlítsa össze a futtatási módszereit.
 
 ## <a name="basic-no-locq-program"></a>Alapszintű Q# program
 
@@ -44,8 +44,8 @@ A-ben Q# ezt a következő kód hajtja végre:
         }
 ```
 
-Ez a kód azonban önmagában nem hajtható végre Q# .
-Ehhez egy [művelet](xref:microsoft.quantum.guide.basics#q-operations-and-functions)törzsét kell kiállítania, amely akkor kerül végrehajtásra, amikor a---vagy közvetlenül, vagy egy másik művelet hívja meg. Ezért a következő űrlapon is írhat egy műveletet:
+Ez a kód azonban önmagában nem futtatható Q# .
+Ehhez egy [művelet](xref:microsoft.quantum.guide.basics#q-operations-and-functions)törzsét kell kiállítania, amely akkor fut le, amikor a---vagy közvetlenül, vagy egy másik művelet hívja meg. Ezért a következő űrlapon is írhat egy műveletet:
 ```qsharp
     operation MeasureSuperposition() : Result {
         using (q = Qubit()) {
@@ -93,43 +93,46 @@ namespace NamespaceName {
 > Ennek egyetlen kivétele a [`Microsoft.Quantum.Core`](xref:microsoft.quantum.core) névtér, amely mindig automatikusan megnyílik.
 > Ezért a callables, mint a [`Length`](xref:microsoft.quantum.core.length) mindig közvetlenül használhatók.
 
-### <a name="execution-on-target-machines"></a>Végrehajtás a célszámítógépen
+### <a name="running-on-target-machines"></a>Futtatás a célszámítógépen
 
-Mostantól a program általános végrehajtási modellje is Q# világossá válik.
+Mostantól a program általános futtatási modellje is Q# világossá válik.
 
 <br/>
 <img src="../media/hostprograms_general_execution_model.png" alt="Q# program execution diagram" width="400">
 
-Először is a végrehajtáshoz megadott meghívásos hozzáférés minden más, ugyanabban a névtérben definiált callables és típushoz elérhető.
+Először is az adott futtatáshoz megadott meghívónak hozzá kell férnie az ugyanabban a névtérben definiált összes más callables és típushoz.
 Emellett a [ Q# könyvtárak](xref:microsoft.quantum.libraries)bármelyikének hozzáférését is elérheti, de ezeket a teljes névvel vagy a fent ismertetett utasítások használatával kell hivatkozni `open` .
 
-A meghívót a rendszer ezután a *[célszámítógépen](xref:microsoft.quantum.machines)* hajtja végre.
+A meghívót ezután futtathatja a *[célszámítógépen](xref:microsoft.quantum.machines)*.
 Ilyen célszámítógépek lehetnek a tényleges kvantum-hardverek vagy a QDK részeként elérhető több szimulátorok.
-Erre a célra a leghasznosabb célszámítógép a [teljes állapotú szimulátor](xref:microsoft.quantum.machines.full-state-simulator)egy példánya, `QuantumSimulator` amely úgy számítja ki a program viselkedését, mintha egy zaj nélküli kvantum-számítógépen hajtották végre.
+Erre a célra a leghasznosabb célszámítógép a [teljes állapotú szimulátor](xref:microsoft.quantum.machines.full-state-simulator)egy példánya, `QuantumSimulator` amely úgy számítja ki a program viselkedését, mintha egy zaj nélküli kvantum-számítógépen futna.
 
-Eddig azt ismertetjük, hogy mi történik, ha egy adott Q# hívás végrehajtása folyamatban van.
+Eddig azt ismertetjük, hogy mi történik, ha egy adott Q# hívás fut.
 Függetlenül attól, hogy Q# egy önálló alkalmazásban vagy egy gazdagép programban használ-e, ez az általános folyamat több vagy kevesebb, mint a QDK rugalmassága---.
-A *kvantum-fejlesztési* készletbe való hívás különböző módjai közötti különbségek így felfedik a Q# hívható hívásának módját, és hogy milyen módon adja vissza az eredményeket.
-Pontosabban a különbségek körül forog 
-1. annak jelzése Q# , hogy melyik meghívást kell végrehajtani,
-2. a lehetséges hívható argumentumok megadása
-3. annak a célszámítógépnek a meghatározása, amelyre a szolgáltatást végre szeretné hajtani, és
-4. az eredmények visszaadása.
+A Quantum Development Kit Meghívási módjai közötti különbségek tehát azt mutatják be, hogy *how* a Q# hívható hívása hogyan fut, és milyen módon adja vissza az eredményeket.
+Pontosabban a különbségek a következő körben forognak:
+
+- Annak jelzése, Q# hogy melyik meghívót kell futtatni
+- A lehetséges hívható argumentumok megadása
+- Azon célszámítógép meghatározása, amelyen futtatni szeretné
+- A visszaadott eredmények
 
 Először is megbeszéljük, hogy ez hogyan történik az Q# önálló alkalmazás parancssorból való használatával, majd folytassa a Python és a C# gazdagép-programok használatát.
 Fenntartjuk a Jupyter-jegyzetfüzetek önálló alkalmazását az Q# utolsó számára, mivel az első háromtól eltérően az elsődleges funkció nem a helyi fájlok körébe kerül Q# .
 
 > [!NOTE]
-> Habár nem mutatjuk be ezeket a példákat, a végrehajtási módszerek közötti egyetlen egység, hogy a programon belülről kinyomtatott összes üzenet Q# (például: [`Message`](xref:microsoft.quantum.intrinsic.message) vagy [`DumpMachine`](xref:microsoft.quantum.diagnostics.dumpmachine) ) általában mindig a megfelelő konzolra lesz kinyomtatva.
+> Habár nem mutatjuk be ezeket a példákat, a futtatási módszerek közötti egyetlen egység az, hogy a programon belülről kinyomtatott összes üzenet Q# ( [`Message`](xref:microsoft.quantum.intrinsic.message) például: vagy [`DumpMachine`](xref:microsoft.quantum.diagnostics.dumpmachine) ) általában mindig a megfelelő konzolra lesz kinyomtatva.
 
 ## <a name="no-locq-from-the-command-prompt"></a>Q# a parancssorból
 A programok írásához legkönnyebben elsajátíthatja az első lépéseket, Q# hogy elkerülje a különálló fájlok és a második nyelv használatának elkerülését.
 A Visual Studio Code vagy a Visual Studio és a QDK bővítmény lehetővé teszi a zökkenőmentes munkafolyamatot, amelyben a Q# callables-t csak egyetlen Q# fájlból futtatjuk.
 
-Ebben az esetben végső soron a program végrehajtásának meghívása a következővel:
+Ehhez a következő lépéssel fogjuk futtatni a programot:
+
 ```dotnetcli
 dotnet run
 ```
+
 parancsot a parancssorban.
 A legegyszerűbb munkafolyamat az, amikor a terminál címtárának helye megegyezik a fájl nevével Q# , amely könnyen kezelhető a Q# fájl szerkesztésével együtt a vs Code integrált termináljának használatával, például:.
 A [ `dotnet run` parancs](https://docs.microsoft.com/dotnet/core/tools/dotnet-run) azonban számos lehetőséget is elfogad, és a program más helyről is futtatható, ha egyszerűen megadja a `--project <PATH>` Q# fájl helyét.
@@ -137,7 +140,7 @@ A [ `dotnet run` parancs](https://docs.microsoft.com/dotnet/core/tools/dotnet-ru
 
 ### <a name="add-entry-point-to-no-locq-file"></a>Belépési pont hozzáadása a Q# fájlhoz
 
-A legtöbb Q# fájl egynél több meghívót tartalmaz, ezért természetesen a fordítónak tudnia kell, hogy *melyik* meghívásos végrehajtásra van szükség a `dotnet run` parancs megadásakor.
+A legtöbb Q# fájl egynél több meghívót tartalmaz, ezért a fordítónak természetesen azt is tudnia kell, hogy *melyik* meghívásos futtatásra van szükség a parancs megadásakor `dotnet run` .
 Ez a fájl egyszerű módosításával történik Q# : 
     - Adjon hozzá egy sort, amely `@EntryPoint()` közvetlenül megelőzi a meghívót.
 
@@ -228,7 +231,7 @@ BorrowedWidth   0
 
 Az ezekkel a mérőszámokkal kapcsolatos részletekért lásd [: erőforrás-kalkulátor: a jelentett mérőszámok](xref:microsoft.quantum.machines.resources-estimator#metrics-reported).
 
-### <a name="command-line-execution-summary"></a>Parancssori végrehajtás összegzése
+### <a name="command-line-run-summary"></a>Parancssori Futtatás összegzése
 <br/>
 <img src="../media/hostprograms_command_line_diagram.png" alt="Q# program from command line" width="700">
 
@@ -236,7 +239,7 @@ Az ezekkel a mérőszámokkal kapcsolatos részletekért lásd [: erőforrás-ka
 
 Ahogy azt röviden említettük a `--project` kapcsolóval, a [ `dotnet run` parancs](https://docs.microsoft.com/dotnet/core/tools/dotnet-run) a Q# meghívásos argumentumokhoz nem kapcsolódó beállításokat is elfogadja.
 Ha mindkét típusú beállítást megadja, a `dotnet` -specifikus beállításokat elsőként kell megadni, majd egy elválasztó karakter `--` , majd a Q# -specifikus beállításokat.
-Például a specifiying egy elérési utat a fenti művelethez tartozó qubits együtt hajthat végre `dotnet run --project <PATH> -- -n <n>` .
+Például megadhat egy elérési utat, valamint a fenti művelethez tartozó qubits `dotnet run --project <PATH> -- -n <n>` .
 
 ## <a name="no-locq-with-host-programs"></a>Q# gazdagép-programokkal
 
@@ -244,11 +247,11 @@ Ha a Q# fájl a kezünkben van, a művelet vagy a függvény közvetlenül a par
 Az együttműködési képesség engedélyezéséhez valamivel több beállítás szükséges, de ezek a részletek a [telepítési útmutatókban](xref:microsoft.quantum.install)találhatók.
 
 Dióhéjban a helyzet most már tartalmaz egy gazda programfájlt (például `*.py` vagy `*.cs` ) a fájllal megegyező helyen Q# .
-Most már a futtatott *gazda* program fut, és a végrehajtásuk során a Q# fájl adott műveleteit és funkcióit is meghívhatja Q# .
+Most már a futtatott *gazda* program fut, és a futása közben Q# a fájl adott műveleteit és funkcióit is meghívhatja Q# .
 Az együttműködési képesség lényege, hogy a Q# fordító a Q# fájl tartalmát elérhetővé teszi a gazda program számára, hogy azok meghívhatók legyenek.
 
 A gazda program használatának egyik legfőbb előnye, hogy a program által visszaadott klasszikus adatmennyiséget a Q# gazdagép nyelvén lehet tovább feldolgozni.
-Ez állhat néhány speciális adatfeldolgozásból (például egy olyan dologból, amely nem hajtható végre belsőleg Q# ), majd az Q# eredmények alapján további műveleteket hívhat meg, vagy az eredmények ábrázolására is alkalmas Q# .
+Ez állhat néhány speciális adatfeldolgozásból (például egy olyanra, amely nem hajtható végre belsőleg Q# ), majd az Q# eredmények alapján további műveleteket hívhat meg, vagy az eredmények ábrázolására is alkalmas Q# .
 
 Az általános séma itt látható, és megbeszéljük a Python és a C# adott implementációit alább. Az F # gazda programot használó minta a .net-es [együttműködési mintákon](https://github.com/microsoft/Quantum/tree/main/samples/interoperability/dotnet)érhető el.
 
@@ -292,7 +295,7 @@ A Python-gazda program a következőképpen épül fel:
 1. Importálja a modult `qsharp` , amely regisztrálja a modul-betöltőt az Q# együttműködési képességhez. 
     Ez lehetővé teszi Q# , hogy a névterek Python-modulokként jelenjenek meg, amelyekről "importálhatók" Q# callables.
     Ne feledje, hogy a callables nem Q# maga az importált, hanem a Python-Csonkok, amelyek lehetővé teszik a hívását.
-    Ezek a Python-osztályok objektumaiként viselkednek, és a metódusok segítségével határozzák meg, hogy a rendszer hogyan küldje el a műveletet a művelet végrehajtásához.
+    Ezek a Python-osztályok objektumaiként viselkednek. Ezen objektumok módszereit használva megadjuk azokat a célszámítógépeken, amelyeken a műveletet a program futtatásakor küldi el a rendszer.
 
 2. Importálja azokat a Q# callables, amelyeket a rendszer közvetlenül meghív---ebben az esetben, `MeasureSuperposition` és `MeasureSuperpositionArray` .
     ```python
@@ -404,11 +407,11 @@ Első lépésként a gazda programunkban használt osztályokat tesszük elérhe
 ```csharp
 using System;
 using System.Threading.Tasks;
-using Microsoft.Quantum.Simulation.Simulators;    // contains the target machines (e.g. QuantumSimulator, ResourcesEstimator)
+using Microsoft.Quantum.Simulation.Simulators;    // contains the target machines (for example, QuantumSimulator, ResourcesEstimator)
 using NamespaceName;                              // make the Q# namespace available
 ```
 
-Ezután deklaráljuk a C#-névteret, néhány más bitet és darabot (lásd az alábbi teljes kódrészletet), majd a klasszikus programozást (például a callables vonatkozó számítási argumentumokat Q# ).
+Ezután deklaráljuk a C#-névteret, néhány más bitet és darabot (lásd az alábbi teljes kódrészletet), majd a klasszikus programozást (például a callables számítási argumentumait Q# ).
 Az utóbbi nem szükséges az esetünkben, de az ilyen jellegű használatról a .net-es  [együttműködési minta](https://github.com/microsoft/Quantum/tree/main/samples/interoperability/dotnet)tartalmaz példát.
 
 #### <a name="target-machines"></a>Célgépek
@@ -431,9 +434,9 @@ A visszaadott eredmények ezután a C#-változókhoz rendelhetők:
 ```
 
 > [!NOTE]
-> A `Run` metódus aszinkron módon van végrehajtva, mert ez a valódi kvantum-hardver esetében ez lesz, ezért a `await` kulcsszó a feladat befejezéséig blokkolja a további végrehajtást.
+> A `Run` metódus aszinkron módon fut, mert ez a valódi kvantum-hardver esetében ez a helyzet, ezért a `await` kulcsszó blokkolja a további feldolgozást, amíg a feladat be nem fejeződik.
 
-Ha a Q# hívható nem rendelkezik visszaadott értékkel (azaz visszatérési típussal `Unit` ), a végrehajtás továbbra is ugyanúgy végezhető el, ha nem rendel hozzá egy változóhoz.
+Ha a Q# hívható nem rendelkezik visszaadott értékkel (például visszatérési típussal rendelkezik `Unit` ), akkor a Futtatás továbbra is ugyanúgy végezhető el, ha nem rendel hozzá egy változóhoz.
 Ebben az esetben a teljes sor csupán a következő elemekből áll: 
 ```csharp
 await <callable>.Run(<simulator>);
@@ -441,7 +444,7 @@ await <callable>.Run(<simulator>);
 
 #### <a name="arguments"></a>Argumentumok
 
-A felhívható argumentumok egyszerűen átadhatók Q# a afer további argumentumként.
+A Q# meghívóhoz tartozó bármely argumentum egyszerűen a célszámítógép után további argumentumként lesz átadva.
 Így a qubits eredményei `MeasureSuperpositionArray` a `n=4` következőn keresztül lettek beolvasva 
 
 ```csharp
@@ -578,7 +581,7 @@ BorrowedWidth   0
 
 ## <a name="no-locq-jupyter-notebooks"></a>Q# Jupyter notebookok
 Q# A Jupyter notebookok az I Q# kernelt használják, amely lehetővé teszi az callables egyetlen jegyzetfüzetben való definiálását, fordítását és futtatását Q# ---az összes útmutató, Megjegyzés és egyéb tartalom mellett.
-Ez azt jelenti, hogy habár lehetséges a fájlok tartalmának importálása és használata `*.qs` Q# , nem szükségesek a végrehajtási modellben.
+Ez azt jelenti, hogy habár lehetséges a fájlok importálása és használata `*.qs` Q# , nem szükségesek a futtatási modellben.
 
 Itt részletesen ismertetjük, hogyan futtatjuk a Q# fent meghatározott műveleteket, de a Jupyter notebookok használatának szélesebb körű bemutatása a Q# [notebookok bevezetője Q# és Jupyter](https://github.com/microsoft/Quantum/blob/main/samples/getting-started/intro-to-iqsharp/Notebook.ipynb).
 
@@ -609,12 +612,12 @@ Például a a (z) `%simulate` `QuantumSimulator` és a következőt `%estimate` 
 
 ### <a name="passing-inputs-to-functions-and-operations"></a>Bemenetek átadása a függvényeknek és műveleteknek
 
-Ahhoz, hogy a műveletek továbbítva legyenek a Q# műveletekhez, az argumentumok párokként adhatók át `key=value` a végrehajtási Magic parancsnak.
+Ha át szeretné adni a bemeneteket a Q# műveletekhez, az argumentumok a `key=value` Run Magic parancsba párokként adhatók át.
 Tehát a következő `MeasureSuperpositionArray` négy qubits futtatható `%simulate MeasureSuperpositionArray n=4` :
 
 <img src="../media/hostprograms_jupyter_args_sim_crop.png" alt="Jupyter cell simulating a Q# operation with arguments" width="773">
 
-Ez a minta a `%estimate` és más végrehajtási parancsokkal is használható.
+Ez a minta hasonlóan használható a `%estimate` és más futtatási parancsokhoz is.
 
 ### <a name="using-no-locq-code-from-other-projects-or-packages"></a>Q#Kód használata más projektekről vagy csomagokból
 

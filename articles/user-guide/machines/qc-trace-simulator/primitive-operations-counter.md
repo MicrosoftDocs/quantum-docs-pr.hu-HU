@@ -1,24 +1,24 @@
 ---
 title: Primitív művelet számláló – Quantum Development Kit
-description: Ismerje meg a Microsoft QDK primitív műveleti számlálóját, amely a Quantum Trace Simulator használatával követi nyomon a programok műveletei által használt primitív végrehajtásokat Q# .
+description: Ismerje meg a Microsoft QDK primitív műveleti számlálóját, amely a Quantum Trace Simulator használatával követi nyomon a programban végzett műveletek által használt primitív folyamatokat Q# .
 author: vadym-kl
-ms.author: vadym@microsoft.com
+ms.author: vadym
 ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.primitive-counter
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: ceb70cef6dc0a4530b992b5a529248a8b283c17f
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 8ee9ce25e680112e2f3c68d82ae9267c1b0fb355
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868236"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835978"
 ---
 # <a name="quantum-trace-simulator-primitive-operations-counter"></a>Quantum Trace Simulator: primitív műveleti számláló
 
-A primitív műveleti számláló a Quantum Development Kit [Quantum Trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro)részét képezi. A kvantum-programban meghívott összes művelet által használt primitív végrehajtások számát számítja fel. 
+A primitív műveleti számláló a Quantum Development Kit [Quantum Trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro)részét képezi. Megszámolja a kvantum-programban meghívott összes művelet által használt primitív folyamatok számát. 
 
 Az összes <xref:microsoft.quantum.intrinsic> művelet az qubit-Forgások, a T-műveletek, az Qubit Clifford-műveletek, a cnem-műveletek és a több Qubit Pauli-observables mérései alapján van kifejezve. A primitív műveletek számlálója összesíti és statisztikai adatokat gyűjt a művelet [hívási gráfjának](https://en.wikipedia.org/wiki/Call_graph)összes széléről.
 
@@ -75,7 +75,7 @@ Végezetül a következő paranccsal állíthatja be a primitív műveleti szám
 string csvSummary = sim.ToCSV()[MetricsCountersNames.primitiveOperationsCounter];
 ```
 
-## <a name="see-also"></a>További információ
+## <a name="see-also"></a>Lásd még
 
 - A Quantum Development Kit [Quantum Trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro) áttekintése.
 - Az <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> API-hivatkozás.

@@ -9,12 +9,12 @@ ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 4caacaad127f8a4d3b6f77efe35ebe7d3b97cacf
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: a3380627aa196a749dd9487ad603aad29f34ae29
+ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868763"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90759928"
 ---
 # <a name="applications"></a>Alkalmazások #
 
@@ -52,9 +52,9 @@ Abban a különleges esetben, ha a Hamilton Hermitian-részekből áll, a Trotte
 
 > [!TIP]
 > A Trotter-Suzuki szimulációs algoritmus alkalmazásait a minták tartalmazzák.
-> Ahhoz, hogy a Ising modell csak az egyes célszámítógépeken elérhető belső műveleteket használja, tekintse meg a [ **SimpleIsing** -mintát](https://github.com/microsoft/Quantum/blob/master/samples/simulation/ising/simple).
-> A Trotter-Suzuki Library Ising használó modell esetében tekintse meg a [ **IsingTrotter** mintát](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/trotter-evolution).
-> A Trotter-Suzuki Library vezérlési struktúrát használó molekuláris hidrogén esetében tekintse meg a [ **H2 szimulációs** mintát](https://github.com/microsoft/Quantum/tree/master/samples/simulation/h2/command-line).
+> Ahhoz, hogy a Ising modell csak az egyes célszámítógépeken elérhető belső műveleteket használja, tekintse meg a [ **SimpleIsing** -mintát](https://github.com/microsoft/Quantum/blob/main/samples/simulation/ising/simple).
+> A Trotter-Suzuki Library Ising használó modell esetében tekintse meg a [ **IsingTrotter** mintát](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/trotter-evolution).
+> A Trotter-Suzuki Library vezérlési struktúrát használó molekuláris hidrogén esetében tekintse meg a [ **H2 szimulációs** mintát](https://github.com/microsoft/Quantum/tree/main/samples/simulation/h2/command-line).
 
 Sok esetben szeretnénk megvalósítani a szimulációs algoritmust, de nem érdeklik a megvalósításának részletei. Például: a második sorrendű integrátor körülbelül $ $ \begin{align} U (t) & = \left (e ^ {-iH \_ 0 t/2r} e ^ {-IH \_ 1 t/2r} \cdots e ^ {-IH \_ {d-1} t/2r} e ^ {-IH \_ {d-1} t/2r} \cdots e ^ {-IH \_ 1 t/2r} e ^ {-iH \_ 0 t/2r} \right) ^ {r} + \mathcal{O} (d ^ 3 \ max_j \\ | H \_ j \\ | ^ 3 t ^ 3/r ^ 2), \end{align} $ $ $2RD $ feltételt használó termékkel. A nagyobb megrendelések esetében még a feltételek és az optimalizált változatok is nagy mértékben nem triviális rendezést igényelhetnek az exponenciálisan. Más speciális algoritmusok is magukban foglalhatják a Ancilla qubits használatát a közbenső lépésekben. Így a szimulációs algoritmusokat a Canonban, felhasználó által definiált típusként csomagoljuk
 
@@ -87,8 +87,8 @@ function TimeDependentTrotterSimulationAlgorithm(
 ```
 
 > [!TIP]
-> A szimulációs függvénytár alkalmazásait a minták tartalmazzák. A Ising modellben használt fázis-becsléshez `SimulationAlgorithm` tekintse meg a [ **IsingPhaseEstimation** mintát](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/phase-estimation).
-> A adiabatic-állapot előkészítéséhez a Ising-modellben `TimeDependentSimulationAlgorithm` tekintse meg a [ **AdiabaticIsing** mintát](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/adiabatic).
+> A szimulációs függvénytár alkalmazásait a minták tartalmazzák. A Ising modellben használt fázis-becsléshez `SimulationAlgorithm` tekintse meg a [ **IsingPhaseEstimation** mintát](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/phase-estimation).
+> A adiabatic-állapot előkészítéséhez a Ising-modellben `TimeDependentSimulationAlgorithm` tekintse meg a [ **AdiabaticIsing** mintát](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/adiabatic).
 
 
 ### <a name="adiabatic-state-preparation--phase-estimation"></a>Adiabatic állapot-előkészítés & fázisának becslése ###
@@ -129,14 +129,14 @@ operation EstimateAdiabaticStateEnergy(
 }
 ```
 
-`nQubits`a kezdeti kvantum-állapot kódolásához használt qubits száma. `statePrepUnitary`előkészíti az indítási állapotot a $ \ket{0\cdots 0} $ számítási alapján. `adiabaticUnitary`a a adiabatic állapot-előkészítést megvalósító egységes művelet, például a függvény által előállított `InterpolatedEvolution` . `qpeUnitary`az az egységes művelet, amellyel a rendszer a fázisok becslését hajtja végre az eredményül kapott kvantum állapoton. `phaseEstAlgorithm`a fázis becslési algoritmusa közül választhat.
+`nQubits` a kezdeti kvantum-állapot kódolásához használt qubits száma. `statePrepUnitary` előkészíti az indítási állapotot a $ \ket{0\cdots 0} $ számítási alapján. `adiabaticUnitary` a a adiabatic állapot-előkészítést megvalósító egységes művelet, például a függvény által előállított  `InterpolatedEvolution` . `qpeUnitary` az az egységes művelet, amellyel a rendszer a fázisok becslését hajtja végre az eredményül kapott kvantum állapoton. `phaseEstAlgorithm` a fázis becslési algoritmusa közül választhat.
 
 > [!TIP]
-> A mintákban a adiabatic-állapot előkészítésének alkalmazásai szerepelnek. A Ising modell adiabatic állapot-előkészítésének manuális megvalósításával és a függvény használatával `AdiabaticEvolution` tekintse meg a [ **AdiabaticIsing** mintát](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/adiabatic).
-> A Ising modellben a fázisok becslése és a adiabatic állapotának előkészítéséhez tekintse meg a [ **IsingPhaseEstimation** mintát](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/phase-estimation).
+> A mintákban a adiabatic-állapot előkészítésének alkalmazásai szerepelnek. A Ising modell adiabatic állapot-előkészítésének manuális megvalósításával és a függvény használatával `AdiabaticEvolution` tekintse meg a [ **AdiabaticIsing** mintát](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/adiabatic).
+> A Ising modellben a fázisok becslése és a adiabatic állapotának előkészítéséhez tekintse meg a [ **IsingPhaseEstimation** mintát](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/phase-estimation).
 
 > [!TIP]
-> A [molekuláris hidrogén szimulálása](https://github.com/microsoft/Quantum/tree/master/samples/simulation/h2/command-line) egy érdekes és rövid minta. A [O'Malley et. Al](https://arxiv.org/abs/1512.06860) -ben jelentett modell és kísérleti eredmények. csak a Pauli-mátrixok szükségesek, és az űrlapon a $ \hat H = g \_ {0} I \_ 0i \_ 1 + g \_ 1 {z \_ 0} + g \_ 2 {z \_ 1} + g \_ 3 {z \_ 0} {z \_ 1} + g \_ 4 {y \_ 0} {y \_ 1} + g \_ 5 {x \_ 0} {x \_ 1} $ értéket kell használnia. Ez egy hatékony Hamilton, amely csak a 2 qubits-t igényli, ahol a $g $ konstansokat a két hidrogén atomok közötti távolságból számított $R $ értékre számítjuk. A Canon functions használatával a Paulis átalakítja a unitaries, majd rövid idő alatt kifejlődött a Trotter-Suzuki dekompozíció használatával. A adiabatic-állapot előkészítése nélkül hozható létre jó közelítés a $H _2 $ alapállapothoz, és így a rendszer közvetlenül a Canontól származó fázis-becslés használatával is megtalálhatja a terepi állapotot.
+> A [molekuláris hidrogén szimulálása](https://github.com/microsoft/Quantum/tree/main/samples/simulation/h2/command-line) egy érdekes és rövid minta. A [O'Malley et. Al](https://arxiv.org/abs/1512.06860) -ben jelentett modell és kísérleti eredmények. csak a Pauli-mátrixok szükségesek, és az űrlapon a $ \hat H = g \_ {0} I \_ 0i \_ 1 + g \_ 1 {z \_ 0} + g \_ 2 {z \_ 1} + g \_ 3 {z \_ 0} {z \_ 1} + g \_ 4 {y \_ 0} {y \_ 1} + g \_ 5 {x \_ 0} {x \_ 1} $ értéket kell használnia. Ez egy hatékony Hamilton, amely csak a 2 qubits-t igényli, ahol a $g $ konstansokat a két hidrogén atomok közötti távolságból számított $R $ értékre számítjuk. A Canon functions használatával a Paulis átalakítja a unitaries, majd rövid idő alatt kifejlődött a Trotter-Suzuki dekompozíció használatával. A adiabatic-állapot előkészítése nélkül hozható létre jó közelítés a $H _2 $ alapállapothoz, és így a rendszer közvetlenül a Canontól származó fázis-becslés használatával is megtalálhatja a terepi állapotot.
 
 ## <a name="shors-algorithm"></a>Shor-algoritmus ##
 A rövid algoritmusa továbbra is a kvantum-számítástechnika egyik legjelentősebb folyamata marad, mivel ez azt mutatta, hogy a kvantum-számítógépek a fontos, jelenleg klasszikusan megoldhatatlan problémák megoldására használhatók.

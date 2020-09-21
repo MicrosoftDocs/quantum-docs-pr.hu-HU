@@ -2,19 +2,19 @@
 title: Műveletek és függvények a-ben Q#
 description: Műveletek és függvények definiálása és hívása, valamint az ellenőrzött és adjoint műveletekre vonatkozó specializációk.
 author: gillenhaalb
-ms.author: a-gibec@microsoft.com
+ms.author: a-gibec
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.operationsfunctions
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: c2ce999ea2a0fe7204f402fedb4cd3a3c15bd44b
-ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
+ms.openlocfilehash: e9a84de2753bc3293f441e66ee53e78559263e5c
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90759424"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90833482"
 ---
 # <a name="operations-and-functions-in-no-locq"></a>Műveletek és függvények a-ben Q#
 
@@ -73,9 +73,7 @@ operation DecodeSuperdense(here : Qubit, there : Qubit) : (Result, Result) {
 
 Ha egy művelet egy egységes átalakítást valósít meg, mint a számos művelet esetében, Q# akkor megadható, hogy a művelet hogyan *adjointed* vagy *vezérelve*legyen. Egy művelet *adjoint* -specializálása meghatározza, hogy a művelet milyen hatással van az "inverz" értékre, míg a *szabályozott* specializáció meghatározza, hogy a művelet hogyan működik, ha az alkalmazás egy adott kvantum-regiszter állapotára van feltétele.
 
-A Adjoints elengedhetetlen a kvantum-számítási feladatok számos aspektusa szempontjából. A hasznos programozási technikák mellett egy ilyen helyzetre például a Q# jelen cikk [conjugations](#conjugations) című szakaszában olvashat. 
-
-Egy művelet ellenőrzött verziója olyan új művelet, amely hatékonyan alkalmazza az alapműveletet, ha az összes vezérlő qubits megadott állapotban van.
+A Adjoints elengedhetetlen a kvantum-számítási feladatok számos aspektusa szempontjából. A hasznos programozási technikák mellett egy ilyen helyzetre például a Q# következő témakörben olvashat [: Control flow: conjugations](xref:microsoft.quantum.guide.controlflow#conjugations). Egy művelet ellenőrzött verziója olyan új művelet, amely hatékonyan alkalmazza az alapműveletet, ha az összes vezérlő qubits megadott állapotban van.
 Ha a vezérlő qubits van, akkor az alapszintű műveletet a rendszer következetesen alkalmazza a Felfekvés megfelelő részére.
 Így a rendszer gyakran használja az ellenőrzött műveleteket a felakadás létrehozásához.
 
@@ -366,46 +364,6 @@ A felhasználó által definiált típusokat az alapul szolgáló típus burkolt
 Ez azt jelenti, hogy a felhasználó által definiált típus értéke nem használható, ha a mögöttes típus értéke a várt érték.
 
 
-### <a name="conjugations"></a>Conjugations
-
-A klasszikus BITS-vel szemben a kvantum-memória felszabadítása valamivel nagyobb mértékben történik, mivel a qubits vakon alaphelyzetbe állítása nem kívánt hatással lehet a fennmaradó számításra, ha a qubits továbbra is összefonódik. Ezek a hatások elkerülhetők a memória felszabadítása előtt végrehajtott számítások megfelelő "visszavonása" esetén. A kvantum-számítástechnika általános mintája a következő: 
-
-```qsharp
-operation ApplyWith<'T>(
-    outerOperation : ('T => Unit is Adj), 
-    innerOperation : ('T => Unit), 
-    target : 'T) 
-: Unit {
-
-    outerOperation(target);
-    innerOperation(target);
-    Adjoint outerOperation(target);
-}
-```
-
-A 0,9-es verziótól kezdődően a Q# támogatja az előző transzformációt megvalósító ragozás utasítást. Az utasítás használatával a művelet a `ApplyWith` következő módon valósítható meg:
-
-```qsharp
-operation ApplyWith<'T>(
-    outerOperation : ('T => Unit is Adj), 
-    innerOperation : ('T => Unit), 
-    target : 'T) 
-: Unit {
-
-    within{ 
-        outerOperation(target);
-    }
-    apply {
-        innerOperation(target);
-    }
-}
-```
-Egy ilyen ragozás-utasítás sokkal hasznosabb lehet, ha a külső és a belső átalakítások nem állnak rendelkezésre azonnal műveletekként, hanem sokkal kényelmesebbek egy több utasításból álló blokk leírására. 
-
-A blokkon belül definiált utasítások inverz átalakítását a fordító automatikusan hozza létre, és az Apply-Block befejeződése után fut.
-Mivel a blokk részeként használt változó változók nem használhatók fel az alkalmazás-blokkban, a generált transzformáció garantált, hogy a adjoint a blokkon belül. 
-
-
 ## <a name="defining-new-functions"></a>Új függvények definiálása
 
 A függvények tisztán determinisztikus, klasszikus rutinok, amelyek a-ben Q# különböznek, és nem megengedett, hogy a kimeneti érték kiszámításán kívül más effektusok is legyenek.
@@ -663,10 +621,10 @@ Vagyis egy művelet vagy függvény meghívhatja önmagát, vagy hívhat egy má
 A rekurzió használatának két fontos megjegyzése van, azonban:
 
 - A rekurzió a műveletekben való használata valószínűleg ütközik bizonyos optimalizálásokkal.
-  Ez az interferencia jelentős hatással lehet az algoritmus végrehajtási idejére.
+  Ez az interferencia jelentős hatással lehet az algoritmus futási idejére.
 - Ha a tényleges kvantum-eszközön fut, előfordulhat, hogy a rendelkezésre állási terület korlátozott, ezért a mélyebb rekurzió hibát okozhat.
   Különösen a Q# fordító és a futtatókörnyezet nem azonosítja és optimalizálja a farok rekurzióját.
 
-## <a name="next-steps"></a>További lépések
+## <a name="next-steps"></a>Következő lépések
 
 További tudnivalók a [változóinak](xref:microsoft.quantum.guide.variables) használatáról Q# .

@@ -2,19 +2,19 @@
 title: A Kvantum Katák bemutatása
 description: Ismerje meg a Microsoft Quantum Development Kitben (QDK) található katákat (gyakorlófeladatokat).
 author: bradben
-ms.author: bradben
+ms.author: v-benbra
 ms.date: 06/02/2020
 ms.topic: overview
 uid: microsoft.quantum.overview.katas
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 780f04aa941d416032ea3e50b05769f93fae769f
-ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
+ms.openlocfilehash: 097d7f70088b6ee84a1e91ee99be59149dd9e15b
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90759391"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834822"
 ---
 # <a name="learn-quantum-computing-with-the-quantum-katas"></a>Ismerkedés a kvantum-számítástechnikával a Kvantum Katák segítségével
 
@@ -39,7 +39,7 @@ Ismerkedjen meg a kvantum-számítástechnika alapjaival és alapjaival, vagy m�
 
 ### <a name="introduction-to-quantum-computing-concepts"></a>Bevezetés a kvantum-számítástechnikai fogalmakba
 
-| Kata | Leírás |
+| Kata | Description |
 |:-----|-------------|
 |[Összetett aritmetika](https://github.com/microsoft/QuantumKatas/tree/main/tutorials/ComplexArithmetic):|Ez az oktatóanyag a kvantum-számítástechnika, például a képzeletbeli és az összetett számok használatához szükséges matematikai hátteret ismerteti.|
 |[Lineáris algebra](https://github.com/microsoft/QuantumKatas/tree/main/tutorials/LinearAlgebra)|A lineáris algebra a Quantum állapotok és a kvantum-számítástechnikai műveletek ábrázolására szolgál. Ez az oktatóanyag az alapokat, például a mátrixokat és a vektorokat ismerteti.|
@@ -50,7 +50,7 @@ Ismerkedjen meg a kvantum-számítástechnika alapjaival és alapjaival, vagy m�
 
 ### <a name="quantum-computing-fundamentals"></a>Kvantum-számítástechnikai alapfogalmak
 
-| Kata | Leírás |
+| Kata | Description |
 |:-----|-------------|
 |[Kvantumkapuk felismerése](https://github.com/microsoft/QuantumKatas/tree/main/BasicGates)|Az alapszintű kvantum-kapuk megismerését célzó gyakorlatok sorozata Q# . Az alapszintű qubit-és qubit-kapuk, adjoint és vezérelt kapuk, valamint a kapuk használata a qubit állapotának módosításához.|
 |[Kvantum-szuperpozíció létrehozása](https://github.com/microsoft/QuantumKatas/tree/main/Superposition)|Ezekkel a gyakorlatokkal megismerheti a Felfekvés és a programozás fogalmát Q# . Az alapszintű egyqubitű és több qubit kapuk, a túlterhelések és a folyamatok vezérlésének és rekurziójának gyakorlatát foglalja magában Q# .|
@@ -59,7 +59,7 @@ Ismerkedjen meg a kvantum-számítástechnika alapjaival és alapjaival, vagy m�
 
 ### <a name="algorithms"></a>Algoritmusok
 
-| Kata | Leírás |
+| Kata | Description |
 |:-----|-------------|
 |[Kvantumteleportáció](https://github.com/microsoft/QuantumKatas/tree/main/Teleportation)|Ez a Kata egy olyan protokollt vizsgál, amely lehetővé teszi, hogy a kvantum-állapotot csak a klasszikus kommunikáció és a korábban megosztott kvantum-felakadás használatával kommunikáljon.|
 |[Szupersűrű kódolás](https://github.com/microsoft/QuantumKatas/tree/main/SuperdenseCoding)|A többszintű kódolás egy olyan protokoll, amely lehetővé teszi két bites klasszikus információ továbbítását úgy, hogy csak egy qubit küld el, amely korábban megosztott kvantum-felakadás használ.  |
@@ -71,7 +71,7 @@ Ismerkedjen meg a kvantum-számítástechnika alapjaival és alapjaival, vagy m�
 
 ### <a name="protocols-and-libraries"></a>Protokollok és kódtárak
 
-| Kata | Leírás |
+| Kata | Description |
 |:-----|-------------|
 |[BB84 protokoll a kvantumkulcs-elosztáshoz](https://github.com/microsoft/QuantumKatas/tree/main/KeyDistribution_BB84)|Ismerje meg és implementálja a Quantum Key Distribution Protocol, a [BB84](https://en.wikipedia.org/wiki/BB84), a qubits használatával a titkosítási kulcsok cseréjét. |
 |[Bit-flip hiba a kód kijavítani](https://github.com/microsoft/QuantumKatas/tree/main/QEC_BitFlipCode)|Ismerje meg a kvantum-hibajavítást a Quantum Error-Correction (KARANTÉNKÉNYSZERÍTÉSI) kódok közül a legegyszerűbben a három qubit-kód megadásával.|
@@ -80,7 +80,7 @@ Ismerkedjen meg a kvantum-számítástechnika alapjaival és alapjaival, vagy m�
 
 ### <a name="entanglement-games"></a>Összefonódási játékok
 
-| Kata | Leírás |
+| Kata | Description |
 |:-----|-------------|
 |[CHSH játék](https://github.com/microsoft/QuantumKatas/tree/main/CHSHGame)|Ismerje meg a Quantum felakadás a [chsh](https://en.wikipedia.org/wiki/CHSH_inequality) játék megvalósításával. Ez a nem [helyi](https://en.wikipedia.org/wiki/Quantum_refereed_game) játék azt mutatja be, hogyan használható a Quantum felakadás, hogy növelje a játékosok esélyét arra, hogy a lehető leghatékonyabban klasszikus stratégiával lehessen nyerni.|
 |[GHZ játék](https://github.com/microsoft/QuantumKatas/tree/main/GHZGame)|A GHZ-es játék egy másik nem helyi játék, de három játékost is magában foglal.|

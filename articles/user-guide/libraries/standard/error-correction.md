@@ -3,18 +3,18 @@ title: Hibajavítás a Q# standard könyvtárakban
 description: Megtudhatja, hogyan használhatja a hibák helyességét a Q# programokban, miközben védi a qubits állapotát.
 author: QuantumWriter
 uid: microsoft.quantum.libraries.error-correction
-ms.author: martinro@microsoft.com
+ms.author: martinro
 ms.date: 12/11/2017
 ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 8b1f008793281121bc547d1a6ac3b960feb082ab
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: dad0db4d2aab27e5ae46d4df10ee050f785d8bb8
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868491"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835553"
 ---
 # <a name="error-correction"></a>Hibajavítás #
 
@@ -78,7 +78,7 @@ Ebben a szakaszban ezt a keretrendszert és annak alkalmazását néhány egysze
 > A stabilizátorok formális bevezetésének teljes bemutatása meghaladja a jelen szakasz hatókörét.
 > A [Gottesman 2009](https://arxiv.org/abs/0904.2557)-re vonatkozó további információkért tekintse meg az olvasók érdeklődését.
 
-## <a name="representing-error-correcting-codes-in-no-locq"></a>Hiba történt a kódok helyesbítésében a következőben:Q# ##
+## <a name="representing-error-correcting-codes-in-no-locq"></a>Hiba történt a kódok helyesbítésében a következőben: Q# ##
 
 A hibakódok megadásához a Q# Canon számos különböző, felhasználó által definiált típust biztosít:
 
@@ -120,6 +120,6 @@ using (scratch = Qubit[nScratch]) {
 }
 ```
 
-Ezt részletesebben is megvizsgáljuk a [bit flip Code-mintában](https://github.com/microsoft/Quantum/tree/master/samples/error-correction/bit-flip-code).
+Ezt részletesebben is megvizsgáljuk a [bit flip Code-mintában](https://github.com/microsoft/Quantum/tree/main/samples/error-correction/bit-flip-code).
 
 A bit-flip kód mellett a Canon az Q# [öt qubit tökéletes kód](https://arxiv.org/abs/quant-ph/9602019)és a [Seven-qubit kód](https://arxiv.org/abs/quant-ph/9705052)megvalósításával érhető el, amelyek közül mindkettő kijavítani egy tetszőleges, egyqubitos hibát.
