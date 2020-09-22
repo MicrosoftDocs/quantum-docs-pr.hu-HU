@@ -3,18 +3,18 @@ title: Alkalmazások a Q# standard könyvtárakban
 description: Ismerkedjen meg a Quantum Computing – Hamilton szimuláció és a rövid keresési algoritmusának két alapvető alkalmazásával.
 author: QuantumWriter
 uid: microsoft.quantum.libraries.applications
-ms.author: martinro@microsoft.com
+ms.author: martinro
 ms.date: 12/11/2017
 ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: a3380627aa196a749dd9487ad603aad29f34ae29
-ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
+ms.openlocfilehash: 115cd65621afd8272887b36163b066a4e6a554d7
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90759928"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835655"
 ---
 # <a name="applications"></a>Alkalmazások #
 
