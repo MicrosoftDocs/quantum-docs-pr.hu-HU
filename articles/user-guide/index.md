@@ -2,19 +2,19 @@
 title: A Q# használati útmutatója
 description: A felhasználói útmutató céljának és tartalmának áttekintése
 author: gillenhaalb
-ms.author: a-gibec@microsoft.com
+ms.author: a-gibec
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 4fae2949bdcab0c3735b40ef029d70bf7ea3fb9f
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: f0680e773c8233d6c4f1acb742b3cc38dbc069d5
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: HT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869630"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834754"
 ---
 # <a name="the-no-locq-user-guide"></a>A Q# használati útmutatója
 
@@ -26,7 +26,7 @@ A jelen útmutató különböző témaköreiben részletesen ismertetjük a Q# n
 
 - [A Q# alapjai](xref:microsoft.quantum.guide.basics): A Q# programozási nyelv célját és funkcióit bemutató áttekintés. 
 
-- [A Q#-programok futtatásának módjai](xref:microsoft.quantum.guide.host-programs): a Q#-programok végrehajtásának módját ismerteti, valamint áttekintést nyújt a program meghívásának különböző módjairól: a parancssorból, a Q# Jupyter-notebookokból vagy a Python vagy .NET nyelven írt klasszikus gazdaprogramokból.
+- [A Q#-programok futtatásának módjai](xref:microsoft.quantum.guide.host-programs): a Q#-programok futtatásának módját ismerteti, valamint áttekintést nyújt a program meghívásának különböző módjairól: a parancssorból, a Q# Jupyter-notebookokból vagy a Python vagy .NET nyelven írt klasszikus gazdaprogramokból.
 
 ### <a name="no-locq-language"></a>Q# nyelv
 
@@ -46,7 +46,7 @@ A jelen útmutató különböző témaköreiben részletesen ismertetjük a Q# n
 
 - [Munkavégzés qubitekkel](xref:microsoft.quantum.guide.qubits): A Q# azon funkcióit ismerteti, amelyek az egyes qubitekhez és qubitrendszerekhez használhatók, különös tekintettel a kiosztásukra, a rajtuk végzett műveletekre és a mérésükre. 
 
-- [Átvitelvezérlés](xref:microsoft.quantum.guide.controlflow): Részletesen bemutatja a Q#-ban elérhető programozás-átvitelvezérlési mintákat, amelyekbe beletartozik számos alaptechnika (pl. feltételes végrehajtás, „for” és „while” hurkok), valamint a kvantumspecifikus „sikerességig ismétlődő” minta.
+- [Átvitelvezérlés](xref:microsoft.quantum.guide.controlflow): Részletesen bemutatja a Q#-ban elérhető programozás-átvitelvezérlési mintákat, amelyekbe beletartozik számos alaptechnika (pl. feltételes feldolgozás, *for* és *while* hurkok), valamint a kvantumspecifikus *sikerességig ismétlődő* minta.
 
 - [Tesztelés és hibakeresés](xref:microsoft.quantum.guide.testingdebugging): Részletesen ismertet néhány módszert, amelyek segítségével meggyőződhet róla, hogy a kódja úgy működik, ahogyan kell. 
     A kvantuminformációk általános átlátszatlansága miatt egy kvantumprogram hibakereséséhez speciális módszerekre lehet szükség. 
@@ -55,13 +55,13 @@ A jelen útmutató különböző témaköreiben részletesen ismertetjük a Q# n
 
 ### <a name="quantum-simulators-and-resource-estimators"></a>Kvantumszimulátorok és erőforrásbecslők
 
-- [Kvantumszimulátorok és gazdaalkalmazások](xref:microsoft.quantum.machines): A különböző elérhető szimulátorok, valamint a gazdaprogramok és a célgépek közötti általános végrehajtási modell áttekintése.
+- [Kvantumszimulátorok és gazdaalkalmazások](xref:microsoft.quantum.machines): A különböző elérhető szimulátorok, valamint a gazdaprogramok és a célgépek közötti általános futtatási modell áttekintése.
 
-- [Teljes körű funkciókkal rendelkező szimulátor](xref:microsoft.quantum.machines.full-state-simulator): A teljes kvantumállapotot szimuláló célgép. Hasznos a kisebb méretezésű (kevesebb mint pár tucat qubitból álló) programok teljes végrehajtásához vagy hibakereséséhez.
+- [Teljes körű funkciókkal rendelkező szimulátor](xref:microsoft.quantum.machines.full-state-simulator): A teljes kvantumállapotot szimuláló célgép. Hasznos a kisebb méretezésű (kevesebb mint pár tucat qubitból álló) programok teljes futtatásához vagy hibakereséséhez.
 
 - [Erőforrásbecslő](xref:microsoft.quantum.machines.resources-estimator): Megbecsüli a Q#-művelet adott példányának a kvantumszámítógépen való futtatásához szükséges erőforrásokat.
 
-- [Nyomkövetési szimulátor](xref:microsoft.quantum.machines.qc-trace-simulator.intro): A kvantumszámítógép állapotának tényleges szimulálása nélkül hajt végre kvantumprogramokat, így több ezer qubitet használó kvantumprogramok végrehajtására is képes. Hasznos kvantumprogramban lévő klasszikus kódok hibakeresésekor, valamint a szükséges erőforrások megbecsülésekor.
+- [Nyomkövetési szimulátor](xref:microsoft.quantum.machines.qc-trace-simulator.intro): A kvantumszámítógép állapotának tényleges szimulálása nélkül futtat kvantumprogramokat, így több ezer qubitet használó kvantumprogramok futtatására is képes. Hasznos kvantumprogramban lévő klasszikus kódok hibakeresésekor, valamint a szükséges erőforrások megbecsülésekor.
 
 - [Toffoli-szimulátor](xref:microsoft.quantum.machines.toffoli-simulator): Egy speciális célú kvantumszimulátor, amely használható több millió qubittel, de csak korlátozott kvantumművelet-készletet – X, CNOT, több elem által vezérelt X műveletek – tartalmazó programok esetében.
 

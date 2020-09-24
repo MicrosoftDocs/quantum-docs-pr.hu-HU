@@ -2,19 +2,19 @@
 title: Kvantum-nyomkövetési szimulátor – Quantum Development Kit
 description: Ismerje meg, hogyan használható a Microsoft kvantumszámítógépekhez való nyomkövetési szimulátora klasszikus kódok hibakereséséhez, illetve Q#-programok erőforrásigényeinek becsléséhez.
 author: vadym-kl
-ms.author: vadym@microsoft.com
+ms.author: vadym
 ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.intro
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 5d5efef037ff236bd040dfd88e94f7f3dd331aef
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 54a1f63461cfcc8146f7dc4d18d321238d77454d
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: HT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868219"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90833365"
 ---
 # <a name="microsoft-quantum-development-kit-qdk-quantum-trace-simulator"></a>Microsoft Quantum Development Kit (QDK) – Kvantum-nyomkövetési szimulátor
 
@@ -86,7 +86,7 @@ A QDK öt olyan, a kvantum-nyomkövetési szimulátorral használható eszközt 
 |-----| -----|
 |[Eltérő bemenetek ellenőrzője](xref:microsoft.quantum.machines.qc-trace-simulator.distinct-inputs) |A közös qubitek lehetséges ütközéseit ellenőrzi |
 |[Érvénytelenített qubithasználat ellenőrzője](xref:microsoft.quantum.machines.qc-trace-simulator.invalidated-qubits)  |Ellenőrzi, hogy a program alkalmaz-e műveletet egy már kiadott qubitre |
-|[Primitív műveletek számlálója](xref:microsoft.quantum.machines.qc-trace-simulator.primitive-counter)  | Megszámlálja a kvantumprogramban meghívott összes művelet által használt primitív végrehajtásokat  |
+|[Primitív műveletek számlálója](xref:microsoft.quantum.machines.qc-trace-simulator.primitive-counter)  | Megszámlálja a kvantumprogramban meghívott összes művelet által használt primitív folyamatokat  |
 |[Mélységszámláló](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter)  |Összegyűjti a kvantumprogramban meghívott összes művelet mélysége alsó határértékei darabszámát   |
 |[Szélességszámláló](xref:microsoft.quantum.machines.qc-trace-simulator.width-counter)  |Megszámlálja a kvantumprogram egyes műveletei által lefoglalt és kölcsönzött qubiteket |
 
