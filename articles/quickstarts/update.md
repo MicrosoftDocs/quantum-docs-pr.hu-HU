@@ -2,7 +2,7 @@
 title: A Quantum Development Kit (QDK) frissítése
 description: Ismerteti, hogyan frissítheti Q#-projektjeit és a Microsoft Quantum Development Kitet az aktuális verzióra.
 author: bradben
-ms.author: bradben
+ms.author: v-benbra
 ms.date: 5/30/2020
 ms.topic: article
 ms.custom: how-to
@@ -10,12 +10,12 @@ uid: microsoft.quantum.update
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 84782d1628dd100c0939b2b12aa0a9aa8ab2b80e
-ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+ms.openlocfilehash: d9678a61f5fe4ca466b6a84e9e4b68321c5baee3
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: HT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88863644"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834923"
 ---
 # <a name="update-the-microsoft-quantum-development-kit-qdk"></a>A Microsoft Quantum Development Kit (QDK) frissítése
 
@@ -41,7 +41,7 @@ Függetlenül attól, hogy a C#-ot vagy Pythont használ a Q#-műveleteihez, kö
 
 ### <a name="update-no-locq-projects-in-visual-studio"></a>Q#-projektek frissítése a Visual Studióban
  
-1. Frissítés a Visual Studio 2019 legújabb verziójára – a kapcsolódó utasításokat [itt](https://docs.microsoft.com/visualstudio/install/update-visual-studio?view=vs-2019) találja.
+1. Frissítés a Visual Studio 2019 legújabb verziójára – a kapcsolódó utasításokat [itt](https://docs.microsoft.com/visualstudio/install/update-visual-studio) találja.
 2. Nyissa meg a megoldást a Visual Studióban.
 3. A menüben válassza a **Build (Létrehozás)**  -> **Clean Solution (Megoldás eltávolítása)** elemet.
 4. A .csproj-fájlok mindegyikében frissítse a célkeretrendszert a következőre: `netcoreapp3.1` (kódtárprojekt esetén a következőre: `netstandard2.1`).
