@@ -9,12 +9,12 @@ uid: microsoft.quantum.contributing.code
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: b27d084bbe2cda878efa6250c52c0ae628637850
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 7a258a915a807b8e1ee7c2c9c062017d90f6a454
+ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834890"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91489765"
 ---
 # <a name="contributing-code"></a>Hozzájárulás a kódhoz
 
@@ -82,6 +82,10 @@ A helyszíni tesztek a Visual Studio test Explorer vagy a parancs használatáva
 
 ### Citations and References ### -->
 
+## <a name="pull-requests"></a>Lekéréses kérelmek
+
+Ha készen áll a munkához való hozzájárulásra, küldjön egy lekéréses kérelmet a GitHubon keresztül a megfelelő tárházba.
+A csapat áttekinti és visszajelzést küld. Minden észrevételt meg kell válaszolnia, és meg kell oldani, és az összes ellenőrzésnek meg kell felelnie ahhoz, hogy a kód egyesítve legyen a `main` ágban.
 
 ## <a name="when-well-reject-a-pull-request"></a>Ha elutasítja a lekéréses kérelmet
 
@@ -102,7 +106,7 @@ Végül a [Microsoft nyílt forráskódjának viselkedési szabályzatában](htt
 Szeretnénk biztosítani, hogy a hozzájárulások a teljes kvantum-számítástechnikai Közösséget, a jelenlegi csodálatos sokféleségben és a jövőben is kiszolgálják, ahogy az egyre nagyobb mértékben növekszik.
 Nagyra értékeljük segítségét ennek a célnak a megvalósításában.
 
-## <a name="next-steps"></a>Következő lépések
+## <a name="next-steps"></a>További lépések
 
 Köszönjük, hogy a Quantum Development Kit nagyszerű erőforrást biztosít a teljes kvantum-programozási Közösség számára!
 További információt a következő útmutatóban talál a Q# stílussal kapcsolatban.
