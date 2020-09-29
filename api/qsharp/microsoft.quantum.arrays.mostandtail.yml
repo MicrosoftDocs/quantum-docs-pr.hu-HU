@@ -1,0 +1,35 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.mostandtail
+name: MostAndTail
+type: function
+namespace: microsoft.quantum.arrays
+summary: A tömb összes, de utolsó elemének egy rekordját adja vissza.
+syntax: "function MostAndTail (array : 'A[]) : ('A[], 'A)"
+input:
+  content: "(array : 'A[])"
+  types:
+  - name: array
+    summary: Legalább egy elemet tartalmazó tömb.
+    isArray: true
+    uid: "'A"
+    isLocal: true
+output:
+  content: ('A[], 'A)
+  types:
+  - summary: A tömb összes, de utolsó elemének egy rekordja.
+    types:
+    - isArray: true
+      uid: "'A"
+      isLocal: true
+    - uid: "'A"
+      isLocal: true
+typeParameters:
+- uid: "'A"
+  summary: A tömb elemeinek típusa
+metadata:
+  ms.openlocfilehash: e8a8f21bef51af60339c4178873b52439516bf37
+  ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
+  ms.translationtype: MT
+  ms.contentlocale: hu-HU
+  ms.lasthandoff: 09/29/2020
+  ms.locfileid: "91494165"

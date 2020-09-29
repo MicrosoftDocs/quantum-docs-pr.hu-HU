@@ -4,12 +4,13 @@ name: PrepareUniformSuperposition
 type: operation
 namespace: microsoft.quantum.preparation
 summary: >-
-  A 0 és közötti kódolást biztosító állapotok egységes összeosztását hozza létre `nIndices` .
+  A 0 és közötti kódolást biztosító állapotok egységes összeosztását hozza létre `nIndices - 1` .
 
 
   Ez azt eredményezi, hogy ez az egységes $U $ a $0 $ és $M-$1 közötti összes számú államban egységes feladatot hoz létre, amely a \ket{0\cdots 0} $ értékű bemeneti állapottal rendelkezik. Más szóval, $ $ \begin{align} U\ket {0} = \frac {1} {\sqrt{m}}\ sum_ {j = 0} ^ {M-1} \ket{j}.
 
   \end{align} $ $.
+remarks: A művelet adjointable, de az ilyen esetekben a szükséges, hogy az első esetben egységes feltételt biztosítson `indexRegister` `nIndices` .
 examples: >-
   Az alábbi példa a $ \frac {1} {\sqrt {6} } \ sum_ {j = 0} ^ \ket{j} $ értéket állítja elő {5} $3 $ qubits.
 
@@ -20,6 +21,7 @@ examples: >-
 
   using(indexRegister = Qubit[3]) {
       PrepareUniformSuperposition(nIndices, LittleEndian(indexRegister));
+      // ...
   }
 
   ```
@@ -46,9 +48,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 442daa4affb6b59191af9117a8094f7bfbf71302
-  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
+  ms.openlocfilehash: ff1e1e50992b209865c4e3b1c82e9faec9199d58
+  ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 09/02/2020
-  ms.locfileid: "89331330"
+  ms.lasthandoff: 09/29/2020
+  ms.locfileid: "91485396"

@@ -1,0 +1,57 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.interleaved
+name: Interleaved
+type: function
+namespace: microsoft.quantum.arrays
+summary: >-
+  Két tömb (majdnem) egyazon méretének együttes elhagyása.
+
+
+  Ez a függvény két tömb összekapcsolását adja vissza, kezdve az első tömb első elemével, a második tömb első elemével és így tovább.
+
+
+  Az első tömbnek ugyanolyan hosszúságú kell lennie, mint a másodiknak, vagy rendelkezhet még egy elemmel.
+examples: >-
+  ```Q#
+
+  // same as int1 = [1, -1, 2, -2, 3, -3]
+
+  let int1 = Interleaved([1, 2, 3], [-1, -2, -3])
+
+
+  // same as int2 = [false, true, false, true, false]
+
+  let int2 = Interleaved(ConstantArray(3, false), ConstantArray(2, true));
+
+  ```
+syntax: "function Interleaved (first : 'T[], second : 'T[]) : 'T[]"
+input:
+  content: "(first : 'T[], second : 'T[])"
+  types:
+  - name: first
+    summary: Az első elhagyni kívánt tömb.
+    isArray: true
+    uid: "'T"
+    isLocal: true
+  - name: second
+    summary: Az összekapcsolni kívánt második tömb.
+    isArray: true
+    uid: "'T"
+    isLocal: true
+output:
+  content: "'T[]"
+  types:
+  - summary: Átfedésben lévő tömb
+    isArray: true
+    uid: "'T"
+    isLocal: true
+typeParameters:
+- uid: "'T"
+  summary: A és a egyes elemeinek `first` típusa `second` .
+metadata:
+  ms.openlocfilehash: 4decfb4189f8e7fd320c5fdb67fbeab73109fd66
+  ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
+  ms.translationtype: MT
+  ms.contentlocale: hu-HU
+  ms.lasthandoff: 09/29/2020
+  ms.locfileid: "91494204"
