@@ -9,12 +9,12 @@ uid: microsoft.quantum.relnotes
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 5036b4d401bb775a7fee2252ca26e7725bc19004
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 28e880445bf61150d7940730009a5482298adae2
+ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834142"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91492353"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>A Microsoft Quantum Development Kit kibocsátási megjegyzései
 
@@ -23,6 +23,24 @@ Ez a cikk információkat tartalmaz a Quantum Development Kit egyes verzióiról
 A telepítési utasításokat lásd a [telepítési útmutatóban](xref:microsoft.quantum.install).
 
 A frissítésre vonatkozó utasításokat lásd a [frissítési útmutatóban](xref:microsoft.quantum.update).
+
+## <a name="version-01220092803"></a>0.12.20092803 verziója
+
+*Kiadás dátuma: szeptember 29., 2020*
+
+A verzió a következőket tartalmazza:
+
+- A [Quantum Intermediate reprezentációk (QIR-EK)](https://github.com/microsoft/qsharp-language/tree/main/Specifications/QIR#quantum-intermediate-representation-qir) bejelentése és vázlatos meghatározása a különböző előtér-és háttérrendszer-formátumokban. Lásd még: [blogbejegyzés](https://devblogs.microsoft.com/qsharp/introducing-quantum-intermediate-representation-qir) a QIR-on.
+- A teljes [ Q# dokumentációt](https://github.com/microsoft/qsharp-language/tree/main/Specifications/Language#q-language)is tartalmazó új [ Q# nyelvi](https://github.com/microsoft/qsharp-language) tárház elindítása.
+- A nagy mennyiségű qubits érintő programok QuantumSimulator teljesítménybeli fejlesztései: a Gate Fusion-döntések jobb alkalmazása; továbbfejlesztett párhuzamos Linux rendszeren; a Gate-végrehajtás intelligens ütemezése hozzáadva; hibajavítások.
+- Az IntelliSense-funkciók mostantól a Q# Visual Studióban és a Visual Studio Code-ban is támogatottak a Project fájl nélkül.
+- Különböző Q# /Python-együttműködési funkciók és hibajavítások, beleértve a NumPy-adattípusok jobb támogatását.
+- A Microsoft. Quantum. Arrays névtér fejlesztése (lásd: [Microsoft/QuantumLibraries # 313](https://github.com/microsoft/QuantumLibraries/issues/313)).
+- Egy új, csak két qubits használó [ismételt ismétléses minta](https://github.com/microsoft/Quantum/tree/main/samples/algorithms/repeat-until-success) lett hozzáadva.
+
+A legutóbbi kiadás óta a nyílt forráskódú adattárakban található alapértelmezett ág átnevezve lett a következőre: `main` .
+
+Tekintse meg a [kódtárak](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+closed%3A2020-08-24..2020-09-24), [fordítóprogramok](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+closed%3A2020-08-24..2020-09-24), [futtatókörnyezetek](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+closed%3A2020-08-24..2020-09-24), [minták](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+closed%3A2020-08-24..2020-09-24), [I Q# ](https://github.com/microsoft/iqsharp/pulls?q=is%3Apr+closed%3A2020-08-24..2020-09-24) és [kataek](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+closed%3A2020-08-24..2020-09-24)teljes listáját.
 
 ## <a name="version-01220082513"></a>0.12.20082513 verziója
 

@@ -9,12 +9,12 @@ uid: microsoft.quantum.write-program
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 6fd7494d341a83a1354d23a283d21a7ae535e49f
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: ac9c060c157ba5ee3bc66852c42298ac8adcb3b3
+ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834023"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91492336"
 ---
 # <a name="tutorial-explore-entanglement-with-q"></a>Oktatóanyag: Összefonódások megismerése Q\# nyelven
 
@@ -83,7 +83,7 @@ Célunk, hogy előkészítsünk két qubits egy konkrét kvantum-állapotban, am
 
 ### <a name="initialize-qubit-using-measurement"></a>Qubit inicializálása mérés használatával
 
-Az alábbi első kódban bemutatjuk, hogyan dolgozhat a qubits a alkalmazásban Q# .  Két műveletet fogunk bevezetni [`M`](xref:microsoft.quantum.intrinsic.m) , [`X`](xref:microsoft.quantum.intrinsic.x) amely átalakítja a qubit állapotát. Ebben a kódrészletben meghatározunk egy `SetQubitState` műveletet, amelynek egyik paramétere egy qubit, a másik pedig a `desired`, amely a qubit kívánt állapotát jelöli.  A `SetQubitState` művelet elvégez egy mérést a qubiten az `M` művelet használatával.  A-ben Q# a qubit-mérések mindig a vagy a értéket adja vissza `Zero` `One` .  Ha a mérés olyan értéket ad vissza, amely nem egyenlő a kívánt értékkel, a `SetQubitState` "megfordítja" a qubit, azaz egy `X` műveletet futtat, amely a qubit állapotot olyan új állapotba változtatja, amelyben a visszaadott mérés valószínűsége `Zero` és fordított állapota `One` történik. Így mindig a `SetQubitState` kívánt állapotba helyezi a cél qubit.
+Az alábbi kódrészletben bemutatjuk, hogyan dolgozhat a qubits a alkalmazásban Q# .  Két műveletet fogunk bevezetni [`M`](xref:microsoft.quantum.intrinsic.m) , [`X`](xref:microsoft.quantum.intrinsic.x) amely átalakítja a qubit állapotát. Ebben a kódrészletben meghatározunk egy `SetQubitState` műveletet, amelynek egyik paramétere egy qubit, a másik pedig a `desired`, amely a qubit kívánt állapotát jelöli.  A `SetQubitState` művelet elvégez egy mérést a qubiten az `M` művelet használatával.  A-ben Q# a qubit-mérések mindig a vagy a értéket adja vissza `Zero` `One` .  Ha a mérés olyan értéket ad vissza, amely nem egyenlő a kívánt értékkel, a `SetQubitState` "megfordítja" a qubit, azaz egy `X` műveletet futtat, amely a qubit állapotot olyan új állapotba változtatja, amelyben a visszaadott mérés valószínűsége `Zero` és fordított állapota `One` történik. Így mindig a `SetQubitState` kívánt állapotba helyezi a cél qubit.
 
 Cserélje le a tartalmát a `Program.qs` következő kódra:
 
@@ -112,7 +112,7 @@ A Q# művelet egy kvantum-alrutin. Ez egy meghívásos rutin, amely más kvantum
 
 A műveletek argumentumai rekordként vannak meghatározva, zárójelek között.
 
-A művelet visszatérési típusa a kettőspont után van meghatározva. Ebben az esetben a `SetQubitState` művelet nem ad vissza semmit, ezért a jelölése a következőt adja vissza: `Unit`. Ez egyenértékű az Q# `unit` F #-ban, amely nagyjából a C#-ban van, `void` és egy üres rekord a Pythonban (amelyet `()` a Type hint jelöl `Tuple[()]` ).
+A művelet visszatérési típusa a kettőspont után van meghatározva. Ebben az esetben a `SetQubitState` művelet nem tartalmaz visszatérési típust, ezért a rendszer visszatérként jelöli meg `Unit` . Ez egyenértékű az Q# `unit` F #-ban, amely nagyjából a C#-ban van, `void` és egy üres rekord a Pythonban (amelyet `()` a Type hint jelöl `Tuple[()]` ).
 
 Az első művelet során két Quantum műveletet használt Q# :
 
@@ -159,7 +159,7 @@ Ennek a műveletnek (`TestBellState`) `count` iterációja ismétlődik, beáll�
 
 Alapértelmezés szerint a változói Q# nem változtathatók meg; az értékük a kötés után nem módosítható. A nem módosítható változók kötése a `let` kulcsszóval jelölhető. A műveleti argumentumok soha nem módosíthatók.
 
-Ha olyan változóra van szüksége, amelynek értéke módosítható (mint a `numOnes` a fenti példában), a `mutable` kulcsszóval deklarálhatja a változót. A módosítható változók értéke a `setQubitState` utasítással módosítható.
+Ha olyan változóra van szüksége, amelynek értéke módosítható (mint a `numOnes` a fenti példában), a `mutable` kulcsszóval deklarálhatja a változót. A módosítható változók értéke a `set` utasítással módosítható.
 
 A változó típusát mindkét esetben a fordító következteti ki. Q# a változókhoz nem szükséges semmilyen típusú Megjegyzés.
 
@@ -169,7 +169,7 @@ Az `using` utasítás szintén speciális Q# . Ezzel foglalhatók le qubitek a k
 
 ## <a name="run-the-code-from-the-command-prompt"></a>Futtassa a kódot a parancssorból.
 
-A kód futtatásához meg kell adnia azt a fordítót, *amely* a parancs megadásakor hívható `dotnet run` . Ez a fájl egyszerű módosításával történik Q# egy olyan vonal hozzáadásával, amely `@EntryPoint()` közvetlenül megelőzi a meghívót: a művelet ebben az `TestBellState` esetben. A teljes kódnak a következőket kell tennie:
+A kód futtatásához meg kell adnia azt a fordítót, *amely* akkor fut, ha a `dotnet run` parancsot megadja. Ez a fájl egyszerű módosításával történik Q# egy olyan vonal hozzáadásával, amely `@EntryPoint()` közvetlenül megelőzi a meghívót: a művelet ebben az `TestBellState` esetben. A teljes kódnak a következőket kell tennie:
 
 ```qsharp
 namespace Bell {
@@ -237,7 +237,7 @@ Most nézzük meg, hogyan Q# fejezheti be a qubits a saját pozícióban.  Emlé
 
 ### <a name="x-flips-qubit-state"></a>`X` qubit állapotának tükrözése
 
-Először csak megpróbáljuk átállítani a qubitet (tehát ha `Zero` állapotban van, `One` állapotba állítjuk, és fordítva). Ezt úgy érhetjük el, ha végrehajtunk egy `X` műveletet, mielőtt megmérnénk az `TestBellState`-ben:
+Először is megpróbáljuk megfordítani a qubit (ha a qubit állapotban van, `Zero` `One` és fordítva). Ezt úgy érhetjük el, ha végrehajtunk egy `X` műveletet, mielőtt megmérnénk az `TestBellState`-ben:
 
 ```qsharp
 X(qubit);
@@ -413,7 +413,7 @@ Test results (# of 0s, # of 1s, # of agreements)
 
 Ahogy az áttekintésben is említettük, az első qubit statisztikái nem változnak (50%-os eséllyel lesz 0 vagy 1), de a második qubit mérésekor __mindig__ ugyanaz az eredmény, mint amit az elsőnél mértünk, mivel a két qubit össze van fonódva!
 
-## <a name="next-steps"></a>Következő lépések
+## <a name="next-steps"></a>További lépések
 
 A megjelenő "a"-ben a a legelterjedtebb számítási algoritmusok segítségével [megtudhatja](xref:microsoft.quantum.quickstarts.search) , hogyan hozhatja létre és futtathatja a következőt: a a legtöbbet használt, legtöbbet a legtöbbet Q# kihasználó program, amely a kvantum-számítástechnikai  
 
