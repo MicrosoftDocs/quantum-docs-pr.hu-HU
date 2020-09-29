@@ -1,0 +1,53 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applytorestc
+name: ApplyToRestC
+type: operation
+namespace: microsoft.quantum.canon
+summary: >-
+  A művelet a tömb első elemére vonatkozik.
+
+
+  A művelet `op` és a célok tömbje `targets` érvényes `op(Rest(targets))` .
+syntax: "operation ApplyToRestC (op : ('T[] => Unit is Ctl), targets : 'T[]) : Unit"
+input:
+  content: "(op : ('T[] => Unit is Ctl), targets : 'T[])"
+  types:
+  - name: op
+    summary: Egy alkalmazni kívánt művelet.
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Controlled
+  - name: targets
+    isArray: true
+    uid: "'T"
+    isLocal: true
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+typeParameters:
+- uid: "'T"
+  summary: Az alkalmazni kívánt művelet bemeneti típusa.
+functors:
+- Controlled
+seeAlso:
+- microsoft.quantum.canon.applytorest
+- microsoft.quantum.canon.applytoresta
+- microsoft.quantum.canon.applytorestca
+metadata:
+  ms.openlocfilehash: 47c9d975fb505013fde47b26db3beb93221cc7c5
+  ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
+  ms.translationtype: MT
+  ms.contentlocale: hu-HU
+  ms.lasthandoff: 09/29/2020
+  ms.locfileid: "91493892"
