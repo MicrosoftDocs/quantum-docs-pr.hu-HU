@@ -2,23 +2,23 @@
 title: Mi az a Q# programozási nyelv és a QDK?
 description: Ismerje meg a Microsoft Quantum Development Kitet, a Q# programozási nyelvet, valamint a kvantumprogramok létrehozásának módját.
 author: bradben
-ms.author: bradben
+ms.author: v-benbra
 ms.date: 5/5/2020
 ms.topic: overview
 uid: microsoft.quantum.overview.q-sharp
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 5db574b0380ffa1616cb3959d84925854df4e321
-ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+ms.openlocfilehash: 21adfcc1c5321d87665adb39a3c838bbda0b8861
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: HT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88863778"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834567"
 ---
 # <a name="what-are-the-no-locq-programming-language-and-qdk"></a>Mi az a Q# programozási nyelv és a QDK?
 
-A Q# a Microsoft nyílt forráskódú programozási nyelve, amely kvantumalgoritmusok fejlesztésére és futtatására szolgál. Ez a Quantum Development Kit (QDK) része, amelyben [Q#-kódtárak](xref:microsoft.quantum.libraries), [kvantumszimulátorok](xref:microsoft.quantum.machines), [más programozási környezetekhez használható bővítmények](xref:microsoft.quantum.install) és [API-dokumentáció](xref:microsoft.quantum.standardlibsintro) található. A standard Q#-kódtár mellett a QDK kémiai, gépi tanulási és numerikus kódtárakat is tartalmaz.
+A Q# a Microsoft nyílt forráskódú programozási nyelve, amely kvantumalgoritmusok fejlesztésére és futtatására szolgál. Ez a Quantum Development Kit (QDK) része, amelyben [Q#-kódtárak](xref:microsoft.quantum.libraries), [kvantumszimulátorok](xref:microsoft.quantum.machines), [más programozási környezetekhez használható bővítmények](xref:microsoft.quantum.install) és [API-dokumentáció](xref:microsoft.quantum.apiref-intro) található. A standard Q#-kódtár mellett a QDK kémiai, gépi tanulási és numerikus kódtárakat is tartalmaz.
 
 Programozási nyelvként a Q# a Python, a C# és az F# ismerős elemeit használja, és támogatja a programok hurkokkal, ha-akkor típusú utasításokkal és gyakori adattípusokkal való írásának alapszintű eljárási modelljeit. Új, kvantumspecifikus adatszerkezeteket és műveleteket is bevezet.
 
@@ -54,7 +54,7 @@ A program létrehozásakor és futtatásakor létrejön a kvantumszimulátor egy
 
 A Q#-kód a szimulátoron belüli elkülönítése biztosítja, hogy az algoritmusok kövessék a kvantumfizika törvényeit, és megfelelően fussanak a kvantumszámítógépeken.
 
-![qsharp-code-flow](~/media/qsharp-code-flow.png)
+![Qsharp-kódfolyamat](~/media/qsharp-code-flow.png)
 
 ## <a name="how-do-i-use-the-qdk"></a>Hogyan működik a QDK?
 

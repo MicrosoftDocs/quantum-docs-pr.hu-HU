@@ -1,20 +1,21 @@
 ---
 title: Fejlesztés Q#-pal és Pythonnal
+description: Megtudhatja, hogyan hozhat létre Q#-alkalmazásokat a Python használatával.
 author: bradben
-ms.author: bradben
-ms.date: 5/30/2020
+ms.author: v-benbra
+ms.date: 8/20/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.python
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 01a5c31a7a920a69f4f90701d370f3a772d2c4d2
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: f6a2a7d1888cfe458fa3989a27d71fcdeed0f01f
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: HT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87866740"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834159"
 ---
 # <a name="develop-with-no-locq-and-python"></a>Fejlesztés Q#-pal és Pythonnal
 
@@ -55,7 +56,7 @@ Telepítse a QDK-t a Python-gazdaprogramok fejlesztéséhez Q#-műveletek meghí
     pip install qsharp
     ```
 
-1. Telepítse az IQ#-ot, amely a Jupyter és a Python által használt kernel, és a Q#-műveletek fordításának és végrehajtásának alapvető funkcióit biztosítja.
+1. Telepítse az IQ#-ot, amely a Jupyter és a Python által használt kernel, és a Q#-műveletek fordításának és futtatásának alapvető funkcióit biztosítja.
 
     ```dotnetcli
     dotnet tool install -g Microsoft.Quantum.IQSharp
@@ -73,7 +74,7 @@ Telepítse a QDK-t a Python-gazdaprogramok fejlesztéséhez Q#-műveletek meghí
     
 ***
 
-Ennyi az egész! Most már a `qsharp` Python-csomag és a Jupyterhez tartozó IQ# kernel is telepítve van, amelyek a Q#-műveletek Pythonból való fordításához és végrehajtásához szükséges fő funkciókat biztosítják, és lehetővé teszik a Q# Jupyter-notebookok használatát.
+Ennyi az egész! Most már a `qsharp` Python-csomag és a Jupyterhez tartozó IQ# kernel is telepítve van, amelyek a Q#-műveletek Pythonból való fordításához és futtatásához szükséges fő funkciókat biztosítják, és lehetővé teszik a Q# Jupyter-notebookok használatát.
 
 ## <a name="choose-your-ide"></a>Az IDE kiválasztása
 
@@ -116,4 +117,4 @@ Most már készen áll arra, hogy ellenőrizze a `qsharp` Python-csomag telepít
 
 ## <a name="next-steps"></a>További lépések
 
-Most, hogy a választott környezetben telepítette a Quantum Development Kitet, ezen oktatóanyag segítségével megírhatja és futtathatja [első kvantumprogramját](xref:microsoft.quantum.quickstarts.qrng).
+Most, hogy a választott környezetben tesztelte a Quantum Development Kitet, ezen oktatóanyag segítségével megírhatja és futtathatja [első kvantumprogramját](xref:microsoft.quantum.quickstarts.qrng).

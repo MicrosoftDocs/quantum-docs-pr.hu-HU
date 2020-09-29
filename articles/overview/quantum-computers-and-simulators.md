@@ -2,19 +2,19 @@
 title: A kvantumszámítógépek és a kvantumszimulátorok
 description: Megismerkedhet a kvantumhardverekkel, a kvantumszimulátorokkal és a kvantumműveletek működésével.
 author: bradben
-ms.author: bradben
+ms.author: v-benbra
 ms.date: 5/5/2020
 ms.topic: overview
 uid: microsoft.quantum.overview.simulators
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 299baea75865a4f0ece6b490cef3301dd2a672ac
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 8691838b2d6c54baa40042245eee8c901a7ca965
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: HT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87867709"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835009"
 ---
 # <a name="quantum-computers-and-quantum-simulators"></a>A kvantumszámítógépek és a kvantumszimulátorok
 
@@ -33,7 +33,7 @@ Ahhoz, hogy megfelelően működjenek, a kvantumszámítógépeknek számos kih�
 
 ## <a name="quantum-simulators"></a>Kvantumszimulátorok
 
-A klasszikus számítógépeken futó kvantumszimulátorok lehetővé teszik a kvantumalgoritmusok kvantumrendszereken történő végrehajtásának szimulálását.  A Microsoft Quantum Development Kit (QDK) eszköze teljes körű funkciókkal rendelkező vektorszimulátort és egyéb, speciális kvantumszimulátorokat is tartalmaz.
+A klasszikus számítógépeken futó kvantumszimulátorok lehetővé teszik a kvantumalgoritmusok kvantumrendszereken történő számításának szimulálását.  A Microsoft Quantum Development Kit (QDK) eszköze teljes körű funkciókkal rendelkező vektorszimulátort és egyéb, speciális kvantumszimulátorokat is tartalmaz.
 
 ## <a name="topological-qubit"></a>Topológiai qubitek
 

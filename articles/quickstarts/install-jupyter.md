@@ -1,29 +1,27 @@
 ---
 title: Fejlesztés Q# Jupyter-notebookokkal
+description: Megtudhatja, hogyan hozhat létre Q#-alkalmazásokat Jupyter-notebookok használatával.
 author: bradben
-ms.author: bradben
-ms.date: 5/30/2020
+ms.author: v-benbra
+ms.date: 8/20/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.jupyter
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 10b1faafa70c87a99ea09916e2c386b32f9a570f
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 51de510907ea087d1f23d3ff65d268d6d455a493
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: HT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87866808"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834312"
 ---
 # <a name="develop-with-no-locq-jupyter-notebooks"></a>Fejlesztés Q# Jupyter-notebookokkal
 
 Telepítse a QDK-t a Q#-műveletek Q# Jupyter-notebookokon történő fejlesztéséhez.
 
-A Jupyter-notebookok helyszíni kódvégrehajtást tesznek lehetővé utasításokkal, megjegyzésekkel és egyéb tartalmakkal együtt. Ez a környezet megfelelő a beágyazott magyarázatokkal ellátott Q#-kód írásához vagy kvantum-számítástechnikai interaktív oktatóanyagokhoz. Az alábbiakat kell elvégeznie a saját Q#-notebookok létrehozásának megkezdéséhez.
-
-> [!NOTE]
-> * A Q# Jupyter-notebookokban csak Q#-kódot futtathat, és a műveletek nem hívhatók meg külső gazdaprogramokból (például Python- vagy C#-fájlokból). Ez a környezet nem megfelelő, ha egy külső klasszikus gazdaprogrammal együtt szeretné használni a kvantumprogramot.
+A Jupyter-notebookok helyszíni kódszámítást tesznek lehetővé utasításokkal, megjegyzésekkel és egyéb tartalmakkal együtt. Ez a környezet megfelelő a beágyazott magyarázatokkal ellátott Q#-kód írásához vagy kvantum-számítástechnikai interaktív oktatóanyagokhoz. Az alábbiakat kell elvégeznie a saját Q#-notebookok létrehozásának megkezdéséhez.
 
 ## <a name="install-the-ino-locq-jupyter-kernel"></a>Az IQ# Jupyter kernel telepítése
 
@@ -62,22 +60,22 @@ Az IQ# elsősorban a Jupyter és a Python által a .NET Core SDK-hoz használt b
     dotnet iqsharp install
     ```
 
-    > [!NOTE]
-    > Ha hibaüzenetet kap a `dotnet iqsharp install` lépés során, nyisson meg egy új terminálablakot, és próbálkozzon újra.
-    > Ha ez a lépés továbbra sem sikerül, keresse meg a telepített `dotnet-iqsharp` eszközt (Windows rendszeren: `dotnet-iqsharp.exe`), majd futtassa a következőt:
-    > ```
-    > /path/to/dotnet-iqsharp install --user --path-to-tool="/path/to/dotnet-iqsharp"
-    > ```
-    > ahol a `/path/to/dotnet-iqsharp` helyére a fájlrendszerben található `dotnet-iqsharp` eszközre mutató abszolút elérési útvonalat kell beírni.
-    > Ez általában a `.dotnet/tools` területen található a felhasználó profil mappájában.
+> [!NOTE]
+> Ha hibaüzenetet kap a `dotnet iqsharp install` lépés során, nyisson meg egy új terminálablakot, és próbálkozzon újra.
+> Ha ez a lépés továbbra sem sikerül, keresse meg a telepített `dotnet-iqsharp` eszközt (Windows rendszeren: `dotnet-iqsharp.exe`), majd futtassa a következőt:
+> ```
+> /path/to/dotnet-iqsharp install --user --path-to-tool="/path/to/dotnet-iqsharp"
+> ```
+> ahol a `/path/to/dotnet-iqsharp` helyére a fájlrendszerben található `dotnet-iqsharp` eszközre mutató abszolút elérési útvonalat kell beírni.
+> Ez általában a `.dotnet/tools` területen található a felhasználó profil mappájában.
     
 ***
 
-Ennyi az egész! Most már a Jupyterhez tartozó IQ# kernel is telepítve van, amely a Q#-műveletek Q# Jupyter-notebookokból való fordításához és végrehajtásához szükséges fő funkciókat biztosítja.
+Ennyi az egész! Most már a Jupyterhez tartozó IQ# kernel is telepítve van, amely a Q#-műveletek Q# Jupyter-notebookokból való fordításához és futtatásához szükséges fő funkciókat biztosítja.
 
 ## <a name="create-your-first-no-locq-notebook"></a>Az első Q# notebook létrehozása
 
-Most már készen áll arra, hogy ellenőrizze a Q# Jupyter Notebook telepítését egy egyszerű Q#-művelet írásával és futtatásával.
+Most már készen áll arra, hogy ellenőrizze a Q# Jupyter-notebook telepítését egy egyszerű Q#-művelet írásával és futtatásával.
 
 1. A Jupyter Notebook kiszolgáló indításához futtassa a következő programot a telepítés során létrehozott környezetből (azaz a létrehozott Conda-környezetből vagy a Python-környezetből, amelyben a Jupytert telepítette):
 
@@ -87,7 +85,7 @@ Most már készen áll arra, hogy ellenőrizze a Q# Jupyter Notebook telepítés
 
     - Ha a Jupyter Notebook nem nyílik meg automatikusan a böngészőben, a megnyitásához másolja és illessze be a böngészőbe a parancssor által megadott URL-címet.
 
-1. Válassza a „New” (Új) → „Q#” lehetőséget egy Jupyter-notebook létrehozásához egy Q#-kernellel, majd szúrja be a következő kódot az első notebookcellába:
+1. Válassza a **New (Új) → Q#** lehetőséget egy Jupyter-notebook létrehozásához egy Q#-kernellel, majd szúrja be a következő kódot az első notebookcellába:
 
     :::code language="qsharp" source="~/quantum/samples/interoperability/qrng/Qrng.qs" range="6-13":::
 
@@ -97,7 +95,7 @@ Most már készen áll arra, hogy ellenőrizze a Q# Jupyter Notebook telepítés
 
     A cella kimenetében a következőnek kell megjelennie: `SampleQuantumRandomNumberGenerator`. A Jupyter-notebookban való futtatáskor a Q#-kód le lesz fordítva, és a cella kiadja a talált műveletek nevét.
 
-1. Egy új cellában, a `%simulate` paranccsal hajtsa végre az imént létrehozott műveletet (szimulátorban):
+1. Egy új cellában, a `%simulate` paranccsal futtassa az imént létrehozott műveletet (szimulátorban):
 
     ![Jupyter Notebook-cella %simulate használatával](~/media/install-guide-jupyter-simulate.png)
 

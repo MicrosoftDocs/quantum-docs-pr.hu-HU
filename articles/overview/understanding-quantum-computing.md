@@ -2,23 +2,23 @@
 title: A kvantum-számítástechnika ismertetése
 description: Mik a kvantumszámítógépek, és hogyan használják a kvantummechanika alapelveit?
 author: bradben
-ms.author: bradben
+ms.author: v-benbra
 ms.date: 5/5/2020
 ms.topic: overview
 uid: microsoft.quantum.overview.understanding
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 214fe809aaeba759005fa76ba3615f376d402bc9
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 332afb4ea7de01da5d8f22fee6517032ed4f9fc1
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: HT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87866961"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834992"
 ---
 # <a name="understanding-quantum-computing"></a>A kvantum-számítástechnika ismertetése
 
-A kvantum-számítástechnikában a kvantummechanika alapelveit alkalmazva dolgozzák fel az adatokat. Ezért a kvantum-számítástechnikához más megközelítésre van szükség, mint a hagyományos számítástechnikához.  Erre a különbségre egy példa a kvantum-számítógépekben használt processzor.  Míg a klasszikus számítógépek ismerős, szilíciumalapú chipeket használnak, a kvantum-számítógépek kvantumanyagokat használnak, például atomokat, ionokat, fotonokat vagy elektronokat.  
+A kvantum-számítástechnikában a kvantummechanika alapelveit alkalmazva dolgozzák fel az adatokat. Ezért a kvantum-számítástechnikához más megközelítésre van szükség, mint a hagyományos számítástechnikához. Erre a különbségre egy példa a kvantum-számítógépekben használt processzor. Míg a klasszikus számítógépek ismerős, szilíciumalapú chipeket használnak, a kvantum-számítógépek kvantumrendszereket használnak, például atomokat, ionokat, fotonokat vagy elektronokat. A kvantumtulajdonságaik révén különböző, a 0 és az 1 értéket egyszerre lefedő kvantum-szuperpozícióban lévő biteket képesek előkészíteni.  
 
 A kvantumanyagok a kvantummechanika törvényei szerint viselkednek, olyan alapelveket kihasználva, mint a valószínűségszámítás, a szuperpozíció és az összefonódás. Ezek az alapelvek olyan kvantumalgoritmusok alapját képezik, amelyek a kvantum-számítástechnika hatékonyságát használják összetett problémák megoldásához. Ez a cikk a kvantummechanika néhány olyan lényeges alapelvét írja le, amelyre a kvantum-számítástechnika is épül.
 
