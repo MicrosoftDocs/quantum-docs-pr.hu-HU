@@ -387,6 +387,22 @@ operations:
     Egy műveletet alkalmaz a regisztráció első két qubits.
 
     A módosító `CA` azt jelzi, hogy a művelet ellenőrizhető és adjointable.
+- uid: microsoft.quantum.canon.applytohead
+  summary: Egy műveletet alkalmaz egy tömb első elemére.
+- uid: microsoft.quantum.canon.applytoheada
+  summary: Egy műveletet alkalmaz egy tömb első elemére.
+- uid: microsoft.quantum.canon.applytoheadc
+  summary: Egy műveletet alkalmaz egy tömb első elemére.
+- uid: microsoft.quantum.canon.applytoheadca
+  summary: Egy műveletet alkalmaz egy tömb első elemére.
+- uid: microsoft.quantum.canon.applytomost
+  summary: Egy művelet egy tömb utolsó elemére vonatkozik.
+- uid: microsoft.quantum.canon.applytomosta
+  summary: Egy művelet egy tömb utolsó elemére vonatkozik.
+- uid: microsoft.quantum.canon.applytomostc
+  summary: Egy művelet egy tömb utolsó elemére vonatkozik.
+- uid: microsoft.quantum.canon.applytomostca
+  summary: Egy művelet egy tömb utolsó elemére vonatkozik.
 - uid: microsoft.quantum.canon.applytopartition
   summary: Egy pár műveletet alkalmaz a regiszter egy adott partícióján két részre.
 - uid: microsoft.quantum.canon.applytopartitiona
@@ -404,6 +420,14 @@ operations:
     Egy pár műveletet alkalmaz a regiszter egy adott partícióján két részre.
 
     A módosító `CA` azt jelzi, hogy a művelet ellenőrizhető és adjointable.
+- uid: microsoft.quantum.canon.applytorest
+  summary: A művelet a tömb első elemére vonatkozik.
+- uid: microsoft.quantum.canon.applytoresta
+  summary: A művelet a tömb első elemére vonatkozik.
+- uid: microsoft.quantum.canon.applytorestc
+  summary: A művelet a tömb első elemére vonatkozik.
+- uid: microsoft.quantum.canon.applytorestca
+  summary: A művelet a tömb első elemére vonatkozik.
 - uid: microsoft.quantum.canon.applytosubregister
   summary: Egy műveletet alkalmaz egy regiszter alnyilvántartásába, és az qubits egy tömb adja meg.
 - uid: microsoft.quantum.canon.applytosubregistera
@@ -421,6 +445,14 @@ operations:
     Egy műveletet alkalmaz egy regiszter alnyilvántartásába, és az qubits egy tömb adja meg.
 
     A módosító `CA` azt jelzi, hogy a művelet ellenőrizhető és adjointable.
+- uid: microsoft.quantum.canon.applytotail
+  summary: Egy műveletet alkalmaz egy tömb utolsó elemére.
+- uid: microsoft.quantum.canon.applytotaila
+  summary: Egy műveletet alkalmaz egy tömb utolsó elemére.
+- uid: microsoft.quantum.canon.applytotailc
+  summary: Egy műveletet alkalmaz egy tömb utolsó elemére.
+- uid: microsoft.quantum.canon.applytotailca
+  summary: Egy műveletet alkalmaz egy tömb utolsó elemére.
 - uid: microsoft.quantum.canon.applywith
   summary: A két művelet miatt a rendszer az egyiket a másikkal konjugáltként alkalmazza.
 - uid: microsoft.quantum.canon.applywitha
@@ -581,9 +613,9 @@ newtypes:
 - uid: microsoft.quantum.canon.resultstack
   summary: "\n> [!WARNING]\n> Elavult\n\nA ResultStack elavult."
 metadata:
-  ms.openlocfilehash: 969eec6767f3323e0470b0e968051bafb92d29ae
-  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
+  ms.openlocfilehash: 7346d86d3ff9db2146f37a3f402b60faebe442b7
+  ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 09/02/2020
-  ms.locfileid: "89341564"
+  ms.lasthandoff: 09/29/2020
+  ms.locfileid: "91464436"

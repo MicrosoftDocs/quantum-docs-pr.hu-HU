@@ -1,7 +1,7 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.logical
 name: Microsoft.Quantum.Logical
-summary: " # <a name=\"summary\"></a>Összegzés\n A logikai kifejezések és a logikai logika használatának függvényeit tartalmazza."
+summary: " # <a name=\"summary\"></a>Összefoglalás\n A logikai kifejezések és a logikai logika használatának függvényeit tartalmazza."
 functions:
 - uid: microsoft.quantum.logical.and
   summary: Két érték logikai együttesét adja vissza.
@@ -45,6 +45,8 @@ functions:
   summary: Igaz értéket ad vissza, és csak akkor, ha egy szám kisebb vagy egyenlő, mint egy másik szám.
 - uid: microsoft.quantum.logical.lessthanorequall
   summary: Igaz értéket ad vissza, és csak akkor, ha egy szám kisebb vagy egyenlő, mint egy másik szám.
+- uid: microsoft.quantum.logical.lexographiccomparison
+  summary: Az összehasonlítási függvény egy új függvényt ad vissza, amely a lexographically összehasonlítja a két tömböt.
 - uid: microsoft.quantum.logical.nearlyequald
   summary: Igaz értéket ad vissza, ha két bemenet közel egyenlő (azaz a 1e-12 tűréshatáron belül).
 - uid: microsoft.quantum.logical.not
@@ -70,9 +72,9 @@ functions:
 - uid: microsoft.quantum.logical.xor
   summary: Két érték logikai kizárólagos kivonását adja vissza.
 metadata:
-  ms.openlocfilehash: 0ab7077bc2cdf9bc76f3da701a88869f8bb9bf85
-  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
+  ms.openlocfilehash: 006100b659daedbcca30fe443756a185a965ee1e
+  ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 09/02/2020
-  ms.locfileid: "89340102"
+  ms.lasthandoff: 09/29/2020
+  ms.locfileid: "91464334"

@@ -1,7 +1,7 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.preparation
 name: Microsoft.Quantum.Preparation
-summary: " # <a name=\"summary\"></a>Összegzés\n Ez a névtér függvényeket és műveleteket tartalmaz a qubits tetszőleges kezdeti állapotba történő előkészítéséhez."
+summary: " # <a name=\"summary\"></a>Összefoglalás\n Ez a névtér függvényeket és műveleteket tartalmaz a qubits tetszőleges kezdeti állapotba történő előkészítéséhez."
 functions:
 - uid: microsoft.quantum.preparation.blochspherecoordinates
   summary: >-
@@ -85,16 +85,16 @@ operations:
     Előkészíti a megadott qubit a $ \boldone/$2 állapotban a depolarizációs csatorna $ $ \begin{align} \Omega (\rho) \mathrel{alkalmazásával: =} \frac {1} {4} \ sum_ {\mu \in \{ 0, 1, 2, 3 \} } \sigma \_ {\mu} \rho \sigma \_ {\mu} ^ {\dagger}, \end{align} $ $, ahol a $ \sigma \_ i $ a $i $ th Pauli operátor, ahol a $ \rho $ egy vegyes állapotot jelölő sűrűségű operátor.
 - uid: microsoft.quantum.preparation.prepareuniformsuperposition
   summary: >-
-    A 0 és közötti kódolást biztosító állapotok egységes összeosztását hozza létre `nIndices` .
+    A 0 és közötti kódolást biztosító állapotok egységes összeosztását hozza létre `nIndices - 1` .
 
 
     Ez azt eredményezi, hogy ez az egységes $U $ a $0 $ és $M-$1 közötti összes számú államban egységes feladatot hoz létre, amely a \ket{0\cdots 0} $ értékű bemeneti állapottal rendelkezik. Más szóval, $ $ \begin{align} U\ket {0} = \frac {1} {\sqrt{m}}\ sum_ {j = 0} ^ {M-1} \ket{j}.
 
     \end{align} $ $.
 metadata:
-  ms.openlocfilehash: 46bed785972355044c9ef9765ab957ca6d31e5f1
-  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
+  ms.openlocfilehash: 35645ba3566dbe0b8e9efa76fa4c3316ce7d5e47
+  ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 09/02/2020
-  ms.locfileid: "89339881"
+  ms.lasthandoff: 09/29/2020
+  ms.locfileid: "91464317"
