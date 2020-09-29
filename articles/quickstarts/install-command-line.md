@@ -1,24 +1,27 @@
 ---
 title: Fejlesztés Q#-alkalmazásokkal
-author: KittyYeungQ
-ms.author: kitty
-ms.date: 4/24/2020
+description: Megtudhatja, hogyan hozhat létre olyan Q#-alkalmazást, amely a parancssorból fut.
+author: bradben
+ms.author: v-benbra
+ms.date: 8/20/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.standalone
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: a630b2307f5d95321fb26f480d7a441ddba846fc
-ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
+ms.openlocfilehash: 68f530d80e5c5f40dc2bcbb185879c3cb6f93f91
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: HT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89358258"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834414"
 ---
 # <a name="develop-with-no-locq-applications"></a>Fejlesztés Q#-alkalmazásokkal
 
-A Q#-programok külön, illesztő nélkül is végrehajthatók olyan gazdanyelveken, mint például a C#, az F# vagy a Python.
+Kövesse a környezetéhez tartozó fülön található utasításokat.
+
+A Q#-programok külön, illesztő nélkül futtathatók olyan gazdanyelveken, mint például a C#, az F# vagy a Python.
 
 ## <a name="prerequisites"></a>Előfeltételek
 
@@ -63,14 +66,14 @@ Kövesse a környezetéhez tartozó fülön található utasításokat.
 2. Kattintson a **Standalone console application (Különálló konzolalkalmazás)** elemre.
 3. Keresse meg a projekt mentési helyét, majd kattintson a **Create Project (Projekt létrehozása)** lehetőségre.
 4. A projekt sikeres létrehozását követően kattintson az **Open new project... (Új projekt megnyitása...)** lehetőségre a jobb alsó sarokban.
-        
+
 Vizsgálja meg a projektet. Látni fog egy `Program.qs` nevű forrásfájlt. Ez egy Q#-program, amely egy egyszerű műveletet határoz meg az üzenetek konzolon való megjelenítéséhez.
 
 Az alkalmazás futtatása:
+
 1. Kattintson a **Terminal (Terminál)**  -> **New Terminal (Új terminál)** elemre.
 2. A terminál parancssorába írja be a következőt: `dotnet run`.
 3. A következőnek szövegnek kell megjelennie a kimeneti ablakban: `Hello quantum world!`
-
 
 > [!NOTE]
 > A VS Code Q#-bővítménye jelenleg nem támogatja a több gyökérmappával rendelkező munkaterületeket. Ha egy VS Code-munkaterületen belül több projekt is található, az összes projektnek azonos gyökérmappában kell lennie.
@@ -80,6 +83,7 @@ Az alkalmazás futtatása:
 Ellenőrizze a Visual Studio telepítését egy Q# `Hello World`-alkalmazás létrehozásával.
 
 Új Q#-alkalmazás létrehozása
+
 1. Nyissa meg a Visual Studiót, majd kattintson a **File (Fájl)**  -> **New (Új)**  -> **Project (Projekt)** elemekre.
 2. A keresőmezőbe írja be a következőt: `Q#`. Ezután válassza ki a **Q#-alkalmazást**, és kattintson a **Next (Tovább)** elemre.
 3. Adja meg az alkalmazás nevét és helyét, majd kattintson a **Create (Létrehozás)** elemre.
@@ -88,6 +92,7 @@ Ellenőrizze a Visual Studio telepítését egy Q# `Hello World`-alkalmazás lé
 Vizsgálja meg a projektet. Látni fog egy `Program.qs` nevű forrásfájlt. Ez egy Q#-program, amely egy egyszerű műveletet határoz meg az üzenetek konzolon való megjelenítéséhez.
 
 Az alkalmazás futtatása:
+
 1. Válassza a **Debug (Hibakeresés)**  -> **Start Without Debugging (Indítás hibakeresés nélkül)** lehetőséget.
 2. Látni fogja, hogy a következő szöveg jelenik meg a konzolablakban: `Hello quantum world!`.
 
@@ -105,11 +110,13 @@ Ellenőrizze a telepítést egy Q# `Hello World`-alkalmazás létrehozásával.
     ```
 
 1. Új alkalmazás létrehozása:
+
     ```dotnetcli
     dotnet new console -lang Q# -o runSayHello
     ```
 
 1. Navigáljon az alkalmazás könyvtárához:
+
     ```dotnetcli
     cd runSayHello
     ```
@@ -117,6 +124,7 @@ Ellenőrizze a telepítést egy Q# `Hello World`-alkalmazás létrehozásával.
     A könyvtár tartalmaz egy `Program.qs` nevű fájlt. Ez egy Q#-program, amely egy egyszerű műveletet határoz meg az üzenetek konzolon való megjelenítéséhez. Ezt a sablont egy szövegszerkesztővel módosíthatja, és felülírhatja saját kvantumalkalmazásaival. 
 
 1. Futtassa a programot:
+
     ```dotnetcli
     dotnet run
     ```
