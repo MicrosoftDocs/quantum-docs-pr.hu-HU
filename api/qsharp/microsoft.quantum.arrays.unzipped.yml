@@ -1,0 +1,51 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.unzipped
+name: Unzipped
+type: function
+namespace: microsoft.quantum.arrays
+summary: A 2-rekordok tömbje egy két tömbből álló tömböt ad vissza, amely a bemeneti tömb rekordok elemeit tartalmazza.
+examples: >-
+  ```Q#
+
+  // split is same as ([6, 5, 5, 3, 2, 1], [true, false, false, false, true, false])
+
+  let split = Unzipped([(6, true), (5, false), (5, false), (3, false), (2, true), (1, false)]);
+
+  ```
+syntax: "function Unzipped (arr : ('T, 'U)[]) : ('T[], 'U[])"
+input:
+  content: "(arr : ('T, 'U)[])"
+  types:
+  - name: arr
+    summary: 2 – rekordok tartalmazó tömb
+    isArray: true
+    types:
+    - uid: "'T"
+      isLocal: true
+    - uid: "'U"
+      isLocal: true
+output:
+  content: ('T[], 'U[])
+  types:
+  - summary: Két tömb, amely a bemeneti rekordok első elemeit tartalmazza, a második pedig a bemeneti rekordok összes elemét tartalmazza.
+    types:
+    - isArray: true
+      uid: "'T"
+      isLocal: true
+    - isArray: true
+      uid: "'U"
+      isLocal: true
+typeParameters:
+- uid: "'T"
+  summary: Az egyes rekordokban az első elem típusa
+- uid: "'U"
+  summary: Az egyes rekordokban szereplő második elem típusa
+seeAlso:
+- microsoft.quantum.arrays.zipped
+metadata:
+  ms.openlocfilehash: 2bde9351719a662008abf0db507aca9fee289b6b
+  ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
+  ms.translationtype: MT
+  ms.contentlocale: hu-HU
+  ms.lasthandoff: 09/29/2020
+  ms.locfileid: "91494081"
