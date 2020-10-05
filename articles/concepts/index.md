@@ -9,18 +9,18 @@ ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 1b767313b7f421ddaba62ab2be99fe10b8d0430e
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 1523bfdfec08fd093f1c7ea999e23e85fc3cfc14
+ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
 ms.translationtype: HT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834550"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91478936"
 ---
 # <a name="quantum-computing-history-and-background"></a>A kvantum-számítástechnika története és háttere
 
 Az elmúlt néhány évben számos újdonság jelent meg a számítástechnika terén, amelyek közül vitathatatlanul a kvantum-számítástechnika igényli a legnagyobb paradigmaváltást a fejlesztők részéről.  A kvantum-számítógépek ötletével [Richard Feynman](https://en.wikipedia.org/wiki/Richard_Feynman) és [Jurij Manyin](https://en.wikipedia.org/wiki/Yuri_Manin) állt elő az 1980-as években.  A kvantum-számítástechnika mögötti ösztönzőerő abból ered, amit sokan a fizika egyik legnagyobb szégyenének tartanak, vagyis hogy a jelentős tudományos fejlődés folyton beleütközik abba az akadályba, hogy még az egyszerű rendszereket sem tudjuk modellezni. Mint ismeretes, a kvantummechanikát 1900 és 1925 között fejlesztették ki, és azóta is ez jelenti a kémia, a kondenzáltanyag-fizika, illetve a számítógépektől a LED-világításig terjedő technológiai újítások alapját.  Mindezen sikerek ellenére azonban olykor még a legegyszerűbb rendszerek kvantummechanikai modellezése is meghaladta az emberi teljesítőképességet.  Ennek az oka az, hogy még néhány tucat egymással kommunikáló részecske szimulálása is nagyobb számítási teljesítményt igényel, mint ami bármely hagyományos számítógép több ezer évig tartó munkájával elérhető lenne.
 
-A kvantummechanikai szimuláció nehézségeinek megértéséhez számos megközelítés áll rendelkezésre.  Talán a legegyszerűbb azt átlátni, hogy a kvantumelmélet egyik értelmezése szerint kvantumszinten az anyag ugyanabban az időben több különböző lehetséges konfigurációban (más néven *állapotban*) létezik egyszerre.  A klasszikus valószínűségelmélettől eltérően a kvantumállapot számos konfigurációja, amely potenciálisan megfigyelhető lehet, úgy interferál egymással, mint a hullámok a medencében.  Ez az interferencia megakadályozza, hogy statisztikai mintavétellel megállapíthatók legyenek a kvantumállapot konfigurációi.  Ehelyett nyomon kell követni a kvantumrendszer *minden lehetséges* konfigurációját, ha szeretnénk megérteni a kvantumevolúciót.  
+A kvantummechanikai szimuláció nehézségeinek megértéséhez számos megközelítés áll rendelkezésre.  Talán a legegyszerűbb azt átlátni, hogy a kvantumelmélet egyik értelmezése szerint kvantumszinten az anyag több különböző lehetséges konfigurációban (más néven *állapotban*) létezik egyszerre.  A klasszikus valószínűségelmélettől eltérően a kvantumállapot számos konfigurációja, amely potenciálisan megfigyelhető lehet, úgy interferál egymással, mint a hullámok a medencében.  Ez az interferencia megakadályozza, hogy statisztikai mintavétellel megállapíthatók legyenek a kvantumállapot konfigurációi.  Ehelyett nyomon kell követni a kvantumrendszer *minden lehetséges* konfigurációját, ha szeretnénk megérteni a kvantumevolúciót.  
 
 Képzeljen el egy elektronokból álló rendszert, ahol az elektronok mondjuk $40$ pozíció bármelyikében lehetnek.  Az elektronok ezért $2^{40}$ konfiguráció bármelyikében lehetnek (minden egyes pozícióban vagy van elektron, vagy nincs). Egy hagyományos számítógépnél az elektronok kvantumállapotának tárolása $130$ GB-ot is meghaladó memóriát venne igénybe.  Ez jelentős ugyan, de néhány számítógép esetében kivitelezhető.  Ha feltesszük, hogy a részecskék $41$ pozíció bármelyikében lehetnek, $2^{41}$, azaz kétszer annyi konfigurációval kellene számolni, és így már több mint $260$ GB memóriára lenne szükség a kvantumállapot tárolásához. A pozíciók számának növelése nem folytatható a végtelenségig, ha hagyományos módon szeretnénk tárolni az állapotot, mivel gyorsan túllépnénk a világ legerősebb számítógépeinek kapacitását is.  Már néhány száz elektron esetében is meghaladja a rendszer tárolásához szükséges memória a világegyetemben jelen lévő részecskék számát; éppen ezért teljesen reménytelen, hogy a hagyományos számítógépekkel valaha is szimulálhassuk a kvantumdinamikájukat. A természetben azonban az ilyen rendszerek a kvantummechanikai törvények alapján minden további nélkül kialakulnak, és szerencsére nincsenek annak tudatában, hogy a hagyományos számítástechnikai eszközökkel nem lehet megtervezni és szimulálni a fejlődésüket.
 
