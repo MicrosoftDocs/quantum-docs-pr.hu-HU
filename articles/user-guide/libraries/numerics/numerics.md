@@ -9,12 +9,12 @@ uid: microsoft.quantum.numerics.usage
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 474fc74b9c92fbf28c0618a3090905d025699d32
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: dfcb8e9e5a15d0881750d67cf58d7ad47cbecd3a
+ms.sourcegitcommit: 897ace8b506adb2331e911ee5633dceced566174
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868797"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91764130"
 ---
 # <a name="using-the-numerics-library"></a>A numerikus könyvtár használata
 
@@ -37,7 +37,7 @@ A numerikus könyvtár a következő típusokat támogatja
 
 1. **`LittleEndian`**: Egy `qArr : Qubit[]` egész számot jelölő qubit tömb, amely `qArr[0]` a legkevésbé jelentős bitet jelöli.
 1. **`SignedLittleEndian`**: Ugyanaz, mint `LittleEndian` a kivételével, hogy a két kiegészítésben tárolt, aláírt egész számot jelöli.
-1. **`FixedPoint`**: Egy qubit tömbből `qArr2 : Qubit[]` és egy bináris pont pozícióból álló valós számot képvisel `pos` , amely a bináris pont bal oldalán lévő bináris számjegyek számát számlálja. `qArr2`a tárolása ugyanúgy történik, mint a `SignedLittleEndian` .
+1. **`FixedPoint`**: Egy qubit tömbből `qArr2 : Qubit[]` és egy bináris pont pozícióból álló valós számot képvisel `pos` , amely a bináris pont bal oldalán lévő bináris számjegyek számát számlálja. `qArr2` a tárolása ugyanúgy történik, mint a `SignedLittleEndian` .
 
 ## <a name="operations"></a>Műveletek
 
@@ -120,7 +120,7 @@ Első lépésként klónozott a tárházat, és nyissa meg az `Numerics` almapp�
 
 ```bash
 git clone https://github.com/Microsoft/Quantum.git
-cd Quantum/Numerics
+cd Quantum/samples/numerics
 ```
 
 Ezután az `cd` egyik minta mappájába, és futtassa a mintát a használatával
