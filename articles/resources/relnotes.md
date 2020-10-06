@@ -9,12 +9,12 @@ uid: microsoft.quantum.relnotes
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 28e880445bf61150d7940730009a5482298adae2
-ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
+ms.openlocfilehash: 27038a86dc4854c397458d95529aca463d493fd6
+ms.sourcegitcommit: d98190988ff03146d9ca2b0d325870cd717d729a
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91492353"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91771334"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>A Microsoft Quantum Development Kit kibocsátási megjegyzései
 
@@ -23,6 +23,12 @@ Ez a cikk információkat tartalmaz a Quantum Development Kit egyes verzióiról
 A telepítési utasításokat lásd a [telepítési útmutatóban](xref:microsoft.quantum.install).
 
 A frissítésre vonatkozó utasításokat lásd a [frissítési útmutatóban](xref:microsoft.quantum.update).
+
+## <a name="version-01220100504"></a>0.12.20100504 verziója
+
+*Kiadás dátuma: október 5., 2020*
+
+Ez a kiadás a jegyzetfüzetek terhelését érintő hibát javít Q# (lásd: [iqsharp # 331](https://github.com/microsoft/iqsharp/pull/331)).
 
 ## <a name="version-01220092803"></a>0.12.20092803 verziója
 
@@ -66,7 +72,7 @@ Tekintse meg a [kódtárak](https://github.com/Microsoft/QuantumLibraries/pulls?
 
 A verzió a következőket tartalmazza:
 
-- A jegyzetfüzetekben megnyitott névterek Q# mostantól elérhetők az összes jövőbeli cella-számításhoz. Ez lehetővé teszi például, hogy a névtereket egyszer kell megnyitni a jegyzetfüzet tetején lévő cellában, ahelyett, hogy a megfelelő névtereket meg kellene nyitnia az egyes kódok celláiban. Az új `%lsopen` Magic parancs megjeleníti a jelenleg megnyitott névterek listáját.
+- A jegyzetfüzetekben megnyitott névterek Q# mostantól elérhetők az összes jövőbeli cella futtatásakor. Ez lehetővé teszi például, hogy a névtereket egyszer kell megnyitni a jegyzetfüzet tetején lévő cellában, ahelyett, hogy a megfelelő névtereket meg kellene nyitnia az egyes kódok celláiban. Az új `%lsopen` Magic parancs megjeleníti a jelenleg megnyitott névterek listáját.
 
 Tekintse meg a [kódtárak](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [fordítóprogramok](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [futtatókörnyezetek](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [minták](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed), [I Q# ](https://github.com/microsoft/iqsharp/pulls?q=is%3Apr+is%3Aclosed) és [kataek](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed)teljes listáját.  
 

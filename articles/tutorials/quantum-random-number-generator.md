@@ -9,12 +9,12 @@ uid: microsoft.quantum.quickstarts.qrng
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: a0e8933e6a77d017db914e4bb969ea05f760a443
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: cefe35a10dd89c14d2f1abc3080d52ab125236d1
+ms.sourcegitcommit: d98190988ff03146d9ca2b0d325870cd717d729a
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834040"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91771273"
 ---
 # <a name="tutorial-implement-a-quantum-random-number-generator-in-q"></a>Oktatóanyag: Kvantum-véletlenszámgenerátor implementálása a Q#-ban\#
 
@@ -33,7 +33,7 @@ A-ben írt kvantum-algoritmus egyszerű példája Q# egy kvantum véletlenszám-
 
 :::code language="qsharp" source="~/quantum/samples/getting-started/qrng/Qrng.qs" range="3-15,34":::
 
-Ahogy azt [A kvantum-számítástechnika ismertetése](xref:microsoft.quantum.overview.understanding) című cikkben említettük, a qubit a kvantuminformáció egysége, amely szuperpozícióban lehet. Ha megmérjük, a qubit értéke csak 0 vagy 1 lehet. Ha azonban egy művelet fut, a qubit állapota azt a valószínűséget jelöli, hogy a rendszer 0 vagy 1 értéket olvas be egy méréssel. Ezt a valószínűségi állapotot nevezzük szuperpozíciónak. E valószínűség segítségével generálhatunk véletlen számokat.
+Ahogy azt [A kvantum-számítástechnika ismertetése](xref:microsoft.quantum.overview.understanding) című cikkben említettük, a qubit a kvantuminformáció egysége, amely szuperpozícióban lehet. Ha megmérjük, a qubit értéke csak 0 vagy 1 lehet. A mérés előtt azonban a qubit állapota azt jelöli, hogy a rendszer 0 vagy 1 értéket adott meg méréssel. Ezt a valószínűségi állapotot nevezzük szuperpozíciónak. E valószínűség segítségével generálhatunk véletlen számokat.
 
 A Q# művelet során bemutatjuk a `Qubit` natív adattípust Q# . Egy `Qubit` csak a `using` utasítással foglalható le. Lefoglalás esetén a qubit mindig `Zero` állapotba kerül. 
 
