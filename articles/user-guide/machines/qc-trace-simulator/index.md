@@ -9,12 +9,12 @@ uid: microsoft.quantum.machines.qc-trace-simulator.intro
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 54a1f63461cfcc8146f7dc4d18d321238d77454d
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 7f5e25aa7b58277642783e03d03854cd75ff4ca3
+ms.sourcegitcommit: d98190988ff03146d9ca2b0d325870cd717d729a
 ms.translationtype: HT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833365"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91771291"
 ---
 # <a name="microsoft-quantum-development-kit-qdk-quantum-trace-simulator"></a>Microsoft Quantum Development Kit (QDK) – Kvantum-nyomkövetési szimulátor
 
@@ -86,7 +86,7 @@ A QDK öt olyan, a kvantum-nyomkövetési szimulátorral használható eszközt 
 |-----| -----|
 |[Eltérő bemenetek ellenőrzője](xref:microsoft.quantum.machines.qc-trace-simulator.distinct-inputs) |A közös qubitek lehetséges ütközéseit ellenőrzi |
 |[Érvénytelenített qubithasználat ellenőrzője](xref:microsoft.quantum.machines.qc-trace-simulator.invalidated-qubits)  |Ellenőrzi, hogy a program alkalmaz-e műveletet egy már kiadott qubitre |
-|[Primitív műveletek számlálója](xref:microsoft.quantum.machines.qc-trace-simulator.primitive-counter)  | Megszámlálja a kvantumprogramban meghívott összes művelet által használt primitív folyamatokat  |
+|[Primitív műveletek számlálója](xref:microsoft.quantum.machines.qc-trace-simulator.primitive-counter)  | Megszámlálja a kvantumprogramban meghívott összes művelet által használt primitíveket  |
 |[Mélységszámláló](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter)  |Összegyűjti a kvantumprogramban meghívott összes művelet mélysége alsó határértékei darabszámát   |
 |[Szélességszámláló](xref:microsoft.quantum.machines.qc-trace-simulator.width-counter)  |Megszámlálja a kvantumprogram egyes műveletei által lefoglalt és kölcsönzött qubiteket |
 

@@ -9,12 +9,12 @@ uid: microsoft.quantum.guide
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: f0680e773c8233d6c4f1acb742b3cc38dbc069d5
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 81f31a531a1b50ead332bb578ccf392ddced9e8d
+ms.sourcegitcommit: d98190988ff03146d9ca2b0d325870cd717d729a
 ms.translationtype: HT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834754"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91771383"
 ---
 # <a name="the-no-locq-user-guide"></a>A Q# használati útmutatója
 
@@ -55,7 +55,7 @@ A jelen útmutató különböző témaköreiben részletesen ismertetjük a Q# n
 
 ### <a name="quantum-simulators-and-resource-estimators"></a>Kvantumszimulátorok és erőforrásbecslők
 
-- [Kvantumszimulátorok és gazdaalkalmazások](xref:microsoft.quantum.machines): A különböző elérhető szimulátorok, valamint a gazdaprogramok és a célgépek közötti általános futtatási modell áttekintése.
+- [Kvantumszimulátorok és gazdaalkalmazások](xref:microsoft.quantum.machines): A különböző elérhető szimulátorok, valamint a gazdaprogramok és a célgépek Q#-programok futtatásához való együttműködésének áttekintése.
 
 - [Teljes körű funkciókkal rendelkező szimulátor](xref:microsoft.quantum.machines.full-state-simulator): A teljes kvantumállapotot szimuláló célgép. Hasznos a kisebb méretezésű (kevesebb mint pár tucat qubitból álló) programok teljes futtatásához vagy hibakereséséhez.
 
