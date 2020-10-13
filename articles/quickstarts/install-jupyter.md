@@ -10,18 +10,18 @@ uid: microsoft.quantum.install.jupyter
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 51de510907ea087d1f23d3ff65d268d6d455a493
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: b34d89ab33a4644c1dd4342949685f9bf84babd8
+ms.sourcegitcommit: d98190988ff03146d9ca2b0d325870cd717d729a
 ms.translationtype: HT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834312"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91771395"
 ---
 # <a name="develop-with-no-locq-jupyter-notebooks"></a>Fejlesztés Q# Jupyter-notebookokkal
 
 Telepítse a QDK-t a Q#-műveletek Q# Jupyter-notebookokon történő fejlesztéséhez.
 
-A Jupyter-notebookok helyszíni kódszámítást tesznek lehetővé utasításokkal, megjegyzésekkel és egyéb tartalmakkal együtt. Ez a környezet megfelelő a beágyazott magyarázatokkal ellátott Q#-kód írásához vagy kvantum-számítástechnikai interaktív oktatóanyagokhoz. Az alábbiakat kell elvégeznie a saját Q#-notebookok létrehozásának megkezdéséhez.
+A Jupyter-notebookok lehetővé teszik a kód helyszíni futtatását utasításokkal, megjegyzésekkel és egyéb tartalmakkal együtt. Ez a környezet megfelelő a beágyazott magyarázatokkal ellátott Q#-kód írásához vagy kvantum-számítástechnikai interaktív oktatóanyagokhoz. Az alábbiakat kell elvégeznie a saját Q#-notebookok létrehozásának megkezdéséhez.
 
 ## <a name="install-the-ino-locq-jupyter-kernel"></a>Az IQ# Jupyter kernel telepítése
 
