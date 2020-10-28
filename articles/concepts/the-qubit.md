@@ -96,7 +96,7 @@ Az 1. normával rendelkező, valós vagy összetett számok két dimenziós oszl
 
 $$\begin{bmatrix}1 \\\\ 0 \end{bmatrix} , \begin{bmatrix} 0 \\\\ 1 \end{bmatrix} , \begin{bmatrix} \frac { 1 } { \sqrt { 2 } } \\\\ \frac { 1 } { \sqrt { 2 } } \end{bmatrix} , \begin{bmatrix} \frac { 1 } { \sqrt { 2 } } \\\\ \frac { – 1 } { \sqrt { 2 } } \end{bmatrix} , \text { és } \begin{bmatrix} \frac { 1 } { \sqrt { 2 2 } } \\\\ \frac { } { \sqrt { } } \end{bmatrix} .      $$
 
-A kvantum-állapot vektorai $ \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} $ és $ \begin{bmatrix} 0 \\\\ 1 \end{bmatrix} $ speciális szerepkört igényelnek. Ez a két vektor képezi a qubit állapotát leíró vektoros terület alapját. Ez azt jelenti, hogy a kvantum-állapot vektora ezen alapul szolgáló vektorok összegeként írható. Pontosabban, az $ \begin{bmatrix} x \\\\ y vektor írható \end{bmatrix} $ $ x \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} + y \begin{bmatrix} 0 \\\\ 1 \end{bmatrix} $ . Habár ezek a vektorok bármilyen forgása tökéletesen érvényes alapként szolgál a qubit számára, úgy döntünk, hogy ezt a jogosultságot a *számítási alap*meghívásával emeljük ki.
+A kvantum-állapot vektorai $ \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} $ és $ \begin{bmatrix} 0 \\\\ 1 \end{bmatrix} $ speciális szerepkört igényelnek. Ez a két vektor képezi a qubit állapotát leíró vektoros terület alapját. Ez azt jelenti, hogy a kvantum-állapot vektora ezen alapul szolgáló vektorok összegeként írható. Pontosabban, az $ \begin{bmatrix} x \\\\ y vektor írható \end{bmatrix} $ $ x \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} + y \begin{bmatrix} 0 \\\\ 1 \end{bmatrix} $ . Habár ezek a vektorok bármilyen forgása tökéletesen érvényes alapként szolgál a qubit számára, úgy döntünk, hogy ezt a jogosultságot a *számítási alap* meghívásával emeljük ki.
 
 Ezt a két kvantum-állapotot a klasszikus bit két állapotának, azaz $ 0 és 1 értéknek kell megfelelnie $ $ $ . A standard konvenció a következő választás
 
@@ -122,7 +122,7 @@ $ $ A qubits a [*Bloch szféra*](https://en.wikipedia.org/wiki/Bloch_sphere) ké
 Az ábrán látható nyilak azt mutatják be, hogy a kvantum-állapot vektora hogyan mutat, és a nyíl minden átalakítása a kardinális tengelyek egyikére mutat.
 Miközben a kvantum-számítási folyamatra gondol, mivel a Forgások sorozatából egy hatékony intuíció van, nagy kihívást jelent az algoritmusok megtervezése és leírása. Q# a probléma megoldásához adjon meg egy nyelvet az ilyen elforgatások leírásához.
 
-## <a name="single-qubit-operations"></a>Qubit műveletek
+## <a name="single-qubit-operations"></a>Single-Qubit műveletek
 
 A kvantum-számítógépek a kvantum-kapuk univerzális készletének használatával dolgozzák fel az adatfeldolgozást, amely a kvantum-állapot vektorának bármilyen forgását Emulálhatja.
 Ez az egyetemességi koncepció hasonlít a hagyományos (azaz klasszikus) számítástechnikai koncepcióhoz, ahol a kapuk univerzálisnak tekintendők, ha a bemeneti bitek minden átalakítása véges hosszúságú áramkör használatával végezhető el.
@@ -137,7 +137,7 @@ is Adj { // Auto-generate the adjoint of the operation
 }
 ```
 
-Bár ez egy triviális példa (az < xref: Microsoft. Quantum. belső. h > művelet önadjoint), láthatja, hogy ez a bonyolultabb qubit-műveletek során felbecsülhetetlen értékű lesz.
+Bár ez egy triviális példa (az < xref: Microsoft. Quantum. belső. H > művelet önadjoint), láthatja, hogy ez a bonyolultabb qubit-műveletek során felbecsülhetetlen értékű lesz.
 További információ: [Operations and functions](xref:microsoft.quantum.guide.operationsfunctions).
 
 A klasszikus számítógépeken csak négy függvény képezhető le egy kicsit. Ezzel szemben a kvantum-számítógépek egyetlen qubit végtelen számú egységes átalakítás létezik. Ezért a " [*Gates*](https://en.wikipedia.org/wiki/Quantum_logic_gate)" nevű egyszerű kvantum-műveletek egyetlen véges halmaza sem tudja pontosan replikálni a kvantum-számítástechnikai szolgáltatásban engedélyezett, egységes átalakítások végtelen készletét. Ez azt jelenti, hogy a klasszikus számítástechnikai rendszertől eltérően a kvantum-számítógép nem tudja megvalósítani az összes lehetséges kvantum-programot, amely pontosan véges számú kaput használ. Így a kvantum-számítógépek nem lehetnek univerzálisak a klasszikus számítógépek azonos értelemben. Ennek eredményeképpen, amikor azt mondjuk, hogy a kapuk halmaza *univerzális* a Quantum Computing esetében, valójában némileg gyengébb, mint a klasszikus számítástechnika.
@@ -176,7 +176,7 @@ Míg az előző a legnépszerűbb primitív kapuk, amelyek a verem logikai szint
 
 A legegyszerűbb ilyen primitív az egyetlen qubit. A rendszer általában három qubit-rotációt vesz figyelembe: $ R_x $ , $ R_y $ és $ R_z $ . A rotációs $ R_x (\theta) működésének megjelenítéséhez $ Képzelje el például, hogy a Bloch gömb x tengelyének irányába mutat a jobb oldali hüvelykujját, $ és a vektort a kézzel, a $ $ \ THÉTA/2 radián szögével forgatja $ . Ez a 2. zavaros tényező abból ered, hogy a (z $ $ ) a $ Bloch-szférán kívüli merőleges vektorok 180 ^ \circ $ , de egyelőre a $ 90 ^ \circ $ fok egymástól mérten. A megfelelő egységes mátrixok a következők:
 
-\begin{igazítás* } 
+\begin{igazítás *} 
  & R_z (\theta) = e ^ { -i\theta z/2 } = \begin{bmatrix} e ^ { -i \ THÉTA/2 } & 0 \\\\ 0 & e ^ { i \ THÉTA/2 } \end{bmatrix} , \\\\ 
  & R_x (\theta) = e ^ { -i\theta x/2 } = HR_z (\theta) H = \begin{bmatrix} \cos (\ THÉTA/2) & – i\sin (\ THÉTA/2) – \\\\ i\sin (\ THÉTA/2) & \cos (\ THÉTA/2) \end{bmatrix} , \\\\ 
  & R_y (\theta) = e ^ { -i\theta y/2 } = SHR_z (\theta) HS ^ \dagger = \begin{bmatrix} \cos (\ THÉTA/2) & -\sin (\ THÉTA/2) \\\\ \sin (\ THÉTA/2) & \cos (\ THÉTA/2) \end{bmatrix} . \end { igazítás*}

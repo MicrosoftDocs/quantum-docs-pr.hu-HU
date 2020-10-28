@@ -9,12 +9,12 @@ ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 115cd65621afd8272887b36163b066a4e6a554d7
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 5a29dcc74c638cb8ecbeb1f924d0e50d40d19f66
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835655"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92692166"
 ---
 # <a name="applications"></a>Alkalmazások #
 
@@ -48,13 +48,13 @@ A legalkalmasabb alkalmazások a kvantum-számítógépeken történő megvalós
 
 A kvantum-szimulációs algoritmus egy Hamilton egy adott leírását egy primitív kvantum-kapun alakítja át, amely teljes körű, becsült idő-evolúciót mutat a Hamilton szerint.
 
-Abban a különleges esetben, ha a Hamilton Hermitian-részekből áll, a Trotter-Suzuki dekompozíció egy különösen egyszerű és intuitív algoritmus, amely szimulálja a Hamiltonians, amely a Hermitian-összetevők összegére bomlik le. A család első sorrendű integrátora például a $ $ \begin{align} U (t) & = \left (e ^ {-iH \_ 0 t/r} e ^ {-IH \_ 1 t/r} \cdots e ^ {-IH \_ {d-1} t/r} \right) közelíti meg. ^ {r} + \mathcal{O} (d ^ 2 \ max_j \\ | H \_ j \\ | ^ 2 t ^ 2/r), \end{align} $ $ $r d $ feltételt használó termékkel. 
+Abban a különleges esetben, ha a Hamilton Hermitian-részekre van lebontva, a Trotter-Suzuki bomlás egy olyan egyszerű és intuitív algoritmus, amely szimulálja a Hamiltonians a Hermitian-összetevők összegét. A család első sorrendű integrátora például a $ $ \begin{align} U (t) & = \left (e ^ {-iH \_ 0 t/r} e ^ {-IH \_ 1 t/r} \cdots e ^ {-IH \_ {d-1} t/r} \right) közelíti meg. ^ {r} + \mathcal{O} (d ^ 2 \ max_j \\ | H \_ j \\ | ^ 2 t ^ 2/r), \end{align} $ $ $r d $ feltételt használó termékkel. 
 
 > [!TIP]
-> A Trotter-Suzuki szimulációs algoritmus alkalmazásait a minták tartalmazzák.
+> A minták a Trotter-Suzuki szimulációs algoritmus alkalmazásait fedik le.
 > Ahhoz, hogy a Ising modell csak az egyes célszámítógépeken elérhető belső műveleteket használja, tekintse meg a [ **SimpleIsing** -mintát](https://github.com/microsoft/Quantum/blob/main/samples/simulation/ising/simple).
-> A Trotter-Suzuki Library Ising használó modell esetében tekintse meg a [ **IsingTrotter** mintát](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/trotter-evolution).
-> A Trotter-Suzuki Library vezérlési struktúrát használó molekuláris hidrogén esetében tekintse meg a [ **H2 szimulációs** mintát](https://github.com/microsoft/Quantum/tree/main/samples/simulation/h2/command-line).
+> A Ising modell Trotter-Suzuki könyvtár vezérlő struktúrájának használatával kapcsolatban tekintse meg a [ **IsingTrotter** mintát](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/trotter-evolution).
+> A Trotter-Suzuki könyvtár-vezérlési struktúrát használó molekuláris hidrogén esetében tekintse meg a [ **H2 szimulációs** mintát](https://github.com/microsoft/Quantum/tree/main/samples/simulation/h2/command-line).
 
 Sok esetben szeretnénk megvalósítani a szimulációs algoritmust, de nem érdeklik a megvalósításának részletei. Például: a második sorrendű integrátor körülbelül $ $ \begin{align} U (t) & = \left (e ^ {-iH \_ 0 t/2r} e ^ {-IH \_ 1 t/2r} \cdots e ^ {-IH \_ {d-1} t/2r} e ^ {-IH \_ {d-1} t/2r} \cdots e ^ {-IH \_ 1 t/2r} e ^ {-iH \_ 0 t/2r} \right) ^ {r} + \mathcal{O} (d ^ 3 \ max_j \\ | H \_ j \\ | ^ 3 t ^ 3/r ^ 2), \end{align} $ $ $2RD $ feltételt használó termékkel. A nagyobb megrendelések esetében még a feltételek és az optimalizált változatok is nagy mértékben nem triviális rendezést igényelhetnek az exponenciálisan. Más speciális algoritmusok is magukban foglalhatják a Ancilla qubits használatát a közbenső lépésekben. Így a szimulációs algoritmusokat a Canonban, felhasználó által definiált típusként csomagoljuk
 
@@ -68,7 +68,7 @@ Az első paraméter `Double` a szimuláció időpontja, a második paraméter, a
 newtype TimeDependentSimulationAlgorithm = ((Double, EvolutionSchedule, Qubit[]) => Unit : Adjoint, Controlled);
 ```
 
-Például a Trotter-Suzuki dekompozíciót a következő Canon függvények használatával lehet meghívni, és paramétereket kell megadnia `trotterStepSize` a szimuláció időtartamának módosítására az egyes exponenciális értékekben, valamint a `trotterOrder` kívánt integrátor sorrendjét.
+Előfordulhat például, hogy az Trotter-Suzuki a következő Canon függvények használatával hívható meg, és a paraméterek a `trotterStepSize` Szimuláció időtartamát módosítják az egyes exponenciális értékekben, valamint a `trotterOrder` kívánt integrátor sorrendjét.
 
 ```qsharp
 function TrotterSimulationAlgorithm(
@@ -136,11 +136,11 @@ operation EstimateAdiabaticStateEnergy(
 > A Ising modellben a fázisok becslése és a adiabatic állapotának előkészítéséhez tekintse meg a [ **IsingPhaseEstimation** mintát](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/phase-estimation).
 
 > [!TIP]
-> A [molekuláris hidrogén szimulálása](https://github.com/microsoft/Quantum/tree/main/samples/simulation/h2/command-line) egy érdekes és rövid minta. A [O'Malley et. Al](https://arxiv.org/abs/1512.06860) -ben jelentett modell és kísérleti eredmények. csak a Pauli-mátrixok szükségesek, és az űrlapon a $ \hat H = g \_ {0} I \_ 0i \_ 1 + g \_ 1 {z \_ 0} + g \_ 2 {z \_ 1} + g \_ 3 {z \_ 0} {z \_ 1} + g \_ 4 {y \_ 0} {y \_ 1} + g \_ 5 {x \_ 0} {x \_ 1} $ értéket kell használnia. Ez egy hatékony Hamilton, amely csak a 2 qubits-t igényli, ahol a $g $ konstansokat a két hidrogén atomok közötti távolságból számított $R $ értékre számítjuk. A Canon functions használatával a Paulis átalakítja a unitaries, majd rövid idő alatt kifejlődött a Trotter-Suzuki dekompozíció használatával. A adiabatic-állapot előkészítése nélkül hozható létre jó közelítés a $H _2 $ alapállapothoz, és így a rendszer közvetlenül a Canontól származó fázis-becslés használatával is megtalálhatja a terepi állapotot.
+> A [molekuláris hidrogén szimulálása](https://github.com/microsoft/Quantum/tree/main/samples/simulation/h2/command-line) egy érdekes és rövid minta. A [O'Malley et. Al](https://arxiv.org/abs/1512.06860) -ben jelentett modell és kísérleti eredmények. csak a Pauli-mátrixok szükségesek, és az űrlapon a $ \hat H = g \_ {0} I \_ 0i \_ 1 + g \_ 1 {z \_ 0} + g \_ 2 {z \_ 1} + g \_ 3 {z \_ 0} {z \_ 1} + g \_ 4 {y \_ 0} {y \_ 1} + g \_ 5 {x \_ 0} {x \_ 1} $ értéket kell használnia. Ez egy hatékony Hamilton, amely csak a 2 qubits-t igényli, ahol a $g $ konstansokat a két hidrogén atomok közötti távolságból számított $R $ értékre számítjuk. A Canon functions használatával a Paulis átalakítja a unitaries-re, majd rövid idő alatt kifejlődött a Trotter-Suzuki bontás használatával. A adiabatic-állapot előkészítése nélkül hozható létre jó közelítés a $H _2 $ alapállapothoz, és így a rendszer közvetlenül a Canontól származó fázis-becslés használatával is megtalálhatja a terepi állapotot.
 
 ## <a name="shors-algorithm"></a>Shor-algoritmus ##
 A rövid algoritmusa továbbra is a kvantum-számítástechnika egyik legjelentősebb folyamata marad, mivel ez azt mutatta, hogy a kvantum-számítógépek a fontos, jelenleg klasszikusan megoldhatatlan problémák megoldására használhatók.
-A rövid algoritmusa gyors megoldást kínál a nagy számokra a kvantum-számítógép, a *faktoring*nevű probléma használatával.
+A rövid algoritmusa gyors megoldást kínál a nagy számokra a kvantum-számítógép, a *faktoring* nevű probléma használatával.
 A sok mai cryptosystems biztonsága azon a feltételezésen alapul, hogy nem létezik gyors algoritmus a faktoring szolgáltatáshoz.
 Ennek megfelelően a rövid algoritmusa olyan hatással volt, hogy miként gondolunk a biztonságra a kvantum utáni világban.
 
@@ -151,7 +151,7 @@ Ezt a két lépést alább tekintjük át.
 
 ### <a name="period-finding"></a>Időszak megállapítása ###
 
-Miután megismerte, hogyan működik a Quantum Fourier-transzformáció és a fázis becslése (lásd a [kvantum-algoritmusokat](xref:microsoft.quantum.libraries.standard.algorithms)), ezeket az eszközöket felhasználhatjuk a hagyományosan nehéz számítási probléma megoldásához, amelynek elnevezése az *időszak megállapítása*.  A következő szakaszban bemutatjuk, hogyan alkalmazhatja az időszak megállapítását a faktoring szolgáltatásba.
+Miután megismerte, hogyan működik a Quantum Fourier-transzformáció és a fázis becslése (lásd a [kvantum-algoritmusokat](xref:microsoft.quantum.libraries.standard.algorithms)), ezeket az eszközöket felhasználhatjuk a hagyományosan nehéz számítási probléma megoldásához, amelynek elnevezése az *időszak megállapítása* .  A következő szakaszban bemutatjuk, hogyan alkalmazhatja az időszak megállapítását a faktoring szolgáltatásba.
 
 A két egész szám $a $ és $N $ között, ahol a $a<N $, az időszak megállapításának célját, más néven a sorrend megállapítását is, az a _sorrend_ , amely $r $ $a $ többtényezős $N $, ahol $r $ a legkevésbé pozitív egész számnak felel meg, például $a ^ r \equiv 1 \text{mod} N $.  
 
@@ -178,8 +178,8 @@ A vezérelt $U _a $ Gate Maps $ \ket{x} $ to $ \ket{(AX) \text{mod} N} $, ha a v
 Ahhoz, hogy a $ (a ^ NX) \text{mod} N $-t lehessen elérni, egyszerűen alkalmazhatjuk a szabályozott $U _ {a ^ n} $-t, ahol a $a ^ n \text{mod} N $-t a kvantum-áramkörbe való csatlakoztatáshoz.  
 Az ilyen Moduláris aritmetika eléréséhez szükséges áramkörök leírását a [Quantum aritmetikai dokumentációja](./algorithms.md#arithmetic)tartalmazza, konkrétan a vezérelt $U \_ {a ^ i} $ műveletek megvalósításához moduláris hatványozására áramkörre van szükségünk.
 
-Míg a fenti kör megfelel a [kvantum fázisok becslésének](xref:microsoft.quantum.characterization.quantumphaseestimation) , és explicit módon lehetővé teszi a megrendelés megtalálását, csökkentheti a szükséges qubits számát. A Beauregard módszerét követve megtekintheti a [arXiv: Quant-pH/0205095v3](https://arxiv.org/pdf/quant-ph/0205095v3.pdf#page=8), illetve a Microsoft. Quantum. jellemzésben elérhető fázis-becslési rutinok egyikét. A [robusztus fázis becslése](xref:microsoft.quantum.characterization.robustphaseestimation) például egy extra qubit is használ.
- 
+Míg a fenti kör megfelel a [kvantum fázisok becslésének](xref:Microsoft.Quantum.Characterization.QuantumPhaseEstimation) , és explicit módon lehetővé teszi a megrendelés megtalálását, csökkentheti a szükséges qubits számát. A Beauregard módszerét követve megtekintheti a [arXiv: Quant-pH/0205095v3](https://arxiv.org/pdf/quant-ph/0205095v3.pdf#page=8), illetve a Microsoft. Quantum. jellemzésben elérhető fázis-becslési rutinok egyikét. A [robusztus fázis becslése](xref:microsoft.quantum.characterization.robustphaseestimation) például egy extra qubit is használ.
+
 ### <a name="factoring"></a>Faktoring ###
 A faktoring célja, hogy meghatározza a $N $ egész szám két fő tényezőjét, ahol a $N $ egy $n $ bites szám.  
 A faktoring az alábbiakban ismertetett lépésekből áll. A lépések három részre oszlanak: a klasszikus előfeldolgozási rutin (1-4); egy kvantum-számítási rutin, amely megkeresi az $a \text{mod} N $ (5); valamint egy klasszikus utófeldolgozó rutin, amely a sorrendből származtatja a legfontosabb tényezőket (6-9).

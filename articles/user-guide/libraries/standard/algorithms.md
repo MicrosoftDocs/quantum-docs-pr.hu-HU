@@ -9,12 +9,12 @@ uid: microsoft.quantum.libraries.standard.algorithms
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 7ce13c5df3795656156cccf28640c0a4b0dcba2e
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 982103876b00718aa3b42c6bc3a07d242cde7594
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835672"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92692215"
 ---
 # <a name="quantum-algorithms"></a>Quantum algoritmusok #
 
@@ -49,8 +49,8 @@ A háttérben elindulhat a [standard amplitúdó-erősítés](https://arxiv.org/
 A Fourier-transzformáció a klasszikus elemzés alapvető eszköze, és ugyanolyan fontos a kvantum-számításokhoz.
 Emellett a *Quantum Fourier-transzformáció* (QFT) hatékonysága messze felülmúlja a klasszikus gépen elérhetővé tenni kívánt első eszközök egyikét.
 
-A QFT hozzávetőleges általánosításával biztosítjuk a <xref:microsoft.quantum.canon.approximateqft> műveletet, amely lehetővé teszi a további optimalizálást olyan metszési forgatásokkal, amelyek nem feltétlenül szükségesek a kívánt algoritmus pontosságához.
-A hozzávetőleges QFT az $Z dyadic $-rotációs művelet <xref:microsoft.quantum.intrinsic.rfrac> és a művelet végrehajtásához szükséges <xref:microsoft.quantum.intrinsic.h> .
+A QFT hozzávetőleges általánosításával biztosítjuk a <xref:Microsoft.Quantum.Canon.ApproximateQft> műveletet, amely lehetővé teszi a további optimalizálást olyan metszési forgatásokkal, amelyek nem feltétlenül szükségesek a kívánt algoritmus pontosságához.
+A hozzávetőleges QFT az $Z dyadic $-rotációs művelet <xref:Microsoft.Quantum.Intrinsic.RFrac> és a művelet végrehajtásához szükséges <xref:Microsoft.Quantum.Intrinsic.H> .
 A bemenet és a kimenet a big endian-kódolásban---feltételezve, hogy az indextel rendelkező qubit a `0` bináris egész számok bal szélső (legmagasabb) kis részébe van kódolva.
 Ez a [két](xref:microsoft.quantum.concepts.dirac)pontra van igazítva, mivel a $ \ket $ állapotú három qubits regisztrálása megfelel a $ {100} \ket $ állapotú _0 $ $q értéknek, {1} míg a $q _1 $ és a $q _2 $ érték a $ \ket $ állapotú {0} .
 A (z) $a $ közelítési paraméter meghatározza a $Z $-Forgások, azaz $a \in [0.. n] $ metszési szintjét.
@@ -103,15 +103,15 @@ További részletekért tekintse meg az [M. Roetteler, a th. Beth](http://doi.or
 
 ### <a name="quantum-phase-estimation"></a>Kvantumfázisbecslés ###
 
-A Quantum Fourier-transzformáció egyik különösen fontos alkalmazása, hogy megismerje az egységes operátorok eigenvalues, amely a *fázisok becslésének*ismert problémája.
+A Quantum Fourier-transzformáció egyik különösen fontos alkalmazása, hogy megismerje az egységes operátorok eigenvalues, amely a *fázisok becslésének* ismert problémája.
 Vegyünk egy egységes $U $ és egy State $ \ket{\phi} $ értéket, amely szerint a $ \ket{\phi} $ eigenstate $U $, ismeretlen sajátérték $ \phi $, \begin{Equation} U\ket {\ Phi} = \phi\ket{\phi}.
 \end{Equation}, ha csak $U $ Oracle-hez fér hozzá, akkor a $ \phi $ fázisban megtudhatjuk, $Z hogy egy vezérelt művelet céljára alkalmazott $ rotációs műveletet propagálja vissza a vezérlőre.
 
 Tegyük fel, hogy $V $ $U $ vezérelt alkalmazás, például \begin{align} V (\ket {0} \otimes \ket{\phi}) & = \ket {0} \otimes \ket{\phi} \textrm{ \\ \\ és} V (\ket \otimes {1} \ket{\phi}) & = e ^ {i \phi} \ket {1} \otimes \ket{\phi}.
 \end{align} ezt követően: linearitás, \begin{align} V (\ket{+} \otimes \ket{\phi}) & = \frac{(\ket {0} \otimes \ket{\phi}) + e ^ {i \phi} (\ket {1} \otimes \ket{\phi})} {\sqrt {2} }.
-\end{align} gyűjthetjük a \begin{align} V (\ket{+} \otimes \ket{\phi}) & = \frac{\ket {0} + e ^ {i \phi} \ket {1} } {\sqrt {2} } \otimes \ket{\phi} \\ \\ & = (R_1 (\phi) \ket{+}) \otimes \ket{\phi}, \end{align}, ahol a $R _1 $ a művelet által alkalmazott egységes érték <xref:microsoft.quantum.intrinsic.r1> .
+\end{align} gyűjthetjük a \begin{align} V (\ket{+} \otimes \ket{\phi}) & = \frac{\ket {0} + e ^ {i \phi} \ket {1} } {\sqrt {2} } \otimes \ket{\phi} \\ \\ & = (R_1 (\phi) \ket{+}) \otimes \ket{\phi}, \end{align}, ahol a $R _1 $ a művelet által alkalmazott egységes érték <xref:Microsoft.Quantum.Intrinsic.R1> .
 Másképpen fogalmazva, a $V $ alkalmazásának hatása pontosan ugyanaz, mint a $R _1 $ ismeretlen szögben való alkalmazása, noha csak a $V $ Oracle-hez férhet hozzá.
-Így a vita további részében a $R _1 (\phi) $ kifejezéssel megbeszéljük a fázisok becslését, amelyet az úgynevezett *fázis-visszarúgás*használatával implementálunk.
+Így a vita további részében a $R _1 (\phi) $ kifejezéssel megbeszéljük a fázisok becslését, amelyet az úgynevezett *fázis-visszarúgás* használatával implementálunk.
 
 Mivel a vezérlés és a cél regisztrálása a folyamat után nem látható, a $ \ket{\phi} $ értéket újra felhasználhatjuk a $U ^ $2 ellenőrzött alkalmazásának céljára, hogy előkészítsünk egy második vezérlőelem-qubit a _1 (2 \phi) \ket{+} $ $R állapotban.
 Így továbbra is regisztrálhat a \begin{align} \ket{\psi} & = \ sum_ {j = 0} ^ n R_1 (2 ^ j \phi) \ket{+} \\ \\ & \propto \ bigotimes_ {j = 0} ^ {n} \left (\ket {0} + \exp (i 2 ^ {j} \phi) \ket {1} \right) \\ \\ & \propto \ sum_ {k = 0} ^ {2 ^ n-1} \exp (i \phi k) \ket{k} \end{align}, ahol a $n $ a szükséges bitek száma. és hogy hol használták {} a $ \propto {} $ értéket, jelezve, hogy letiltottuk a $1/\sqrt{2 ^ n} $ normalizálás tényezőjét.
@@ -119,4 +119,4 @@ Mivel a vezérlés és a cél regisztrálása a folyamat után nem látható, a 
 Ha feltételezzük, hogy a $ \phi = 2 \pi p/2 ^ k $ értéket egy egész szám $p $ értékre, akkor ezt a következőt ismerjük fel: $ \ket{\psi} = \operatorname{QFT} \ket{p_0 p_1 \dots p_n} $, ahol $p _j $ a $j ^ {\textrm{th}} $ bit of $2 \pi \phi $.
 A Quantum Fourier-transzformáció adjoint alkalmazásával ezért a rendszer kvantum-állapotként kódolja a fázis bináris ábrázolását.
 
-A-ben Q# ezt a műveletet hajtja végre <xref:microsoft.quantum.characterization.quantumphaseestimation> , amely a <xref:microsoft.quantum.oracles.discreteoracle> $U ^ m $ implementációs alkalmazást alkalmazza $m $ pozitív egész számok függvényében.
+A-ben Q# ezt a műveletet hajtja végre <xref:Microsoft.Quantum.Characterization.QuantumPhaseEstimation> , amely a <xref:Microsoft.Quantum.Oracles.DiscreteOracle> $U ^ m $ implementációs alkalmazást alkalmazza $m $ pozitív egész számok függvényében.
