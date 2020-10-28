@@ -1,0 +1,56 @@
+### YamlMime:QSharpNamespace
+functions:
+- summary: ''
+  uid: Microsoft.Quantum.Characterization.HeadMeasurement
+name: Microsoft.Quantum.Characterization
+newtypes: []
+operations:
+- summary: ''
+  uid: Microsoft.Quantum.Characterization.ApplyHadamardTest
+- summary: ''
+  uid: Microsoft.Quantum.Characterization.ApplyHadamardTestOnSingleRegister
+- summary: ''
+  uid: Microsoft.Quantum.Characterization.ApplySwapTest
+- summary: ''
+  uid: Microsoft.Quantum.Characterization.ApplySwapTestOnSingleRegister
+- summary: Egy iterációs (klasszikusan vezérelt) fázis-értékelési algoritmus egyszeri ismétlését hajtja végre, amely egy egységes Oracle tetszőleges valós hatáskörét használja.
+  uid: Microsoft.Quantum.Characterization.ContinuousPhaseEstimationIteration
+- summary: Egy iterációs (klasszikusan vezérelt) fázis-értékelési algoritmus egyszeri ismétlését hajtja végre egy egységes Oracle egész számú erejével.
+  uid: Microsoft.Quantum.Characterization.DiscretePhaseEstimationIteration
+- summary: Az előkészítés és a mérés miatt a rendszer a `Zero` megadott számú próbaverzió elvégzésével megbecsüli a gyakoriságot, amellyel a mérték sikeres (visszatérési).
+  uid: Microsoft.Quantum.Characterization.EstimateFrequency
+- summary: A adjointable és a mérést követően a rendszer a `Zero` megadott számú próbaverzió elvégzésével megbecsüli a gyakoriságot, amellyel a mérték sikeres (visszaadott) értékkel rendelkezik.
+  uid: Microsoft.Quantum.Characterization.EstimateFrequencyA
+- summary: A két művelet, amely az egyes állapotok előkészítését végzi, a megbecsüli az egyes műveletek által előkészített állapotok közötti átfedés képzeletbeli részét.
+  uid: Microsoft.Quantum.Characterization.EstimateImagOverlapBetweenStates
+- summary: A két művelet, amely az egyes példányok előkészítését végzi, az egyes műveletek által előkészített állapotok közötti négyzetes átfedést becsüli.
+  uid: Microsoft.Quantum.Characterization.EstimateOverlapBetweenStates
+- summary: A két művelet, amely az egyes állapotok előkészítését végzi, az egyes műveletek által előkészített állapotok közötti átfedés valódi részét becsüli meg.
+  uid: Microsoft.Quantum.Characterization.EstimateRealOverlapBetweenStates
+- summary: >+
+    > [!WARNING]
+
+    > A MeasureAllZ elavult. Használja <xref:Microsoft.Quantum.Measurement.MeasureAllZ> helyette.
+
+    >
+
+    > Használja a következőt: @"microsoft.quantum.measurement.measureAllZ".
+
+  uid: Microsoft.Quantum.Characterization.MeasureAllZ
+- summary: Megméri az Identity operátort a qubits-regisztrációban.
+  uid: Microsoft.Quantum.Characterization.MeasureIdentity
+- summary: Végrehajtja a kvantum fázis becslési algoritmusát egy adott Oracle esetében `U` `targetState` , és beolvassa a fázist egy nagy endian kvantum-regisztrációba.
+  uid: Microsoft.Quantum.Characterization.QuantumPhaseEstimation
+- summary: Elvégzi a robusztus, nem ismétlődő kvantum-értékelési algoritmust egy adott Oracle `U` -és eigenstate esetében, és egyetlen valós értékű becslést nyújt a fázisról a Heisenberg korláton belüli variancia-méretezéssel.
+  uid: Microsoft.Quantum.Characterization.RobustPhaseEstimation
+- summary: Egy qubit-alapú Process tomográfia-mérést hajt végre Pauli alapon, egy adott érdeklődési csatornán keresztül.
+  uid: Microsoft.Quantum.Characterization.SingleQubitProcessTomographyMeasurement
+summary: Ez a névtér a kvantum-állapotok és-folyamatok tanulási tulajdonságainak, például a tomográfia és a fázisok becslésének megismerésére szolgáló függvényeket és műveleteket tartalmaz.
+uid: Microsoft.Quantum.Characterization
+metadata:
+  ms.openlocfilehash: a1d4837f03b6dff637c82d2c5b14823029bd2787
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: hu-HU
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92715670"

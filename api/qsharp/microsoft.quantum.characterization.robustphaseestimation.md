@@ -1,0 +1,59 @@
+---
+uid: Microsoft.Quantum.Characterization.RobustPhaseEstimation
+title: RobustPhaseEstimation művelet
+ms.date: 10/26/2020 12:00:00 AM
+ms.topic: article
+qsharp.kind: operation
+qsharp.namespace: Microsoft.Quantum.Characterization
+qsharp.name: RobustPhaseEstimation
+qsharp.summary: Performs the robust non-iterative quantum phase estimation algorithm for a given oracle `U` and eigenstate, and provides a single real-valued estimate of the phase with variance scaling at the Heisenberg limit.
+ms.openlocfilehash: d04ee578c0e6f916e9a4da451075b79e0630c70a
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92714942"
+---
+# <a name="robustphaseestimation-operation"></a><span data-ttu-id="6782b-102">RobustPhaseEstimation művelet</span><span class="sxs-lookup"><span data-stu-id="6782b-102">RobustPhaseEstimation operation</span></span>
+
+<span data-ttu-id="6782b-103">Névtér: [Microsoft. Quantum. jellemzés](xref:Microsoft.Quantum.Characterization)</span><span class="sxs-lookup"><span data-stu-id="6782b-103">Namespace: [Microsoft.Quantum.Characterization](xref:Microsoft.Quantum.Characterization)</span></span>
+
+<span data-ttu-id="6782b-104">Csomag [](https://nuget.org/packages/)</span><span class="sxs-lookup"><span data-stu-id="6782b-104">Package: [](https://nuget.org/packages/)</span></span>
+
+
+<span data-ttu-id="6782b-105">Elvégzi a robusztus, nem ismétlődő kvantum-értékelési algoritmust egy adott Oracle `U` -és eigenstate esetében, és egyetlen valós értékű becslést nyújt a fázisról a Heisenberg korláton belüli variancia-méretezéssel.</span><span class="sxs-lookup"><span data-stu-id="6782b-105">Performs the robust non-iterative quantum phase estimation algorithm for a given oracle `U` and eigenstate, and provides a single real-valued estimate of the phase with variance scaling at the Heisenberg limit.</span></span>
+
+```qsharp
+operation RobustPhaseEstimation (bitsPrecision : Int, oracle : Microsoft.Quantum.Oracles.DiscreteOracle, targetState : Qubit[]) : Double
+```
+
+
+## <a name="input"></a><span data-ttu-id="6782b-106">Bevitel</span><span class="sxs-lookup"><span data-stu-id="6782b-106">Input</span></span>
+
+### <a name="bitsprecision--int"></a><span data-ttu-id="6782b-107">bitsPrecision: [int](xref:microsoft.quantum.lang-ref.int)</span><span class="sxs-lookup"><span data-stu-id="6782b-107">bitsPrecision : [Int](xref:microsoft.quantum.lang-ref.int)</span></span>
+
+<span data-ttu-id="6782b-108">Ez becslést ad a $ \phi $-re a standard szintű szórással ($ \sigma \Le 2 \ pi/2 ^ \text{bitsPrecision} $) a több lekérdezéssel, például a $ \sigma \Le 10,7 \pi/\text{# of kérdezgető} $ méretezéssel.</span><span class="sxs-lookup"><span data-stu-id="6782b-108">This provides an estimate of $\phi$ with standard deviation $\sigma \le 2\pi / 2^\text{bitsPrecision}$ using a number of queries scaling like $\sigma \le 10.7 \pi / \text{# of queries}$.</span></span>
+
+
+### <a name="oracle--discreteoracle"></a><span data-ttu-id="6782b-109">Oracle: [DiscreteOracle](xref:Microsoft.Quantum.Oracles.DiscreteOracle)</span><span class="sxs-lookup"><span data-stu-id="6782b-109">oracle : [DiscreteOracle](xref:Microsoft.Quantum.Oracles.DiscreteOracle)</span></span>
+
+<span data-ttu-id="6782b-110">Egy művelet, amely $U ^ millió $ értéket implementál a megadott egész számra $m $.</span><span class="sxs-lookup"><span data-stu-id="6782b-110">An operation implementing $U^m$ for given integer powers $m$.</span></span>
+
+
+### <a name="targetstate--qubit"></a><span data-ttu-id="6782b-111">targetState: [Qubit](xref:microsoft.quantum.lang-ref.qubit)[]</span><span class="sxs-lookup"><span data-stu-id="6782b-111">targetState : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[]</span></span>
+
+<span data-ttu-id="6782b-112">Egy kvantum-regisztráció, amely $U $.</span><span class="sxs-lookup"><span data-stu-id="6782b-112">A quantum register that $U$ acts on.</span></span> <span data-ttu-id="6782b-113">Ha a \ket{\phi} $ $U $ eigenstate tárolja, akkor $U \ket{\phi} = e ^ {i\phi} \ket{\phi} $ for $ \phi\in (-\pi, \pi] $ ismeretlen fázis.</span><span class="sxs-lookup"><span data-stu-id="6782b-113">If it stores an eigenstate $\ket{\phi}$ of $U$, then $U\ket{\phi} = e^{i\phi} \ket{\phi}$ for $\phi\in(-\pi,\pi]$ an unknown phase.</span></span>
+
+
+
+## <a name="output--double"></a><span data-ttu-id="6782b-114">Kimenet: [dupla](xref:microsoft.quantum.lang-ref.double)</span><span class="sxs-lookup"><span data-stu-id="6782b-114">Output : [Double](xref:microsoft.quantum.lang-ref.double)</span></span>
+
+
+
+## <a name="remarks"></a><span data-ttu-id="6782b-115">Megjegyzések</span><span class="sxs-lookup"><span data-stu-id="6782b-115">Remarks</span></span>
+
+<span data-ttu-id="6782b-116">A nagyszámú lekérdezés korlátozása esetén Cramer-Rao a $ \phi $ értékre vonatkozó becslések szórását a $ \sigma \ge 2 \pi/\text{# of lekérdezések} $ értékre.</span><span class="sxs-lookup"><span data-stu-id="6782b-116">In the limit of a large number of queries, Cramer-Rao lower bounds for the standard deviation of the estimate of $\phi$ satisfy $\sigma \ge 2 \pi / \text{# of queries}$.</span></span>
+
+## <a name="references"></a><span data-ttu-id="6782b-117">Referencia</span><span class="sxs-lookup"><span data-stu-id="6782b-117">References</span></span>
+
+- <span data-ttu-id="6782b-118">Univerzális Single-Qubit-Gate-Set robusztus, robusztus fázisú kiértékelése: Shelby Kimmel, Guang felfüggeszti Hao Low, Theodore J. Yoder https://arxiv.org/abs/1502.02677</span><span class="sxs-lookup"><span data-stu-id="6782b-118">Robust Calibration of a Universal Single-Qubit Gate-Set via Robust Phase Estimation Shelby Kimmel, Guang Hao Low, Theodore J. Yoder https://arxiv.org/abs/1502.02677</span></span>

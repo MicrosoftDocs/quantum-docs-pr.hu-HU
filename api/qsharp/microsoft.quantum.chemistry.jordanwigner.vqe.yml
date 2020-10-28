@@ -1,0 +1,24 @@
+### YamlMime:QSharpNamespace
+functions:
+- summary: Kibővíti a Jordan-Wigner-együtthatók kompakt megjelenítését, hogy egy-az-egyhez hozzárendelést szerezzen be ezek és a Pauli-kifejezések között.
+  uid: Microsoft.Quantum.Chemistry.JordanWigner.VQE.ExpandedCoefficients
+- summary: Kiszámítja az összes olyan mérési operátort, amely egy Jordan-Wigner-kifejezés várható kiszámításához szükséges.
+  uid: Microsoft.Quantum.Chemistry.JordanWigner.VQE.MeasurementOperators
+name: Microsoft.Quantum.Chemistry.JordanWigner.VQE
+newtypes: []
+operations:
+- summary: A molekula energia-becslését az egyes Jordan-Wigner feltételek által biztosított energia összegzésével számítja ki.
+  uid: Microsoft.Quantum.Chemistry.JordanWigner.VQE.EstimateEnergy
+- summary: Egy adott Jordan-Wigner Hamilton-kifejezéshez társított energia kiszámítása
+  uid: Microsoft.Quantum.Chemistry.JordanWigner.VQE.EstimateTermExpectation
+- summary: A PrepareTrialState körüli privát burkoló egy adjoint definiálásával teszi kompatibilisvé a EstimateFrequencyA. A EstimateFrequencyA beépített emulációs funkcióval rendelkezik a QuantumSimulator célzásához, ami felgyorsítja a végrehajtást.
+  uid: Microsoft.Quantum.Chemistry.JordanWigner.VQE._prepareTrialStateWrapper
+summary: ''
+uid: Microsoft.Quantum.Chemistry.JordanWigner.VQE
+metadata:
+  ms.openlocfilehash: 6c99da452067d5e8902e05e53cabd70ca910cd60
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: hu-HU
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92714116"

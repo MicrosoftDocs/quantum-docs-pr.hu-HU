@@ -1,0 +1,162 @@
+### YamlMime:QSharpNamespace
+functions:
+- summary: A által ismertetett Hamilton `JWOptimizedHTerms` `GeneratorSystem` a Pauli kifejezésben kifejezett értékre alakítja át `GeneratorIndex` .
+  uid: Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerBlockEncodingGeneratorSystem
+- summary: A dinamikus generátort szimulálható kapuk készlete jelöli, a JordanWigner pedig kibővíthető.
+  uid: Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerClusterOperatorEvolutionSet
+- summary: A által ismertetett Hamilton alakítja át `JWOptimizedHTerms` `GeneratorSystem` az `GeneratorIndex` ebben a fájlban meghatározott egyezményben kifejezett kifejezéssel.
+  uid: Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerClusterOperatorGeneratorSystem
+- summary: A dinamikus generátort szimulálható kapuk készlete jelöli, a JordanWigner pedig kibővíthető.
+  uid: Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerFermionEvolutionSet
+- summary: A dinamikus generátort szimulálható kapuk készlete jelöli, a JordanWigner pedig kibővíthető.
+  uid: Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerFermionFunction
+- summary: A által ismertetett Hamilton alakítja át `JWOptimizedHTerms` `GeneratorSystem` az `GeneratorIndex` ebben a fájlban meghatározott egyezményben kifejezett kifejezéssel.
+  uid: Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerGeneratorSystem
+- summary: A által ismertetett Hamilton `JWOptimizedHTerms` `GeneratorSystem` a Pauli kifejezésben kifejezett értékre alakítja át `GeneratorIndex` .
+  uid: Microsoft.Quantum.Chemistry.JordanWigner.OptimizedBlockEncodingGeneratorSystem
+- summary: A T-Count optimalizált Qubitization műveletet és a futtatásához szükséges paramétereket adja vissza.
+  uid: Microsoft.Quantum.Chemistry.JordanWigner.OptimizedQubitizationOracle
+- summary: A Qubitization műveletet és a futtatásához szükséges paramétereket adja vissza.
+  uid: Microsoft.Quantum.Chemistry.JordanWigner.QubitizationOracle
+- summary: Visszaadja a Trotter lépés műveletét és a futtatásához szükséges paramétereket.
+  uid: Microsoft.Quantum.Chemistry.JordanWigner.TrotterStepOracle
+- summary: A (Z) Jordánia számítási összetevőinek Wigner karakterlánca a Fermion-indexek között egy fermionic-operátorban, amely páros számú létrehozási/megsemmisítő operátorral rendelkezik.
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._ComputeJordanWignerBitString
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._ComputeJordanWignerPauliString
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._ComputeJordanWignerPauliZString
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._GetOptimizedBETermIndexCoeff_
+- summary: A dinamikus generátort szimulálható kapuk készlete jelöli, a JordanWigner pedig kibővíthető.
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._JordanWignerClusterOperatorFunction
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._JordanWignerClusterOperatorGeneratorIndex
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._JordanWignerClusterOperatorGeneratorSystemImpl
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._JordanWignerClusterOperatorPQRSTermSigns
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._JordanWignerOptimizedBlockEncodingQubitCount_
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._JordanWignerOptimizedBlockEncodingQubitManager_
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._JordanWignerOptimizedBlockEncoding_
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._JordanWignerOptimizedQuantumWalkByQubitization_
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._JordanWignerSelectQubitCount_
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._JordanWignerSelectQubitManager_
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._OptimizedBEGeneratorSystemCoeff_
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._OptimizedBEXY_
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._OptimizedQubitizationOracleSeperatedRegisters_
+- summary: A "GeneratorIndex []" kifejezésre a "GeneratorIndex" kifejezést leíró kifejezést alakít át Pál
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._PQTermToPauliGenIdx_
+- summary: A "GeneratorIndex []" kifejezésre a "GeneratorIndex" kifejezést leíró kifejezést alakít át Pál
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._PQTermToPauliMajIdx_
+- summary: Egy PQ vagy PQQR kifejezést leíró GeneratorIndex alakít át a (z) "GeneratorIndex []" kifejezésre Paulis alapján
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._PQandPQQRTermToPauliGenIdx_
+- summary: Egy PQ vagy PQQR kifejezést leíró GeneratorIndex alakít át a (z) "GeneratorIndex []" kifejezésre Paulis alapján
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._PQandPQQRTermToPauliMajIdx_
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._PrepareSingleConfigurationalStateSingleSiteOccupation
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._QubitizationOracleSeperatedRegisters
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._SelectZ_
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._ToJordanWignerSelectInput_
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._ToPauliBases_
+- summary: A PQRS kifejezést leíró GeneratorIndex alakítja át a (z) "GeneratorIndex []" kifejezésre a Paulis alapján
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._V0123TermToPauliGenIdx_
+- summary: A PQRS kifejezést leíró GeneratorIndex alakítja át a (z) "GeneratorIndex []" kifejezésre a Paulis alapján
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._V0123TermToPauliMajIdx_
+- summary: Egy "Z" kifejezésre mutató GeneratorIndex alakít át egy "GeneratorIndex []" kifejezésre.
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._ZTermToPauliGenIdx
+- summary: Egy "Z" kifejezésre mutató GeneratorIndex alakít át egy "GeneratorIndex []" kifejezésre.
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._ZTermToPauliMajIdx_
+- summary: A ZZ kifejezést leíró GeneratorIndex alakítja át a (z) "GeneratorIndex []" kifejezésre, Paulis alapján.
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._ZZTermToPauliGenIdx
+- summary: A ZZ kifejezést leíró GeneratorIndex alakítja át a (z) "GeneratorIndex []" kifejezésre, Paulis alapján.
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._ZZTermToPauliMajIdx_
+name: Microsoft.Quantum.Chemistry.JordanWigner
+newtypes:
+- summary: 'A C# és a Q # között átadott adatok formátuma, amely a Hamilton feltételeit jelöli. A megjelenített adatmennyiség jelentését az azt fogadó algoritmus határozza meg.'
+  uid: Microsoft.Quantum.Chemistry.JordanWigner.JWOptimizedHTerms
+- summary: 'A C# és a Q # között átadott adatok formátuma, amely a Hamilton-szimuláció összes adatát képviseli. A megjelenített adatmennyiség jelentését az azt fogadó algoritmus határozza meg.'
+  uid: Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerEncodingData
+- summary: 'A C# és a Q # között átadott adatok formátuma, amely a kezdeti állapot előkészítését jelöli, az azt fogadó algoritmus határozza meg.'
+  uid: Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerInputState
+- summary: Az a függvény `OptimizedBETermIndex` `n` , amely egy egész számra vonatkozó kifejezést ad vissza `n` , és az első és a `Int` kifejezésben szereplő összes kifejezés abszolút értékének összegét `Double` adja vissza.
+  uid: Microsoft.Quantum.Chemistry.JordanWigner.OptimizedBEGeneratorSystem
+- summary: Az optimalizált blokk kódolási algoritmusban található adatok kifejezése.
+  uid: Microsoft.Quantum.Chemistry.JordanWigner.OptimizedBETermIndex
+operations:
+- summary: >-
+    A dinamikus generátort szimulálható kapuk készlete jelöli, a JordanWigner pedig kibővíthető.
+
+    További részletekért lásd a [Dynamic Generator Modeling](../libraries/data-structures#dynamical-generator-modeling) című témakört.
+  uid: Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerFermionImpl
+- summary: 'Egy egységes $U $, amely a Pauli-karakterláncot alkalmazza $ (X ^ {z + 1} \_ c: ^ {z} \_ p) z \_ {p-1}... Z_0 $ on qubits $0.. p $ feltétele egy index $z \in \{ 0, 1 \} $ és $p $. Ez a $ $ \begin{align} U\ket {z} \ ket {p} \ ket {\ PSI} = \ket{z}\ket{p} (X ^ {z + 1} c: # \_ {z} \_ p) z \_ {p-1}... Z_0 \ket{\psi} \end{align} $ $'
+  uid: Microsoft.Quantum.Chemistry.JordanWigner.OptimizedBEXY
+- summary: Próbaverziós állapot egyszerű állapotának előkészítése a spin-orbits elfoglalásával
+  uid: Microsoft.Quantum.Chemistry.JordanWigner.PrepareSingleConfigurationalStateSingleSiteOccupation
+- summary: Ritka, többkonfigurációs állapot előkészítése próbaverziós állapothoz a kezdeti próbaverziós állapotba való felizgatás hozzáadásával.
+  uid: Microsoft.Quantum.Chemistry.JordanWigner.PrepareSparseMultiConfigurationalState
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner.PrepareTrialState
+- summary: Egyszintű, a fürt állapotának előkészítési állapota
+  uid: Microsoft.Quantum.Chemistry.JordanWigner.PrepareUnitaryCoupledClusterState
+- summary: Egy egységes $U $, amely a Pauli $Z $ Gate-t alkalmazza egy qubits, $p $ \ket{p} $ index állapotú. Ez a $ $ \begin{align} U\ket {p} \ ket {\ PSI} = \ket{p}Z \_ p\ket {\ PSI} \end{align} $ $
+  uid: Microsoft.Quantum.Chemistry.JordanWigner.SelectZ
+- summary: Alkalmazza a Time-Evolutiont egy PQRS-kifejezéssel `GeneratorIndex` .
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._ApplyJordanWigner0123Term_
+- summary: Alkalmazza az idő-Evolution műveletet egy, a PQRS által leírt kifejezéssel `GeneratorIndex` .
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._ApplyJordanWignerClusterOperatorPQRSTerm
+- summary: Alkalmazza az időpontot, ha a fürt operátora nem az a `GeneratorIndex` .
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._ApplyJordanWignerClusterOperatorPQTerm
+- summary: Alkalmazza az idő-evolúciót az a által leírt PQ kifejezéssel `GeneratorIndex` .
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._ApplyJordanWignerPQTerm_
+- summary: Alkalmazza az idő-evolúciót az a által leírt PQ vagy PQQR kifejezéssel `GeneratorIndex` .
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._ApplyJordanWignerPQandPQQRTerm_
+- summary: Alkalmazza az idő-evolúciót az a által leírt Z kifejezéssel `GeneratorIndex` .
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._ApplyJordanWignerZTerm_
+- summary: Alkalmazza az időt – az evolúciót az a által leírt ZZ-kifejezéssel `GeneratorIndex` .
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._ApplyJordanWignerZZTerm_
+- summary: >-
+    A dinamikus generátort szimulálható kapuk készlete jelöli, a JordanWigner pedig kibővíthető.
+
+    További részletekért lásd a [Dynamic Generator Modeling](../libraries/data-structures#dynamical-generator-modeling) című témakört.
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._JordanWignerClusterOperatorImpl
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._JordanWignerOptimizedBlockEncodingSelect_
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._JordanWignerOptimizedBlockEncodingStatePrep
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._JordanWignerOptimizedBlockEncodingStatePrep_
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._JordanWignerSelect_
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._MergeTwoRegisters_
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._OptimizedBEXY
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._SelectZ
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._ToJordanWignerSelectInput
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._ToPauliBases
+summary: ''
+uid: Microsoft.Quantum.Chemistry.JordanWigner
+metadata:
+  ms.openlocfilehash: 909133bb6f75aa814c17ac1e54667c3599e47bf6
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: hu-HU
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92714088"
