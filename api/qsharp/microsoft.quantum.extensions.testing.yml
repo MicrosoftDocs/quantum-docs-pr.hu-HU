@@ -1,0 +1,100 @@
+### YamlMime:QSharpNamespace
+functions: []
+name: Microsoft.Quantum.Extensions.Testing
+newtypes: []
+operations:
+- summary: >+
+    > [!WARNING]
+
+    > A AssertAllZero elavult. Használja <xref:Microsoft.Quantum.Diagnostics.AssertAllZero> helyette.
+
+    >
+
+    > Használja a következőt: @"microsoft.quantum.diagnostics.assertallzero".
+
+  uid: Microsoft.Quantum.Extensions.Testing.AssertAllZero
+- summary: >+
+    > [!WARNING]
+
+    > A AssertAllZeroTol elavult. Használja <xref:Microsoft.Quantum.Diagnostics.AssertAllZeroWithinTolerance> helyette.
+
+    >
+
+    > Használja a következőt: @"microsoft.quantum.diagnostics.assertallzerowithintolerance".
+
+  uid: Microsoft.Quantum.Extensions.Testing.AssertAllZeroTol
+- summary: >+
+    > [!WARNING]
+
+    > A AssertOperationsEqualInPlace elavult. Használja <xref:Microsoft.Quantum.Diagnostics.AssertOperationsEqualInPlace> helyette.
+
+    >
+
+    > Használja a következőt: @"microsoft.quantum.diagnostics.assertoperationsequalinplace".
+
+    > Vegye figyelembe, hogy a művelet argumentumai sorrendje megváltozott.
+
+  uid: Microsoft.Quantum.Extensions.Testing.AssertOperationsEqualInPlace
+- summary: >+
+    > [!WARNING]
+
+    > A AssertOperationsEqualInPlaceCompBasis elavult. Használja <xref:Microsoft.Quantum.Diagnostics.AssertOperationsEqualInPlaceCompBasis> helyette.
+
+    >
+
+    > Használja a következőt: @"microsoft.quantum.diagnostics.assertoperationsequalinplaceCompBasis".
+
+    > Vegye figyelembe, hogy a művelet argumentumai sorrendje megváltozott.
+
+  uid: Microsoft.Quantum.Extensions.Testing.AssertOperationsEqualInPlaceCompBasis
+- summary: >+
+    > [!WARNING]
+
+    > A AssertOperationsEqualReferenced elavult. Használja <xref:Microsoft.Quantum.Diagnostics.AssertOperationsEqualReferenced> helyette.
+
+    >
+
+    > Használja a következőt: @"microsoft.quantum.diagnostics.assertoperationsequalreferenced".
+
+    > Vegye figyelembe, hogy a művelet argumentumai sorrendje megváltozott.
+
+  uid: Microsoft.Quantum.Extensions.Testing.AssertOperationsEqualReferenced
+- summary: >+
+    > [!WARNING]
+
+    > A AssertQubit elavult. Használja <xref:Microsoft.Quantum.Diagnostics.AssertQubit> helyette.
+
+    >
+
+    > Használja a következőt: @"microsoft.quantum.diagnostics.assertqubit".
+
+  uid: Microsoft.Quantum.Extensions.Testing.AssertQubit
+- summary: >+
+    > [!WARNING]
+
+    > A AssertQubitState elavult. Használja <xref:Microsoft.Quantum.Diagnostics.AssertQubitIsInStateWithinTolerance> helyette.
+
+    >
+
+    > Használja a következőt: @"microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance".
+
+  uid: Microsoft.Quantum.Extensions.Testing.AssertQubitState
+- summary: >+
+    > [!WARNING]
+
+    > A AssertQubitTol elavult. Használja <xref:Microsoft.Quantum.Diagnostics.AssertQubitWithinTolerance> helyette.
+
+    >
+
+    > Használja a következőt: @"microsoft.quantum.diagnostics.assertqubitwithintolerance".
+
+  uid: Microsoft.Quantum.Extensions.Testing.AssertQubitTol
+summary: ''
+uid: Microsoft.Quantum.Extensions.Testing
+metadata:
+  ms.openlocfilehash: 717665e821b4e56b01664e6e0ed940cacd2a485c
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: hu-HU
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92712100"
