@@ -1,0 +1,178 @@
+### YamlMime:QSharpNamespace
+functions:
+- summary: Két `GeneratorSystem` s hozzáadásával létrehoz egy újat `GeneratorSystem` .
+  uid: Microsoft.Quantum.Simulation.AddGeneratorSystems
+- summary: >-
+    Egy fontos operátort kódol `BlockEncoding` .
+
+    Ez létrehoz egy `BlockEncoding` egységes $U = P\cdot V\cdot P ^ \dagger $-t, amely kódol egy operátort $H = \ sum_ {j} | \ alpha_j | U_j $, amely a unitaries lineáris kombinációja. A $P $ általában egy olyan állapot-előkészítés, amely egységes, például $P \ket {0} \_ a = \ sum_j \sqrt{\ alpha_j/ \| \vec\alpha \| \_ 2} \ket{j} \_ a $, és $V = \ sum_ {j} \ket{j}\bra{j} \_ a\otimes U_j $.
+  uid: Microsoft.Quantum.Simulation.BlockEncodingByLCU
+- summary: >-
+    Egy fontos operátort kódol `BlockEncodingReflection` .
+
+    Ez létrehoz egy `BlockEncodingReflection` egységes $U = P\cdot V\cdot P ^ \dagger $-t, amely kódol egy operátort $H = \ sum_ {j} | \ alpha_j | U_j $, amely a unitaries lineáris kombinációja. A $P $ általában egy olyan állapot-előkészítés, amely egy olyan egységes előkészítő, amely $P \ket {0} \_ a \ sum_j \sqrt{\ alpha_j/ \| \vec\alpha \| \_ 2} \ket{j} \_ a $, és $V = \ sum_ {j} \ket{j}\bra{j} \_ a\otimes U_j $.
+  uid: Microsoft.Quantum.Simulation.BlockEncodingReflectionByLCU
+- summary: >-
+    Az a- `BlockEncoding` t megfelelőre konvertálja `BLockEncodingReflection` .
+
+    Ez olyan `BlockEncoding` egységes $U $-t kap, amely egyes operátorok $H $ kamatot kódol, $U "$-re konvertálja `BlockEncodingReflection` , amely ugyanazt a kezelőt kódolja, de a $U" ^ \Dagger = U "$-t is kielégíti. Ez növeli a $U $ kiegészítő regisztrációjának méretét egy qubit.
+  uid: Microsoft.Quantum.Simulation.BlockEncodingToReflection
+- summary: A függvény beolvasása a `GeneratorIndex` alkalmazásban `GeneratorSystem` .
+  uid: Microsoft.Quantum.Simulation.GetGeneratorSystemFunction
+- summary: Lekéri a használati feltételek számát `GeneratorSystem` .
+  uid: Microsoft.Quantum.Simulation.GetGeneratorSystemNTerms
+- summary: Egy, a nulla Hamilton konzisztens generátor-indexet ad vissza, `H = 0` amely az Identity Evolution műveletnek felel meg.
+  uid: Microsoft.Quantum.Simulation.IdentityGeneratorIndex
+- summary: A nulla Hamilton konzisztens Generátorrendszer visszaadása `H = 0` , amely megfelel az Identity Evolution műveletnek.
+  uid: Microsoft.Quantum.Simulation.IdentityGeneratorSystem
+- summary: Egy időfüggő generátort ad vissza, amely konzisztens a Hamilton `H(s) = 0` .
+  uid: Microsoft.Quantum.Simulation.IdentityTimeDependentGeneratorSystem
+- summary: A megvalósításában használatos `PauliBlockEncoding`
+  uid: Microsoft.Quantum.Simulation.IdxToCoeff
+- summary: A megvalósításában használatos `PauliBlockEncoding`
+  uid: Microsoft.Quantum.Simulation.IdxToUnitary
+- summary: Egész szám átalakítása egyetlen qubit Pauli-operátorra.
+  uid: Microsoft.Quantum.Simulation.IntToPauli
+- summary: A `TimeDependentGeneratorSystem` két s közötti lineáris interpolációt jelképező értéket adja vissza `GeneratorSystem` .
+  uid: Microsoft.Quantum.Simulation.InterpolateGeneratorSystems
+- summary: A lineárisan interpolált két `GeneratorSystems` érték között egy `s` 0 és 1 közötti Schedule paraméter (beleértve a (z) függvényt).
+  uid: Microsoft.Quantum.Simulation.InterpolateGeneratorSystemsImpl
+- summary: A két generátor közötti, egységes ütemtervtel rendelkező és egy olyan műveletet ad vissza, amely a szimulált evolúciót alkalmazza az eredményül kapott időfüggő generátorban egy qubit-regiszterbe.
+  uid: Microsoft.Quantum.Simulation.InterpolatedEvolution
+- summary: Egész számok tömbjét alakítja át egy qubit Pauli-operátorok tömbje számára.
+  uid: Microsoft.Quantum.Simulation.IntsToPaulis
+- summary: A együtthatót szorozza meg a-ben `GeneratorIndex` .
+  uid: Microsoft.Quantum.Simulation.MultiplyGeneratorIndex
+- summary: Az a összes kifejezés együtthatójának szorzata `GeneratorSystem` .
+  uid: Microsoft.Quantum.Simulation.MultiplyGeneratorSystem
+- summary: >-
+    Létrehoz egy blokk-Encoding egységes Hamilton.
+
+    A Hamilton $H = \ sum_ {j} \ alpha_j P_j $ kifejezést $P _j $ értékkel rendelkező, az összes valós hatékonyságú $ \ alpha_j $ nevű összeg írja le.
+  uid: Microsoft.Quantum.Simulation.PauliBlockEncoding
+- summary: Kibontja az a által leírt Pauli-kifejezés hatékonyságát `GeneratorIndex` .
+  uid: Microsoft.Quantum.Simulation.PauliCoefficientFromGenIdx
+- summary: Szimulálható kapuk készletének és a Pauli-alapú bővítésnek a dinamikus generátort jelöli.
+  uid: Microsoft.Quantum.Simulation.PauliEvolutionFunction
+- summary: Szimulálható kapuk készletének és a Pauli-alapú bővítésnek a dinamikus generátort jelöli.
+  uid: Microsoft.Quantum.Simulation.PauliEvolutionSet
+- summary: A megvalósításában használatos `PauliBlockEncoding`
+  uid: Microsoft.Quantum.Simulation.PauliLCUUnitary
+- summary: Kibontja a Pauli-karakterláncot és annak qubit-indexeit egy, a által leírt Pauli-kifejezésből `GeneratorIndex` .
+  uid: Microsoft.Quantum.Simulation.PauliStringFromGenIdx
+- summary: A blokk kódolású tükröződést egy Quantum walkre konvertálja.
+  uid: Microsoft.Quantum.Simulation.QuantumWalkByQubitization
+- summary: Több `GeneratorSystem` s hozzáadásával új GeneratorSystem hozhat létre.
+  uid: Microsoft.Quantum.Simulation.SumGeneratorSystems
+- summary: '`TimeDependentSimulationAlgorithm` a függvény, amely egy Trotter – Suzuki dekompozíciót használ egy olyan egységes operátor közelítéséhez, amely megoldja az időfüggő Schrödinger-egyenletet.'
+  uid: Microsoft.Quantum.Simulation.TimeDependentTrotterSimulationAlgorithm
+- summary: '`SimulationAlgorithm` a függvény, amely egy Trotter – Suzuki-lebomlást használ az idő-Evolution operátor _exp (-iHt)_ megközelítő értékének eléréséhez.'
+  uid: Microsoft.Quantum.Simulation.TrotterSimulationAlgorithm
+- summary: 'A `EvolutionGenerator` Trotter – Suzuki dekompozíció használatával egyetlen időpontot valósít meg a következő témakörben ismertetett módon: Evolution.'
+  uid: Microsoft.Quantum.Simulation.TrotterStep
+- summary: Két `GeneratorSystem` s hozzáadásával létrehoz egy újat `GeneratorSystem` .
+  uid: Microsoft.Quantum.Simulation._AddGeneratorSystems
+- summary: A Hamilton konzisztens Generátorrendszer visszaadása `H(s) = 0` , ahol a egy `s` Schedule paraméter.
+  uid: Microsoft.Quantum.Simulation._IdentityTimeDependentGeneratorSystem
+- summary: Az a összes kifejezés együtthatójának szorzata `GeneratorSystem` .
+  uid: Microsoft.Quantum.Simulation._MultiplyGeneratorSystem
+- summary: >-
+    Létrehoz egy blokk-Encoding egységes Hamilton.
+
+    A Hamilton $H = \ sum_ {j} \ alpha_j P_j $ kifejezést $P _j $ értékkel rendelkező, az összes valós hatékonyságú $ \ alpha_j $ nevű összeg írja le.
+  uid: Microsoft.Quantum.Simulation._PauliBlockEncoding
+name: Microsoft.Quantum.Simulation
+newtypes:
+- summary: >-
+    Olyan egységes, amelyben a kamatot egy tetszőleges operátor kódolja a bal felső blokkban.
+
+    Ez az egy `BlockEncoding` egységes $U $ $, ahol a rendszerregisztrációt végző tetszőleges operátor $H $ értékű, a `s` \ket _a $ kiegészítő állapotnak megfelelő bal felső blokkban kódolva {0} . Ez a $ $ \begin{align} (\bra {0} _a \otimes I_s) U (\ket {0} _a \otimes I_s) = H \end{align} $ $.
+  uid: Microsoft.Quantum.Simulation.BlockEncoding
+- summary: '`BlockEncoding`Azt is jelenti, hogy ez egy reflexió.'
+  uid: Microsoft.Quantum.Simulation.BlockEncodingReflection
+- summary: >-
+    A dinamikus generátort szimulálható kapuk készlete jelöli meg, és ennek az alapja a bővítése.
+
+    A feltételek számának utolsó paramétere.
+  uid: Microsoft.Quantum.Simulation.EvolutionGenerator
+- summary: >-
+    Egy időfüggő dinamikus generátort jelöl.
+
+    A `Double` paraméter a $ [0, 1] $ értékben lévő ütemterv.
+  uid: Microsoft.Quantum.Simulation.EvolutionSchedule
+- summary: >-
+    Egy olyan kaput jelöl, amely könnyen megvalósítható és használható a szimulációs algoritmusok megvalósításához.
+
+    A készletben lévő elemeket az a indexeli  <xref:microsoft.quantum.simulation.generatorindex> , és az egyes készleteket a-tól származó függvények írják le `GeneratorIndex`  <xref:microsoft.quantum.simulation.evolutionunitary> , amelyek az időt jelképező valós számmal rendelkező műveletek.
+  uid: Microsoft.Quantum.Simulation.EvolutionSet
+- summary: >-
+    Egy egységes idő-Evolution operátort jelöl.
+
+    Az első paraméter a Time-Evolution (időtartam), a második paraméter pedig a qubit-regisztráció, amelyet az egységes egység végez.
+  uid: Microsoft.Quantum.Simulation.EvolutionUnitary
+- summary: >-
+    Egyetlen primitív kifejezést képvisel az összes dinamikus generátor készletében, például a Hermitian operátorok esetében, amelyekhez az adott generátor által adott idő-evolúciós folyamaton alapuló Térkép áll rendelkezésre `EvolutionSet` .
+
+    Az első elem (int [], Double []) indexeli ezt az egyszeri kifejezést – például a 0,5-as együtthatóval rendelkező XXY-karakterláncot ([1, 1, 2], [0,5]) indexeli. Azt is megteheti, hogy egy folytonos változó (például X cos φ + Y Sin φ) által Hamiltonians paramétert a (z) ([], [φ]) által reprezentált példány lehet. A második elem indexeli azt az alrendszert, amelyen a létrehozó működik.
+  uid: Microsoft.Quantum.Simulation.GeneratorIndex
+- summary: >-
+    Az es gyűjteményét jelöli `GeneratorIndex` .
+
+    Ezt a gyűjteményt egy Egyindexes egész szám használatával ismétli meg, és a gyűjtemény mérete feltételezhető, hogy ismert.
+  uid: Microsoft.Quantum.Simulation.GeneratorSystem
+- summary: >-
+    Időfüggetlen szimulációs algoritmust jelöl.
+
+    Egy idő-független szimulációs technika egy adott <xref:microsoft.quantum.simulation.evolutiongenerator> időintervallumra alakítja át az egységes idő alakulását.
+  uid: Microsoft.Quantum.Simulation.SimulationAlgorithm
+- summary: >-
+    Egy `BlockEncoding` óra-regiszter által vezérelt egy.
+
+    Ez azt az érték, amely egy `TimeDependentBlockEncoding` egységes $U $ \ket{k} d $ értékkel van szabályozva az _óra-regisztrációban `d` úgy, hogy egy tetszőleges operátor $H _K $ értékű, a rendszerregisztrációt elvégző személy `s` a bal felső blokkban van kódolva, amely a \ket $ értékű kiegészítő állapotnak felel meg {0} _. Ez a $ $ \begin{align} (\bra {0} \_ a\otimes i_ {DS}) U (\ket {0} \_ a\otimes I_ {DS}) = \ sum_ {k} \ket{k}\bra{k} \_ d\otimes H_k. \end{align} $ $.
+  uid: Microsoft.Quantum.Simulation.TimeDependentBlockEncoding
+- summary: Egy időfüggő dinamikus generátort jelöl, amely az idő és a dinamikus generátor értékének a függvénye.
+  uid: Microsoft.Quantum.Simulation.TimeDependentGeneratorSystem
+- summary: >-
+    Egy időfüggő szimulációs algoritmust jelöl.
+
+    Az időfüggő szimulációs technika egy adott <xref:microsoft.quantum.simulation.evolutionschedule> időintervallumra alakítja át az egységes idő-evolúciót.
+  uid: Microsoft.Quantum.Simulation.TimeDependentSimulationAlgorithm
+- summary: Egy egységes operátor alatt álló evolúciót jelöl.
+  uid: Microsoft.Quantum.Simulation.Unitary
+operations:
+- summary: Végrehajtja az állapot-előkészítést a `statePrepUnitary` bemeneti állapotra való alkalmazásával, majd az adiabatic állapot-előkészítést a használatával `adiabaticUnitary` , és végül a fázis becslésével az `qpeUnitary` eredményül kapott állapottal kapcsolatban `phaseEstAlgorithm` .
+  uid: Microsoft.Quantum.Simulation.AdiabaticStateEnergyUnitary
+- summary: A implementálása `BlockEncodingToReflection` .
+  uid: Microsoft.Quantum.Simulation.ApplyBlockEncodingAsReflection
+- summary: A implementálása `BlockEncodingByLCU` .
+  uid: Microsoft.Quantum.Simulation.ApplyBlockEncodingByLCU
+- summary: 'A ((LittleEndian, Qubit []) => () a következő átalakítása: BlockEncoding'
+  uid: Microsoft.Quantum.Simulation.ApplyBlockEncodingFromBEandQubit
+- summary: A megvalósításában használatos `PauliBlockEncoding`
+  uid: Microsoft.Quantum.Simulation.ApplyPauliLCUUnitary
+- summary: A implementálása `Qubitization` .
+  uid: Microsoft.Quantum.Simulation.ApplyQuantumWalkByQubitization
+- summary: Végrehajtja az állapot-előkészítést, ha a (z) alkalmazással `statePrepUnitary` automatikusan lefoglalt bemeneti állapotú fázis-becslést alkalmaz `qpeUnitary` az eredményül kapott állapotra vonatkozóan `phaseEstAlgorithm` .
+  uid: Microsoft.Quantum.Simulation.EstimateEnergy
+- summary: Végrehajtja az állapot-előkészítést egy `statePrepUnitary` automatikusan lefoglalt bemeneti állapotra való alkalmazásával, majd az adiabatic állapot-előkészítést a használatával `adiabaticUnitary` , és végül a fázis becslésével, amely `qpeUnitary` az eredményül kapott állapotra vonatkozik a használatával `phaseEstAlgorithm` .
+  uid: Microsoft.Quantum.Simulation.EstimateEnergyWithAdiabaticEvolution
+- summary: >-
+    Szimulálható kapuk készletének és a Pauli-alapú bővítésnek a dinamikus generátort jelöli.
+
+    További részletekért lásd a [Dynamic Generator Modeling](/quantum/libraries/data-structures#dynamical-generator-modeling) című témakört.
+  uid: Microsoft.Quantum.Simulation.PauliEvolutionImpl
+- summary: Több Trotter lépések megvalósítása egy olyan egységes operátor megközelítő megoldásához, amely megoldja az időfüggő Schrödinger-egyenletet.
+  uid: Microsoft.Quantum.Simulation.TimeDependentTrotterSimulationAlgorithmImpl
+- summary: Ismétlődő hívásokat kezdeményez `TrotterStep` a Time-Evolution operátor exp ( _-iHt_ ) eléréséhez.
+  uid: Microsoft.Quantum.Simulation.TrotterSimulationAlgorithmImpl
+- summary: Az a-ben foglalt kifejezéssel valósítja meg az időbeli alakulást `GeneratorSystem` .
+  uid: Microsoft.Quantum.Simulation.TrotterStepImpl
+summary: Ez a névtér olyan függvényeket és műveleteket tartalmaz, amelyek koherens módon szimulálják a kvantum-rendszerek dinamikáját.
+uid: Microsoft.Quantum.Simulation
+metadata:
+  ms.openlocfilehash: dd1c6fe3baab8788047020bbe3d5dbe2888dec45
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: hu-HU
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92725782"
