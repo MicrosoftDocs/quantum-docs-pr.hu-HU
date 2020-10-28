@@ -87,7 +87,7 @@ Szerző: bradben UID: Microsoft. Quantum. Concepts. Pauli MS. Author: v-benbra M
 
 Az előző megbeszélésekben a számítási szempontok alapján történik a mérés.
 Valójában más gyakori mérések történnek a kvantum-számítástechnikaban, amelyek egy adott szempontból megfelelőek a számítási szempontok alapján.
-A használata során Q# a leggyakrabban a legelterjedtebb típusú mérések lesznek a *Pauli-mérések*, amelyek általánosítják a számítási alapjait, hogy más alapértékekre, valamint a különböző qubits közötti paritásos méréseket is tartalmazzák.
+A használata során Q# a leggyakrabban a legelterjedtebb típusú mérések lesznek a *Pauli-mérések* , amelyek általánosítják a számítási alapjait, hogy más alapértékekre, valamint a különböző qubits közötti paritásos méréseket is tartalmazzák.
 Ilyen esetekben gyakori, hogy megbeszéljük a Pauli-operátorok mérését, általában egy operátort, például az $ x, Y, z $ vagy $ z \otimes z, x \otimes x, x \otimes Y $ és így tovább.
 
 > [!TIP]
@@ -128,7 +128,7 @@ Ezek a mérések az alábbiakban láthatók a kényelem érdekében.
 |$ $ X | $H               $                    |
 |$ $ Y | $HS ^               {\dagger}$         |
 
-Ez a nyelv használata esetén a "Y mérték $ $ " egyenértékű a $ HS ^ alkalmazásával, \dagger $ majd a számítási folyamat alapján történő méréssel, ahol a [`S`](xref:microsoft.quantum.intrinsic.s) belső kvantum-művelet néha "Phase Gate" néven is ismert, és az egységes mátrix szimulálható.
+Ez a nyelv használata esetén a "Y mérték $ $ " egyenértékű a $ HS ^ alkalmazásával, \dagger $ majd a számítási folyamat alapján történő méréssel, ahol a [`S`](xref:Microsoft.Quantum.Intrinsic.S) belső kvantum-művelet néha "Phase Gate" néven is ismert, és az egységes mátrix szimulálható.
 
 $$
 \begin{align}
@@ -194,7 +194,7 @@ Az qubit esethez hasonlóan mind a kétqubit Pauli-mérések $ u ^ (Z) u-vel ír
 >         0 & 1 & 0 & 0 \\\\
 >0 & 0 & 0 & 1 > \end { mátrix } \right ) >     \end{align}
 > $$
-> a belső művelet szimulálására szolgál [`SWAP`](xref:microsoft.quantum.intrinsic) .
+> a belső művelet szimulálására szolgál [`SWAP`](xref:Microsoft.Quantum.Intrinsic) .
 
 |Pauli-mérés –     | egységes átalakítás  |
 |----------------------|------------------------|
@@ -214,7 +214,7 @@ Az qubit esethez hasonlóan mind a kétqubit Pauli-mérések $ u ^ (Z) u-vel ír
 |$X \otimes Y $ | $ \operatorname { cnem } \_ { 10 } (H \otimes HS ^ \dagger ) $|
 |$Y \otimes Y $ | $ \operatorname { cnem } \_ { 10 } (hs ^ \dagger \otimes HS ^ \dagger ) $|
 
-Itt a [`CNOT`](xref:microsoft.quantum.intrinsic.cnot) művelet a következő okból jelenik meg.
+Itt a [`CNOT`](xref:Microsoft.Quantum.Intrinsic.CNOT) művelet a következő okból jelenik meg.
 A fenti indoklásnak megfelelően minden olyan Pauli-mérés, amely nem tartalmazza a $ \boldone $ mátrixot, egy egységes, z z-ig egyenlő $ \otimes $ .
 A z z $ eigenvalues \otimes csak az $ egyes számítási alapú vektorokból álló qubits paritása függ, és a vezérelt nem műveletek szolgálnak a paritás kiszámításához és az első bites tároláshoz.
 Ezután az első bit mérése után helyreállítjuk az eredményül kapott fél terület identitását, amely egyenértékű a Pauli-operátor mérésével.
@@ -240,16 +240,16 @@ A-ben az Q# ilyen mérések a j értéket adják vissza, $ $ Ha a mérés eredm�
 Mivel a Pauli-mérések beépített funkciója hasznos, Q# mert az ilyen operátorok méréséhez hosszú láncú vezérelt, nem kapuk és átalakítások szükségesek, hogy leírják a diagonalizing U Gate, amely a művelet kiépítéséhez $ $ szükséges a $ Z és a $ $ \id $ .
 Az előre definiált mérések egyikének megadásához nem kell aggódnia, hogy hogyan alakíthatja át az adatokat, hogy a számítási alap a szükséges információkat tartalmazza.
 Q# automatikusan kezeli az összes szükséges átalakítást.
-További információ: [`Measure`](xref:microsoft.quantum.intrinsic.measure) és [`MeasurePaulis`](xref:microsoft.quantum.measurement.measurepaulis) műveletek.
+További információ: [`Measure`](xref:Microsoft.Quantum.Intrinsic.Measure) és [`MeasurePaulis`](xref:Microsoft.Quantum.Measurement.MeasurePaulis) műveletek.
 
-## <a name="the-no-cloning-theorem"></a>A klónozás nélküli tétel
+## <a name="the-no-cloning-theorem"></a>A No-Cloning tétel
 
 A Quantum információi hatékonyak.
 Lehetővé teszi, hogy elképesztően olyan dolgokat végezzenek, mint a faktorok száma exponenciálisan, mint a legismertebb klasszikus algoritmusok, vagy hatékonyan szimulálja a korrelált elektron-rendszereket, amelyekkel a klasszikusan exponenciálisan kell szimulálni a pontos műveleteket.
 A kvantum-számítástechnika hatékonysága azonban korlátozott.
-Az egyik ilyen korlátozást a *nem klónozási tétel*adja meg.
+Az egyik ilyen korlátozást a *nem klónozási tétel* adja meg.
 
-A nem klónozási tétel találó elnevezésű.
+A No-Cloning tétel találó nevű.
 Az általános kvantum-állapotok egy kvantum-számítógép általi klónozását nem teszi lehetővé.
 A tétel bizonyítása rendkívül egyszerű.
 Habár a nem klónozási tétel teljes bizonyítéka egy kicsit túl technikai a vitánk számára, a további kiegészítő qubits nem a hatókörön belül van (a kiegészítő qubits a számítás során qubits használják, és könnyen használhatók és kezelhetők a alkalmazásban Q# , lásd a [kölcsönzött qubits](xref:microsoft.quantum.guide.qubits#borrowed-qubits)).
@@ -273,15 +273,15 @@ $$
 \end{align}
 $$
 
-Ez biztosítja az alapvető intuíciót a nem klónozási tétel mögött: minden olyan eszközön, amely egy ismeretlen kvantum-állapotot másol, a hibákat legalább néhány, az általa használt állapotból kell kiváltani.
+Ez biztosítja a No-Cloningi tétel mögötti alapvető intuíciót: minden olyan eszközön, amely ismeretlen kvantum-állapotot másol, hibákat kell kimutatnia legalább néhány, az általa másolt államban.
 Míg a legfontosabb feltételezés, hogy a Cloner lineárisan működik a bemeneti állapoton, megsértheti a kiegészítő qubits hozzáadását és mérését, az ilyen interakciók pedig a mérési statisztikán keresztül a rendszerre vonatkozó információkat is felhasználhatják, és meggátolják az ilyen esetekben történő pontos klónozást is.
-A nem klónozási tétel részletesebb igazolását a [További tudnivalókat](xref:microsoft.quantum.more-information)ismertető témakörben talál.
+A No-Cloning tétel részletesebb igazolását lásd: [További információ](xref:microsoft.quantum.more-information).
 
-A nem klónozási tétel fontos a kvantum-számítástechnika minőségi megismerése érdekében, mert ha a kvantum-állapotok költséges klónozását, akkor közel varázslatos képességet kap a kvantum-állapotok megismeréséhez.
+A No-Cloningi tétel fontos a kvantum-számítástechnika minőségi megismerése érdekében, mert ha a kvantum-állapotok költséges klónozását is lehetővé teszi, akkor közel varázslatos képességet kap a kvantum-állapotok megismeréséhez.
 Valójában megsértheti a Heisenberg hencegő bizonytalansági elvét.
 Azt is megteheti, hogy az optimális Cloner használatával egyetlen mintát vesz igénybe egy összetett kvantum-eloszlásból, és megtudhatja, hogy az adott disztribúcióról csak egyetlen mintából lehet tájékozódni.
 Ez olyan lenne, mint egy érme tükrözése és a fejek betartása, majd egy barátomnak szól az eredményről, amelynek a válaszát "Ah az érme eloszlásának Bernoulli kell lennie a $ p = 0.512643 \ ldots $ !"  Egy ilyen utasítás nem sensical, mert egy kis információ (a fejek végeredménye) egyszerűen nem tudja biztosítani az elosztás kódolásához szükséges több bitet a jelentős előzetes információk nélkül.
 Hasonlóképpen, az előzetes információk nélkül nem tudjuk tökéletesen klónozott állapotba állítani a kvantum-állapotot $ $ .
 
 Az információk nem ingyenesek a Quantum Computing szolgáltatásban.
-A mért qubit egyetlen kis mennyiségű információt biztosítanak, a nem klónozási tétel pedig azt mutatja, hogy nincs olyan hátsó ajtó, amely felhasználható a rendszerről szerzett információk és a meghívott zavarok közötti alapvető kompromisszum megszerzéséhez.
+A mért qubit egyetlen kis mennyiségű információt biztosítanak, és a No-Cloning-tétel azt mutatja, hogy nincs olyan hátsó ajtó, amely kihasználható a rendszeren szerzett információk és a meghívott zavarok közötti alapvető kompromisszum körül.
