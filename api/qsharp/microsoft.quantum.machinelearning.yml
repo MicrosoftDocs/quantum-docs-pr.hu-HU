@@ -1,0 +1,116 @@
+### YamlMime:QSharpNamespace
+functions:
+- summary: Az egyes együtthatók és a tűréshatárok halmaza egy állapot-előkészítési műveletet ad vissza, amely az egyes együtthatókat a számítási állapot megfelelő amplitúdójának megfelelően, a megadott tűréshatárig állítja elő.
+  uid: Microsoft.Quantum.MachineLearning.ApproximateInputEncoder
+- summary: Egy vagy több szabályozott rotációs réteg esetében egy olyan réteget ad vissza, amelynek a modell-paraméter indexe úgy lett áthelyezve, hogy a különböző rétegek paraméterei eltérő modell-paraméterekkel legyenek megadva.
+  uid: Microsoft.Quantum.MachineLearning.CombinedStructure
+- summary: Egy, az adott tengelyen lévő, jól vezérelt rotációs tömböt ad vissza, amelyet ciklikusan rendeznek a qubits-jegyzékben, és különböző modell-paraméterekkel rendelkeznek.
+  uid: Microsoft.Quantum.MachineLearning.CyclicEntanglingLayer
+- summary: Az osztályozók betanítási beállításainak alapértelmezett készletét adja vissza.
+  uid: Microsoft.Quantum.MachineLearning.DefaultTrainingOptions
+- summary: Egy adott szolgáltatás vektorának kódolásához szükséges qubits számát adja vissza.
+  uid: Microsoft.Quantum.MachineLearning.FeatureRegisterSize
+- summary: A besorolási valószínűség és a torzítás miatt a rendszer visszaadja az adott valószínűség alapján kikövetkeztetett címkét.
+  uid: Microsoft.Quantum.MachineLearning.InferredLabel
+- summary: A besorolási valószínűségek és a torzítások tömbje az egyes valószínűségek alapján kikövetkeztetett címkét adja vissza.
+  uid: Microsoft.Quantum.MachineLearning.InferredLabels
+- summary: Az együtthatók és a tűréshatárok halmaza egy állapot-előkészítési műveletet ad vissza, amely az egyes együtthatókat a számítási állapot megfelelő amplitúdójának megfelelően készíti elő.
+  uid: Microsoft.Quantum.MachineLearning.InputEncoder
+- summary: Egy olyan tömböt ad vissza, amely egy adott tengelyen nem vezérelt (Single-qubit) rotációt eredményez, és a regiszterben lévő minden egyes qubit egy rotációs paraméterrel van ellátva.
+  uid: Microsoft.Quantum.MachineLearning.LocalRotationsLayer
+- summary: A kikövetkeztetett címkék és a megfelelő címkék halmaza miatt a rendszer az indexeket adja vissza, amelyekben az egyes címkék eltérőek.
+  uid: Microsoft.Quantum.MachineLearning.Misclassifications
+- summary: A kikövetkeztetett címkék és a megfelelő címkék egy halmaza adott számú indexet ad vissza, amelyekben az egyes címkék eltérőek.
+  uid: Microsoft.Quantum.MachineLearning.NMisclassifications
+- summary: Egy adott szekvenciális osztályozó alkalmazásához szükséges qubits számát adja vissza.
+  uid: Microsoft.Quantum.MachineLearning.NQubitsRequired
+- summary: Egy qubit-forgás tömbjét adja vissza egy adott tengelyen, a paramétert pedig a különböző modell paraméterekkel együtt.
+  uid: Microsoft.Quantum.MachineLearning.PartialRotationsLayer
+- summary: Egy adott tömböt használ a megadott ütemterv alapján.
+  uid: Microsoft.Quantum.MachineLearning.Sampled
+- summary: Egy adott mintavételi ütemterv elemeinek számát adja vissza.
+  uid: Microsoft.Quantum.MachineLearning.ScheduleLength
+- summary: ''
+  uid: Microsoft.Quantum.MachineLearning._AllNearlyEqualD
+- summary: ''
+  uid: Microsoft.Quantum.MachineLearning._CallFlipped
+- summary: ''
+  uid: Microsoft.Quantum.MachineLearning._CanApplyTwoQubitCase
+- summary: ''
+  uid: Microsoft.Quantum.MachineLearning._EncodeSample
+- summary: ''
+  uid: Microsoft.Quantum.MachineLearning._Features
+- summary: ''
+  uid: Microsoft.Quantum.MachineLearning._Flipped
+- summary: ''
+  uid: Microsoft.Quantum.MachineLearning._Label
+- summary: ''
+  uid: Microsoft.Quantum.MachineLearning._MisclassificationRate
+- summary: ''
+  uid: Microsoft.Quantum.MachineLearning._NegativeLocations
+- summary: ''
+  uid: Microsoft.Quantum.MachineLearning._TailMeasurement
+- summary: ''
+  uid: Microsoft.Quantum.MachineLearning._UncontrolledSpanSequence
+- summary: ''
+  uid: Microsoft.Quantum.MachineLearning._Unnegate
+- summary: Egy olyan torzítási értéket ad vissza, amely majdnem minimális téves besorolási pontszámot eredményez.
+  uid: Microsoft.Quantum.MachineLearning._UpdatedBias
+name: Microsoft.Quantum.MachineLearning
+newtypes:
+- summary: Egy vezérelt rotációt mutat be a cél és a vezérlési indexek, a rotációs tengely és az index között a modell paraméterének vektora alapján.
+  uid: Microsoft.Quantum.MachineLearning.ControlledRotation
+- summary: Egy minta, amely egy olyan osztállyal van megjelölve, amelyhez ez a minta tartozik.
+  uid: Microsoft.Quantum.MachineLearning.LabeledSample
+- summary: A kötegek mintából való rajzolásának ütemterve.
+  uid: Microsoft.Quantum.MachineLearning.SamplingSchedule
+- summary: A paraméteres és vezérelt Forgások sorozatából álló Quantum osztályozó modellt ismerteti, amely elforgatási szögek hozzárendelését, valamint a modell által felismert két osztály közötti torzítást tartalmaz.
+  uid: Microsoft.Quantum.MachineLearning.SequentialModel
+- summary: Egy olyan műveletet ismertet, amely egy adott bemenetet készít elő egy szekvenciális osztályozó számára.
+  uid: Microsoft.Quantum.MachineLearning.StateGenerator
+- summary: A kvantum-osztályozók betanításakor használandó lehetőségek gyűjteménye.
+  uid: Microsoft.Quantum.MachineLearning.TrainingOptions
+- summary: Az eredmények egy adott minta alapján osztályozták a besorolást.
+  uid: Microsoft.Quantum.MachineLearning.ValidationResults
+operations:
+- summary: Egy szekvenciális osztályozó struktúrája és paraméterezés miatt az osztályozó a qubits egy regiszterére vonatkozik.
+  uid: Microsoft.Quantum.MachineLearning.ApplySequentialClassifier
+- summary: Egy minta és egy szekvenciális osztályozó alapján a minták besorolási valószínűségét az egyes mintákon az osztályozó kimenetének ismételt mérésével becsüli meg.
+  uid: Microsoft.Quantum.MachineLearning.EstimateClassificationProbabilities
+- summary: Egy minta és egy szekvenciális osztályozó alapján a rendszer az adott mintában lévő osztályozó kimenetének ismételt mérésével megbecsüli a minta besorolási valószínűségét.
+  uid: Microsoft.Quantum.MachineLearning.EstimateClassificationProbability
+- summary: Egy adott modellen belül egy szekvenciális osztályozó, egy adott kódolt bemenet esetében pedig a betanítási átmenetet becsüli meg.
+  uid: Microsoft.Quantum.MachineLearning.EstimateGradient
+- summary: Egy szekvenciális osztályozó szerkezete miatt az osztályozó egy adott címkézett betanítási készleten van.
+  uid: Microsoft.Quantum.MachineLearning.TrainSequentialClassifier
+- summary: Egy szekvenciális osztályozó szerkezete miatt az osztályozó egy adott megcímkézett betanítási készleten, egy adott modelltől indul.
+  uid: Microsoft.Quantum.MachineLearning.TrainSequentialClassifierAtModel
+- summary: Egy adott szekvenciális besorolást érvényesít az előre jelzett minták adott készletén.
+  uid: Microsoft.Quantum.MachineLearning.ValidateSequentialClassifier
+- summary: ''
+  uid: Microsoft.Quantum.MachineLearning._ApplyLEOperationToRawRegister
+- summary: ''
+  uid: Microsoft.Quantum.MachineLearning._ApplyTwoQubitCase
+- summary: ''
+  uid: Microsoft.Quantum.MachineLearning._EstimateDerivativeWithParameterShift
+- summary: ''
+  uid: Microsoft.Quantum.MachineLearning._PrepareClassification
+- summary: Véletlenszerűen átméretezi a bemenetet egy adott tényező növekedésével vagy zsugorodásával.
+  uid: Microsoft.Quantum.MachineLearning._RandomlyRescale
+- summary: ''
+  uid: Microsoft.Quantum.MachineLearning._ReflectAboutNegativeCoefficients
+- summary: Hajtson végre egy időpontot szekvenciális osztályozó képzésen az adatmintaok egy részhalmazán.
+  uid: Microsoft.Quantum.MachineLearning._RunSingleTrainingEpoch
+- summary: egyetlen paraméter frissítését kísérli meg a mini batch gradiens irányában
+  uid: Microsoft.Quantum.MachineLearning._RunSingleTrainingStep
+- summary: ''
+  uid: Microsoft.Quantum.MachineLearning._TrainSequentialClassifierAtModel
+summary: Ez a névtér a Quantum Machine learning-alkalmazásokban használt funkciókat és műveleteket biztosítja.
+uid: Microsoft.Quantum.MachineLearning
+metadata:
+  ms.openlocfilehash: 3e77526589c4224697d7f47a5a6dc7e7edf45ef8
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: hu-HU
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92721036"
