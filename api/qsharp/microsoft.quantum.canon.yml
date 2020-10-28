@@ -1,0 +1,780 @@
+### YamlMime:QSharpNamespace
+functions:
+- summary: 1 értéket ad vissza, ha páros számú `index` 1s és-1, ha `index` páros számú 1s van.
+  uid: Microsoft.Quantum.Canon.Angle
+- summary: ''
+  uid: Microsoft.Quantum.Canon.AnyOutsideToleranceCP
+- summary: ''
+  uid: Microsoft.Quantum.Canon.AnyOutsideToleranceD
+- summary: Vezérlő, cél és segítő qubits elrendezése index szerint
+  uid: Microsoft.Quantum.Canon.ArrangedQubits
+- summary: >+
+    > [!WARNING]
+
+    > A BigEndianToLittleEndian elavult. Használja <xref:Microsoft.Quantum.Arithmetic.BigEndianAsLittleEndian> helyette.
+
+    >
+
+    > Használja a következőt: @"Microsoft.Quantum.Arithmetic.BigEndianAsLittleEndian".
+
+  uid: Microsoft.Quantum.Canon.BigEndianToLittleEndian
+- summary: Egy adott bemeneten alapuló műveletek tömbje egy olyan új műveletet hoz létre, amely az egyes műveleteket a sorban hajtja végre.
+  uid: Microsoft.Quantum.Canon.Bound
+- summary: Egy adott bemeneten alapuló műveletek tömbje egy olyan új műveletet hoz létre, amely az egyes műveleteket a sorban hajtja végre. A módosító `A` azt jelzi, hogy a tömbben lévő összes művelet adjointable.
+  uid: Microsoft.Quantum.Canon.BoundA
+- summary: Egy adott bemeneten alapuló műveletek tömbje egy olyan új műveletet hoz létre, amely az egyes műveleteket a sorban hajtja végre. A módosító `C` azt jelzi, hogy a tömbben lévő összes művelet ellenőrizhető.
+  uid: Microsoft.Quantum.Canon.BoundC
+- summary: Egy adott bemeneten alapuló műveletek tömbje egy olyan új műveletet hoz létre, amely az egyes műveleteket a sorban hajtja végre. A módosító `CA` azt jelzi, hogy a tömbben lévő összes művelet adjointable és ellenőrizhető.
+  uid: Microsoft.Quantum.Canon.BoundCA
+- summary: A művelet op esetében egy új műveletet ad vissza, amely az op-t alkalmazza, ha a klasszikus vezérlőelem-bit igaz. Ha `false` nem történik semmi.
+  uid: Microsoft.Quantum.Canon.CControlled
+- summary: A művelet op esetében egy új műveletet ad vissza, amely az op-t alkalmazza, ha a klasszikus vezérlőelem-bit igaz. Ha `false` nem történik semmi. A módosító `A` azt jelzi, hogy a művelet adjointable.
+  uid: Microsoft.Quantum.Canon.CControlledA
+- summary: A művelet op esetében egy új műveletet ad vissza, amely az op-t alkalmazza, ha a klasszikus vezérlőelem-bit igaz. Ha `false` nem történik semmi. A módosító `C` azt jelzi, hogy a művelet ellenőrizhető.
+  uid: Microsoft.Quantum.Canon.CControlledC
+- summary: A művelet op esetében egy új műveletet ad vissza, amely az op-t alkalmazza, ha a klasszikus vezérlőelem-bit igaz. Ha `false` nem történik semmi. A módosító `CA` azt jelzi, hogy a művelet ellenőrizhető és adjointable.
+  uid: Microsoft.Quantum.Canon.CControlledCA
+- summary: Két függvény összeállítását adja vissza.
+  uid: Microsoft.Quantum.Canon.Compose
+- summary: '`inner`Egy adott bemenethez tartozó összeállítás kimenetét adja vissza `outer` .'
+  uid: Microsoft.Quantum.Canon.ComposedOutput
+- summary: Az adott külső és belső műveletek olyan új műveletet adnak vissza, amely a belső műveletet a külső művelettel végzi.
+  uid: Microsoft.Quantum.Canon.ConjugatedBy
+- summary: Az adott külső és belső műveletek olyan új műveletet adnak vissza, amely a belső műveletet a külső művelettel végzi.
+  uid: Microsoft.Quantum.Canon.ConjugatedByA
+- summary: Az adott külső és belső műveletek olyan új műveletet adnak vissza, amely a belső műveletet a külső művelettel végzi.
+  uid: Microsoft.Quantum.Canon.ConjugatedByC
+- summary: Az adott külső és belső műveletek olyan új műveletet adnak vissza, amely a belső műveletet a külső művelettel végzi.
+  uid: Microsoft.Quantum.Canon.ConjugatedByCA
+- summary: Egy olyan egységes műveletet ad vissza, amely egy Oracle-t alkalmaz a cél-tételjegyzékben, ha a vezérlő regisztrálása állapot egy megadott bit-maszknak felel meg.
+  uid: Microsoft.Quantum.Canon.ControlledOnBitString
+- summary: Egy olyan egységes operátort ad vissza, amely egy Oracle-t alkalmaz a cél-tételjegyzékben, ha a vezérlő regisztrálása állapot egy megadott pozitív egész számnak felel meg.
+  uid: Microsoft.Quantum.Canon.ControlledOnInt
+- summary: >-
+    Egy művelet egy két bemenetén lévő, a művelethez tartozó, Currie-beli verzióját adja vissza.
+
+    Ez azt eredményezi, hogy a művelet két bemenettel rendelkezik, ez a függvény a curry isomorphism $f (x, y) \equiv f (x) (y) $-t alkalmazza egy olyan bemenet műveletének visszaadására, amely egy bemenet műveletét adja vissza.
+  uid: Microsoft.Quantum.Canon.CurriedOp
+- summary: >+
+    > [!WARNING]
+
+    > A DecomposeIntoTimeStepsCA elavult. Használja <xref:Microsoft.Quantum.Canon.DecomposedIntoTimeStepsCA> helyette.
+
+  uid: Microsoft.Quantum.Canon.DecomposeIntoTimeStepsCA
+- summary: Egy adott művelethez tartozó Trotter – Suzuki integrátort megvalósító műveletet ad vissza.
+  uid: Microsoft.Quantum.Canon.DecomposedIntoTimeStepsCA
+- summary: Egy olyan műveletet ad vissza, amely a megadott argumentummal megadott műveletet alkalmazza.
+  uid: Microsoft.Quantum.Canon.Delayed
+- summary: Egy olyan műveletet ad vissza, amely a megadott argumentummal megadott műveletet alkalmazza.
+  uid: Microsoft.Quantum.Canon.DelayedA
+- summary: Egy olyan műveletet ad vissza, amely a megadott argumentummal megadott műveletet alkalmazza.
+  uid: Microsoft.Quantum.Canon.DelayedC
+- summary: Egy olyan műveletet ad vissza, amely a megadott argumentummal megadott műveletet alkalmazza.
+  uid: Microsoft.Quantum.Canon.DelayedCA
+- summary: Egy qubit Pauli-operátor és egy qubit indexe miatt egy több qubit Pauli-operátort ad vissza a megadott qubit operátorral az adott indexben és `PauliI` minden más indexben.
+  uid: Microsoft.Quantum.Canon.EmbedPauli
+- summary: Egy pár után visszaadja az első elemét.
+  uid: Microsoft.Quantum.Canon.Fst
+- summary: Szürke kódú sorozatot hoz létre
+  uid: Microsoft.Quantum.Canon.GrayCode
+- summary: Kiszámítja egy egész szám Hamming súlyozását, azaz az 1s számát a bináris kiterjesztésben.
+  uid: Microsoft.Quantum.Canon.HammingWeightI
+- summary: Figyelmen kívül hagyja egy művelet vagy függvény kimenetét.
+  uid: Microsoft.Quantum.Canon.Ignore
+- summary: Ellenőrzi, hogy egy adott eredmény értéke egyenlő-e `One` .
+  uid: Microsoft.Quantum.Canon.IsResultOne
+- summary: Ellenőrzi, hogy egy adott eredmény értéke egyenlő-e `Zero` .
+  uid: Microsoft.Quantum.Canon.IsResultZero
+- summary: >+
+    > [!WARNING]
+
+    > A LittleEndianToBigEndian elavult. Használja <xref:Microsoft.Quantum.Arithmetic.LittleEndianAsBigEndian> helyette.
+
+    >
+
+    > Használja a következőt: @"Microsoft.Quantum.Arithmetic.LittleEndianAsBigEndian".
+
+  uid: Microsoft.Quantum.Canon.LittleEndianToBigEndian
+- summary: A szorzás által vezérelt Z elforgatások megvalósítási lépése.
+  uid: Microsoft.Quantum.Canon.MultiplexZCoefficients
+- summary: >-
+    Egy szorzásra vezérelt, egységes műveletet ad vissza, $U $, amely egy egységes $V _j $ értéket alkalmaz, ha n-qubit számú \ket{j} $.
+
+    $U = \sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j}\otimes V_j $.
+  uid: Microsoft.Quantum.Canon.MultiplexerBruteForceFromGenerator
+- summary: >-
+    Egy szorzásra vezérelt, egységes műveletet ad vissza, $U $, amely egy egységes $V _j $ értéket alkalmaz, ha n-qubit számú \ket{j} $.
+
+    $U = \sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j}\otimes V_j $.
+  uid: Microsoft.Quantum.Canon.MultiplexerFromGenerator
+- summary: >-
+    Kivált egy műveletet egy hatványra.
+
+    Ez azt jelenti, hogy egy $U $ kaput jelképező művelet miatt egy új műveletet ad vissza $U ^ m $ a Power $m $-hoz.
+  uid: Microsoft.Quantum.Canon.OperationPow
+- summary: >-
+    Kivált egy műveletet egy hatványra. A módosító `A` azt jelzi, hogy a művelet adjointable.
+
+    Ez azt jelenti, hogy egy $U $ kaput jelképező művelet miatt egy új műveletet ad vissza $U ^ m $ a Power $m $-hoz.
+  uid: Microsoft.Quantum.Canon.OperationPowA
+- summary: >-
+    Kivált egy műveletet egy hatványra. A módosító `C` azt jelzi, hogy a művelet ellenőrizhető.
+
+    Ez azt jelenti, hogy egy $U $ kaput jelképező művelet miatt egy új műveletet ad vissza $U ^ m $ a Power $m $-hoz.
+  uid: Microsoft.Quantum.Canon.OperationPowC
+- summary: >-
+    Kivált egy műveletet egy hatványra. A módosító `A` azt jelzi, hogy a művelet ellenőrizhető és adjointable.
+
+    Ez azt jelenti, hogy egy $U $ kaput jelképező művelet miatt egy új műveletet ad vissza $U ^ m $ a Power $m $-hoz.
+  uid: Microsoft.Quantum.Canon.OperationPowCA
+- summary: Egy művelet korlátozása egy regiszterből álló tömbre, például egy alregisztrációra.
+  uid: Microsoft.Quantum.Canon.RestrictedToSubregister
+- summary: Egy művelet korlátozása egy regiszterből álló tömbre, például egy alregisztrációra. A módosító `A` azt jelzi, hogy a művelet adjointable.
+  uid: Microsoft.Quantum.Canon.RestrictedToSubregisterA
+- summary: Egy művelet korlátozása egy regiszterből álló tömbre, például egy alregisztrációra. A módosító `C` azt jelzi, hogy a művelet ellenőrizhető.
+  uid: Microsoft.Quantum.Canon.RestrictedToSubregisterC
+- summary: Egy művelet korlátozása egy regiszterből álló tömbre, például egy alregisztrációra. A módosító `CA` azt jelzi, hogy a művelet ellenőrizhető és adjointable.
+  uid: Microsoft.Quantum.Canon.RestrictedToSubregisterCA
+- summary: Egy pár után a a második elemet adja vissza.
+  uid: Microsoft.Quantum.Canon.Snd
+- summary: >+
+    > [!WARNING]
+
+    > A StackCapacity elavult.
+
+  uid: Microsoft.Quantum.Canon.StackCapacity
+- summary: >+
+    > [!WARNING]
+
+    > A StackLength elavult.
+
+  uid: Microsoft.Quantum.Canon.StackLength
+- summary: >+
+    > [!WARNING]
+
+    > A StackNew elavult.
+
+  uid: Microsoft.Quantum.Canon.StackNew
+- summary: >+
+    > [!WARNING]
+
+    > A StackPeek elavult.
+
+  uid: Microsoft.Quantum.Canon.StackPeek
+- summary: >+
+    > [!WARNING]
+
+    > A StackPop elavult.
+
+  uid: Microsoft.Quantum.Canon.StackPop
+- summary: >+
+    > [!WARNING]
+
+    > A StackPush elavult.
+
+  uid: Microsoft.Quantum.Canon.StackPush
+- summary: Egy függvény és egy művelet miatt egy új műveletet ad vissza, amelynek a bemenetét az adott függvény átalakítja.
+  uid: Microsoft.Quantum.Canon.TransformedOperation
+- summary: Egy függvény és egy művelet miatt egy új műveletet ad vissza, amelynek a bemenetét az adott függvény átalakítja.
+  uid: Microsoft.Quantum.Canon.TransformedOperationA
+- summary: Egy függvény és egy művelet miatt egy új műveletet ad vissza, amelynek a bemenetét az adott függvény átalakítja.
+  uid: Microsoft.Quantum.Canon.TransformedOperationC
+- summary: Egy függvény és egy művelet miatt egy új műveletet ad vissza, amelynek a bemenetét az adott függvény átalakítja.
+  uid: Microsoft.Quantum.Canon.TransformedOperationCA
+- summary: Kiszámítja a Trotter-szimulációs algoritmus rekurzív megvalósításának Trotter.
+  uid: Microsoft.Quantum.Canon.TrotterStepSize
+- summary: Egy olyan függvény, amely egy műveletet ad vissza, egy új műveletet ad vissza, amely mindkét bemenetet rekordként veszi át.
+  uid: Microsoft.Quantum.Canon.UncurriedOp
+- summary: Egy olyan függvény, amely egy műveletet ad vissza, egy új műveletet ad vissza, amely mindkét bemenetet rekordként veszi át. A módosító `A` azt jelzi, hogy a műveletek adjointable.
+  uid: Microsoft.Quantum.Canon.UncurriedOpA
+- summary: Egy olyan függvény, amely egy műveletet ad vissza, egy új műveletet ad vissza, amely mindkét bemenetet rekordként veszi át. A módosító `C` azt jelzi, hogy a műveletek ellenőrizhetők.
+  uid: Microsoft.Quantum.Canon.UncurriedOpC
+- summary: Egy olyan függvény, amely egy műveletet ad vissza, egy új műveletet ad vissza, amely mindkét bemenetet rekordként veszi át. A módosító `CA` azt jelzi, hogy a műveletek ellenőrizhetők és adjointable.
+  uid: Microsoft.Quantum.Canon.UncurriedOpCA
+- summary: Az összes Weight-1 Pauli operátor tömbjét adja vissza egy adott számú qubits.
+  uid: Microsoft.Quantum.Canon.WeightOnePaulis
+- summary: ''
+  uid: Microsoft.Quantum.Canon.WithFirstInputApplied
+- summary: >+
+    > [!WARNING]
+
+    > A XOR elavult. Használja <xref:Microsoft.Quantum.Logical.Xor> helyette.
+
+    >
+
+    > Használja a következőt: @"microsoft.quantum.logical.xor".
+
+  uid: Microsoft.Quantum.Canon.XOR
+name: Microsoft.Quantum.Canon
+newtypes:
+- summary: A CCNOT-kapu aláírásának típusa
+  uid: Microsoft.Quantum.Canon.CCNOTop
+- summary: >+
+    > [!WARNING]
+
+    > A ResultStack elavult.
+
+  uid: Microsoft.Quantum.Canon.ResultStack
+operations:
+- summary: Felügyelt "és létra" műveletet hajt végre a célként megadott qubits regisztrálásakor.
+  uid: Microsoft.Quantum.Canon.AndLadder
+- summary: A megadott qubit csak akkor áll le, ha mindkét vezérlő qubits 1 állapotban van, a adjoint művelet végrehajtásához használja a mérést.
+  uid: Microsoft.Quantum.Canon.ApplyAnd
+- summary: ''
+  uid: Microsoft.Quantum.Canon.ApplyBound
+- summary: ''
+  uid: Microsoft.Quantum.Canon.ApplyBoundA
+- summary: ''
+  uid: Microsoft.Quantum.Canon.ApplyBoundC
+- summary: ''
+  uid: Microsoft.Quantum.Canon.ApplyBoundCA
+- summary: Egy kaszkád CCNOT-kaput valósít meg, amely a két qubit-regiszter megfelelő BITS-nyilvántartásába van irányítva, amely az egyik regiszter következő qubit működik. A (z) 0. pozícióban lévő qubits kezdve a CCNOT a rendszer a qubit 1. pozíciójában alkalmazza, majd az 1. pozícióban a qubit a cél-regiszter 2. pozíciójában, a célként megadott qubit a pozícióban végződő művelettel végződik `Length(nQubits)-1` .
+  uid: Microsoft.Quantum.Canon.ApplyCCNOTChain
+- summary: Kiszámítja a qubits-regisztráció paritását.
+  uid: Microsoft.Quantum.Canon.ApplyCNOTChain
+- summary: Kiszámítja egy qubits-tömb paritását egy célként megadott qubit.
+  uid: Microsoft.Quantum.Canon.ApplyCNOTChainWithTarget
+- summary: Egy egységes műveletet alkalmaz a cél-tételjegyzéken, amelyet egy adott bit-maszk által meghatározott állapotban kell vezérelni.
+  uid: Microsoft.Quantum.Canon.ApplyControlledOnBitString
+- summary: Egy egységes műveletet alkalmaz a cél-tételjegyzéken, ha a vezérlő regisztrálása állapot egy megadott pozitív egész számnak felel meg.
+  uid: Microsoft.Quantum.Canon.ApplyControlledOnInt
+- summary: ''
+  uid: Microsoft.Quantum.Canon.ApplyCurriedOp
+- summary: ''
+  uid: Microsoft.Quantum.Canon.ApplyCurriedOpA
+- summary: ''
+  uid: Microsoft.Quantum.Canon.ApplyCurriedOpC
+- summary: ''
+  uid: Microsoft.Quantum.Canon.ApplyCurriedOpCA
+- summary: Összetett fázisokat alkalmaz a qubits regiszterének numerikus állapotára.
+  uid: Microsoft.Quantum.Canon.ApplyDiagonalUnitary
+- summary: A Fermionic-csere alkalmazása.
+  uid: Microsoft.Quantum.Canon.ApplyFermionicSWAP
+- summary: Egy klasszikus bites műveletre vonatkozik.
+  uid: Microsoft.Quantum.Canon.ApplyIf
+- summary: Egy klasszikus bites adjointable műveletet alkalmaz.
+  uid: Microsoft.Quantum.Canon.ApplyIfA
+- summary: Egy klasszikus bit-re vonatkozó, ellenőrizhető működést alkalmaz.
+  uid: Microsoft.Quantum.Canon.ApplyIfC
+- summary: Egy klasszikus bites, egységes műveletet alkalmaz.
+  uid: Microsoft.Quantum.Canon.ApplyIfCA
+- summary: A klasszikus bit értékétől függően két művelet egyikét alkalmazza.
+  uid: Microsoft.Quantum.Canon.ApplyIfElseB
+- summary: Egy klasszikus bit értékétől függően két adjointable műveletet alkalmaz.
+  uid: Microsoft.Quantum.Canon.ApplyIfElseBA
+- summary: A klasszikus bit értékétől függően két ellenőrizhető művelet egyikét alkalmazza.
+  uid: Microsoft.Quantum.Canon.ApplyIfElseBC
+- summary: Egy klasszikus bites értéktől függően két egységes művelet egyikét alkalmazza.
+  uid: Microsoft.Quantum.Canon.ApplyIfElseBCA
+- summary: A klasszikus eredmények értékétől függően két művelet egyikét alkalmazza.
+  uid: Microsoft.Quantum.Canon.ApplyIfElseR
+- summary: Egy klasszikus eredmény értékétől függően két adjointable műveletet alkalmaz.
+  uid: Microsoft.Quantum.Canon.ApplyIfElseRA
+- summary: A klasszikus eredmények értékétől függően két ellenőrizhető művelet egyikét alkalmazza.
+  uid: Microsoft.Quantum.Canon.ApplyIfElseRC
+- summary: A klasszikus találatok értékétől függően két egységes művelet egyikét alkalmazza.
+  uid: Microsoft.Quantum.Canon.ApplyIfElseRCA
+- summary: Egy olyan műveletet alkalmaz, amely egy klasszikus eredmény értéke egy.
+  uid: Microsoft.Quantum.Canon.ApplyIfOne
+- summary: Egy olyan adjointable műveletet alkalmaz, amely egy klasszikus eredmény értéke egy.
+  uid: Microsoft.Quantum.Canon.ApplyIfOneA
+- summary: Egy, a klasszikus eredmény értékének egyikét alkalmazza.
+  uid: Microsoft.Quantum.Canon.ApplyIfOneC
+- summary: A klasszikus eredmény értékeként egy egységes műveletet alkalmaz.
+  uid: Microsoft.Quantum.Canon.ApplyIfOneCA
+- summary: Egy klasszikus eredmény értékének nulla értékű műveletét alkalmazza.
+  uid: Microsoft.Quantum.Canon.ApplyIfZero
+- summary: Egy olyan adjointable műveletet alkalmaz, amely klasszikus eredmény értéke nulla.
+  uid: Microsoft.Quantum.Canon.ApplyIfZeroA
+- summary: Egy, a klasszikus eredmény értékének nulla értékét alkalmazza.
+  uid: Microsoft.Quantum.Canon.ApplyIfZeroC
+- summary: A klasszikus eredmény értékének nulla értékű, egységes műveletét alkalmazza.
+  uid: Microsoft.Quantum.Canon.ApplyIfZeroCA
+- summary: A megadott qubit csak akkor áll le, ha mindkét vezérlő qubits 1 állapotban van, a T-depth 1 értékkel, a adjoint művelet elvégzéséhez használja a mérést.
+  uid: Microsoft.Quantum.Canon.ApplyLowDepthAnd
+- summary: Egy megfelelően vezérelt művelet szorzás vezérelt verzióját alkalmazza. A módosító `C` azt jelzi, hogy az qubit művelet ellenőrizhető.
+  uid: Microsoft.Quantum.Canon.ApplyMultiControlledC
+- summary: Egy megfelelően vezérelt művelet szorzás vezérelt verzióját alkalmazza. A módosító `CA` azt jelzi, hogy az qubit művelet ellenőrizhető és adjointable.
+  uid: Microsoft.Quantum.Canon.ApplyMultiControlledCA
+- summary: Több vezérelt Toffoli-kaput valósít meg, feltéve, hogy a cél qubit inicializálása 0.  A adjoint művelet azt feltételezi, hogy a cél qubit 0-ra lesz visszaállítva.
+  uid: Microsoft.Quantum.Canon.ApplyMultiplyControlledAnd
+- summary: Több vezérelt Toffoli-kaput valósít meg, feltéve, hogy a cél qubit inicializálása 0.  A adjoint művelet azt feltételezi, hogy a cél qubit 0-ra lesz visszaállítva.  Az 1. számú rz mélységet igényel, míg a segítő qubits száma exponenciális a qubits száma szerint.
+  uid: Microsoft.Quantum.Canon.ApplyMultiplyControlledLowDepthAnd
+- summary: Ugyanazokat az op-ket alkalmazza a qubit-regisztrációnál többször.
+  uid: Microsoft.Quantum.Canon.ApplyOpRepeatedlyOver
+- summary: Ugyanazokat az op-ket alkalmazza a qubit-regisztrációnál többször.
+  uid: Microsoft.Quantum.Canon.ApplyOpRepeatedlyOverA
+- summary: Ugyanazokat az op-ket alkalmazza a qubit-regisztrációnál többször.
+  uid: Microsoft.Quantum.Canon.ApplyOpRepeatedlyOverC
+- summary: Ugyanazokat az op-ket alkalmazza a qubit-regisztrációnál többször.
+  uid: Microsoft.Quantum.Canon.ApplyOpRepeatedlyOverCA
+- summary: ''
+  uid: Microsoft.Quantum.Canon.ApplyOperationRepeatedly
+- summary: ''
+  uid: Microsoft.Quantum.Canon.ApplyOperationRepeatedlyA
+- summary: ''
+  uid: Microsoft.Quantum.Canon.ApplyOperationRepeatedlyC
+- summary: ''
+  uid: Microsoft.Quantum.Canon.ApplyOperationRepeatedlyCA
+- summary: Egy több qubit Pauli-operátor miatt a megfelelő műveletet a regisztrálásra alkalmazza.
+  uid: Microsoft.Quantum.Canon.ApplyPauli
+- summary: Egy, a tömb minden qubit alkalmazza a Pauli-operátort, ha a logikai tömb megfelelő bitje egy adott bemenetnek felel meg.
+  uid: Microsoft.Quantum.Canon.ApplyPauliFromBitString
+- summary: Végrehajtja a Quantum Fourier-transzformációt egy olyan kvantum-regiszteren, amely egy egész számot tartalmaz a kis endian ábrázolásban.
+  uid: Microsoft.Quantum.Canon.ApplyQuantumFourierTransform
+- summary: Végrehajtja a Quantum Fourier-transzformációt egy olyan kvantum-regiszteren, amely egy egész számot tartalmaz a big-endian ábrázolásban.
+  uid: Microsoft.Quantum.Canon.ApplyQuantumFourierTransformBE
+- summary: >+
+    > [!WARNING]
+
+    > A ApplyReversedOpBigEndianA elavult. Használja <xref:Microsoft.Quantum.Arithmetic.ApplyReversedOpBEA> helyette.
+
+    >
+
+    > Használja a következőt: @"Microsoft.Quantum.Arithmetic.ApplyReversedOpBEA".
+
+  uid: Microsoft.Quantum.Canon.ApplyReversedOpBigEndianA
+- summary: >+
+    > [!WARNING]
+
+    > A ApplyReversedOpBigEndianC elavult. Használja <xref:Microsoft.Quantum.Arithmetic.ApplyReversedOpBEC> helyette.
+
+    >
+
+    > Használja a következőt: @"Microsoft.Quantum.Arithmetic.ApplyReversedOpBEC".
+
+  uid: Microsoft.Quantum.Canon.ApplyReversedOpBigEndianC
+- summary: >+
+    > [!WARNING]
+
+    > A ApplyReversedOpBigEndianCA elavult. Használja <xref:Microsoft.Quantum.Arithmetic.ApplyReversedOpBECA> helyette.
+
+    >
+
+    > Használja a következőt: @"Microsoft.Quantum.Arithmetic.ApplyReversedOpBEC".
+
+  uid: Microsoft.Quantum.Canon.ApplyReversedOpBigEndianCA
+- summary: >+
+    > [!WARNING]
+
+    > A ApplyReversedOpLittleEndianA elavult. Használja <xref:Microsoft.Quantum.Arithmetic.ApplyReversedOpLEA> helyette.
+
+    >
+
+    > Használja a következőt: @"Microsoft.Quantum.Arithmetic.ApplyReversedOpLEA".
+
+  uid: Microsoft.Quantum.Canon.ApplyReversedOpLittleEndianA
+- summary: >+
+    > [!WARNING]
+
+    > A ApplyReversedOpLittleEndianC elavult. Használja <xref:Microsoft.Quantum.Arithmetic.ApplyReversedOpLEC> helyette.
+
+    >
+
+    > Használja a következőt: @"Microsoft.Quantum.Arithmetic.ApplyReversedOpLEC".
+
+  uid: Microsoft.Quantum.Canon.ApplyReversedOpLittleEndianC
+- summary: >+
+    > [!WARNING]
+
+    > A ApplyReversedOpLittleEndianCA elavult. Használja <xref:Microsoft.Quantum.Arithmetic.ApplyReversedOpLECA> helyette.
+
+    >
+
+    > Használja a következőt: @"Microsoft.Quantum.Arithmetic.ApplyReversedOpLEC".
+
+  uid: Microsoft.Quantum.Canon.ApplyReversedOpLittleEndianCA
+- summary: >+
+    > [!WARNING]
+
+    > A ApplyRippleCarryComparatorLE elavult. Használja <xref:Microsoft.Quantum.Arithmetic.CompareUsingRippleCarry> helyette.
+
+    >
+
+    > Használja a következőt: @"Microsoft.Quantum.Arithmetic.CompareUsingRippleCarry".
+
+  uid: Microsoft.Quantum.Canon.ApplyRippleCarryComparatorLE
+- summary: Egy tömbön egymás után az Ops és a célok listáját alkalmazza.
+  uid: Microsoft.Quantum.Canon.ApplySeriesOfOps
+- summary: Egy tömbön egymás után az Ops és a célok listáját alkalmazza. (Adjoint)
+  uid: Microsoft.Quantum.Canon.ApplySeriesOfOpsA
+- summary: Egy tömbön egymás után az Ops és a célok listáját alkalmazza. Ellenőrzött
+  uid: Microsoft.Quantum.Canon.ApplySeriesOfOpsC
+- summary: Egy tömbön egymás után az Ops és a célok listáját alkalmazza. (Adjoint + vezérelt)
+  uid: Microsoft.Quantum.Canon.ApplySeriesOfOpsCA
+- summary: Egyetlen qubit műveletet alkalmaz a tételjegyzék minden elemére.
+  uid: Microsoft.Quantum.Canon.ApplyToEach
+- summary: Egyetlen qubit műveletet alkalmaz a tételjegyzék minden elemére. A módosító `A` azt jelzi, hogy az qubit művelet adjointable.
+  uid: Microsoft.Quantum.Canon.ApplyToEachA
+- summary: Egyetlen qubit műveletet alkalmaz a tételjegyzék minden elemére. A módosító `C` azt jelzi, hogy az qubit művelet ellenőrizhető.
+  uid: Microsoft.Quantum.Canon.ApplyToEachC
+- summary: Egyetlen qubit műveletet alkalmaz a tételjegyzék minden elemére. A módosító `CA` azt jelzi, hogy az qubit művelet ellenőrizhető és adjointable.
+  uid: Microsoft.Quantum.Canon.ApplyToEachCA
+- summary: Egyetlen qubit műveletet alkalmaz a tételjegyzék minden indexelt elemére.
+  uid: Microsoft.Quantum.Canon.ApplyToEachIndex
+- summary: Egyetlen qubit műveletet alkalmaz a tételjegyzék minden indexelt elemére. A módosító `A` azt jelzi, hogy az qubit művelet adjointable.
+  uid: Microsoft.Quantum.Canon.ApplyToEachIndexA
+- summary: Egyetlen qubit műveletet alkalmaz a tételjegyzék minden indexelt elemére. A módosító `C` azt jelzi, hogy az qubit művelet ellenőrizhető.
+  uid: Microsoft.Quantum.Canon.ApplyToEachIndexC
+- summary: Egyetlen qubit műveletet alkalmaz a tételjegyzék minden indexelt elemére. A módosító `CA` azt jelzi, hogy az qubit művelet adjointable és ellenőrizhető.
+  uid: Microsoft.Quantum.Canon.ApplyToEachIndexCA
+- summary: Egy műveletet alkalmaz egy tömb egy adott elemére.
+  uid: Microsoft.Quantum.Canon.ApplyToElement
+- summary: Egy műveletet alkalmaz egy tömb egy adott elemére.
+  uid: Microsoft.Quantum.Canon.ApplyToElementA
+- summary: Egy műveletet alkalmaz egy tömb egy adott elemére.
+  uid: Microsoft.Quantum.Canon.ApplyToElementC
+- summary: Egy műveletet alkalmaz egy tömb egy adott elemére.
+  uid: Microsoft.Quantum.Canon.ApplyToElementCA
+- summary: Egy műveletet alkalmaz a regisztráció első qubit.
+  uid: Microsoft.Quantum.Canon.ApplyToFirstQubit
+- summary: Egy műveletet alkalmaz a regisztráció első qubit. A módosító `A` azt jelzi, hogy a művelet adjointable.
+  uid: Microsoft.Quantum.Canon.ApplyToFirstQubitA
+- summary: A művelet op-t alkalmazza a regisztráció első qubit. A módosító `C` azt jelzi, hogy a művelet ellenőrizhető.
+  uid: Microsoft.Quantum.Canon.ApplyToFirstQubitC
+- summary: A művelet op-t alkalmazza a regisztráció első qubit. A módosító `CA` azt jelzi, hogy a művelet ellenőrizhető és adjointable.
+  uid: Microsoft.Quantum.Canon.ApplyToFirstQubitCA
+- summary: Egy műveletet alkalmaz a regisztráció első három qubits.
+  uid: Microsoft.Quantum.Canon.ApplyToFirstThreeQubits
+- summary: Egy műveletet alkalmaz a regisztráció első három qubits. A módosító `A` azt jelzi, hogy a művelet adjointable.
+  uid: Microsoft.Quantum.Canon.ApplyToFirstThreeQubitsA
+- summary: Egy műveletet alkalmaz a regisztráció első három qubits. A módosító `C` azt jelzi, hogy a művelet ellenőrizhető.
+  uid: Microsoft.Quantum.Canon.ApplyToFirstThreeQubitsC
+- summary: Egy műveletet alkalmaz a regisztráció első három qubits. A módosító `CA` azt jelzi, hogy a művelet ellenőrizhető és adjointable.
+  uid: Microsoft.Quantum.Canon.ApplyToFirstThreeQubitsCA
+- summary: Egy műveletet alkalmaz a regisztráció első két qubits.
+  uid: Microsoft.Quantum.Canon.ApplyToFirstTwoQubits
+- summary: Egy műveletet alkalmaz a regisztráció első két qubits. A módosító `A` azt jelzi, hogy a művelet adjointable.
+  uid: Microsoft.Quantum.Canon.ApplyToFirstTwoQubitsA
+- summary: Egy műveletet alkalmaz a regisztráció első két qubits. A módosító `C` azt jelzi, hogy a művelet ellenőrizhető.
+  uid: Microsoft.Quantum.Canon.ApplyToFirstTwoQubitsC
+- summary: Egy műveletet alkalmaz a regisztráció első két qubits. A módosító `CA` azt jelzi, hogy a művelet ellenőrizhető és adjointable.
+  uid: Microsoft.Quantum.Canon.ApplyToFirstTwoQubitsCA
+- summary: Egy műveletet alkalmaz egy tömb első elemére.
+  uid: Microsoft.Quantum.Canon.ApplyToHead
+- summary: Egy műveletet alkalmaz egy tömb első elemére.
+  uid: Microsoft.Quantum.Canon.ApplyToHeadA
+- summary: Egy műveletet alkalmaz egy tömb első elemére.
+  uid: Microsoft.Quantum.Canon.ApplyToHeadC
+- summary: Egy műveletet alkalmaz egy tömb első elemére.
+  uid: Microsoft.Quantum.Canon.ApplyToHeadCA
+- summary: Egy művelet egy tömb utolsó elemére vonatkozik.
+  uid: Microsoft.Quantum.Canon.ApplyToMost
+- summary: Egy művelet egy tömb utolsó elemére vonatkozik.
+  uid: Microsoft.Quantum.Canon.ApplyToMostA
+- summary: Egy művelet egy tömb utolsó elemére vonatkozik.
+  uid: Microsoft.Quantum.Canon.ApplyToMostC
+- summary: Egy művelet egy tömb utolsó elemére vonatkozik.
+  uid: Microsoft.Quantum.Canon.ApplyToMostCA
+- summary: Egy pár műveletet alkalmaz a regiszter egy adott partícióján két részre.
+  uid: Microsoft.Quantum.Canon.ApplyToPartition
+- summary: Egy pár műveletet alkalmaz a regiszter egy adott partícióján két részre. A módosító `A` azt jelzi, hogy a művelet adjointable.
+  uid: Microsoft.Quantum.Canon.ApplyToPartitionA
+- summary: Egy pár műveletet alkalmaz a regiszter egy adott partícióján két részre. A módosító `C` azt jelzi, hogy a művelet ellenőrizhető.
+  uid: Microsoft.Quantum.Canon.ApplyToPartitionC
+- summary: Egy pár műveletet alkalmaz a regiszter egy adott partícióján két részre. A módosító `CA` azt jelzi, hogy a művelet ellenőrizhető és adjointable.
+  uid: Microsoft.Quantum.Canon.ApplyToPartitionCA
+- summary: A művelet a tömb első elemére vonatkozik.
+  uid: Microsoft.Quantum.Canon.ApplyToRest
+- summary: A művelet a tömb első elemére vonatkozik.
+  uid: Microsoft.Quantum.Canon.ApplyToRestA
+- summary: A művelet a tömb első elemére vonatkozik.
+  uid: Microsoft.Quantum.Canon.ApplyToRestC
+- summary: A művelet a tömb első elemére vonatkozik.
+  uid: Microsoft.Quantum.Canon.ApplyToRestCA
+- summary: Egy műveletet alkalmaz egy regiszter alnyilvántartásába, és az qubits egy tömb adja meg.
+  uid: Microsoft.Quantum.Canon.ApplyToSubregister
+- summary: Egy műveletet alkalmaz egy regiszter alnyilvántartásába, és az qubits egy tömb adja meg. A módosító `A` azt jelzi, hogy a művelet adjointable.
+  uid: Microsoft.Quantum.Canon.ApplyToSubregisterA
+- summary: Egy műveletet alkalmaz egy regiszter alnyilvántartásába, és az qubits egy tömb adja meg. A módosító `C` azt jelzi, hogy a művelet ellenőrizhető.
+  uid: Microsoft.Quantum.Canon.ApplyToSubregisterC
+- summary: Egy műveletet alkalmaz egy regiszter alnyilvántartásába, és az qubits egy tömb adja meg. A módosító `CA` azt jelzi, hogy a művelet ellenőrizhető és adjointable.
+  uid: Microsoft.Quantum.Canon.ApplyToSubregisterCA
+- summary: Egy műveletet alkalmaz egy tömb utolsó elemére.
+  uid: Microsoft.Quantum.Canon.ApplyToTail
+- summary: Egy műveletet alkalmaz egy tömb utolsó elemére.
+  uid: Microsoft.Quantum.Canon.ApplyToTailA
+- summary: Egy műveletet alkalmaz egy tömb utolsó elemére.
+  uid: Microsoft.Quantum.Canon.ApplyToTailC
+- summary: Egy műveletet alkalmaz egy tömb utolsó elemére.
+  uid: Microsoft.Quantum.Canon.ApplyToTailCA
+- summary: A két művelet miatt a rendszer az egyiket a másikkal konjugáltként alkalmazza.
+  uid: Microsoft.Quantum.Canon.ApplyWith
+- summary: A két művelet miatt a rendszer az egyiket a másikkal konjugáltként alkalmazza.
+  uid: Microsoft.Quantum.Canon.ApplyWithA
+- summary: A két művelet miatt a rendszer az egyiket a másikkal konjugáltként alkalmazza.
+  uid: Microsoft.Quantum.Canon.ApplyWithC
+- summary: A két művelet miatt a rendszer az egyiket a másikkal konjugáltként alkalmazza.
+  uid: Microsoft.Quantum.Canon.ApplyWithCA
+- summary: Egy olyan művelet, amely egy bizonyos bemenetet fogad el, egy olyan függvényt ad vissza, amely kompatibilis a művelettel, és a függvény bemenete a művelettel a művelet által várt űrlapra alakítja át a bemenetet.
+  uid: Microsoft.Quantum.Canon.ApplyWithInputTransformation
+- summary: Egy olyan művelet, amely egy bizonyos bemenetet fogad el, egy olyan függvényt ad vissza, amely kompatibilis a művelettel, és a függvény bemenete a művelettel a művelet által várt űrlapra alakítja át a bemenetet.
+  uid: Microsoft.Quantum.Canon.ApplyWithInputTransformationA
+- summary: Egy olyan művelet, amely egy bizonyos bemenetet fogad el, egy olyan függvényt ad vissza, amely kompatibilis a művelettel, és a függvény bemenete a művelettel a művelet által várt űrlapra alakítja át a bemenetet.
+  uid: Microsoft.Quantum.Canon.ApplyWithInputTransformationC
+- summary: Egy olyan művelet, amely egy bizonyos bemenetet fogad el, egy olyan függvényt ad vissza, amely kompatibilis a művelettel, és a függvény bemenete a művelettel a művelet által várt űrlapra alakítja át a bemenetet.
+  uid: Microsoft.Quantum.Canon.ApplyWithInputTransformationCA
+- summary: Alkalmazza a becsült kvantum Fourier-transzformációt (AQFT) a kvantum-regiszterre.
+  uid: Microsoft.Quantum.Canon.ApproximateQFT
+- summary: Összetett fázisokat alkalmaz a qubits regiszterének numerikus állapotára, és lerövidíti a kis forgási szögeket egy adott tolerancia alapján.
+  uid: Microsoft.Quantum.Canon.ApproximatelyApplyDiagonalUnitary
+- summary: Egy qubits tömbön alkalmazza a Pauli rotációs feltételt, amely egy adott tűréshatárnak megfelelően lerövidíti a kisméretű rotációs szögeket.
+  uid: Microsoft.Quantum.Canon.ApproximatelyMultiplexPauli
+- summary: Egy qubits tömbön alkalmazza a Pauli Z rotációs feltételt, amely egy adott tűréshatárnak megfelelően lerövidíti a kisméretű rotációs szögeket.
+  uid: Microsoft.Quantum.Canon.ApproximatelyMultiplexZ
+- summary: >+
+    > [!WARNING]
+
+    > A AssertHighestBit elavult. Használja <xref:Microsoft.Quantum.Arithmetic.AssertMostSignificantBit> helyette.
+
+    >
+
+    > Használja a következőt: @"Microsoft.Quantum.Arithmetic.AssertMostSignificantBit".
+
+  uid: Microsoft.Quantum.Canon.AssertHighestBit
+- summary: >+
+    > [!WARNING]
+
+    > A AssertLessThanPhaseLE elavult. Használja <xref:Microsoft.Quantum.Arithmetic.AssertPhaseLessThan> helyette.
+
+    >
+
+    > Használja a következőt: @"Microsoft.Quantum.Arithmetic.AssertPhaseLessThan".
+
+  uid: Microsoft.Quantum.Canon.AssertLessThanPhaseLE
+- summary: >+
+    > [!WARNING]
+
+    > A AssertPhase elavult. Használja <xref:Microsoft.Quantum.Diagnostics.AssertPhase> helyette.
+
+  uid: Microsoft.Quantum.Canon.AssertPhase
+- summary: >+
+    > [!WARNING]
+
+    > A CNOTChain elavult. Használja <xref:Microsoft.Quantum.Canon.ApplyCNOTChain> helyette.
+
+  uid: Microsoft.Quantum.Canon.CNOTChain
+- summary: >+
+    > [!WARNING]
+
+    > A CNOTChainTarget elavult. Használja <xref:Microsoft.Quantum.Canon.ApplyCNOTChainWithTarget> helyette.
+
+  uid: Microsoft.Quantum.Canon.CNOTChainTarget
+- summary: >-
+    A vezérelt-X (CX) kaput alkalmazza egy pár qubits.
+
+    $ $ \begin{align} \left (\begin{Matrix} 1 & 0 & 0 & 0 \\ \\ 0 & 1 & 0 & 0 \\ \\ 0 & 0 & 0 & 1 \\ \\ 0 & 0 & 1 & 0 \end{Matrix}\right) \end{align}, $ $, ahol a sorok és oszlopok a Quantum Concepts útmutatóban vannak rendszerezve.
+  uid: Microsoft.Quantum.Canon.CX
+- summary: >-
+    A vezérelt-Y (CY) kaput alkalmazza egy pár qubits.
+
+    $ $ \begin{align} 1 & 0 & 0 & 0 \\ \\ 0 & 1 & 0 & 0 \\ \\ 0 & 0 & 0 &-i 0 & 0 \\ \\ & i & 0 \end{align}, $ $, ahol a sorok és oszlopok a Quantum Concepts útmutatóban vannak rendszerezve.
+  uid: Microsoft.Quantum.Canon.CY
+- summary: >-
+    A vezérelt-Z (CZ) kaput alkalmazza egy pár qubits.
+
+    $ $ \begin{align} 1 & 0 & 0 & 0 \\ \\ 0 & 1 & 0 & 0 \\ \\ 0 & 0 & 1 & 0 \\ \\ 0 & 0 & 0 &-1 \end{align}, $ $, ahol a sorok és oszlopok a Quantum Concepts útmutatóban vannak rendszerezve.
+  uid: Microsoft.Quantum.Canon.CZ
+- summary: >+
+    > [!WARNING]
+
+    > A CascadeCCNOT elavult. Használja <xref:Microsoft.Quantum.Canon.ApplyCCNOTChain> helyette.
+
+  uid: Microsoft.Quantum.Canon.CascadeCCNOT
+- summary: >+
+    > [!WARNING]
+
+    > A CascadeCNOT elavult. Használja <xref:Microsoft.Quantum.Canon.ApplyCNOTChain> helyette.
+
+    >
+
+    > Használja a következőt: @"microsoft.quantum.canon.applycnotchain".
+
+  uid: Microsoft.Quantum.Canon.CascadeCNOT
+- summary: Egy megadott műveletet késleltetve alkalmaz.
+  uid: Microsoft.Quantum.Canon.Delay
+- summary: Egy megadott műveletet késleltetve alkalmaz.
+  uid: Microsoft.Quantum.Canon.DelayA
+- summary: Egy megadott műveletet késleltetve alkalmaz.
+  uid: Microsoft.Quantum.Canon.DelayC
+- summary: Egy megadott műveletet késleltetve alkalmaz.
+  uid: Microsoft.Quantum.Canon.DelayCA
+- summary: >-
+    Az Y-alapú analógt alkalmazza az Hadamard átalakításra, amely a Z és az Y tengelyt módosítja.
+
+    Az Y Hadamard átalakítás $H _Y = S H $ egyetlen qubit: \begin{align} H_Y \mathrel{: =} \frac {1} {\sqrt {2} } \begin{bmatrix} 1 & 1 \\ \\ i &-i \end{bmatrix}. \end{align}
+  uid: Microsoft.Quantum.Canon.HY
+- summary: >+
+    > [!WARNING]
+
+    > A InPlaceMajority elavult. Használja <xref:Microsoft.Quantum.Arithmetic.ApplyMajorityInPlace> helyette.
+
+    >
+
+    > Használja a következőt: @"microsoft.quantum.arithmetic.applymajorityinplace".
+
+  uid: Microsoft.Quantum.Canon.InPlaceMajority
+- summary: >+
+    > [!WARNING]
+
+    > A InPlaceXorBE elavult. Használja <xref:ApplyReversedOpLECA(ApplyXorInPlace(value, _), target)> helyette.
+
+    >
+
+    > A művelet el lett távolítva.
+
+  uid: Microsoft.Quantum.Canon.InPlaceXorBE
+- summary: >+
+    > [!WARNING]
+
+    > A InPlaceXorLE elavult. Használja <xref:Microsoft.Quantum.Measurement.ApplyXorInPlace> helyette.
+
+    >
+
+    > Használja a következőt: @"Microsoft.Quantum.Measurement.ApplyXorInPlace".
+
+  uid: Microsoft.Quantum.Canon.InPlaceXorLE
+- summary: >+
+    > [!WARNING]
+
+    > A IntegerIncrementLE elavult. Használja <xref:Microsoft.Quantum.Arithmetic.IncrementByInteger> helyette.
+
+    >
+
+    > Használja a következőt: @"Microsoft.Quantum.Arithmetic.IncrementByInteger".
+
+  uid: Microsoft.Quantum.Canon.IntegerIncrementLE
+- summary: >+
+    > [!WARNING]
+
+    > A IntegerIncrementPhaseLE elavult. Használja <xref:Microsoft.Quantum.Arithmetic.IncrementPhaseByInteger> helyette.
+
+    >
+
+    > Használja a következőt: @"Microsoft.Quantum.Arithmetic.IncrementPhaseByInteger".
+
+  uid: Microsoft.Quantum.Canon.IntegerIncrementPhaseLE
+- summary: Végrehajt egy műveletet az egész tartomány Descartes-as teljesítményében lévő minden indexnél.
+  uid: Microsoft.Quantum.Canon.IterateThroughCartesianPower
+- summary: Végrehajt egy műveletet minden olyan indexnél, amely több tartomány Descartes-szorzatát tartalmazza.
+  uid: Microsoft.Quantum.Canon.IterateThroughCartesianProduct
+- summary: Kiszámítja a logikai és a több qubits.
+  uid: Microsoft.Quantum.Canon.LogicalANDMeasAndFix
+- summary: >+
+    > [!WARNING]
+
+    > A ModularAddProductLE elavult. Használja <xref:Microsoft.Quantum.Arithmetic.MultiplyAndAddByModularInteger> helyette.
+
+    >
+
+    > Használja a következőt: @"Microsoft.Quantum.Arithmetic.MultiplyAndAddByModularInteger".
+
+  uid: Microsoft.Quantum.Canon.ModularAddProductLE
+- summary: >+
+    > [!WARNING]
+
+    > A ModularAddProductPhaseLE elavult. Használja <xref:Microsoft.Quantum.Arithmetic.MultiplyAndAddPhaseByModularInteger> helyette.
+
+    >
+
+    > Használja a következőt: @"Microsoft.Quantum.Arithmetic.MultiplyAndAddPhaseByModularInteger".
+
+  uid: Microsoft.Quantum.Canon.ModularAddProductPhaseLE
+- summary: >+
+    > [!WARNING]
+
+    > A ModularIncrementLE elavult. Használja <xref:Microsoft.Quantum.Arithmetic.ModularIncrementByInteger> helyette.
+
+    >
+
+    > Használja a következőt: @"Microsoft.Quantum.Arithmetic.ModularIncrementByInteger".
+
+  uid: Microsoft.Quantum.Canon.ModularIncrementLE
+- summary: >+
+    > [!WARNING]
+
+    > A ModularIncrementPhaseLE elavult. Használja <xref:Microsoft.Quantum.Arithmetic.IncrementPhaseByModularInteger> helyette.
+
+    >
+
+    > Használja a következőt: @"Microsoft.Quantum.Arithmetic.IncrementPhaseByModularInteger".
+
+  uid: Microsoft.Quantum.Canon.ModularIncrementPhaseLE
+- summary: >+
+    > [!WARNING]
+
+    > A ModularMultiplyByConstantLE elavult. Használja <xref:Microsoft.Quantum.Arithmetic.MultiplyByModularInteger> helyette.
+
+    >
+
+    > Használja a következőt: @"Microsoft.Quantum.Arithmetic.MultiplyByModularInteger".
+
+  uid: Microsoft.Quantum.Canon.ModularMultiplyByConstantLE
+- summary: >-
+    A több állapotú tömb által vezérelt műveletek tömbjét alkalmazza.
+
+    Ez azt is alkalmazza, hogy a szorzás által vezérelt egységes művelet $U $, amely egy egységes $V _j $-t alkalmaz, ha $n $-qubit számú állapotot ($ \ket{j} $) szabályozza.
+
+    $U = \sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j}\otimes V_j $.
+  uid: Microsoft.Quantum.Canon.MultiplexOperations
+- summary: >-
+    A szorzásra vezérelt, egységes művelet $U $ értéket alkalmazza, amely egy egységes $V-_j $-t alkalmaz, ha n-qubit számú állapotot ($ \ket{j} $) vezérel.
+
+    $U = \sum ^ {N-1} _ {j = 0} \ket{j}\bra{j}\otimes V_j $.
+  uid: Microsoft.Quantum.Canon.MultiplexOperationsBruteForceFromGenerator
+- summary: >-
+    Egy szorzásra vezérelt, egységes műveletet alkalmaz, $U $, amely egy egységes $V _j $-t alkalmaz, ha n-qubit számú \ket{j} $ értékkel van szabályozva.
+
+    $U = \sum ^ {N-1} _ {j = 0} \ket{j}\bra{j}\otimes V_j $.
+  uid: Microsoft.Quantum.Canon.MultiplexOperationsFromGenerator
+- summary: A MultiplexOperations implementációs lépése.
+  uid: Microsoft.Quantum.Canon.MultiplexOperationsWithAuxRegister
+- summary: Egy qubits-tömbön lévő Pauli-rotációs feltételt alkalmaz.
+  uid: Microsoft.Quantum.Canon.MultiplexPauli
+- summary: Egy qubits tömbön alkalmazza a Pauli Z rotációs feltételt.
+  uid: Microsoft.Quantum.Canon.MultiplexZ
+- summary: Végrehajtja az Identity műveletet (No-op) egy argumentumon.
+  uid: Microsoft.Quantum.Canon.NoOp
+- summary: A Permutes qubits a SWAP művelettel.
+  uid: Microsoft.Quantum.Canon.PermuteQubits
+- summary: Végrehajtja a Quantum Fourier-transzformációt egy olyan kvantum-regiszteren, amely egy egész számot tartalmaz a big-endian ábrázolásban.
+  uid: Microsoft.Quantum.Canon.QFT
+- summary: Végrehajtja a Quantum Fourier-transzformációt egy olyan kvantum-regiszteren, amely egy egész számot tartalmaz a kis endian ábrázolásban.
+  uid: Microsoft.Quantum.Canon.QFTLE
+- summary: >-
+    Fázis-eltolási műveletet hajt végre.
+
+    $R = \boldone-(1-e ^ {i \phi}) \ket{0\cdots 0} \bra{0\cdots 0} $.
+  uid: Microsoft.Quantum.Canon.RAll0
+- summary: >-
+    Fázis-eltolási műveletet hajt végre.
+
+    $R = \boldone-(1-e ^ {i \phi}) \ket{1\cdots 1} \bra{1\cdots 1} $.
+  uid: Microsoft.Quantum.Canon.RAll1
+- summary: Adott számú alkalommal ismétli meg a műveletet.
+  uid: Microsoft.Quantum.Canon.Repeat
+- summary: Adott számú alkalommal ismétli meg a műveletet.
+  uid: Microsoft.Quantum.Canon.RepeatA
+- summary: Adott számú alkalommal ismétli meg a műveletet.
+  uid: Microsoft.Quantum.Canon.RepeatC
+- summary: Adott számú alkalommal ismétli meg a műveletet.
+  uid: Microsoft.Quantum.Canon.RepeatCA
+- summary: A SWAP Gates használatával fordította vissza a qubits sorrendjét a regisztrációban.
+  uid: Microsoft.Quantum.Canon.SwapReverseRegister
+- summary: Az első sorrendű Trotter – Suzuki integrátor implementálása.
+  uid: Microsoft.Quantum.Canon.Trotter1ImplCA
+- summary: A második rendű Trotter – Suzuki integrátor implementálása.
+  uid: Microsoft.Quantum.Canon.Trotter2ImplCA
+- summary: A páros-Order Trotter – Suzuki integrátor rekurzív megvalósítása.
+  uid: Microsoft.Quantum.Canon.TrotterArbitraryImplCA
+- summary: A megvalósításának lépése `MultiplexOperationsFromGenerator` .
+  uid: Microsoft.Quantum.Canon._MultiplexOperationsFromGenerator
+summary: ''
+uid: Microsoft.Quantum.Canon
+metadata:
+  ms.openlocfilehash: 15dd183daa445cbde87b573386780d3da34beb86
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: hu-HU
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92715979"
