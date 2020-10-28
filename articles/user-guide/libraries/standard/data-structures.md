@@ -9,21 +9,21 @@ ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 51eb52d0b8ace972f6a425edba400ca9a8916d2e
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: c3ce5d531618c269d15be3e4eb58ecbb597a022c
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835587"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92692230"
 ---
 # <a name="data-structures-and-modeling"></a>Adatstruktúrák és-modellezés #
 
 ## <a name="classical-data-structures"></a>Klasszikus adatstruktúrák ##
 
 A kvantum-fogalmakat jelképező, felhasználó által definiált típusokkal együtt a Canon a Quantum Systems vezérléséhez használt klasszikus adatokkal kapcsolatos műveleteket, funkciókat és típusokat is biztosít.
-A <xref:microsoft.quantum.arrays.reversed> függvény például bemenetként fogad egy tömböt, és fordított sorrendben adja vissza ugyanazt a tömböt.
+A <xref:Microsoft.Quantum.Arrays.Reversed> függvény például bemenetként fogad egy tömböt, és fordított sorrendben adja vissza ugyanazt a tömböt.
 Ezt követően felhasználható egy típusú tömbben `Qubit[]` , hogy ne kelljen felesleges $ \operatorname{swap} $ gateset alkalmaznia, ha az egész számok kvantum-ábrázolásai között vált.
-Hasonlóképpen láttuk az előző szakaszban, hogy az űrlap típusa `(Int, Int -> T)` hasznos lehet a véletlen hozzáférésű gyűjtemények ábrázolásához, így a <xref:microsoft.quantum.arrays.lookupfunction> függvény kényelmes módszert biztosít az ilyen típusú típusok tömbből való összeállításához.
+Hasonlóképpen láttuk az előző szakaszban, hogy az űrlap típusa `(Int, Int -> T)` hasznos lehet a véletlen hozzáférésű gyűjtemények ábrázolásához, így a <xref:Microsoft.Quantum.Arrays.LookupFunction> függvény kényelmes módszert biztosít az ilyen típusú típusok tömbből való összeállításához.
 
 ### <a name="pairs"></a>Párok ###
 
@@ -38,7 +38,7 @@ ApplyToEach(H, Snd(pair)); // No need to deconstruct to access the register.
 
 A Canon számos funkciót biztosít a tömbök manipulálására.
 Ezek a függvények Type-paraméteres, így bármilyen típusú tömbökkel használhatók Q# .
-A <xref:microsoft.quantum.arrays.reversed> függvény például egy olyan új tömböt ad vissza, amelynek elemei fordított sorrendben vannak a bemenettől.
+A <xref:Microsoft.Quantum.Arrays.Reversed> függvény például egy olyan új tömböt ad vissza, amelynek elemei fordított sorrendben vannak a bemenettől.
 Ezzel megváltoztathatja, hogy a rendszer hogyan jelenítse meg a kvantum-regisztereket a műveletek meghívásakor:
 
 ```qsharp
@@ -49,14 +49,14 @@ QFT(BigEndian(Reversed(leRegister!)));
 QFT(LittleEndianAsBigEndian(leRegister));
 ```
 
-Hasonlóképpen, a <xref:microsoft.quantum.arrays.subarray> függvény használható a tömb elemeinek átrendezésére vagy az elemek részhalmazának elvégzésére:
+Hasonlóképpen, a <xref:Microsoft.Quantum.Arrays.Subarray> függvény használható a tömb elemeinek átrendezésére vagy az elemek részhalmazának elvégzésére:
 
 ```qsharp
 // Applies H to qubits 2 and 5.
 ApplyToEach(H, Subarray([2, 5], register));
 ```
 
-A Flow Control szolgáltatással kombinálva a Array manipulációs függvények, például a (z) <xref:microsoft.quantum.arrays.zip> hatékony módot biztosítanak a kvantum-programok kiírására:
+A Flow Control szolgáltatással kombinálva a Array manipulációs függvények, például a (z) <xref:Microsoft.Quantum.Arrays.Zipped> hatékony módot biztosítanak a kvantum-programok kiírására:
 
 ```qsharp
 // Applies X₃ Y₁ Z₇ to a register of any size.
@@ -64,7 +64,7 @@ ApplyToEach(
     ApplyPauli(_, register),
     Map(
         EmbedPauli(_, _, Length(register)),
-        Zip([PauliX, PauliY, PauliZ], [3, 1, 7])
+        Zipped([PauliX, PauliY, PauliZ], [3, 1, 7])
     )
 );
 ```
@@ -127,8 +127,8 @@ is Adj + Ctl {
 }
 ```
 
-Ez az Oracle a művelet egy speciális esete <xref:microsoft.quantum.canon.rall1> , amely lehetővé teszi, hogy tetszőleges fázisban forgatható legyen a $ \phi = \pi $ reflexiós eset helyett.
-Ebben az esetben `RAll1` hasonló az <xref:microsoft.quantum.intrinsic.r1> előlépési művelethez, mert az a $ \ket{11\cdots1} $-t a qubit állapot ($ \ket $) helyett elforgatja {1} .
+Ez az Oracle a művelet egy speciális esete <xref:Microsoft.Quantum.Canon.RAll1> , amely lehetővé teszi, hogy tetszőleges fázisban forgatható legyen a $ \phi = \pi $ reflexiós eset helyett.
+Ebben az esetben `RAll1` hasonló az <xref:Microsoft.Quantum.Intrinsic.R1> előlépési művelethez, mert az a $ \ket{11\cdots1} $-t a qubit állapot ($ \ket $) helyett elforgatja {1} .
 
 A kezdeti alterületet jelölő Oracle hasonló módon építhető ki.
 A pseudocode-ben:
@@ -139,7 +139,7 @@ A pseudocode-ben:
 4. $X $ kaput alkalmazzon minden qubit.
 5. $H $ kaput alkalmazzon minden qubit.
 
-Ezúttal <xref:microsoft.quantum.canon.applywith> a <xref:microsoft.quantum.canon.rall1> fent ismertetett művelettel együtt is bemutatjuk a használatát:
+Ezúttal <xref:Microsoft.Quantum.Canon.ApplyWith> a <xref:Microsoft.Quantum.Canon.RAll1> fent ismertetett művelettel együtt is bemutatjuk a használatát:
 
 ```qsharp
 operation ReflectAboutInitial(register : Qubit[]) : Unit
@@ -163,7 +163,7 @@ Ez az egységes szolgáltatás a két Oracle-típus egyikének megfelelően van 
 > Ha többet szeretne megtudni a folyamatos lekérdezési Oracle-ról, tekintse meg a [ **PhaseEstimation** mintát](https://github.com/microsoft/Quantum/tree/main/samples/characterization/phase-estimation).
 > Ha többet szeretne megtudni a diszkrét lekérdezési Oracle-ról, tekintse meg a [ **IsingPhaseEstimation** mintát](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/phase-estimation).
 
-Az Oracle első típusa, amely egy különálló lekérdezési Oracle-t hív meg, és a felhasználó által definiált típusnak felel meg <xref:microsoft.quantum.oracles.discreteoracle> , egyszerűen magában foglal egy egységes mátrixot.
+Az Oracle első típusa, amely egy különálló lekérdezési Oracle-t hív meg, és a felhasználó által definiált típusnak felel meg <xref:Microsoft.Quantum.Oracles.DiscreteOracle> , egyszerűen magában foglal egy egységes mátrixot.
 Ha $U $ az az egységes, amelynek a eigenvalues szeretnénk megbecsülni, akkor az Oracle for $U $ egyszerűen egy olyan alrutinra vonatkozik, amely megvalósítja a $U $-t.
 Előfordulhat például, hogy az $U $ értéket kell megadnia az amplitúdó-becsléshez a fentiekben megadott Oracle $Q $ értékre.
 A mátrix eigenvalues felhasználható a kezdeti és a megcélzott állapotok, a $ \sin ^ 2 (\theta) $ közötti átfedés megbecslésére, amely a másodfokú módon kevesebb mintát használ, mint amennyit egyébként kellene.
@@ -173,7 +173,7 @@ Más szóval a $ \theta $ értéket szeretnénk megbecsülni egy ismeretlen rot�
 Ilyen esetekben az az alrutin, amelyet a \theta $ értékkel való együttműködéshez szeretne használni a kapun, $ $ \begin{align} U & = R_z (\theta) \\ \\ & = \begin{bmatrix} e ^ {-i \theta/2} & 0 \\ \\ 0 & e ^ {i \ THÉTA/2} \end{bmatrix}.
 \end{align} $ $
 
-A fázisok becslésében használt második Oracle a folyamatos lekérdezési Oracle, amelyet a típus képvisel <xref:microsoft.quantum.oracles.continuousoracle> .
+A fázisok becslésében használt második Oracle a folyamatos lekérdezési Oracle, amelyet a típus képvisel <xref:Microsoft.Quantum.Oracles.ContinuousOracle> .
 A folyamatos lekérdezési Oracle a fázis becsléséhez $U (t) $, ahol $t $ egy klasszikusan ismert valós szám.
 Ha hagyjuk, hogy a $U $ legyen rögzített, akkor a folyamatos lekérdezési Oracle az űrlapot $U (t) = U ^ t $ értéket veszi fel.
 Ez lehetővé teszi, hogy lekérdezzen egy olyan mátrixot, mint például a $ \sqrt{U} $, amely nem valósítható meg közvetlenül a diszkrét lekérdezési modellben.
@@ -261,7 +261,7 @@ newtype EvolutionUnitary = ((Double, Qubit[]) => Unit is Adj + Ctl);
 
 Az első paraméter az időtartamot jelöli, amelyet a (z) és a (z `GeneratorIndex` ) egységes evolúciós együtthatója szoroz. A második paraméter a qubit regisztrálja az egységes műveleteket. 
 
-### <a name="time-dependent-generators"></a>Időfüggő generátorok ###
+### <a name="time-dependent-generators"></a>Time-Dependent generátorok ###
 
 Sok esetben érdeklik az időfüggő generátorok modellezése is, például a következő Schrödinger-egyenletben: $ $ \begin{align} i\frac {d \ket{\psi (t)}} {d t} & = \hat H (t) \ket{\psi (t)}, \end{align} $ $, ahol a generátor $ \hat H (t) $ most időfügg. Ebben az esetben a fenti időponttól független generátorok kiterjesztése egyszerű. Ahelyett, hogy rögzítette `GeneratorSystem` a Hamilton összes $t $-os időpontra vonatkozó leírását, a `GeneratorSystemTimeDependent` felhasználó által definiált típust kell használnia.
 
