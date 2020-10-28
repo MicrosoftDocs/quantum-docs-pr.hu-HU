@@ -9,12 +9,12 @@ uid: microsoft.quantum.contributing.code
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 7a258a915a807b8e1ee7c2c9c062017d90f6a454
-ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
+ms.openlocfilehash: 47845c4f3520e8c50cf8aefd9bf9e8f086c42842
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91489765"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691807"
 ---
 # <a name="contributing-code"></a>Hozzájárulás a kódhoz
 
@@ -36,7 +36,7 @@ A Q# könyvtárakat, például a canont alkotó függvények, műveletek és fel
 
 A legújabb Q# verzióban az egység-tesztek az attribútummal vannak meghatározva `@Test("QuantumSimulator")` . Az argumentum lehet "QuantumSimulator", "ToffoliSimulator", "TraceSimulator" vagy bármely teljesen minősített név, amely megadja a Futtatás célját. Több, különböző futtatási célokat meghatározó attribútum is csatlakoztatható ugyanahhoz a meghívóhoz. A tesztek némelyike továbbra is az elavult [Microsoft. Quantum. xUnit](https://www.nuget.org/packages/Microsoft.Quantum.Xunit/) csomagot használja, amely Q# `Test` a [xUnit](https://xunit.github.io/) -keretrendszerbe végződő összes funkciót és műveletet elérhetővé teszi. Ez a csomag már nem szükséges az egységbeli tesztek definiálásához. 
 
-A következő függvény használatával biztosítható, hogy a <xref:microsoft.quantum.canon.fst> és a <xref:microsoft.quantum.canon.snd> függvények a megfelelő kimeneteket adják vissza egy reprezentatív példában.
+A következő függvény használatával biztosítható, hogy a <xref:Microsoft.Quantum.Canon.Fst> és a <xref:Microsoft.Quantum.Canon.Snd> függvények a megfelelő kimeneteket adják vissza egy reprezentatív példában.
 Ha a vagy a kimenete `Fst` `Snd` helytelen, a `fail` rendszer az utasítást használja, hogy a teszt sikertelen legyen.
 
 ```qsharp
@@ -57,7 +57,7 @@ function PairTest () : Unit {
 ```
 
 Összetettebb feltételek ellenőrizhetők a szabványos könyvtárak útmutatójának [tesztelés szakaszában](xref:microsoft.quantum.libraries.diagnostics) található módszerek használatával.
-Például a következő teszt ellenőrzi, hogy a `H(q); X(q); H(q);` hívása <xref:microsoft.quantum.canon.applywith> ugyanaz, mint a `Z(q)` .
+Például a következő teszt ellenőrzi, hogy a `H(q); X(q); H(q);` hívása <xref:Microsoft.Quantum.Canon.ApplyWith> ugyanaz, mint a `Z(q)` .
 
 ```Q#
 @Test("QuantumSimulator")
@@ -106,7 +106,7 @@ Végül a [Microsoft nyílt forráskódjának viselkedési szabályzatában](htt
 Szeretnénk biztosítani, hogy a hozzájárulások a teljes kvantum-számítástechnikai Közösséget, a jelenlegi csodálatos sokféleségben és a jövőben is kiszolgálják, ahogy az egyre nagyobb mértékben növekszik.
 Nagyra értékeljük segítségét ennek a célnak a megvalósításában.
 
-## <a name="next-steps"></a>További lépések
+## <a name="next-steps"></a>Következő lépések
 
 Köszönjük, hogy a Quantum Development Kit nagyszerű erőforrást biztosít a teljes kvantum-programozási Közösség számára!
 További információt a következő útmutatóban talál a Q# stílussal kapcsolatban.

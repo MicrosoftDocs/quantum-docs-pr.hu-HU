@@ -9,14 +9,14 @@ ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 1cfef50cf2bbecd2043972a662edd8120c5570ec
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: ad107f5c65a4bf368d12d30e4a72786f2076205c
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835621"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92690868"
 ---
-# <a name="higher-order-control-flow"></a>Magasabb rendű vezérlési folyamat #
+# <a name="higher-order-control-flow"></a>Higher-Order vezérlési folyamat #
 
 A standard szintű kódtár egyik elsődleges szerepköre, hogy könnyebb legyen a [kvantum-programok](https://en.wikipedia.org/wiki/Quantum_programming)segítségével kifejezni a magas szintű algoritmusos ötleteket.
 Így a Q# Canon számos különböző flow-vezérlési szerkezetet biztosít, amelyek mindegyike a függvények és műveletek részleges alkalmazásával valósítható meg.
@@ -38,7 +38,7 @@ for (idxQubit in 0..nQubits - 2) {
 }
 ```
 
-A <xref:microsoft.quantum.canon.applytoeachca> és a tömbben kifejezett manipulációs függvények, például a <xref:microsoft.quantum.arrays.zip> , ez sokkal rövidebb és könnyebben olvasható:
+A <xref:Microsoft.Quantum.Canon.ApplyToEachCA> és a tömbben kifejezett manipulációs függvények, például a <xref:Microsoft.Quantum.Arrays.Zipped> , ez sokkal rövidebb és könnyebben olvasható:
 
 ```qsharp
 ApplyToEachCA(CNOT, Zip(register[0..nQubits - 2], register[1..nQubits - 1]));
@@ -50,7 +50,7 @@ A szakasz további részében számos példát ismertetünk arra, hogy miként h
 
 A Canon által biztosított elsődleges absztrakciók egyike az iteráció.
 Vegyünk például egy egységes formát, $U \otimes U \otimes \cdots \otimes U $-t egyetlen qubit egységes $U $-ra.
-A-ben a Q# következő módon lehet ezt a lehetőséget használni a <xref:microsoft.quantum.arrays.indexrange> `for` regisztrálási hurokként:
+A-ben a Q# következő módon lehet ezt a lehetőséget használni a <xref:Microsoft.Quantum.Arrays.IndexRange> `for` regisztrálási hurokként:
 
 ```qsharp
 /// # Summary
@@ -83,16 +83,16 @@ ApplyToEachCA(Adjoint U, register);
 ```
 
 Ez azt jelenti, hogy a `ApplyToEachCA` megjelenő hívások olyan műveletekben jelenhetnek meg, amelyeknél a adjoint-specializáció automatikusan létrejön.
-Hasonlóképpen, az <xref:microsoft.quantum.canon.applytoeachindex> űrlap mintázatának ábrázolására is hasznos, `U(0, targets[0]); U(1, targets[1]); ...` és a bemenetek által támogatott összes-kombinációhoz biztosít verziókat.
+Hasonlóképpen, az <xref:Microsoft.Quantum.Canon.ApplyToEachIndex> űrlap mintázatának ábrázolására is hasznos, `U(0, targets[0]); U(1, targets[1]); ...` és a bemenetek által támogatott összes-kombinációhoz biztosít verziókat.
 
 > [!TIP]
 > `ApplyToEach` a Type-paraméter úgy van megadva, hogy olyan műveletekkel is használható legyen, amelyek nem a (z) értéket használják `Qubit` .
-> Tegyük fel például, hogy a `codeBlocks` <xref:microsoft.quantum.errorcorrection.logicalregister> helyreállításhoz szükséges értékek tömbje.
+> Tegyük fel például, hogy a `codeBlocks` <xref:Microsoft.Quantum.ErrorCorrection.LogicalRegister> helyreállításhoz szükséges értékek tömbje.
 > Ezután `ApplyToEach(Recover(code, recoveryFn, _), codeBlocks)` alkalmazza a hiba – a kód és a `code` helyreállítási függvényt az `recoveryFn` egyes blokkokra egymástól függetlenül.
 > Ez a klasszikus bemenetek esetében is `ApplyToEach(R(_, _, qubit), [(PauliX, PI() / 2.0); (PauliY(), PI() / 3.0]))` érvényes: a $ \pi/$2 rotációját alkalmazza a $X $ értékre, amelyet a $PI/$3 $Y $ értékkel való elforgatása követ.
 
 A Q# Canon Emellett támogatja a funkcionális programozáshoz ismert klasszikus enumerálási mintákat is.
-Például <xref:microsoft.quantum.arrays.fold> implementálja a mintát $f (f (f (s \_ {\text{Initial}}, x \_ 0), x \_ 1), \dots) $, hogy csökkentse a függvények listáját.
+Például <xref:Microsoft.Quantum.Arrays.Fold> implementálja a mintát $f (f (f (s \_ {\text{Initial}}, x \_ 0), x \_ 1), \dots) $, hogy csökkentse a függvények listáját.
 Ez a minta összegek, termékek, minimumok, Maxima és más hasonló függvények megvalósítására használható:
 
 ```qsharp
@@ -103,12 +103,12 @@ function Sum(xs : Int[]) {
 }
 ```
 
-Hasonlóképpen, a (z <xref:microsoft.quantum.arrays.mapped> ) és a függvények <xref:microsoft.quantum.arrays.mappedbyindex> is használhatók a funkcionális programozási fogalmak kifejezésére a alkalmazásban Q# .
+Hasonlóképpen, a (z <xref:Microsoft.Quantum.Arrays.Mapped> ) és a függvények <xref:Microsoft.Quantum.Arrays.MappedByIndex> is használhatók a funkcionális programozási fogalmak kifejezésére a alkalmazásban Q# .
 
 ## <a name="composing-operations-and-functions"></a>Műveletek és függvények összeállítása ##
 
 A Canon által kínált vezérlési folyamatokat a rendszer bemenetként használja fel, így hasznos lehet több művelet vagy funkció egyetlen hívható számára való összeállítására.
-Például a "^ {\dagger} $ $UVU minta rendkívül gyakori a kvantum-programozásban – úgy, hogy a Canon a műveletet <xref:microsoft.quantum.canon.applywith> absztraktként adja meg ehhez a mintához.
+Például a "^ {\dagger} $ $UVU minta rendkívül gyakori a kvantum-programozásban – úgy, hogy a Canon a műveletet <xref:Microsoft.Quantum.Canon.ApplyWith> absztraktként adja meg ehhez a mintához.
 Ez az absztrakció azt is lehetővé teszi, hogy a folyamatok hatékonyabb Compliation legyenek, ahogy `Controlled` a sorozatot illetően `U(qubit); V(qubit); Adjoint U(qubit);` nem kell mindegyikre hatnia `U` .
 Ha ezt szeretné látni, hagyja, hogy $c (U) $ legyen az egységes képviselő, `Controlled U([control], target)` és hagyja, hogy a $c (V) $ azonos módon legyen definiálva.
 Ezután egy tetszőleges állapothoz $ \ket{\psi} $, \begin{align} c (U) c (V) c (U) ^ \dagger \ket {1} \otimes \ket{\psi} & = \ket {1} \OTIMES (UVU ^ {\dagger} \ket{\psi}) \\ \\ & = (\boldone \otimes U) (c (V)) (\boldone \otimes U ^ \dagger) \ket {1} \otimes \ket{\psi}.
@@ -126,7 +126,7 @@ Mivel a vezérlési műveletek általában költségesek lehetnek, az ellenőrz�
 >     ('T => Unit is Adj + Ctl), 'T) => Unit
 > ```
 
-Hasonlóképpen <xref:microsoft.quantum.canon.bound> olyan műveleteket állít elő, amelyek más műveletek sorozatot alkalmaznak.
+Hasonlóképpen <xref:Microsoft.Quantum.Canon.Bound> olyan műveleteket állít elő, amelyek más műveletek sorozatot alkalmaznak.
 Például a következők egyenértékűek:
 
 ```qsharp
@@ -141,7 +141,7 @@ Az iterációs minták kombinálásával ez különösen hasznos lehet:
 ApplyWith(ApplyToEach(Bound([H, X]), _), QFT, _);
 ```
 
-### <a name="time-ordered-composition"></a>Idősorba rendezett összeállítás ###
+### <a name="time-ordered-composition"></a>Time-Ordered összetétele ###
 
 Továbbra is folytathatja a flow-szabályozást a részleges alkalmazás-és klasszikus függvények szempontjából, és a klasszikus folyamatok szabályozása szempontjából is elég kifinomult kvantum-fogalmakat modellez.
 Ez az analógia pontosan az a felismerés, hogy az egységes operátorok pontosan megegyeznek a hívási műveletek mellékhatásával, így az egységes operátorok más, az egységes operátorok általi lebomlása megfelel egy adott hívási sorrend létrehozásához a klasszikus alrutinok számára, amelyek olyan utasításokat bocsátanak ki, amelyek adott egységes operátorként működnek.
@@ -162,9 +162,9 @@ U(1, time / Float(nSteps), target);
 // ...
 ```
 
-Ezen a ponton most már a Trotter – Suzuki kiterjesztésre is hivatkozhatunk, *anélkül, hogy a kvantum-mechanikara*lenne szükség.
+Ezen a ponton most már a Trotter – Suzuki kiterjesztésre is hivatkozhatunk, *anélkül, hogy a kvantum-mechanikara* lenne szükség.
 A bővítés gyakorlatilag egy nagyon különleges iterációs minta, amelyet a $ \eqref{EQ: Trotter-Suzuki-0} $ alapján motiválnak.
-Ezt az iterációs mintát a következő implementálja <xref:microsoft.quantum.canon.decomposeintotimestepsca> :
+Ezt az iterációs mintát a következő implementálja <xref:Microsoft.Quantum.Canon.DecomposedIntoTimestepsCA> :
 
 ```qsharp
 // The 2 indicates how many terms we need to decompose,
@@ -180,7 +180,7 @@ Az aláírás a `DecomposeIntoTimeStepsCA` következő általános mintát köve
 Végül a Canon a `Controlled` feltételhez további lehetőségeket biztosít a kvantum-műveletek megkötésére.
 Gyakori – különösen a Quantum aritmetika esetében – a \ket{0\cdots 0} $-től eltérő számítási alapon végrehajtott műveletek feltétele.
 A fentiekben bemutatott vezérlési műveletek és függvények használatával egyetlen utasításban több általános kvantum-feltétel is megadható.
-Ismerkedjen meg a <xref:microsoft.quantum.canon.controlledonbitstring> következővel: Hogyan (Sans Type Parameters), majd a darabokat eggyel bontják le.
+Ismerkedjen meg a <xref:Microsoft.Quantum.Canon.ControlledOnBitString> következővel: Hogyan (Sans Type Parameters), majd a darabokat eggyel bontják le.
 Az első dolog, hogy meg kell határoznia egy olyan műveletet, amely valójában a vezérlő tetszőleges számítási alapon történő megvalósításának jelentős mértékű feloldását végzi.
 Ezt a műveletet nem hívjuk közvetlenül, és így a név elejéhez hozzáadjuk azt, `_` hogy jelezze, hogy egy másik szerkezet implementációja máshol.
 
@@ -212,8 +212,8 @@ Ez az építés pontosan működik `ApplyWith` , ezért az új művelet törzsé
 }
 ```
 
-Itt <xref:microsoft.quantum.canon.applypaulifrombitstring> alkalmazta a $P $-t, részben alkalmazva azt a cél használatára a szolgáltatással való használatra `ApplyWith` .
-Vegye figyelembe azonban, hogy a *vezérlő* regisztrációját át kell alakítani a kívánt űrlapra, ezért részben alkalmazzuk a belső műveletet a `(Controlled oracle)` *célhelyen*.
+Itt <xref:Microsoft.Quantum.Canon.ApplyPauliFromBitString> alkalmazta a $P $-t, részben alkalmazva azt a cél használatára a szolgáltatással való használatra `ApplyWith` .
+Vegye figyelembe azonban, hogy a *vezérlő* regisztrációját át kell alakítani a kívánt űrlapra, ezért részben alkalmazzuk a belső műveletet a `(Controlled oracle)` *célhelyen* .
 Így `ApplyWith` a vezérlő regisztrálása a $P $ értékkel pontosan úgy működik, ahogy a kívánt módon.
 
 Ezen a ponton megtehetjük, de valahogy nem teljesül, hogy az új műveletünk nem "érzi", mint az elmaradó alkalmazása `Controlled` .

@@ -9,12 +9,12 @@ uid: microsoft.quantum.guide.host-programs
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 2cb02617c81ee8b144ffe933f11b476ba6f4a23e
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: f1a4ef0616a8a3f1548b7a7207cf8cbb9dcc7260
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835961"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691705"
 ---
 # <a name="ways-to-run-a-no-locq-program"></a>Programok futtatásának módjai Q#
 
@@ -26,7 +26,7 @@ Az elsődleges különbség az, hogy a Q# következőket lehet futtatni:
 - önálló alkalmazásként, ahol az az Q# egyetlen érintett nyelv, és a program közvetlenül hívja meg a programot. Két metódus valójában a következő kategóriába tartozik:
   - a parancssori felület
   - Q# Jupyter notebookok
-- egy Python-vagy .NET-nyelven írt további *gazdagép-programmal*(például C# vagy F #), amely ezt követően meghívja a programot, és folytatja a visszaadott eredmények feldolgozását.
+- egy Python-vagy .NET-nyelven írt további *gazdagép-programmal* (például C# vagy F #), amely ezt követően meghívja a programot, és folytatja a visszaadott eredmények feldolgozását.
 
 Ha szeretné jobban megérteni ezeket a folyamatokat és azok különbségeit, tekintse meg Q# az egyszerű programot, és hasonlítsa össze a futtatási módszereit.
 
@@ -56,16 +56,16 @@ Ehhez egy [művelet](xref:microsoft.quantum.guide.basics#q-operations-and-functi
 ```
 Definiált egy műveletet, `MeasureSuperposition` amely nem vesz fel bemeneteket, és eredmény típusú értéket ad [Result](xref:microsoft.quantum.guide.types)vissza.
 
-Habár az ezen a lapon szereplő példák csak a Q# *műveletekből*állnak, az összes olyan fogalmat, amelyet a függvények is érintenek, Q# *functions*és ezért a *callables*együttesen hivatkozunk rájuk. A különbségeket az [ Q# alapjai: Operations and functions](xref:microsoft.quantum.guide.basics#q-operations-and-functions), valamint az azok definiálásával kapcsolatos további információk a [Operations and functions (műveletek és függvények](xref:microsoft.quantum.guide.operationsfunctions)) című cikkben találhatók.
+Habár az ezen a lapon szereplő példák csak a Q# *műveletekből* állnak, az összes olyan fogalmat, amelyet a függvények is érintenek, Q# *functions* és ezért a *callables* együttesen hivatkozunk rájuk. A különbségeket az [ Q# alapjai: Operations and functions](xref:microsoft.quantum.guide.basics#q-operations-and-functions), valamint az azok definiálásával kapcsolatos további információk a [Operations and functions (műveletek és függvények](xref:microsoft.quantum.guide.operationsfunctions)) című cikkben találhatók.
 
 ### <a name="callable-defined-in-a-no-locq-file"></a>Meghívható definiálva egy Q# fájlban
 
 A hívható pontosan az, amit a meghívott és futtat Q# .
 Azonban ehhez több kiegészítésre van szükség, amely egy teljes fájlt tartalmaz `*.qs` Q# .
 
-Az összes Q# típus-és callables (az Ön által definiált és a nyelvhez tartozók is) a *névterekben*vannak definiálva, amelyek minden olyan teljes nevet megadnak, amelyre hivatkozni lehet.
+Az összes Q# típus-és callables (az Ön által definiált és a nyelvhez tartozók is) a *névterekben* vannak definiálva, amelyek minden olyan teljes nevet megadnak, amelyre hivatkozni lehet.
 
-Például a és a [`H`](xref:microsoft.quantum.intrinsic.h) [`MResetZ`](xref:microsoft.quantum.measurement.mresetz) műveletek a és a [`Microsoft.Quantum.Instrinsic`](xref:microsoft.quantum.intrinsic) [`Microsoft.Quantum.Measurement`](xref:microsoft.quantum.measurement) névterekben találhatók (a [ Q# standard könyvtárak](xref:microsoft.quantum.qsharplibintro)része).
+Például a és a [`H`](xref:Microsoft.Quantum.Intrinsic.H) [`MResetZ`](xref:Microsoft.Quantum.Measurement.MResetZ) műveletek a és a [`Microsoft.Quantum.Instrinsic`](xref:Microsoft.Quantum.Intrinsic) [`Microsoft.Quantum.Measurement`](xref:Microsoft.Quantum.Measurement) névterekben találhatók (a [ Q# standard könyvtárak](xref:microsoft.quantum.qsharplibintro)része).
 Így mindig meghívhatják a *teljes* nevüket, de mindig megtehetik, `Microsoft.Quantum.Intrinsic.H(<qubit>)` `Microsoft.Quantum.Measurement.MResetZ(<qubit>)` hogy ez nagyon zsúfolt programkódot eredményez.
 
 Ehelyett `open` az utasítások lehetővé teszik, hogy a callables tömör gyorsírással legyenek hivatkozva, ahogy a fenti műveleti törzsben tettük.
@@ -90,8 +90,8 @@ namespace NamespaceName {
 > Tegyük fel például, hogy a `open Microsoft.Quantum.Instrinsic as NamespaceWithH;` fentieket fogjuk használni, majd meghívjuk a- `H` on keresztül `NamespaceWithH.H(<qubit>)` .
 
 > [!NOTE]
-> Ennek egyetlen kivétele a [`Microsoft.Quantum.Core`](xref:microsoft.quantum.core) névtér, amely mindig automatikusan megnyílik.
-> Ezért a callables, mint a [`Length`](xref:microsoft.quantum.core.length) mindig közvetlenül használhatók.
+> Ennek egyetlen kivétele a [`Microsoft.Quantum.Core`](xref:Microsoft.Quantum.Core) névtér, amely mindig automatikusan megnyílik.
+> Ezért a callables, mint a [`Length`](xref:Microsoft.Quantum.Core.Length) mindig közvetlenül használhatók.
 
 ### <a name="running-on-target-machines"></a>Futtatás a célszámítógépen
 
@@ -103,7 +103,7 @@ Mostantól a program általános futtatási modellje is Q# világossá válik.
 Először is az adott futtatáshoz megadott meghívónak hozzá kell férnie az ugyanabban a névtérben definiált összes más callables és típushoz.
 Emellett a [ Q# könyvtárak](xref:microsoft.quantum.libraries)bármelyikének hozzáférését is elérheti, de ezeket a teljes névvel vagy a fent ismertetett utasítások használatával kell hivatkozni `open` .
 
-A meghívót ezután futtathatja a *[célszámítógépen](xref:microsoft.quantum.machines)*.
+A meghívót ezután futtathatja a *[célszámítógépen](xref:microsoft.quantum.machines)* .
 Ilyen célszámítógépek lehetnek a tényleges kvantum-hardverek vagy a QDK részeként elérhető több szimulátorok.
 Erre a célra a leghasznosabb célszámítógép a [teljes állapotú szimulátor](xref:microsoft.quantum.machines.full-state-simulator)egy példánya, `QuantumSimulator` amely úgy számítja ki a program viselkedését, mintha egy zaj nélküli kvantum-számítógépen futna.
 
@@ -121,7 +121,7 @@ Először is megbeszéljük, hogy ez hogyan történik az Q# önálló alkalmaz�
 Fenntartjuk a Jupyter-jegyzetfüzetek önálló alkalmazását az Q# utolsó számára, mivel az első háromtól eltérően az elsődleges funkció nem a helyi fájlok körébe kerül Q# .
 
 > [!NOTE]
-> Habár nem mutatjuk be ezeket a példákat, a futtatási módszerek közötti egyetlen egység az, hogy a programon belülről kinyomtatott összes üzenet Q# ( [`Message`](xref:microsoft.quantum.intrinsic.message) például: vagy [`DumpMachine`](xref:microsoft.quantum.diagnostics.dumpmachine) ) általában mindig a megfelelő konzolra lesz kinyomtatva.
+> Habár nem mutatjuk be ezeket a példákat, a futtatási módszerek közötti egyetlen egység az, hogy a programon belülről kinyomtatott összes üzenet Q# ( [`Message`](xref:Microsoft.Quantum.Intrinsic.Message) például: vagy [`DumpMachine`](xref:Microsoft.Quantum.Diagnostics.DumpMachine) ) általában mindig a megfelelő konzolra lesz kinyomtatva.
 
 ## <a name="no-locq-from-the-command-prompt"></a>Q# a parancssorból
 A programok írásához legkönnyebben elsajátíthatja az első lépéseket, Q# hogy elkerülje a különálló fájlok és a második nyelv használatának elkerülését.
@@ -180,7 +180,7 @@ Egy ilyen művelet a következőképpen írható
     }
 ```
 ahol a visszaadott érték a mérési eredmények tömbje.
-Vegye figyelembe, hogy [`ApplyToEach`](xref:microsoft.quantum.canon.applytoeach) [`ForEach`](xref:microsoft.quantum.arrays.foreach) a és [`Microsoft.Quantum.Canon`](xref:microsoft.quantum.canon) a [`Microsoft.Quantum.Arrays`](xref:microsoft.quantum.arrays) névterek esetében további `open` utasításokra van szükség mindegyikhez.
+Vegye figyelembe, hogy [`ApplyToEach`](xref:Microsoft.Quantum.Canon.ApplyToEach) [`ForEach`](xref:Microsoft.Quantum.Arrays.ForEach) a és [`Microsoft.Quantum.Canon`](xref:Microsoft.Quantum.Canon) a [`Microsoft.Quantum.Arrays`](xref:Microsoft.Quantum.Arrays) névterek esetében további `open` utasításokra van szükség mindegyikhez.
 
 Ha az `@EntryPoint()` attribútumot az új művelet előtt helyezi át (vegye figyelembe, hogy egy fájlban csak egy ilyen sor lehet), és a futtatására tett kísérlet egyszerűen `dotnet run` olyan hibaüzenetet eredményez, amely azt jelzi, hogy milyen további parancssori kapcsolók szükségesek, és hogyan fejezheti ki őket.
 
@@ -593,7 +593,7 @@ Egy Q# Jupyter notebook a kódot ugyanúgy kell megadnia, Q# mint egy fájl név
 Ha egy cellát egy ilyen utasítással futtat, a névterek definíciói a munkaterület teljes területén elérhetők.
 
 > [!NOTE]
-> A [Microsoft. Quantum. belső](xref:microsoft.quantum.intrinsic) és a [Microsoft. Quantum. Canon](xref:microsoft.quantum.canon) (például [`H`](xref:microsoft.quantum.intrinsic.h) és) Callables [`ApplyToEach`](xref:microsoft.quantum.canon.applytoeach) automatikusan elérhetők a Jupyter-jegyzetfüzetekben lévő cellákban definiált műveletekhez Q# .
+> A [Microsoft. Quantum. belső](xref:Microsoft.Quantum.Intrinsic) és a [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon) (például [`H`](xref:Microsoft.Quantum.Intrinsic.H) és) Callables [`ApplyToEach`](xref:Microsoft.Quantum.Canon.ApplyToEach) automatikusan elérhetők a Jupyter-jegyzetfüzetekben lévő cellákban definiált műveletekhez Q# .
 > Ez azonban nem igaz a külső forrásfájlok által bevitt kód esetében Q# (a [jegyzetfüzetek bevezetője Q# és Jupyter](https://github.com/microsoft/Quantum/blob/main/samples/getting-started/intro-to-iqsharp/Notebook.ipynb)között látható folyamat). 
 > 
 

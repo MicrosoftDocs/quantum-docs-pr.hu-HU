@@ -9,12 +9,12 @@ ms.topic: tutorial
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 0dbeee8e092c830576ba8f79733035cdeeac11de
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 1bb66ae0fe7de785c417b0bef480e52adea5534d
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834958"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691713"
 ---
 # <a name="tutorial-write-and-simulate-qubit-level-programs-in-q"></a>Oktatóanyag: qubit-szintű programok írása és szimulálása a Q-ban\#
 
@@ -58,7 +58,7 @@ A Quantum program a Microsoft Quantum Development Kit-vel való futtatása álta
 
 Az oktatóanyag első része a művelet definiálását jelenti Q# `Perform3qubitQFT` , amely a Quantum Fourier-transzformációt három qubits hajtja végre. 
 
-Emellett a [`DumpMachine`](xref:microsoft.quantum.diagnostics.dumpmachine) függvény segítségével megfigyelheti, hogy a három qubit szimulált wavefunction hogyan fejlődik a művelet során.
+Emellett a [`DumpMachine`](xref:Microsoft.Quantum.Diagnostics.DumpMachine) függvény segítségével megfigyelheti, hogy a három qubit szimulált wavefunction hogyan fejlődik a művelet során.
 
 Az első lépés a Q# projekt és a fájl létrehozása.
 Az ehhez szükséges lépések a program meghívásához használt környezettől függenek, és a részleteket a megfelelő [telepítési útmutatókban](xref:microsoft.quantum.install)találja.
@@ -104,32 +104,32 @@ Q#A művelet keretében először három qubits-regisztrációt osztunk ki a `us
         }
 ```
 
-A `using` esetében a qubits automatikusan le lesznek foglalva a $ \ket {0} $ állapotba. Ezt a és a használatával is [`Message(<string>)`](xref:microsoft.quantum.intrinsic.message) ellenőrizheti [`DumpMachine()`](xref:microsoft.quantum.diagnostics.dumpmachine) , amely kinyomtat egy karakterláncot és a rendszer aktuális állapotát a konzolra.
+A `using` esetében a qubits automatikusan le lesznek foglalva a $ \ket {0} $ állapotba. Ezt a és a használatával is [`Message(<string>)`](xref:Microsoft.Quantum.Intrinsic.Message) ellenőrizheti [`DumpMachine()`](xref:Microsoft.Quantum.Diagnostics.DumpMachine) , amely kinyomtat egy karakterláncot és a rendszer aktuális állapotát a konzolra.
 
 > [!NOTE]
-> A `Message(<string>)` és a `DumpMachine()` függvények (és/ [`Microsoft.Quantum.Intrinsic`](xref:microsoft.quantum.intrinsic) vagy [`Microsoft.Quantum.Diagnostics`](xref:microsoft.quantum.diagnostics) ) egyaránt közvetlenül a konzolra nyomtathatnak. A tényleges kvantum-számításokhoz hasonlóan a nem Q# teszi lehetővé, hogy közvetlenül hozzáférhessenek a qubit állapotokhoz.
+> A `Message(<string>)` és a `DumpMachine()` függvények (és/ [`Microsoft.Quantum.Intrinsic`](xref:Microsoft.Quantum.Intrinsic) vagy [`Microsoft.Quantum.Diagnostics`](xref:Microsoft.Quantum.Diagnostics) ) egyaránt közvetlenül a konzolra nyomtathatnak. A tényleges kvantum-számításokhoz hasonlóan a nem Q# teszi lehetővé, hogy közvetlenül hozzáférhessenek a qubit állapotokhoz.
 > `DumpMachine`A célszámítógép aktuális állapotának kinyomtatásakor azonban értékes információkat biztosíthat a hibakereséshez és a tanuláshoz, amikor a teljes állapotú szimulátorral együtt használja.
 
 
 ### <a name="applying-single-qubit-and-controlled-gates"></a>Qubit és vezérelt kapuk alkalmazása
 
 Ezután alkalmazzuk a kaput, amely magában foglalja a műveletet.
-Q# a névtérben már számos alapvető kvantum-kapu található [`Microsoft.Quantum.Intrinsic`](xref:microsoft.quantum.intrinsic) , és ezek nem kivételek. 
+Q# a névtérben már számos alapvető kvantum-kapu található [`Microsoft.Quantum.Intrinsic`](xref:Microsoft.Quantum.Intrinsic) , és ezek nem kivételek. 
 
 Egy Q# műveleten belül a callables meghívására szolgáló utasítások természetesen szekvenciális sorrendben lesznek futtatva.
-Ezért az elsőként alkalmazandó kapu a [`H`](xref:microsoft.quantum.intrinsic.h) (Hadamard) az első qubit:
+Ezért az elsőként alkalmazandó kapu a [`H`](xref:Microsoft.Quantum.Intrinsic.H) (Hadamard) az első qubit:
 
 <br/>
 <img src="../media/qft_firstH.PNG" alt="Circuit diagram for three qubit QFT through first Hadamard" width="120">
 
 Ha egy műveletet egy adott qubit szeretne alkalmazni egy regiszterből (azaz egy `Qubit` tömbből), a `Qubit[]` szabványos index jelölést használjuk.
-Tehát a [`H`](xref:microsoft.quantum.intrinsic.h) regisztráció első qubit a következő formában kell alkalmazni `qs` :
+Tehát a [`H`](xref:Microsoft.Quantum.Intrinsic.H) regisztráció első qubit a következő formában kell alkalmazni `qs` :
 
 ```qsharp
             H(qs[0]);
 ```
 
-A `H` (Hadamard) kapunak az egyes qubits való alkalmazása mellett a QFT-áramkör elsősorban vezérelt [`R1`](xref:microsoft.quantum.intrinsic.r1) forgásokból áll.
+A `H` (Hadamard) kapunak az egyes qubits való alkalmazása mellett a QFT-áramkör elsősorban vezérelt [`R1`](xref:Microsoft.Quantum.Intrinsic.R1) forgásokból áll.
 Egy `R1(θ, <qubit>)` általános művelet változatlanul hagyja a qubit $ \ket {0} $ összetevőjét, miközben a ($e ^ {i\theta} $ elforgatását alkalmazza a $ \ket {1} $ összetevőre.
 
 #### <a name="controlled-operations"></a>Vezérelt műveletek
@@ -153,7 +153,7 @@ Ezeket a következővel hívjuk
             Controlled R1([qs[2]], (PI()/4.0, qs[0]));
 ```
 
-Vegye figyelembe, hogy a [`PI()`](xref:microsoft.quantum.math.pi) függvényt a [`Microsoft.Quantum.Math`](xref:microsoft.quantum.math) névtérből használjuk a PI radiánban kifejezett rotációk definiálásához.
+Vegye figyelembe, hogy a [`PI()`](xref:Microsoft.Quantum.Math.PI) függvényt a [`Microsoft.Quantum.Math`](xref:microsoft.quantum.math) névtérből használjuk a PI radiánban kifejezett rotációk definiálásához.
 Emellett a `Double` következőt osztjuk (például `2.0` ), mert egy egész számmal való osztás `2` hibát jelez. 
 
 > [!TIP]
@@ -171,7 +171,7 @@ A kapcsolódó `H` műveletek és a vezérelt rotációk alkalmazása után a m�
             H(qs[2]);
 ```
 
-[`SWAP`](xref:microsoft.quantum.intrinsic.swap)az áramkör betöltéséhez csak egy kaput kell alkalmazni:
+[`SWAP`](xref:Microsoft.Quantum.Intrinsic.SWAP)az áramkör betöltéséhez csak egy kaput kell alkalmazni:
 
 ```qsharp
             SWAP(qs[2], qs[0]);
@@ -188,7 +188,7 @@ A qubits a \ket $ állapotban voltak {0} , amikor kiosztottuk őket, és hasonl�
 
 ### <a name="deallocate-qubits"></a>Qubits felszabadítása
 
-A [`DumpMachine()`](xref:microsoft.quantum.diagnostics.dumpmachine) művelet elvégzése előtt ismét meghívjuk a művelet utáni állapotot, végül pedig [`ResetAll`](xref:microsoft.quantum.intrinsic.resetall) a qubit-regisztrációra, hogy alaphelyzetbe állítsa a qubits $ \ket $-re a következő {0} művelet végrehajtása előtt:
+A [`DumpMachine()`](xref:Microsoft.Quantum.Diagnostics.DumpMachine) művelet elvégzése előtt ismét meghívjuk a művelet utáni állapotot, végül pedig [`ResetAll`](xref:Microsoft.Quantum.Intrinsic.resetall) a qubit-regisztrációra, hogy alaphelyzetbe állítsa a qubits $ \ket $-re a következő {0} művelet végrehajtása előtt:
 
 ```qsharp
             Message("After:");
@@ -314,7 +314,7 @@ A C#-gazdagép négy részből áll:
     Ebben a példában nincs ilyen.
 3. A kvantumalgoritmus futtatása. 
     Minden Q# művelet létrehoz egy azonos nevű C#-osztályt. 
-    Ez az osztály olyan `Run` metódust tartalmaz, amely **aszinkron módon**futtatja a műveletet.
+    Ez az osztály olyan `Run` metódust tartalmaz, amely **aszinkron módon** futtatja a műveletet.
     A Futtatás aszinkron, mert a tényleges hardveren való futtatása aszinkron módon történik. 
     Mivel a `Run` metódus aszinkron módon van meghívva, a `Wait()` metódust hívjuk. ez letiltja a futtatást, amíg a feladat be nem fejeződik, és szinkron módon visszaadja az eredményt. 
 4. Dolgozza fel a művelet visszaadott eredményét.
@@ -347,12 +347,12 @@ namespace NamespaceQFT
 ```
 Futtassa az alkalmazást, és a kimenetnek meg kell egyeznie az alábbi értékkel.
 Egy billentyű lenyomása után a program bezárul.
-***
+**_
 
 ```Output
 Initial state |000>:
 # wave function for qubits with ids (least to most significant): 0;1;2
-|0>:     1.000000 +  0.000000 i  ==     ******************** [ 1.000000 ]     --- [  0.00000 rad ]
+|0>:     1.000000 +  0.000000 i  ==     _******************* [ 1.000000 ]     --- [  0.00000 rad ]
 |1>:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]                   
 |2>:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]                   
 |3>:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]                   
@@ -362,14 +362,14 @@ Initial state |000>:
 |7>:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]                   
 After:
 # wave function for qubits with ids (least to most significant): 0;1;2
-|0>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|1>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|2>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|3>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|4>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|5>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|6>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|7>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
+|0>:     0.353553 +  0.000000 i  ==     **_                  [ 0.125000 ]     --- [  0.00000 rad ]
+|1>:     0.353553 +  0.000000 i  ==     _*_                  [ 0.125000 ]     --- [  0.00000 rad ]
+|2>:     0.353553 +  0.000000 i  ==     _*_                  [ 0.125000 ]     --- [  0.00000 rad ]
+|3>:     0.353553 +  0.000000 i  ==     _*_                  [ 0.125000 ]     --- [  0.00000 rad ]
+|4>:     0.353553 +  0.000000 i  ==     _*_                  [ 0.125000 ]     --- [  0.00000 rad ]
+|5>:     0.353553 +  0.000000 i  ==     _*_                  [ 0.125000 ]     --- [  0.00000 rad ]
+|6>:     0.353553 +  0.000000 i  ==     _*_                  [ 0.125000 ]     --- [  0.00000 rad ]
+|7>:     0.353553 +  0.000000 i  ==     _*_                  [ 0.125000 ]     --- [  0.00000 rad ]
 ```
 
 Ha a teljes állapotú szimulátorra hívja fel a hívást, a a `DumpMachine()` Quantum State wavefunction adatforrásként-ábrázolását adja meg. Egy $n $-qubit rendszer lehetséges állapotai a $2 ^ n $ számítási alapú állapotok szerint jeleníthetők meg, amelyek mindegyike egy megfelelő összetett együtthatóval (egyszerűen egy amplitúdóval és egy szakasszal) rendelkezik.
@@ -380,14 +380,13 @@ A Qubit a `2` "legjelentősebb" érték azt jelenti, hogy az alapul szolgáló \
 
 
 A többi sor a kiinduló valószínűségi amplitúdót írja le a \ket{i} $ és a poláris formátumban egyaránt.
-A bemeneti állapot első sorában a $ \ket {000} $:
-* **`|0>:`** Ez a sor a `0` számítási alap állapotnak felel meg (mivel a kezdeti állapot utáni kiosztása $ \ket {000} $ volt, azt várnánk, hogy ez az egyetlen olyan állapot, amelynek a valószínűségi amplitúdója ezen a ponton).
-* **`1.000000 +  0.000000 i`**: a valószínűségi amplitúdója Descartes formátumban.
-* **` == `**: a `equal` jel elválasztja mindkét egyenértékű ábrázolást.
-* **`********************`**: A magnitúdó grafikus ábrázolása, amelynek száma arányos az `*` állapot-vektor mérésének valószínűségével. 
-* **`[ 1.000000 ]`**: a magnitúdó numerikus értéke
-* **`    ---`**: Az amplitúdó fázisának grafikus ábrázolása.
-* **`[ 0.0000 rad ]`**: a fázis numerikus értéke (radiánban).
+A bemeneti állapot első sorában, a $ \ket {000} $: _ értéknél **`|0>:`** Ez a sor a `0` számítási alap állapotnak felel meg (mivel a kezdeti állapot utáni kiosztása $ \ket {000} $ volt, azt várnánk, hogy ez az egyetlen olyan állapot, amelynek a valószínűségi amplitúdója ezen a ponton).
+* **`1.000000 +  0.000000 i`** : a valószínűségi amplitúdója Descartes formátumban.
+* **` == `** : a `equal` jel elválasztja mindkét egyenértékű ábrázolást.
+* **`********************`** : A magnitúdó grafikus ábrázolása, amelynek száma arányos az `*` állapot-vektor mérésének valószínűségével. 
+* **`[ 1.000000 ]`** : a magnitúdó numerikus értéke
+* **`    ---`** : Az amplitúdó fázisának grafikus ábrázolása.
+* **`[ 0.0000 rad ]`** : a fázis numerikus értéke (radiánban).
 
 A magnitúdó és a fázis is grafikus ábrázolással jelenik meg. A magnitúdó ábrázolása egyszerű: megmutatja, hogy egy sáv `*` , annál nagyobb a valószínűsége, annál nagyobb lesz a sáv. A fázisban tekintse meg a [tesztelés és hibakeresés: kiírási függvények](xref:microsoft.quantum.guide.testingdebugging#dump-functions) a lehetséges szimbólum-ábrázolásokhoz a szög tartományai alapján lehetőséget.
 
@@ -437,7 +436,7 @@ A blokkon belüli Fourier-transzformációs műveletek után `using` szúrja be 
                 set resultArray w/= i <- M(qs[i]);
             }
 ```
-A tömbben [`IndexRange`](xref:microsoft.quantum.arrays.indexrange) hívott függvény (például a qubits tömbje `qs` ) a tömbben lévő indexek tartományát adja vissza. Itt használjuk a `for` hurokban, hogy szekvenciálisan mérjük az egyes qubit az utasítás használatával `M(qs[i])` .
+A tömbben [`IndexRange`](xref:Microsoft.Quantum.Arrays.IndexRange) hívott függvény (például a qubits tömbje `qs` ) a tömbben lévő indexek tartományát adja vissza. Itt használjuk a `for` hurokban, hogy szekvenciálisan mérjük az egyes qubit az utasítás használatával `M(qs[i])` .
 Az egyes mért `Result` típusok ( `Zero` vagy `One` ) bekerülnek a megfelelő index helyére `resultArray` egy Update-and-reassign utasítással.
 
 > [!NOTE]
@@ -517,19 +516,19 @@ Futtassa a projektet, és a kimenetnek a következőhöz hasonlóan kell kinézn
 Before measurement: 
 # wave function for qubits with ids (least to most significant): 0;1;2
 |0>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|1>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|2>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|3>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|4>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|5>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|6>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|7>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
+|1>:     0.353553 +  0.000000 i  ==     **_                  [ 0.125000 ]     --- [  0.00000 rad ]
+|2>:     0.353553 +  0.000000 i  ==     _*_                  [ 0.125000 ]     --- [  0.00000 rad ]
+|3>:     0.353553 +  0.000000 i  ==     _*_                  [ 0.125000 ]     --- [  0.00000 rad ]
+|4>:     0.353553 +  0.000000 i  ==     _*_                  [ 0.125000 ]     --- [  0.00000 rad ]
+|5>:     0.353553 +  0.000000 i  ==     _*_                  [ 0.125000 ]     --- [  0.00000 rad ]
+|6>:     0.353553 +  0.000000 i  ==     _*_                  [ 0.125000 ]     --- [  0.00000 rad ]
+|7>:     0.353553 +  0.000000 i  ==     _*_                  [ 0.125000 ]     --- [  0.00000 rad ]
 After measurement:
 # wave function for qubits with ids (least to most significant): 0;1;2
 |0>:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]
 |1>:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]
 |2>:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]
-|3>:     1.000000 +  0.000000 i  ==     ******************** [ 1.000000 ]     --- [  0.00000 rad ]
+|3>:     1.000000 +  0.000000 i  ==     _******************* [ 1.000000 ]     --- [  0.00000 rad ]
 |4>:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]
 |5>:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]
 |6>:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]
@@ -565,20 +564,20 @@ Futtassa a fájlt, és a kimenetnek a következőhöz hasonlóan kell kinéznie:
 ```Output
 Before measurement: 
 # wave function for qubits with ids (least to most significant): 0;1;2
-|0>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|1>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|2>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|3>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|4>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|5>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|6>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|7>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
+|0>:     0.353553 +  0.000000 i  ==     **_                  [ 0.125000 ]     --- [  0.00000 rad ]
+|1>:     0.353553 +  0.000000 i  ==     _*_                  [ 0.125000 ]     --- [  0.00000 rad ]
+|2>:     0.353553 +  0.000000 i  ==     _*_                  [ 0.125000 ]     --- [  0.00000 rad ]
+|3>:     0.353553 +  0.000000 i  ==     _*_                  [ 0.125000 ]     --- [  0.00000 rad ]
+|4>:     0.353553 +  0.000000 i  ==     _*_                  [ 0.125000 ]     --- [  0.00000 rad ]
+|5>:     0.353553 +  0.000000 i  ==     _*_                  [ 0.125000 ]     --- [  0.00000 rad ]
+|6>:     0.353553 +  0.000000 i  ==     _*_                  [ 0.125000 ]     --- [  0.00000 rad ]
+|7>:     0.353553 +  0.000000 i  ==     _*_                  [ 0.125000 ]     --- [  0.00000 rad ]
 After measurement: 
 # wave function for qubits with ids (least to most significant): 0;1;2
 |0>:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]                   
 |1>:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]                   
 |2>:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]                   
-|3>:     1.000000 +  0.000000 i  ==     ******************** [ 1.000000 ]     --- [  0.00000 rad ]
+|3>:     1.000000 +  0.000000 i  ==     _******************* [ 1.000000 ]     --- [  0.00000 rad ]
 |4>:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]                   
 |5>:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]                   
 |6>:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]                   
@@ -642,20 +641,20 @@ Futtassa a projektet, és a kimenetnek a következőhöz hasonlóan kell kinézn
 ```Output
 Before measurement: 
 # wave function for qubits with ids (least to most significant): 0;1;2
-|0>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|1>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|2>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|3>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|4>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|5>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|6>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|7>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
+|0>:     0.353553 +  0.000000 i  ==     **_                  [ 0.125000 ]     --- [  0.00000 rad ]
+|1>:     0.353553 +  0.000000 i  ==     _*_                  [ 0.125000 ]     --- [  0.00000 rad ]
+|2>:     0.353553 +  0.000000 i  ==     _*_                  [ 0.125000 ]     --- [  0.00000 rad ]
+|3>:     0.353553 +  0.000000 i  ==     _*_                  [ 0.125000 ]     --- [  0.00000 rad ]
+|4>:     0.353553 +  0.000000 i  ==     _*_                  [ 0.125000 ]     --- [  0.00000 rad ]
+|5>:     0.353553 +  0.000000 i  ==     _*_                  [ 0.125000 ]     --- [  0.00000 rad ]
+|6>:     0.353553 +  0.000000 i  ==     _*_                  [ 0.125000 ]     --- [  0.00000 rad ]
+|7>:     0.353553 +  0.000000 i  ==     _*_                  [ 0.125000 ]     --- [  0.00000 rad ]
 After measurement:
 # wave function for qubits with ids (least to most significant): 0;1;2
 |0>:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]
 |1>:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]
 |2>:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]
-|3>:     1.000000 +  0.000000 i  ==     ******************** [ 1.000000 ]     --- [  0.00000 rad ]
+|3>:     1.000000 +  0.000000 i  ==     _******************* [ 1.000000 ]     --- [  0.00000 rad ]
 |4>:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]
 |5>:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]
 |6>:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]
@@ -677,7 +676,7 @@ Ez a kimenet néhány különböző dolgot mutat be:
 2. Az utólagos mérés után azt `DumpMachine` látjuk, hogy a mérés magára az állapotra _változik_ , és az alapszintű, a mért értéknek megfelelő egységes állapotba állítja azt.
 
 Ha többször is megismétli ezt a műveletet, akkor az eredmények statisztikái megkezdik a QFT-állapot ugyanilyen súlyozott feltételét, amely az egyes lövések véletlenszerű eredményét idézi elő.
-_Azonban_a nem hatékony és még mindig nem tökéletes, ezért csak az alapállapotok relatív amplitúdóit fogja reprodukálni, nem a közöttük lévő relatív fázisokat.
+_Azonban_ a nem hatékony és még mindig nem tökéletes, ezért csak az alapállapotok relatív amplitúdóit fogja reprodukálni, nem a közöttük lévő relatív fázisokat.
 Az utóbbi nem jelent problémát ebben a példában, de a relatív fázisok akkor jelennek meg, ha a QFT összetettebb inputot kap a $ \ket {000} $ értéknél.
 
 #### <a name="partial-measurements"></a>Részleges mérések 
@@ -701,13 +700,13 @@ Az eredményül kapott kimenetben látni fogja a fokozatos kivetítést az alter
 Ahogy azt a bevezetésben is említettük, a nagy része az, Q# hogy lehetővé teszi, hogy elvonta az egyes qubits foglalkozó aggodalmakat.
 Ha teljes körű, alkalmazható kvantum-programokat szeretne fejleszteni, ne aggódjon, hogy egy `H` adott művelet egy adott rotáció előtt vagy után leáll-e. 
 
-A Q# kódtárak tartalmazzák a [QFT](xref:microsoft.quantum.canon.qft) műveletet, amely egyszerűen elvégezhető, és tetszőleges számú qubits alkalmazható.
+A Q# kódtárak tartalmazzák a [QFT](xref:Microsoft.Quantum.Canon.QFT) műveletet, amely egyszerűen elvégezhető, és tetszőleges számú qubits alkalmazható.
 A kipróbáláshoz adjon meg egy új műveletet a Q# fájlban, amelynek a tartalma megegyezik `Perform3QubitQFT` , de az elsőtől `H` a `SWAP` helyébe két egyszerű sor lép:
 ```qsharp
             let register = BigEndian(qs);    //from Microsoft.Quantum.Arithmetic
             QFT(register);                   //from Microsoft.Quantum.Canon
 ```
-Az első sor egyszerűen létrehoz egy [`BigEndian`](xref:microsoft.quantum.arithmetic.bigendian) kifejezést a qubits lefoglalt tömbből, `qs` amely a [QFT](xref:microsoft.quantum.canon.qft) művelet argumentumként való végrehajtása.
+Az első sor egyszerűen létrehoz egy [`BigEndian`](xref:Microsoft.Quantum.Arithmetic.BigEndian) kifejezést a qubits lefoglalt tömbből, `qs` amely a [QFT](xref:Microsoft.Quantum.Canon.QFT) művelet argumentumként való végrehajtása.
 Ez megfelel a regisztrációban szereplő qubits index szerinti rendezésének.
 
 Ahhoz, hogy hozzáférhessenek ezekhez a műveletekhez, adja hozzá a `open` megfelelő névterekhez tartozó utasításokat a fájl elejéhez Q# :
@@ -720,7 +719,7 @@ Most állítsa be úgy a gazda programot, hogy meghívja az új művelet nevét 
 
 Ha szeretné megtekinteni a Q# könyvtári műveletek valódi előnyeit, módosítsa a qubits számát a következőre `3` :
 ```qsharp
-        mutable resultArray = new Result[4]; 
+        mutable resultArray = new Result[4];
 
         using (qs = Qubit[4]) {
             //...
@@ -729,16 +728,3 @@ Ha szeretné megtekinteni a Q# könyvtári műveletek valódi előnyeit, módos�
 Így alkalmazhatja a megfelelő QFT az adott számú qubits, anélkül, hogy aggódnia kellene az új `H` műveletek és Forgások az egyes qubit.
 
 Vegye figyelembe, hogy a Quantum Simulator exponenciálisan több időt vesz igénybe a qubits számának növelésével,---pontosan miért várjuk a valódi kvantum-hardvereket!
-
-
-
-
-
-
-
-
-
-
-
-
-

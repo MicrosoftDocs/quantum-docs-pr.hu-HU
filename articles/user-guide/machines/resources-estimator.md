@@ -9,12 +9,12 @@ uid: microsoft.quantum.machines.resources-estimator
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 6138c098a4efe2797c7d7360573ddcb9cb70a6c1
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: e1ec01d85a141b9c8a7a5ba5589663a0773520e7
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835927"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691877"
 ---
 # <a name="quantum-development-kit-qdk-resources-estimator"></a>A Quantum Development Kit (QDK) erőforrásainak kalkulátora
 
@@ -127,16 +127,43 @@ Az erőforrások becslése a következő metrikákat követi nyomon:
 |----|----|
 |__CNOT__    |A műveletek futtatási száma `CNOT` (más néven vezérelt Pauli X-műveletek).|
 |__QubitClifford__ |Egyetlen qubit Clifford-és Pauli-művelet futtatási száma.|
-|__mérték__    |A mérések futtatásának száma.  |
+|__Measure__    |A mérések futtatásának száma.  |
 |__R__    |A qubit-Forgások futtatásának száma, kivéve a `T` Clifford és a Pauli műveletet.  |
 |__T__    |A `T` műveletek és a konjugátumok futtatásának száma, beleértve a `T` műveleteket, a T_x = H. T. h és a T_y = a kifogyott. t. vízterületet.  |
-|__Mélység__|A művelet által futtatott Quantum Circuit mélységének alsó határa Q# . Alapértelmezés szerint a mélységi metrika csak a `T` gateset számolja. További részletekért lásd a [részletes számlálót](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter).   |
-|__Szélessége__    |A művelet futtatása során lefoglalt qubits maximális számának alsó határa Q# . Előfordulhat, hogy a __mélység__ és a __szélesség__ alsó határa nem érhető el egyszerre.  |
+|__Mélység__|A művelet által futtatott Quantum Circuit mélysége Q# (lásd [alább](#depth-width-and-qubitcount)). Alapértelmezés szerint a mélységi metrika csak a `T` gateset számolja. További részletekért lásd a [részletes számlálót](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter).   |
+|__Szélessége__|A művelet által futtatott kvantum-kör szélessége Q# (lásd [alább](#depth-width-and-qubitcount)). Alapértelmezés szerint a mélységi metrika csak a `T` gateset számolja. További részletekért lásd a [részletes számlálót](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter).   |
+|__QubitCount__    |A művelet futtatása során lefoglalt qubits maximális számának alsó határa Q# . Lehetséges, hogy ez a metrika nem kompatibilis a __mélységgel__ (lásd alább).  |
 |__BorrowedWidth__    |A műveleten belül kölcsönzött qubits maximális száma Q# .  |
+
+
+## <a name="depth-width-and-qubitcount"></a>Mélység, szélesség és QubitCount
+
+A jelentett mélységi és szélességi becslések kompatibilisek egymással.
+(Korábban mindkét szám elérhető volt, de a mélységhez és a szélességhez eltérő áramkörökre lenne szükség.) A párosban jelenleg mindkét metrikát ugyanazzal az áramkörrel lehet megvalósítani.
+
+A következő metrikákat kell jelenteni:
+
+__Mélység:__ A gyökérszintű művelethez – az adott kapu időpontját feltételezve, hogy végre kell hajtania.
+A (z) és a művelet végén a legutóbbi qubit rendelkezésre állási idő között meghívott vagy azt követő műveletek időeltolódása.
+
+__Szélesség:__ A gyökérszintű művelethez – a ténylegesen a végrehajtáshoz használt qubits száma (és a művelet meghívása).
+A vagy az azt követő műveletekhez – a művelet elején már használt qubits kívül még hány qubits használtak.
+
+Vegye figyelembe, hogy az újrafelhasznált qubits nem járul hozzá ehhez a számhoz.
+Ha azonban néhány qubits már megjelent a művelet elindítása előtt, és az A művelet által igényelt összes qubit (és az A-ból származó műveletek) a korábbi kiadási qubits újbóli használatával teljesültek, az A művelet szélességét 0-ra kell jelenteni. A qubits sikeres kölcsönzése nem járul hozzá a szélességhez.
+
+__QubitCount:__ A gyökérszintű művelethez – a művelet végrehajtásához elégséges qubits minimális száma (és az általa meghívott műveletek).
+A vagy az azt követő műveletek műveletekhez – a qubits minimális száma, amely elegendő lenne a művelet külön történő végrehajtásához. Ez a szám nem tartalmaz bemeneti qubits. Ez magában foglalja a kölcsönzött qubits is.
+
+Két működési mód támogatott. A módot a QCTraceSimulatorConfiguration. OptimizeDepth beállítással választhatja ki.
+
+__OptimizeDepth = True:__ A QubitManager a qubit újrahasznosítása és az új qubit lefoglalása minden alkalommal, amikor a rendszer kéri a qubit. A gyökérszintű művelet __mélysége__ a minimális mélység (alsó határ) lesz. Ehhez a mélységhez (mindkettőt egyszerre lehet megvalósítani) kompatibilis __szélességet__ kell jelenteni. Vegye figyelembe, hogy ez a szélesség valószínűleg nem lesz optimális a mélység miatt. A __QubitCount__ alacsonyabb lehet a legfelső szintű műveletnél, mert az újrafelhasználást feltételezi.
+
+__OptimizeDepth = FALSE:__ A QubitManager a qubits újrafelhasználását javasolta, és újból felhasználja a kiadott qubits az újak lefoglalása előtt. A gyökérszintű művelet __szélessége__ a minimális szélesség (alsó határ) lesz. A rendszer a kompatibilis __mélységet__ fogja jelenteni, amelyen elérhető. A __QubitCount__ megegyeznek a gyökérszintű művelet __szélességével__ , feltéve, hogy nincs hitelfelvétel.
 
 ## <a name="providing-the-probability-of-measurement-outcomes"></a>Mérési eredmények valószínűségének megadása
 
-<xref:microsoft.quantum.diagnostics.assertmeasurementprobability>A <xref:microsoft.quantum.diagnostics> névtérből való használatával információt adhat meg egy mérési művelet várható valószínűségéről. További információ: [Quantum Trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro)
+<xref:Microsoft.Quantum.Diagnostics.AssertMeasurementProbability>A <xref:Microsoft.Quantum.Diagnostics> névtérből való használatával információt adhat meg egy mérési művelet várható valószínűségéről. További információ: [Quantum Trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro)
 
 ## <a name="see-also"></a>Lásd még
 

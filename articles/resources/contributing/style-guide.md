@@ -9,12 +9,12 @@ uid: microsoft.quantum.contributing.style
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: fef3cea1c11e4fef49ddbf63adb34e07675049d2
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 7666974e255d537c8d611d0077b7f9b37a61f918
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834193"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691739"
 ---
 # <a name="no-locq-style-guide"></a>Q# Stílus útmutató #
 ## <a name="general-conventions"></a>Általános konvenciók ##
@@ -113,7 +113,7 @@ Javasoljuk, hogy:
 
 ### <a name="entry-points"></a>Belépési pontok
 
-Egy belépési pont programba való definiálásakor Q# a Q# fordító felismeri az [ `@EntryPoint()` attribútumot](xref:microsoft.quantum.core.entrypoint) , ami azt igényli, hogy a belépési pontok egy adott névvel rendelkezzenek (például: `main` , `Main` , vagy `__main__` ).
+Egy belépési pont programba való definiálásakor Q# a Q# fordító felismeri az [ `@EntryPoint()` attribútumot](xref:Microsoft.Quantum.Core.EntryPoint) , ami azt igényli, hogy a belépési pontok egy adott névvel rendelkezzenek (például: `main` , `Main` , vagy `__main__` ).
 Ez a fejlesztő szemszögéből a Q# beléptetési pontok a következőhöz fűzött általános műveletek: `@EntryPoint()` .
 Emellett a Q# belépési pontok egy teljes alkalmazáshoz (például Q# önálló végrehajtható programokban), vagy a Q# program és az alkalmazáshoz tartozó gazda program (azaz a Python vagy a .NET használatával) közötti kapcsolat lehet Q# , ha a "Main" név félrevezető lehet, ha egy Q# belépési pontra alkalmazva van.
 
@@ -134,7 +134,7 @@ Javasoljuk, hogy:
 | ☑ | `@EntryPoint() operation RunSimulation` | A művelet neve a belépési pont célját egyértelműen közli. |
 | ☒ | <s>`@EntryPoint() operation Main`</s> | A használata `Main` nem jelent egyértelmű kommunikációt a belépési pont céljával, és redundáns az `@EntryPoint()` attribútummal. |
 
-***
+**_
 
 ### <a name="shorthand-and-abbreviations"></a>Rövidítések és rövidítések ###
 
@@ -181,7 +181,7 @@ Javasoljuk, hogy:
 
 
 
-***
+_*_
 
 
 ### <a name="proper-nouns-in-names"></a>Megfelelő nevek a névben ###
@@ -208,14 +208,14 @@ Javasoljuk, hogy:
 
 # <a name="examples"></a>[Példák](#tab/examples)
 
-***
+_*_
 
 ### <a name="type-conversions"></a>Típus konverziója ###
 
 Mivel a Q# egy erősen és statikusan beírt nyelv, az egyik típus értéke csak más típusú érték lehet, mint egy típus-átalakítási függvény kifejezett hívása.
 Ez ellentétben áll azokkal a nyelvekkel, amelyek lehetővé teszik, hogy az értékek implicit módon módosítsák a típusokat (pl.: Type Promotion) vagy a casting használatával.
 Ennek eredményeképpen a konvertálási függvények fontos szerepet játszanak a Q# kódtár fejlesztésében, és az elnevezéssel kapcsolatban leggyakrabban felmerülő döntések egyikét alkotják.
-Azonban ez azt jelzi, hogy mivel a Type konverziók mindig _determinisztikus_, a függvények is megírhatók, ezért a fenti tanács alá tartoznak.
+Azonban ez azt jelzi, hogy mivel a Type konverziók mindig _determinisztikus_ , a függvények is megírhatók, ezért a fenti tanács alá tartoznak.
 Különösen azt javasoljuk, hogy a Type konverziós függvények soha ne legyenek elnevezve műveleteknek (pl.: `ConvertToX` ) vagy a határozószók előírási kifejezéseknek ( `ToX` ), hanem a forrás és a cél típusokat () jelző, melléknévi előírási kifejezéseknek kell nevezni `XAsY` .
 Ha a tömb típusait a konverziós függvények neveiben listázza, javasoljuk a gyorsírást `Arr` .
 A kivételes körülmények korlátozásával azt javasoljuk, hogy az összes Type konverziós függvény neve legyen, hogy `As` gyorsan azonosítható legyen.
@@ -235,7 +235,7 @@ Javasoljuk, hogy:
 | ☒ | <s>`PauliArrFromBoolArr`</s> | A bemeneti és a kimeneti típusok nem megfelelő sorrendben jelennek meg. |
 | ☑ | `ResultArrAsBoolArr` | A bemeneti típusok és a kimeneti típusok egyaránt törlődnek. |
 
-***
+_*_
 
 ### <a name="private-or-internal-names"></a>Magán-vagy belső nevek ###
 
@@ -256,7 +256,7 @@ Javasoljuk, hogy:
 | ☒ | <s>`operation _ApplyDecomposedOperation`</s> | Ne használjon aláhúzást `_` annak jelzésére, hogy a művelet csak belső használatra szolgál. |
 | ☑ | `internal operation ApplyDecomposedOperation` | Az `internal` elején lévő kulcsszó egyértelműen azt jelzi, hogy ez a művelet csak belső használatra szolgál. |
 
-***
+_*_
 ### <a name="variants"></a>Változatok ###
 
 Bár ez a korlátozás nem szűnik meg a későbbi verzióiban Q# , jelenleg a kapcsolódó műveletek vagy függvények olyan csoportjai lesznek, amelyek megkülönböztetni a bemenetek támogatását, illetve az argumentumok konkrét típusait.
@@ -280,7 +280,7 @@ Javasoljuk, hogy:
 
 # <a name="examples"></a>[Példák](#tab/examples)
 
-***
+_*_
 
 ### <a name="arguments-and-variables"></a>Argumentumok és változók ###
 
@@ -305,9 +305,9 @@ Javasoljuk, hogy:
 
 # <a name="examples"></a>[Példák](#tab/examples)
 
-***
+_*_
 
-### <a name="user-defined-type-named-items"></a>Felhasználó által definiált típus, névvel ellátott elemek ###
+### <a name="user-defined-type-named-items"></a>User-Defined megnevezett elemek típusa ###
 
 A felhasználó által definiált típusokban megnevezett elemek neveként kell nevezni `CamelCase` , még a UDT konstruktorok számára is.
 Ez segít az elnevezett elemek egyértelmű elkülönítésében a helyileg hatókörön belüli változókra mutató hivatkozásokkal a hozzáférési jelölés (például: `callable::Apply` ) vagy a másolási és frissítési jelölés ( `set arr w/= Data <- newData` ) használatakor.
@@ -323,13 +323,13 @@ Javasoljuk, hogy:
 
 # <a name="examples"></a>[Példák](#tab/examples)
 
-| &nbsp;  | Snippet | Description |
+| &nbsp;  | Snippet | Leírás |
 |---|---------|-------------|
 | ☑ | `newtype Oracle = (Apply : Qubit[] => Unit is Adj + Ctl)` | A név `Apply` egy `CamelCase` formázott igei kifejezés, amely arra utal, hogy az elnevezett elem egy művelet. |
 | ☒ | <s>`newtype Oracle = (apply : Qubit[] => Unit is Adj + Ctl) `</s> | Az elnevezett elemeknek kezdeti nagybetűvel kell kezdődnie. |
 | ☒ | <s>`newtype Collection = (Length : Int, Get : Int -> (Qubit => Unit)) `</s> | A függvények feloldására szolgáló névvel ellátott elemeknek főnévi kifejezéseknek kell lenniük, nem pedig ige kifejezéseknek. |
 
-***
+_*_
 
 ## <a name="input-conventions"></a>Bemeneti konvenciók ##
 
@@ -379,7 +379,7 @@ Javasoljuk, hogy:
 
 # <a name="examples"></a>[Példák](#tab/examples)
 
-***
+_*_
 
 ## <a name="documentation-conventions"></a>Dokumentációs konvenciók ##
 
@@ -451,7 +451,7 @@ is Adj + Ctl {
 }
 ```
 
-***
+_*_
 
 ## <a name="formatting-conventions"></a>Formázási konvenciók ##
 
@@ -479,11 +479,11 @@ Javasoljuk, hogy:
 
 # <a name="examples"></a>[Példák](#tab/examples)
 
-| &nbsp; | Snippet | Description |
+| &nbsp; | Snippet | Leírás |
 |---|---------|-------------|
 | ☒ | <s>`2+3`</s> | Használjon szóközöket a bináris operátorok köré. |
 | ☒ | <s>`target:Qubit`</s> | Használjon szóközt a típus megjegyzési kettőspontok használatával. |
 | ☑ | `Example(a, b, c)` | A bemeneti rekordban lévő elemek megfelelően vannak elfoglalva az olvashatóság érdekében. |
 | ☒ | <s>`Example (a, b, c)`</s> | A szóközöket a függvény, a művelet vagy a UDT neve után le kell tiltani. |
 
-***
+_**

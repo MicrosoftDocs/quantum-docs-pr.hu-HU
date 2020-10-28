@@ -9,12 +9,12 @@ uid: microsoft.quantum.guide.testingdebugging
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 2f2181d388a59c1c6c5a0f13c9aa49d5fa1e51ae
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 5505086c5efac89f6940cde1ecae2ce629cfeda5
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833175"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92690974"
 ---
 # <a name="testing-and-debugging"></a>Tesztelés és hibakeresés
 
@@ -32,7 +32,7 @@ Q# támogatja az egységek tesztelését a kvantum-programokhoz, és amelyek a [
 
 #### <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
 
-Nyissa meg a Visual Studio 2019 alkalmazást. Lépjen a **fájl** menüre, és válassza az **új > projekt...** lehetőséget. A jobb felső sarokban keresse meg a `Q#` elemet, és válassza ki a ** Q# teszt projekt** sablonját.
+Nyissa meg a Visual Studio 2019 alkalmazást. Lépjen a **fájl** menüre, és válassza az **új > projekt...** lehetőséget. A jobb felső sarokban keresse meg a `Q#` elemet, és válassza ki a **Q# teszt projekt** sablonját.
 
 #### <a name="command-line--visual-studio-code"></a>[Parancssor / Visual Studio Code](#tab/tabid-vscode)
 
@@ -75,13 +75,13 @@ A Q# fordító felismeri a beépített célokat `"QuantumSimulator"` , `"Toffoli
 
 #### <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
 
-Egyszeri egyszeri megoldás beállítása esetén lépjen a **teszt** menüre, és válassza a **tesztelési beállítások > az alapértelmezett processzor-architektúra > x64**elemet.
+Egyszeri egyszeri megoldás beállítása esetén lépjen a **teszt** menüre, és válassza a **tesztelési beállítások > az alapértelmezett processzor-architektúra > x64** elemet.
 
 > [!TIP]
 > A Visual Studio alapértelmezett processzor-architektúrájának beállítása az egyes megoldások megoldási beállítások ( `.suo` ) fájljában tárolódik.
 > Ha törli ezt a fájlt, akkor a processzor architektúrája előtt ki kell választania az **x64** -et.
 
-Hozza létre a projektet, nyissa meg a **teszt** menüt, és válassza a **Windows > test Explorer**lehetőséget. A **AllocateQubit** megjeleníti a tesztek listáját a **nem futtatott tesztek** csoportban. Válassza **az összes futtatása** lehetőséget, vagy futtassa ezt az egyéni tesztet.
+Hozza létre a projektet, nyissa meg a **teszt** menüt, és válassza a **Windows > test Explorer** lehetőséget. A **AllocateQubit** megjeleníti a tesztek listáját a **nem futtatott tesztek** csoportban. Válassza **az összes futtatása** lehetőséget, vagy futtassa ezt az egyéni tesztet.
 
 #### <a name="command-line--visual-studio-code"></a>[Parancssor / Visual Studio Code](#tab/tabid-vscode)
 
@@ -121,13 +121,13 @@ $ dotnet test --filter "Name=AllocateQubit"
 ```
 
 
-***
+**_
 
-A belső függvény <xref:microsoft.quantum.intrinsic.message> típusa `(String -> Unit)` és engedélyezése lehetővé teszi a diagnosztikai üzenetek létrehozását.
+A belső függvény <xref:Microsoft.Quantum.Intrinsic.Message> típusa `(String -> Unit)` és engedélyezése lehetővé teszi a diagnosztikai üzenetek létrehozását.
 
 #### <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
 
-Miután futtatott egy tesztet a test Explorerben, és rákattint a tesztre, megjelenik egy panel, amely a teszt futtatásával kapcsolatos információkat jeleníti meg: a Pass/Fail állapot, az eltelt idő és a kimenetre mutató hivatkozás. A **kimenet** lehetőségre kattintva megnyithatja a teszt kimenetét egy új ablakban.
+Miután futtatott egy tesztet a test Explorerben, és rákattint a tesztre, megjelenik egy panel, amely a teszt futtatásával kapcsolatos információkat jeleníti meg: a Pass/Fail állapot, az eltelt idő és a kimenetre mutató hivatkozás. Kattintson az _ output * ( *kimenet* *) elemre a tesztelési kimenet új ablakban való megnyitásához.
 
 ![teszt kimenete](~/media/unit-test-output.png)
 
@@ -136,7 +136,7 @@ Miután futtatott egy tesztet a test Explorerben, és rákattint a tesztre, megj
 Az egyes tesztek esetén a Pass/Fail állapotot a konzolon kell kinyomtatni `dotnet test` .
 A sikertelen tesztek esetén a kimenetek a konzolon is kinyomtathatók a hiba diagnosztizálásához.
 
-***
+**_
 
 ## <a name="facts-and-assertions"></a>Tények és kijelentések
 
@@ -160,13 +160,13 @@ Itt a kulcsszó `fail` azt jelzi, hogy a számítás nem folytatódhat, és kiv�
 Definíció szerint az ilyen típusú hibák nem figyelhetők meg a belülről Q# , mert a célszámítógép már nem futtatja a Q# kódot egy utasítás elérése után `fail` .
 Így ha folytatunk egy hívást a szolgáltatásba `PositivityFact` , biztos lehet abban, hogy a bemenete pozitív volt.
 
-Vegye figyelembe, hogy ugyanaz a viselkedés valósítható meg, mint a `PositivityFact` [`Fact`](xref:microsoft.quantum.diagnostics.fact) névtérből származó függvény használatával <xref:microsoft.quantum.diagnostics> :
+Vegye figyelembe, hogy ugyanaz a viselkedés valósítható meg, mint a `PositivityFact` [`Fact`](xref:Microsoft.Quantum.Diagnostics.fact) névtérből származó függvény használatával <xref:Microsoft.Quantum.Diagnostics> :
 
 ```qsharp
     Fact(value > 0, "Expected a positive number.");
 ```
 
-Az egyéb *kijelentéseket*hasonlóan a tényekhez használják, de a célszámítógép állapotától függően változhatnak. Ennek megfelelően a műveletekként vannak definiálva, míg a tények függvényekként vannak definiálva (ahogy az előző példában is látható).
+A _Assertions * másrészt a tényekhez hasonlóan használják, de a célszámítógép állapotától függően változhatnak. Ennek megfelelően a műveletekként vannak definiálva, míg a tények függvényekként vannak definiálva (ahogy az előző példában is látható).
 A különbségtétel megértéséhez vegye figyelembe, hogy a következők valamelyikét kell használnia egy állításon belül:
 
 ```qsharp
@@ -176,11 +176,11 @@ operation AssertQubitsAreAvailable() : Unit
 }
 ```
 
-Itt a műveletet használjuk a <xref:microsoft.quantum.environment.getqubitsavailabletouse> rendelkezésre álló qubits számának visszaküldéséhez.
+Itt a műveletet használjuk a <xref:Microsoft.Quantum.Environment.GetQubitsAvailableToUse> rendelkezésre álló qubits számának visszaküldéséhez.
 Mivel ez a program globális állapotától és a futtatási környezettől függ, a definíciójának is `AssertQubitsAreAvailable` egy műveletnek kell lennie.
 Ezt a globális állapotot azonban használhatja arra, hogy egy egyszerű `Bool` értéket adjon meg bemenetként a `Fact` függvénynek.
 
-Ezen ötletek alapján [a bevezetés](xref:microsoft.quantum.libraries.standard.prelude)két, különösen hasznos állítást kínál, <xref:microsoft.quantum.diagnostics.assertmeasurement> és <xref:microsoft.quantum.diagnostics.assertmeasurementprobability> mindkét modell a műveletekre épül `()` . Ezek a kijelentések mindegyike egy olyan Pauli-operátort mutat be, amely egy adott érdeklődési mérőszámot, egy kvantum-regisztrációt és egy feltételezett eredményt mutat be.
+Ezen ötletek alapján [a bevezetés](xref:microsoft.quantum.libraries.standard.prelude)két, különösen hasznos állítást kínál, <xref:Microsoft.Quantum.Diagnostics.AssertMeasurement> és <xref:Microsoft.Quantum.Diagnostics.AssertMeasurementProbability> mindkét modell a műveletekre épül `()` . Ezek a kijelentések mindegyike egy olyan Pauli-operátort mutat be, amely egy adott érdeklődési mérőszámot, egy kvantum-regisztrációt és egy feltételezett eredményt mutat be.
 A szimuláció által végzett működést [a nem klónozási tétel](https://en.wikipedia.org/wiki/No-cloning_theorem)nem köti, és ezeket a méréseket anélkül hajthatja végre, hogy megzavarja a regisztrációt, amely megfelel az ilyen állításoknak.
 A szimulátor ezután az `PositivityFact` előző függvényhez hasonló módon állíthatja le a számítást, ha a feltételezett eredmény nem figyelhető meg a gyakorlatban:
 
@@ -197,15 +197,15 @@ using (register = Qubit())
 
 Fizikai kvantum-hardveren, ahol a nem klónozási tétel megakadályozza a kvantum-állapot vizsgálatát, a `AssertMeasurement` és a `AssertMeasurementProbability` műveletek egyszerűen visszatérhetnek `()` más hatás nélkül.
 
-A <xref:microsoft.quantum.diagnostics> névtér több funkciót is biztosít a `Assert` család számára, amellyel további speciális feltételeket is megtudhat. 
+A <xref:Microsoft.Quantum.Diagnostics> névtér több funkciót is biztosít a `Assert` család számára, amellyel további speciális feltételeket is megtudhat. 
 
 ## <a name="dump-functions"></a>Memóriakép függvények
 
-A kvantum-programok hibaelhárításának elősegítése érdekében a <xref:microsoft.quantum.diagnostics> névtér két olyan függvényt biztosít, amelyek a célszámítógép aktuális állapotát a következő fájlba tudják bemutatni: <xref:microsoft.quantum.diagnostics.dumpmachine> és <xref:microsoft.quantum.diagnostics.dumpregister> . A generált kimenet a célszámítógéptől függ.
+A kvantum-programok hibaelhárításának elősegítése érdekében a <xref:Microsoft.Quantum.Diagnostics> névtér két olyan függvényt biztosít, amelyek a célszámítógép aktuális állapotát a következő fájlba tudják bemutatni: <xref:Microsoft.Quantum.Diagnostics.DumpMachine> és <xref:Microsoft.Quantum.Diagnostics.DumpRegister> . A generált kimenet a célszámítógéptől függ.
 
 ### <a name="dumpmachine"></a>DumpMachine
 
-A Quantum Development Kit részeként terjesztett teljes állapotú kvantum-szimulátor a teljes kvantum-rendszer [Wave függvényét](https://en.wikipedia.org/wiki/Wave_function) írja a komplex számok egydimenziós tömbje, amelyben az egyes elemek a számítás alapjául szolgáló "\ket{n} $" számítási valószínűségének amplitúdóját jelölik, ahol a $ \ket{n} = \ket{b_ {n-1}... b_1b_0} $ a BITS $ \{ b_i \} $ esetében. Például egy olyan gépen, amelyen csak két qubits van lefoglalva, és a Quantum State $ $ \begin{align} \ket{\psi} = \frac {1} {\sqrt {2} } \ket {00} -\frac{(1 + i)} {2} \ket {10} , a \end{align} $ $ hívás <xref:microsoft.quantum.diagnostics.dumpmachine> generálja ezt a kimenetet:
+A Quantum Development Kit részeként terjesztett teljes állapotú kvantum-szimulátor a teljes kvantum-rendszer [Wave függvényét](https://en.wikipedia.org/wiki/Wave_function) írja a komplex számok egydimenziós tömbje, amelyben az egyes elemek a számítás alapjául szolgáló "\ket{n} $" számítási valószínűségének amplitúdóját jelölik, ahol a $ \ket{n} = \ket{b_ {n-1}... b_1b_0} $ a BITS $ \{ b_i \} $ esetében. Például egy olyan gépen, amelyen csak két qubits van lefoglalva, és a Quantum State $ $ \begin{align} \ket{\psi} = \frac {1} {\sqrt {2} } \ket {00} -\frac{(1 + i)} {2} \ket {10} , a \end{align} $ $ hívás <xref:Microsoft.Quantum.Diagnostics.DumpMachine> generálja ezt a kimenetet:
 
 ```
 # wave function for qubits with ids (least to most significant): 0;1
@@ -219,12 +219,12 @@ Az első sorban a megfelelő qubits azonosítóit tartalmazó megjegyzés szerep
 A többi sor a kiinduló valószínűségi amplitúdót írja le a \ket{n} $ és a poláris formátumban egyaránt. Az első sorra vonatkozó részletek:
 
 * **`∣0❭:`** Ez a sor a `0` számítási alap állapotnak felel meg.
-* **`0.707107 +  0.000000 i`**: a valószínűségi amplitúdója Descartes formátumban.
-* **` == `**: a `equal` jel elválasztja mindkét egyenértékű ábrázolást.
-* **`**********  `**: A magnitúdó grafikus ábrázolása, amelynek száma arányos az `*` állapot-vektor mérésének valószínűségével.
-* **`[ 0.500000 ]`**: a magnitúdó numerikus értéke
-* **`    ---`**: Az amplitúdó fázisának grafikus ábrázolása (lásd a következő kimenetet).
-* **`[ 0.0000 rad ]`**: a fázis numerikus értéke (radiánban).
+* **`0.707107 +  0.000000 i`** : a valószínűségi amplitúdója Descartes formátumban.
+* **` == `** : a `equal` jel elválasztja mindkét egyenértékű ábrázolást.
+* **`**********  `** : A magnitúdó grafikus ábrázolása, amelynek száma arányos az `*` állapot-vektor mérésének valószínűségével.
+* **`[ 0.500000 ]`** : a magnitúdó numerikus értéke
+* **`    ---`** : Az amplitúdó fázisának grafikus ábrázolása (lásd a következő kimenetet).
+* **`[ 0.0000 rad ]`** : a fázis numerikus értéke (radiánban).
 
 A magnitúdó és a fázis is grafikus ábrázolással jelenik meg. A magnitúdó ábrázolása egyenesen előre látható: egy sáv `*` , annál nagyobb a valószínűsége annak, hogy a sáv nagyobb lesz. A fázisban a következő szimbólumok jelennek meg, amelyek a tartományon alapuló szöget jelölik:
 
@@ -299,7 +299,7 @@ Az alábbi példák `DumpMachine` néhány gyakori állapotot mutatnak be:
 #### <a name="command-line--visual-studio-code"></a>[Parancssor / Visual Studio Code](#tab/tabid-vscode)
 
   > [!TIP]
-  > A qubit megkeresheti a függvény használatával, és átadhatja <xref:microsoft.quantum.intrinsic.message> a qubit változót az üzenetben, például:
+  > A qubit megkeresheti a függvény használatával, és átadhatja <xref:Microsoft.Quantum.Intrinsic.Message> a qubit változót az üzenetben, például:
   >
   > ```qsharp
   > Message($"0={register2[0]}; 1={register2[1]}");
@@ -312,9 +312,9 @@ Az alábbi példák `DumpMachine` néhány gyakori állapotot mutatnak be:
   > Ez azt jelenti, hogy az indextel rendelkező qubit `0` `register2` azonosító = `3` , a qubit with index `1` azonosítója = `2` .
 
 
-***
+**_
 
-Mivel <xref:microsoft.quantum.diagnostics.dumpmachine> a a névtér része  <xref:microsoft.quantum.diagnostics> , hozzá kell adnia egy `open` utasítást az eléréséhez:
+Mivel <xref:Microsoft.Quantum.Diagnostics.DumpMachine> a a névtér része  <xref:Microsoft.Quantum.Diagnostics> , hozzá kell adnia egy `open` utasítást az eléréséhez:
 
 ```qsharp
 namespace Samples {
@@ -333,17 +333,17 @@ namespace Samples {
 
 ### <a name="dumpregister"></a>DumpRegister
 
-<xref:microsoft.quantum.diagnostics.dumpregister> ugyanúgy működik <xref:microsoft.quantum.diagnostics.dumpmachine> , mint az, hogy a qubits egy tömbjét is végrehajtja, amely az adatok mennyiségét csak a megfelelő qubits vonatkozó információkra korlátozza.
+<xref:Microsoft.Quantum.Diagnostics.DumpRegister> ugyanúgy működik <xref:Microsoft.Quantum.Diagnostics.DumpMachine> , mint az, hogy a qubits egy tömbjét is végrehajtja, amely az adatok mennyiségét csak a megfelelő qubits vonatkozó információkra korlátozza.
 
-A szolgáltatáshoz hasonlóan <xref:microsoft.quantum.diagnostics.dumpmachine> a által generált információk is a <xref:microsoft.quantum.diagnostics.dumpregister> célszámítógéptől függenek. Ahhoz, hogy a teljes állapotú kvantum-szimulátor a fájlba írja a Wave funkciót, a megadott qubits által generált kvantum alrendszer globális szakaszába kerül, amely ugyanabban a formátumban van <xref:microsoft.quantum.diagnostics.dumpmachine> .  Például: ismételje meg a gépet, amely csak két qubits foglal le, és a Quantum State $ $ \begin{align} \ket{\psi} = \frac {1} {\sqrt {2} } \ket {00} -\frac{(1 + i)} {2} \ket {10} =-e ^ {-i \ PI/4} ((\frac {1} {\sqrt} \ket {2} {0} -\frac{(1 + i)} {2} \ket {1} ) \otimes \frac{-(1 + i)} {\sqrt {2} } \ket {0} ), \end{align} $ $ hívás <xref:microsoft.quantum.diagnostics.dumpregister> a következő kimenet előállítására `qubit[0]` :
+A szolgáltatáshoz hasonlóan <xref:Microsoft.Quantum.Diagnostics.DumpMachine> a által generált információk is a <xref:Microsoft.Quantum.Diagnostics.DumpRegister> célszámítógéptől függenek. Ahhoz, hogy a teljes állapotú kvantum-szimulátor a fájlba írja a Wave funkciót, a megadott qubits által generált kvantum alrendszer globális szakaszába kerül, amely ugyanabban a formátumban van <xref:Microsoft.Quantum.Diagnostics.DumpMachine> .  Például: ismételje meg a gépet, amely csak két qubits foglal le, és a Quantum State $ $ \begin{align} \ket{\psi} = \frac {1} {\sqrt {2} } \ket {00} -\frac{(1 + i)} {2} \ket {10} =-e ^ {-i \ PI/4} ((\frac {1} {\sqrt} \ket {2} {0} -\frac{(1 + i)} {2} \ket {1} ) \otimes \frac{-(1 + i)} {\sqrt {2} } \ket {0} ), \end{align} $ $ hívás <xref:Microsoft.Quantum.Diagnostics.DumpRegister> a következő kimenet előállítására `qubit[0]` :
 
 ```
 # wave function for qubits with ids (least to most significant): 0
-∣0❭:    -0.707107 + -0.707107 i  ==     ******************** [ 1.000000 ]  /      [ -2.35619 rad ]
+∣0❭:    -0.707107 + -0.707107 i  ==     _******************* [ 1.000000 ]  /      [ -2.35619 rad ]
 ∣1❭:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]                   
 ```
 
-ezt a <xref:microsoft.quantum.diagnostics.dumpregister> kimenetet a következőre hívja `qubit[1]` elő:
+ezt a <xref:Microsoft.Quantum.Diagnostics.DumpRegister> kimenetet a következőre hívja `qubit[1]` elő:
 
 ```
 # wave function for qubits with ids (least to most significant): 1
@@ -351,13 +351,13 @@ ezt a <xref:microsoft.quantum.diagnostics.dumpregister> kimenetet a következőr
 ∣1❭:    -0.500000 + -0.500000 i  ==     ***********          [ 0.500000 ]  /      [ -2.35619 rad ]
 ```
 
-Általánosságban elmondható, hogy egy másik regiszterrel összefoglalt regiszter állapota kevert állapot, nem pedig tiszta állapot. Ebben az esetben <xref:microsoft.quantum.diagnostics.dumpregister> a következő üzenetet jeleníti meg:
+Általánosságban elmondható, hogy egy másik regiszterrel összefoglalt regiszter állapota kevert állapot, nem pedig tiszta állapot. Ebben az esetben <xref:Microsoft.Quantum.Diagnostics.DumpRegister> a következő üzenetet jeleníti meg:
 
 ```
 Qubits provided (0;) are entangled with some other qubit.
 ```
 
-Az alábbi példa bemutatja, hogyan használható a kód a <xref:microsoft.quantum.diagnostics.dumpregister> és <xref:microsoft.quantum.diagnostics.dumpmachine> a Q# kódban:
+Az alábbi példa bemutatja, hogyan használható a kód a <xref:Microsoft.Quantum.Diagnostics.DumpRegister> és <xref:Microsoft.Quantum.Diagnostics.DumpMachine> a Q# kódban:
 
 ```qsharp
 namespace app

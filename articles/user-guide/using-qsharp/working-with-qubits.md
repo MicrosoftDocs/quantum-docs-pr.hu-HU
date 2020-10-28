@@ -9,12 +9,12 @@ uid: microsoft.quantum.guide.qubits
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: aa942a61280553ae4e51cd5ddcc85c0df935dab1
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 9a3d7e03016332a04ac9d1610428b6fcd546d1f6
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835859"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691576"
 ---
 # <a name="working-with-qubits"></a>Munkavégzés qubitekkel
 
@@ -29,14 +29,14 @@ Ez a cikk azt ismerteti, hogyan használható a qubits egy Q# programban.
 
 Mivel a fizikai qubits értékes erőforrások a kvantum-számítógépeken, a fordító feladata, hogy a lehető leghatékonyabban használják őket.
 Ezért meg kell adnia, hogy a Q# qubits egy adott utasítás blokkon belül kell-e *lefoglalni* .
-A qubits kioszthatja egyetlen qubit, vagy qubits tömbként is, amely *regisztrálható*. 
+A qubits kioszthatja egyetlen qubit, vagy qubits tömbként is, amely *regisztrálható* . 
 
 ### <a name="clean-qubits"></a>Qubits tisztítása
 
 Az utasítás használatával `using` új qubits foglalhat le az utasításhoz.
 
 Az utasítás a kulcsszót tartalmazza `using` , majd egy kötést zárójelek közé, `( )` valamint azt az utasítást, amelyben a qubits elérhetők.
-A kötés ugyanazt a mintát követi, mint az utasítások: egy vagy több szimbólumot `let` vagy egy szimbólumot, majd egy egyenlőségjelet `=` , és egy értéket, vagy az *inicializálók*egyező rekordját.
+A kötés ugyanazt a mintát követi, mint az utasítások: egy vagy több szimbólumot `let` vagy egy szimbólumot, majd egy egyenlőségjelet `=` , és egy értéket, vagy az *inicializálók* egyező rekordját.
 
 Az inicializálók a következők lehetnek: egyetlen qubit, `Qubit()` vagy qubits tömbje, `Qubit[n]` ahol `n` a `Int` kifejezés szerepel.
 Például:
@@ -95,7 +95,7 @@ Bizonyos értelemben ez azt eredményezi, hogy egy Q# program qubit végezhető 
 Ez a cikk néhány hasznos műveletet mutat be, amelyek segítségével használhatja a Q# qubits.
 Ezekről és másokról a [belső műveletek és függvények](xref:microsoft.quantum.libraries.standard.prelude)című témakörben olvashat részletesebben. 
 
-Első lépésként a qubit Pauli-operátorok $X $, $Y $ és $Z $ a Q# belső műveletek, a és a [`X`](xref:microsoft.quantum.intrinsic.x) [`Y`](xref:microsoft.quantum.intrinsic.y) [`Z`](xref:microsoft.quantum.intrinsic.z) , amelyek mindegyike rendelkezik típussal `(Qubit => Unit is Adj + Ctl)` .
+Első lépésként a qubit Pauli-operátorok $X $, $Y $ és $Z $ a Q# belső műveletek, a és a [`X`](xref:Microsoft.Quantum.Intrinsic.X) [`Y`](xref:Microsoft.Quantum.Intrinsic.Y) [`Z`](xref:Microsoft.Quantum.Intrinsic.Z) , amelyek mindegyike rendelkezik típussal `(Qubit => Unit is Adj + Ctl)` .
 
 A [belső műveletek és függvények](xref:microsoft.quantum.libraries.standard.prelude)című témakörben leírtak szerint $X $-t és így tovább, `X` mint egy kicsit flip művelet vagy nem kapu.
 A `X` művelettel előkészítheti a (z) $ \ket{s_0 s_1 \dots s_n} $ formátumú állapotokat néhány klasszikus bites sztring $s $ esetén:
@@ -127,7 +127,7 @@ operation RunExample() : Unit {
 > [!TIP]
 > Később további kompakt módszereket láthat a művelet megírásához, amelyek nem igénylik a kézi vezérlés folyamatát.
 
-Az olyan állapotokat is előkészítheti, mint például a $ \ket{+} = \left (\ket {0} + \ket {1} \right)/\sqrt {2} $ és a $ \ket {-} = \left (\ket {0} -\ket {1} \Right)/\sqrt {2} $ a Hadamard Transform $H $ paranccsal, amelyet Q# a belső művelet [`H`](xref:microsoft.quantum.intrinsic.h) (Qubit => egység: Adj + CTL) ") használ:
+Az olyan állapotokat is előkészítheti, mint például a $ \ket{+} = \left (\ket {0} + \ket {1} \right)/\sqrt {2} $ és a $ \ket {-} = \left (\ket {0} -\ket {1} \Right)/\sqrt {2} $ a Hadamard Transform $H $ paranccsal, amelyet Q# a belső művelet [`H`](xref:Microsoft.Quantum.Intrinsic.H) (Qubit => egység: Adj + CTL) ") használ:
 
 ```qsharp
 operation PreparePlusMinusState(bitstring : Bool[], register : Qubit[]) : Unit {
@@ -149,7 +149,7 @@ A *számítási alap* a `PauliZ` mértékre hivatkozik, és a mérések leggyako
 
 ### <a name="measure-a-single-qubit-in-the-pauliz-basis"></a>Egyetlen qubit mérése az `PauliZ` alapján
 
-A [`M`](xref:microsoft.quantum.intrinsic.m) művelettel, amely egy beépített belső, nem egységes művelet, amely egyetlen qubit mérésére szolgál, `PauliZ` és egy klasszikus értéket rendel hozzá az eredményhez.
+A [`M`](xref:Microsoft.Quantum.Intrinsic.M) művelettel, amely egy beépített belső, nem egységes művelet, amely egyetlen qubit mérésére szolgál, `PauliZ` és egy klasszikus értéket rendel hozzá az eredményhez.
 `M` egy fenntartott visszatérési típussal rendelkezik, `Result` amely csak értékeket `Zero` vagy `One` a mért állapotoknak felel meg a $ \ket {0} $ vagy $ \ket $ értékkel, ami {1} azt jelzi, hogy az eredmény már nem kvantum-állapot.
 
 Egy egyszerű példa a következő művelet, amely egy qubit foglal le a $ \ket {0} $ állapotban, majd Hadamard műveletet alkalmaz `H` rá, és az eredményt az `PauliZ` alapján méri.
@@ -175,7 +175,7 @@ operation MeasureOneQubit() : Result {
 
 ### <a name="measure-one-or-more-qubits-in-specific-bases"></a>Egy vagy több qubits mérése adott alapokon
 
-Ha egy vagy több qubits egy tömbjét szeretné mérni adott alapokon, használhatja a [`Measure`](xref:microsoft.quantum.intrinsic.measure) műveletet.
+Ha egy vagy több qubits egy tömbjét szeretné mérni adott alapokon, használhatja a [`Measure`](xref:Microsoft.Quantum.Intrinsic.Measure) műveletet.
 
 A bemenetek a `Measure` típusok tömbje `Pauli` (például: `[PauliX, PauliZ, PauliZ]` ), valamint a qubits tömbje.
 

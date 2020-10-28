@@ -9,12 +9,12 @@ uid: microsoft.quantum.relnotes
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 27038a86dc4854c397458d95529aca463d493fd6
-ms.sourcegitcommit: d98190988ff03146d9ca2b0d325870cd717d729a
+ms.openlocfilehash: fae603a81f8edc23ab8dc14277c5e3c4699f2cee
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91771334"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691688"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>A Microsoft Quantum Development Kit kibocsátási megjegyzései
 
@@ -23,6 +23,16 @@ Ez a cikk információkat tartalmaz a Quantum Development Kit egyes verzióiról
 A telepítési utasításokat lásd a [telepítési útmutatóban](xref:microsoft.quantum.install).
 
 A frissítésre vonatkozó utasításokat lásd a [frissítési útmutatóban](xref:microsoft.quantum.update).
+
+## <a name="version-01320102604"></a>0.13.20102604 verziója
+
+*Kiadás dátuma: október 27., 2020*
+
+A verzió a következőket tartalmazza:
+
+- Az erőforrás-becslés mostantól egyidejűleg elérhető mélységi és szélességi becsléseket bocsát ki a qubit száma mellett. Részletekért lásd [itt](xref:microsoft.quantum.machines.resources-estimator#metrics-reported) .
+
+Tekintse meg a [kódtárak](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+closed%3A2020-09-25..2020-10-22), [fordítóprogramok](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+closed%3A2020-09-25..2020-10-22), [futtatókörnyezetek](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+closed%3A2020-09-25..2020-10-22), [minták](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+closed%3A2020-09-25..2020-10-22), [I Q# ](https://github.com/microsoft/iqsharp/pulls?q=is%3Apr+closed%3A2020-09-25..2020-10-22) és [kataek](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+closed%3A2020-09-25..2020-10-22)teljes listáját.
 
 ## <a name="version-01220100504"></a>0.12.20100504 verziója
 
@@ -54,8 +64,8 @@ Tekintse meg a [kódtárak](https://github.com/Microsoft/QuantumLibraries/pulls?
 
 A verzió a következőket tartalmazza:
 
-- Új [Microsoft. Quantum. Random névtér](xref:microsoft.quantum.random), amely megkönnyíti a véletlenszerű értékek mintavételezését a Q# programokon belülről. ([QuantumLibraries # 311](https://github.com/microsoft/QuantumLibraries/pull/311), [qsharp-Runtime # 328](https://github.com/microsoft/qsharp-runtime/pull/328))
-- Javította a [Microsoft. Quantum. Diagnostics névteret](xref:microsoft.quantum.diagnostics) új [ `DumpOperation` művelettel](xref:microsoft.quantum.diagnostics.dumpoperation), valamint új műveleteket a qubit-kiosztási és az Oracle-hívások korlátozásához. ([QuantumLibraries # 302](https://github.com/microsoft/QuantumLibraries/pull/302))
+- Új [Microsoft. Quantum. Random névtér](xref:Microsoft.Quantum.Random), amely megkönnyíti a véletlenszerű értékek mintavételezését a Q# programokon belülről. ([QuantumLibraries # 311](https://github.com/microsoft/QuantumLibraries/pull/311), [qsharp-Runtime # 328](https://github.com/microsoft/qsharp-runtime/pull/328))
+- Javította a [Microsoft. Quantum. Diagnostics névteret](xref:Microsoft.Quantum.Diagnostics) új [ `DumpOperation` művelettel](xref:Microsoft.Quantum.Diagnostics.DumpOperation), valamint új műveleteket a qubit-kiosztási és az Oracle-hívások korlátozásához. ([QuantumLibraries # 302](https://github.com/microsoft/QuantumLibraries/pull/302))
 - Új [ `%project` Magic-parancs](xref:microsoft.quantum.iqsharp.magic-ref.project) a Q# Pythonban és az [ `qsharp.projects` API](https://docs.microsoft.com/python/qsharp-core/qsharp.projects.projects) -ban, hogy támogassa az Q# aktuális munkaterület-mappán kívüli projektekre való hivatkozásokat. A szolgáltatás jelenlegi korlátaihoz lásd: [iqsharp # 277](https://github.com/microsoft/iqsharp/issues/277) . 
 - Támogatja a fájlok automatikus betöltését `.csproj` az I Q# /Python gazdagépek számára, amely lehetővé teszi, hogy a külső projekt vagy csomag hivatkozásait inicializálási időben lehessen betölteni. További részletekért tekintse meg a [ Q# Python és a Jupyter notebookok](xref:microsoft.quantum.guide.host-programs) használatát ismertető útmutatót.
 - Hozzáadott ErrorCorrection. szindróma minta.
@@ -83,7 +93,7 @@ Tekintse meg a [kódtárak](https://github.com/Microsoft/QuantumLibraries/pulls?
 A verzió a következőket tartalmazza:
 
 - Új `qdk-chem` eszköz az örökölt elektronikus struktúra problémák szerializálási formátumának (például: FCIDUMP) a [Broombridge](xref:microsoft.quantum.libraries.chemistry.schema.broombridge) való átalakításához
-- Új függvények és műveletek a [`Microsoft.Quantum.Synthesis`](xref:microsoft.quantum.synthesis) névtérben az átalakítási és a deösszetételes-alapú szintézisi algoritmusok segítségével, hogy koherens módon alkalmazzák a klasszikus Oracle-ket.
+- Új függvények és műveletek a [`Microsoft.Quantum.Synthesis`](xref:Microsoft.Quantum.Synthesis) névtérben az átalakítási és a deösszetételes-alapú szintézisi algoritmusok segítségével, hogy koherens módon alkalmazzák a klasszikus Oracle-ket.
 - Q#Mostantól a `%simulate` , a `%estimate` és más Magic parancsok argumentumait is engedélyezi. További részletekért tekintse meg a [ `%simulate` Magic parancs referenciáját](xref:microsoft.quantum.iqsharp.magic-ref.simulate) .
 - Új fázis megjelenítési beállításai az I-ben Q# . További részletekért tekintse meg a [ `%config` Magic parancs referenciáját](xref:microsoft.quantum.iqsharp.magic-ref.config) .
 - Én Q# és a `qsharp` Python-csomag mostantól Conda-csomagokon ([qsharp](https://anaconda.org/quantum-engineering/qsharp) és [iqsharp](https://anaconda.org/quantum-engineering/iqsharp)) keresztül érhető el a Q# Jupyter és a Python funkcióinak Conda-környezetbe való helyi telepítésének egyszerűsítése érdekében. További részletekért tekintse meg a [ Q# Jupyter-jegyzetfüzeteket](xref:microsoft.quantum.install.jupyter) és [ Q# a Python](xref:microsoft.quantum.install.python) telepítési útmutatóit.
@@ -130,7 +140,7 @@ A verzió a következőket tartalmazza:
 - Teljesítménybeli tökéletesítések a Q# Docker-rendszerképekhez
 
 > [!NOTE]
-> Q# az új [`@EntryPoint()`](xref:microsoft.quantum.core.entrypoint) attribútumot használó alkalmazások jelenleg nem hívhatók meg Python-vagy .net-gazdagép-programokból.
+> Q# az új [`@EntryPoint()`](xref:Microsoft.Quantum.Core.EntryPoint) attribútumot használó alkalmazások jelenleg nem hívhatók meg Python-vagy .net-gazdagép-programokból.
 > További információkat a [Python](xref:microsoft.quantum.install.python) és a [.NET közötti együttműködést](xref:microsoft.quantum.install.cs) bemutató útmutatókban talál.
 
 ## <a name="version-01120033107"></a>0\.11.2003.3107-es verzió
@@ -183,7 +193,7 @@ A [kódtárak](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%
 
 A verzió a következőket tartalmazza:
 
-- Új tesztelési attribútum az Q# egység teszteléséhez, lásd [itt](https://docs.microsoft.com/qsharp/api/qsharp/microsoft.quantum.diagnostics.test) a frissített API-dokumentációt, [here](xref:microsoft.quantum.guide.testingdebugging) valamint a & hibakeresési útmutatójának frissített tesztelési útmutatóját
+- Új tesztelési attribútum az Q# egység teszteléséhez, lásd [itt](xref:Microsoft.Quantum.Diagnostics.Test) a frissített API-dokumentációt, [here](xref:microsoft.quantum.guide.testingdebugging) valamint a & hibakeresési útmutatójának frissített tesztelési útmutatóját
 - A verem nyomkövetésének hozzáadása a Q# program futási hibája esetén
 - Töréspontok támogatása a Visual Studio Code-ban az [OmniSharp C# Visual Studio Code-bővítmény](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp) frissítése révén
 
@@ -224,7 +234,7 @@ A verzió a következőket tartalmazza:
 
 A [kódtárak](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [fordítók](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [futtatókörnyezetek](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [minták](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed) és [Katák ](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed) lezárt lekéréses kérelmeinek teljes listáját itt tekintheti meg.  
 
-## <a name="version-09-packagereference-0919082902"></a>0\.9-es verzió (*PackageReference 0.9.1908.2902*)
+## <a name="version-09-packagereference-0919082902"></a>0\.9-es verzió ( *PackageReference 0.9.1908.2902* )
 
 *Kiadási dátum: 2019. augusztus 29.*
 
@@ -233,7 +243,7 @@ A verzió a következőket tartalmazza:
 - A következőhöz tartozó [ragozott utasítások](xref:microsoft.quantum.guide.operationsfunctions#conjugations) új támogatása: Q#
 - Új kódműveletek a fordítóban, például: csere, dokumentáció hozzáadása és a tömbelemek egyszerű frissítése
 - Új telepítési sablon és új projektparancsok a Visual Studio Code-bővítményhez
-- Az ApplyIf kombinátor új változatai, például a [Microsoft.Quantum.Canon.ApplyIfOne](xref:microsoft.quantum.canon.applyifone)
+- Az ApplyIf kombinátor új változatai, például a [Microsoft.Quantum.Canon.ApplyIfOne](xref:Microsoft.Quantum.Canon.ApplyIfOne)
 - További Jupyter Notebooksra konvertált [Quantum Katák](https://github.com/Microsoft/QuantumKatas)
 - A Visual Studio-bővítményhez most már Visual Studio 2019 szükséges
 
@@ -241,7 +251,7 @@ A [kódtárak](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%
 
 A módosítások és a meglévő programok frissítésére vonatkozó utasítások összefoglalását itt olvashatja.  További információ ezekről a változásokról a [ Q# fejlesztői blogon](https://devblogs.microsoft.com/qsharp).
 
-## <a name="version-08-packagereference-0819071701"></a>0\.8-as verzió (*PackageReference 0.8.1907.1701*)
+## <a name="version-08-packagereference-0819071701"></a>0\.8-as verzió ( *PackageReference 0.8.1907.1701* )
 
 *Kiadási dátum: 2019. július 12.*
 
@@ -253,7 +263,7 @@ A verzió a következőket tartalmazza:
 
 A [kódtárak](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed) és a [minták](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed) lezárt lekéréses kérelmeinek teljes listáját itt tekintheti meg.  
 
-## <a name="version-07-packagereference-0719053109"></a>0\.7-es verzió (*PackageReference 0.7.1905.3109*)
+## <a name="version-07-packagereference-0719053109"></a>0\.7-es verzió ( *PackageReference 0.7.1905.3109* )
 
 *Kiadási dátum: 2019. május 31.*
 
@@ -320,7 +330,7 @@ Ezzel a módosítással azok a programokban, amelyek egyetlen, a Microsoft.Quatu
 
 * Több névtér elavult, mivel a belső műveletek más névterekre kerültek át. Az ezeket a névtereket használó programok továbbra is működni fognak, a fordítási idővel kapcsolatos figyelmeztetés pedig megnevezi azt a névteret, ahol a művelet meg van határozva.  
 
-* A Microsoft.Quantum.Arithmetic névtér normalizálva lett a felhasználó által meghatározott <xref:microsoft.quantum.arithmetic.littleendian> típus használatára. Használja a [BigEndianAsLittleEndian](xref:microsoft.quantum.arithmetic.bigendianaslittleendian) függvényt a növekvő bájtsorrendűvé történő átalakításhoz.  
+* A Microsoft.Quantum.Arithmetic névtér normalizálva lett a felhasználó által meghatározott <xref:Microsoft.Quantum.Arithmetic.LittleEndian> típus használatára. Használja a [BigEndianAsLittleEndian](xref:Microsoft.Quantum.Arithmetic.BigEndianAsLittleEndian) függvényt a növekvő bájtsorrendűvé történő átalakításhoz.  
 
 * Számos callables (functions és Operations) neve módosítva lett, hogy megfeleljen a [ Q# stílus útmutatójának](xref:microsoft.quantum.contributing.style).  A régi meghívható nevek elavultak.  A régi meghívható neveket használó programok továbbra is működnek, de megjelenítenek egy fordítási idővel kapcsolatos figyelmeztetést. 
 
@@ -541,7 +551,7 @@ Továbbá hálás **köszönet** a Microsoft kereskedelmi mérnöki szolgáltat�
 
 ### <a name="update-existing-projects"></a>Létező projektek frissítése
 
-Ez a kiadás teljes mértékben visszafelé kompatibilis. Egyszerűen frissítse a projektek NuGet-csomagját a(z) `0.2.1806.1503-preview` verzióra, majd hajtson végre **teljes újraépítést**, hogy biztosan újra létrejöjjön minden köztes fájl.
+Ez a kiadás teljes mértékben visszafelé kompatibilis. Egyszerűen frissítse a projektek NuGet-csomagját a(z) `0.2.1806.1503-preview` verzióra, majd hajtson végre **teljes újraépítést** , hogy biztosan újra létrejöjjön minden köztes fájl.
 
 A Visual Studióban kövesse a [csomagok frissítésére](https://docs.microsoft.com/nuget/tools/package-manager-ui#updating-a-package) vonatkozó általános utasításokat.
 

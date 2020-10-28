@@ -9,12 +9,12 @@ uid: microsoft.quantum.guide.basics
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 86f6538cf383f4e7c14255b38cfb1c141c8f991b
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: b3bc0841eabeac5d3968776f9dab3a02b1a1eef9
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835519"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691641"
 ---
 # <a name="no-locq-basics"></a>Q# Alapjai
 
@@ -28,7 +28,7 @@ Technikai szempontból a Quantum program a klasszikus alrutinok egy adott készl
 Ennek a nézetnek a fontos következménye, hogy egy Q# program nem maga közvetlenül modellezi a qubits, hanem azt is leírja, hogyan kommunikál a klasszikusan vezérelt számítógépek a qubits.
 A kialakítás szerint a nem Q# határozza meg a kvantum-állapotokat vagy a kvantummechanika egyéb tulajdonságait közvetlenül.
 Vegyük például a {0} {1} {2} [Quantum Computing fogalmakat](xref:microsoft.quantum.concepts.intro) ismertető útmutatóban a $ \ket{+} = \left (\ket + \ket \right)/\sqrt $ állapotot.
-Ha ezt az állapotot szeretné előkészíteni a alkalmazásban Q# , kezdje azzal a ténnyel, hogy a qubits a $ \ket {0} $ állapotban inicializálják, és hogy a $ \ket{+} = H\ket {0} $, ahol a $H $ a [ `H` művelet](xref:microsoft.quantum.intrinsic.h)által megvalósított [Hadamard-transzformáció](xref:microsoft.quantum.glossary#hadamard). A Q# qubit inicializálásához és átalakításához szükséges alapszintű kód a következőképpen néz ki:
+Ha ezt az állapotot szeretné előkészíteni a alkalmazásban Q# , kezdje azzal a ténnyel, hogy a qubits a $ \ket {0} $ állapotban inicializálják, és hogy a $ \ket{+} = H\ket {0} $, ahol a $H $ a [ `H` művelet](xref:Microsoft.Quantum.Intrinsic.H)által megvalósított [Hadamard-transzformáció](xref:microsoft.quantum.glossary#hadamard). A Q# qubit inicializálásához és átalakításához szükséges alapszintű kód a következőképpen néz ki:
 
 ```qsharp
 using (qubit = Qubit()) {
@@ -37,7 +37,7 @@ using (qubit = Qubit()) {
     // H is now applied, such that the qubit is in H|0⟩ = |+⟩, as desired.
 }
 ```
-A qubits inicializálásával és *lefoglalásával*kapcsolatos további információkért lásd: [a qubits használata](xref:microsoft.quantum.guide.qubits).
+A qubits inicializálásával és *lefoglalásával* kapcsolatos további információkért lásd: [a qubits használata](xref:microsoft.quantum.guide.qubits).
 
 ## <a name="quantum-states-in-no-locq"></a>Quantum állapotok a-ben Q#
 
@@ -45,7 +45,7 @@ Fontos, hogy az előző program nem hivatkozik explicit módon az állapotra, Q#
 Ezzel a megközelítéssel teljesen agnosztikus lehet arról, hogy mi *is az egyes* célszámítógépen a kvantum-állapot, ami eltérő értelmezésekkel rendelkezhet a számítógéptől függően. 
 
 Egy Q# program nem tud betekintést qubit állapotára.
-Ehelyett egy program olyan műveleteket hívhat meg, mint például a [`Measure`](xref:microsoft.quantum.intrinsic.measure) qubit származó információk megismerése, és olyan műveletek hívása, mint például a [`X`](xref:microsoft.quantum.intrinsic.x) és a [`H`](xref:microsoft.quantum.intrinsic.h) qubit állapotának elvégzése.
+Ehelyett egy program olyan műveleteket hívhat meg, mint például a [`Measure`](xref:Microsoft.Quantum.Intrinsic.Measure) qubit származó információk megismerése, és olyan műveletek hívása, mint például a [`X`](xref:Microsoft.Quantum.Intrinsic.X) és a [`H`](xref:Microsoft.Quantum.Intrinsic.H) qubit állapotának elvégzése.
 Ezeket a *műveleteket ténylegesen csak* az adott program futtatására használt célszámítógép végzi Q# .
 Ha például a programot a [teljes állapotú szimulátoron](xref:microsoft.quantum.machines.full-state-simulator)futtatja, a szimulátor a szimulált kvantum-rendszernek megfelelő matematikai műveleteket hajtja végre.
 De a jövő irányába szemlélve, amikor a célszámítógép egy valódi kvantum-számítógép, az ilyen műveletek meghívásával a Q# kvantum-számítógép a *valódi* kvantumrendszer megfelelő *valós* műveleteinek elvégzésére, például pontosan időzített lézeres impulzusokra irányítja a rendszert.
@@ -55,14 +55,14 @@ Ily módon megkönnyíti Q# a Quantum és a hibrid kvantum – klasszikus algori
 
 ## <a name="no-locq-operations-and-functions"></a>Q# műveletek és függvények
 
-Konkrétan a Q# program a *műveleteket*, a *függvényeket*és bármely felhasználó által definiált típust magában foglalja. 
+Konkrétan a Q# program a *műveleteket* , a *függvényeket* és bármely felhasználó által definiált típust magában foglalja. 
 
 A műveletek a kvantum-rendszerek átalakításának leírására szolgálnak, és a programok legalapvetőbb építőelemei Q# . Előfordulhat, hogy a ben definiált minden művelet Q# tetszőleges számú egyéb műveletet hív meg.
 
 A műveletekkel szemben a functions a tisztán *determinisztikus* klasszikus viselkedés leírására szolgál, és nem gyakorol semmilyen hatást a klasszikus számítástechnikai értékek mellett. Tegyük fel például, hogy egy program végén szeretné mérni a qubits, és hozzáadja a mérési eredményeket egy tömbhöz.
 Ebben az esetben `Measure` egy *művelet* , amely arra utasítja a célszámítógépet, hogy a (valós vagy szimulált) qubits mérést végezzen. Ugyanakkor a *functions* kezeli a visszaadott eredmények tömbbe való felvételének klasszikus folyamatát.
 
-A műveletek és a függvények együtt *callables*néven ismertek. A rendszer az alapul szolgáló struktúrát és viselkedést is bevezeti és részletezi a [alkalmazásban Q# ](xref:microsoft.quantum.guide.operationsfunctions).
+A műveletek és a függvények együtt *callables* néven ismertek. A rendszer az alapul szolgáló struktúrát és viselkedést is bevezeti és részletezi a [alkalmazásban Q# ](xref:microsoft.quantum.guide.operationsfunctions).
 
 
 ## <a name="no-locq-syntax-overview"></a>Q# szintaxis áttekintése
@@ -94,7 +94,7 @@ Egy utasítás egyszerű példája egy Q# szimbólum társítása egy kifejezés
 let count = 5;
 ```
 
-Érdekes példa az `for` iterációt támogató utasítás, amely egy *utasítási blokkot*tartalmaz.
+Érdekes példa az `for` iterációt támogató utasítás, amely egy *utasítási blokkot* tartalmaz.
 Tegyük fel, `qubits` hogy a szimbólum a qubits (technika típusa `Qubit[]` vagy típusú tömb) egy regiszteréhez van kötve `Qubit` . Majd
 ```qsharp
 for (qubit in qubits) {

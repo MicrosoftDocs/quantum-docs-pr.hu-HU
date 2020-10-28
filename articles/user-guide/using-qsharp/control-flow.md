@@ -9,12 +9,12 @@ uid: microsoft.quantum.guide.controlflow
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 547c57cab67443e8b487bf817eb79fc922b43cdc
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: eca37202e5fe9b48dcfdec4eeb4ba6cafaac8723
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833511"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691095"
 ---
 # <a name="control-flow-in-no-locq"></a>Folyamat vezérlése Q#
 
@@ -38,10 +38,10 @@ A kulcsszó `if` , a logikai kifejezés zárójelek között, valamint egy utas�
 Opcionálisan tetszőleges számú Else-if záradékot követhet, amelyek mindegyike egy kulcsszóból `elif` , egy zárójelben található logikai kifejezésből és egy utasításból álló blokkból áll (a _másik, ha_ blokk).
 Végül az utasítás opcionálisan végződhet más záradékkal is, amely a kulcsszót, `else` majd egy másik utasítás blokkját (az _Else_ blokkot) tartalmazza.
 
-A rendszer `if` kiértékeli a feltételt, és ha az *then* értéke *igaz*, a rendszer futtatja a letiltást.
-Ha a feltétel *hamis*, akkor az első más-if feltétel kiértékelése megtörténik. Ha ez igaz, akkor az *Else-if* blokk fut.
+A rendszer `if` kiértékeli a feltételt, és ha az *then* értéke *igaz* , a rendszer futtatja a letiltást.
+Ha a feltétel *hamis* , akkor az első más-if feltétel kiértékelése megtörténik. Ha ez igaz, akkor az *Else-if* blokk fut.
 Ellenkező esetben a második, ha a blokk kiértékeli, majd a harmadikat, és így tovább, amíg egy igaz állapotú záradékot nem talál, vagy ha nincs több más – if záradék.
-Ha az eredeti *IF* feltétel és az összes Else-if záradék *Hamis értéket*ad vissza, akkor a *többi* blokk is fut, ha meg van határozva.
+Ha az eredeti *IF* feltétel és az összes Else-if záradék *Hamis értéket* ad vissza, akkor a *többi* blokk is fut, ha meg van határozva.
 
 Vegye figyelembe, hogy bármelyik blokk fut, a saját hatókörén belül fut.
 `if`Az egy, `elif` , vagy blokkon belül végrehajtott kötések `else` nem láthatók a blokk vége után.
@@ -129,7 +129,7 @@ ahol a `expression` bármely érvényes kifejezés, amely egy típusú értékre
 A hurok törzse fut, majd kiértékeli a feltételt.
 Ha a feltétel igaz, az utasítás befejeződött; Ellenkező esetben a javítás lefut, és az utasítás ismét lefut, a hurok törzsének megfelelően.
 
-Egy RUS-hurok (a törzs, a teszt és a javítás) mindhárom része egyetlen hatókörként van kezelve az *egyes ismétlődésekhez*, így a törzsben lévő szimbólumok a tesztben és a javításban is elérhetők.
+Egy RUS-hurok (a törzs, a teszt és a javítás) mindhárom része egyetlen hatókörként van kezelve az *egyes ismétlődésekhez* , így a törzsben lévő szimbólumok a tesztben és a javításban is elérhetők.
 A javítás futtatása azonban véget ér a utasítás hatókörével, így a törzs vagy a javítás során végrehajtott szimbólum-kötések nem érhetők el a későbbi ismétlődésekben.
 
 Az utasítás továbbá `fixup` gyakran hasznos, de nem mindig szükséges.
@@ -324,7 +324,7 @@ A műveletben bemutatott jelentős programozott funkciók a következők:
 * `fixup`A hurok összetettebb része, amely magában foglalja a kvantum-műveleteket. 
 * Az utasítások használata `AssertMeasurementProbability` annak megállapítására, hogy a program bizonyos meghatározott pontjain a kvantum-állapot mérésének valószínűsége várható-e.
 
-További információ a és a [`AssertMeasurement`](xref:microsoft.quantum.diagnostics.assertmeasurement) [`AssertMeasurementProbability`](xref:microsoft.quantum.diagnostics.assertmeasurementprobability) műveletekről: [tesztelés és hibakeresés](xref:microsoft.quantum.guide.testingdebugging).
+További információ a és a [`AssertMeasurement`](xref:Microsoft.Quantum.Diagnostics.assertmeasurement) [`AssertMeasurementProbability`](xref:Microsoft.Quantum.Diagnostics.assertmeasurementprobability) műveletekről: [tesztelés és hibakeresés](xref:microsoft.quantum.guide.testingdebugging).
 
 ```qsharp
 operation PrepareStateUsingRUS(target : Qubit) : Unit {

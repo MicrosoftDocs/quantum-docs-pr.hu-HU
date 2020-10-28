@@ -9,12 +9,12 @@ uid: microsoft.quantum.machines.qc-trace-simulator.width-counter
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 701c36dd8c8b087a2728cd935aee0c2ffc4f59f9
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: e54e92cc4a76ce9f9c5aead84f2b64320d6b4f1c
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835944"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691131"
 ---
 # <a name="quantum-trace-simulator-width-counter"></a>Quantum Trace Simulator: szélesség számláló
 
@@ -22,7 +22,7 @@ A szélesség számláló a Quantum Development Kit [Quantum Trace Simulator](xr
 
 ## <a name="invoking-the-width-counter"></a>A szélességi számláló meghívása
 
-Ha a kvantum-nyomkövetési szimulátort a szélességi számlálóval szeretné futtatni, létre kell hoznia egy <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> példányt, a `UseWidthCounter` tulajdonságot **igaz**értékre kell állítania, majd létre kell hoznia egy új <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> példányt a `QCTraceSimulatorConfiguration` paraméterrel. 
+Ha a kvantum-nyomkövetési szimulátort a szélességi számlálóval szeretné futtatni, létre kell hoznia egy <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> példányt, a `UseWidthCounter` tulajdonságot **igaz** értékre kell állítania, majd létre kell hoznia egy új <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> példányt a `QCTraceSimulatorConfiguration` paraméterrel. 
 
 ```csharp
 var config = new QCTraceSimulatorConfiguration();
@@ -32,7 +32,7 @@ var sim = new QCTraceSimulator(config);
 
 ## <a name="using-the-width-counter-in-a-c-host-program"></a>A szélesség számláló használata C#-gazdagép programban
 
-Az ebben a szakaszban ismertetett C#-példa a következő mintakód alapján kiszámítja a szorzás által vezérelt művelet megvalósításával lefoglalt extra qubits számát <xref:microsoft.quantum.intrinsic.x> Q# :
+Az ebben a szakaszban ismertetett C#-példa a következő mintakód alapján kiszámítja a szorzás által vezérelt művelet megvalósításával lefoglalt extra qubits számát <xref:Microsoft.Quantum.Intrinsic.X> Q# :
 
 ```qsharp
 open Microsoft.Quantum.Intrinsic;
@@ -44,7 +44,7 @@ operation ApplyMultiControlledX( numberOfQubits : Int ) : Unit {
 }
 ```
 
-A szorzás <xref:microsoft.quantum.intrinsic.x> által vezérelt művelet összesen öt qubits működik, és két [kiegészítő qubits](xref:microsoft.quantum.glossary#ancilla)foglal le, és a bemeneti szélessége **5**. A következő C# program használatával ellenőrizheti a számlálókat:
+A szorzás <xref:Microsoft.Quantum.Intrinsic.X> által vezérelt művelet összesen öt qubits működik, és két [kiegészítő qubits](xref:microsoft.quantum.glossary#ancilla)foglal le, és a bemeneti szélessége **5** . A következő C# program használatával ellenőrizheti a számlálókat:
 
 ```csharp 
 var config = new QCTraceSimulatorConfiguration();

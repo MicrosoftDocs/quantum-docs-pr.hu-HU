@@ -9,12 +9,12 @@ uid: microsoft.quantum.contributing.docs
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 20e9f8126a290f52701b6b0e525d7669a605d4c9
-ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
+ms.openlocfilehash: 2debef858c38b9a8f11264858130ed7cb41543ae
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90759679"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691793"
 ---
 # <a name="improving-documentation"></a>A dokumentáció továbbfejlesztése
 
@@ -46,7 +46,7 @@ Részletesebben ismertetjük a lekéréses kérelmeket, de most van néhány dol
 
 ### <a name="referencing-sample-code-from-conceptual-articles"></a>Mintául szolgáló kód hivatkozása a koncepcionális cikkekből
 
-Ha a [Samples adattárból](https://github.com/Microsoft/Quantum)szeretne kódot foglalni, ezt egy speciális, DocFX-stílusú Markdown paranccsal teheti meg:
+Ha a [Samples adattárból](https://github.com/Microsoft/Quantum)szeretne kódot felvenni, ezt egy speciális DocFX-Flavored Markdown paranccsal teheti meg:
 
 ```markdown
 :::code language="qsharp" source="~/quantum/samples/algorithms/chsh-game/Game.qs" range="4-8":::
@@ -138,7 +138,7 @@ A példa a `ControlledOnBitString` következőhöz hasonló lehet:
  }
 ```
 
-A [ `ControlledOnBitString` függvény API-dokumentációjában](xref:microsoft.quantum.canon.controlledonbitstring)megtekintheti a fenti kód renderelt verzióját.
+A [ `ControlledOnBitString` függvény API-dokumentációjában](xref:Microsoft.Quantum.Canon.ControlledOnBitString)megtekintheti a fenti kód renderelt verzióját.
 
 A dokumentáció írásának általános gyakorlata mellett az API-dokumentációs megjegyzések írásakor a következő szempontokat is segít megőrizni:
 

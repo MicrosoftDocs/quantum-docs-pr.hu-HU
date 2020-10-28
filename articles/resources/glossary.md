@@ -107,7 +107,7 @@ Egy [művelet](xref:microsoft.quantum.glossary#operation) vagy [függvény](xref
 
 ## <a name="clifford-group"></a>Clifford-csoport
 
-Azok a műveletek [összessége, amelyek](xref:microsoft.quantum.glossary#bloch-sphere) elfoglalják a octants és a [Pauli-operátorok](xref:microsoft.quantum.glossary#pauli-operators)hatását. Ezek közé tartoznak a következő műveletek: [ $ X $ ](xref:microsoft.quantum.intrinsic.x), [ $ Y $ ](xref:microsoft.quantum.intrinsic.y), [ $ Z $ ](xref:microsoft.quantum.intrinsic.z), [ $ H $ ](xref:microsoft.quantum.intrinsic.h) és [ $ S $ ](xref:microsoft.quantum.intrinsic.s).
+Azok a műveletek [összessége, amelyek](xref:microsoft.quantum.glossary#bloch-sphere) elfoglalják a octants és a [Pauli-operátorok](xref:microsoft.quantum.glossary#pauli-operators)hatását. Ezek közé tartoznak a következő műveletek: [ $ X $ ](xref:Microsoft.Quantum.Intrinsic.X), [ $ Y $ ](xref:Microsoft.Quantum.Intrinsic.Y), [ $ Z $ ](xref:Microsoft.Quantum.Intrinsic.Z), [ $ H $ ](xref:Microsoft.Quantum.Intrinsic.H) és [ $ S $ ](xref:Microsoft.Quantum.Intrinsic.S).
 
 ## <a name="controlled"></a>Ellenőrzött
 
@@ -150,7 +150,7 @@ Ha két [állam](xref:microsoft.quantum.glossary#quantum-state) azonos egy össz
 
 ## <a name="hadamard"></a>Hadamard
 
-A Hadamard művelet (más néven Hadamard-kapu vagy átalakító) egyetlen [qubit](xref:microsoft.quantum.glossary#qubit) viselkedik, és 0 vagy 1 páros [felállásba](xref:microsoft.quantum.glossary#superposition) helyezi, $ \ket { } $ $ \ket { } $ Ha a qubit kezdetben $ \ket { 0 } $ állapotban van. A-ben Q# ezt a műveletet az előre meghatározott művelet alkalmazza [`H`](xref:microsoft.quantum.intrinsic.h) .
+A Hadamard művelet (más néven Hadamard-kapu vagy átalakító) egyetlen [qubit](xref:microsoft.quantum.glossary#qubit) viselkedik, és 0 vagy 1 páros [felállásba](xref:microsoft.quantum.glossary#superposition) helyezi, $ \ket { } $ $ \ket { } $ Ha a qubit kezdetben $ \ket { 0 } $ állapotban van. A-ben Q# ezt a műveletet az előre meghatározott művelet alkalmazza [`H`](xref:Microsoft.Quantum.Intrinsic.H) .
 
 ## <a name="immutable"></a>Nem módosítható
 
@@ -182,11 +182,11 @@ Egy olyan alrutin, amely Adatfüggő adatokat biztosít a kvantum-algoritmusnak 
 
 ## <a name="partial-application"></a>Részleges alkalmazás
 
-[Függvény](xref:microsoft.quantum.glossary#function) vagy [művelet](xref:microsoft.quantum.glossary#operation) hívása az összes szükséges bemenet nélkül. Ez egy új [meghívót](xref:microsoft.quantum.glossary#callable) ad vissza, amely csak a hiányzó (aláhúzásjel által jelzett) paramétereket adja meg, amelyeket egy későbbi alkalmazásban kell megadni. Például a függvény `MyFunc(x : int, y : int) : int {return x + y;}` használatával részben alkalmazhat egy új függvényt `let NewFunc = MyFunc(_, 3)` . Az új függvényt később is meghívhatja a hiányzó paraméterrel, `NewFunc(2)` amely az *5*értéket adja vissza.  További információ: [részleges alkalmazás](xref:microsoft.quantum.guide.operationsfunctions#partial-application).
+[Függvény](xref:microsoft.quantum.glossary#function) vagy [művelet](xref:microsoft.quantum.glossary#operation) hívása az összes szükséges bemenet nélkül. Ez egy új [meghívót](xref:microsoft.quantum.glossary#callable) ad vissza, amely csak a hiányzó (aláhúzásjel által jelzett) paramétereket adja meg, amelyeket egy későbbi alkalmazásban kell megadni. Például a függvény `MyFunc(x : int, y : int) : int {return x + y;}` használatával részben alkalmazhat egy új függvényt `let NewFunc = MyFunc(_, 3)` . Az új függvényt később is meghívhatja a hiányzó paraméterrel, `NewFunc(2)` amely az *5* értéket adja vissza.  További információ: [részleges alkalmazás](xref:microsoft.quantum.guide.operationsfunctions#partial-application).
 
 ## <a name="pauli-operators"></a>Pauli-operátorok
 
-Három 2 x 2 egységes mátrix, azaz a `X` `Y` és a `Z` Quantum művelet. Az Identity Matrix ( $ I $ ) gyakran szerepel a készletben is.  $= \begin{bmatrix} 1 & 0 0 \\\\ & 1 \end{bmatrix} $ , $ X 0 1 = \begin{bmatrix} & \\\\ & 0 \end{bmatrix} $ , $ Y = \begin{bmatrix} 0 & – i 0 \\\\ & \end{bmatrix} $ , $ Z = \begin{bmatrix} 1 & 0 \\\\ 0 & -1 \end{bmatrix} $ .   További információ: [qubit műveletek](xref:microsoft.quantum.concepts.qubit#single-qubit-operations).
+3 2 x 2 egységes mátrixok halmaza, amely a `X` `Y` és a `Z` Quantum művelet. Az Identity Matrix ( $ I $ ) gyakran szerepel a készletben is.  $= \begin{bmatrix} 1 & 0 0 \\\\ & 1 \end{bmatrix} $ , $ X 0 1 = \begin{bmatrix} & \\\\ & 0 \end{bmatrix} $ , $ Y = \begin{bmatrix} 0 & – i 0 \\\\ & \end{bmatrix} $ , $ Z = \begin{bmatrix} 1 & 0 \\\\ 0 & -1 \end{bmatrix} $ .   További információ: [qubit műveletek](xref:microsoft.quantum.concepts.qubit#single-qubit-operations).
 
 ## <a name="quantum-circuit-diagram"></a>Quantum Circuit diagram
 

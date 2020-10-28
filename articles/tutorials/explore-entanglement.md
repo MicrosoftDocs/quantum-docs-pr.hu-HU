@@ -9,12 +9,12 @@ uid: microsoft.quantum.write-program
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: ac9c060c157ba5ee3bc66852c42298ac8adcb3b3
-ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
+ms.openlocfilehash: 7a1a49e18ac9330ca6e3cc89b3e58c96eccb91db
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91492336"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691668"
 ---
 # <a name="tutorial-explore-entanglement-with-q"></a>Oktatóanyag: Összefonódások megismerése Q\# nyelven
 
@@ -83,7 +83,7 @@ Célunk, hogy előkészítsünk két qubits egy konkrét kvantum-állapotban, am
 
 ### <a name="initialize-qubit-using-measurement"></a>Qubit inicializálása mérés használatával
 
-Az alábbi kódrészletben bemutatjuk, hogyan dolgozhat a qubits a alkalmazásban Q# .  Két műveletet fogunk bevezetni [`M`](xref:microsoft.quantum.intrinsic.m) , [`X`](xref:microsoft.quantum.intrinsic.x) amely átalakítja a qubit állapotát. Ebben a kódrészletben meghatározunk egy `SetQubitState` műveletet, amelynek egyik paramétere egy qubit, a másik pedig a `desired`, amely a qubit kívánt állapotát jelöli.  A `SetQubitState` művelet elvégez egy mérést a qubiten az `M` művelet használatával.  A-ben Q# a qubit-mérések mindig a vagy a értéket adja vissza `Zero` `One` .  Ha a mérés olyan értéket ad vissza, amely nem egyenlő a kívánt értékkel, a `SetQubitState` "megfordítja" a qubit, azaz egy `X` műveletet futtat, amely a qubit állapotot olyan új állapotba változtatja, amelyben a visszaadott mérés valószínűsége `Zero` és fordított állapota `One` történik. Így mindig a `SetQubitState` kívánt állapotba helyezi a cél qubit.
+Az alábbi kódrészletben bemutatjuk, hogyan dolgozhat a qubits a alkalmazásban Q# .  Két műveletet fogunk bevezetni [`M`](xref:Microsoft.Quantum.Intrinsic.m) , [`X`](xref:Microsoft.Quantum.Intrinsic.X) amely átalakítja a qubit állapotát. Ebben a kódrészletben meghatározunk egy `SetQubitState` műveletet, amelynek egyik paramétere egy qubit, a másik pedig a `desired`, amely a qubit kívánt állapotát jelöli.  A `SetQubitState` művelet elvégez egy mérést a qubiten az `M` művelet használatával.  A-ben Q# a qubit-mérések mindig a vagy a értéket adja vissza `Zero` `One` .  Ha a mérés olyan értéket ad vissza, amely nem egyenlő a kívánt értékkel, a `SetQubitState` "megfordítja" a qubit, azaz egy `X` műveletet futtat, amely a qubit állapotot olyan új állapotba változtatja, amelyben a visszaadott mérés valószínűsége `Zero` és fordított állapota `One` történik. Így mindig a `SetQubitState` kívánt állapotba helyezi a cél qubit.
 
 Cserélje le a tartalmát a `Program.qs` következő kódra:
 
@@ -116,8 +116,8 @@ A művelet visszatérési típusa a kettőspont után van meghatározva. Ebben a
 
 Az első művelet során két Quantum műveletet használt Q# :
 
-* A [`M`](xref:microsoft.quantum.intrinsic.m) művelet, amely a qubit állapotát méri
-* A [`X`](xref:microsoft.quantum.intrinsic.x) qubit állapotát tükröző művelet
+* A [`M`](xref:Microsoft.Quantum.Intrinsic.m) művelet, amely a qubit állapotát méri
+* A [`X`](xref:Microsoft.Quantum.Intrinsic.X) qubit állapotát tükröző művelet
 
 A kvantumműveletek átalakítják a qubitek állapotát. Bizonyos esetekben a hagyományos logikai kapuk mintájára szokás kvantumkapukat emlegetni műveletek helyett. Ez a szokás a kvantum-számítástechnika korai időszakából ered, amikor az algoritmusok még csupán elméleti fogalmak voltak, és diagramként vizualizálták őket, hasonlóan a klasszikus számítástechnikában használt kapcsolási rajzokhoz.
 
@@ -295,12 +295,12 @@ Test results (# of 0s, # of 1s):
 ```
 
 Minden méréskor egy klasszikus értéket kérünk, de a qubit félúton van 0 és 1 között, így (statisztikailag) az esetek felében 0, a másik felében 1 értéket kapunk.
-Ez az úgynevezett **szuperpozíció**, és az első valódi betekintést nyújtja a kvantumállapotba.
+Ez az úgynevezett **szuperpozíció** , és az első valódi betekintést nyújtja a kvantumállapotba.
 
 ## <a name="prepare-entanglement"></a>Az összefonódás előkészítése
 
 Most nézzük meg, hogyan Q# fejezi ki a qubits-k összekeverhető módjait.
-Először is az első qubitet a kezdeti állapotba, majd a `H` művelettel szuperpozícióba kell állítanunk.  Ezután az első qubit mérése előtt egy új műveletet () használunk `CNOT` , amely a *vezérlést nem*jelenti.  A művelet két qubits való futtatásának eredménye a második qubit tükrözése, ha az első qubit van `One` .  Ekkor a két qubit összefonódik.  Az első qubit statisztikái nem változnak (mérés esetén 50%-os eséllyel lesz `Zero` vagy `One`), de a második qubit mérésekor __mindig__ ugyanaz az eredmény, mint amit az elsőnél mértünk. A `CNOT` összekapcsolta a két qubitet, így bármi is történik az egyikkel, ugyanaz történik a másikkal is. Ha felcseréli a méréseket (a második qubitet mérve az első előtt), akkor is ugyanez történik. Az első mérés eredménye véletlenszerű lesz, a második pedig mindig ugyanaz, mint amit az elsőnél kaptunk.
+Először is az első qubitet a kezdeti állapotba, majd a `H` művelettel szuperpozícióba kell állítanunk.  Ezután az első qubit mérése előtt egy új műveletet () használunk `CNOT` , amely a *vezérlést nem* jelenti.  A művelet két qubits való futtatásának eredménye a második qubit tükrözése, ha az első qubit van `One` .  Ekkor a két qubit összefonódik.  Az első qubit statisztikái nem változnak (mérés esetén 50%-os eséllyel lesz `Zero` vagy `One`), de a második qubit mérésekor __mindig__ ugyanaz az eredmény, mint amit az elsőnél mértünk. A `CNOT` összekapcsolta a két qubitet, így bármi is történik az egyikkel, ugyanaz történik a másikkal is. Ha felcseréli a méréseket (a második qubitet mérve az első előtt), akkor is ugyanez történik. Az első mérés eredménye véletlenszerű lesz, a második pedig mindig ugyanaz, mint amit az elsőnél kaptunk.
 
 Első lépésként két qubits kell lefoglalni a következő helyett `TestBellState` :
 
@@ -413,7 +413,7 @@ Test results (# of 0s, # of 1s, # of agreements)
 
 Ahogy az áttekintésben is említettük, az első qubit statisztikái nem változnak (50%-os eséllyel lesz 0 vagy 1), de a második qubit mérésekor __mindig__ ugyanaz az eredmény, mint amit az elsőnél mértünk, mivel a két qubit össze van fonódva!
 
-## <a name="next-steps"></a>További lépések
+## <a name="next-steps"></a>Következő lépések
 
 A megjelenő "a"-ben a a legelterjedtebb számítási algoritmusok segítségével [megtudhatja](xref:microsoft.quantum.quickstarts.search) , hogyan hozhatja létre és futtathatja a következőt: a a legtöbbet használt, legtöbbet a legtöbbet Q# kihasználó program, amely a kvantum-számítástechnikai  
 

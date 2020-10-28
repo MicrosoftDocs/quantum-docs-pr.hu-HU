@@ -9,12 +9,12 @@ uid: microsoft.quantum.guide.expressions
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 9bf28e3854eae1892692d7ca840e1860de2e2934
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: e95a7cb9b74136ef9a6f51b4bbc32d1d93c43a0d
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835842"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691601"
 ---
 # <a name="expressions-in-no-locq"></a>Kifejezések a Q#
 
@@ -40,7 +40,7 @@ let bigOne = bigZero + 1L;
 Megírhatók decimális ponttal vagy anélkül `.` , illetve az "e" vagy az "e" karakterrel jelzett exponenciális rész (amely után csak egy lehetséges negatív jel és decimális számjegy érvényes).
 A következő érvényes `Double` literálok: `0.0` , `1.2e5` , `1e-5` .
 
-Bármilyen típusú tömb kifejezése miatt `Int` a beépített függvény használatával kifejezéseket állíthat be a [`Length`](xref:microsoft.quantum.core.length) tömb kifejezés zárójelek közé.
+Bármilyen típusú tömb kifejezése miatt `Int` a beépített függvény használatával kifejezéseket állíthat be a [`Length`](xref:Microsoft.Quantum.Core.Length) tömb kifejezés zárójelek közé.
 Ha például `a` egy tömbhöz van kötve, akkor az egy `Length(a)` egész szám kifejezés.
 Ha `b` az egész számokból álló tömbök tömbje, akkor a- `Int[][]` ben az `Length(b)` altömbök száma, a `b` `Length(b[1])` pedig a második altömbben lévő egész számok száma `b` .
 
@@ -111,7 +111,7 @@ A logikai kifejezéseket megadva az `not` egyoperandusú operátor felhasználha
 
 ## <a name="string-expressions"></a>Sztringkifejezések
 
-Q# lehetővé teszi a karakterláncok használatát az `fail` utasításban (a [vezérlési folyamat](xref:microsoft.quantum.guide.controlflow#fail-statement)ismertetése) és a [`Message`](xref:microsoft.quantum.intrinsic.message) standard függvényben. Az utóbbi adott viselkedése a használt szimulátortól függ, de általában egy üzenetet ír a gazdagép-konzolra, amikor egy program során hívja meg Q# .
+Q# lehetővé teszi a karakterláncok használatát az `fail` utasításban (a [vezérlési folyamat](xref:microsoft.quantum.guide.controlflow#fail-statement)ismertetése) és a [`Message`](xref:Microsoft.Quantum.Intrinsic.Message) standard függvényben. Az utóbbi adott viselkedése a használt szimulátortól függ, de általában egy üzenetet ír a gazdagép-konzolra, amikor egy program során hívja meg Q# .
 
 A karakterláncok Q# literálok vagy interpolált karakterláncok.
 
@@ -128,7 +128,7 @@ A Q# karakterlánc-Interpolációk szintaxisa a C# szintaxis egy részhalmaza. A
 
 * Ha egy szövegkonstans-karakterláncot interpolált karakterláncként szeretne azonosítani, a szimbólummal megadhatja azt `$` . A és a közötti térköz nem lehet üres `$` `"` karakterláncot indít.
 
-* A következő példa egy olyan alapszintű példát [`Message`](xref:microsoft.quantum.intrinsic.message) mutat be, amely egy mérés eredményét írja a konzolra, más Q# kifejezésekkel együtt.
+* A következő példa egy olyan alapszintű példát [`Message`](xref:Microsoft.Quantum.Intrinsic.Message) mutat be, amely egy mérés eredményét írja a konzolra, más Q# kifejezésekkel együtt.
 
 ```qsharp
     let num = 8;       // some Q# expression
@@ -189,7 +189,7 @@ Például `(1, One)` egy `(Int, Result)` kifejezés.
 
 A konstansok kivételével az egyetlen rekord kifejezés olyan szimbólum, amely a rekord értékekhez, a rekordos tömbök tömb elemeihez és a rekordok visszaadó hívható hívásokhoz van kötve.
 
-## <a name="user-defined-type-expressions"></a>Felhasználó által definiált típusú kifejezések
+## <a name="user-defined-type-expressions"></a>User-Defined típusú kifejezések
 
 A felhasználó által definiált típus egy literálja a típus nevét, a típus alaprekordjának típusát pedig a rekordból.
 Ha például `IntPair` egy felhasználó által definiált típus a (z) alapján `(Int, Int)` , akkor `IntPair(2, 3)` az egy adott típusú érvényes literál.
@@ -237,7 +237,7 @@ A legtöbb esetben ez a nulla valamilyen változata.
 
 Az entitásokra hivatkozó qubits és callables esetében nincs ésszerű alapértelmezett érték.
 Ezért az ilyen típusú típusok esetében az alapértelmezett érték egy érvénytelen hivatkozás, amely nem használható futásidejű hiba nélkül, hasonlóan a nyelvekhez, mint például a C# vagy a Java.
-Az qubits vagy callables tartalmazó tömböket nem alapértelmezett értékekkel kell inicializálni az elemek biztonságos használata előtt. A megfelelő inicializálási rutinok: <xref:microsoft.quantum.arrays> .
+Az qubits vagy callables tartalmazó tömböket nem alapértelmezett értékekkel kell inicializálni az elemek biztonságos használata előtt. A megfelelő inicializálási rutinok: <xref:Microsoft.Quantum.Arrays> .
 
 Az egyes típusok alapértelmezett értékei a következők:
 
@@ -472,7 +472,7 @@ A típus specifikációjának megadása kötelező `Op3` `Op1` , mert különbö
 
 Q# az operátorok elsőbbségi sorrendben, a legmagasabbtól a legalacsonyabbig:
 
-Operátor | Aritása | Description | Operandusok típusai
+Operátor | Aritása | Leírás | Operandusok típusai
 ---------|----------|---------|---------------
  záró `!` | Unáris | Kicsomagolása | Bármely felhasználó által definiált típus
  `-`, `~~~`, `not` | Unáris | Numerikus negatív, bitenkénti komplement, logikai tagadás | `Int`, `BigInt` vagy `Double` esetén `-` a `Int` `BigInt` `~~~` `Bool``not`

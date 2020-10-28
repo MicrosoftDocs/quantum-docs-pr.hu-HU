@@ -9,12 +9,12 @@ uid: microsoft.quantum.chemistry.examples.energyestimate
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 05506f4099de754cd02d81fbd9200f2de091e37e
-ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
+ms.openlocfilehash: 81fba0c52c854d61f9143659795fb4d3c3cee8b9
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90759732"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691535"
 ---
 # <a name="obtaining-energy-level-estimates"></a>Energiaszint-becslések lekérése
 Az energia szintjeinek becslése a Quantum kémiájának egyik fő alkalmazása. Ez a cikk ismerteti, hogyan hajthatja végre ezt a molekuláris hidrogén kanonikus példáján. Az ebben a szakaszban hivatkozott minta a [`MolecularHydrogen`](https://github.com/microsoft/Quantum/tree/main/samples/chemistry/MolecularHydrogen) kémia Samples repositoryban található. Egy több vizualizációs példa, amely a kimenetet ábrázolja a [`MolecularHydrogenGUI`](https://github.com/microsoft/Quantum/tree/main/samples/chemistry/MolecularHydrogenGUI) bemutatóban.
@@ -44,7 +44,7 @@ Első lépésként a molekuláris hidrogént képviselő Hamilton kell létrehoz
     var fermionHamiltonian = new OrbitalIntegralHamiltonian(orbitalIntegrals).ToFermionHamiltonian();
 ```
 
-A Hamilton szimulálása szükséges a Fermion-operátorok qubit-operátorokra való átalakításához. Ezt a konverziót a Jordan-Wigner kódolással hajtja végre a következőképpen:
+A Hamilton szimulálása szükséges a Fermion-operátorok qubit-operátorokra való átalakításához. Ezt a konverziót a Jordan-Wigner kódolás hajtja végre a következőképpen:
 
 ```csharp
     // The Jordan-Wigner encoding converts the fermion Hamiltonian, 
@@ -83,7 +83,7 @@ let integratorOrder = 4;
 let (nQubits, (rescale, oracle)) =  TrotterStepOracle (qSharpData, stepSize, integratorOrder);
 ```
 
-Ezen a ponton a standard könyvtár [fázisának becslési algoritmusait](xref:microsoft.quantum.libraries.characterization) használva megismerheti az előző szimulációt használó alapvető állapotú energiát. Ehhez jó közelítést kell készíteni a kvantum-állapothoz. Az ilyen közelítésekre vonatkozó javaslatokat a sémában kell megadnia [`Broombridge`](xref:microsoft.quantum.libraries.chemistry.schema.broombridge) . A javaslatok hiányában azonban az alapértelmezett megközelítés számos elektronot ad hozzá, `hamiltonian.NElectrons` hogy mohón a legkisebb átlós, egyelektronos adatmennyiséget. A fázis-becslési függvények és műveletek DocFX-jelöléssel vannak megadva a [Microsoft. Quantum. jellemzési](xref:microsoft.quantum.characterization) névtérben.
+Ezen a ponton a standard könyvtár [fázisának becslési algoritmusait](xref:microsoft.quantum.libraries.characterization) használva megismerheti az előző szimulációt használó alapvető állapotú energiát. Ehhez jó közelítést kell készíteni a kvantum-állapothoz. Az ilyen közelítésekre vonatkozó javaslatokat a sémában kell megadnia [`Broombridge`](xref:microsoft.quantum.libraries.chemistry.schema.broombridge) . A javaslatok hiányában azonban az alapértelmezett megközelítés számos elektronot ad hozzá, `hamiltonian.NElectrons` hogy mohón a legkisebb átlós, egyelektronos adatmennyiséget. A fázis-becslési függvények és műveletek DocFX-jelöléssel vannak megadva a [Microsoft. Quantum. jellemzési](xref:Microsoft.Quantum.Characterization) névtérben.
 
 A következő kódrészlet azt mutatja be, hogyan integrálható a kémia-szimulációs könyvtár valós idejű evolúciós eredményei a Quantum Phase-becsléssel.
 

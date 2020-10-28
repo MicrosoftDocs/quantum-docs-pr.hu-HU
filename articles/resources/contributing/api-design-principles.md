@@ -9,12 +9,12 @@ uid: microsoft.quantum.contributing.api-design
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 8714d3290e4099f901dab20a9ee9334699c4ad81
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 6b196cf1be584a3157c7a9eb8cf497fe1121dd7a
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834908"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691816"
 ---
 # <a name="no-locq-api-design-principles"></a>Q# API-tervezési alapelvek
 
@@ -125,7 +125,7 @@ Ez a cikk felsorolja ezeket az alapelveket, és példákat mutat be arra, hogyan
       a leghatékonyabban együttműködik a részleges alkalmazásokkal.
   - Ez az útmutató általában azt jelenti, hogy az összes klasszikus adatot a bemeneti rekordok összes qubits elé helyezi, de jó ítéletet használ, és megvizsgálja, hogyan hívják meg az API-t a gyakorlatban.
 
-## <a name="user-defined-types"></a>Felhasználó által definiált típusok
+## <a name="user-defined-types"></a>User-Defined típusok
 
 **Legfontosabb elv:** felhasználói típusok használata az API-k egyszerűbb és kényelmes használatának megkönnyítéséhez.
 
@@ -224,32 +224,32 @@ Ez a cikk felsorolja ezeket az alapelveket, és példákat mutat be arra, hogyan
 
   - **Igék**
 
-    - **Érvényesítés**: Győződjön meg arról, hogy a célszámítógép és a qubits állapotáról feltételezi a feltételezést, valószínűleg a nem fizikai erőforrások használatával. Az ezt a műveletet használó műveleteknek mindig biztonságosan eltávolíthatók, anélkül, hogy ez befolyásolná a kódtárak és a végrehajtható programok működését. Fontos megjegyezni, hogy a tényekkel ellentétben a kijelentések általában külső állapottól függenek, például egy qubit-regiszter, a futtatási környezet vagy így tovább. Mivel a külső állapottól való függőség egyfajta mellékhatás, a kijelentéseket függvények helyett műveleteknek kell kitenni.
+    - **Érvényesítés** : Győződjön meg arról, hogy a célszámítógép és a qubits állapotáról feltételezi a feltételezést, valószínűleg a nem fizikai erőforrások használatával. Az ezt a műveletet használó műveleteknek mindig biztonságosan eltávolíthatók, anélkül, hogy ez befolyásolná a kódtárak és a végrehajtható programok működését. Fontos megjegyezni, hogy a tényekkel ellentétben a kijelentések általában külső állapottól függenek, például egy qubit-regiszter, a futtatási környezet vagy így tovább. Mivel a külső állapottól való függőség egyfajta mellékhatás, a kijelentéseket függvények helyett műveleteknek kell kitenni.
 
-    - **Becslés**: egy vagy több valószínűleg ismétlődő mérés használata a mérési eredményekből származó klasszikus mennyiség megbecslése.
+    - **Becslés** : egy vagy több valószínűleg ismétlődő mérés használata a mérési eredményekből származó klasszikus mennyiség megbecslése.
 
       *Példák:*
       - @"microsoft.quantum.characterization.estimatefrequency"
       - @"microsoft.quantum.characterization.estimateoverlapbetweenstates"
 
-    - **Előkészítés**: alkalmazzon egy vagy több olyan qubits, amely egy adott kezdeti állapotban indul (általában $ \ket{00\cdots 0} $), így a qubits állapota a kívánt befejezési állapotnak megfelelően alakulhat ki. Általánosságban elmondható, hogy a megadott kiindulási állapotban **kívüli állapotok** nem definiált egységes átalakítást eredményezhetnek, de továbbra is meg kell őrizniük, hogy egy művelet és a adjoint "megszakítása", és a No-op alkalmazása **szükséges** .
+    - **Előkészítés** : alkalmazzon egy vagy több olyan qubits, amely egy adott kezdeti állapotban indul (általában $ \ket{00\cdots 0} $), így a qubits állapota a kívánt befejezési állapotnak megfelelően alakulhat ki. Általánosságban elmondható, hogy a megadott kiindulási állapotban **kívüli állapotok** nem definiált egységes átalakítást eredményezhetnek, de továbbra is meg kell őrizniük, hogy egy művelet és a adjoint "megszakítása", és a No-op alkalmazása **szükséges** .
 
       *Példák:*
       - @"microsoft.quantum.preparation.preparearbitrarystate"
       - @"microsoft.quantum.preparation.prepareuniformsuperposition"
 
-    - **Mérték**: egy vagy több qubits alkalmazza a kvantum-műveletet vagy a műveletek egy szakaszát, és olvassa ki a klasszikus adatok biztonsági mentését.
+    - **Mérték** : egy vagy több qubits alkalmazza a kvantum-műveletet vagy a műveletek egy szakaszát, és olvassa ki a klasszikus adatok biztonsági mentését.
 
       *Példák:*
-      - @"microsoft.quantum.intrinsic.measure"
+      - @"Microsoft.Quantum.Intrinsic.Measure"
       - @"microsoft.quantum.arithmetic.measurefxp"
       - @"microsoft.quantum.arithmetic.measureinteger"
 
-    - **Alkalmazás**: egy vagy több qubits alkalmazza a kvantum-műveletet vagy a műveletek egy szakaszát, így a qubits állapota koherens módon változhat. Ez az ige a legáltalánosabb művelet a Q- \# nómenklatúrában, és **nem** használható, ha egy konkrétabb művelet közvetlen jelentőséggel bír.
+    - **Alkalmazás** : egy vagy több qubits alkalmazza a kvantum-műveletet vagy a műveletek egy szakaszát, így a qubits állapota koherens módon változhat. Ez az ige a legáltalánosabb művelet a Q- \# nómenklatúrában, és **nem** használható, ha egy konkrétabb művelet közvetlen jelentőséggel bír.
 
-  - **Főnevek**:
+  - **Főnevek** :
 
-    - **Tény**: egy olyan logikai feltétel, amely csak a bemenettől függ, és nem a célszámítógép, a környezete vagy a gép qubits állapota alapján. Egy állítással ellentétben a tény csak az adott tényhez megadott *értékekre* érzékeny. Például:
+    - **Tény** : egy olyan logikai feltétel, amely csak a bemenettől függ, és nem a célszámítógép, a környezete vagy a gép qubits állapota alapján. Egy állítással ellentétben a tény csak az adott tényhez megadott *értékekre* érzékeny. Például:
 
       *Példák:*
       - @"microsoft.quantum.diagnostics.equalityfacti": egy Esélyegyenlőségi tényt képvisel két egész számból álló bemenettel kapcsolatban; vagy a bemenetként megadott egész számok egyenlőek egymással, vagy nem, függetlenül attól, hogy a többi program állapota független-e.
@@ -259,9 +259,9 @@ Ez a cikk felsorolja ezeket az alapelveket, és példákat mutat be arra, hogyan
       *Példák:*
       - A @"microsoft.quantum.machinelearning.trainingoptions" UDT tartalmazza a tanulási sebesség, a minibatch-méret és más, a ml-képzéshez konfigurálható paraméterek elnevezett elemeit.
 
-  - **Melléknevek**:
+  - **Melléknevek** :
 
-    - ⛔️ **új**: ezt a jelzőt **nem** szabad használni, mert így elkerülhető, hogy a használatot számos programozási nyelvben (pl.: C++, C#, Java, írógéppel, PowerShell) használják.
+    - ⛔️ **új** : ezt a jelzőt **nem** szabad használni, mert így elkerülhető, hogy a használatot számos programozási nyelvben (pl.: C++, C#, Java, írógéppel, PowerShell) használják.
 
   - **Alaphelyzetek:** Bizonyos esetekben a függvények és a műveletek neveiben a nevek és a műveletek további egyértelműsítse vagy tisztázására is használhatók az előírások. Ezt a gondos és következetesen kell figyelembe venni.
 

@@ -89,7 +89,7 @@ Ez a kapui sorozat alapvető jelentőséggel bír a kvantum-számítástechnika 
 
 $$\mathrm{Cnem } _ { 01 } (H \otimes 1) \ket { 00 } = \frac { 1 } { \sqrt { 2 } } \left ( \ket { 00 }  +  \ket { 11 } \right ),$$
 
-Az ezzel vagy nagyobb bonyolultsággal rendelkező műveletek a kvantum-algoritmusokban és a kvantum-hibák kijavításában mindenütt elérhetők, ezért nagy mértékű feltételnek kell lennie, hogy a vizualizációk *egy egyszerű*metódust használjanak.
+Az ezzel vagy nagyobb bonyolultsággal rendelkező műveletek a kvantum-algoritmusokban és a kvantum-hibák kijavításában mindenütt elérhetők, ezért nagy mértékű feltételnek kell lennie, hogy a vizualizációk *egy egyszerű* metódust használjanak.
 A maximálisan kusza kvantum-állapot előkészítésének áramköri diagramja a következő:
 
 <!--- ![](.\media\1.svg) --->
@@ -109,7 +109,7 @@ Például a szimbólum
 <A!--nem talál megoldást a középpontba... valószínűleg egy bővítmény szükséges:->
 ![Egy qubit-regiszteren működő Hadamard művelet szimbóluma](~/media/2.svg)
 
-egy qubit-regisztráción alapuló [Hadamard](xref:microsoft.quantum.intrinsic.h) művelet.
+egy qubit-regisztráción alapuló [Hadamard](xref:Microsoft.Quantum.Intrinsic.H) művelet.
 
 A Quantum Gates kronológiai sorrendben vannak rendezve a bal szélső kapuval, amelyet a kapu először alkalmaz a qubits.
 Más szóval, ha a vezetékeket a kvantum-állapot tárolásával ábrázolja, a vezetékek a diagram minden kapuján balról jobbra helyezik a kvantum-állapotot.
@@ -150,7 +150,7 @@ Egy olyan kvantum-vezérelt kapu művelete, $ \Lambda amely (g) $ , ahol egyetle
 ![Egy megfelelően vezérelt kapu áramköri diagramja](~/media/5.svg)
 
 Itt a fekete kör azt a kvantum-bitet jelöli, amelyen a kapu vezérelhető, és a vertikális huzal azt jelöli, hogy a vezérlő qubit az 1 értéket veszi figyelembe $ $ .
-Azon speciális esetekben, ahol a $ g = X $ és a $ g Z a = következő jelölést mutatja be a $ kapuk ellenőrzött verziójának leírásához (vegye figyelembe, hogy a vezérelt X kapu a [ $ cnem $ kapu](xref:microsoft.quantum.intrinsic.cnot)):
+Azon speciális esetekben, ahol a $ g = X $ és a $ g Z a = következő jelölést mutatja be a $ kapuk ellenőrzött verziójának leírásához (vegye figyelembe, hogy a vezérelt X kapu a [ $ cnem $ kapu](xref:Microsoft.Quantum.Intrinsic.CNOT)):
 
 <!--- ![](.\media\6.svg) --->
 <A!--nem talál megoldást a középpontba... valószínűleg egy bővítmény szükséges:->
@@ -175,7 +175,7 @@ Az ilyen alhálózatok például a következőkre hasonlítanak:
 <A!--nem talál megoldást a középpontba... valószínűleg egy bővítmény szükséges:->
 ![Mérési műveletet jelölő szimbólum](~/media/7.svg)
 
-Q# erre a célra implementálja a [mérték kezelőjét](xref:microsoft.quantum.intrinsic.measure) .
+Q# erre a célra implementálja a [mérték kezelőjét](xref:Microsoft.Quantum.Intrinsic.Measure) .
 További információt a [mérések című szakaszban](xref:microsoft.quantum.libraries.standard.prelude#measurements) talál.
 
 Hasonlóképpen, az aláramkör

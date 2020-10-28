@@ -9,16 +9,16 @@ uid: microsoft.quantum.guide.variables
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: bb87f36d3c9b7df195f64e85151e833d494ea945
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 67c71c09e004d77360902360fefc7a7752e4a829
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835876"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92690931"
 ---
 # <a name="variables-in-no-locq"></a>Változók a-ben Q#
 
-Q# megkülönbözteti a változókat és a nem módosítható szimbólumokat, illetve a kifejezésekhez hozzárendelt vagy hozzájuk rendelt *változókat*.
+Q# megkülönbözteti a változókat és a nem módosítható szimbólumokat, illetve a kifejezésekhez hozzárendelt vagy hozzájuk rendelt *változókat* .
 Általánosságban a nem módosítható szimbólumok használata javasolt, mivel lehetővé teszi, hogy a fordító több optimalizációt végezzen.
 
 A kötés bal oldali oldala egy szimbólum és egy kifejezés jobb oldalán áll.
@@ -40,7 +40,7 @@ Ez a Pauli-operátorok egy adott tömbjét rendeli hozzá a változó nevéhez (
 > [!NOTE]
 > Az előző példában nem kell explicit módon megadnia az új változó típusát, mivel az utasítás jobb oldalán lévő kifejezés nem `let` egyértelmű, és a fordító kikövetkezteti a megfelelő típust. 
 
-A használatával definiált változók `let` nem *változtathatók*meg, ami azt jelenti, hogy a meghatározása után a továbbiakban nem módosítható.
+A használatával definiált változók `let` nem *változtathatók* meg, ami azt jelenti, hogy a meghatározása után a továbbiakban nem módosítható.
 Ez számos hasznos optimalizálást tesz lehetővé, többek között a klasszikus logika optimalizálását, amely a változókat a művelet változatának átrendezésére fogja alkalmazni `Adjoint` .
 
 ## <a name="mutable-variables"></a>Változtatható változók
@@ -92,7 +92,7 @@ for (q in qubits) {
 #### <a name="update-and-reassign-statements"></a>Utasítások frissítése és újbóli társítása
 
 Hasonló Összefűzés található a jobb oldali [másolási és frissítési kifejezésekhez](xref:microsoft.quantum.guide.expressions#copy-and-update-expressions) .
-Ennek megfelelően a rendszer a felhasználó által definiált típusokban és a *tömbökben*lévő *megnevezett elemek* esetében is tartalmazza a *frissítés és az ismételt hozzárendelés* utasításait.  
+Ennek megfelelően a rendszer a felhasználó által definiált típusokban és a *tömbökben* lévő *megnevezett elemek* esetében is tartalmazza a *frissítés és az ismételt hozzárendelés* utasításait.  
 
 ```qsharp
 newtype Complex = (Re : Double, Im : Double);
@@ -110,7 +110,7 @@ function ComplexSum(reals : Double[], ims : Double[]) : Complex[] {
 }
 ```
 
-Tömbök esetén a [`Microsoft.Quantum.Arrays`](xref:microsoft.quantum.arrays) Q# standard szintű függvénytárban a szükséges eszközök számos gyakran használt tömb inicializálási és manipulációs igényeihez szükségesek, így elkerülhető, hogy a tömb elemeit az első helyen frissítse. 
+Tömbök esetén a [`Microsoft.Quantum.Arrays`](xref:Microsoft.Quantum.Arrays) Q# standard szintű függvénytárban a szükséges eszközök számos gyakran használt tömb inicializálási és manipulációs igényeihez szükségesek, így elkerülhető, hogy a tömb elemeit az első helyen frissítse. 
 
 Az Update-and-reassign utasítások szükség esetén alternatív megoldást nyújtanak:
 
@@ -135,7 +135,7 @@ operation SampleUniformDistrbution(nSamples : Int, nSteps : Int) : Double[] {
 
 ```
 
-A-ben megadott tár-eszközök használatával [`Microsoft.Quantum.Arrays`](xref:microsoft.quantum.arrays) például egyszerűen meghatározhat egy olyan függvényt, amely egy olyan típusú tömböt ad vissza, `Pauli` amelyben az indexben található elem `i` egy adott értéket vesz igénybe `Pauli` , és az összes többi bejegyzés az Identity ( `PauliI` ).
+A-ben megadott tár-eszközök használatával [`Microsoft.Quantum.Arrays`](xref:Microsoft.Quantum.Arrays) például egyszerűen meghatározhat egy olyan függvényt, amely egy olyan típusú tömböt ad vissza, `Pauli` amelyben az indexben található elem `i` egy adott értéket vesz igénybe `Pauli` , és az összes többi bejegyzés az Identity ( `PauliI` ).
 
 Íme egy ilyen függvény két definíciója, a második pedig kihasználja a rendelkezésére álló eszközöket.
 
@@ -150,7 +150,7 @@ function PauliEmbedding(pauli : Pauli, length : Int, location : Int) : Pauli[] {
 }
 ```
 
-Ahelyett, hogy megismétli a tömbben lévő egyes indexeket, és feltételesen Beállítja azt a `PauliI` vagy a megadott `pauli` `ConstantArray` értékre, a from paranccsal [`Microsoft.Quantum.Arrays`](xref:microsoft.quantum.arrays) létrehozhat egy tömb típusú tömböt `PauliI` , majd egyszerűen visszaállíthat egy olyan másolási és frissítési kifejezést, amelyben módosította az adott értéket az indexnél `location` :
+Ahelyett, hogy megismétli a tömbben lévő egyes indexeket, és feltételesen Beállítja azt a `PauliI` vagy a megadott `pauli` `ConstantArray` értékre, a from paranccsal [`Microsoft.Quantum.Arrays`](xref:Microsoft.Quantum.Arrays) létrehozhat egy tömb típusú tömböt `PauliI` , majd egyszerűen visszaállíthat egy olyan másolási és frissítési kifejezést, amelyben módosította az adott értéket az indexnél `location` :
 
 ```qsharp
 function PauliEmbedding(pauli : Pauli, length : Int, location : Int) : Pauli[] {
