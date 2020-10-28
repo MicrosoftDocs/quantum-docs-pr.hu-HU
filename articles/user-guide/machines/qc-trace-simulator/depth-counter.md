@@ -9,12 +9,12 @@ uid: microsoft.quantum.machines.qc-trace-simulator.depth-counter
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 8280783adfcc2867c3a598a6f57d827125aadcfd
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 89d8a2c9f2ecd5c5332215cd4307bcf4a6422036
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833443"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92692096"
 ---
 # <a name="quantum-trace-simulator-depth-counter"></a>Quantum Trace Simulator: mélységi számláló
 
@@ -23,13 +23,13 @@ Felhasználhatja a kvantum-programokban meghívott összes művelet mélységén
 
 ## <a name="depth-values"></a>Mélységi értékek
 
-Alapértelmezés szerint az összes művelet a művelet kivételével **0** mélységgel rendelkezik `T` , amelynek mélysége **1**. Ez azt jelenti, hogy alapértelmezés szerint a `T` rendszer csak a műveletek mélységét számítja ki (ami gyakran kívánatos). A mélységi számláló összesíti és statisztikai adatokat gyűjt a művelet [hívási gráfjának](https://en.wikipedia.org/wiki/Call_graph)összes szélénél.
+Alapértelmezés szerint az összes művelet a művelet kivételével **0** mélységgel rendelkezik `T` , amelynek mélysége **1** . Ez azt jelenti, hogy alapértelmezés szerint a `T` rendszer csak a műveletek mélységét számítja ki (ami gyakran kívánatos). A mélységi számláló összesíti és statisztikai adatokat gyűjt a művelet [hívási gráfjának](https://en.wikipedia.org/wiki/Call_graph)összes szélénél.
 
-Az összes <xref:microsoft.quantum.intrinsic> művelet az qubit-Forgások, a <xref:microsoft.quantum.intrinsic.t> műveletek, az qubit Clifford-műveletek, a <xref:microsoft.quantum.intrinsic.cnot> műveletek és a több qubit Pauli-observables mérései alapján van kifejezve. A felhasználók a mezőn keresztül állíthatják be az egyes primitív műveletek mélységét `gateTimes` <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> .
+Az összes <xref:Microsoft.Quantum.Intrinsic> művelet az qubit-Forgások, a <xref:Microsoft.Quantum.Intrinsic.T> műveletek, az qubit Clifford-műveletek, a <xref:Microsoft.Quantum.Intrinsic.CNOT> műveletek és a több qubit Pauli-observables mérései alapján van kifejezve. A felhasználók a mezőn keresztül állíthatják be az egyes primitív műveletek mélységét `gateTimes` <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> .
 
 ## <a name="invoking-the-depth-counter"></a>A mélységi számláló meghívása
 
-Ha a kvantum-nyomkövetési szimulátort a mélységi számlálóval szeretné futtatni, létre kell hoznia egy <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> példányt, a tulajdonságát igaz értékre kell állítania `UseDepthCounter` , majd létre kell hoznia egy **true**új <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> példányt `QCTraceSimulatorConfiguration` a paraméterrel. 
+Ha a kvantum-nyomkövetési szimulátort a mélységi számlálóval szeretné futtatni, létre kell hoznia egy <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> példányt, a tulajdonságát igaz értékre kell állítania `UseDepthCounter` , majd létre kell hoznia egy **true** új <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> példányt `QCTraceSimulatorConfiguration` a paraméterrel. 
 
 ```csharp
 var config = new QCTraceSimulatorConfiguration();
@@ -52,7 +52,7 @@ operation ApplySampleWithCCNOT() : Unit {
 }
 ```
 
-A következő C#-kód megadásával ellenőrizhető, hogy az `CCNOT` `T` **5** . mélység és `ApplySampleWithCCNOT` `T` a mélység **6**:
+A következő C#-kód megadásával ellenőrizhető, hogy az `CCNOT` `T` **5** . mélység és `ApplySampleWithCCNOT` `T` a mélység **6** :
 
 ```csharp
 using Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators;

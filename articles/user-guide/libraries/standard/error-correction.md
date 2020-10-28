@@ -9,12 +9,12 @@ ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: dad0db4d2aab27e5ae46d4df10ee050f785d8bb8
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 94251e185cea65c5fc08ed70d5fba9b7b19501e3
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835553"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92692040"
 ---
 # <a name="error-correction"></a>Hibajavítás #
 
@@ -61,7 +61,7 @@ Az egyes mérések eredményeit a megfigyelt sajátérték ($ + $ vagy $-$) jel�
 | $X _2 $ | $ \ket {001} $ | $ \ket {110} $ | $+$ | $-$ |
 
 Így a két mérés eredménye egyedi módon meghatározza, hogy melyik bit-flip hiba történt, de nem tárt fel semmilyen információt arról, hogy melyik állapotot kódoljuk.
-Ezeket az eredményeket egy *szindrómát*hívjuk, és a szindrómát visszaképező hibára utalunk, amely a *helyreállítást*okozta.
+Ezeket az eredményeket egy *szindrómát* hívjuk, és a szindrómát visszaképező hibára utalunk, amely a *helyreállítást* okozta.
 Különösen hangsúlyozjuk, hogy a helyreállítás egy *klasszikus* következtetési eljárás, amely a bekövetkezett szindrómát veszi át, és az esetlegesen előforduló hibák kijavításának módját adja vissza.
 
 > [!NOTE]
@@ -70,7 +70,7 @@ Különösen hangsúlyozjuk, hogy a helyreállítás egy *klasszikus* következt
 > Hasonlóképpen, ha egy fázis-tükrözési műveletet alkalmaz a `Z` $ \ket{\overline {1} } $ és a $-\ket{\overline {1} } $ értékre, és így a $ \ket{\overline{+}} $ $ \ket{\overline} $ értékre lesz leképezve {-} .
 > Általánosabban a kódok nagyobb számú hiba kezelésére és $Z $ hibák, valamint $X $ hibák kezelésére használhatók.
 
-A *stabilizátorok formalitásának*lényege, hogy betekintést nyerhetünk a kvantum-hibák kijavításának olyan mértékére, amely az összes kód állapotával azonos módon működik.
+A *stabilizátorok formalitásának* lényege, hogy betekintést nyerhetünk a kvantum-hibák kijavításának olyan mértékére, amely az összes kód állapotával azonos módon működik.
 A Q# Canon olyan keretrendszert biztosít, amely leírja a stabilizátor-kódok kódolását és dekódolását, valamint leírja, hogy az egyes hibák hogyan állíthatók vissza.
 Ebben a szakaszban ezt a keretrendszert és annak alkalmazását néhány egyszerű kvantum-hiba – a kódok kijavítani.
 
@@ -82,14 +82,14 @@ Ebben a szakaszban ezt a keretrendszert és annak alkalmazását néhány egysze
 
 A hibakódok megadásához a Q# Canon számos különböző, felhasználó által definiált típust biztosít:
 
-- <xref:microsoft.quantum.errorcorrection.logicalregister>`= Qubit[]`: Azt jelzi, hogy a qubits-regisztrációt egy hibajavítási kód kódjának blokkjának kell értelmezni.
-- <xref:microsoft.quantum.errorcorrection.syndrome>`= Result[]`: Azt jelzi, hogy a mérési eredmények tömbjét úgy kell értelmezni, mint a kód blokkban mért szindrómát.
-- <xref:microsoft.quantum.errorcorrection.recoveryfn>`= (Syndrome -> Pauli[])`: Azt jelzi, hogy egy *klasszikus* függvényt kell használni a szindrómák értelmezéséhez, és az alkalmazandó korrekciót vissza kell adni.
-- <xref:microsoft.quantum.errorcorrection.encodeop>`= ((Qubit[], Qubit[]) => LogicalRegister)`: Azt jelzi, hogy egy művelet a qubits, valamint a friss Ancilla-qubits együtt az adatok ábrázolását is elvégzi a hibajavítási kód kódjának létrehozása érdekében.
-- <xref:microsoft.quantum.errorcorrection.decodeop>`= (LogicalRegister => (Qubit[], Qubit[]))`: Azt jelzi, hogy egy művelet lebontja a hibakódot az adatok qubits, valamint a Ancilla-qubits.
-- <xref:microsoft.quantum.errorcorrection.syndromemeasop>`= (LogicalRegister => Syndrome)`: Egy olyan műveletet jelöl, amelynek használatával a rendszer egy kód blokkból Kinyeri a szindrómát, és nem zavarja a kód által védett állapotot.
+- <xref:Microsoft.Quantum.ErrorCorrection.LogicalRegister>`= Qubit[]`: Azt jelzi, hogy a qubits-regisztrációt egy hibajavítási kód kódjának blokkjának kell értelmezni.
+- <xref:Microsoft.Quantum.ErrorCorrection.Syndrome>`= Result[]`: Azt jelzi, hogy a mérési eredmények tömbjét úgy kell értelmezni, mint a kód blokkban mért szindrómát.
+- <xref:Microsoft.Quantum.ErrorCorrection.RecoveryFn>`= (Syndrome -> Pauli[])`: Azt jelzi, hogy egy *klasszikus* függvényt kell használni a szindrómák értelmezéséhez, és az alkalmazandó korrekciót vissza kell adni.
+- <xref:Microsoft.Quantum.ErrorCorrection.EncodeOp>`= ((Qubit[], Qubit[]) => LogicalRegister)`: Azt jelzi, hogy egy művelet a qubits, valamint a friss Ancilla-qubits együtt az adatok ábrázolását is elvégzi a hibajavítási kód kódjának létrehozása érdekében.
+- <xref:Microsoft.Quantum.ErrorCorrection.DecodeOp>`= (LogicalRegister => (Qubit[], Qubit[]))`: Azt jelzi, hogy egy művelet lebontja a hibakódot az adatok qubits, valamint a Ancilla-qubits.
+- <xref:Microsoft.Quantum.ErrorCorrection.SyndromeMeasOp>`= (LogicalRegister => Syndrome)`: Egy olyan műveletet jelöl, amelynek használatával a rendszer egy kód blokkból Kinyeri a szindrómát, és nem zavarja a kód által védett állapotot.
 
-Végül a Canon megadja a <xref:microsoft.quantum.errorcorrection.qecc> típust a kvantum-hiba meghatározásához szükséges egyéb típusok összegyűjtéséhez. Az egyes stabilizátorok kvantum-kódjához társítva a kód hossza $n $, a logikai qubits száma $k $, valamint a minimális távolság $d $, amely gyakran kényelmesen csoportosítható a ⟦ $n $, $k $, $d $ ⟧. A <xref:microsoft.quantum.errorcorrection.bitflipcode> függvény például meghatározza a ⟦ 3, 1, 1 ⟧ bit flip code:
+Végül a Canon megadja a <xref:Microsoft.Quantum.ErrorCorrection.QECC> típust a kvantum-hiba meghatározásához szükséges egyéb típusok összegyűjtéséhez. Az egyes stabilizátorok kvantum-kódjához társítva a kód hossza $n $, a logikai qubits száma $k $, valamint a minimális távolság $d $, amely gyakran kényelmesen csoportosítható a ⟦ $n $, $k $, $d $ ⟧. A <xref:Microsoft.Quantum.ErrorCorrection.BitFlipCode> függvény például meghatározza a ⟦ 3, 1, 1 ⟧ bit flip code:
 
 ```qsharp
 let encodeOp = EncodeOp(BitFlipEncoder);
@@ -104,7 +104,7 @@ let code = QECC(encodeOp, decodeOp, syndMeasOp);
 Figyelje meg, hogy a `QECC` típus *nem* tartalmaz helyreállítási funkciót.
 Ez lehetővé teszi, hogy megváltoztassuk a hibák kijavításához használt helyreállítási funkciót, a kód definíciójának módosítása nélkül. Ez a képesség különösen hasznos, ha a jellemzési mérések származó visszajelzéseket a helyreállítás által feltételezett modellbe foglalja.
 
-Ha a kód ily módon van definiálva, a következő <xref:microsoft.quantum.errorcorrection.recover> művelettel állíthatja helyre a hibákat:
+Ha a kód ily módon van definiálva, a következő <xref:Microsoft.Quantum.ErrorCorrection.Recover> művelettel állíthatja helyre a hibákat:
 
 ```qsharp
 let code = BitFlipCode();

@@ -9,12 +9,12 @@ uid: microsoft.quantum.guide.operationsfunctions
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: e9a84de2753bc3293f441e66ee53e78559263e5c
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 55e6d3e1a242386c46213083692377520df83a80
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833482"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92692138"
 ---
 # <a name="operations-and-functions-in-no-locq"></a>Műveletek és függvények a-ben Q#
 
@@ -32,7 +32,7 @@ A műveleti deklaráció a kulcsszóból áll, amelyet a művelet nevét, a műv
 
 Mindegyik művelet egy bemenetet hoz létre, kimenetet állít elő, és meghatározza egy vagy több műveleti specializáció megvalósítását.
 A lehetséges szakosodások, valamint az ezek meghatározása és meghívása a cikk különböző fejezeteiben olvasható.
-Egyelőre a következő műveletnek kell megfontolnia, amely csak az alapértelmezett szövegtörzset határozza meg, és egyetlen qubit használ a bemenetként, majd meghívja a beépített <xref:microsoft.quantum.intrinsic.x> műveletet a bemeneten:
+Egyelőre a következő műveletnek kell megfontolnia, amely csak az alapértelmezett szövegtörzset határozza meg, és egyetlen qubit használ a bemenetként, majd meghívja a beépített <xref:Microsoft.Quantum.Intrinsic.X> műveletet a bemeneten:
 
 ```qsharp
 operation BitFlip(target : Qubit) : Unit {
@@ -46,7 +46,7 @@ Végül `Unit` azt is meghatározza, hogy a művelet kimenete üres.
 `Unit` a használata hasonlóan a `void` C#-ban és más, felszólító nyelvekhez, és az `unit` F # és más funkcionális nyelvekkel egyenértékű.
 
 A műveletek több érdekes típust is visszaadhatnak, mint a `Unit` .
-A <xref:microsoft.quantum.intrinsic.m> művelet például egy típusú kimenetet ad vissza `Result` , amely a mérés végrehajtását jelöli.  Átadhatja egy műveletből egy másik műveletnek, vagy felhasználhatja azt a `let` kulcsszóval egy új változó definiálásához.
+A <xref:Microsoft.Quantum.Intrinsic.m> művelet például egy típusú kimenetet ad vissza `Result` , amely a mérés végrehajtását jelöli.  Átadhatja egy műveletből egy másik műveletnek, vagy felhasználhatja azt a `let` kulcsszóval egy új változó definiálásához.
 
 Ez a megközelítés lehetővé teszi a klasszikus számítások használatát, amelyek alacsony szinten működnek a kvantum-műveletekkel, például a [sűrűbb kódolásban](https://github.com/microsoft/QuantumKatas/tree/main/SuperdenseCoding):
 
@@ -65,13 +65,13 @@ operation DecodeSuperdense(here : Qubit, there : Qubit) : (Result, Result) {
 
 > [!NOTE]
 > A minden művelete Q# pontosan egy bemenetet vesz fel, és pontosan egy kimenetet ad vissza.
-> Több bemenet és kimenet is szerepel a *rekordok*használatával, amely egyszerre több értéket gyűjt össze egyetlen értékkel.
+> Több bemenet és kimenet is szerepel a *rekordok* használatával, amely egyszerre több értéket gyűjt össze egyetlen értékkel.
 > Ebben a tekintetben Q# a egy "rekordos kijelentkezés" nyelv.
 > Ezt a fogalmat követve az üres zárójelek egy halmaza, `()` amelynek a típusa "Empty" (üres `Unit` ) rekord.
 
 ## <a name="controlled-and-adjoint-operations"></a>Vezérelt és Adjoint műveletek
 
-Ha egy művelet egy egységes átalakítást valósít meg, mint a számos művelet esetében, Q# akkor megadható, hogy a művelet hogyan *adjointed* vagy *vezérelve*legyen. Egy művelet *adjoint* -specializálása meghatározza, hogy a művelet milyen hatással van az "inverz" értékre, míg a *szabályozott* specializáció meghatározza, hogy a művelet hogyan működik, ha az alkalmazás egy adott kvantum-regiszter állapotára van feltétele.
+Ha egy művelet egy egységes átalakítást valósít meg, mint a számos művelet esetében, Q# akkor megadható, hogy a művelet hogyan *adjointed* vagy *vezérelve* legyen. Egy művelet *adjoint* -specializálása meghatározza, hogy a művelet milyen hatással van az "inverz" értékre, míg a *szabályozott* specializáció meghatározza, hogy a művelet hogyan működik, ha az alkalmazás egy adott kvantum-regiszter állapotára van feltétele.
 
 A Adjoints elengedhetetlen a kvantum-számítási feladatok számos aspektusa szempontjából. A hasznos programozási technikák mellett egy ilyen helyzetre például a Q# következő témakörben olvashat [: Control flow: conjugations](xref:microsoft.quantum.guide.controlflow#conjugations). Egy művelet ellenőrzött verziója olyan új művelet, amely hatékonyan alkalmazza az alapműveletet, ha az összes vezérlő qubits megadott állapotban van.
 Ha a vezérlő qubits van, akkor az alapszintű műveletet a rendszer következetesen alkalmazza a Felfekvés megfelelő részére.
@@ -139,7 +139,7 @@ A és a-elválasztók `Controlled` `Adjoint` ingázás, így nincs különbség 
 
 Az előző példákban szereplő első művelet deklarációjában a műveletek és az aláírásokkal, illetve a műveletekkel `BitFlip` `DecodeSuperdense` lettek definiálva `(Qubit => Unit)` `((Qubit, Qubit) => (Result, Result))` .
 A `DecodeSuperdense` mértékek beleszámítása nem egy egységes művelet, ezért nem léteznek szabályozott, nem adjoint specializációk (az ilyen művelet visszaadására vonatkozó követelmény visszahívása `Unit` ).
-Mivel azonban `BitFlip` egyszerűen végrehajtja az egységes <xref:microsoft.quantum.intrinsic.x> műveletet, megadhatja azt mindkét specializációval.
+Mivel azonban `BitFlip` egyszerűen végrehajtja az egységes <xref:Microsoft.Quantum.Intrinsic.X> műveletet, megadhatja azt mindkét specializációval.
 
 Ez a szakasz részletesen ismerteti, hogyan lehet felvenni a specializációkat a Q# műveleti deklarációkban, így lehetővé teszi számukra, hogy meghívják őket a vagy a-rel együtt `Adjoint` `Controlled` .
 Ha további információt szeretne arról, hogy milyen helyzetek érvényesek, vagy nem érvényesek bizonyos specializációk bejelentésére, tekintse meg a jelen cikkben szereplő, [a specializációk érvényességét meghatározó körülményeket](#circumstances-for-validly-defining-specializations) .
@@ -368,7 +368,7 @@ Ez azt jelenti, hogy a felhasználó által definiált típus értéke nem haszn
 
 A függvények tisztán determinisztikus, klasszikus rutinok, amelyek a-ben Q# különböznek, és nem megengedett, hogy a kimeneti érték kiszámításán kívül más effektusok is legyenek.
 Különösen a függvények nem hívhatnak meg műveleteket; qubits bevonása, lefoglalása vagy kölcsönzése; véletlenszerű számok mintavételezése; Ellenkező esetben a bemeneti értéken kívüli állapot függ egy függvénynek.
-Ennek következményeként a Q# függvények *tisztán*vannak rendelve, hogy mindig ugyanazokat a bemeneti értékeket rendelik ugyanahhoz a kimeneti értékekhez.
+Ennek következményeként a Q# függvények *tisztán* vannak rendelve, hogy mindig ugyanazokat a bemeneti értékeket rendelik ugyanahhoz a kimeneti értékekhez.
 Ez a viselkedés lehetővé teszi Q# , hogy a fordító biztonságosan átrendezje a függvények meghívását a műveleti szakosodások létrehozásakor.
 
 Minden Q# forrásfájl tetszőleges számú funkciót meghatározhat.
@@ -401,7 +401,7 @@ function DotProduct(a : Double[], b : Double[]) : Double {
 
 ### <a name="classical-logic-in-functions--good"></a>Klasszikus Logic in functions = = jó
 
-Ha ez lehetséges, hasznos lehet a klasszikus logikát kiírni a függvények helyett, hogy a műveletek könnyebben használhassák azt. Ha például a korábbi `Square` deklarációt *műveletként*írta volna, akkor a fordító nem tudta garantálni, hogy ugyanazt a bemenetet ugyanazzal a kimenettel fogja létrehozni.
+Ha ez lehetséges, hasznos lehet a klasszikus logikát kiírni a függvények helyett, hogy a műveletek könnyebben használhassák azt. Ha például a korábbi `Square` deklarációt *műveletként* írta volna, akkor a fordító nem tudta garantálni, hogy ugyanazt a bemenetet ugyanazzal a kimenettel fogja létrehozni.
 
 A függvények és a műveletek közötti különbség kihangsúlyozása érdekében vegye figyelembe, hogy az adott műveletből klasszikusan mintavételezésre kerül egy véletlenszerű szám Q# .
 
@@ -415,7 +415,7 @@ operation U(target : Qubit) : Unit {
 
 Minden alkalommal `U` , amikor meghívja a szolgáltatást, egy másik művelettel rendelkezik `target` .
 Különösen a fordító nem tudja garantálni, hogy ha egy `adjoint auto` specializációs nyilatkozatot ad hozzá a alkalmazáshoz `U` , akkor az `U(target); Adjoint U(target);` identitásként viselkedik (azaz No-op).
-Ez sérti a [vektorokban és mátrixokban](xref:microsoft.quantum.concepts.vectors)definiált adjoint definícióját, amely lehetővé teszi, hogy a fordító automatikusan létrehozzon egy adjoint specializációt egy olyan műveletben, amelyben a művelet meghívása <xref:microsoft.quantum.math.randomreal> megszakítja a fordító által biztosított garanciákat; <xref:microsoft.quantum.math.randomreal> egy olyan művelet, amelynek nem létezik adjoint vagy vezérelt verziója.
+Ez sérti a [vektorokban és mátrixokban](xref:microsoft.quantum.concepts.vectors)definiált adjoint definícióját, amely lehetővé teszi, hogy a fordító automatikusan létrehozzon egy adjoint specializációt egy olyan műveletben, amelyben a művelet meghívása <xref:Microsoft.Quantum.Math.RandomReal> megszakítja a fordító által biztosított garanciákat; <xref:Microsoft.Quantum.Math.RandomReal> egy olyan művelet, amelynek nem létezik adjoint vagy vezérelt verziója.
 
 Másfelől pedig lehetővé teszi, hogy a függvények olyan hívásokat engedélyezzenek, mint például `Square` a biztonságos, és biztosítja a fordító számára, hogy a kimenet stabilitásának megőrzése érdekében csak a bemenetet kell megőriznie `Square` .
 Így a lehető legtöbb klasszikus logikát elkülönítheti a functions szolgáltatásban, így a logika más funkciókban és műveletekben is felhasználható.
@@ -467,7 +467,7 @@ Ez egy kis mennyiségű ilyen funkció esetében is eltartható, mivel a több �
 A probléma nagy része azonban abból ered, hogy nem adta meg a fordítónak a különböző verzióinak felismeréséhez szükséges információkat `Map` .
 Gyakorlatilag azt szeretné, hogy a fordító a `Map` Q# függvények *típusaként* valamilyen matematikai függvényt kezelje Q# .
 
-Q# ezt a fogalmat úgy formalizes meg, hogy a functions és a Operations függvények *típus paraméterekkel*, valamint a szokásos rekordos paraméterekkel rendelkeznek.
+Q# ezt a fogalmat úgy formalizes meg, hogy a functions és a Operations függvények *típus paraméterekkel* , valamint a szokásos rekordos paraméterekkel rendelkeznek.
 Az előző példákban úgy gondolja, hogy `Map` `Int, Pauli` az első esetben, a második esetben pedig a type paramétert adja meg `Double, String` .
 A legtöbb esetben használja ezeket a típusú paramétereket, mintha a szokásos típusok lennének. Paraméterek típusú értékek használata tömbök és rekordok, a függvények és a műveletek hívásához, valamint a szokásos vagy változtatható változókhoz való hozzárendeléshez.
 
@@ -536,9 +536,9 @@ A Q# standard szintű kódtárak számos ilyen típusú paraméteres műveletet 
 Ezeket a [ Q# standard szintű könyvtár útmutatója ismerteti](xref:microsoft.quantum.libraries.standard.intro).
 
 
-## <a name="callables-as-first-class-values"></a>Callables első osztályú értékként
+## <a name="callables-as-first-class-values"></a>Callables First-Class értékként
 
-Az egyik kritikus módszer, amellyel a vezérlési folyamat és a klasszikus logika a függvények helyett functions használatával történik, így a műveletek és a függvények az Q# *első osztályúak*.
+Az egyik kritikus módszer, amellyel a vezérlési folyamat és a klasszikus logika a függvények helyett functions használatával történik, így a műveletek és a függvények az Q# *első osztályúak* .
 Ez azt eredményezi, hogy a nyelv minden értéke a saját jobb oldalán van.
 A következők például tökéletesen érvényes Q# kód, ha kicsit közvetett:
 
@@ -549,7 +549,7 @@ operation FirstClassExample(target : Qubit) : Unit {
 }
 ```
 
-Az `ourH` előző kódrészletben szereplő változó értéke ezután a művelet <xref:microsoft.quantum.intrinsic.h> , például a többi művelethez hasonló érték hívható meg.
+Az `ourH` előző kódrészletben szereplő változó értéke ezután a művelet <xref:Microsoft.Quantum.Intrinsic.H> , például a többi művelethez hasonló érték hívható meg.
 Ezzel a képességgel olyan műveleteket írhat, amelyek a bemenetük részeként műveleteket hajtanak végre, és a magasabb rendű vezérlési folyamatokra vonatkozó fogalmakat alkotnak.
 Képzelje el például, hogy a "Square" műveletet úgy szeretné használni, hogy kétszer alkalmazza azt ugyanarra a cél qubit.
 
@@ -589,7 +589,7 @@ Ez azt jelenti, hogy a függvényben található klasszikus logika el van külö
 
 ## <a name="partial-application"></a>Részleges alkalmazás
 
-A műveleteknek a *részleges alkalmazás*használatával történő visszaadására szolgáló függvények sokkal nagyobb mértékben is megadhatók, amelyekben a bemenet egy vagy több részét egy függvénynek vagy műveletnek kell megadnia anélkül, hogy ténylegesen meghívja azt. A `ApplyTwice` fenti példában azt jelezheti, hogy nem kívánja megadni, azonnal, hogy a bemeneti művelet melyik qubit vonatkozzon:
+A műveleteknek a *részleges alkalmazás* használatával történő visszaadására szolgáló függvények sokkal nagyobb mértékben is megadhatók, amelyekben a bemenet egy vagy több részét egy függvénynek vagy műveletnek kell megadnia anélkül, hogy ténylegesen meghívja azt. A `ApplyTwice` fenti példában azt jelezheti, hogy nem kívánja megadni, azonnal, hogy a bemeneti művelet melyik qubit vonatkozzon:
 
 ```qsharp
 operation PartialApplicationExample(op : (Qubit => Unit), target : Qubit) : Unit {

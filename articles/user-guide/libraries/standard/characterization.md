@@ -9,12 +9,12 @@ ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 8dddc15354c32808e7ad1310bce233ee3dc93fe8
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 51e7b3bcf4402a4d0ba5647643f284e9f10c3bb3
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835638"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92692150"
 ---
 # <a name="quantum-characterization-and-statistics"></a>Quantum jellemzés és statisztika #
 
@@ -39,7 +39,7 @@ Ennek az az előnye, hogy csak egyetlen további qubit van szükség a kvantum-e
 Az alábbiakban javasolt módszerek mindegyike egy másik stratégiát használ a kísérletek tervezéséhez és a különböző adatfeldolgozási módszerekhez a fázis megismerése érdekében.  Ezek mindegyike egyedi előnnyel rendelkezik, és a szigorú hibákra, a képességekre, az előzetes információk bevezetésére, a hibák elmulasztására vagy a limitted klasszikus számítógépeken való futtatására van szükség.
 
 Az iterációs fázisok becslésének megvitatásakor egy egységes $U $ értéket fogunk figyelembe venni, amely egy fekete dobozból álló művelet.
-Az [adatstruktúrákban](xref:microsoft.quantum.libraries.data-structures)található Oracle-adatokról szóló szakaszban leírtaknak megfelelően a Q# Canon modelleket a <xref:microsoft.quantum.oracles.discreteoracle> felhasználó által definiált típus alapján, a rekord típusa határozza meg `((Int, Qubit[]) => Unit : Adjoint, Controlled)` .
+Az [adatstruktúrákban](xref:microsoft.quantum.libraries.data-structures)található Oracle-adatokról szóló szakaszban leírtaknak megfelelően a Q# Canon modelleket a <xref:Microsoft.Quantum.Oracles.DiscreteOracle> felhasználó által definiált típus alapján, a rekord típusa határozza meg `((Int, Qubit[]) => Unit : Adjoint, Controlled)` .
 Konkrétan, ha `U : DiscreteOracle` , akkor `U(m)` a $U ^ millió $ értéket implementál a következőhöz: `m : Int` .
 
 Ennek a definíciónak a helyén az ismétlődő fázisok becslésének minden lépése a $ \ket{+} $ állapotú kiegészítő qubit előkészítésével jár együtt, a kezdeti állapot pedig az $ \ket{\phi} $, amelyet feltételezzük, [hogy az $U](xref:microsoft.quantum.concepts.matrix-advanced) (m) $, azaz $U (m) \ket{\phi} = e ^ {im\phi} \ ket {\ Phi} $.  
@@ -99,7 +99,7 @@ A Bayes-következtetések pontos megállapítása a gyakorlatban megoldhatatlan.
 Ehhez Képzelje el, hogy $n $-bit változót szeretne megtanulni $x $-ra.
 A korábbi Distribution $ \Pr (x) $ támogatás több mint $2 ^ n $ feltételezett értéket támogat a $x $ értéknél.
 Ez azt jelenti, hogy ha nagyon pontos becslésre van szükségünk, $x $, akkor a Bayes-fázis becslése tiltó memóriát és feldolgozási időt igényel.
-Egyes alkalmazások, például a kvantum-szimulációk esetében a limitted pontossága nem zárja ki az ilyen metódusokat, például a rövid algoritmust, a szakasz becslésének lépésein belül nem használhatók a pontos Bayes-következtetések.  Ezért megvalósításokat is biztosítunk a Bayes-as módszerekhez, például a [véletlenszerű RWPE-becslésekhez](xref:microsoft.quantum.research.characterization.randomwalkphaseestimation) , valamint a nem bayesos megközelítésekhez, például a [robusztus fázisok becsléséhez](xref:microsoft.quantum.characterization.robustphaseestimation).
+Egyes alkalmazások, például a kvantum-szimulációk esetében a limitted pontossága nem zárja ki az ilyen metódusokat, például a rövid algoritmust, a szakasz becslésének lépésein belül nem használhatók a pontos Bayes-következtetések.  Ezért megvalósításokat is biztosítunk a Bayes-as módszerekhez, például a [véletlenszerű RWPE-becslésekhez](xref:Microsoft.Quantum.Research.Characterization.RandomWalkPhaseEstimation) , valamint a nem bayesos megközelítésekhez, például a [robusztus fázisok becsléséhez](xref:Microsoft.Quantum.Characterization.RobustPhaseEstimation).
 
 ### <a name="robust-phase-estimation"></a>Robusztus fázis becslése ###
 
@@ -117,9 +117,9 @@ A további releváns részletek közé tartozik például a $1 $ Ancilla qubit, 
 
 ### <a name="continuous-oracles"></a>Folyamatos Oracle- ###
 
-A fentiekben ismertetett Oracle-modell általánosítható is, hogy a folyamatos Oracle-típusok a Canon típus szerint legyenek modellezve <xref:microsoft.quantum.oracles.continuousoracle> .
+A fentiekben ismertetett Oracle-modell általánosítható is, hogy a folyamatos Oracle-típusok a Canon típus szerint legyenek modellezve <xref:Microsoft.Quantum.Oracles.ContinuousOracle> .
 Vegye figyelembe, hogy ahelyett, hogy egyetlen, egységes operátort $U $-t használunk, az egységes operátorok családja $U (t) $, $t \in \mathbb{R} $, hogy $U (t) U (s) $ = $U (t + s) $.
-Ez egy gyengébb utasítás, mint a diszkrét esetekben, mivel a kialakítható a <xref:microsoft.quantum.oracles.discreteoracle> $t = m \, \delta t $ korlátozásával néhány Fixed $ \delta t $ értékkel.
+Ez egy gyengébb utasítás, mint a diszkrét esetekben, mivel a kialakítható a <xref:Microsoft.Quantum.Oracles.DiscreteOracle> $t = m \, \delta t $ korlátozásával néhány Fixed $ \delta t $ értékkel.
 A [Stone-tétel](https://en.wikipedia.org/wiki/Stone%27s_theorem_on_one-parameter_unitary_groups), $U (t) = \exp (i H t) $ egyes operátorok esetében $H $, ahol a $ \exp $ a mátrix exponenciális értéke a [speciális mátrixok](xref:microsoft.quantum.concepts.matrix-advanced)részben leírtak szerint.
 Egy eigenstate $ \ket{\phi} $ $H $-ból, amely $H \ket{\phi} = \phi \ket{\phi} $-t is eigenstate $U (t) $ az összes $t $, \begin{Equation} U (t) \ket{\phi} = e ^ {i \phi t} \ket{\phi}.
 \end{equation}
@@ -146,14 +146,14 @@ A visszafelé lépés lehetővé teszi, hogy az algoritmus még akkor is tudjon 
 
 A Canon által biztosított minden fázis-becslési művelet Q# különböző bemeneteket használ a parameterizing, amelyet a végleges becslés $ \hat{\phi} $ értékkel együtt igényel.
 Ezek a különböző bemenetek azonban a közösen több bemenetet is megosztanak, például a minőségi paraméterekben lévő részleges alkalmazások közös aláírást eredményeznek.
-A <xref:microsoft.quantum.characterization.robustphaseestimation> következő szakaszban tárgyalt művelet például a következő aláírással rendelkezik:
+A <xref:Microsoft.Quantum.Characterization.RobustPhaseEstimation> következő szakaszban tárgyalt művelet például a következő aláírással rendelkezik:
 
 ```qsharp
 operation RobustPhaseEstimation(bitsPrecision : Int, oracle : DiscreteOracle, eigenstate : Qubit[])  : Double
 ```
 
 A `bitsPrecision` bemenet egyedi `RobustPhaseEstimation` , míg a `oracle` és a `eigenstate` közös.
-Így ahogy a **H2Sample**is látható, egy művelet elfogadhat egy iterációs fázis-értékelési algoritmust, amely az űrlap bemenetével `(DiscreteOracle, Qubit[]) => Unit` lehetővé teszi, hogy a felhasználó tetszőleges fázisú becslési algoritmusokat adjon meg:
+Így ahogy a **H2Sample** is látható, egy művelet elfogadhat egy iterációs fázis-értékelési algoritmust, amely az űrlap bemenetével `(DiscreteOracle, Qubit[]) => Unit` lehetővé teszi, hogy a felhasználó tetszőleges fázisú becslési algoritmusokat adjon meg:
 
 ```qsharp
 operation H2EstimateEnergy(

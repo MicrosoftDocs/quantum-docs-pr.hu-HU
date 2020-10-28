@@ -1,6 +1,6 @@
 ---
 title: Hamilton Dynamics szimulálása
-description: Ismerje meg, hogyan használható a Trotter-Suzuki-képletek és-qubitization a Hamilton-szimulációkkal való együttműködéshez.
+description: Megtudhatja, hogyan használhatók Trotter-Suzuki képletek és qubitization a Hamilton-szimulációkkal való együttműködéshez.
 author: bradben
 ms.author: v-benbra
 ms.date: 10/09/2017
@@ -9,12 +9,12 @@ uid: microsoft.quantum.chemistry.concepts.simulationalgorithms
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 299eb1484a697ad9d1577aabb44ccb61e908bae3
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: a303d54476e42b98a14c6b452227b0e1346567c8
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834006"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691889"
 ---
 # <a name="simulating-hamiltonian-dynamics"></a>Hamilton Dynamics szimulálása
 
@@ -28,13 +28,13 @@ A Trotter mögötti ötlet – a Suzuki-képletek egyszerűek: fejezze be a Hami
 Különösen $H = \ sum_ {j = 1} ^ m H_j $ legyen a Hamilton.
 Ezután $ $ e ^ {-i \ sum_ {j = 1} ^ m H_j t} = \ prod_ {j = 1} ^ m e ^ {-iH_j t} + O (m ^ 2 t ^ 2), $ $, ami azt jelenti, hogy ha $t \ll $1, akkor a közelítésben szereplő hiba elhanyagolható lesz.
 Vegye figyelembe, hogy ha $e ^ {-i H t} $ volt, akkor a közelítésben szereplő hiba nem lesz $O (m ^ 2 t ^ 2) $: nulla lenne.
-Ez a hiba azért fordul elő, mert $e ^ {-iHt} $ egy operátor exponenciális, és ennek eredményeként hiba történt a képlet használatakor, mert a $H _j $ feltételek nem ingázik (*azaz*$H _j H_k \ne H_k H_j $-t).
+Ez a hiba azért fordul elő, mert $e ^ {-iHt} $ egy operátor exponenciális, és ennek eredményeként hiba történt a képlet használatakor, mert a $H _j $ feltételek nem ingázik ( *azaz* $H _j H_k \ne H_k H_j $-t).
 
 Ha $t $ nagy, a Trotter – Suzuki-képletek továbbra is használhatók a dinamika pontos szimulálása érdekében, ha a rövid időre lépésekre bontja a folyamatot.
 $R $ legyen az időbeli evolúció lépéseinek száma, így minden alkalommal, amikor az/r $ $t időt futtat. Ezután a $ $ e ^ {-i \ sum_ {j = 1} ^ m H_j t} = \left (\ prod_ {j = 1} ^ m e ^ {-iH_j t/r} \ right) ^ r + O (m ^ 2 t $ $, ami azt jelenti, hogy ha $r $ skálák $m ^ 2 t ^ 2/\ epszilon $, akkor a hiba legfeljebb $ \epsilon $ lehet a $ \epsilon>$0 esetében.
 
 A pontosabb közelítések úgy hozhatók létre, hogy az operátorok egy sorozatot állítanak össze, így a hibák megszakadnak.
-A legegyszerűbb ilyen képlet, a második sorrend Trotter-Suzuki képlete, az űrlap $ $ U_2 (t) = \left (\ prod_ {j = 1} ^ {m} e ^ {-iH_j t/2r} \ prod_ {j = m} ^ 1 e ^ {-iH_j t/2r} \ right) ^ r = e ^ {-iHt} + O (m ^ 3 t ^ 3/r ^ 2), $ $ a hiba, amelynek elvégzése a $ \epsilon $-nál kevesebb, mint $ \epsilon>$0, ha $r $ értéket szeretne méretezni a következővel: $m ^ {3/2} t ^ {3/2}/\sqrt {\ epszilon} $.
+A legegyszerűbb ilyen képlet, a második sorrend Trotter-Suzuki képlet, az űrlap $ $ U_2 (t) = \left (\ prod_ {j = 1} ^ {m} e ^ {-iH_j t/2r} \ prod_ {j = m} ^ 1 e ^ {-iH_j t/2r} \ right) ^ r = e ^ {-iHt} + O (m ^ 3 t ^ 3/r ^ 2), $ $ a hiba, amelynek elvégzése a $ \epsilon $-nál kevesebb, mint $ \epsilon>$0, ha $r $ értéket szeretne méretezni a következővel: $m ^ {3/2} t ^ {3/2}/\sqrt {\ epszilon} $.
 
 A rekurzív módon állíthatók be a (z) $k>$0-as és újabb sorrendű képletek ($ 2k $): $ $ U_ {2k} (t) = [U_ {2k-2} (s_k \~ t)] ^ 2 U_ {2k-2} ([1-4s_k] t) [U_ {2k-2} (s_k \~ t)] ^ 2 = e ^ {-iHt} + O ((m t) ^ {2k + 1}/r ^ {2k}), $ $, ahol $s _K = (4 – 4 ^ {1/(2k-1)}) ^ {-1} $.
 
@@ -52,7 +52,7 @@ Például $ $ e ^ {-iX\otimes X t} = (H\otimes H) e ^ {-iZ\otimes Z t} (H\otimes
         0 & 0 & 0 & e ^ {-it} \end{bmatrix}.
 $ $ Itt, $e ^ {-iHt} \ket {00} = e ^ {it} \ket {00} $ és $e ^ {-iHt} \ket {01} = e ^ {-it} \ket {01} $, amely közvetlenül látható annak következményeként, hogy a $0 $ $0 $ paritása, míg a bit sztring $1 $ értéke $1 $.
 
-A Pauli-operátorok exponenciálisan valósíthatók meg közvetlenül Q# a <xref:microsoft.quantum.intrinsic.exp> művelet használatával:
+A Pauli-operátorok exponenciálisan valósíthatók meg közvetlenül Q# a <xref:Microsoft.Quantum.Intrinsic.Exp> művelet használatával:
 ```qsharp
     using(qubits = Qubit[2]){
         let pauliString = [PauliX, PauliX];
@@ -65,7 +65,7 @@ A Pauli-operátorok exponenciálisan valósíthatók meg közvetlenül Q# a <xre
 
 A Fermionic Hamiltonians esetében a [Jordan – Wigner elbomlása](xref:microsoft.quantum.chemistry.concepts.jordanwigner) kényelmesen leképezi a Hamilton-t a Pauli-operátorok összegére.
 Ez azt jelenti, hogy a fenti megközelítés könnyen módosítható a kémia szimulálása érdekében.
-Az alábbiakban egy egyszerű példa arra, hogy az ilyen szimulációk hogyan futnak a kémián belül a Jordan-Wigner ábrázolásban.
+Ahelyett, hogy az összes Pauli-kifejezést manuálisan átadja az Jordan-Wigner ábrázolásban, az alábbiakban egy egyszerű példa arra, hogy az ilyen szimulációk hogyan futnak a kémián belül.
 A kiindulási pont a Fermionic Hamilton [Jordánia – Wigner kódolása](xref:microsoft.quantum.chemistry.concepts.jordanwigner) , amely kód formájában szerepel az osztály példányaiban `JordanWignerEncoding` .
 
 ```csharp
@@ -156,7 +156,7 @@ A Walk operátor ($W $) a $ \operatorname{Select} $ és a $R $ műveletekben kif
 
 Ezek az alrutinok egyszerűen beállíthatók a alkalmazásban Q# .
 Vegyük például az egyszerű qubit keresztirányú-Ising Hamilton, ahol a $H = X_1 + X_2 + Z_1 Z_2 $ értéket.
-Ebben az esetben a Q# $ \operatorname{Select} $ művelet megvalósítására szolgáló kódot a rendszer meghívja <xref:microsoft.quantum.canon.multiplexoperations> , míg a $ \operatorname{Prepare} $ műveletet a használatával lehet megvalósítani <xref:microsoft.quantum.preparation.preparearbitrarystate> .
+Ebben az esetben a Q# $ \operatorname{Select} $ művelet megvalósítására szolgáló kódot a rendszer meghívja <xref:Microsoft.Quantum.Canon.MultiplexOperations> , míg a $ \operatorname{Prepare} $ műveletet a használatával lehet megvalósítani <xref:Microsoft.Quantum.Preparation.PrepareArbitraryState> .
 Az Hubbard-modell szimulálása például [ Q# mintaként](https://github.com/microsoft/Quantum/tree/main/samples/simulation/hubbard)is megtalálható.
 
 Ha manuálisan szeretné megadni ezeket a lépéseket az önkényes kémiai problémákhoz, nagy erőfeszítést igényel, ami elkerülhető a kémiai könyvtár használatával.
@@ -182,6 +182,6 @@ using(qubits = Qubit[nQubits]){
 }
 ```
 
-Fontos, hogy a megvalósítás a <xref:microsoft.quantum.chemistry.jordanwigner.qubitizationoracle> Pauli-karakterláncok lineáris kombinációjával megadott tetszőleges Hamiltonians érvényes.
-A kémia-szimulációra optimalizált verzió meghívása a használatával történik <xref:microsoft.quantum.chemistry.jordanwigner.optimizedqubitizationoracle> .
+Fontos, hogy a megvalósítás a <xref:Microsoft.Quantum.Chemistry.JordanWigner.QubitizationOracle> Pauli-karakterláncok lineáris kombinációjával megadott tetszőleges Hamiltonians érvényes.
+A kémia-szimulációra optimalizált verzió meghívása a használatával történik <xref:Microsoft.Quantum.Chemistry.JordanWigner.OptimizedQubitizationOracle> .
 Ez a verzió úgy van optimalizálva, hogy csökkentse a T-kapuk számát a [kvantum-áramkörökben lévő, lineáris T komplexitású elektronikus spektrumok kódolásával](https://arxiv.org/abs/1805.03662)tárgyalt technikák használatával.
