@@ -1,0 +1,166 @@
+### YamlMime:QSharpNamespace
+functions:
+- summary: Egy tömböt és egy predikátumot adott meg, amely a tömb elemeihez van meghatározva, és ellenőrzi, hogy a tömb összes eleme megfelel-e a predikátumnak.
+  uid: Microsoft.Quantum.Arrays.All
+- summary: A tömb elemeihez megadott tömb és predikátum alapján a rendszer ellenőrzi, hogy a tömb legalább egy eleme megfelel-e a predikátumnak.
+  uid: Microsoft.Quantum.Arrays.Any
+- summary: Tömb felosztása több, egyenlő hosszúságú részre.
+  uid: Microsoft.Quantum.Arrays.Chunks
+- summary: Oszlop kibontása egy mátrixból.
+  uid: Microsoft.Quantum.Arrays.ColumnAt
+- summary: Ez a függvény nem keres mátrix-alakzatot
+  uid: Microsoft.Quantum.Arrays.ColumnAtUnchecked
+- summary: Egy adott hosszúságú tömböt hoz létre a megadott értékkel egyenlő összes elemmel.
+  uid: Microsoft.Quantum.Arrays.ConstantArray
+- summary: Egy tömb és egy olyan predikátum, amely a tömb elemeihez van meghatározva, az elemek számát adja vissza, amely a predikátumnak megfelelő elemeket tartalmaz.
+  uid: Microsoft.Quantum.Arrays.Count
+- summary: A leképezett és a fold egyetlen függvénybe való egyesítése
+  uid: Microsoft.Quantum.Arrays.CumulativeFolded
+- summary: Egy kétdimenziós tömb átlós elemeinek tömbjét adja vissza.
+  uid: Microsoft.Quantum.Arrays.Diagonal
+- summary: Egy tömb megadott indexét adja vissza.
+  uid: Microsoft.Quantum.Arrays.ElementAt
+- summary: ''
+  uid: Microsoft.Quantum.Arrays.ElementAtDiagonal
+- summary: A tömb azon elemeit adja vissza, amelyek az indexek adott tartományában vannak.
+  uid: Microsoft.Quantum.Arrays.ElementsAt
+- summary: Egy adott típus üres tömbjét adja vissza.
+  uid: Microsoft.Quantum.Arrays.EmptyArray
+- summary: A tömbnek megfelelően egy új tömböt ad vissza, amely az eredeti tömb elemeit tartalmazza, valamint az egyes elemek indexeit.
+  uid: Microsoft.Quantum.Arrays.Enumerated
+- summary: Adott típusú két tömb, valamint egy, a tömbök elemeihez definiált predikátum is ellenőrzi, hogy a tömbök egyenlőek-e.
+  uid: Microsoft.Quantum.Arrays.EqualA
+- summary: Egy olyan tömböt ad vissza, amely egy másik tömb elemeit tartalmazza, és az indexek adott listáján szereplő elemeket is kizárja.
+  uid: Microsoft.Quantum.Arrays.Exclude
+- summary: Egy olyan tömböt ad vissza, amely egy másik tömb elemeit tartalmazza, és az indexek adott listáján szereplő elemeket is kizárja.
+  uid: Microsoft.Quantum.Arrays.Excluding
+- summary: Egy tömb és egy, a tömb elemeihez definiált predikátum miatt egy tömböt ad vissza, amely a predikátumnak megfelelő elemeket tartalmaz.
+  uid: Microsoft.Quantum.Arrays.Filtered
+- summary: Egy tömb és egy függvény, amely egy tömb elemet képez egy kimeneti tömbhöz, visszaadja az összefűzött kimeneti tömböket minden egyes tömb elemhez.
+  uid: Microsoft.Quantum.Arrays.FlatMapped
+- summary: A tömbök tömbje az összes tömb összefűzését adja vissza.
+  uid: Microsoft.Quantum.Arrays.Flattened
+- summary: Megismétli a függvényt `f` egy tömbön keresztül `array` , visszatérve `f(f(f(initialState, array[0]), array[1]), ...)` .
+  uid: Microsoft.Quantum.Arrays.Fold
+- summary: A tömb első elemét adja vissza.
+  uid: Microsoft.Quantum.Arrays.Head
+- summary: Az első és a tömb összes többi elemének egy rekordját adja vissza.
+  uid: Microsoft.Quantum.Arrays.HeadAndRest
+- summary: ''
+  uid: Microsoft.Quantum.Arrays.Identity
+- summary: Egy olyan tömb első elemének első indexét adja vissza, amely megfelel egy adott predikátumnak. Ha nem létezik ilyen elem, a a-1 értéket adja vissza.
+  uid: Microsoft.Quantum.Arrays.IndexOf
+- summary: Egy tömb esetében az adott tömb indexei között egy tartományt ad vissza, amely a for ciklusban használható.
+  uid: Microsoft.Quantum.Arrays.IndexRange
+- summary: Két tömb (majdnem) egyazon méretének együttes elhagyása.
+  uid: Microsoft.Quantum.Arrays.Interleaved
+- summary: Igaz értéket ad vissza, és csak akkor, ha egy tömb üres.
+  uid: Microsoft.Quantum.Arrays.IsEmpty
+- summary: Igaz értéket ad eredményül, ha a megadott tömb egy permutációt jelöl.
+  uid: Microsoft.Quantum.Arrays.IsPermutation
+- summary: A tömb adott értéke azt adja vissza, hogy a tömb egy adott összehasonlító függvény által meghatározott módon van-e rendezve.
+  uid: Microsoft.Quantum.Arrays.IsSorted
+- summary: ''
+  uid: Microsoft.Quantum.Arrays.IsValuePresent
+- summary: A tömb adott értéke egy olyan függvényt ad vissza, amely a tömb elemeit adja vissza.
+  uid: Microsoft.Quantum.Arrays.LookupFunction
+- summary: Egy tömb és egy függvény, amely a tömb elemeihez van meghatározva, egy új tömböt ad vissza, amely a függvényben található eredeti tömb képéből áll.
+  uid: Microsoft.Quantum.Arrays.Mapped
+- summary: Egy tömb és egy függvény, amely a tömb indexelt elemeihez van definiálva, egy új tömböt ad vissza, amely a függvényben található eredeti tömb képéből áll.
+  uid: Microsoft.Quantum.Arrays.MappedByIndex
+- summary: Egy tartomány és egy olyan függvény, amely egy egész számot fogad a bemenetként, egy új tömböt ad vissza, amely a függvényben lévő tartomány értékeiből származó képekből áll.
+  uid: Microsoft.Quantum.Arrays.MappedOverRange
+- summary: A két rendezett tömböt tartalmazó tömb egyetlen tömböt ad vissza, amely a sorrend sorrendjét egyaránt tartalmazza. Belsőleg használatos egyesítés szerint.
+  uid: Microsoft.Quantum.Arrays.Merged
+- summary: Egy olyan tömböt hoz létre, amely egy bemeneti tömbnek felel meg, kivéve, ha a legutolsó tömb elem el lett dobva.
+  uid: Microsoft.Quantum.Arrays.Most
+- summary: A tömb összes, de utolsó elemének egy rekordját adja vissza.
+  uid: Microsoft.Quantum.Arrays.MostAndTail
+- summary: Egy olyan tömböt ad vissza, amely a megadott értékekkel megadott hosszúságú.
+  uid: Microsoft.Quantum.Arrays.Padded
+- summary: Tömb felosztása több részre.
+  uid: Microsoft.Quantum.Arrays.Partitioned
+- summary: ''
+  uid: Microsoft.Quantum.Arrays.Prefix
+- summary: A tömb megadott értéke az összes előtagjait adja vissza.
+  uid: Microsoft.Quantum.Arrays.Prefixes
+- summary: Azt a feltételt jelöli, hogy egy kétdimenziós tömb téglalap alakú
+  uid: Microsoft.Quantum.Arrays.RectangularArrayFact
+- summary: Egy olyan tömböt hoz létre, amely egy bemeneti tömbnek felel meg, kivéve, hogy az első tömb elem el lett dobva.
+  uid: Microsoft.Quantum.Arrays.Rest
+- summary: Hozzon létre egy tömböt, amely ugyanazokat az elemeket tartalmazza, mint a bemeneti tömb, de fordított sorrendben.
+  uid: Microsoft.Quantum.Arrays.Reversed
+- summary: Egész számokból álló tömb beolvasása egy adott intervallumban.
+  uid: Microsoft.Quantum.Arrays.SequenceI
+- summary: Egész számokból álló tömb beolvasása egy adott intervallumban.
+  uid: Microsoft.Quantum.Arrays.SequenceL
+- summary: Egy tömb esetében a tömb azon elemeit adja vissza, amelyek egy adott összehasonlító függvény szerint vannak rendezve.
+  uid: Microsoft.Quantum.Arrays.Sorted
+- summary: Azt a feltételt jelöli, hogy egy kétdimenziós tömb szögletes alakzattal rendelkezik
+  uid: Microsoft.Quantum.Arrays.SquareArrayFact
+- summary: Egy tömböt és egy listát hoz létre, és létrehoz egy új tömböt az eredeti tömb elemeiből, amelyek megfelelnek az adott helyeknek.
+  uid: Microsoft.Quantum.Arrays.Subarray
+- summary: Egy tömb két elemének kicserélt változatát alkalmazza.
+  uid: Microsoft.Quantum.Arrays.Swapped
+- summary: A tömb utolsó elemét adja vissza.
+  uid: Microsoft.Quantum.Arrays.Tail
+- summary: Tömbök tömbje jelölt mátrix átültetését adja vissza.
+  uid: Microsoft.Quantum.Arrays.Transposed
+- summary: Egy beágyazott tömbbe bekapcsolja a 2 – rekordok listáját.
+  uid: Microsoft.Quantum.Arrays.TupleArrayAsNestedArray
+- summary: Egy olyan új tömböt ad vissza, amely nem tartalmaz egyenlő szomszédos elemeket.
+  uid: Microsoft.Quantum.Arrays.Unique
+- summary: A 2-rekordok tömbje egy két tömbből álló tömböt ad vissza, amely a bemeneti tömb rekordok elemeit tartalmazza.
+  uid: Microsoft.Quantum.Arrays.Unzipped
+- summary: Egy predikátum és egy tömb miatt a tömb azon indexeit adja vissza, amelyekben a predikátum igaz.
+  uid: Microsoft.Quantum.Arrays.Where
+- summary: Az összes egymást követő altömbet adja vissza `size` .
+  uid: Microsoft.Quantum.Arrays.Windows
+- summary: >-
+    > [!WARNING]
+
+    > A zip elavult. Használja <xref:Microsoft.Quantum.Arrays.Zipped> helyette.
+
+
+    Az adott két tömb a párok új tömbjét adja vissza, így minden pár tartalmaz egy elemet az eredeti tömbből.
+  uid: Microsoft.Quantum.Arrays.Zip
+- summary: >-
+    > [!WARNING]
+
+    > A Zip3 elavult. Használja <xref:Microsoft.Quantum.Arrays.Zipped3> helyette.
+
+
+    A három tömb esetében a rekordok egy új tömböt ad vissza, amely szerint minden 3 rekord tartalmaz egy elemet az eredeti tömbből.
+  uid: Microsoft.Quantum.Arrays.Zip3
+- summary: >-
+    > [!WARNING]
+
+    > A Zip4 elavult. Használja <xref:Microsoft.Quantum.Arrays.Zipped4> helyette.
+
+
+    A megadott négy tömb a 4 rekordok egy új tömbjét adja vissza, amely minden 4 rekord tartalmaz egy elemet az eredeti tömbből.
+  uid: Microsoft.Quantum.Arrays.Zip4
+- summary: Az adott két tömb a párok új tömbjét adja vissza, így minden pár tartalmaz egy elemet az eredeti tömbből.
+  uid: Microsoft.Quantum.Arrays.Zipped
+- summary: A három tömb esetében a rekordok egy új tömböt ad vissza, amely szerint minden 3 rekord tartalmaz egy elemet az eredeti tömbből.
+  uid: Microsoft.Quantum.Arrays.Zipped3
+- summary: A megadott négy tömb a 4 rekordok egy új tömbjét adja vissza, amely minden 4 rekord tartalmaz egy elemet az eredeti tömbből.
+  uid: Microsoft.Quantum.Arrays.Zipped4
+- summary: Egy tömb Order elemeit adja vissza egy rendezett tömb létrehozásához. Feltételezi, hogy a swapok a helyükön történnek.
+  uid: Microsoft.Quantum.Arrays._SwapOrderToPermuteArray
+name: Microsoft.Quantum.Arrays
+newtypes: []
+operations:
+- summary: Megismétli a műveletet egy adott számú minta esetében, és a kimenetét egy tömbben gyűjti össze.
+  uid: Microsoft.Quantum.Arrays.DrawMany
+- summary: Egy tömb és egy olyan művelet, amely a tömb elemeihez van meghatározva, egy új tömböt ad vissza, amely a művelet alatt található eredeti tömb képéből áll.
+  uid: Microsoft.Quantum.Arrays.ForEach
+summary: Ez a névtér az adattömbök létrehozására és módosítására szolgáló függvényeket tartalmaz.
+uid: Microsoft.Quantum.Arrays
+metadata:
+  ms.openlocfilehash: aa551a5e9372bd63335a3a9ae3d817628722c09d
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: hu-HU
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92719380"
