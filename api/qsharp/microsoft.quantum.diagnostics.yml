@@ -1,0 +1,109 @@
+### YamlMime:QSharpNamespace
+functions:
+- summary: Azt állítja, hogy a logikai értékek két tömbje egyenlő.
+  uid: Microsoft.Quantum.Diagnostics.AllEqualityFactB
+- summary: Azt állítja, hogy az egész értékek két tömbje egyenlő.
+  uid: Microsoft.Quantum.Diagnostics.AllEqualityFactI
+- summary: Kijelenti, hogy a klasszikus feltétel hamis.
+  uid: Microsoft.Quantum.Diagnostics.Contradiction
+- summary: Az aktuális célszámítógép állapotának kiírása.
+  uid: Microsoft.Quantum.Diagnostics.DumpMachine
+- summary: A megadott qubits tartozó aktuális célszámítógép állapotának kiírása.
+  uid: Microsoft.Quantum.Diagnostics.DumpRegister
+- summary: Azt állítja be, hogy a klasszikus bool változó a várt értékkel rendelkezik.
+  uid: Microsoft.Quantum.Diagnostics.EqualityFactB
+- summary: Azt állítja, hogy egy összetett szám a várt értékkel rendelkezik.
+  uid: Microsoft.Quantum.Diagnostics.EqualityFactC
+- summary: Azt állítja, hogy egy összetett szám a várt értékkel rendelkezik.
+  uid: Microsoft.Quantum.Diagnostics.EqualityFactCP
+- summary: Azt állítja be, hogy a klasszikus int változó a várt értékkel rendelkezik.
+  uid: Microsoft.Quantum.Diagnostics.EqualityFactI
+- summary: Azt állítja be, hogy a klasszikus BigInt változó a várt értékkel rendelkezik.
+  uid: Microsoft.Quantum.Diagnostics.EqualityFactL
+- summary: Azt állítja be, hogy egy klasszikus eredmény változó a várt értékkel rendelkezik.
+  uid: Microsoft.Quantum.Diagnostics.EqualityFactR
+- summary: Azt a jogcímet jelöli, amely szerint egy klasszikus lebegőpontos érték a várt értékkel rendelkezik egy adott abszolút toleranciával.
+  uid: Microsoft.Quantum.Diagnostics.EqualityWithinToleranceFact
+- summary: Kijelenti, hogy a klasszikus feltétel igaz.
+  uid: Microsoft.Quantum.Diagnostics.Fact
+- summary: Az értelmes hibaüzenetek sikertelen végrehajtásához használt belső függvény.
+  uid: Microsoft.Quantum.Diagnostics.FormattedFailure
+- summary: Azt állítja, hogy a klasszikus komplex szám a várt értékkel rendelkezik a 1e-10 kis tűréshatára alapján.
+  uid: Microsoft.Quantum.Diagnostics.NearEqualityFactC
+- summary: Azt állítja, hogy a klasszikus komplex szám a várt értékkel rendelkezik a 1e-10 kis tűréshatára alapján.
+  uid: Microsoft.Quantum.Diagnostics.NearEqualityFactCP
+- summary: Azt állítja, hogy egy klasszikus lebegőpontos érték a várt értékkel rendelkezik a 1e-10 kis tűréshatára alapján.
+  uid: Microsoft.Quantum.Diagnostics.NearEqualityFactD
+name: Microsoft.Quantum.Diagnostics
+newtypes:
+- summary: A fordító által felismert attribútum, amelyen keresztül egy alternatív név meghatározható, amelyet a rendszer a típus vagy a meghívásos tesztelési célú betöltéskor használhat.
+  uid: Microsoft.Quantum.Diagnostics.EnableTestingViaName
+- summary: A fordító által felismert attribútum, amely egy egység tesztének megjelölésére szolgál.
+  uid: Microsoft.Quantum.Diagnostics.Test
+operations:
+- summary: A művelet és a adjoint egyik hívása között azt állítja be, hogy egy adott művelet csak bizonyos számú alkalommal legyen meghívva.
+  uid: Microsoft.Quantum.Diagnostics.AllowAtMostNCallsCA
+- summary: A művelet és a adjoint meghívása között a azt állítja, hogy a további qubits száma a using utasítások használatával történik.
+  uid: Microsoft.Quantum.Diagnostics.AllowAtMostNQubits
+- summary: Azt állítja, hogy a megadott qubits mind a $ \ket {0} $ állapotban vannak.
+  uid: Microsoft.Quantum.Diagnostics.AssertAllZero
+- summary: Azt állítja, hogy a megadott qubits mind a $ \ket {0} $ állapotba kerülnek egy adott toleranciával.
+  uid: Microsoft.Quantum.Diagnostics.AssertAllZeroWithinTolerance
+- summary: Azt állítja be, hogy a megadott Pauli-alapú qubits mérése mindig a megadott eredménnyel jár.
+  uid: Microsoft.Quantum.Diagnostics.AssertMeasurement
+- summary: Azt állítja be, hogy a megadott Pauli-alapú qubits mérése a megadott valószínűséggel az adott küszöbértéken belül megtörténik.
+  uid: Microsoft.Quantum.Diagnostics.AssertMeasurementProbability
+- summary: >-
+    A két művelet miatt a azt állítja, hogy az összes bemeneti állapot esetében azonos módon működnek.
+
+    Ez az állítás a műveleteknek a (z) $V _0 \otimes... \otimes V_ {n-1} $, ahol a $V _k $ egyike a (z) $ \ket {0} $, $ \ket {1} $, $ \ket{+} $ és $ \ket{i} $ (+ 1 Eigenstate Pauli Y operátor) állapotának ellenőrzésével valósul meg.
+
+    Ez az állítás $n $ qubits használ, és több hívást igényel a műveletekhez képest.
+  uid: Microsoft.Quantum.Diagnostics.AssertOperationsEqualInPlace
+- summary: Ellenőrzi, hogy a művelet `givenU` egyenlő-e a művelettel a `expectedU` megadott bemeneti méreten azáltal, hogy a műveletek műveletét csak a vektorokon végzi el a számítások alapján. Ez egy szükséges, de nem elégséges, a két unitaries egyenlőségének feltétele.
+  uid: Microsoft.Quantum.Diagnostics.AssertOperationsEqualInPlaceCompBasis
+- summary: >-
+    A két művelet miatt a azt állítja, hogy az összes bemeneti állapot esetében azonos módon működnek.
+
+    Ez az állítás a Choi – Jamiołkowski isomorphism használatával valósítható meg, hogy csökkentse az állítást az egyik qubit-állapotra vonatkozóan két kusza regisztrációnál. Ezért ennek a műveletnek csak egyetlen hívással kell rendelkeznie minden tesztelt művelethez, de kétszer annyi qubits kell lefoglalni. Ezzel az állítással biztosítható például, hogy egy adott művelet optimalizált verziója azonos módon viselkedik a naiv megvalósításával, vagy egy olyan művelet, amely egy tartományon kívüli adatbevitelt hajt végre, ismert esetekkel egyetért.
+  uid: Microsoft.Quantum.Diagnostics.AssertOperationsEqualReferenced
+- summary: Azt állítja be, hogy az egyenlő prioritású állapot fázisában a várt érték szerepel.
+  uid: Microsoft.Quantum.Diagnostics.AssertPhase
+- summary: Azt állítja be, hogy a qubit a `q` Pauli Z operátor várt eigenstate van.
+  uid: Microsoft.Quantum.Diagnostics.AssertQubit
+- summary: >-
+    Azt állítja be, hogy a qubit a várt állapotú.
+
+    `expected` összetett vektort jelöl: $ \ket{\psi} = \begin{bmatrix}a & b\end {bmatrix} ^ {\mathrm{T}} $. A $a $, $b $ értéket képviselő rekordok első eleme a komplex szám valódi része, míg a második a képzeletbeli rész. Az utolsó argumentum meghatározza azt a tűréshatárt, amellyel az érvényesítés történik.
+  uid: Microsoft.Quantum.Diagnostics.AssertQubitIsInStateWithinTolerance
+- summary: Azt állítja, hogy a qubit a `q` Pauli Z operátor várt eigenstate található, egy adott toleranciával.
+  uid: Microsoft.Quantum.Diagnostics.AssertQubitWithinTolerance
+- summary: A művelet végrehajtásakor az aktuális végrehajtási cél által elérhetővé tett művelet diagnosztika jelenik meg.
+  uid: Microsoft.Quantum.Diagnostics.DumpOperation
+- summary: A a DumpRegister használatával biztosítja a diagnosztika állapotát a hivatkozás és a cél regisztrálása tekintetében. Külön műveletként van megjelölve, amely lehetővé teszi a felülbírálást és az értelmezést különálló regiszterként, nem pedig egyetlen kombinált regisztrációként.
+  uid: Microsoft.Quantum.Diagnostics.DumpReferenceAndTarget
+- summary: Ellenőrzi, hogy a két művelet és az `givenU` alapul szolgáló állapot alkalmazásának eredménye azonos-e `expectedU` . Az alap állapotot a paraméter írja le `basis` . A <xref:microsoft.quantum.extensions.fliptobasis> leírással kapcsolatos további részletekért tekintse meg a függvényt.
+  uid: Microsoft.Quantum.Diagnostics._assertEqualOnBasisVector
+- summary: >-
+    A $ \ket {0} \otimes\cdots\ket {0} $ és $ \ket{\ psi_0} \otimes \ket{\ psi_ {n-1}} $ unitaries alkalmazza, ahol a $ \ket{\ psi_k} $ érték függ `basis[k]` .
+
+    Az érték `basis[k]` és a $ \ket{\ psi_k} $ közötti megfelelés a következő:
+
+    - `basis[k]=0` $ \rightarrow \ket {0} $. - `basis[k]=1` $ \rightarrow \ket {1} $. - `basis[k]=2` $ \rightarrow \ket{+} $. - `basis[k]=3` $ \rightarrow \ket{i} $ (+ 1 eigenstate: Pauli Y).
+  uid: Microsoft.Quantum.Diagnostics._flipToBasis
+- summary: 'Változó megismétlése egy Descartes-alapú terméken [0, határ [0]-1] × [0, határ: [1]-1] × [0, határ [hossz (határ) – 1]-1] és az op (ARR) meghívása a Descartes termék minden eleméhez'
+  uid: Microsoft.Quantum.Diagnostics._iterateThroughCartesianPower
+- summary: >-
+    A két regisztráció során a rendszer előkészíti a maximálisan kusza állapotot a megfelelő regisztereken található egyes qubits között. Minden qubits a (z) | 0 ⟩ állapotban kell kezdődnie.
+
+    Ennek eredményeképpen az egyes regisztrációk qubits tartozó párok a $ \bra{\ beta_ {00} } \ket{\ beta_} $ értékben találhatók {00} .
+  uid: Microsoft.Quantum.Diagnostics._prepareEntangledState
+summary: ''
+uid: Microsoft.Quantum.Diagnostics
+metadata:
+  ms.openlocfilehash: d39cd1cac6121bd411fc0c87024254599bbb0641
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: hu-HU
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92713235"

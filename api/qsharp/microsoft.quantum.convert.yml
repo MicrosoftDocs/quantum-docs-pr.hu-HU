@@ -1,0 +1,58 @@
+### YamlMime:QSharpNamespace
+functions:
+- summary: Egy adott nagy egész számot alakít át logikai értékek tömbje számára. A tömb 0 eleme a legkevesebb nagy egész szám.
+  uid: Microsoft.Quantum.Convert.BigIntAsBoolArray
+- summary: Logikai értékek adott tömbjét konvertálja egy egyenértékű nagy egész számra. A tömb 0 eleme a legkevesebb nagy egész szám.
+  uid: Microsoft.Quantum.Convert.BoolArrayAsBigInt
+- summary: Egy kis endian formátumú, pozitív egész számot hoz létre egy BITS-karakterláncból.
+  uid: Microsoft.Quantum.Convert.BoolArrayAsInt
+- summary: Egy kis karakterlánc miatt egy qubit Pauli-operátort ad vissza, amely egyetlen qubit Pauli-operátorok tömbje.
+  uid: Microsoft.Quantum.Convert.BoolArrayAsPauli
+- summary: Egy típusra konvertál egy típust `Bool[]` `Result[]` , ahol a le `true` van képezve `One` és le `false` van képezve `Zero` .
+  uid: Microsoft.Quantum.Convert.BoolArrayAsResultArray
+- summary: Egy típusra konvertál egy típust `Bool` `Result` , ahol a le `true` van képezve `One` és le `false` van képezve `Zero` .
+  uid: Microsoft.Quantum.Convert.BoolAsResult
+- summary: Egy adott logikai értéket egy egyenértékű karakterlánc-ábrázolásra konvertál.
+  uid: Microsoft.Quantum.Convert.BoolAsString
+- summary: Egy adott kétszeres pontosságú lebegőpontos számot konvertál egy egyenértékű karakterlánc-ábrázolásra.
+  uid: Microsoft.Quantum.Convert.DoubleAsString
+- summary: Egy adott kétszeres pontosságú lebegőpontos számot alakít át egy egyenértékű karakterlánc-ábrázolásra a megadott formátum használatával.
+  uid: Microsoft.Quantum.Convert.DoubleAsStringWithFormat
+- summary: Átalakítja a függvényeket a műveletekre.
+  uid: Microsoft.Quantum.Convert.FunctionAsOperation
+- summary: Egy adott egész számot egy egyenértékű nagy egész számra konvertál.
+  uid: Microsoft.Quantum.Convert.IntAsBigInt
+- summary: Egy pozitív egész szám bináris ábrázolását állítja elő a visszaadott tömb kis endian ábrázolásával.
+  uid: Microsoft.Quantum.Convert.IntAsBoolArray
+- summary: Egy adott egész számot egy egyenértékű, kétszeres pontosságú lebegőpontos számra konvertál.
+  uid: Microsoft.Quantum.Convert.IntAsDouble
+- summary: Egy adott egész számot konvertál egy egyenértékű karakterlánc-ábrázolásra.
+  uid: Microsoft.Quantum.Convert.IntAsString
+- summary: Egy adott egész számot egy egyenértékű karakterlánc-ábrázolásra konvertál, a megadott formátum használatával.
+  uid: Microsoft.Quantum.Convert.IntAsStringWithFormat
+- summary: Egy adott nagy egész számot egy egyenértékű egész számra konvertál, ha lehetséges. A függvény az eredményül kapott egész számot és egy logikai jelzőt ad vissza, amely igaz, és csak akkor, ha az átalakítás lehetséges.
+  uid: Microsoft.Quantum.Convert.MaybeBigIntAsInt
+- summary: Egy több qubit Pauli-operátort kódol egy egész számra, amely egy qubit Pauli-operátorok tömbje.
+  uid: Microsoft.Quantum.Convert.PauliArrayAsInt
+- summary: A (Start) számú egész számok tömbjét hozza létre `arr` . lépés.. végén.
+  uid: Microsoft.Quantum.Convert.RangeAsIntArray
+- summary: Egy típusra konvertál egy típust `Result[]` `Bool[]` , ahol a le `One` van képezve `true` és le `Zero` van képezve `false` .
+  uid: Microsoft.Quantum.Convert.ResultArrayAsBoolArray
+- summary: Egy pozitív egész számot hoz létre egy rövid endian formátumú eredményekből.
+  uid: Microsoft.Quantum.Convert.ResultArrayAsInt
+- summary: Egy típusra konvertál egy típust `Result` `Bool` , ahol a le `One` van képezve `true` és le `Zero` van képezve `false` .
+  uid: Microsoft.Quantum.Convert.ResultAsBool
+name: Microsoft.Quantum.Convert
+newtypes: []
+operations:
+- summary: Egy függvényt hív meg egy megadott bemenettel.
+  uid: Microsoft.Quantum.Convert.Call
+summary: 'Ez a névtér a különböző Q # adattípusok közötti átalakításhoz tartalmaz függvényeket.'
+uid: Microsoft.Quantum.Convert
+metadata:
+  ms.openlocfilehash: d22f0735b800d2e9a34f8c7ce58353850a4cdded
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: hu-HU
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92713822"

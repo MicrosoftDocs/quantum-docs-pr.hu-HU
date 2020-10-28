@@ -1,0 +1,374 @@
+### YamlMime:QSharpNamespace
+functions:
+- summary: >+
+    > [!WARNING]
+
+    > A AbsB elavult. Használja <xref:Microsoft.Quantum.Math.AbsL> helyette.
+
+    >
+
+    > Használja a következőt: @"microsoft.quantum.math.absl".
+
+  uid: Microsoft.Quantum.Extensions.Math.AbsB
+- summary: >+
+    > [!WARNING]
+
+    > A AbsD elavult. Használja <xref:Microsoft.Quantum.Math.AbsD> helyette.
+
+    >
+
+    > Használja a következőt: @"microsoft.quantum.math.absd".
+
+  uid: Microsoft.Quantum.Extensions.Math.AbsD
+- summary: >+
+    > [!WARNING]
+
+    > A AbsI elavult. Használja <xref:Microsoft.Quantum.Math.AbsI> helyette.
+
+    >
+
+    > Használja a következőt: @"microsoft.quantum.math.absi".
+
+  uid: Microsoft.Quantum.Extensions.Math.AbsI
+- summary: >+
+    > [!WARNING]
+
+    > A ArcCos elavult. Használja <xref:Microsoft.Quantum.Math.ArcCos> helyette.
+
+    >
+
+    > Használja a következőt: @"microsoft.quantum.math.arccos".
+
+  uid: Microsoft.Quantum.Extensions.Math.ArcCos
+- summary: >+
+    > [!WARNING]
+
+    > A ArcSin elavult. Használja <xref:Microsoft.Quantum.Math.ArcSin> helyette.
+
+    >
+
+    > Használja a következőt: @"microsoft.quantum.math.arcsin".
+
+  uid: Microsoft.Quantum.Extensions.Math.ArcSin
+- summary: >+
+    > [!WARNING]
+
+    > A ArcTan elavult. Használja <xref:Microsoft.Quantum.Math.ArcTan> helyette.
+
+    >
+
+    > Használja a következőt: @"microsoft.quantum.math.arctan".
+
+  uid: Microsoft.Quantum.Extensions.Math.ArcTan
+- summary: >+
+    > [!WARNING]
+
+    > A ArcTan2 elavult. Használja <xref:Microsoft.Quantum.Math.ArcTan2> helyette.
+
+    >
+
+    > Használja a következőt: @"microsoft.quantum.math.arctan2".
+
+  uid: Microsoft.Quantum.Extensions.Math.ArcTan2
+- summary: >+
+    > [!WARNING]
+
+    > A felső határ elavult. Használja <xref:Microsoft.Quantum.Math.Ceiling> helyette.
+
+    >
+
+    > Használja a következőt: @"microsoft.quantum.math.ceiling".
+
+  uid: Microsoft.Quantum.Extensions.Math.Ceiling
+- summary: >+
+    > [!WARNING]
+
+    > A cos elavult. Használja <xref:Microsoft.Quantum.Math.Cos> helyette.
+
+    >
+
+    > Használja a következőt: @"microsoft.quantum.math.cos".
+
+  uid: Microsoft.Quantum.Extensions.Math.Cos
+- summary: >+
+    > [!WARNING]
+
+    > A COSH elavult. Használja <xref:Microsoft.Quantum.Math.Cosh> helyette.
+
+    >
+
+    > Használja a következőt: @"microsoft.quantum.math.cosh".
+
+  uid: Microsoft.Quantum.Extensions.Math.Cosh
+- summary: >+
+    > [!WARNING]
+
+    > A DivRemB elavult. Használja <xref:Microsoft.Quantum.Math.DivRemL> helyette.
+
+    >
+
+    > Használja a következőt: @"microsoft.quantum.math.divreml".
+
+  uid: Microsoft.Quantum.Extensions.Math.DivRemB
+- summary: >+
+    > [!WARNING]
+
+    > Az E elavult. Használja <xref:Microsoft.Quantum.Math.E> helyette.
+
+    >
+
+    > Használja a következőt: @"microsoft.quantum.math.e".
+
+  uid: Microsoft.Quantum.Extensions.Math.E
+- summary: >+
+    > [!WARNING]
+
+    > A ExpD elavult. Használja <xref:Microsoft.Quantum.Math.ExpD> helyette.
+
+    >
+
+    > Használja a következőt: @"microsoft.quantum.math.expd".
+
+  uid: Microsoft.Quantum.Extensions.Math.ExpD
+- summary: >+
+    > [!WARNING]
+
+    > A padló elavult. Használja <xref:Microsoft.Quantum.Math.Floor> helyette.
+
+    >
+
+    > Használja a következőt: @"microsoft.quantum.math.floor".
+
+  uid: Microsoft.Quantum.Extensions.Math.Floor
+- summary: >+
+    > [!WARNING]
+
+    > A IEEERemainder elavult. Használja <xref:Microsoft.Quantum.Math.IEEERemainder> helyette.
+
+    >
+
+    > Használja a következőt: @"microsoft.quantum.math.ieeeremainder".
+
+  uid: Microsoft.Quantum.Extensions.Math.IEEERemainder
+- summary: >+
+    > [!WARNING]
+
+    > A napló elavult. Használja <xref:Microsoft.Quantum.Math.Log> helyette.
+
+    >
+
+    > Használja a következőt: @"microsoft.quantum.math.log".
+
+  uid: Microsoft.Quantum.Extensions.Math.Log
+- summary: >+
+    > [!WARNING]
+
+    > A Log10 elavult. Használja <xref:Microsoft.Quantum.Math.Log10> helyette.
+
+    >
+
+    > Használja a következőt: @"microsoft.quantum.math.log10".
+
+  uid: Microsoft.Quantum.Extensions.Math.Log10
+- summary: >+
+    > [!WARNING]
+
+    > A MaxB elavult. Használja <xref:Microsoft.Quantum.Math.MaxL> helyette.
+
+    >
+
+    > Használja a következőt: @"microsoft.quantum.math.maxl".
+
+  uid: Microsoft.Quantum.Extensions.Math.MaxB
+- summary: >+
+    > [!WARNING]
+
+    > A MaxD elavult. Használja <xref:Microsoft.Quantum.Math.MaxD> helyette.
+
+    >
+
+    > Használja a következőt: @"microsoft.quantum.math.maxd".
+
+  uid: Microsoft.Quantum.Extensions.Math.MaxD
+- summary: >+
+    > [!WARNING]
+
+    > A MaxI elavult. Használja <xref:Microsoft.Quantum.Math.MaxI> helyette.
+
+    >
+
+    > Használja a következőt: @"microsoft.quantum.math.maxi".
+
+  uid: Microsoft.Quantum.Extensions.Math.MaxI
+- summary: >+
+    > [!WARNING]
+
+    > A MinB elavult. Használja <xref:Microsoft.Quantum.Math.MinL> helyette.
+
+    >
+
+    > Használja a következőt: @"microsoft.quantum.math.minl".
+
+  uid: Microsoft.Quantum.Extensions.Math.MinB
+- summary: >+
+    > [!WARNING]
+
+    > Az elme elavult. Használja <xref:Microsoft.Quantum.Math.MinD> helyette.
+
+    >
+
+    > Használja a következőt: @"microsoft.quantum.math.mind".
+
+  uid: Microsoft.Quantum.Extensions.Math.MinD
+- summary: >+
+    > [!WARNING]
+
+    > A MinI elavult. Használja <xref:Microsoft.Quantum.Math.MinI> helyette.
+
+    >
+
+    > Használja a következőt: @"microsoft.quantum.math.mini".
+
+  uid: Microsoft.Quantum.Extensions.Math.MinI
+- summary: >+
+    > [!WARNING]
+
+    > A ModPowB elavult. Használja <xref:Microsoft.Quantum.Math.ModPowL> helyette.
+
+    >
+
+    > Használja a következőt: @"microsoft.quantum.math.modpowl".
+
+  uid: Microsoft.Quantum.Extensions.Math.ModPowB
+- summary: >+
+    > [!WARNING]
+
+    > A PI elavult. Használja <xref:Microsoft.Quantum.Math.PI> helyette.
+
+    >
+
+    > Használja a következőt: @"microsoft.quantum.math.pi".
+
+  uid: Microsoft.Quantum.Extensions.Math.PI
+- summary: >+
+    > [!WARNING]
+
+    > A PowD elavult. Használja <xref:Microsoft.Quantum.Math.PowD> helyette.
+
+    >
+
+    > Használja a következőt: @"microsoft.quantum.math.powd".
+
+  uid: Microsoft.Quantum.Extensions.Math.PowD
+- summary: >+
+    > [!WARNING]
+
+    > A kör elavult. Használja <xref:Microsoft.Quantum.Math.Round> helyette.
+
+    >
+
+    > Használja a következőt: @"microsoft.quantum.math.round".
+
+  uid: Microsoft.Quantum.Extensions.Math.Round
+- summary: >+
+    > [!WARNING]
+
+    > A SignB elavult. Használja <xref:Microsoft.Quantum.Math.SignL> helyette.
+
+    >
+
+    > Használja a következőt: @"microsoft.quantum.math.signl".
+
+  uid: Microsoft.Quantum.Extensions.Math.SignB
+- summary: >+
+    > [!WARNING]
+
+    > Az aláírás elavult. Használja <xref:Microsoft.Quantum.Math.SignD> helyette.
+
+    >
+
+    > Használja a következőt: @"microsoft.quantum.math.signd".
+
+  uid: Microsoft.Quantum.Extensions.Math.SignD
+- summary: >+
+    > [!WARNING]
+
+    > A SignI elavult. Használja <xref:Microsoft.Quantum.Math.SignI> helyette.
+
+    >
+
+    > Használja a következőt: @"microsoft.quantum.math.signi".
+
+  uid: Microsoft.Quantum.Extensions.Math.SignI
+- summary: >+
+    > [!WARNING]
+
+    > A bűn elavult. Használja <xref:Microsoft.Quantum.Math.Sin> helyette.
+
+    >
+
+    > Használja a következőt: @"microsoft.quantum.math.sin".
+
+  uid: Microsoft.Quantum.Extensions.Math.Sin
+- summary: >+
+    > [!WARNING]
+
+    > A sinh elavult. Használja <xref:Microsoft.Quantum.Math.Sinh> helyette.
+
+    >
+
+    > Használja a következőt: @"microsoft.quantum.math.sinh".
+
+  uid: Microsoft.Quantum.Extensions.Math.Sinh
+- summary: >+
+    > [!WARNING]
+
+    > A SQRT elavult. Használja <xref:Microsoft.Quantum.Math.Sqrt> helyette.
+
+    >
+
+    > Használja a következőt: @"microsoft.quantum.math.sqrt".
+
+  uid: Microsoft.Quantum.Extensions.Math.Sqrt
+- summary: >+
+    > [!WARNING]
+
+    > A tan elavult. Használja <xref:Microsoft.Quantum.Math.Tan> helyette.
+
+    >
+
+    > Használja a következőt: @"microsoft.quantum.math.tan".
+
+  uid: Microsoft.Quantum.Extensions.Math.Tan
+- summary: >+
+    > [!WARNING]
+
+    > A tanh elavult. Használja <xref:Microsoft.Quantum.Math.Tanh> helyette.
+
+    >
+
+    > Használja a következőt: @"microsoft.quantum.math.tanh".
+
+  uid: Microsoft.Quantum.Extensions.Math.Tanh
+- summary: >+
+    > [!WARNING]
+
+    > A csonkítás elavult. Használja <xref:Microsoft.Quantum.Math.Truncate> helyette.
+
+    >
+
+    > Használja a következőt: @"microsoft.quantum.math.truncate".
+
+  uid: Microsoft.Quantum.Extensions.Math.Truncate
+name: Microsoft.Quantum.Extensions.Math
+newtypes: []
+operations: []
+summary: ''
+uid: Microsoft.Quantum.Extensions.Math
+metadata:
+  ms.openlocfilehash: c07f137eaca95237d581691008c614025dd35a1d
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: hu-HU
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92712087"
