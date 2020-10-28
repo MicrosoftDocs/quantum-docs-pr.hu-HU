@@ -1,0 +1,16 @@
+### YamlMime:QSharpNamespace
+functions: []
+name: Microsoft.Quantum.Targeting
+newtypes:
+- summary: Fordító által felismert attribútum, amely egy meghívót jelöl meg a szükséges futtatókörnyezeti képességekkel.
+  uid: Microsoft.Quantum.Targeting.RequiresCapability
+operations: []
+summary: Ez a névtér az adott kvantum-processzorok célzásához nyújt funkciókat.
+uid: Microsoft.Quantum.Targeting
+metadata:
+  ms.openlocfilehash: 470a923d88c23857ef8b64cf2eb3de13c3c2cb4f
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: hu-HU
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92725139"
