@@ -1,0 +1,56 @@
+---
+uid: Microsoft.Quantum.AmplitudeAmplification
+title: Microsoft. Quantum. AmplitudeAmplification névtér
+ms.date: 10/26/2020 12:00:00 AM
+ms.topic: article
+qsharp.kind: namespace
+qsharp.name: Microsoft.Quantum.AmplitudeAmplification
+qsharp.summary: This namespace contains functions and operations for performing amplitude amplification.
+ms.openlocfilehash: 09c29bd9d0648bb8652051ad97ceca6ef6557df3
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.translationtype: MT
+ms.contentlocale: hu-HU
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92721848"
+---
+# <a name="microsoftquantumamplitudeamplification-namespace"></a><span data-ttu-id="d218b-102">Microsoft. Quantum. AmplitudeAmplification névtér</span><span class="sxs-lookup"><span data-stu-id="d218b-102">Microsoft.Quantum.AmplitudeAmplification namespace</span></span>
+
+<span data-ttu-id="d218b-103">Ez a névtér olyan függvényeket és műveleteket tartalmaz, amelyek amplitúdó-erősítést végeznek.</span><span class="sxs-lookup"><span data-stu-id="d218b-103">This namespace contains functions and operations for performing amplitude amplification.</span></span>
+
+
+
+## <a name="description"></a><span data-ttu-id="d218b-104">Leírás</span><span class="sxs-lookup"><span data-stu-id="d218b-104">Description</span></span>
+
+<span data-ttu-id="d218b-105">Az amplitúdó-erősítés a részleges reflexiókkal a legáltalánosabb formája az amplitúdó-erősítésnek itt implementált.</span><span class="sxs-lookup"><span data-stu-id="d218b-105">Oblivious amplitude amplification with partial reflections is the most general form of amplitude amplification implemented here.</span></span>
+
+<span data-ttu-id="d218b-106">Ezt a művelet AmpAmpObliviousByReflectionPhases hívja meg.</span><span class="sxs-lookup"><span data-stu-id="d218b-106">This is called through the operation AmpAmpObliviousByReflectionPhases.</span></span>
+
+<span data-ttu-id="d218b-107">Ez két regisztrációval rendelkezik: `ancillaRegister` és `systemRegister` .</span><span class="sxs-lookup"><span data-stu-id="d218b-107">This has two registers: `ancillaRegister` and `systemRegister`.</span></span>
+
+<span data-ttu-id="d218b-108">Ez két Oracle-t fogad el ezen olyan típusú reflexiók esetében, `ReflectionOracle` amelyek csak a regisztráláskor lépnek fel `ancillaRegister` .</span><span class="sxs-lookup"><span data-stu-id="d218b-108">This accepts two oracles for these reflections of type `ReflectionOracle` which act only on the `ancillaRegister` register.</span></span>
+
+<span data-ttu-id="d218b-109">Ez egy különleges Oracle-t fogad el, amely elfeledkezett a típusú amplitúdó-erősítésről, `ObliviousOracle` amely közösen működik mindkét regisztráláskor.</span><span class="sxs-lookup"><span data-stu-id="d218b-109">This accepts an oracle special to oblivious amplitude amplification of type `ObliviousOracle` which acts jointly on both register.</span></span>
+
+<span data-ttu-id="d218b-110">A bemeneti állapotot `ancillaRegister` feltételezi, hogy az első reflexiós operátor egyedi $-$1 eigenstate van $I – 2 \ ket {s} \ melltartó {s} $.</span><span class="sxs-lookup"><span data-stu-id="d218b-110">The input state to `ancillaRegister` is assumed to be the unique $-1$ eigenstate of the first reflection operator $I - 2\ket{s}\bra{s}$.</span></span>
+
+<span data-ttu-id="d218b-111">A cél kvantum állapottal kapcsolatos reflexiók gyakran úgy vannak megvalósítva, hogy hozzáférést biztosítanak egy olyan Oracle-hez, amely felkészíti ezt az állapotot a $ \ket{0\cdots 0} $ számítási alapján.</span><span class="sxs-lookup"><span data-stu-id="d218b-111">Reflections about a target quantum state are often implemented by assuming access to an oracle that prepare that state from the computational basis $\ket{0\cdots 0}$.</span></span>
+
+<span data-ttu-id="d218b-112">Ezen Oracle-eszközökre vonatkozó konvenciónk két regisztrációt igényel: egy qubit- `flagQubit` regisztrációt, és minden más, a ancillaRegister-regisztrációhoz tartozó regisztrációt.</span><span class="sxs-lookup"><span data-stu-id="d218b-112">Our convention for these oracles requires two registers: a single-qubit `flagQubit` register, and a register for everything else on the ancillaRegister register.</span></span>
+
+<span data-ttu-id="d218b-113">Az Oracle of Type `StateOracle` is közösen működik mindkét regiszterben, hogy létrehozza a \ket $ által megjelölt cél állapotot {1} a `flagQubit` regisztrációban egy valós amplitúdóval.</span><span class="sxs-lookup"><span data-stu-id="d218b-113">The oracle of type `StateOracle` acts jointly on both registers to create the target state flagged by $\ket{1}$ in the `flagQubit` register with some real amplitude.</span></span>
+
+<span data-ttu-id="d218b-114">Az `ReflectionOracle` ezzel a jelző állapottal kapcsolatos tükrözést a művelet hozza létre `TargetStateReflectionOracle` .</span><span class="sxs-lookup"><span data-stu-id="d218b-114">The reflection `ReflectionOracle` about the this flag state is generated by the operation `TargetStateReflectionOracle`.</span></span>
+
+<span data-ttu-id="d218b-115">Az `ReflectionOracle` invertált StateOracle által generált bemeneti állapottal kapcsolatos reflexió, `ancillaRegister` majd a $ \ket{0\cdots 0} $ a ReflectionStart () értékkel való tükrözése.</span><span class="sxs-lookup"><span data-stu-id="d218b-115">The reflection `ReflectionOracle` about the input state to `ancillaRegister` is generated by the inverting StateOracle and then reflecting about $\ket{0\cdots 0}$ with ReflectionStart().</span></span>
+
+<span data-ttu-id="d218b-116">A Type Oracle a `DeterministicStateOracle` `qubitState` regisztrációk alapján hozza létre a cél állapotot pontosan a nem jelzővel.</span><span class="sxs-lookup"><span data-stu-id="d218b-116">The oracle of type `DeterministicStateOracle` acts on the `qubitState` registers to create the target state exactly with no flag.</span></span>
+
+<span data-ttu-id="d218b-117">`AmpAmpObliviousByOraclePhases` a a feledékenység amplitúdó-erősítésének egy verziója, amely az Oracle `StateOracle` -ket és `ObliviousOracle` a reflexiók helyett a-t fogadja.</span><span class="sxs-lookup"><span data-stu-id="d218b-117">`AmpAmpObliviousByOraclePhases` is a version of oblivious amplitude amplification that accepts oracles `StateOracle` and `ObliviousOracle` instead of reflections.</span></span>
+
+<span data-ttu-id="d218b-118">Vegye figyelembe, hogy az amplitúdó-erősítés a feledékenység amplitúdó-erősítésének különleges esete, ahol az az `ObliviousOracle` identitás operátora, és nincsenek rendszerszintű qubits, azaz `systemRegister` üresek.</span><span class="sxs-lookup"><span data-stu-id="d218b-118">Note that amplitude amplification is a special case of oblivious amplitude amplification where `ObliviousOracle` is the identity operator, and there are no system qubits i.e. `systemRegister` is empty.</span></span>
+
+<span data-ttu-id="d218b-119">Ezt a rendszer a művelet és a használatával hívja meg `AmpAmByReflectionPhases` `AmpAmpByOraclePhases` .</span><span class="sxs-lookup"><span data-stu-id="d218b-119">This is called through the operation `AmpAmByReflectionPhases` and `AmpAmpByOraclePhases`.</span></span>
+
+<span data-ttu-id="d218b-120">A részleges tükrözések szakaszait a következő függvény AmpAmpPhasesStandard:.</span><span class="sxs-lookup"><span data-stu-id="d218b-120">The phases for partial reflections in the standard case of Grover search is provided by the function AmpAmpPhasesStandard.</span></span>
+
+<span data-ttu-id="d218b-121">Például a következő függőségek állnak fenn: AmpAmpByOracle-> AmpAmpByOraclePhases-> AmpAmpObliviousByOraclePhases-> AmpAmpObliviousByReflectionPhases.</span><span class="sxs-lookup"><span data-stu-id="d218b-121">For instance, we have the following dependencies: AmpAmpByOracle -> AmpAmpByOraclePhases -> AmpAmpObliviousByOraclePhases -> AmpAmpObliviousByReflectionPhases.</span></span>

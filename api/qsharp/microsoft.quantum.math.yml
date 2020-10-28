@@ -1,0 +1,281 @@
+### YamlMime:QSharpNamespace
+functions:
+- summary: Egy összetett számú típus abszolút értékét adja vissza `Complex` .
+  uid: Microsoft.Quantum.Math.AbsComplex
+- summary: Egy összetett számú típus abszolút értékét adja vissza `ComplexPolar` .
+  uid: Microsoft.Quantum.Math.AbsComplexPolar
+- summary: Egy dupla pontosságú lebegőpontos szám abszolút értékét adja vissza.
+  uid: Microsoft.Quantum.Math.AbsD
+- summary: Egy egész szám abszolút értékét adja vissza.
+  uid: Microsoft.Quantum.Math.AbsI
+- summary: Egy nagy egész szám abszolút értékét adja vissza.
+  uid: Microsoft.Quantum.Math.AbsL
+- summary: Egy komplex számú típus négyzetes abszolút értékét adja vissza `Complex` .
+  uid: Microsoft.Quantum.Math.AbsSquaredComplex
+- summary: Egy komplex számú típus négyzetes abszolút értékét adja vissza `ComplexPolar` .
+  uid: Microsoft.Quantum.Math.AbsSquaredComplexPolar
+- summary: Egy érték bitsize rekurzív kiszámításához használt segítő függvény.
+  uid: Microsoft.Quantum.Math.AccumulatedBitsizeI
+- summary: Egy érték bitsize rekurzív kiszámításához használt segítő függvény.
+  uid: Microsoft.Quantum.Math.AccumulatedBitsizeL
+- summary: Azt a szöget adja vissza, amelynek koszinusza a megadott szám.
+  uid: Microsoft.Quantum.Math.ArcCos
+- summary: Egy szám inverz hiperbolikus koszinuszát számítja ki.
+  uid: Microsoft.Quantum.Math.ArcCosh
+- summary: Azt a szöget adja vissza, amelynek szinusza a megadott szám.
+  uid: Microsoft.Quantum.Math.ArcSin
+- summary: Egy szám inverz szinusz hiperbolikusát számítja ki.
+  uid: Microsoft.Quantum.Math.ArcSinh
+- summary: Azt a szöget adja vissza, amelynek tangense a megadott szám.
+  uid: Microsoft.Quantum.Math.ArcTan
+- summary: Azt a szöget adja vissza, amelynek tangense a megadott két szám hányadosa.
+  uid: Microsoft.Quantum.Math.ArcTan2
+- summary: Egy szám inverz hiperbolikus tangensét számítja ki.
+  uid: Microsoft.Quantum.Math.ArcTanh
+- summary: Egy összetett számú típus fázisát adja vissza `Complex` .
+  uid: Microsoft.Quantum.Math.ArgComplex
+- summary: Egy összetett számú típus fázisát adja vissza `ComplexPolar` .
+  uid: Microsoft.Quantum.Math.ArgComplexPolar
+- summary: >-
+    A nem negatív egész szám esetén `a` a a jelölőhöz szükséges bitek számát adja vissza `a` .
+
+    Vagyis a legkisebb $n $ értéket adja vissza, amely $a < 2 ^ n $.
+  uid: Microsoft.Quantum.Math.BitSizeI
+- summary: >-
+    A nem negatív egész szám esetén `a` a a jelölőhöz szükséges bitek számát adja vissza `a` .
+
+    Vagyis a legkisebb $n $ értéket adja vissza, amely $a < 2 ^ n $.
+  uid: Microsoft.Quantum.Math.BitSizeL
+- summary: A megadott számnál nagyobb vagy azzal egyenlő legkisebb egész számot adja vissza.
+  uid: Microsoft.Quantum.Math.Ceiling
+- summary: Komplex számú típust alakít át összetett típusúra `Complex` `ComplexPolar` .
+  uid: Microsoft.Quantum.Math.ComplexAsComplexPolar
+- summary: Komplex számú típust alakít át összetett típusúra `ComplexPolar` `Complex` .
+  uid: Microsoft.Quantum.Math.ComplexPolarAsComplex
+- summary: Megkeresi a legközelebb `fraction` lévő, kisebb vagy egyenlő nevezőből álló nevezőt `denominatorBound`
+  uid: Microsoft.Quantum.Math.ContinuedFractionConvergentI
+- summary: Megkeresi a legközelebb `fraction` lévő, kisebb vagy egyenlő nevezőből álló nevezőt `denominatorBound`
+  uid: Microsoft.Quantum.Math.ContinuedFractionConvergentL
+- summary: A megadott szög koszinuszát adja vissza.
+  uid: Microsoft.Quantum.Math.Cos
+- summary: A megadott szög koszinusz hiperbolikusát adja vissza.
+  uid: Microsoft.Quantum.Math.Cosh
+- summary: Egy BigInteger egy másik értékre osztja, az eredményt és a maradékot rekordként adja vissza.
+  uid: Microsoft.Quantum.Math.DivRemL
+- summary: Két bemenet hányadosát adja vissza.
+  uid: Microsoft.Quantum.Math.DividedByC
+- summary: Két bemenet hányadosát adja vissza.
+  uid: Microsoft.Quantum.Math.DividedByCP
+- summary: Két bemenet hányadosát adja vissza.
+  uid: Microsoft.Quantum.Math.DividedByD
+- summary: Két bemenet hányadosát adja vissza.
+  uid: Microsoft.Quantum.Math.DividedByI
+- summary: Két bemenet hányadosát adja vissza.
+  uid: Microsoft.Quantum.Math.DividedByL
+- summary: A természetes logaritmikus alap $e $ értéket adja vissza.
+  uid: Microsoft.Quantum.Math.E
+- summary: A megadott hatványra emelt $e $ értéket adja vissza.
+  uid: Microsoft.Quantum.Math.ExpD
+- summary: Egy adott hatványra kiváltott egész számot ad vissza egy adott modulusra vonatkozóan.
+  uid: Microsoft.Quantum.Math.ExpModI
+- summary: Egy adott hatványra kiváltott egész számot ad vissza egy adott modulusra vonatkozóan.
+  uid: Microsoft.Quantum.Math.ExpModL
+- summary: Kiszámítja az $ (u, v) $ értéket, hogy $u \cdot a + v \cdot b = \operatorname{GCD} (a, b) $, ahol a $ \operatorname{GCD} $ $a $ Greatest Common osztója $a $ és $b $. A GCD mindig pozitív.
+  uid: Microsoft.Quantum.Math.ExtendedGreatestCommonDivisorI
+- summary: Kiszámítja az $ (u, v) $ értéket, hogy $u \cdot a + v \cdot b = \operatorname{GCD} (a, b) $, ahol a $ \operatorname{GCD} $ $a $ Greatest Common osztója $a $ és $b $. A GCD mindig pozitív.
+  uid: Microsoft.Quantum.Math.ExtendedGreatestCommonDivisorL
+- summary: A legnagyobb olyan egész számot adja vissza, amely kisebb vagy egyenlő, mint a megadott szám.
+  uid: Microsoft.Quantum.Math.Floor
+- summary: Kiszámítja $a $ és $b $ közötti legnagyobb közös osztót. A GCD mindig pozitív.
+  uid: Microsoft.Quantum.Math.GreatestCommonDivisorI
+- summary: Kiszámítja $a $ és $b $ közötti legnagyobb közös osztót. A GCD mindig pozitív.
+  uid: Microsoft.Quantum.Math.GreatestCommonDivisorL
+- summary: Egy megadott számnak egy másik megadott szám szerinti osztásával létrejövő fennmaradó értéket adja vissza.
+  uid: Microsoft.Quantum.Math.IEEERemainder
+- summary: $B $ értéket ad vissza, amely $a \cdot b = 1 (\operatorname{mod} \texttt{modulus}) $.
+  uid: Microsoft.Quantum.Math.InverseModI
+- summary: $B $ értéket ad vissza, amely $a \cdot b = 1 (\operatorname{mod} \texttt{modulus}) $.
+  uid: Microsoft.Quantum.Math.InverseModL
+- summary: Igaz értéket ad vissza, ha a $a $ és a $b $ együttes elsődleges és hamis.
+  uid: Microsoft.Quantum.Math.IsCoprimeI
+- summary: Igaz értéket ad vissza, ha a $a $ és a $b $ együttes elsődleges és hamis.
+  uid: Microsoft.Quantum.Math.IsCoprimeL
+- summary: Kiszámítja egy szám Base-2 logaritmusát.
+  uid: Microsoft.Quantum.Math.Lg
+- summary: Egy megadott szám természetes (Base $e $) logaritmusát adja vissza.
+  uid: Microsoft.Quantum.Math.Log
+- summary: Egy megadott szám 10-es alapú logaritmusát adja vissza.
+  uid: Microsoft.Quantum.Math.Log10
+- summary: A 2 természetes alapú logaritmusát adja vissza.
+  uid: Microsoft.Quantum.Math.LogOf2
+- summary: Az egész számok tömbje a legnagyobb elemet adja vissza.
+  uid: Microsoft.Quantum.Math.Max
+- summary: A két megadott szám közül a nagyobbat adja vissza.
+  uid: Microsoft.Quantum.Math.MaxD
+- summary: A két megadott szám közül a nagyobbat adja vissza.
+  uid: Microsoft.Quantum.Math.MaxI
+- summary: A két megadott szám közül a nagyobbat adja vissza.
+  uid: Microsoft.Quantum.Math.MaxL
+- summary: Az egész számok tömbje a legkisebb elemet adja vissza.
+  uid: Microsoft.Quantum.Math.Min
+- summary: A két megadott szám közül a kisebb értéket adja vissza.
+  uid: Microsoft.Quantum.Math.MinD
+- summary: A két megadott szám közül a kisebb értéket adja vissza.
+  uid: Microsoft.Quantum.Math.MinI
+- summary: A két megadott szám közül a kisebb értéket adja vissza.
+  uid: Microsoft.Quantum.Math.MinL
+- summary: A két bemenet közötti különbséget adja vissza.
+  uid: Microsoft.Quantum.Math.MinusC
+- summary: A két bemenet közötti különbséget adja vissza.
+  uid: Microsoft.Quantum.Math.MinusCP
+- summary: A két bemenet közötti különbséget adja vissza.
+  uid: Microsoft.Quantum.Math.MinusD
+- summary: A két bemenet közötti különbséget adja vissza.
+  uid: Microsoft.Quantum.Math.MinusI
+- summary: A két bemenet közötti különbséget adja vissza.
+  uid: Microsoft.Quantum.Math.MinusL
+- summary: Egy szám modulusát adja vissza egy másik számra vonatkozóan.
+  uid: Microsoft.Quantum.Math.ModI
+- summary: Egy szám modulusát adja vissza egy másik számra vonatkozóan.
+  uid: Microsoft.Quantum.Math.ModL
+- summary: Moduláris osztást végez egy másik szám hatványára emelt számon.
+  uid: Microsoft.Quantum.Math.ModPowL
+- summary: Kiszámítja a többrészes adatmennyiség kanonikus maradékát `value` `modulus` .
+  uid: Microsoft.Quantum.Math.ModulusI
+- summary: Kiszámítja a többrészes adatmennyiség kanonikus maradékát `value` `modulus` .
+  uid: Microsoft.Quantum.Math.ModulusL
+- summary: Egy bemenet egyoperandusú tagadását adja vissza.
+  uid: Microsoft.Quantum.Math.NegationC
+- summary: Egy bemenet egyoperandusú tagadását adja vissza.
+  uid: Microsoft.Quantum.Math.NegationCP
+- summary: Egy bemenet egyoperandusú tagadását adja vissza.
+  uid: Microsoft.Quantum.Math.NegationD
+- summary: Egy bemenet egyoperandusú tagadását adja vissza.
+  uid: Microsoft.Quantum.Math.NegationI
+- summary: Egy bemenet egyoperandusú tagadását adja vissza.
+  uid: Microsoft.Quantum.Math.NegationL
+- summary: Egy kör kerületének és a hozzá tartozó, az állandó, a π által megadott arányát jelöli.
+  uid: Microsoft.Quantum.Math.PI
+- summary: >-
+    Az `L(p)` s vektorának normáját adja vissza `Double` .
+
+    Ez azt eredményezi, hogy egy tömb $x $ típusú `Double[]` , ez a következőt adja vissza: $p $-norm $ \| x \| \_ p = (\ sum_ {j} | x_j | ^ {p}) ^ {1/p} $.
+  uid: Microsoft.Quantum.Math.PNorm
+- summary: >-
+    Normalizálja `Double` az s-vektort a `L(p)` normában.
+
+    Ez azt eredményezi, hogy egy Array $x $ típusú tömbben `Double[]` olyan tömböt ad vissza, amelyben az összes elem a $p $-norm $ \| x _p $ értékkel van elosztva \| .
+  uid: Microsoft.Quantum.Math.PNormalized
+- summary: Két bemenet összegét (összefűzését) adja vissza.
+  uid: Microsoft.Quantum.Math.PlusA
+- summary: Két bemenet összegét adja vissza.
+  uid: Microsoft.Quantum.Math.PlusC
+- summary: Két bemenet összegét adja vissza.
+  uid: Microsoft.Quantum.Math.PlusCP
+- summary: Két bemenet összegét adja vissza.
+  uid: Microsoft.Quantum.Math.PlusD
+- summary: Két bemenet összegét adja vissza.
+  uid: Microsoft.Quantum.Math.PlusI
+- summary: Két bemenet összegét adja vissza.
+  uid: Microsoft.Quantum.Math.PlusL
+- summary: Egy megadott hatványra emelt számot ad vissza.
+  uid: Microsoft.Quantum.Math.PowC
+- summary: Belső. Mivel a legkönnyebben meghatározhatja, hogy a Descartes-féle formában lévő két összetett szám erejét a Polar formában adja vissza, itt definiáljuk, majd szükség szerint konvertáljuk.
+  uid: Microsoft.Quantum.Math.PowCAsCP
+- summary: Egy megadott hatványra emelt számot ad vissza.
+  uid: Microsoft.Quantum.Math.PowCP
+- summary: Az x számot adja vissza a Power y értékre.
+  uid: Microsoft.Quantum.Math.PowD
+- summary: Egy megadott hatványra emelt számot ad vissza.
+  uid: Microsoft.Quantum.Math.PowI
+- summary: Egy megadott hatványra emelt számot ad vissza.
+  uid: Microsoft.Quantum.Math.PowL
+- summary: Két valós szám közötti modulus kiszámítása.
+  uid: Microsoft.Quantum.Math.RealMod
+- summary: Egy értéket kerekít a legközelebbi egész számra.
+  uid: Microsoft.Quantum.Math.Round
+- summary: Egy szám előjelét jelző egész számot ad vissza.
+  uid: Microsoft.Quantum.Math.SignD
+- summary: Egy szám előjelét jelző egész számot ad vissza.
+  uid: Microsoft.Quantum.Math.SignI
+- summary: Egy szám előjelét jelző egész számot ad vissza.
+  uid: Microsoft.Quantum.Math.SignL
+- summary: A megadott szög szinuszát adja vissza.
+  uid: Microsoft.Quantum.Math.Sin
+- summary: A megadott szög szinusz hiperbolikusát adja vissza.
+  uid: Microsoft.Quantum.Math.Sinh
+- summary: Egy megadott szám négyzet gyökerét adja vissza.
+  uid: Microsoft.Quantum.Math.Sqrt
+- summary: Egy vektor négyzetes 2 – normáját adja vissza.
+  uid: Microsoft.Quantum.Math.SquaredNorm
+- summary: A megadott szög tangensét adja vissza.
+  uid: Microsoft.Quantum.Math.Tan
+- summary: A megadott szög tangensét adja vissza.
+  uid: Microsoft.Quantum.Math.Tanh
+- summary: Két bemenet szorzatát adja vissza.
+  uid: Microsoft.Quantum.Math.TimesC
+- summary: Két bemenet szorzatát adja vissza.
+  uid: Microsoft.Quantum.Math.TimesCP
+- summary: Két bemenet szorzatát adja vissza.
+  uid: Microsoft.Quantum.Math.TimesD
+- summary: Két bemenet szorzatát adja vissza.
+  uid: Microsoft.Quantum.Math.TimesI
+- summary: Két bemenet szorzatát adja vissza.
+  uid: Microsoft.Quantum.Math.TimesL
+- summary: Egy szám szerves részét számítja ki.
+  uid: Microsoft.Quantum.Math.Truncate
+- summary: Belső rekurzív hívás a GCD kiszámításához kötött értékkel
+  uid: Microsoft.Quantum.Math._ContinuedFractionConvergentI
+- summary: Belső rekurzív hívás a GCD kiszámításához kötött értékkel
+  uid: Microsoft.Quantum.Math._ContinuedFractionConvergentL
+- summary: Belső rekurzív hívás a GCD kiszámításához.
+  uid: Microsoft.Quantum.Math._ExtendedGreatestCommonDivisorI
+- summary: Belső rekurzív hívás a GCD kiszámításához.
+  uid: Microsoft.Quantum.Math._ExtendedGreatestCommonDivisorL
+name: Microsoft.Quantum.Math
+newtypes:
+- summary: Az űrlap racionális számát jelöli `p/q` . Az egész szám a `p` rekord első eleme, `q` amely a rekord második eleme.
+  uid: Microsoft.Quantum.Math.BigFraction
+- summary: Egy összetett számot képvisel a valódi és a képzeletbeli összetevők alapján. A rekord első eleme a valódi összetevő, a második a képzelt összetevő.
+  uid: Microsoft.Quantum.Math.Complex
+- summary: >-
+    A poláris formában lévő összetett számot jelöli.
+
+    Egy összetett szám poláris ábrázolása $c = r e ^ {i t} $.
+  uid: Microsoft.Quantum.Math.ComplexPolar
+- summary: Az űrlap racionális számát jelöli `p/q` . Az egész szám a `p` rekord első eleme, `q` amely a rekord második eleme.
+  uid: Microsoft.Quantum.Math.Fraction
+operations:
+- summary: >+
+    > [!WARNING]
+
+    > A RandomInt elavult. Használja <xref:Microsoft.Quantum.Random.DrawRandomInt> helyette.
+
+  uid: Microsoft.Quantum.Math.RandomInt
+- summary: >+
+    > [!WARNING]
+
+    > A RandomIntPow2 elavult. Használja <xref:Microsoft.Quantum.Random.DrawRandomInt> helyette.
+
+  uid: Microsoft.Quantum.Math.RandomIntPow2
+- summary: >+
+    > [!WARNING]
+
+    > A RandomReal elavult. Használja <xref:Microsoft.Quantum.Random.DrawRandomDouble> helyette.
+
+  uid: Microsoft.Quantum.Math.RandomReal
+- summary: >+
+    > [!WARNING]
+
+    > A RandomSingleQubitPauli elavult. Használja <xref:Microsoft.Quantum.Random.DrawRandomPauli> helyette.
+
+  uid: Microsoft.Quantum.Math.RandomSingleQubitPauli
+summary: Ez a névtér klasszikus matematikai függvényeket és adattípusokat tartalmaz.
+uid: Microsoft.Quantum.Math
+metadata:
+  ms.openlocfilehash: 13ccb80ce78e7d9d6341d7b228e39b65026ab090
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: hu-HU
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92723402"

@@ -1,0 +1,139 @@
+### YamlMime:QSharpNamespace
+functions:
+- summary: >+
+    > [!WARNING]
+
+    > A AmpAmpByOracle elavult. Használja <xref:Microsoft.Quantum.AmplitudeAmplification.StandardAmplitudeAmplification> helyette.
+
+    >
+
+    > Használja a következőt: @"microsoft.quantum.amplitudeamplification.standardamplitudeamplification".
+
+  uid: Microsoft.Quantum.AmplitudeAmplification.AmpAmpByOracle
+- summary: >+
+    > [!WARNING]
+
+    > A AmpAmpByOraclePhases elavult. Használja <xref:Microsoft.Quantum.AmplitudeAmplification.AmplitudeAmplificationFromStatePreparation> helyette.
+
+    >
+
+    > Használja a következőt: @"microsoft.quantum.amplitudeamplification.amplitudeamplificationfromstatepreparation".
+
+  uid: Microsoft.Quantum.AmplitudeAmplification.AmpAmpByOraclePhases
+- summary: >+
+    > [!WARNING]
+
+    > A AmpAmpByReflectionPhases elavult. Használja <xref:Microsoft.Quantum.AmplitudeAmplification.AmplitudeAmplificationFromPartialReflections> helyette.
+
+    >
+
+    > Használja a következőt: @"microsoft.quantum.amplitudeamplification.amplitudeamplificationfrompartialreflections".
+
+  uid: Microsoft.Quantum.AmplitudeAmplification.AmpAmpByReflectionPhases
+- summary: >+
+    > [!WARNING]
+
+    > A AmpAmpObliviousByOraclePhases elavult. Használja <xref:Microsoft.Quantum.AmplitudeAmplification.ObliviousAmplitudeAmplificationFromStatePreparation> helyette.
+
+    >
+
+    > Használja a következőt: @"microsoft.quantum.amplitudeamplification.obliviousamplitudeamplificationfromstatepreparation".
+
+  uid: Microsoft.Quantum.AmplitudeAmplification.AmpAmpObliviousByOraclePhases
+- summary: >+
+    > [!WARNING]
+
+    > A AmpAmpObliviousByReflectionPhases elavult. Használja <xref:Microsoft.Quantum.AmplitudeAmplification.ObliviousAmplitudeAmplificationFromPartialReflections> helyette.
+
+    >
+
+    > Használja a következőt: @"microsoft.quantum.amplitudeamplification.obliviousamplitudeamplificationfrompartialreflections".
+
+  uid: Microsoft.Quantum.AmplitudeAmplification.AmpAmpObliviousByReflectionPhases
+- summary: >+
+    > [!WARNING]
+
+    > A AmpAmpPhasesFixedPoint elavult. Használja <xref:Microsoft.Quantum.AmplitudeAmplification.FixedPointReflectionPhases> helyette.
+
+    >
+
+    > Használja a következőt: @"microsoft.quantum.amplitudeamplification.fixedpointreflectionphases".
+
+  uid: Microsoft.Quantum.AmplitudeAmplification.AmpAmpPhasesFixedPoint
+- summary: >+
+    > [!WARNING]
+
+    > A AmpAmpPhasesStandard elavult. Használja <xref:Microsoft.Quantum.AmplitudeAmplification.StandardReflectionPhases> helyette.
+
+    >
+
+    > Használja a következőt: @"microsoft.quantum.amplitudeamplification.standardreflectionphases".
+
+  uid: Microsoft.Quantum.AmplitudeAmplification.AmpAmpPhasesStandard
+- summary: >+
+    > [!WARNING]
+
+    > A AmpAmpRotationToReflectionPhases elavult. Használja <xref:Microsoft.Quantum.AmplitudeAmplification.RotationPhasesAsReflectionPhases> helyette.
+
+    >
+
+    > Használja a következőt: @"microsoft.quantum.amplitudeamplification.rotationphasesasreflectionphases".
+
+  uid: Microsoft.Quantum.AmplitudeAmplification.AmpAmpRotationToReflectionPhases
+- summary: Az amplitúdó erősítése részleges reflexiók használatával.
+  uid: Microsoft.Quantum.AmplitudeAmplification.AmplitudeAmplificationFromPartialReflections
+- summary: A részleges reflexiók esetében az amplitúdó erősítése Oracle-támogatással.
+  uid: Microsoft.Quantum.AmplitudeAmplification.AmplitudeAmplificationFromStatePreparation
+- summary: Kiszámítja a rögzített pont amplitúdó-erősítésének részleges reflexiós fázisait.
+  uid: Microsoft.Quantum.AmplitudeAmplification.FixedPointReflectionPhases
+- summary: Egy olyan egységes érték beolvasása, amely a következő részleges reflexiók megadásával a megfeledkezett az amplitúdó-erősítést valósítja meg:.
+  uid: Microsoft.Quantum.AmplitudeAmplification.ObliviousAmplitudeAmplificationFromPartialReflections
+- summary: A részleges reflexiók esetében az amplitúdó-erősítést az Oracles okozta.
+  uid: Microsoft.Quantum.AmplitudeAmplification.ObliviousAmplitudeAmplificationFromStatePreparation
+- summary: Az All-Zero string | 0... 0 〉, amely a tipikus bemeneti állapot az amplitúdó erősítéséhez.
+  uid: Microsoft.Quantum.AmplitudeAmplification.ReflectionStart
+- summary: Egy qubit elforgatásként megadott fázisokat alakít át részleges reflexiók megadott fázisokra.
+  uid: Microsoft.Quantum.AmplitudeAmplification.RotationPhasesAsReflectionPhases
+- summary: Standard amplitúdó-erősítési algoritmus
+  uid: Microsoft.Quantum.AmplitudeAmplification.StandardAmplitudeAmplification
+- summary: Kiszámítja a standard amplitúdó-erősítés részleges reflexiós fázisait.
+  uid: Microsoft.Quantum.AmplitudeAmplification.StandardReflectionPhases
+- summary: >-
+    A `ReflectionOracle` megcélzott állapotot a jelző qubit egyedileg megjelölve hozza létre.
+
+    A célként megadott állapot egyetlen qubit van beállítva, és az összes többi 0: $ \ket {1} _f $.
+  uid: Microsoft.Quantum.AmplitudeAmplification.TargetStateReflectionOracle
+name: Microsoft.Quantum.AmplitudeAmplification
+newtypes:
+- summary: Az amplitúdó-erősítésben bekövetkező részleges reflexiók sorozatából álló fázisok.
+  uid: Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases
+- summary: Egy qubit-Forgások sorozatának fázisai az amplitúdó-erősítésben.
+  uid: Microsoft.Quantum.AmplitudeAmplification.RotationPhases
+operations:
+- summary: >+
+    > [!WARNING]
+
+    > A AmpAmpRUSByOracle elavult. Használja <xref:Microsoft.Quantum.AmplitudeAmplification.ApplyFixedPointAmplification> helyette.
+
+    >
+
+    > Használja a következőt: @"microsoft.quantum.amplitudeamplification.applyfixedpointamplification".
+
+  uid: Microsoft.Quantum.AmplitudeAmplification.AmpAmpRUSByOracle
+- summary: Amplitúdó-erősítést alkalmaz egy adott regisztráción, a fázisok és az Oracle-alkalmazások adott készletének használatával, hogy tükrözze a kezdeti és a végső állapotot.
+  uid: Microsoft.Quantum.AmplitudeAmplification.ApplyAmplitudeAmplification
+- summary: Fixed-Point amplitúdó-erősítési algoritmus
+  uid: Microsoft.Quantum.AmplitudeAmplification.ApplyFixedPointAmplification
+- summary: A részleges reflexiók megadásával megfeledkezett az amplitúdó-erősítésről.
+  uid: Microsoft.Quantum.AmplitudeAmplification.ApplyObliviousAmplitudeAmplification
+- summary: A implementálása <xref:microsoft.quantum.canon.targetstatereflectionoracle> .
+  uid: Microsoft.Quantum.AmplitudeAmplification.ApplyTargetStateReflectionOracle
+summary: Ez a névtér olyan függvényeket és műveleteket tartalmaz, amelyek amplitúdó-erősítést végeznek.
+uid: Microsoft.Quantum.AmplitudeAmplification
+metadata:
+  ms.openlocfilehash: 7b95624eba1215e6b8be8f247c25a3931336b5fb
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: hu-HU
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92722450"
