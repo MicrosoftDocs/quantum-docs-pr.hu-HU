@@ -9,12 +9,12 @@ uid: microsoft.quantum.overview.algebra
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: bff1da475f87278bc9e769805b3fe0fe8704d47a
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 3e6700acc09adf9e2e771f6289c73ad51aa2cb90
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: HT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835128"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92692253"
 ---
 # <a name="linear-algebra-for-quantum-computing"></a>A kvantum-számítástechnika lineáris algebrája
 
@@ -41,7 +41,7 @@ A [Kvantumszámítógépek és kvantumszimulátorok](xref:microsoft.quantum.over
 Alább látható két gyakori kvantumművelet, mátrixszorzással megjelenítve.
 
 
-Az [`X` műveletet](xref:microsoft.quantum.intrinsic.x) az $X$ Pauli-mátrix jelöli,
+Az [`X` műveletet](xref:Microsoft.Quantum.Intrinsic.X) az $X$ Pauli-mátrix jelöli,
 
 $$X = \begin{bmatrix} 0 & 1 \\\\ 1 & 0 \end{bmatrix},$$
     
@@ -49,7 +49,7 @@ $$X = \begin{bmatrix} 0 & 1 \\\\ 1 & 0 \end{bmatrix},$$
 
 $$\begin{bmatrix}0 &1\\\\ 1 &0\end{bmatrix}\begin{bmatrix} 1 \\\\  0 \end{bmatrix} = \begin{bmatrix} 0 \\\\  1 \end{bmatrix}.$$
 
-A ['H' műveletet](xref:microsoft.quantum.intrinsic.h) a $H$ Hadamard-transzformáció jelöli,
+A ['H' műveletet](xref:Microsoft.Quantum.Intrinsic.H) a $H$ Hadamard-transzformáció jelöli,
 
 $$H = \dfrac{1}{\sqrt{2}}\begin{bmatrix}1 &1\\\\ 1 &-1\end{bmatrix},$$
 
@@ -57,7 +57,7 @@ $$H = \dfrac{1}{\sqrt{2}}\begin{bmatrix}1 &1\\\\ 1 &-1\end{bmatrix},$$
 
 $$\frac{1}{\sqrt{2}}\begin{bmatrix}1 &1\\\\ 1 &-1\end{bmatrix}\begin{bmatrix} 1 \\\\  0 \end{bmatrix}=\frac{1}{\sqrt{2}}\begin{bmatrix} 1 \\\\  1 \end{bmatrix}=\left(\frac{1}{\sqrt{2}}\right)^2=\frac{1}{2}.$$
 
-A kvantumműveletet jelölő mátrix egy követelménnyel rendelkezik – **egységes** mátrixnak kell lennie. A mátrix akkor egységes, ha a mátrix **inverze** megegyezik a mátrix **konjugált transzponáltjával**.
+A kvantumműveletet jelölő mátrix egy követelménnyel rendelkezik – **egységes** mátrixnak kell lennie. A mátrix akkor egységes, ha a mátrix **inverze** megegyezik a mátrix **konjugált transzponáltjával** .
 
 ## <a name="representing-two-qubit-states"></a>Kétqubites állapot jelölése
 
