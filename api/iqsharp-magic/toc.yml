@@ -26,6 +26,8 @@
   name: '%chemistry.inputstate.load magic parancs'
 - href: config.md
   name: '%config magic parancs'
+- href: debug.md
+  name: '%debug magic parancs'
 - href: estimate.md
   name: '%estimate magic parancs'
 - href: kata.md

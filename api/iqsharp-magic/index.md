@@ -1,22 +1,23 @@
 ---
 title: IQ# Magic parancsok
+description: Listázza az IQ# Jupyter kernelben elérhető magic parancsokat
 author: rmshaffer
 uid: microsoft.quantum.iqsharp.magic-ref.index
-ms.author: rmshaffer
-ms.date: 09/29/2020
+ms.author: ryansha
+ms.date: 10/26/2020
 ms.topic: article
-ms.openlocfilehash: 934ab18b667797d09d2c8188f727e64b0017e1d5
-ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
+ms.openlocfilehash: a615c6dac6cdb80ff84cec2b0a3c99fc700efb8e
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: HT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91464674"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691146"
 ---
 # <a name="iq-magic-commands"></a>IQ# Magic parancsok
 | Magic parancs | Összefoglalás |
 |---------------|---------|
 | [`%azure.connect`](xref:microsoft.quantum.iqsharp.magic-ref.azure.connect) | Kapcsolódás az Azure Quantum-munkaterülethez vagy a kapcsolat jelenlegi állapotának megjelenítése. |
-| [`%azure.execute`](xref:microsoft.quantum.iqsharp.magic-ref.azure.execute) | Feladat végrehajtása az Azure Quantum-munkaterületen. |
+| [`%azure.execute`](xref:microsoft.quantum.iqsharp.magic-ref.azure.execute) | Elküldi a feladatot egy Azure Quantum-munkaterületre, és a befejezésig várakozik. |
 | [`%azure.jobs`](xref:microsoft.quantum.iqsharp.magic-ref.azure.jobs) | Megjeleníti az aktuális Azure Quantum-munkaterületen lévő feladatok listáját. |
 | [`%azure.output`](xref:microsoft.quantum.iqsharp.magic-ref.azure.output) | Megjeleníti az aktuális Azure Quantum-munkaterületen lévő egyik feladat eredményét. |
 | [`%azure.status`](xref:microsoft.quantum.iqsharp.magic-ref.azure.status) | Megjeleníti az aktuális Azure Quantum-munkaterületen lévő egyik feladat állapotát. |
@@ -29,6 +30,7 @@ ms.locfileid: "91464674"
 | [`%chemistry.fh.load`](xref:microsoft.quantum.iqsharp.magic-ref.chemistry.fh.load) | Betölt egy fermion Hamilton-operátort egy elektronikus szerkezeti problémához. A probléma betöltése egy fájlból történik, vagy argumentumként van megadva. |
 | [`%chemistry.inputstate.load`](xref:microsoft.quantum.iqsharp.magic-ref.chemistry.inputstate.load) | Betölti egy Broombridge elektronikus szerkezeti probléma megjelenítését, és visszaadja a választott bemeneti állapotot. |
 | [`%config`](xref:microsoft.quantum.iqsharp.magic-ref.config) | Engedélyezi a beállítási vagy lekérdezési konfigurációs lehetőségeket. |
+| [`%debug`](xref:microsoft.quantum.iqsharp.magic-ref.debug) | Végighalad egy adott Q#-művelet vagy -függvény végrehajtásának lépésein. |
 | [`%estimate`](xref:microsoft.quantum.iqsharp.magic-ref.estimate) | Futtat egy adott függvényt vagy műveletet a ResourcesEstimator célszámítógépen. |
 | [`%kata`](xref:microsoft.quantum.iqsharp.magic-ref.kata) | Egyetlen tesztet hajt végre. |
 | [`%lsmagic`](xref:microsoft.quantum.iqsharp.magic-ref.lsmagic) | Visszaadja a jelenleg elérhető magic parancsok listáját. |
