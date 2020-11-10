@@ -1,5 +1,5 @@
 ---
-title: Fejlesztés Q#-alkalmazásokkal
+title: Fejlesztés Q#-alkalmazásokkal egy IDE-ben
 description: Megtudhatja, hogyan hozhat létre olyan Q#-alkalmazást, amely a parancssorból fut.
 author: bradben
 ms.author: v-benbra
@@ -10,53 +10,52 @@ uid: microsoft.quantum.install.standalone
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 68f530d80e5c5f40dc2bcbb185879c3cb6f93f91
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: a6823888dcbe8cf79f0045d2615fe8b889dcc7c3
+ms.sourcegitcommit: a13c7c86fd52a05cbf129b8dd713d6586ca1cc2c
 ms.translationtype: HT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834414"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93376422"
 ---
-# <a name="develop-with-no-locq-applications"></a>Fejlesztés Q#-alkalmazásokkal
+# <a name="develop-with-no-locq-applications-in-an-ide"></a>Fejlesztés Q#-alkalmazásokkal egy IDE-ben
 
-Kövesse a környezetéhez tartozó fülön található utasításokat.
+A Q#-programok külön, illesztő nélkül futtathatók olyan gazdanyelveken, mint például a C#, az F# vagy a Python. Q#-alkalmazásokat a Visual Studio Code-ban (VS Code), a Visual Studióban, a Visual Studio Codespacesben vagy bármely szerkesztőben/IDE-ben is létrehozhat, és a .NET-konzolról futtathatja őket. 
 
-A Q#-programok külön, illesztő nélkül futtathatók olyan gazdanyelveken, mint például a C#, az F# vagy a Python.
-
-## <a name="prerequisites"></a>Előfeltételek
+## <a name="prerequisites-for-all-environments"></a>Az összes környezetre vonatkozó előfeltételek
 
 - [.NET Core SDK 3.1 vagy újabb verzió](https://www.microsoft.com/net/download)
 
 ## <a name="installation"></a>Telepítés
 
-Bár Q#-alkalmazásokat bármilyen IDE-ben buildelhet, javasoljuk, hogy a Q#-alkalmazások helyi fejlesztéséhez használja a Visual Studio Code-ot (VS Code) vagy a Visual Studio IDE-t. A felhőben, webböngészőn keresztül történő fejlesztéshez a Visual Studio Codespaces használatát javasoljuk. Ha ezekben a környezetekben fejleszt, hozzáférhet a QDK-bővítmény széleskörű funkcióihoz, beleértve a figyelmeztetéseket, a szintaxiselemek kiemelését, a projektsablonokat és egyebeket. 
+Bár Q#-alkalmazásokat bármilyen IDE-ben buildelhet, javasoljuk, hogy a Q#-alkalmazások helyi fejlesztéséhez használja a Visual Studio Code-ot (VS Code) vagy a Visual Studio IDE-t. A felhőben, webböngészőn keresztül történő fejlesztéshez a Visual Studio Codespaces használatát javasoljuk. Ha ezekben a környezetekben fejleszt, kihasználhatja a QDK-bővítmény széles körű funkcióinak előnyeit, beleértve a figyelmeztetéseket, a szintaxiselemek kiemelését, a projektsablonokat és egyebeket. 
 
-A VS Code konfigurálása:
+### <a name="to-configure-for-vs-code"></a>Konfigurálás VS Code-hoz:
 
 1. Telepítse és töltse le a [VS Code-ot](https://code.visualstudio.com/download) (Windows, Linux és Mac).
 2. Telepítse a [VS Code-hoz készült Microsoft QDK-t](https://marketplace.visualstudio.com/items?itemName=quantum.quantum-devkit-vscode).
 
-A Visual Studio konfigurálása:
+### <a name="to-configure-for-visual-studio"></a>Konfigurálás Visual Studióhoz:
 
 1. Töltse le és telepítse a [Visual Studio](https://visualstudio.microsoft.com/downloads/) 16.3-as vagy újabb verzióját, a .NET Core platformfüggetlen fejlesztési tevékenységprofil engedélyezésével.
 2. Töltse le és telepítse a [Microsoft QDK-t](https://marketplace.visualstudio.com/items?itemName=quantum.DevKit).
 
-A Visual Studio Codespaces konfigurálása:
+### <a name="to-configure-for-another-environment"></a>Konfigurálás másik környezethez: 
 
-1. Hozzon létre egy [Azure-fiókot](https://azure.microsoft.com/free/).
-2. Hozzon létre egy Codespaces-környezetet. Kövesse a [gyorsútmutatót](https://docs.microsoft.com/visualstudio/codespaces/quickstarts/browser). A Codespace létrehozásakor javasoljuk, hogy a QDK-specifikus beállítások betöltéséhez írja be a `microsoft/Quantum` elemet a „Git-adattár” mezőbe.
-3. Most már elindíthatja az új környezetet, és megkezdheti a fejlesztést a böngészőben a [VS Codespaces Cloud IDE](https://online.visualstudio.com/environments)használatával. Azt is megteheti, hogy a VS Code helyi telepítését használja, a Codespacest pedig [távoli környezetként](https://docs.microsoft.com/visualstudio/online/how-to/vscode) alkalmazza.
-
-
-A QDK egy másik környezetben való telepítéséhez írja a következőt a parancssorba:
+1. Adja meg a következőt a parancssorban:
 
 ```dotnetcli
 dotnet new -i Microsoft.Quantum.ProjectTemplates
 ```
 
+### <a name="to-configure-for-visual-studio-codespaces"></a>Konfigurálás Visual Studio Codespaceshez:
+
+1. Hozzon létre egy [Azure-fiókot](https://azure.microsoft.com/free/).
+2. Hozzon létre egy Codespaces-környezetet. Kövesse a [gyorsútmutatót](https://docs.microsoft.com/visualstudio/codespaces/quickstarts/browser). A Codespace létrehozásakor javasoljuk, hogy a QDK-specifikus beállítások betöltéséhez írja be a `microsoft/Quantum` elemet a „Git-adattár” mezőbe.
+3. Most már elindíthatja az új környezetet, és megkezdheti a fejlesztést a böngészőben a [VS Codespaces Cloud IDE](https://online.visualstudio.com/environments)használatával. Azt is megteheti, hogy a VS Code helyi telepítését használja, a Codespacest pedig [távoli környezetként](https://docs.microsoft.com/visualstudio/online/how-to/vscode) alkalmazza.
+
 ## <a name="develop-with-no-locq"></a>Fejlesztés a Q# használatával
 
-Kövesse a környezetéhez tartozó fülön található utasításokat.
+Kövesse az alkalmazott fejlesztési környezetre vonatkozó fülön található utasításokat.
 
 ### <a name="vs-code"></a>[VS Code](#tab/tabid-vscode)
 
@@ -85,7 +84,7 @@ Ellenőrizze a Visual Studio telepítését egy Q# `Hello World`-alkalmazás lé
 Új Q#-alkalmazás létrehozása
 
 1. Nyissa meg a Visual Studiót, majd kattintson a **File (Fájl)**  -> **New (Új)**  -> **Project (Projekt)** elemekre.
-2. A keresőmezőbe írja be a következőt: `Q#`. Ezután válassza ki a **Q#-alkalmazást**, és kattintson a **Next (Tovább)** elemre.
+2. A keresőmezőbe írja be a következőt: `Q#`. Ezután válassza ki a **Q#-alkalmazást** , és kattintson a **Next (Tovább)** elemre.
 3. Adja meg az alkalmazás nevét és helyét, majd kattintson a **Create (Létrehozás)** elemre.
 
 
@@ -102,12 +101,6 @@ Az alkalmazás futtatása:
 ### <a name="other-editors-with-the-command-prompt"></a>[Egyéb, parancssorral rendelkező szerkesztők](#tab/tabid-cmdline)
 
 Ellenőrizze a telepítést egy Q# `Hello World`-alkalmazás létrehozásával.
-
-1. Telepítse a projektsablonokat.
-
-    ```dotnetcli
-    dotnet new -i Microsoft.Quantum.ProjectTemplates
-    ```
 
 1. Új alkalmazás létrehozása:
 
