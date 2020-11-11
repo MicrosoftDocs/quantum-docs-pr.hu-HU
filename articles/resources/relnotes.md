@@ -9,12 +9,12 @@ uid: microsoft.quantum.relnotes
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: fae603a81f8edc23ab8dc14277c5e3c4699f2cee
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: d38482be17e67f180441440ee8ccc7f1f64ebc9d
+ms.sourcegitcommit: fb75d8f30f1d91f644b2a594f46867eb5968cfda
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92691688"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94448344"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>A Microsoft Quantum Development Kit kibocsátási megjegyzései
 
@@ -23,6 +23,12 @@ Ez a cikk információkat tartalmaz a Quantum Development Kit egyes verzióiról
 A telepítési utasításokat lásd a [telepítési útmutatóban](xref:microsoft.quantum.install).
 
 A frissítésre vonatkozó utasításokat lásd a [frissítési útmutatóban](xref:microsoft.quantum.update).
+
+## <a name="version-01320111004"></a>0.13.20111004 verziója
+
+*Kiadás dátuma: november 10., 2020*
+
+Ez a kiadás letiltja a Q# Visual Studióban és a Visual Studio Code-ban lévő fájlok IntelliSense-funkcióit, ha a projektfájl nincs jelen. Ez megoldja azt a hibát, hogy az IntelliSense-funkciók nem működnek, miután új Q# fájlt adott hozzá egy projekthez (lásd: [qsharp-Compiler # 720](https://github.com/microsoft/qsharp-compiler/issues/720)).
 
 ## <a name="version-01320102604"></a>0.13.20102604 verziója
 
