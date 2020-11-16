@@ -1,14 +1,14 @@
 ---
-title: 'Hibajavítás a :::no-loc(Q#)::: standard könyvtárakban'
-description: 'Megtudhatja, hogyan használhatja a hibák helyességét a :::no-loc(Q#)::: programokban, miközben védi a qubits állapotát.'
+title: 'Hibajavítás a Q# standard könyvtárakban'
+description: 'Megtudhatja, hogyan használhatja a hibák helyességét a Q# programokban, miközben védi a qubits állapotát.'
 author: QuantumWriter
 uid: microsoft.quantum.libraries.error-correction
 ms.author: martinro
 ms.date: 12/11/2017
 ms.topic: article
 no-loc:
-- ':::no-loc(Q#):::'
-- ':::no-loc($$v):::'
+- 'Q#'
+- '$$v'
 ms.openlocfilehash: 94251e185cea65c5fc08ed70d5fba9b7b19501e3
 ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
@@ -51,7 +51,7 @@ ms.locfileid: "92692040"
 <span data-ttu-id="55389-139">Másfelől $Z _0 Z_1 \ket {100} =-\ket {100} $ és $Z _0 Z_1 \ket {011} =-\ket {011} $, így a $Z _0 Z_1 $ mérésének eredménye azt mutatja, hogy milyen hiba történt.</span><span class="sxs-lookup"><span data-stu-id="55389-139">On the other hand, $Z_0 Z_1 \ket{100} = - \ket{100}$ and $Z_0 Z_1 \ket{011} = -\ket{011}$, so the result of measuring $Z_0 Z_1$ reveals useful information about which error occurred.</span></span>
 
 <span data-ttu-id="55389-140">Ennek kihangsúlyozása érdekében ismételje meg a fenti táblázatot, de adja hozzá a $Z _0 Z_1 $ és $Z _1 Z_2 $ mérésének eredményét minden egyes sorban.</span><span class="sxs-lookup"><span data-stu-id="55389-140">To emphasize this, we repeat the table above, but add the results of measuring $Z_0 Z_1$ and $Z_1 Z_2$ on each row.</span></span>
-<span data-ttu-id="55389-141">Az egyes mérések eredményeit a megfigyelt sajátérték ($ + $ vagy $-$) jelöléssel jelöljük meg, amely a és a :::no-loc(Q#)::: `Result` értékének felel meg `Zero` `One` .</span><span class="sxs-lookup"><span data-stu-id="55389-141">We denote the results of each measurement by the sign of the eigenvalue that is observed, either $+$ or $-$, corresponding to the :::no-loc(Q#)::: `Result` values of `Zero` and `One`, respectively.</span></span>
+<span data-ttu-id="55389-141">Az egyes mérések eredményeit a megfigyelt sajátérték ($ + $ vagy $-$) jelöléssel jelöljük meg, amely a és a Q# `Result` értékének felel meg `Zero` `One` .</span><span class="sxs-lookup"><span data-stu-id="55389-141">We denote the results of each measurement by the sign of the eigenvalue that is observed, either $+$ or $-$, corresponding to the Q# `Result` values of `Zero` and `One`, respectively.</span></span>
 
 | <span data-ttu-id="55389-142">Hiba $E $</span><span class="sxs-lookup"><span data-stu-id="55389-142">Error $E$</span></span> | <span data-ttu-id="55389-143">$E \ket{\overline {0} } $</span><span class="sxs-lookup"><span data-stu-id="55389-143">$E\ket{\overline{0}}$</span></span> | <span data-ttu-id="55389-144">$E \ket{\overline {1} } $</span><span class="sxs-lookup"><span data-stu-id="55389-144">$E\ket{\overline{1}}$</span></span> | <span data-ttu-id="55389-145">$Z _0 eredménye Z_1 $</span><span class="sxs-lookup"><span data-stu-id="55389-145">Result of $Z_0 Z_1$</span></span> | <span data-ttu-id="55389-146">$Z _1 eredménye Z_2 $</span><span class="sxs-lookup"><span data-stu-id="55389-146">Result of $Z_1 Z_2$</span></span> |
 | --- | --- | --- | --- | --- |
@@ -71,16 +71,16 @@ ms.locfileid: "92692040"
 > <span data-ttu-id="55389-165">Általánosabban a kódok nagyobb számú hiba kezelésére és $Z $ hibák, valamint $X $ hibák kezelésére használhatók.</span><span class="sxs-lookup"><span data-stu-id="55389-165">More generally, codes can be created to handle larger number of errors, and to handle $Z$ errors as well as $X$ errors.</span></span>
 
 <span data-ttu-id="55389-166">A *stabilizátorok formalitásának* lényege, hogy betekintést nyerhetünk a kvantum-hibák kijavításának olyan mértékére, amely az összes kód állapotával azonos módon működik.</span><span class="sxs-lookup"><span data-stu-id="55389-166">The insight that we can describe measurements in quantum error correction that act the same way on all code states, is the essence of the *stabilizer formalism* .</span></span>
-<span data-ttu-id="55389-167">A :::no-loc(Q#)::: Canon olyan keretrendszert biztosít, amely leírja a stabilizátor-kódok kódolását és dekódolását, valamint leírja, hogy az egyes hibák hogyan állíthatók vissza.</span><span class="sxs-lookup"><span data-stu-id="55389-167">The :::no-loc(Q#)::: canon provides a framework for describing encoding into and decoding from stabilizer codes, and for describing how one recovers from errors.</span></span>
+<span data-ttu-id="55389-167">A Q# Canon olyan keretrendszert biztosít, amely leírja a stabilizátor-kódok kódolását és dekódolását, valamint leírja, hogy az egyes hibák hogyan állíthatók vissza.</span><span class="sxs-lookup"><span data-stu-id="55389-167">The Q# canon provides a framework for describing encoding into and decoding from stabilizer codes, and for describing how one recovers from errors.</span></span>
 <span data-ttu-id="55389-168">Ebben a szakaszban ezt a keretrendszert és annak alkalmazását néhány egyszerű kvantum-hiba – a kódok kijavítani.</span><span class="sxs-lookup"><span data-stu-id="55389-168">In this section, we describe this framework and its application to a few simple quantum error-correcting codes.</span></span>
 
 > [!TIP]
 > <span data-ttu-id="55389-169">A stabilizátorok formális bevezetésének teljes bemutatása meghaladja a jelen szakasz hatókörét.</span><span class="sxs-lookup"><span data-stu-id="55389-169">A full introduction to the stabilizer formalism is beyond the scope of this section.</span></span>
 > <span data-ttu-id="55389-170">A [Gottesman 2009](https://arxiv.org/abs/0904.2557)-re vonatkozó további információkért tekintse meg az olvasók érdeklődését.</span><span class="sxs-lookup"><span data-stu-id="55389-170">We refer readers interested in learning more to [Gottesman 2009](https://arxiv.org/abs/0904.2557).</span></span>
 
-## <a name="representing-error-correcting-codes-in-no-locq"></a><span data-ttu-id="55389-171">Hiba történt a kódok helyesbítésében a következőben: :::no-loc(Q#):::</span><span class="sxs-lookup"><span data-stu-id="55389-171">Representing Error Correcting Codes in :::no-loc(Q#):::</span></span> ##
+## <a name="representing-error-correcting-codes-in-no-locq"></a><span data-ttu-id="55389-171">Hiba történt a kódok helyesbítésében a következőben: Q#</span><span class="sxs-lookup"><span data-stu-id="55389-171">Representing Error Correcting Codes in Q#</span></span> ##
 
-<span data-ttu-id="55389-172">A hibakódok megadásához a :::no-loc(Q#)::: Canon számos különböző, felhasználó által definiált típust biztosít:</span><span class="sxs-lookup"><span data-stu-id="55389-172">To help specify error correcting codes, the :::no-loc(Q#)::: canon provides several distinct user-defined types:</span></span>
+<span data-ttu-id="55389-172">A hibakódok megadásához a Q# Canon számos különböző, felhasználó által definiált típust biztosít:</span><span class="sxs-lookup"><span data-stu-id="55389-172">To help specify error correcting codes, the Q# canon provides several distinct user-defined types:</span></span>
 
 - <span data-ttu-id="55389-173"><xref:Microsoft.Quantum.ErrorCorrection.LogicalRegister>`= Qubit[]`: Azt jelzi, hogy a qubits-regisztrációt egy hibajavítási kód kódjának blokkjának kell értelmezni.</span><span class="sxs-lookup"><span data-stu-id="55389-173"><xref:Microsoft.Quantum.ErrorCorrection.LogicalRegister> `= Qubit[]`: Denotes that a register of qubits should be interpreted as the code block of an error-correcting code.</span></span>
 - <span data-ttu-id="55389-174"><xref:Microsoft.Quantum.ErrorCorrection.Syndrome>`= Result[]`: Azt jelzi, hogy a mérési eredmények tömbjét úgy kell értelmezni, mint a kód blokkban mért szindrómát.</span><span class="sxs-lookup"><span data-stu-id="55389-174"><xref:Microsoft.Quantum.ErrorCorrection.Syndrome> `= Result[]`: Denotes that an array of measurement results should be interpreted as the syndrome measured on a code block.</span></span>
@@ -122,4 +122,4 @@ using (scratch = Qubit[nScratch]) {
 
 <span data-ttu-id="55389-185">Ezt részletesebben is megvizsgáljuk a [bit flip Code-mintában](https://github.com/microsoft/Quantum/tree/main/samples/error-correction/bit-flip-code).</span><span class="sxs-lookup"><span data-stu-id="55389-185">We explore this in more detail in the [bit flip code sample](https://github.com/microsoft/Quantum/tree/main/samples/error-correction/bit-flip-code).</span></span>
 
-<span data-ttu-id="55389-186">A bit-flip kód mellett a Canon az :::no-loc(Q#)::: [öt qubit tökéletes kód](https://arxiv.org/abs/quant-ph/9602019)és a [Seven-qubit kód](https://arxiv.org/abs/quant-ph/9705052)megvalósításával érhető el, amelyek közül mindkettő kijavítani egy tetszőleges, egyqubitos hibát.</span><span class="sxs-lookup"><span data-stu-id="55389-186">Aside from the bit-flip code, the :::no-loc(Q#)::: canon is provided with implementations of the [five-qubit perfect code](https://arxiv.org/abs/quant-ph/9602019), and the [seven-qubit code](https://arxiv.org/abs/quant-ph/9705052), both of which can correct an arbitrary single-qubit error.</span></span>
+<span data-ttu-id="55389-186">A bit-flip kód mellett a Canon az Q# [öt qubit tökéletes kód](https://arxiv.org/abs/quant-ph/9602019)és a [Seven-qubit kód](https://arxiv.org/abs/quant-ph/9705052)megvalósításával érhető el, amelyek közül mindkettő kijavítani egy tetszőleges, egyqubitos hibát.</span><span class="sxs-lookup"><span data-stu-id="55389-186">Aside from the bit-flip code, the Q# canon is provided with implementations of the [five-qubit perfect code](https://arxiv.org/abs/quant-ph/9602019), and the [seven-qubit code](https://arxiv.org/abs/quant-ph/9705052), both of which can correct an arbitrary single-qubit error.</span></span>

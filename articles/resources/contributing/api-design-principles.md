@@ -1,14 +1,14 @@
 ---
-title: ':::no-loc(Q#)::: API-tervezési alapelvek'
-description: ':::no-loc(Q#)::: API-tervezési alapelvek'
+title: 'Q# API-tervezési alapelvek'
+description: 'Q# API-tervezési alapelvek'
 author: cgranade
 ms.author: chgranad
 ms.date: 3/9/2020
 ms.topic: article
 uid: microsoft.quantum.contributing.api-design
 no-loc:
-- ':::no-loc(Q#):::'
-- ':::no-loc($$v):::'
+- 'Q#'
+- '$$v'
 ms.openlocfilehash: 6b196cf1be584a3157c7a9eb8cf497fe1121dd7a
 ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
@@ -16,20 +16,20 @@ ms.contentlocale: hu-HU
 ms.lasthandoff: 10/27/2020
 ms.locfileid: "92691816"
 ---
-# <a name="no-locq-api-design-principles"></a><span data-ttu-id="18c96-103">:::no-loc(Q#)::: API-tervezési alapelvek</span><span class="sxs-lookup"><span data-stu-id="18c96-103">:::no-loc(Q#)::: API Design Principles</span></span>
+# <a name="no-locq-api-design-principles"></a><span data-ttu-id="18c96-103">Q# API-tervezési alapelvek</span><span class="sxs-lookup"><span data-stu-id="18c96-103">Q# API Design Principles</span></span>
 
 ## <a name="introduction"></a><span data-ttu-id="18c96-104">Bevezetés</span><span class="sxs-lookup"><span data-stu-id="18c96-104">Introduction</span></span>
 
-<span data-ttu-id="18c96-105">Nyelvként és platformként :::no-loc(Q#)::: lehetővé teszi a felhasználók számára a kvantum-alkalmazások írását, futtatását, megismerését és megismerését.</span><span class="sxs-lookup"><span data-stu-id="18c96-105">As a language and as a platform, :::no-loc(Q#)::: empowers users to write, run, understand, and explore quantum applications.</span></span>
-<span data-ttu-id="18c96-106">Ahhoz, hogy a felhasználók megtervezzék a :::no-loc(Q#)::: kódtárakat, az API-tervezési alapelveket követve elvégezheti a kialakítást, és segítheti a felhasználható könyvtárak létrehozását a Quantum fejlesztői közösség számára.</span><span class="sxs-lookup"><span data-stu-id="18c96-106">In order to empower users, when we design :::no-loc(Q#)::: libraries, we follow a set of API design principles to guide our designs and to help us make usable libraries for the the quantum development community.</span></span>
-<span data-ttu-id="18c96-107">Ez a cikk felsorolja ezeket az alapelveket, és példákat mutat be arra, hogyan alkalmazhatja őket az API-k tervezésekor :::no-loc(Q#)::: .</span><span class="sxs-lookup"><span data-stu-id="18c96-107">This article lists these principles, and gives examples to help guide how to apply them when designing :::no-loc(Q#)::: APIs.</span></span>
+<span data-ttu-id="18c96-105">Nyelvként és platformként Q# lehetővé teszi a felhasználók számára a kvantum-alkalmazások írását, futtatását, megismerését és megismerését.</span><span class="sxs-lookup"><span data-stu-id="18c96-105">As a language and as a platform, Q# empowers users to write, run, understand, and explore quantum applications.</span></span>
+<span data-ttu-id="18c96-106">Ahhoz, hogy a felhasználók megtervezzék a Q# kódtárakat, az API-tervezési alapelveket követve elvégezheti a kialakítást, és segítheti a felhasználható könyvtárak létrehozását a Quantum fejlesztői közösség számára.</span><span class="sxs-lookup"><span data-stu-id="18c96-106">In order to empower users, when we design Q# libraries, we follow a set of API design principles to guide our designs and to help us make usable libraries for the the quantum development community.</span></span>
+<span data-ttu-id="18c96-107">Ez a cikk felsorolja ezeket az alapelveket, és példákat mutat be arra, hogyan alkalmazhatja őket az API-k tervezésekor Q# .</span><span class="sxs-lookup"><span data-stu-id="18c96-107">This article lists these principles, and gives examples to help guide how to apply them when designing Q# APIs.</span></span>
 
 > [!TIP]
 > <span data-ttu-id="18c96-108">Ez egy meglehetősen részletes dokumentum, amely segítséget nyújt a függvénytár-fejlesztés és a részletes függvénytár-hozzájárulások létrehozásához.</span><span class="sxs-lookup"><span data-stu-id="18c96-108">This is a fairly detailed document that's intended to help guide library development and in-depth library contributions.</span></span>
-> <span data-ttu-id="18c96-109">Valószínűleg hasznosnak találja a saját kódtárainak írásakor :::no-loc(Q#)::: , vagy ha nagyobb funkciókkal járul hozzá a [ :::no-loc(Q#)::: kódtárak tárházához](https://github.com/microsoft/QuantumLibraries).</span><span class="sxs-lookup"><span data-stu-id="18c96-109">You'll probably find it most useful if you're writing your own libraries in :::no-loc(Q#):::, or if you're contributing larger features to the [:::no-loc(Q#)::: libraries repository](https://github.com/microsoft/QuantumLibraries).</span></span>
+> <span data-ttu-id="18c96-109">Valószínűleg hasznosnak találja a saját kódtárainak írásakor Q# , vagy ha nagyobb funkciókkal járul hozzá a [ Q# kódtárak tárházához](https://github.com/microsoft/QuantumLibraries).</span><span class="sxs-lookup"><span data-stu-id="18c96-109">You'll probably find it most useful if you're writing your own libraries in Q#, or if you're contributing larger features to the [Q# libraries repository](https://github.com/microsoft/QuantumLibraries).</span></span>
 >
 > <span data-ttu-id="18c96-110">Ha szeretné megtudni, hogy miként járulhat hozzá általánosabban a Quantum Development Kit-hez, javasoljuk, hogy kezdje a [hozzájárulási útmutatóval](xref:microsoft.quantum.contributing).</span><span class="sxs-lookup"><span data-stu-id="18c96-110">On the other hand, if you're looking to learn how to contribute to the Quantum Development Kit more generally, we suggest starting with the [contribution guide](xref:microsoft.quantum.contributing).</span></span>
-> <span data-ttu-id="18c96-111">Ha többet szeretne megtudni a kód formázásának javasolt módjáról, érdemes lehet megtekinteni :::no-loc(Q#)::: a [stílusra vonatkozó útmutatót](xref:microsoft.quantum.contributing.style).</span><span class="sxs-lookup"><span data-stu-id="18c96-111">If you're looking for more general information about how we recommend formatting your :::no-loc(Q#)::: code, you may be interested in checking out the [style guide](xref:microsoft.quantum.contributing.style).</span></span>
+> <span data-ttu-id="18c96-111">Ha többet szeretne megtudni a kód formázásának javasolt módjáról, érdemes lehet megtekinteni Q# a [stílusra vonatkozó útmutatót](xref:microsoft.quantum.contributing.style).</span><span class="sxs-lookup"><span data-stu-id="18c96-111">If you're looking for more general information about how we recommend formatting your Q# code, you may be interested in checking out the [style guide](xref:microsoft.quantum.contributing.style).</span></span>
 
 ## <a name="general-principles"></a><span data-ttu-id="18c96-112">Általános alapelvek</span><span class="sxs-lookup"><span data-stu-id="18c96-112">General Principles</span></span>
 
@@ -84,7 +84,7 @@ ms.locfileid: "92691816"
 - <span data-ttu-id="18c96-142">✅A **tervezési függvények** és műveletek a más függvényekkel és műveletekkel is összehozhatók, mind UGYANABBAN az API-ban, mind a korábban meglévő könyvtárakban.</span><span class="sxs-lookup"><span data-stu-id="18c96-142">✅ **DO** design functions and operations to compose well with other   functions and operations, both in the same API and in previously   existing libraries.</span></span>
 
   <span data-ttu-id="18c96-143">*Példák:*</span><span class="sxs-lookup"><span data-stu-id="18c96-143">*Examples:*</span></span>
-  - <span data-ttu-id="18c96-144">A @"microsoft.quantum.canon.delay" művelet minimális feltételezéseket biztosít a bemenetével kapcsolatban, így felhasználhatja bármelyik művelet alkalmazásait a :::no-loc(Q#)::: szabványos könyvtárban vagy a felhasználók által megadott módon.</span><span class="sxs-lookup"><span data-stu-id="18c96-144">The @"microsoft.quantum.canon.delay" operation makes minimal assumptions about its input, and thus can be used to delay applications of either operations across the :::no-loc(Q#)::: standard library or as defined by users.</span></span>
+  - <span data-ttu-id="18c96-144">A @"microsoft.quantum.canon.delay" művelet minimális feltételezéseket biztosít a bemenetével kapcsolatban, így felhasználhatja bármelyik művelet alkalmazásait a Q# szabványos könyvtárban vagy a felhasználók által megadott módon.</span><span class="sxs-lookup"><span data-stu-id="18c96-144">The @"microsoft.quantum.canon.delay" operation makes minimal assumptions about its input, and thus can be used to delay applications of either operations across the Q# standard library or as defined by users.</span></span>
     <!-- TODO: define bad example. -->
 
 - <span data-ttu-id="18c96-145">✅A művelet helyett kizárólag klasszikus logikai determinisztikus **teheti** elérhetővé.</span><span class="sxs-lookup"><span data-stu-id="18c96-145">✅ **DO** expose purely deterministic classical logic as   as functions rather than operations.</span></span>

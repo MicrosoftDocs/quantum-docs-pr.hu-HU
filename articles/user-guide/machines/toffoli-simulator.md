@@ -7,8 +7,8 @@ ms.date: 6/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.toffoli-simulator
 no-loc:
-- ':::no-loc(Q#):::'
-- ':::no-loc($$v):::'
+- 'Q#'
+- '$$v'
 ms.openlocfilehash: 036896a33fa02db671a5fd07421160df164bd41d
 ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
@@ -24,7 +24,7 @@ ms.locfileid: "92690790"
 
 ## <a name="invoking-the-toffoli-simulator"></a><span data-ttu-id="74e14-109">A Toffoli szimulátor meghívása</span><span class="sxs-lookup"><span data-stu-id="74e14-109">Invoking the Toffoli simulator</span></span>
 
-<span data-ttu-id="74e14-110">A Toffoli szimulátort a osztályon keresztül teheti elérhetővé `ToffoliSimulator` .</span><span class="sxs-lookup"><span data-stu-id="74e14-110">You expose the Toffoli simulator via the `ToffoliSimulator` class.</span></span> <span data-ttu-id="74e14-111">További részletekért tekintse [meg a :::no-loc(Q#)::: programok futtatásának módjait](xref:microsoft.quantum.guide.host-programs).</span><span class="sxs-lookup"><span data-stu-id="74e14-111">For additional details, see [Ways to run a :::no-loc(Q#)::: program](xref:microsoft.quantum.guide.host-programs).</span></span>
+<span data-ttu-id="74e14-110">A Toffoli szimulátort a osztályon keresztül teheti elérhetővé `ToffoliSimulator` .</span><span class="sxs-lookup"><span data-stu-id="74e14-110">You expose the Toffoli simulator via the `ToffoliSimulator` class.</span></span> <span data-ttu-id="74e14-111">További részletekért tekintse [meg a Q# programok futtatásának módjait](xref:microsoft.quantum.guide.host-programs).</span><span class="sxs-lookup"><span data-stu-id="74e14-111">For additional details, see [Ways to run a Q# program](xref:microsoft.quantum.guide.host-programs).</span></span>
 
 ### <a name="invoking-the-toffoli-simulator-from-c"></a><span data-ttu-id="74e14-112">A Toffoli szimulátor meghívása a C-ből #</span><span class="sxs-lookup"><span data-stu-id="74e14-112">Invoking the Toffoli simulator from C#</span></span>
 
@@ -40,7 +40,7 @@ ms.locfileid: "92690790"
 
 ### <a name="invoking-the-toffoli-simulator-from-python"></a><span data-ttu-id="74e14-115">A Toffoli szimulátor meghívása a Pythonból</span><span class="sxs-lookup"><span data-stu-id="74e14-115">Invoking the Toffoli simulator from Python</span></span>
 
-<span data-ttu-id="74e14-116">Használja az [toffoli_simulate ()](https://docs.microsoft.com/python/qsharp-core/qsharp.loader.qsharpcallable) metódust a Python-könyvtárból az importált :::no-loc(Q#)::: művelettel:</span><span class="sxs-lookup"><span data-stu-id="74e14-116">Use the [toffoli_simulate()](https://docs.microsoft.com/python/qsharp-core/qsharp.loader.qsharpcallable) method from the Python library with the imported :::no-loc(Q#)::: operation:</span></span>
+<span data-ttu-id="74e14-116">Használja az [toffoli_simulate ()](https://docs.microsoft.com/python/qsharp-core/qsharp.loader.qsharpcallable) metódust a Python-könyvtárból az importált Q# művelettel:</span><span class="sxs-lookup"><span data-stu-id="74e14-116">Use the [toffoli_simulate()](https://docs.microsoft.com/python/qsharp-core/qsharp.loader.qsharpcallable) method from the Python library with the imported Q# operation:</span></span>
 
 ```python
 qubit_result = myOperation.toffoli_simulate()
@@ -48,7 +48,7 @@ qubit_result = myOperation.toffoli_simulate()
 
 ### <a name="invoking-the-toffoli-simulator-from-the-command-line"></a><span data-ttu-id="74e14-117">A Toffoli szimulátor meghívása a parancssorból</span><span class="sxs-lookup"><span data-stu-id="74e14-117">Invoking the Toffoli simulator from the command line</span></span>
 
-<span data-ttu-id="74e14-118">Ha a :::no-loc(Q#)::: parancssorból futtat egy programot, a **--Simulator** (vagy a **-s** parancsikon) paraméterrel adhatja meg a Toffoli Simulator célszámítógép értékét.</span><span class="sxs-lookup"><span data-stu-id="74e14-118">When running a :::no-loc(Q#)::: program from the command line, use the **--simulator** (or **-s** shortcut) parameter to specify the Toffoli simulator target machine.</span></span> <span data-ttu-id="74e14-119">A következő parancs egy programot futtat az erőforrás-kalkulátor használatával:</span><span class="sxs-lookup"><span data-stu-id="74e14-119">The following command runs a program using the resources estimator:</span></span> 
+<span data-ttu-id="74e14-118">Ha a Q# parancssorból futtat egy programot, a **--Simulator** (vagy a **-s** parancsikon) paraméterrel adhatja meg a Toffoli Simulator célszámítógép értékét.</span><span class="sxs-lookup"><span data-stu-id="74e14-118">When running a Q# program from the command line, use the **--simulator** (or **-s** shortcut) parameter to specify the Toffoli simulator target machine.</span></span> <span data-ttu-id="74e14-119">A következő parancs egy programot futtat az erőforrás-kalkulátor használatával:</span><span class="sxs-lookup"><span data-stu-id="74e14-119">The following command runs a program using the resources estimator:</span></span> 
 
 ```dotnetcli
 dotnet run -s ToffoliSimulator
@@ -56,7 +56,7 @@ dotnet run -s ToffoliSimulator
 
 ### <a name="invoking-the-toffoli-simulator-from-juptyer-notebooks"></a><span data-ttu-id="74e14-120">A Toffoli szimulátor meghívása a Juptyer-jegyzetfüzetekről</span><span class="sxs-lookup"><span data-stu-id="74e14-120">Invoking the Toffoli simulator from Juptyer Notebooks</span></span>
 
-<span data-ttu-id="74e14-121">A :::no-loc(Q#)::: művelet futtatásához használja a [(z)% toffoli](xref:microsoft.quantum.iqsharp.magic-ref.toffoli) I Magic-parancsot :::no-loc(Q#)::: .</span><span class="sxs-lookup"><span data-stu-id="74e14-121">Use the I:::no-loc(Q#)::: magic command [%toffoli](xref:microsoft.quantum.iqsharp.magic-ref.toffoli) to run the :::no-loc(Q#)::: operation.</span></span>
+<span data-ttu-id="74e14-121">A Q# művelet futtatásához használja a [(z)% toffoli](xref:microsoft.quantum.iqsharp.magic-ref.toffoli) I Magic-parancsot Q# .</span><span class="sxs-lookup"><span data-stu-id="74e14-121">Use the IQ# magic command [%toffoli](xref:microsoft.quantum.iqsharp.magic-ref.toffoli) to run the Q# operation.</span></span>
 
 ```
 %toffoli myOperation

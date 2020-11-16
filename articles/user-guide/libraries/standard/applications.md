@@ -1,5 +1,5 @@
 ---
-title: 'Alkalmazások a :::no-loc(Q#)::: standard könyvtárakban'
+title: 'Alkalmazások a Q# standard könyvtárakban'
 description: Ismerkedjen meg a Quantum Computing – Hamilton szimuláció és a rövid keresési algoritmusának két alapvető alkalmazásával.
 author: QuantumWriter
 uid: microsoft.quantum.libraries.applications
@@ -7,8 +7,8 @@ ms.author: martinro
 ms.date: 12/11/2017
 ms.topic: article
 no-loc:
-- ':::no-loc(Q#):::'
-- ':::no-loc($$v):::'
+- 'Q#'
+- '$$v'
 ms.openlocfilehash: 5a29dcc74c638cb8ecbeb1f924d0e50d40d19f66
 ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT

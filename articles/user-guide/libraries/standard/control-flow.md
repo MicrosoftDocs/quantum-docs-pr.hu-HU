@@ -1,14 +1,14 @@
 ---
-title: 'A standard libararies a flow-vezérlők :::no-loc(Q#):::'
-description: 'Ismerje meg a Flow Control műveleteit és funkcióit a Microsoft :::no-loc(Q#)::: standard Library-ben.'
+title: 'A standard libararies a flow-vezérlők Q#'
+description: 'Ismerje meg a Flow Control műveleteit és funkcióit a Microsoft Q# standard Library-ben.'
 author: QuantumWriter
 uid: microsoft.quantum.concepts.control-flow
 ms.author: martinro
 ms.date: 12/11/2017
 ms.topic: article
 no-loc:
-- ':::no-loc(Q#):::'
-- ':::no-loc($$v):::'
+- 'Q#'
+- '$$v'
 ms.openlocfilehash: ad107f5c65a4bf368d12d30e4a72786f2076205c
 ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
@@ -19,7 +19,7 @@ ms.locfileid: "92690868"
 # <a name="higher-order-control-flow"></a><span data-ttu-id="41ae0-103">Higher-Order vezérlési folyamat</span><span class="sxs-lookup"><span data-stu-id="41ae0-103">Higher-Order Control Flow</span></span> #
 
 <span data-ttu-id="41ae0-104">A standard szintű kódtár egyik elsődleges szerepköre, hogy könnyebb legyen a [kvantum-programok](https://en.wikipedia.org/wiki/Quantum_programming)segítségével kifejezni a magas szintű algoritmusos ötleteket.</span><span class="sxs-lookup"><span data-stu-id="41ae0-104">One of the primary roles of the standard library is to make it easier to express high-level algorithmic ideas as [quantum programs](https://en.wikipedia.org/wiki/Quantum_programming).</span></span>
-<span data-ttu-id="41ae0-105">Így a :::no-loc(Q#)::: Canon számos különböző flow-vezérlési szerkezetet biztosít, amelyek mindegyike a függvények és műveletek részleges alkalmazásával valósítható meg.</span><span class="sxs-lookup"><span data-stu-id="41ae0-105">Thus, the :::no-loc(Q#)::: canon provides a variety of different flow control constructs, each implemented using partial application of functions and operations.</span></span>
+<span data-ttu-id="41ae0-105">Így a Q# Canon számos különböző flow-vezérlési szerkezetet biztosít, amelyek mindegyike a függvények és műveletek részleges alkalmazásával valósítható meg.</span><span class="sxs-lookup"><span data-stu-id="41ae0-105">Thus, the Q# canon provides a variety of different flow control constructs, each implemented using partial application of functions and operations.</span></span>
 <span data-ttu-id="41ae0-106">Tekintse át azonnal a példát, és vegye figyelembe, hogy az egyik "CNEM-létrát" szeretné létrehozni egy regiszteren:</span><span class="sxs-lookup"><span data-stu-id="41ae0-106">Jumping immediately into an example, consider the case in which one wants to construct a "CNOT ladder" on a register:</span></span>
 
 ```qsharp
@@ -50,7 +50,7 @@ ApplyToEachCA(CNOT, Zip(register[0..nQubits - 2], register[1..nQubits - 1]));
 
 <span data-ttu-id="41ae0-111">A Canon által biztosított elsődleges absztrakciók egyike az iteráció.</span><span class="sxs-lookup"><span data-stu-id="41ae0-111">One of the primary abstractions provided by the canon is that of iteration.</span></span>
 <span data-ttu-id="41ae0-112">Vegyünk például egy egységes formát, $U \otimes U \otimes \cdots \otimes U $-t egyetlen qubit egységes $U $-ra.</span><span class="sxs-lookup"><span data-stu-id="41ae0-112">For instance, consider a unitary of the form $U \otimes U \otimes \cdots \otimes U$ for a single-qubit unitary $U$.</span></span>
-<span data-ttu-id="41ae0-113">A-ben a :::no-loc(Q#)::: következő módon lehet ezt a lehetőséget használni a <xref:Microsoft.Quantum.Arrays.IndexRange> `for` regisztrálási hurokként:</span><span class="sxs-lookup"><span data-stu-id="41ae0-113">In :::no-loc(Q#):::, we might use <xref:Microsoft.Quantum.Arrays.IndexRange> to represent this as as a `for` loop over a register:</span></span>
+<span data-ttu-id="41ae0-113">A-ben a Q# következő módon lehet ezt a lehetőséget használni a <xref:Microsoft.Quantum.Arrays.IndexRange> `for` regisztrálási hurokként:</span><span class="sxs-lookup"><span data-stu-id="41ae0-113">In Q#, we might use <xref:Microsoft.Quantum.Arrays.IndexRange> to represent this as as a `for` loop over a register:</span></span>
 
 ```qsharp
 /// # Summary
@@ -91,7 +91,7 @@ ApplyToEachCA(Adjoint U, register);
 > <span data-ttu-id="41ae0-124">Ezután `ApplyToEach(Recover(code, recoveryFn, _), codeBlocks)` alkalmazza a hiba – a kód és a `code` helyreállítási függvényt az `recoveryFn` egyes blokkokra egymástól függetlenül.</span><span class="sxs-lookup"><span data-stu-id="41ae0-124">Then `ApplyToEach(Recover(code, recoveryFn, _), codeBlocks)` will apply the error-correcting code `code` and recovery function `recoveryFn` to each block independently.</span></span>
 > <span data-ttu-id="41ae0-125">Ez a klasszikus bemenetek esetében is `ApplyToEach(R(_, _, qubit), [(PauliX, PI() / 2.0); (PauliY(), PI() / 3.0]))` érvényes: a $ \pi/$2 rotációját alkalmazza a $X $ értékre, amelyet a $PI/$3 $Y $ értékkel való elforgatása követ.</span><span class="sxs-lookup"><span data-stu-id="41ae0-125">This holds even for classical inputs: `ApplyToEach(R(_, _, qubit), [(PauliX, PI() / 2.0); (PauliY(), PI() / 3.0]))` will apply a rotation of $\pi / 2$ about $X$ followed by a rotation of $pi / 3$ about $Y$.</span></span>
 
-<span data-ttu-id="41ae0-126">A :::no-loc(Q#)::: Canon Emellett támogatja a funkcionális programozáshoz ismert klasszikus enumerálási mintákat is.</span><span class="sxs-lookup"><span data-stu-id="41ae0-126">The :::no-loc(Q#)::: canon also provides support for classical enumeration patterns familiar to functional programming.</span></span>
+<span data-ttu-id="41ae0-126">A Q# Canon Emellett támogatja a funkcionális programozáshoz ismert klasszikus enumerálási mintákat is.</span><span class="sxs-lookup"><span data-stu-id="41ae0-126">The Q# canon also provides support for classical enumeration patterns familiar to functional programming.</span></span>
 <span data-ttu-id="41ae0-127">Például <xref:Microsoft.Quantum.Arrays.Fold> implementálja a mintát $f (f (f (s \_ {\text{Initial}}, x \_ 0), x \_ 1), \dots) $, hogy csökkentse a függvények listáját.</span><span class="sxs-lookup"><span data-stu-id="41ae0-127">For instance, <xref:Microsoft.Quantum.Arrays.Fold> implements the pattern $f(f(f(s\_{\text{initial}}, x\_0), x\_1), \dots)$ for reducing a function over a list.</span></span>
 <span data-ttu-id="41ae0-128">Ez a minta összegek, termékek, minimumok, Maxima és más hasonló függvények megvalósítására használható:</span><span class="sxs-lookup"><span data-stu-id="41ae0-128">This pattern can be used to implement sums, products, minima, maxima and other such functions:</span></span>
 
@@ -103,7 +103,7 @@ function Sum(xs : Int[]) {
 }
 ```
 
-<span data-ttu-id="41ae0-129">Hasonlóképpen, a (z <xref:Microsoft.Quantum.Arrays.Mapped> ) és a függvények <xref:Microsoft.Quantum.Arrays.MappedByIndex> is használhatók a funkcionális programozási fogalmak kifejezésére a alkalmazásban :::no-loc(Q#)::: .</span><span class="sxs-lookup"><span data-stu-id="41ae0-129">Similarly, functions like <xref:Microsoft.Quantum.Arrays.Mapped> and <xref:Microsoft.Quantum.Arrays.MappedByIndex> can be used to express functional programming concepts in :::no-loc(Q#):::.</span></span>
+<span data-ttu-id="41ae0-129">Hasonlóképpen, a (z <xref:Microsoft.Quantum.Arrays.Mapped> ) és a függvények <xref:Microsoft.Quantum.Arrays.MappedByIndex> is használhatók a funkcionális programozási fogalmak kifejezésére a alkalmazásban Q# .</span><span class="sxs-lookup"><span data-stu-id="41ae0-129">Similarly, functions like <xref:Microsoft.Quantum.Arrays.Mapped> and <xref:Microsoft.Quantum.Arrays.MappedByIndex> can be used to express functional programming concepts in Q#.</span></span>
 
 ## <a name="composing-operations-and-functions"></a><span data-ttu-id="41ae0-130">Műveletek és függvények összeállítása</span><span class="sxs-lookup"><span data-stu-id="41ae0-130">Composing Operations and Functions</span></span> ##
 
@@ -173,7 +173,7 @@ U(1, time / Float(nSteps), target);
 DecomposeIntoTimeStepsCA((2, U), 1);
 ```
 
-<span data-ttu-id="41ae0-159">Az aláírás a `DecomposeIntoTimeStepsCA` következő általános mintát követi :::no-loc(Q#)::: , ahol olyan gyűjtemények szerepelnek, amelyekben tömbök vagy a menet közbeni elemek is lehetnek, amelyek az első elemek a rekordok jelölik `Int` .</span><span class="sxs-lookup"><span data-stu-id="41ae0-159">The signature of `DecomposeIntoTimeStepsCA` follows a common pattern in :::no-loc(Q#):::, where collections that may be backed either by arrays or by something which compute elements on the fly are represented by tuples whose first elements are `Int` values indicating their lengths.</span></span>
+<span data-ttu-id="41ae0-159">Az aláírás a `DecomposeIntoTimeStepsCA` következő általános mintát követi Q# , ahol olyan gyűjtemények szerepelnek, amelyekben tömbök vagy a menet közbeni elemek is lehetnek, amelyek az első elemek a rekordok jelölik `Int` .</span><span class="sxs-lookup"><span data-stu-id="41ae0-159">The signature of `DecomposeIntoTimeStepsCA` follows a common pattern in Q#, where collections that may be backed either by arrays or by something which compute elements on the fly are represented by tuples whose first elements are `Int` values indicating their lengths.</span></span>
 
 ## <a name="putting-it-together-controlling-operations"></a><span data-ttu-id="41ae0-160">Összerakva: vezérlési műveletek</span><span class="sxs-lookup"><span data-stu-id="41ae0-160">Putting it Together: Controlling Operations</span></span> ##
 
@@ -218,7 +218,7 @@ operation _ControlledOnBitString(
 
 <span data-ttu-id="41ae0-177">Ezen a ponton megtehetjük, de valahogy nem teljesül, hogy az új műveletünk nem "érzi", mint az elmaradó alkalmazása `Controlled` .</span><span class="sxs-lookup"><span data-stu-id="41ae0-177">At this point, we could be done, but it is somehow unsatisfying that our new operation does not "feel" like applying the `Controlled` functor.</span></span>
 <span data-ttu-id="41ae0-178">Így az új vezérlési folyamat fogalmának meghatározása egy olyan függvény megírásával történik, amely az Oracle felügyeletét végzi, és új műveletet ad vissza.</span><span class="sxs-lookup"><span data-stu-id="41ae0-178">Thus, we finish defining our new control flow concept by writing a function that takes the oracle to be controlled and that returns a new operation.</span></span>
-<span data-ttu-id="41ae0-179">Így úgy tűnik, hogy az új függvény nagyon hasonlít `Controlled` , és bemutatjuk, hogy könnyen definiáljuk a hatékony új vezérlési folyamatokat :::no-loc(Q#)::: a és a Canon együttes használatával:</span><span class="sxs-lookup"><span data-stu-id="41ae0-179">In this way, our new function looks and feels very much like `Controlled`, illustrating that we can easily define powerful new control flow constructs using :::no-loc(Q#)::: and the canon together:</span></span>
+<span data-ttu-id="41ae0-179">Így úgy tűnik, hogy az új függvény nagyon hasonlít `Controlled` , és bemutatjuk, hogy könnyen definiáljuk a hatékony új vezérlési folyamatokat Q# a és a Canon együttes használatával:</span><span class="sxs-lookup"><span data-stu-id="41ae0-179">In this way, our new function looks and feels very much like `Controlled`, illustrating that we can easily define powerful new control flow constructs using Q# and the canon together:</span></span>
 
 ```qsharp
 function ControlledOnBitString(

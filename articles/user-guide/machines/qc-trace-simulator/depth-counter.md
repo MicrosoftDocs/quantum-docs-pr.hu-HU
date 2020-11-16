@@ -1,14 +1,14 @@
 ---
 title: Mélységi számláló – Quantum Development Kit
-description: 'Ismerje meg a Microsoft QDK mélységi számlálóját, amely a Quantum Trace Simulator használatával gyűjti össze a programban meghívott összes művelet mélységét :::no-loc(Q#)::: .'
+description: 'Ismerje meg a Microsoft QDK mélységi számlálóját, amely a Quantum Trace Simulator használatával gyűjti össze a programban meghívott összes művelet mélységét Q# .'
 author: vadym-kl
 ms.author: vadym
 ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.depth-counter
 no-loc:
-- ':::no-loc(Q#):::'
-- ':::no-loc($$v):::'
+- 'Q#'
+- '$$v'
 ms.openlocfilehash: 89d8a2c9f2ecd5c5332215cd4307bcf4a6422036
 ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
@@ -39,7 +39,7 @@ var sim = new QCTraceSimulator(config);
 
 ## <a name="using-the-depth-counter-in-a-c-host-program"></a><span data-ttu-id="5383b-114">A mélység számláló használata C# gazda programban</span><span class="sxs-lookup"><span data-stu-id="5383b-114">Using the depth counter in a C# host program</span></span>
 
-<span data-ttu-id="5383b-115">Az ebben a szakaszban szereplő C#-példa a következő mintakód alapján kiszámítja a `T` művelet mélységét `CCNOT` :::no-loc(Q#)::: :</span><span class="sxs-lookup"><span data-stu-id="5383b-115">The C# example that follows in this section computes the `T` depth of the `CCNOT` operation, based on the following :::no-loc(Q#)::: sample code:</span></span>
+<span data-ttu-id="5383b-115">Az ebben a szakaszban szereplő C#-példa a következő mintakód alapján kiszámítja a `T` művelet mélységét `CCNOT` Q# :</span><span class="sxs-lookup"><span data-stu-id="5383b-115">The C# example that follows in this section computes the `T` depth of the `CCNOT` operation, based on the following Q# sample code:</span></span>
 
 ```qsharp
 open Microsoft.Quantum.Intrinsic;

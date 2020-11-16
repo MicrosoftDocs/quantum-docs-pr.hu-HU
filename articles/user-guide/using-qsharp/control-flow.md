@@ -1,5 +1,5 @@
 ---
-title: 'Folyamat vezérlése :::no-loc(Q#):::'
+title: 'Folyamat vezérlése Q#'
 description: Hurkok, feltételesség stb.
 author: gillenhaalb
 ms.author: a-gibec
@@ -7,8 +7,8 @@ ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.controlflow
 no-loc:
-- ':::no-loc(Q#):::'
-- ':::no-loc($$v):::'
+- 'Q#'
+- '$$v'
 ms.openlocfilehash: eca37202e5fe9b48dcfdec4eeb4ba6cafaac8723
 ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
@@ -16,7 +16,7 @@ ms.contentlocale: hu-HU
 ms.lasthandoff: 10/27/2020
 ms.locfileid: "92691095"
 ---
-# <a name="control-flow-in-no-locq"></a><span data-ttu-id="46dc1-103">Folyamat vezérlése :::no-loc(Q#):::</span><span class="sxs-lookup"><span data-stu-id="46dc1-103">Control flow in :::no-loc(Q#):::</span></span>
+# <a name="control-flow-in-no-locq"></a><span data-ttu-id="46dc1-103">Folyamat vezérlése Q#</span><span class="sxs-lookup"><span data-stu-id="46dc1-103">Control flow in Q#</span></span>
 
 <span data-ttu-id="46dc1-104">Egy műveleten vagy függvényen belül minden utasítás sorrendben fut, hasonlóan más gyakori klasszikus nyelvekhez.</span><span class="sxs-lookup"><span data-stu-id="46dc1-104">Within an operation or function, each statement runs in order, similar to other common imperative classical languages.</span></span>
 <span data-ttu-id="46dc1-105">A vezérlés folyamatát azonban három különböző módon módosíthatja:</span><span class="sxs-lookup"><span data-stu-id="46dc1-105">However, you can modify the flow of control in three distinct ways:</span></span>
@@ -108,12 +108,12 @@ for ((index, measured) in results) { // iterates over the tuple values in result
 
 ## <a name="repeat-until-success-loop"></a><span data-ttu-id="46dc1-140">REPEAT-ig-Success hurok</span><span class="sxs-lookup"><span data-stu-id="46dc1-140">Repeat-until-success loop</span></span>
 
-<span data-ttu-id="46dc1-141">A :::no-loc(Q#)::: nyelv lehetővé teszi, hogy a klasszikus vezérlési folyamat a qubits mérési eredményeitől függ.</span><span class="sxs-lookup"><span data-stu-id="46dc1-141">The :::no-loc(Q#)::: language allows classical control flow to depend on the results of measuring qubits.</span></span>
+<span data-ttu-id="46dc1-141">A Q# nyelv lehetővé teszi, hogy a klasszikus vezérlési folyamat a qubits mérési eredményeitől függ.</span><span class="sxs-lookup"><span data-stu-id="46dc1-141">The Q# language allows classical control flow to depend on the results of measuring qubits.</span></span>
 <span data-ttu-id="46dc1-142">Ez a funkció lehetővé teszi, hogy a hatékony valószínűséggel rendelkező minialkalmazások megvalósításával csökkentse a unitaries megvalósításához szükséges számítási költségeket.</span><span class="sxs-lookup"><span data-stu-id="46dc1-142">This capability, in turn, enables implementing powerful probabilistic gadgets that can reduce the computational cost for implementing unitaries.</span></span>
-<span data-ttu-id="46dc1-143">Ilyenek például a *REPEAT-ig-Success* (RUS) minták a alkalmazásban :::no-loc(Q#)::: .</span><span class="sxs-lookup"><span data-stu-id="46dc1-143">Examples of this are the *repeat-until-success* (RUS) patterns in :::no-loc(Q#):::.</span></span>
+<span data-ttu-id="46dc1-143">Ilyenek például a *REPEAT-ig-Success* (RUS) minták a alkalmazásban Q# .</span><span class="sxs-lookup"><span data-stu-id="46dc1-143">Examples of this are the *repeat-until-success* (RUS) patterns in Q#.</span></span>
 <span data-ttu-id="46dc1-144">Ezek az RUS-minták olyan valószínűségi programok, amelyek az alapvető kapuk szempontjából *várhatóan* alacsony költségeket mutatnak; a felmerülő költségek a tényleges futtatástól és a több lehetséges ág közötti összekapcsolástól függenek.</span><span class="sxs-lookup"><span data-stu-id="46dc1-144">These RUS patterns are probabilistic programs that have an *expected* low cost in terms of elementary gates; the incurred cost depends on the actual run and the interleaving of the multiple possible branchings.</span></span>
 
-<span data-ttu-id="46dc1-145">A sikeres ismétléses (RUS) minták megkönnyítése érdekében :::no-loc(Q#)::: támogatja a szerkezeteket</span><span class="sxs-lookup"><span data-stu-id="46dc1-145">To facilitate repeat-until-success (RUS) patterns, :::no-loc(Q#)::: supports the constructs</span></span>
+<span data-ttu-id="46dc1-145">A sikeres ismétléses (RUS) minták megkönnyítése érdekében Q# támogatja a szerkezeteket</span><span class="sxs-lookup"><span data-stu-id="46dc1-145">To facilitate repeat-until-success (RUS) patterns, Q# supports the constructs</span></span>
 
 ```qsharp
 repeat {
@@ -151,9 +151,9 @@ until (expression);
 
 ## <a name="while-loop"></a><span data-ttu-id="46dc1-157">A while hurok</span><span class="sxs-lookup"><span data-stu-id="46dc1-157">While loop</span></span>
 
-<span data-ttu-id="46dc1-158">A REPEAT-ig-Success mintázat nagyon Quantum-specifikus konnotációval rendelkezik.</span><span class="sxs-lookup"><span data-stu-id="46dc1-158">Repeat-until-success patterns have a very quantum-specific connotation.</span></span> <span data-ttu-id="46dc1-159">Ezek széles körben használatosak a kvantum-algoritmusok bizonyos osztályaiban – ezért a dedikált nyelvi konstrukciója :::no-loc(Q#)::: .</span><span class="sxs-lookup"><span data-stu-id="46dc1-159">They are widely used in particular classes of quantum algorithms - hence the dedicated language construct in :::no-loc(Q#):::.</span></span> <span data-ttu-id="46dc1-160">Azonban az olyan hurkok, amelyek egy adott feltétel alapján szakítják meg a futási időtartamot, és így a futtatási hossz nem ismert a fordítási időben, a rendszer a kvantum-futtatókörnyezetben különös gondossággal kezeli.</span><span class="sxs-lookup"><span data-stu-id="46dc1-160">However, loops that break based on a condition and whose run length is thus unknown at compile-time, are handled with particular care in a quantum runtime.</span></span> <span data-ttu-id="46dc1-161">Azonban a függvényeken belüli használatuk nem problémamentes, mivel ezek a hurkok csak a hagyományos (nem Quantum) hardveren futó kódokat tartalmaznak.</span><span class="sxs-lookup"><span data-stu-id="46dc1-161">However, their use within functions is unproblematic since these loops only contain code that runs on conventional (non-quantum) hardware.</span></span> 
+<span data-ttu-id="46dc1-158">A REPEAT-ig-Success mintázat nagyon Quantum-specifikus konnotációval rendelkezik.</span><span class="sxs-lookup"><span data-stu-id="46dc1-158">Repeat-until-success patterns have a very quantum-specific connotation.</span></span> <span data-ttu-id="46dc1-159">Ezek széles körben használatosak a kvantum-algoritmusok bizonyos osztályaiban – ezért a dedikált nyelvi konstrukciója Q# .</span><span class="sxs-lookup"><span data-stu-id="46dc1-159">They are widely used in particular classes of quantum algorithms - hence the dedicated language construct in Q#.</span></span> <span data-ttu-id="46dc1-160">Azonban az olyan hurkok, amelyek egy adott feltétel alapján szakítják meg a futási időtartamot, és így a futtatási hossz nem ismert a fordítási időben, a rendszer a kvantum-futtatókörnyezetben különös gondossággal kezeli.</span><span class="sxs-lookup"><span data-stu-id="46dc1-160">However, loops that break based on a condition and whose run length is thus unknown at compile-time, are handled with particular care in a quantum runtime.</span></span> <span data-ttu-id="46dc1-161">Azonban a függvényeken belüli használatuk nem problémamentes, mivel ezek a hurkok csak a hagyományos (nem Quantum) hardveren futó kódokat tartalmaznak.</span><span class="sxs-lookup"><span data-stu-id="46dc1-161">However, their use within functions is unproblematic since these loops only contain code that runs on conventional (non-quantum) hardware.</span></span> 
 
-<span data-ttu-id="46dc1-162">:::no-loc(Q#):::Ezért a csak a functions-ben lévő hurkok használatát támogatja.</span><span class="sxs-lookup"><span data-stu-id="46dc1-162">:::no-loc(Q#):::, therefore, supports to use of while loops within functions only.</span></span>
+<span data-ttu-id="46dc1-162">Q#Ezért a csak a functions-ben lévő hurkok használatát támogatja.</span><span class="sxs-lookup"><span data-stu-id="46dc1-162">Q#, therefore, supports to use of while loops within functions only.</span></span>
 <span data-ttu-id="46dc1-163">Egy `while` utasítás a kulcsszóból `while` , egy logikai kifejezésből áll zárójelben, és egy utasítás blokkot.</span><span class="sxs-lookup"><span data-stu-id="46dc1-163">A `while` statement consists of the keyword `while`, a Boolean expression in parentheses, and a statement block.</span></span>
 <span data-ttu-id="46dc1-164">Az utasítás blokkja (a hurok törzse) mindaddig fut, amíg a feltétel kiértékelése megtörténik `true` .</span><span class="sxs-lookup"><span data-stu-id="46dc1-164">The statement block (the body of the loop) runs as long as the condition evaluates to `true`.</span></span>
 
@@ -183,7 +183,7 @@ operation ApplyWith<'T>(
 }
 ```
 
-<span data-ttu-id="46dc1-169">:::no-loc(Q#)::: a támogatja az előző transzformációt megvalósító ragozó utasítást.</span><span class="sxs-lookup"><span data-stu-id="46dc1-169">:::no-loc(Q#)::: supports a conjugation statement that implements the preceding transformation.</span></span> <span data-ttu-id="46dc1-170">Az utasítás használatával a művelet a `ApplyWith` következő módon valósítható meg:</span><span class="sxs-lookup"><span data-stu-id="46dc1-170">Using that statement, the operation `ApplyWith` can be implemented in the following way:</span></span>
+<span data-ttu-id="46dc1-169">Q# a támogatja az előző transzformációt megvalósító ragozó utasítást.</span><span class="sxs-lookup"><span data-stu-id="46dc1-169">Q# supports a conjugation statement that implements the preceding transformation.</span></span> <span data-ttu-id="46dc1-170">Az utasítás használatával a művelet a `ApplyWith` következő módon valósítható meg:</span><span class="sxs-lookup"><span data-stu-id="46dc1-170">Using that statement, the operation `ApplyWith` can be implemented in the following way:</span></span>
 
 ```qsharp
 operation ApplyWith<'T>(
@@ -249,7 +249,7 @@ fail $"Syndrome {syn} is incorrect";
 
 ### <a name="rus-pattern-for-single-qubit-rotation-about-an-irrational-axis"></a><span data-ttu-id="46dc1-193">RUS-minta egyetlen qubit elforgatásához egy irracionális tengelyen</span><span class="sxs-lookup"><span data-stu-id="46dc1-193">RUS pattern for single-qubit rotation about an irrational axis</span></span> 
 
-<span data-ttu-id="46dc1-194">Tipikus használati eset esetén a következő művelet a :::no-loc(Q#)::: (Z) $ (I + 2i Z)/\sqrt $, a Bloch szférán belüli irracionális tengely körüli rotációt valósít {5} meg.</span><span class="sxs-lookup"><span data-stu-id="46dc1-194">In a typical use case, the following :::no-loc(Q#)::: operation implements a rotation around an irrational axis of $(I + 2i Z)/\sqrt{5}$ on the Bloch sphere.</span></span> <span data-ttu-id="46dc1-195">A megvalósítás egy ismert RUS mintát használ:</span><span class="sxs-lookup"><span data-stu-id="46dc1-195">The implementation uses a known RUS pattern:</span></span>
+<span data-ttu-id="46dc1-194">Tipikus használati eset esetén a következő művelet a Q# (Z) $ (I + 2i Z)/\sqrt $, a Bloch szférán belüli irracionális tengely körüli rotációt valósít {5} meg.</span><span class="sxs-lookup"><span data-stu-id="46dc1-194">In a typical use case, the following Q# operation implements a rotation around an irrational axis of $(I + 2i Z)/\sqrt{5}$ on the Bloch sphere.</span></span> <span data-ttu-id="46dc1-195">A megvalósítás egy ismert RUS mintát használ:</span><span class="sxs-lookup"><span data-stu-id="46dc1-195">The implementation uses a known RUS pattern:</span></span>
 
 ```qsharp
 operation ApplyVRotationUsingRUS(qubit : Qubit) : Unit {
@@ -375,4 +375,4 @@ operation PrepareStateUsingRUS(target : Qubit) : Unit {
 
 ## <a name="next-steps"></a><span data-ttu-id="46dc1-210">Következő lépések</span><span class="sxs-lookup"><span data-stu-id="46dc1-210">Next steps</span></span>
 
-<span data-ttu-id="46dc1-211">További információ a [teszteléséről és hibakereséséről](xref:microsoft.quantum.guide.testingdebugging) :::no-loc(Q#)::: .</span><span class="sxs-lookup"><span data-stu-id="46dc1-211">Learn about [Testing and Debugging](xref:microsoft.quantum.guide.testingdebugging) in :::no-loc(Q#):::.</span></span>
+<span data-ttu-id="46dc1-211">További információ a [teszteléséről és hibakereséséről](xref:microsoft.quantum.guide.testingdebugging) Q# .</span><span class="sxs-lookup"><span data-stu-id="46dc1-211">Learn about [Testing and Debugging](xref:microsoft.quantum.guide.testingdebugging) in Q#.</span></span>

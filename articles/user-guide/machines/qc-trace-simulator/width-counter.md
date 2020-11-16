@@ -1,14 +1,14 @@
 ---
 title: Szélesség számláló – Quantum Development Kit
-description: 'Ismerkedjen meg a Microsoft QDK szélességi számlálójának használatával, amely a Quantum Trace Simulator használatával számítja ki, hogy hány qubits van kiosztva, és hogyan kölcsönzött a program műveletei által :::no-loc(Q#)::: .'
+description: 'Ismerkedjen meg a Microsoft QDK szélességi számlálójának használatával, amely a Quantum Trace Simulator használatával számítja ki, hogy hány qubits van kiosztva, és hogyan kölcsönzött a program műveletei által Q# .'
 author: vadym-kl
 ms.author: vadym
 ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.width-counter
 no-loc:
-- ':::no-loc(Q#):::'
-- ':::no-loc($$v):::'
+- 'Q#'
+- '$$v'
 ms.openlocfilehash: e54e92cc4a76ce9f9c5aead84f2b64320d6b4f1c
 ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
@@ -18,7 +18,7 @@ ms.locfileid: "92691131"
 ---
 # <a name="quantum-trace-simulator-width-counter"></a><span data-ttu-id="b274b-103">Quantum Trace Simulator: szélesség számláló</span><span class="sxs-lookup"><span data-stu-id="b274b-103">Quantum trace simulator: width counter</span></span>
 
-<span data-ttu-id="b274b-104">A szélesség számláló a Quantum Development Kit [Quantum Trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro)részét képezi.</span><span class="sxs-lookup"><span data-stu-id="b274b-104">The width counter is a part of the Quantum Development Kit [Quantum trace simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro).</span></span> <span data-ttu-id="b274b-105">A használatával megszámolhatja a program egyes műveletei által lefoglalt qubits számát :::no-loc(Q#)::: .</span><span class="sxs-lookup"><span data-stu-id="b274b-105">You can use it to count the number of qubits allocated and borrowed by each operation in a :::no-loc(Q#)::: program.</span></span> <span data-ttu-id="b274b-106">Néhány primitív művelet több qubits is kioszthat, például szorzásra vezérelt `X` vagy vezérelt `T` műveleteket.</span><span class="sxs-lookup"><span data-stu-id="b274b-106">Some primitive operations can allocate extra qubits, for example, multiply controlled `X` operations or controlled `T` operations.</span></span>
+<span data-ttu-id="b274b-104">A szélesség számláló a Quantum Development Kit [Quantum Trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro)részét képezi.</span><span class="sxs-lookup"><span data-stu-id="b274b-104">The width counter is a part of the Quantum Development Kit [Quantum trace simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro).</span></span> <span data-ttu-id="b274b-105">A használatával megszámolhatja a program egyes műveletei által lefoglalt qubits számát Q# .</span><span class="sxs-lookup"><span data-stu-id="b274b-105">You can use it to count the number of qubits allocated and borrowed by each operation in a Q# program.</span></span> <span data-ttu-id="b274b-106">Néhány primitív művelet több qubits is kioszthat, például szorzásra vezérelt `X` vagy vezérelt `T` műveleteket.</span><span class="sxs-lookup"><span data-stu-id="b274b-106">Some primitive operations can allocate extra qubits, for example, multiply controlled `X` operations or controlled `T` operations.</span></span>
 
 ## <a name="invoking-the-width-counter"></a><span data-ttu-id="b274b-107">A szélességi számláló meghívása</span><span class="sxs-lookup"><span data-stu-id="b274b-107">Invoking the width counter</span></span>
 
@@ -32,7 +32,7 @@ var sim = new QCTraceSimulator(config);
 
 ## <a name="using-the-width-counter-in-a-c-host-program"></a><span data-ttu-id="b274b-109">A szélesség számláló használata C#-gazdagép programban</span><span class="sxs-lookup"><span data-stu-id="b274b-109">Using the width counter in a C# host program</span></span>
 
-<span data-ttu-id="b274b-110">Az ebben a szakaszban ismertetett C#-példa a következő mintakód alapján kiszámítja a szorzás által vezérelt művelet megvalósításával lefoglalt extra qubits számát <xref:Microsoft.Quantum.Intrinsic.X> :::no-loc(Q#)::: :</span><span class="sxs-lookup"><span data-stu-id="b274b-110">The C# example that follows in this section computes the number of extra qubits allocated by the implementation of a multiply controlled <xref:Microsoft.Quantum.Intrinsic.X> operation, based on the following :::no-loc(Q#)::: sample code:</span></span>
+<span data-ttu-id="b274b-110">Az ebben a szakaszban ismertetett C#-példa a következő mintakód alapján kiszámítja a szorzás által vezérelt művelet megvalósításával lefoglalt extra qubits számát <xref:Microsoft.Quantum.Intrinsic.X> Q# :</span><span class="sxs-lookup"><span data-stu-id="b274b-110">The C# example that follows in this section computes the number of extra qubits allocated by the implementation of a multiply controlled <xref:Microsoft.Quantum.Intrinsic.X> operation, based on the following Q# sample code:</span></span>
 
 ```qsharp
 open Microsoft.Quantum.Intrinsic;

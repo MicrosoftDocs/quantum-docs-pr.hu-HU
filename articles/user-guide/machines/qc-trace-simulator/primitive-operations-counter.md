@@ -1,14 +1,14 @@
 ---
 title: Primitív művelet számláló – Quantum Development Kit
-description: 'Ismerje meg a Microsoft QDK primitív műveleti számlálóját, amely a Quantum Trace Simulator használatával követi nyomon a programban végzett műveletek által használt primitív folyamatokat :::no-loc(Q#)::: .'
+description: 'Ismerje meg a Microsoft QDK primitív műveleti számlálóját, amely a Quantum Trace Simulator használatával követi nyomon a programban végzett műveletek által használt primitív folyamatokat Q# .'
 author: vadym-kl
 ms.author: vadym
 ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.primitive-counter
 no-loc:
-- ':::no-loc(Q#):::'
-- ':::no-loc($$v):::'
+- 'Q#'
+- '$$v'
 ms.openlocfilehash: bf75eb94696a489a587316928bc3f33baa4a1785
 ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
@@ -34,7 +34,7 @@ var sim = new QCTraceSimulator(config);
 
 ## <a name="using-the-primitive-operation-counter-in-a-c-host-program"></a><span data-ttu-id="b8775-110">A primitív műveleti számláló használata C#-gazdagép programban</span><span class="sxs-lookup"><span data-stu-id="b8775-110">Using the primitive operation counter in a C# host program</span></span>
 
-<span data-ttu-id="b8775-111">Az ebben a szakaszban szereplő C#-példa azt mutatja, hogy hány <xref:Microsoft.Quantum.Intrinsic.T> műveletre van szükség a művelet megvalósításához a <xref:Microsoft.Quantum.Intrinsic.ccnot> következő :::no-loc(Q#)::: mintakód alapján:</span><span class="sxs-lookup"><span data-stu-id="b8775-111">The C# example that follows in this section counts how many <xref:Microsoft.Quantum.Intrinsic.T> operations are needed to implement the <xref:Microsoft.Quantum.Intrinsic.ccnot> operation, based on the following :::no-loc(Q#)::: sample code:</span></span>
+<span data-ttu-id="b8775-111">Az ebben a szakaszban szereplő C#-példa azt mutatja, hogy hány <xref:Microsoft.Quantum.Intrinsic.T> műveletre van szükség a művelet megvalósításához a <xref:Microsoft.Quantum.Intrinsic.ccnot> következő Q# mintakód alapján:</span><span class="sxs-lookup"><span data-stu-id="b8775-111">The C# example that follows in this section counts how many <xref:Microsoft.Quantum.Intrinsic.T> operations are needed to implement the <xref:Microsoft.Quantum.Intrinsic.ccnot> operation, based on the following Q# sample code:</span></span>
 
 ```qsharp
 open Microsoft.Quantum.Intrinsic;

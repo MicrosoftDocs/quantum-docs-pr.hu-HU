@@ -1,6 +1,6 @@
 ---
-title: Fejlesztés :::no-loc(Q#):::-alkalmazásokkal egy IDE-ben
-description: Megtudhatja, hogyan hozhat létre olyan :::no-loc(Q#):::-alkalmazást, amely a parancssorból fut.
+title: Fejlesztés Q#-alkalmazásokkal egy IDE-ben
+description: Megtudhatja, hogyan hozhat létre olyan Q#-alkalmazást, amely a parancssorból fut.
 author: bradben
 ms.author: v-benbra
 ms.date: 8/20/2020
@@ -8,8 +8,8 @@ ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.standalone
 no-loc:
-- ':::no-loc(Q#):::'
-- ':::no-loc($$v):::'
+- 'Q#'
+- '$$v'
 ms.openlocfilehash: a6823888dcbe8cf79f0045d2615fe8b889dcc7c3
 ms.sourcegitcommit: a13c7c86fd52a05cbf129b8dd713d6586ca1cc2c
 ms.translationtype: HT
@@ -17,9 +17,9 @@ ms.contentlocale: hu-HU
 ms.lasthandoff: 11/05/2020
 ms.locfileid: "93376422"
 ---
-# <a name="develop-with-no-locq-applications-in-an-ide"></a><span data-ttu-id="2c853-103">Fejlesztés :::no-loc(Q#):::-alkalmazásokkal egy IDE-ben</span><span class="sxs-lookup"><span data-stu-id="2c853-103">Develop with :::no-loc(Q#)::: applications in an IDE</span></span>
+# <a name="develop-with-no-locq-applications-in-an-ide"></a><span data-ttu-id="2c853-103">Fejlesztés Q#-alkalmazásokkal egy IDE-ben</span><span class="sxs-lookup"><span data-stu-id="2c853-103">Develop with Q# applications in an IDE</span></span>
 
-<span data-ttu-id="2c853-104">A :::no-loc(Q#):::-programok külön, illesztő nélkül futtathatók olyan gazdanyelveken, mint például a C#, az F# vagy a Python.</span><span class="sxs-lookup"><span data-stu-id="2c853-104">:::no-loc(Q#)::: programs can run on their own, without a driver in a host language like C#, F#, or Python.</span></span> <span data-ttu-id="2c853-105">:::no-loc(Q#):::-alkalmazásokat a Visual Studio Code-ban (VS Code), a Visual Studióban, a Visual Studio Codespacesben vagy bármely szerkesztőben/IDE-ben is létrehozhat, és a .NET-konzolról futtathatja őket.</span><span class="sxs-lookup"><span data-stu-id="2c853-105">You can develop :::no-loc(Q#)::: applications in Visual Studio Code (VS Code), Visual Studio, Visual Studio Codespaces, or with any editor/IDE and run applications from the .NET console.</span></span> 
+<span data-ttu-id="2c853-104">A Q#-programok külön, illesztő nélkül futtathatók olyan gazdanyelveken, mint például a C#, az F# vagy a Python.</span><span class="sxs-lookup"><span data-stu-id="2c853-104">Q# programs can run on their own, without a driver in a host language like C#, F#, or Python.</span></span> <span data-ttu-id="2c853-105">Q#-alkalmazásokat a Visual Studio Code-ban (VS Code), a Visual Studióban, a Visual Studio Codespacesben vagy bármely szerkesztőben/IDE-ben is létrehozhat, és a .NET-konzolról futtathatja őket.</span><span class="sxs-lookup"><span data-stu-id="2c853-105">You can develop Q# applications in Visual Studio Code (VS Code), Visual Studio, Visual Studio Codespaces, or with any editor/IDE and run applications from the .NET console.</span></span> 
 
 ## <a name="prerequisites-for-all-environments"></a><span data-ttu-id="2c853-106">Az összes környezetre vonatkozó előfeltételek</span><span class="sxs-lookup"><span data-stu-id="2c853-106">Prerequisites for all environments</span></span>
 
@@ -27,7 +27,7 @@ ms.locfileid: "93376422"
 
 ## <a name="installation"></a><span data-ttu-id="2c853-108">Telepítés</span><span class="sxs-lookup"><span data-stu-id="2c853-108">Installation</span></span>
 
-<span data-ttu-id="2c853-109">Bár :::no-loc(Q#):::-alkalmazásokat bármilyen IDE-ben buildelhet, javasoljuk, hogy a :::no-loc(Q#):::-alkalmazások helyi fejlesztéséhez használja a Visual Studio Code-ot (VS Code) vagy a Visual Studio IDE-t.</span><span class="sxs-lookup"><span data-stu-id="2c853-109">While you can build :::no-loc(Q#)::: applications in any IDE, we recommend using Visual Studio Code (VS Code) or Visual Studio IDE for developing your :::no-loc(Q#)::: applications locally.</span></span> <span data-ttu-id="2c853-110">A felhőben, webböngészőn keresztül történő fejlesztéshez a Visual Studio Codespaces használatát javasoljuk.</span><span class="sxs-lookup"><span data-stu-id="2c853-110">For developing in the Cloud via the web browser, we recommend Visual Studio Codespaces.</span></span> <span data-ttu-id="2c853-111">Ha ezekben a környezetekben fejleszt, kihasználhatja a QDK-bővítmény széles körű funkcióinak előnyeit, beleértve a figyelmeztetéseket, a szintaxiselemek kiemelését, a projektsablonokat és egyebeket.</span><span class="sxs-lookup"><span data-stu-id="2c853-111">Developing in these environments leverages the rich functionality of the QDK extension, which includes warnings, syntax highlighting, project templates, and more.</span></span> 
+<span data-ttu-id="2c853-109">Bár Q#-alkalmazásokat bármilyen IDE-ben buildelhet, javasoljuk, hogy a Q#-alkalmazások helyi fejlesztéséhez használja a Visual Studio Code-ot (VS Code) vagy a Visual Studio IDE-t.</span><span class="sxs-lookup"><span data-stu-id="2c853-109">While you can build Q# applications in any IDE, we recommend using Visual Studio Code (VS Code) or Visual Studio IDE for developing your Q# applications locally.</span></span> <span data-ttu-id="2c853-110">A felhőben, webböngészőn keresztül történő fejlesztéshez a Visual Studio Codespaces használatát javasoljuk.</span><span class="sxs-lookup"><span data-stu-id="2c853-110">For developing in the Cloud via the web browser, we recommend Visual Studio Codespaces.</span></span> <span data-ttu-id="2c853-111">Ha ezekben a környezetekben fejleszt, kihasználhatja a QDK-bővítmény széles körű funkcióinak előnyeit, beleértve a figyelmeztetéseket, a szintaxiselemek kiemelését, a projektsablonokat és egyebeket.</span><span class="sxs-lookup"><span data-stu-id="2c853-111">Developing in these environments leverages the rich functionality of the QDK extension, which includes warnings, syntax highlighting, project templates, and more.</span></span> 
 
 ### <a name="to-configure-for-vs-code"></a><span data-ttu-id="2c853-112">Konfigurálás VS Code-hoz:</span><span class="sxs-lookup"><span data-stu-id="2c853-112">To configure for VS Code:</span></span>
 
@@ -53,7 +53,7 @@ dotnet new -i Microsoft.Quantum.ProjectTemplates
 2. <span data-ttu-id="2c853-122">Hozzon létre egy Codespaces-környezetet.</span><span class="sxs-lookup"><span data-stu-id="2c853-122">Create a Codespaces environment.</span></span> <span data-ttu-id="2c853-123">Kövesse a [gyorsútmutatót](https://docs.microsoft.com/visualstudio/codespaces/quickstarts/browser).</span><span class="sxs-lookup"><span data-stu-id="2c853-123">Please follow the [quickstart guide](https://docs.microsoft.com/visualstudio/codespaces/quickstarts/browser).</span></span> <span data-ttu-id="2c853-124">A Codespace létrehozásakor javasoljuk, hogy a QDK-specifikus beállítások betöltéséhez írja be a `microsoft/Quantum` elemet a „Git-adattár” mezőbe.</span><span class="sxs-lookup"><span data-stu-id="2c853-124">When creating the Codespace, we recommend to enter `microsoft/Quantum` in the "Git Repository" field to load QDK-specific settings.</span></span>
 3. <span data-ttu-id="2c853-125">Most már elindíthatja az új környezetet, és megkezdheti a fejlesztést a böngészőben a [VS Codespaces Cloud IDE](https://online.visualstudio.com/environments)használatával.</span><span class="sxs-lookup"><span data-stu-id="2c853-125">You can now launch your new environment and start developing in the browser via the [VS Codespaces Cloud IDE](https://online.visualstudio.com/environments).</span></span> <span data-ttu-id="2c853-126">Azt is megteheti, hogy a VS Code helyi telepítését használja, a Codespacest pedig [távoli környezetként](https://docs.microsoft.com/visualstudio/online/how-to/vscode) alkalmazza.</span><span class="sxs-lookup"><span data-stu-id="2c853-126">Alternatively, it is possible to use your local installation of VS Code and use Codespaces as a [remote environment](https://docs.microsoft.com/visualstudio/online/how-to/vscode).</span></span>
 
-## <a name="develop-with-no-locq"></a><span data-ttu-id="2c853-127">Fejlesztés a :::no-loc(Q#)::: használatával</span><span class="sxs-lookup"><span data-stu-id="2c853-127">Develop with :::no-loc(Q#):::</span></span>
+## <a name="develop-with-no-locq"></a><span data-ttu-id="2c853-127">Fejlesztés a Q# használatával</span><span class="sxs-lookup"><span data-stu-id="2c853-127">Develop with Q#</span></span>
 
 <span data-ttu-id="2c853-128">Kövesse az alkalmazott fejlesztési környezetre vonatkozó fülön található utasításokat.</span><span class="sxs-lookup"><span data-stu-id="2c853-128">Follow the instructions on the tab corresponding to your development environment.</span></span>
 
@@ -61,12 +61,12 @@ dotnet new -i Microsoft.Quantum.ProjectTemplates
 
 <span data-ttu-id="2c853-130">Új projekt létrehozása:</span><span class="sxs-lookup"><span data-stu-id="2c853-130">To create a new project:</span></span>
 
-1. <span data-ttu-id="2c853-131">Kattintson a **View (Nézet)**  -> **Command Palette (Parancskatalógus)** elemre, és válassza a **:::no-loc(Q#):::: Create New Project (Q#: Új projekt létrehozása)** lehetőséget.</span><span class="sxs-lookup"><span data-stu-id="2c853-131">Click **View** -> **Command Palette** and select **:::no-loc(Q#):::: Create New Project**.</span></span>
+1. <span data-ttu-id="2c853-131">Kattintson a **View (Nézet)**  -> **Command Palette (Parancskatalógus)** elemre, és válassza a **Q#: Create New Project (Q#: Új projekt létrehozása)** lehetőséget.</span><span class="sxs-lookup"><span data-stu-id="2c853-131">Click **View** -> **Command Palette** and select **Q#: Create New Project**.</span></span>
 2. <span data-ttu-id="2c853-132">Kattintson a **Standalone console application (Különálló konzolalkalmazás)** elemre.</span><span class="sxs-lookup"><span data-stu-id="2c853-132">Click **Standalone console application**.</span></span>
 3. <span data-ttu-id="2c853-133">Keresse meg a projekt mentési helyét, majd kattintson a **Create Project (Projekt létrehozása)** lehetőségre.</span><span class="sxs-lookup"><span data-stu-id="2c853-133">Navigate to the location to save the project and click **Create Project**.</span></span>
 4. <span data-ttu-id="2c853-134">A projekt sikeres létrehozását követően kattintson az **Open new project... (Új projekt megnyitása...)** lehetőségre a jobb alsó sarokban.</span><span class="sxs-lookup"><span data-stu-id="2c853-134">When the project is successfully created, click **Open new project...** in the lower right.</span></span>
 
-<span data-ttu-id="2c853-135">Vizsgálja meg a projektet.</span><span class="sxs-lookup"><span data-stu-id="2c853-135">Inspect the project.</span></span> <span data-ttu-id="2c853-136">Látni fog egy `Program.qs` nevű forrásfájlt. Ez egy :::no-loc(Q#):::-program, amely egy egyszerű műveletet határoz meg az üzenetek konzolon való megjelenítéséhez.</span><span class="sxs-lookup"><span data-stu-id="2c853-136">You should see a source file named `Program.qs`, which is a :::no-loc(Q#)::: program that defines a simple operation to print a message to the console.</span></span>
+<span data-ttu-id="2c853-135">Vizsgálja meg a projektet.</span><span class="sxs-lookup"><span data-stu-id="2c853-135">Inspect the project.</span></span> <span data-ttu-id="2c853-136">Látni fog egy `Program.qs` nevű forrásfájlt. Ez egy Q#-program, amely egy egyszerű műveletet határoz meg az üzenetek konzolon való megjelenítéséhez.</span><span class="sxs-lookup"><span data-stu-id="2c853-136">You should see a source file named `Program.qs`, which is a Q# program that defines a simple operation to print a message to the console.</span></span>
 
 <span data-ttu-id="2c853-137">Az alkalmazás futtatása:</span><span class="sxs-lookup"><span data-stu-id="2c853-137">To run the application:</span></span>
 
@@ -75,20 +75,20 @@ dotnet new -i Microsoft.Quantum.ProjectTemplates
 3. <span data-ttu-id="2c853-140">A következőnek szövegnek kell megjelennie a kimeneti ablakban: `Hello quantum world!`</span><span class="sxs-lookup"><span data-stu-id="2c853-140">You should see the following text in the output window `Hello quantum world!`</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="2c853-141">A VS Code :::no-loc(Q#):::-bővítménye jelenleg nem támogatja a több gyökérmappával rendelkező munkaterületeket.</span><span class="sxs-lookup"><span data-stu-id="2c853-141">Workspaces with multiple root folders are not currently supported by the VS Code :::no-loc(Q#)::: extension.</span></span> <span data-ttu-id="2c853-142">Ha egy VS Code-munkaterületen belül több projekt is található, az összes projektnek azonos gyökérmappában kell lennie.</span><span class="sxs-lookup"><span data-stu-id="2c853-142">If you have multiple projects within one VS Code workspace, all projects need to be contained within the same root folder.</span></span>
+> <span data-ttu-id="2c853-141">A VS Code Q#-bővítménye jelenleg nem támogatja a több gyökérmappával rendelkező munkaterületeket.</span><span class="sxs-lookup"><span data-stu-id="2c853-141">Workspaces with multiple root folders are not currently supported by the VS Code Q# extension.</span></span> <span data-ttu-id="2c853-142">Ha egy VS Code-munkaterületen belül több projekt is található, az összes projektnek azonos gyökérmappában kell lennie.</span><span class="sxs-lookup"><span data-stu-id="2c853-142">If you have multiple projects within one VS Code workspace, all projects need to be contained within the same root folder.</span></span>
 
 ### <a name="visual-studio"></a>[<span data-ttu-id="2c853-143">Visual Studio</span><span class="sxs-lookup"><span data-stu-id="2c853-143">Visual Studio</span></span>](#tab/tabid-vs)
 
-<span data-ttu-id="2c853-144">Ellenőrizze a Visual Studio telepítését egy :::no-loc(Q#)::: `Hello World`-alkalmazás létrehozásával.</span><span class="sxs-lookup"><span data-stu-id="2c853-144">Verify your Visual Studio installation by creating a :::no-loc(Q#)::: `Hello World` application.</span></span>
+<span data-ttu-id="2c853-144">Ellenőrizze a Visual Studio telepítését egy Q# `Hello World`-alkalmazás létrehozásával.</span><span class="sxs-lookup"><span data-stu-id="2c853-144">Verify your Visual Studio installation by creating a Q# `Hello World` application.</span></span>
 
-<span data-ttu-id="2c853-145">Új :::no-loc(Q#):::-alkalmazás létrehozása</span><span class="sxs-lookup"><span data-stu-id="2c853-145">To create a new :::no-loc(Q#)::: application:</span></span>
+<span data-ttu-id="2c853-145">Új Q#-alkalmazás létrehozása</span><span class="sxs-lookup"><span data-stu-id="2c853-145">To create a new Q# application:</span></span>
 
 1. <span data-ttu-id="2c853-146">Nyissa meg a Visual Studiót, majd kattintson a **File (Fájl)**  -> **New (Új)**  -> **Project (Projekt)** elemekre.</span><span class="sxs-lookup"><span data-stu-id="2c853-146">Open Visual Studio and click **File** -> **New** -> **Project**.</span></span>
-2. <span data-ttu-id="2c853-147">A keresőmezőbe írja be a következőt: `:::no-loc(Q#):::`. Ezután válassza ki a **:::no-loc(Q#):::-alkalmazást** , és kattintson a **Next (Tovább)** elemre.</span><span class="sxs-lookup"><span data-stu-id="2c853-147">Type `:::no-loc(Q#):::` in the search box, select **:::no-loc(Q#)::: Application** and click **Next**.</span></span>
+2. <span data-ttu-id="2c853-147">A keresőmezőbe írja be a következőt: `Q#`. Ezután válassza ki a **Q#-alkalmazást** , és kattintson a **Next (Tovább)** elemre.</span><span class="sxs-lookup"><span data-stu-id="2c853-147">Type `Q#` in the search box, select **Q# Application** and click **Next**.</span></span>
 3. <span data-ttu-id="2c853-148">Adja meg az alkalmazás nevét és helyét, majd kattintson a **Create (Létrehozás)** elemre.</span><span class="sxs-lookup"><span data-stu-id="2c853-148">Enter a name and location for your application and click **Create**.</span></span>
 
 
-<span data-ttu-id="2c853-149">Vizsgálja meg a projektet.</span><span class="sxs-lookup"><span data-stu-id="2c853-149">Inspect the project.</span></span> <span data-ttu-id="2c853-150">Látni fog egy `Program.qs` nevű forrásfájlt. Ez egy :::no-loc(Q#):::-program, amely egy egyszerű műveletet határoz meg az üzenetek konzolon való megjelenítéséhez.</span><span class="sxs-lookup"><span data-stu-id="2c853-150">You should see a source file named `Program.qs`, which is a :::no-loc(Q#)::: program that defines a simple operation to print a message to the console.</span></span>
+<span data-ttu-id="2c853-149">Vizsgálja meg a projektet.</span><span class="sxs-lookup"><span data-stu-id="2c853-149">Inspect the project.</span></span> <span data-ttu-id="2c853-150">Látni fog egy `Program.qs` nevű forrásfájlt. Ez egy Q#-program, amely egy egyszerű műveletet határoz meg az üzenetek konzolon való megjelenítéséhez.</span><span class="sxs-lookup"><span data-stu-id="2c853-150">You should see a source file named `Program.qs`, which is a Q# program that defines a simple operation to print a message to the console.</span></span>
 
 <span data-ttu-id="2c853-151">Az alkalmazás futtatása:</span><span class="sxs-lookup"><span data-stu-id="2c853-151">To run the application:</span></span>
 
@@ -100,12 +100,12 @@ dotnet new -i Microsoft.Quantum.ProjectTemplates
 
 ### <a name="other-editors-with-the-command-prompt"></a>[<span data-ttu-id="2c853-155">Egyéb, parancssorral rendelkező szerkesztők</span><span class="sxs-lookup"><span data-stu-id="2c853-155">Other editors with the command prompt</span></span>](#tab/tabid-cmdline)
 
-<span data-ttu-id="2c853-156">Ellenőrizze a telepítést egy :::no-loc(Q#)::: `Hello World`-alkalmazás létrehozásával.</span><span class="sxs-lookup"><span data-stu-id="2c853-156">Verify your installation by creating a :::no-loc(Q#)::: `Hello World` application.</span></span>
+<span data-ttu-id="2c853-156">Ellenőrizze a telepítést egy Q# `Hello World`-alkalmazás létrehozásával.</span><span class="sxs-lookup"><span data-stu-id="2c853-156">Verify your installation by creating a Q# `Hello World` application.</span></span>
 
 1. <span data-ttu-id="2c853-157">Új alkalmazás létrehozása:</span><span class="sxs-lookup"><span data-stu-id="2c853-157">Create a new application:</span></span>
 
     ```dotnetcli
-    dotnet new console -lang :::no-loc(Q#)::: -o runSayHello
+    dotnet new console -lang Q# -o runSayHello
     ```
 
 1. <span data-ttu-id="2c853-158">Navigáljon az alkalmazás könyvtárához:</span><span class="sxs-lookup"><span data-stu-id="2c853-158">Navigate to the application directory:</span></span>
@@ -114,7 +114,7 @@ dotnet new -i Microsoft.Quantum.ProjectTemplates
     cd runSayHello
     ```
 
-    <span data-ttu-id="2c853-159">A könyvtár tartalmaz egy `Program.qs` nevű fájlt. Ez egy :::no-loc(Q#):::-program, amely egy egyszerű műveletet határoz meg az üzenetek konzolon való megjelenítéséhez.</span><span class="sxs-lookup"><span data-stu-id="2c853-159">This directory should now contain a file `Program.qs`, which is a :::no-loc(Q#)::: program that defines a simple operation to print a message to the console.</span></span> <span data-ttu-id="2c853-160">Ezt a sablont egy szövegszerkesztővel módosíthatja, és felülírhatja saját kvantumalkalmazásaival.</span><span class="sxs-lookup"><span data-stu-id="2c853-160">You can modfiy this template with a text editor and overwrite it with your own quantum applications.</span></span> 
+    <span data-ttu-id="2c853-159">A könyvtár tartalmaz egy `Program.qs` nevű fájlt. Ez egy Q#-program, amely egy egyszerű műveletet határoz meg az üzenetek konzolon való megjelenítéséhez.</span><span class="sxs-lookup"><span data-stu-id="2c853-159">This directory should now contain a file `Program.qs`, which is a Q# program that defines a simple operation to print a message to the console.</span></span> <span data-ttu-id="2c853-160">Ezt a sablont egy szövegszerkesztővel módosíthatja, és felülírhatja saját kvantumalkalmazásaival.</span><span class="sxs-lookup"><span data-stu-id="2c853-160">You can modfiy this template with a text editor and overwrite it with your own quantum applications.</span></span> 
 
 1. <span data-ttu-id="2c853-161">Futtassa a programot:</span><span class="sxs-lookup"><span data-stu-id="2c853-161">Run the program:</span></span>
 

@@ -1,14 +1,14 @@
 ---
-title: 'Változók a-ben :::no-loc(Q#):::'
-description: 'Megtudhatja, hogyan dolgozhat különböző változókkal a következőben: :::no-loc(Q#):::'
+title: 'Változók a-ben Q#'
+description: 'Megtudhatja, hogyan dolgozhat különböző változókkal a következőben: Q#'
 author: gillenhaalb
 ms.author: a-gibec
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.variables
 no-loc:
-- ':::no-loc(Q#):::'
-- ':::no-loc($$v):::'
+- 'Q#'
+- '$$v'
 ms.openlocfilehash: 67c71c09e004d77360902360fefc7a7752e4a829
 ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
@@ -16,16 +16,16 @@ ms.contentlocale: hu-HU
 ms.lasthandoff: 10/27/2020
 ms.locfileid: "92690931"
 ---
-# <a name="variables-in-no-locq"></a><span data-ttu-id="2d676-103">Változók a-ben :::no-loc(Q#):::</span><span class="sxs-lookup"><span data-stu-id="2d676-103">Variables in :::no-loc(Q#):::</span></span>
+# <a name="variables-in-no-locq"></a><span data-ttu-id="2d676-103">Változók a-ben Q#</span><span class="sxs-lookup"><span data-stu-id="2d676-103">Variables in Q#</span></span>
 
-<span data-ttu-id="2d676-104">:::no-loc(Q#)::: megkülönbözteti a változókat és a nem módosítható szimbólumokat, illetve a kifejezésekhez hozzárendelt vagy hozzájuk rendelt *változókat* .</span><span class="sxs-lookup"><span data-stu-id="2d676-104">:::no-loc(Q#)::: distinguishes between mutable and immutable symbols, or *variables* , which are bound/assigned to expressions.</span></span>
+<span data-ttu-id="2d676-104">Q# megkülönbözteti a változókat és a nem módosítható szimbólumokat, illetve a kifejezésekhez hozzárendelt vagy hozzájuk rendelt *változókat* .</span><span class="sxs-lookup"><span data-stu-id="2d676-104">Q# distinguishes between mutable and immutable symbols, or *variables* , which are bound/assigned to expressions.</span></span>
 <span data-ttu-id="2d676-105">Általánosságban a nem módosítható szimbólumok használata javasolt, mivel lehetővé teszi, hogy a fordító több optimalizációt végezzen.</span><span class="sxs-lookup"><span data-stu-id="2d676-105">In general, the use of immutable symbols is encouraged because it allows the compiler to perform more optimizations.</span></span>
 
 <span data-ttu-id="2d676-106">A kötés bal oldali oldala egy szimbólum és egy kifejezés jobb oldalán áll.</span><span class="sxs-lookup"><span data-stu-id="2d676-106">The left-hand-side of a binding consists of a symbol tuple and the right-hand side of an expression.</span></span>
 
 ## <a name="immutable-variables"></a><span data-ttu-id="2d676-107">Megváltoztathatatlan változók</span><span class="sxs-lookup"><span data-stu-id="2d676-107">Immutable Variables</span></span>
 
-<span data-ttu-id="2d676-108">A kulcsszó használatával bármilyen típusú értéket hozzárendelhet :::no-loc(Q#)::: egy változóhoz egy műveleten vagy függvényen belüli újrafelhasználáshoz `let` .</span><span class="sxs-lookup"><span data-stu-id="2d676-108">You can assign a value of any type in :::no-loc(Q#)::: to a variable for reuse within an operation or function by using the `let` keyword.</span></span> 
+<span data-ttu-id="2d676-108">A kulcsszó használatával bármilyen típusú értéket hozzárendelhet Q# egy változóhoz egy műveleten vagy függvényen belüli újrafelhasználáshoz `let` .</span><span class="sxs-lookup"><span data-stu-id="2d676-108">You can assign a value of any type in Q# to a variable for reuse within an operation or function by using the `let` keyword.</span></span> 
 
 <span data-ttu-id="2d676-109">Egy nem módosítható kötés a kulcsszóból `let` , majd egy szimbólum vagy egy szimbólum, egy egyenlőségjel, egy egyenlőségjelet, egy kifejezés, amely `=` a szimbólum (oka) t és egy lezáró pontosvesszőt tartalmaz.</span><span class="sxs-lookup"><span data-stu-id="2d676-109">An immutable binding consists of the keyword `let`, followed by a symbol or symbol tuple, an equals sign `=`, an expression to bind the symbol(s) to, and a terminating semicolon.</span></span>
 
@@ -110,7 +110,7 @@ function ComplexSum(reals : Double[], ims : Double[]) : Complex[] {
 }
 ```
 
-<span data-ttu-id="2d676-134">Tömbök esetén a [`Microsoft.Quantum.Arrays`](xref:Microsoft.Quantum.Arrays) :::no-loc(Q#)::: standard szintű függvénytárban a szükséges eszközök számos gyakran használt tömb inicializálási és manipulációs igényeihez szükségesek, így elkerülhető, hogy a tömb elemeit az első helyen frissítse.</span><span class="sxs-lookup"><span data-stu-id="2d676-134">In the case of arrays, [`Microsoft.Quantum.Arrays`](xref:Microsoft.Quantum.Arrays) in the :::no-loc(Q#)::: standard library provides the necessary tools for many common array initialization and manipulation needs, and thus helps avoid having to update array items in the first place.</span></span> 
+<span data-ttu-id="2d676-134">Tömbök esetén a [`Microsoft.Quantum.Arrays`](xref:Microsoft.Quantum.Arrays) Q# standard szintű függvénytárban a szükséges eszközök számos gyakran használt tömb inicializálási és manipulációs igényeihez szükségesek, így elkerülhető, hogy a tömb elemeit az első helyen frissítse.</span><span class="sxs-lookup"><span data-stu-id="2d676-134">In the case of arrays, [`Microsoft.Quantum.Arrays`](xref:Microsoft.Quantum.Arrays) in the Q# standard library provides the necessary tools for many common array initialization and manipulation needs, and thus helps avoid having to update array items in the first place.</span></span> 
 
 <span data-ttu-id="2d676-135">Az Update-and-reassign utasítások szükség esetén alternatív megoldást nyújtanak:</span><span class="sxs-lookup"><span data-stu-id="2d676-135">Update-and-reassign statements provide an alternative if needed:</span></span>
 
@@ -239,4 +239,4 @@ if (a == b) {
 
 ## <a name="next-steps"></a><span data-ttu-id="2d676-158">Következő lépések</span><span class="sxs-lookup"><span data-stu-id="2d676-158">Next steps</span></span>
 
-<span data-ttu-id="2d676-159">Ismerje meg, hogyan [dolgozhat a qubits](xref:microsoft.quantum.guide.qubits) a alkalmazásban :::no-loc(Q#)::: .</span><span class="sxs-lookup"><span data-stu-id="2d676-159">Learn about [Working With Qubits](xref:microsoft.quantum.guide.qubits) in :::no-loc(Q#):::.</span></span>
+<span data-ttu-id="2d676-159">Ismerje meg, hogyan [dolgozhat a qubits](xref:microsoft.quantum.guide.qubits) a alkalmazásban Q# .</span><span class="sxs-lookup"><span data-stu-id="2d676-159">Learn about [Working With Qubits](xref:microsoft.quantum.guide.qubits) in Q#.</span></span>

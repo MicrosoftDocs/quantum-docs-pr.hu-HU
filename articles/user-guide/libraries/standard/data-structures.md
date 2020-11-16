@@ -1,14 +1,14 @@
 ---
-title: 'Adatstruktúrák a :::no-loc(Q#)::: standard könyvtárakban'
-description: 'Ismerje meg az adatstruktúrákat, az Oracle-ket és a dinamikus generátorokat a Microsoft :::no-loc(Q#)::: szabványos könyvtáraiban.'
+title: 'Adatstruktúrák a Q# standard könyvtárakban'
+description: 'Ismerje meg az adatstruktúrákat, az Oracle-ket és a dinamikus generátorokat a Microsoft Q# szabványos könyvtáraiban.'
 author: QuantumWriter
 uid: microsoft.quantum.libraries.data-structures
 ms.author: martinro
 ms.date: 12/11/2017
 ms.topic: article
 no-loc:
-- ':::no-loc(Q#):::'
-- ':::no-loc($$v):::'
+- 'Q#'
+- '$$v'
 ms.openlocfilehash: c3ce5d531618c269d15be3e4eb58ecbb597a022c
 ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
@@ -37,7 +37,7 @@ ApplyToEach(H, Snd(pair)); // No need to deconstruct to access the register.
 ### <a name="arrays"></a><span data-ttu-id="f12b9-111">Tömbök</span><span class="sxs-lookup"><span data-stu-id="f12b9-111">Arrays</span></span> ###
 
 <span data-ttu-id="f12b9-112">A Canon számos funkciót biztosít a tömbök manipulálására.</span><span class="sxs-lookup"><span data-stu-id="f12b9-112">The canon provides several functions for manipulating arrays.</span></span>
-<span data-ttu-id="f12b9-113">Ezek a függvények Type-paraméteres, így bármilyen típusú tömbökkel használhatók :::no-loc(Q#)::: .</span><span class="sxs-lookup"><span data-stu-id="f12b9-113">These functions are type-parameterized, and thus can be used with arrays of any :::no-loc(Q#)::: type.</span></span>
+<span data-ttu-id="f12b9-113">Ezek a függvények Type-paraméteres, így bármilyen típusú tömbökkel használhatók Q# .</span><span class="sxs-lookup"><span data-stu-id="f12b9-113">These functions are type-parameterized, and thus can be used with arrays of any Q# type.</span></span>
 <span data-ttu-id="f12b9-114">A <xref:Microsoft.Quantum.Arrays.Reversed> függvény például egy olyan új tömböt ad vissza, amelynek elemei fordított sorrendben vannak a bemenettől.</span><span class="sxs-lookup"><span data-stu-id="f12b9-114">For instance, the <xref:Microsoft.Quantum.Arrays.Reversed> function returns a new array whose elements are in reverse order from its input.</span></span>
 <span data-ttu-id="f12b9-115">Ezzel megváltoztathatja, hogy a rendszer hogyan jelenítse meg a kvantum-regisztereket a műveletek meghívásakor:</span><span class="sxs-lookup"><span data-stu-id="f12b9-115">This can be used to change how a quantum register is represented when calling operations:</span></span>
 
@@ -75,7 +75,7 @@ ApplyToEach(
 <span data-ttu-id="f12b9-120">Itt az Oracle kifejezés olyan tábla-kvantum-alrutint jelöl, amely qubits végez, és a választ fázisként adja vissza.</span><span class="sxs-lookup"><span data-stu-id="f12b9-120">Here the term oracle refers to a blackbox quantum subroutine that acts upon a set of qubits and returns the answer as a phase.</span></span>
 <span data-ttu-id="f12b9-121">Ez az alrutin gyakran úgy gondolja, mint egy olyan kvantum-algoritmus bemenete, amely más paraméterek mellett is elfogadja az Oracle-t, és egy sor kvantum-műveletet alkalmaz, és a kvantum-alrutin hívását kezeli, mintha egy alapvető kapu lenne.</span><span class="sxs-lookup"><span data-stu-id="f12b9-121">This subroutine often can be thought of as an input to a quantum algorithm that accepts the oracle, in addition to some other parameters, and applies a series of quantum operations and treating a call to this quantum subroutine as if it were a fundamental gate.</span></span>
 <span data-ttu-id="f12b9-122">Természetesen ahhoz, hogy a nagyobb algoritmus ténylegesen megvalósítható legyen, meg kell adni az Oracle-nek az alapvető kapuk konkrét összetételét, de az Oracle-t meghívó algoritmus megismeréséhez nincs szükség ilyen felbomlásra.</span><span class="sxs-lookup"><span data-stu-id="f12b9-122">Obviously, in order to actually implement the larger algorithm a concrete decomposition of the oracle into fundamental gates must be provided but such a decomposition is not needed in order to understand the algorithm that calls the oracle.</span></span>
-<span data-ttu-id="f12b9-123">A-ben :::no-loc(Q#)::: Ez a művelet az első osztályú értékeket használja, így a műveletek átadhatók a kvantum-algoritmusok megvalósításához a fekete dobozos módon.</span><span class="sxs-lookup"><span data-stu-id="f12b9-123">In :::no-loc(Q#):::, this abstraction is represented by using that operations are first-class values, such that operations can be passed to implementations of quantum algorithms in a black-box manner.</span></span>
+<span data-ttu-id="f12b9-123">A-ben Q# Ez a művelet az első osztályú értékeket használja, így a műveletek átadhatók a kvantum-algoritmusok megvalósításához a fekete dobozos módon.</span><span class="sxs-lookup"><span data-stu-id="f12b9-123">In Q#, this abstraction is represented by using that operations are first-class values, such that operations can be passed to implementations of quantum algorithms in a black-box manner.</span></span>
 <span data-ttu-id="f12b9-124">Emellett a felhasználó által definiált típusok a különböző Oracle-adatábrázolások típusos biztonságos módon történő címkézésére szolgálnak, így megnehezítik a különböző típusú fekete Box-műveletek véletlen kicsomagolását.</span><span class="sxs-lookup"><span data-stu-id="f12b9-124">Moreover, user-defined types are used to label the different oracle representations in a type-safe way, making it difficult to accidentally conflate different kinds of black box operations.</span></span>
 
 <span data-ttu-id="f12b9-125">Az ilyen Oracle-k számos különböző kontextusban jelennek meg, beleértve az olyan híres példákat is, mint például a a a megtalált [Keresés](https://en.wikipedia.org/wiki/Grover%27s_algorithm) és a Quantum szimulációs algoritmusok.</span><span class="sxs-lookup"><span data-stu-id="f12b9-125">Such oracles appear in a number of different contexts, including famous examples such as [Grover's search](https://en.wikipedia.org/wiki/Grover%27s_algorithm) and quantum simulation algorithms.</span></span>
@@ -192,7 +192,7 @@ is Adj + Ctl {
 <span data-ttu-id="f12b9-197">Ebben a kontextusban a $U (t) $ értéket szimulálhatja bármely $t $-hez egyetlen $R _z $ Gate használatával, és így nem kell korlátoznia magunkat arra, hogy csak a különálló lekérdezésekre korlátozódjon.</span><span class="sxs-lookup"><span data-stu-id="f12b9-197">In this context, we can simulate $U(t)$ for any $t$ using a single $R_z$ gate and as such do not need to restrict ourselves to only discrete queries to the unitary.</span></span>
 <span data-ttu-id="f12b9-198">Az ilyen folyamatos modell azt a tulajdonságot is megtudhatja, hogy a $2 \ PI $-nál nagyobb frekvenciákon a folyamatos lekérdezéseket használó fázis-becslési folyamatokból megtudhatja, hogy milyen fázis-információk láthatók a logaritmus-függvény elágazásával, a $t $ nem arányos értékeit érintő kísérletek eredményeiből.</span><span class="sxs-lookup"><span data-stu-id="f12b9-198">Such a continuous model also has the property that frequencies greater than $2\pi$ can be learned from phase estimation processes that use continuous queries because phase information that would otherwise be masked by the branch-cuts of the logarithm function can be revealed from the results of experiments performed on non-commensurate values of $t$.</span></span>
 <span data-ttu-id="f12b9-199">Így olyan problémákhoz, mint például az Oracle fázis-becsléshez kapcsolódó folyamatos lekérdezési modellek, nem csupán megfelelőek, de a diszkrét lekérdezési modell esetében is előnyösek.</span><span class="sxs-lookup"><span data-stu-id="f12b9-199">Thus for problems such as this continuous query models for the phase estimation oracle are not only appropriate but are also preferable to the discrete query model.</span></span>
-<span data-ttu-id="f12b9-200">Emiatt a :::no-loc(Q#)::: lekérdezések mindkét formájához van funkció, és a felhasználónak el kell döntenie, hogy egy fázis-becslési algoritmust válasszon az igényeinek megfelelően, valamint a rendelkezésre álló Oracle típusát.</span><span class="sxs-lookup"><span data-stu-id="f12b9-200">For this reason :::no-loc(Q#)::: has functionality for both forms of queries and leave it to the user to decide upon a phase estimation algorithm to fit their needs and the type of oracle that is available.</span></span>
+<span data-ttu-id="f12b9-200">Emiatt a Q# lekérdezések mindkét formájához van funkció, és a felhasználónak el kell döntenie, hogy egy fázis-becslési algoritmust válasszon az igényeinek megfelelően, valamint a rendelkezésre álló Oracle típusát.</span><span class="sxs-lookup"><span data-stu-id="f12b9-200">For this reason Q# has functionality for both forms of queries and leave it to the user to decide upon a phase estimation algorithm to fit their needs and the type of oracle that is available.</span></span>
 
 ## <a name="dynamical-generator-modeling"></a><span data-ttu-id="f12b9-201">Dinamikus generátor modellezése</span><span class="sxs-lookup"><span data-stu-id="f12b9-201">Dynamical Generator Modeling</span></span> ##
 

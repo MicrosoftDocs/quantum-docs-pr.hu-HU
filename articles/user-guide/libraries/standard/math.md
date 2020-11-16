@@ -1,13 +1,13 @@
 ---
-title: 'Matematikai a :::no-loc(Q#)::: standard könyvtárakban'
-description: 'Ismerje meg a :::no-loc(Q#)::: beépített adattípusokkal használt szabványos kódtárak klasszikus matematikai funkcióit.'
+title: 'Matematikai a Q# standard könyvtárakban'
+description: 'Ismerje meg a Q# beépített adattípusokkal használt szabványos kódtárak klasszikus matematikai funkcióit.'
 author: cgranade
 uid: microsoft.quantum.libraries.math
 ms.author: chgranad
 ms.topic: article
 no-loc:
-- ':::no-loc(Q#):::'
-- ':::no-loc($$v):::'
+- 'Q#'
+- '$$v'
 ms.openlocfilehash: 6de1574341d67c569cd2f040ec533e263fdd386e
 ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
@@ -17,7 +17,7 @@ ms.locfileid: "92692061"
 ---
 # <a name="classical-mathematical-functions"></a><span data-ttu-id="a8ccc-103">Klasszikus matematikai függvények</span><span class="sxs-lookup"><span data-stu-id="a8ccc-103">Classical Mathematical Functions</span></span> #
 
-<span data-ttu-id="a8ccc-104">Ezeket a függvényeket elsősorban a :::no-loc(Q#)::: beépített adattípusokkal, és a szolgáltatással való együttműködésre használják `Int` `Double` `Range` .</span><span class="sxs-lookup"><span data-stu-id="a8ccc-104">These functions are primarily used to work with the :::no-loc(Q#)::: built-in data types `Int`, `Double`, and `Range`.</span></span>
+<span data-ttu-id="a8ccc-104">Ezeket a függvényeket elsősorban a Q# beépített adattípusokkal, és a szolgáltatással való együttműködésre használják `Int` `Double` `Range` .</span><span class="sxs-lookup"><span data-stu-id="a8ccc-104">These functions are primarily used to work with the Q# built-in data types `Int`, `Double`, and `Range`.</span></span>
 
 <span data-ttu-id="a8ccc-105">A <xref:Microsoft.Quantum.Intrinsic.Random> művelet aláírása `(Double[] => Int)` .</span><span class="sxs-lookup"><span data-stu-id="a8ccc-105">The <xref:Microsoft.Quantum.Intrinsic.Random> operation has signature `(Double[] => Int)`.</span></span>
 <span data-ttu-id="a8ccc-106">A rendszer a számok tömbjét veszi fel bemenetként, és egy véletlenszerűen kiválasztott indexet ad vissza a tömbben `Int` .</span><span class="sxs-lookup"><span data-stu-id="a8ccc-106">It takes an array of doubles as input, and returns a randomly-selected index into the array as an `Int`.</span></span>
