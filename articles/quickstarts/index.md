@@ -10,12 +10,12 @@ uid: microsoft.quantum.install
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 74b9b3d8f694072f5b5f4d0eb520263387de8919
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: f0c3df1998f9b64ff6544867b83a7afe52b6f46d
+ms.sourcegitcommit: fd57a845d013ae4578715d04b1ed1edc1c8ff6b4
 ms.translationtype: HT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834482"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870821"
 ---
 # <a name="setting-up-the-microsoft-quantum-development-kit-qdk"></a>A Microsoft Quantum Development Kit (QDK) beállítása
 
@@ -40,12 +40,48 @@ Háromféleképp használhatja a QDK-t:
 
 Kifejleszthet egy Q#-kódot a kedvenc IDE-k többségében, valamint integrálhatja a Q#-t más nyelvekkel, például a Pythonnal és a .NET-tel (C#, F#).
 
-|&nbsp; | **VS Code<br>(2019 vagy újabb verzió)**| **Visual Studio<br>(2019 vagy újabb verzió)** | **Jupyter-notebookok** | **Parancssor**|
-|:-----|:-----:|:-----:|:-----:|:-----:|
-|**OS** |Windows, macOS, Linux |Csak Windowson |Windows, macOS, Linux |Windows, macOS, Linux |
-|<br>**különálló Q#** |<br>[Telepítse](xref:microsoft.quantum.install.standalone) |<br> [Telepítse](xref:microsoft.quantum.install.standalone)  |<br> [Telepítse](xref:microsoft.quantum.install.jupyter) |<br>[Telepítse](xref:microsoft.quantum.install.standalone)|
-|**Q# és Python** |[Telepítse](xref:microsoft.quantum.install.python) |[Telepítse](xref:microsoft.quantum.install.python) |[Telepítse](xref:microsoft.quantum.install.jupyter) |[Telepítse](xref:microsoft.quantum.install.python) |
-|**Q# és .NET (C#, F#)**|[Telepítse](xref:microsoft.quantum.install.cs) |[Telepítse](xref:microsoft.quantum.install.cs)|&#10006; |[Telepítse](xref:microsoft.quantum.install.cs) |
+<table>
+    <tr>
+        <th width=10%>&nbsp;</th>
+        <th>&nbsp;</th>
+        <th align="center" width=18%><img src="~/media/vs_code.png" alt="VS Code" width="50"/><br><b>VS Code<br>(2019 vagy újabb)</b></th>
+        <th align="center" width=18%><img src="~/media/vs_studio.png" alt="VS Studio" width="50"/><br><b>VS Studio<br>(2019 vagy újabb)</b></th>
+        <th align="center" width=18%><img src="~/media/jupyter-wht.png" alt="jupyter install" width="65"/><br><b>Jupyter-notebookok</b></th>
+        <th align="center" width=18%><img src="~/media/blank.png" alt="blank spacer" width="65"/><br><b>Parancssor</b></th>
+    </tr>
+    <tr>
+        <th>&nbsp;</th>
+        <td align="left"><b>Operációsrendszer-támogatás</b></td>
+        <td align="center">Windows, macOS, Linux</td>
+        <td align="center">Csak Windowson</td>
+        <td align="center">Windows, macOS, Linux</td>
+        <td align="center">Windows, macOS, Linux</td>
+    </tr>
+    <tr>
+        <td align="right"><img src="~/media/quantum-wht.png" alt="QDK" width="60"/></td>
+        <td align="left"><b>különálló Q#</b></td>
+        <td align="center"><a href="xref:microsoft.quantum.install.standalone">Telepítse</a></td>
+        <td align="center"><a href="xref:microsoft.quantum.install.standalone">Telepítse</a></td>
+        <td align="center"><a href="xref:microsoft.quantum.install.jupyter">Telepítse</a></td>
+        <td align="center"><a href="xref:microsoft.quantum.install.standalone">Telepítse</a></td>
+    </tr>
+    <tr>
+        <td align="right"><img src="~/media/python.png" alt="python install" width="50"/></td>
+        <td align="left"><b>Q# és Python</b></td>
+        <td align="center"><a href="xref:microsoft.quantum.install.python">Telepítse</a></td>
+        <td align="center"><a href="xref:microsoft.quantum.install.python">Telepítse</a></td>
+        <td align="center"><a href="xref:microsoft.quantum.install.jupyter">Telepítse</a></td>
+        <td align="center"><a href="xref:microsoft.quantum.install.python">Telepítse</a></td>
+    </tr>
+    <tr>
+        <td align="right"><img src="~/media/dot_net.png" alt="dotnet install" width="50"/></td>
+        <td align="left"><b>Q# és .NET (C#, F#)</b></td> 
+        <td align="center"><a href="xref:microsoft.quantum.install.cs">Telepítse</a></td>
+        <td align="center"><a href="xref:microsoft.quantum.install.cs">Telepítse</a></td>
+        <td align="center">&#10006;</td>
+        <td align="center"><a href="xref:microsoft.quantum.install.cs">Telepítse</a></td>
+   </tr>
+</table>
 
 ## <a name="use-the-qdk-online"></a>A QDK online használata
 
