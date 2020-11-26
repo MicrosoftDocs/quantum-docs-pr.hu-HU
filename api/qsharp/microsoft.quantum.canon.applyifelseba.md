@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyIfElseBA
 title: ApplyIfElseBA művelet
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyIfElseBA
 qsharp.summary: Applies one of two adjointable operations, depending on the value of a classical bit.
-ms.openlocfilehash: ce08907646c3210f76244f29aa0d936e2bd6ee43
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 74d43344481c5a808e84ce9c9e36fa3e83cd0d89
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92718204"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96218665"
 ---
 # <a name="applyifelseba-operation"></a>ApplyIfElseBA művelet
 
 Névtér: [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Csomag [](https://nuget.org/packages/)
+Csomag: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Egy klasszikus bit értékétől függően két adjointable műveletet alkalmaz.
 
 ```qsharp
-operation ApplyIfElseBA<'T, 'U> (bit : Bool, (trueOp : ('T => Unit is Adj), trueInput : 'T), (falseOp : ('U => Unit is Adj), falseInput : 'U)) : Unit
+operation ApplyIfElseBA<'T, 'U> (bit : Bool, (trueOp : ('T => Unit is Adj), trueInput : 'T), (falseOp : ('U => Unit is Adj), falseInput : 'U)) : Unit is Adj
 ```
 
 
@@ -39,7 +39,7 @@ Adott `bit` esetben a műveletet a `trueOp` bemenetként alkalmazza, ha a `trueI
 A logikai érték, amellyel megállapítható, hogy `trueOp` alkalmazva van-e vagy sem `falseOp` .
 
 
-### <a name="trueop--t--unit-adj"></a>trueOp: 'T => [egység](xref:microsoft.quantum.lang-ref.unit) – Adj
+### <a name="trueop--t--unit--is-adj"></a>trueOp: 'T => [egység](xref:microsoft.quantum.lang-ref.unit)
 
 Az adjointable művelet, amelyre alkalmazni kell `bit` `true` .
 
@@ -49,7 +49,7 @@ Az adjointable művelet, amelyre alkalmazni kell `bit` `true` .
 A következőhöz megadott bemenet: `trueOp` `bit` `true` .
 
 
-### <a name="falseop--u--unit-adj"></a>falseOp: ' U => [egység](xref:microsoft.quantum.lang-ref.unit) Adj
+### <a name="falseop--u--unit--is-adj"></a>falseOp: ' U => [egység](xref:microsoft.quantum.lang-ref.unit)
 
 Az adjointable művelet, amelyre alkalmazni kell `bit` `false` .
 

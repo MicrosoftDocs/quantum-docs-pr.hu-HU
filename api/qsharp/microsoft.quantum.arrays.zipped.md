@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Arrays.Zipped
 title: Tömörített függvény
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
 qsharp.name: Zipped
 qsharp.summary: Given two arrays, returns a new array of pairs such that each pair contains an element from each original array.
-ms.openlocfilehash: 67170fa005675f0e5d788c9c3b350fb9a961a597
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 56ed97d573bf29dddb7cdb1c3f360218bf97889a
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92718709"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96219753"
 ---
 # <a name="zipped-function"></a>Tömörített függvény
 
 Névtér: [Microsoft. Quantum. Arrays](xref:Microsoft.Quantum.Arrays)
 
-Csomag [](https://nuget.org/packages/)
+Csomag: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Az adott két tömb a párok új tömbjét adja vissza, így minden pár tartalmaz egy elemet az eredeti tömbből.

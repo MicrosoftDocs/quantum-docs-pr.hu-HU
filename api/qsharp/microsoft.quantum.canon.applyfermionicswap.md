@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyFermionicSWAP
 title: ApplyFermionicSWAP művelet
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyFermionicSWAP
 qsharp.summary: Applies the Fermionic SWAP.
-ms.openlocfilehash: 25dd91b200700d1474cf27bf1d0fa71d57f2e09b
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 0c470705843a6360df0a72374570d86571397e41
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92718276"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96218801"
 ---
 # <a name="applyfermionicswap-operation"></a>ApplyFermionicSWAP művelet
 
 Névtér: [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Csomag [](https://nuget.org/packages/)
+Csomag: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 A Fermionic-csere alkalmazása.
 
 ```qsharp
-operation ApplyFermionicSWAP (qubit1 : Qubit, qubit2 : Qubit) : Unit
+operation ApplyFermionicSWAP (qubit1 : Qubit, qubit2 : Qubit) : Unit is Adj + Ctl
 ```
 
 
@@ -53,9 +53,9 @@ A második qubit kell felcserélni.
 
 
 
-## <a name="references"></a>Referencia
+## <a name="references"></a>Hivatkozások
 
-- [*Ryan Babbush, Nathan Wiebe, Fahamvas McClean, James McClain, Hartmut neven, gránát Kin-Lic Chan* , arXiv: 1706.00023](https://arxiv.org/pdf/1706.00023.pdf)
+- [*Ryan Babbush, Nathan Wiebe, Fahamvas McClean, James McClain, Hartmut neven, gránát Kin-Lic Chan*, arXiv: 1706.00023](https://arxiv.org/pdf/1706.00023.pdf)
 
 ## <a name="see-also"></a>Lásd még:
 

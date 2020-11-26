@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Arrays.Transposed
 title: Átültetett függvény
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
 qsharp.name: Transposed
 qsharp.summary: Returns the transpose of a matrix represented as an array of arrays.
-ms.openlocfilehash: 54071c461cf9f9411c332763b81e3bc448fb6c6e
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: f293399d8e3a2cb32b2929e8d1591ac5eaefd277
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92718816"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96219991"
 ---
 # <a name="transposed-function"></a>Átültetett függvény
 
 Névtér: [Microsoft. Quantum. Arrays](xref:Microsoft.Quantum.Arrays)
 
-Csomag [](https://nuget.org/packages/)
+Csomag: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Tömbök tömbje jelölt mátrix átültetését adja vissza.

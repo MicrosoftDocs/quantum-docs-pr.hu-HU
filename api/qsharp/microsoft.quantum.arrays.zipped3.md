@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Arrays.Zipped3
 title: Zipped3 függvény
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
 qsharp.name: Zipped3
 qsharp.summary: Given three arrays, returns a new array of 3-tuples such that each 3-tuple contains an element from each original array.
-ms.openlocfilehash: c0535ca4d6e0de13bf809a21e69d100dcb798d1f
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 37fda4082a46870270414649f807659fa561962b
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92718696"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96219685"
 ---
 # <a name="zipped3-function"></a>Zipped3 függvény
 
 Névtér: [Microsoft. Quantum. Arrays](xref:Microsoft.Quantum.Arrays)
 
-Csomag [](https://nuget.org/packages/)
+Csomag: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 A három tömb esetében a rekordok egy új tömböt ad vissza, amely szerint minden 3 rekord tartalmaz egy elemet az eredeti tömbből.

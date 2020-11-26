@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyIfA
 title: ApplyIfA művelet
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyIfA
 qsharp.summary: Applies a adjointable operation conditioned on a classical bit.
-ms.openlocfilehash: 279a069176ee24ed83406f72170462bf58c790d9
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: d2880bbb95ebaf621ef9e5885051b94f32a3f1cc
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92718252"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96218767"
 ---
 # <a name="applyifa-operation"></a>ApplyIfA művelet
 
 Névtér: [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Csomag [](https://nuget.org/packages/)
+Csomag: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Egy klasszikus bites adjointable műveletet alkalmaz.
 
 ```qsharp
-operation ApplyIfA<'T> (op : ('T => Unit is Adj), bit : Bool, target : 'T) : Unit
+operation ApplyIfA<'T> (op : ('T => Unit is Adj), bit : Bool, target : 'T) : Unit is Adj
 ```
 
 
@@ -35,7 +35,7 @@ Az utótag `A` azt jelzi, hogy az alkalmazni kívánt művelet a adjointable.
 
 ## <a name="input"></a>Bevitel
 
-### <a name="op--t--unit-adj"></a>op: nem =>i [egység](xref:microsoft.quantum.lang-ref.unit) – Adj
+### <a name="op--t--unit--is-adj"></a>op: 'T => [egység](xref:microsoft.quantum.lang-ref.unit)
 
 Egy feltételesen alkalmazni kívánt művelet.
 
