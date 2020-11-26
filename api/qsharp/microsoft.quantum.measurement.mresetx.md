@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Measurement.MResetX
 title: MResetX művelet
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Measurement
 qsharp.name: MResetX
 qsharp.summary: Measures a single qubit in the X basis, and resets it to a fixed initial state following the measurement.
-ms.openlocfilehash: a16d7405388b560edcdb6c36b6668791f7ba1398
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 04fb0f84ddf79a3d2cfc21fdaabd16c129f6d72f
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92724999"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96194202"
 ---
 # <a name="mresetx-operation"></a>MResetX művelet
 
 Névtér: [Microsoft. Quantum. mérés](xref:Microsoft.Quantum.Measurement)
 
-Csomag [](https://nuget.org/packages/)
+Csomag: [Microsoft. Quantum. QSharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Egy qubit X alapon, és a mérték után visszaállítja egy rögzített kezdeti állapotba.

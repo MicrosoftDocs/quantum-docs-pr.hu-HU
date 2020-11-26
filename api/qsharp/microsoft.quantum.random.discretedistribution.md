@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Random.DiscreteDistribution
 title: DiscreteDistribution-felhasználó által definiált típus
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: udt
 qsharp.namespace: Microsoft.Quantum.Random
 qsharp.name: DiscreteDistribution
 qsharp.summary: Represents a univariate probability distribution over integers.
-ms.openlocfilehash: 5e0204f2eb7aa44451a049ad3d291487d468c52a
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: d492c86a6d72144695e1d0c2a94e8fe64cf1d3ef
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92720316"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96193046"
 ---
 # <a name="discretedistribution-user-defined-type"></a>DiscreteDistribution-felhasználó által definiált típus
 
 Névtér: [Microsoft. Quantum. Random](xref:Microsoft.Quantum.Random)
 
-Csomag [](https://nuget.org/packages/)
+Csomag: [Microsoft. Quantum. QSharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Egy univariate-valószínűség eloszlását jelöli egész számokon.

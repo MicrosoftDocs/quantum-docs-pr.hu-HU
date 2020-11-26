@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Random.SampleTransformedContinuousDistribution
 title: SampleTransformedContinuousDistribution művelet
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Random
 qsharp.name: SampleTransformedContinuousDistribution
 qsharp.summary: Internal-only operation for sampling from transformed distributions. Should only be used via partial application.
-ms.openlocfilehash: dc93022e53199cd8ef794da9c1590d6997a0fda1
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: f9f2b3cbbb4423f267758976cd066abbfec93a77
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92723976"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96192689"
 ---
 # <a name="sampletransformedcontinuousdistribution-operation"></a>SampleTransformedContinuousDistribution művelet
 
 Névtér: [Microsoft. Quantum. Random](xref:Microsoft.Quantum.Random)
 
-Csomag [](https://nuget.org/packages/)
+Csomag: [Microsoft. Quantum. QSharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Csak belső művelet az átalakított disztribúciók mintavételezéséhez.

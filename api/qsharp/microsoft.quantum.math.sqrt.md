@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Math.Sqrt
 title: SQRT függvény
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Math
 qsharp.name: Sqrt
 qsharp.summary: Returns the square root of a specified number.
-ms.openlocfilehash: d1fcd510df12ae908c47824db91000dafcb9de39
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: c2f49017350b9126353efaef83a70e43a6d344a2
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92722254"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96194440"
 ---
 # <a name="sqrt-function"></a>SQRT függvény
 
 Névtér: [Microsoft. Quantum. Math](xref:Microsoft.Quantum.Math)
 
-Csomag [](https://nuget.org/packages/)
+Csomag: [Microsoft. Quantum. QSharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Egy megadott szám négyzet gyökerét adja vissza.
