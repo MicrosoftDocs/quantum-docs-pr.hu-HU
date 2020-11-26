@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Math.AbsComplex
 title: AbsComplex függvény
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Math
 qsharp.name: AbsComplex
 qsharp.summary: Returns the absolute value of a complex number of type `Complex`.
-ms.openlocfilehash: d47e04616d4bcf49273bec31fc22990a8244962b
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: d9afb4b9b37b6cdd83bfd3829d3174d769c5f41b
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92723892"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96211389"
 ---
 # <a name="abscomplex-function"></a>AbsComplex függvény
 
 Névtér: [Microsoft. Quantum. Math](xref:Microsoft.Quantum.Math)
 
-Csomag [](https://nuget.org/packages/)
+Csomag: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Egy összetett számú típus abszolút értékét adja vissza `Complex` .

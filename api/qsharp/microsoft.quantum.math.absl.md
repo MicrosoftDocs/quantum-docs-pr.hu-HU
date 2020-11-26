@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Math.AbsL
 title: AbsL függvény
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Math
 qsharp.name: AbsL
 qsharp.summary: Returns the absolute value of a big integer.
-ms.openlocfilehash: 0682bde6669a9a6254b6e8fc3ca0b8872a8b829d
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 39e21c8578c91306dcefe909d80609babdaa8e14
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92722381"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96211321"
 ---
 # <a name="absl-function"></a>AbsL függvény
 
 Névtér: [Microsoft. Quantum. Math](xref:Microsoft.Quantum.Math)
 
-Csomag [](https://nuget.org/packages/)
+Csomag: [Microsoft. Quantum. QSharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Egy nagy egész szám abszolút értékét adja vissza.

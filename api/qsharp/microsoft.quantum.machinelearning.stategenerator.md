@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.MachineLearning.StateGenerator
 title: StateGenerator-felhasználó által definiált típus
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: udt
 qsharp.namespace: Microsoft.Quantum.MachineLearning
 qsharp.name: StateGenerator
 qsharp.summary: Describes an operation that prepares a given input to a sequential classifier.
-ms.openlocfilehash: e3026dbae7209acd41924c0038a6f9b2c4b41197
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 5c9643f5c917ff3cb25fa8c046856b03cc287edd
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92722395"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96211559"
 ---
 # <a name="stategenerator-user-defined-type"></a>StateGenerator-felhasználó által definiált típus
 
 Névtér: [Microsoft. Quantum. MachineLearning](xref:Microsoft.Quantum.MachineLearning)
 
-Csomag [](https://nuget.org/packages/)
+Csomag: [Microsoft. Quantum. MachineLearning](https://nuget.org/packages/Microsoft.Quantum.MachineLearning)
 
 
 Egy olyan műveletet ismertet, amely egy adott bemenetet készít elő egy szekvenciális osztályozó számára.
@@ -35,6 +35,6 @@ newtype StateGenerator = (NQubits : Int, Prepare : (Microsoft.Quantum.Arithmetic
 ### <a name="nqubits--int"></a>NQubits: [int](xref:microsoft.quantum.lang-ref.int)
 
 Azon qubits száma, amelyeken a kódolt bemenet definiálva van.
-### <a name="prepare--littleendian--unit-adj--ctl"></a>Előkészítés: [LittleEndian](xref:Microsoft.Quantum.Arithmetic.LittleEndian) - => [egység](xref:microsoft.quantum.lang-ref.unit) – Adj + CTL
+### <a name="prepare--littleendian--unit--is-adj--ctl"></a>Előkészítés: az [LittleEndian](xref:Microsoft.Quantum.Arithmetic.LittleEndian) => [egység](xref:microsoft.quantum.lang-ref.unit)  az Adj + CTL
 
 Egy olyan művelet, amely előkészíti a kódolt bemenetet egy kis endian `NQubits` qubits.
