@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyToElement
 title: ApplyToElement művelet
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyToElement
 qsharp.summary: Applies an operation to a given element of an array.
-ms.openlocfilehash: 5c321d95c9b79bc50827c2b50c406b164e143dc6
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 8cbc42a1c43b4c9a037729671eb3c82d365af580
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92717505"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96217627"
 ---
 # <a name="applytoelement-operation"></a>ApplyToElement művelet
 
 Névtér: [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Csomag [](https://nuget.org/packages/)
+Csomag: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Egy műveletet alkalmaz egy tömb egy adott elemére.

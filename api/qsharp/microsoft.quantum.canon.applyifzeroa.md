@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyIfZeroA
 title: ApplyIfZeroA művelet
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyIfZeroA
 qsharp.summary: Applies an adjointable operation conditioned on a classical result value being zero.
-ms.openlocfilehash: d324cd970e8df49ceb51b6bf5c9f3c9c3ff142f9
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: ab5b05791213da7c8bee5915764c342cb0bed851
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92718051"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96218495"
 ---
 # <a name="applyifzeroa-operation"></a>ApplyIfZeroA művelet
 
 Névtér: [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Csomag [](https://nuget.org/packages/)
+Csomag: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Egy olyan adjointable műveletet alkalmaz, amely klasszikus eredmény értéke nulla.
 
 ```qsharp
-operation ApplyIfZeroA<'T> (result : Result, (op : ('T => Unit is Adj), target : 'T)) : Unit
+operation ApplyIfZeroA<'T> (result : Result, (op : ('T => Unit is Adj), target : 'T)) : Unit is Adj
 ```
 
 
@@ -40,7 +40,7 @@ Az utótag `A` azt jelzi, hogy az alkalmazni kívánt művelet a adjointable.
 Egy mérési eredmény, amely meghatározza, hogy az op alkalmazva van-e.
 
 
-### <a name="op--t--unit-adj"></a>op: nem =>i [egység](xref:microsoft.quantum.lang-ref.unit) – Adj
+### <a name="op--t--unit--is-adj"></a>op: 'T => [egység](xref:microsoft.quantum.lang-ref.unit)
 
 Egy feltételesen alkalmazni kívánt művelet.
 

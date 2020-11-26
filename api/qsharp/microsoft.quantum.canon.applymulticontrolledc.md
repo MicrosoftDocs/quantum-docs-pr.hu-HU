@@ -1,31 +1,31 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyMultiControlledC
 title: ApplyMultiControlledC művelet
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyMultiControlledC
 qsharp.summary: Applies a multiply controlled version of a singly controlled operation. The modifier `C` indicates that the single-qubit operation is controllable.
-ms.openlocfilehash: 36010ba667190c237b64f60b7246010199a8ba1c
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 2d5703eed3a3b6e611ae7c993febf018fcb148b3
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92717967"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96218410"
 ---
 # <a name="applymulticontrolledc-operation"></a>ApplyMultiControlledC művelet
 
 Névtér: [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Csomag [](https://nuget.org/packages/)
+Csomag: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Egy megfelelően vezérelt művelet szorzás vezérelt verzióját alkalmazza.
 A módosító `C` azt jelzi, hogy az qubit művelet ellenőrizhető.
 
 ```qsharp
-operation ApplyMultiControlledC (singlyControlledOp : (Qubit[] => Unit), ccnot : Microsoft.Quantum.Canon.CCNOTop, controls : Qubit[], targets : Qubit[]) : Unit
+operation ApplyMultiControlledC (singlyControlledOp : (Qubit[] => Unit), ccnot : Microsoft.Quantum.Canon.CCNOTop, controls : Qubit[], targets : Qubit[]) : Unit is Ctl
 ```
 
 
@@ -65,9 +65,9 @@ Ez a művelet csak a tiszta Ancilla-qubits használja.
 
 A magyarázathoz és az áramköri diagramhoz lásd a 4,10., 4,3. szakaszát a Nielsen & a következő ábrán:
 
-## <a name="references"></a>Referencia
+## <a name="references"></a>Hivatkozások
 
-- [*Michael A. Nielsen, Isaac L.* , a Quantum számítási és a kvantum-információk](http://doi.org/10.1017/CBO9780511976667)
+- [*Michael A. Nielsen, Isaac L.*, a Quantum számítási és a kvantum-információk](http://doi.org/10.1017/CBO9780511976667)
 
 ## <a name="see-also"></a>Lásd még:
 

@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Characterization.RobustPhaseEstimation
 title: RobustPhaseEstimation művelet
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Characterization
 qsharp.name: RobustPhaseEstimation
 qsharp.summary: Performs the robust non-iterative quantum phase estimation algorithm for a given oracle `U` and eigenstate, and provides a single real-valued estimate of the phase with variance scaling at the Heisenberg limit.
-ms.openlocfilehash: d04ee578c0e6f916e9a4da451075b79e0630c70a
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 3e6774e2fe348668840cdc08fe3a070ec3d82a6d
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92714942"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96216081"
 ---
 # <a name="robustphaseestimation-operation"></a>RobustPhaseEstimation művelet
 
 Névtér: [Microsoft. Quantum. jellemzés](xref:Microsoft.Quantum.Characterization)
 
-Csomag [](https://nuget.org/packages/)
+Csomag: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Elvégzi a robusztus, nem ismétlődő kvantum-értékelési algoritmust egy adott Oracle `U` -és eigenstate esetében, és egyetlen valós értékű becslést nyújt a fázisról a Heisenberg korláton belüli variancia-méretezéssel.
@@ -54,6 +54,6 @@ Egy kvantum-regisztráció, amely $U $. Ha a \ket{\phi} $ $U $ eigenstate tárol
 
 A nagyszámú lekérdezés korlátozása esetén Cramer-Rao a $ \phi $ értékre vonatkozó becslések szórását a $ \sigma \ge 2 \pi/\text{# of lekérdezések} $ értékre.
 
-## <a name="references"></a>Referencia
+## <a name="references"></a>Hivatkozások
 
 - Univerzális Single-Qubit-Gate-Set robusztus, robusztus fázisú kiértékelése: Shelby Kimmel, Guang felfüggeszti Hao Low, Theodore J. Yoder https://arxiv.org/abs/1502.02677

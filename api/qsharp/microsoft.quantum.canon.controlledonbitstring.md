@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Canon.ControlledOnBitString
 title: ControlledOnBitString függvény
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ControlledOnBitString
 qsharp.summary: Returns a unitary operation that applies an oracle on the target register if the control register state corresponds to a specified bit mask.
-ms.openlocfilehash: ca5a6e116eff187060f7a160e42836b170f0362d
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 9435406506fc99fe211f5dce628b21c18ee4f9fe
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92716441"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96216659"
 ---
 # <a name="controlledonbitstring-function"></a>ControlledOnBitString függvény
 
 Névtér: [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Csomag [](https://nuget.org/packages/)
+Csomag: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Egy olyan egységes műveletet ad vissza, amely egy Oracle-t alkalmaz a cél-tételjegyzékben, ha a vezérlő regisztrálása állapot egy megadott bit-maszknak felel meg.
@@ -39,13 +39,13 @@ Ennek a függvénynek a kimenete egy olyan művelet, amely egy egységes átalak
 Az adott egységes műveletnek a-on való vezérlésére szolgáló kis sztring.
 
 
-### <a name="oracle--t--unit-adj--ctl"></a>Oracle: 'T => [egység](xref:microsoft.quantum.lang-ref.unit) : Adj + CTL
+### <a name="oracle--t--unit--is-adj--ctl"></a>Oracle: 'T => [egység](xref:microsoft.quantum.lang-ref.unit)  : Adj + CTL
 
 A cél-regisztráción alkalmazandó egységes művelet.
 
 
 
-## <a name="output--qubitt--unit-adj--ctl"></a>Kimenet: ([Qubit](xref:microsoft.quantum.lang-ref.qubit)[], nem) => [egység](xref:microsoft.quantum.lang-ref.unit) : Adj + CTL
+## <a name="output--qubitt--unit--is-adj--ctl"></a>Kimenet: ([Qubit](xref:microsoft.quantum.lang-ref.qubit)[], 't) => [egység](xref:microsoft.quantum.lang-ref.unit)  : Adj + CTL
 
 Egy egységes művelet, amely `oracle` a cél-regisztrációra vonatkozik, ha a vezérlő regisztrálása állapot megfelel a bit maszknak `bits` .
 

@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyPauli
 title: ApplyPauli művelet
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyPauli
 qsharp.summary: Given a multi-qubit Pauli operator, applies the corresponding operation to a register.
-ms.openlocfilehash: ccf8e1b3dbe5d4cd916a581aeab190ab0cff2021
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 7f42d9cab2f80f8f826ad1268b050134f0540cdd
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92717813"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96218223"
 ---
 # <a name="applypauli-operation"></a>ApplyPauli művelet
 
 Névtér: [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Csomag [](https://nuget.org/packages/)
+Csomag: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Egy több qubit Pauli-operátor miatt a megfelelő műveletet a regisztrálásra alkalmazza.
 
 ```qsharp
-operation ApplyPauli (pauli : Pauli[], target : Qubit[]) : Unit
+operation ApplyPauli (pauli : Pauli[], target : Qubit[]) : Unit is Adj + Ctl
 ```
 
 
