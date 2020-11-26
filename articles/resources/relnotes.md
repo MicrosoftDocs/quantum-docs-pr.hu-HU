@@ -9,12 +9,12 @@ uid: microsoft.quantum.relnotes
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: d38482be17e67f180441440ee8ccc7f1f64ebc9d
-ms.sourcegitcommit: fb75d8f30f1d91f644b2a594f46867eb5968cfda
+ms.openlocfilehash: 93ece8cbaa2ac8e6e0c9bb417e8f40130cb8a3fa
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94448344"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96192094"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>A Microsoft Quantum Development Kit kibocsátási megjegyzései
 
@@ -23,6 +23,18 @@ Ez a cikk információkat tartalmaz a Quantum Development Kit egyes verzióiról
 A telepítési utasításokat lásd a [telepítési útmutatóban](xref:microsoft.quantum.install).
 
 A frissítésre vonatkozó utasításokat lásd a [frissítési útmutatóban](xref:microsoft.quantum.update).
+
+## <a name="version-0142011120240"></a>0.14.2011120240 verziója
+
+*Kiadás dátuma: november 25., 2020*
+
+- Továbbfejlesztett fordítóprogramok teljesítménye a gyorsabb referenciák betöltése miatt.
+- A nyelvi specifikációhoz hozzáadott egy [ANTLR nyelvtant Q# ](https://github.com/microsoft/qsharp-language/tree/main/Specifications/Language/5_Grammar) Q# .
+- Frissítette a [ `Microsoft.Quantum.Preparation` névteret](xref:Microsoft.Quantum.Preparation) , hogy jobban konzisztens legyen a stílus és az API tervezési alapelveivel, és hogy támogassa a tisztított kevert állapotokat további információkkal (lásd: [javaslat](https://github.com/microsoft/QuantumLibraries/issues/344), [felülvizsgálati megjegyzések](https://github.com/microsoft/QuantumLibraries/blob/main/Design/meetings/2020/api-design-2020-11-05.md) és PRs [#212](https://github.com/microsoft/QuantumLibraries/pull/212), [#322](https://github.com/microsoft/QuantumLibraries/pull/322), [#375](https://github.com/microsoft/QuantumLibraries/pull/375), [#376](https://github.com/microsoft/QuantumLibraries/pull/376)).
+- Az ismétlődő hívási kifejezések körüli zárójelek mostantól opcionálisak: `(Foo(x))(y)` lehet `Foo(x)(y)` .
+- A .NET 5 vagy Visual Studio 16,8 rendszerű Visual Studio-vagy Visual Studio Code-bővítmények felhasználói a .NET Core 3,1 telepítését kérik a bővítmények működésének folytatásához.
+
+Tekintse meg a [kódtárak](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+closed%3A2020-10-23..2020-11-18), [fordítóprogramok](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+closed%3A2020-10-23..2020-11-18), [futtatókörnyezetek](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+closed%3A2020-10-23..2020-11-18), [minták](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+closed%3A2020-10-23..2020-11-18), [I Q# ](https://github.com/microsoft/iqsharp/pulls?q=is%3Apr+closed%3A2020-10-23..2020-11-18) és [kataek](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+closed%3A2020-10-23..2020-11-18)teljes listáját.
 
 ## <a name="version-01320111004"></a>0.13.20111004 verziója
 
@@ -240,7 +252,7 @@ A verzió a következőket tartalmazza:
 
 A [kódtárak](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [fordítók](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [futtatókörnyezetek](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [minták](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed) és [Katák ](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed) lezárt lekéréses kérelmeinek teljes listáját itt tekintheti meg.  
 
-## <a name="version-09-packagereference-0919082902"></a>0\.9-es verzió ( *PackageReference 0.9.1908.2902* )
+## <a name="version-09-packagereference-0919082902"></a>0\.9-es verzió (*PackageReference 0.9.1908.2902*)
 
 *Kiadási dátum: 2019. augusztus 29.*
 
@@ -257,7 +269,7 @@ A [kódtárak](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%
 
 A módosítások és a meglévő programok frissítésére vonatkozó utasítások összefoglalását itt olvashatja.  További információ ezekről a változásokról a [ Q# fejlesztői blogon](https://devblogs.microsoft.com/qsharp).
 
-## <a name="version-08-packagereference-0819071701"></a>0\.8-as verzió ( *PackageReference 0.8.1907.1701* )
+## <a name="version-08-packagereference-0819071701"></a>0\.8-as verzió (*PackageReference 0.8.1907.1701*)
 
 *Kiadási dátum: 2019. július 12.*
 
@@ -269,7 +281,7 @@ A verzió a következőket tartalmazza:
 
 A [kódtárak](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed) és a [minták](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed) lezárt lekéréses kérelmeinek teljes listáját itt tekintheti meg.  
 
-## <a name="version-07-packagereference-0719053109"></a>0\.7-es verzió ( *PackageReference 0.7.1905.3109* )
+## <a name="version-07-packagereference-0719053109"></a>0\.7-es verzió (*PackageReference 0.7.1905.3109*)
 
 *Kiadási dátum: 2019. május 31.*
 
@@ -557,7 +569,7 @@ Továbbá hálás **köszönet** a Microsoft kereskedelmi mérnöki szolgáltat�
 
 ### <a name="update-existing-projects"></a>Létező projektek frissítése
 
-Ez a kiadás teljes mértékben visszafelé kompatibilis. Egyszerűen frissítse a projektek NuGet-csomagját a(z) `0.2.1806.1503-preview` verzióra, majd hajtson végre **teljes újraépítést** , hogy biztosan újra létrejöjjön minden köztes fájl.
+Ez a kiadás teljes mértékben visszafelé kompatibilis. Egyszerűen frissítse a projektek NuGet-csomagját a(z) `0.2.1806.1503-preview` verzióra, majd hajtson végre **teljes újraépítést**, hogy biztosan újra létrejöjjön minden köztes fájl.
 
 A Visual Studióban kövesse a [csomagok frissítésére](https://docs.microsoft.com/nuget/tools/package-manager-ui#updating-a-package) vonatkozó általános utasításokat.
 

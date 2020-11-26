@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Synthesis.ApplyPermutationUsingTransformation
 title: ApplyPermutationUsingTransformation művelet
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Synthesis
 qsharp.name: ApplyPermutationUsingTransformation
 qsharp.summary: Permutes the amplitudes in a quantum state given a permutation using transformation-based synthesis.
-ms.openlocfilehash: b7196c592690a00da49b17f52b30536ba97b6035
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: a05b433eae2612bbf5c87522c4ef251976184aa8
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92725292"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96192060"
 ---
 # <a name="applypermutationusingtransformation-operation"></a>ApplyPermutationUsingTransformation művelet
 
 Névtér: [Microsoft. Quantum. szintézis](xref:Microsoft.Quantum.Synthesis)
 
-Csomag [](https://nuget.org/packages/)
+Csomag: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 A Permutes az átalakítási alapú szintézis használatával egy olyan kvantum-állapotot adott meg, amely egy permutációt használ.
 
 ```qsharp
-operation ApplyPermutationUsingTransformation (perm : Int[], qubits : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit
+operation ApplyPermutationUsingTransformation (perm : Int[], qubits : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit is Adj + Ctl
 ```
 
 
@@ -53,10 +53,10 @@ $N $ qubits listája, amelyre a permutáció vonatkozik.
 
 
 
-## <a name="references"></a>Referencia
+## <a name="references"></a>Hivatkozások
 
-- [*D. Michael Miller* , *Dmitrij Maslov* , *Gerhard W. Dueck* , proc. DAC 2003, IEEE, PP. 318-323, 2003](https://doi.org/10.1145/775832.775915)
-- [*Mathias Soeken* , *Gerhard W. Dueck* , *D. Michael Miller* , proc. RC 2016, Springer, PP. 307-321, 2016](https://doi.org/10.1007/978-3-319-40578-0_22)
+- [*D. Michael Miller*, *Dmitrij Maslov*, *Gerhard W. Dueck*, proc. DAC 2003, IEEE, PP. 318-323, 2003](https://doi.org/10.1145/775832.775915)
+- [*Mathias Soeken*, *Gerhard W. Dueck*, *D. Michael Miller*, proc. RC 2016, Springer, PP. 307-321, 2016](https://doi.org/10.1007/978-3-319-40578-0_22)
 
 ## <a name="see-also"></a>Lásd még:
 

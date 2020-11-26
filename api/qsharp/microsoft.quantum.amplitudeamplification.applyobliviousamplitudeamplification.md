@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.AmplitudeAmplification.ApplyObliviousAmplitudeAmplification
 title: ApplyObliviousAmplitudeAmplification művelet
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.AmplitudeAmplification
 qsharp.name: ApplyObliviousAmplitudeAmplification
 qsharp.summary: Oblivious amplitude amplification by specifying partial reflections.
-ms.openlocfilehash: a1bda344b1097c7ab3240bc6d9cd0d8df80b9662
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 9b0060201bcdae02a207362a753a0a403cdbb896
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92721877"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96191516"
 ---
 # <a name="applyobliviousamplitudeamplification-operation"></a>ApplyObliviousAmplitudeAmplification művelet
 
 Névtér: [Microsoft. Quantum. AmplitudeAmplification](xref:Microsoft.Quantum.AmplitudeAmplification)
 
-Csomag [](https://nuget.org/packages/)
+Csomag: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 A részleges reflexiók megadásával megfeledkezett az amplitúdó-erősítésről.
 
 ```qsharp
-operation ApplyObliviousAmplitudeAmplification (phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, startStateReflection : Microsoft.Quantum.Oracles.ReflectionOracle, targetStateReflection : Microsoft.Quantum.Oracles.ReflectionOracle, signalOracle : Microsoft.Quantum.Oracles.ObliviousOracle, auxiliaryRegister : Qubit[], systemRegister : Qubit[]) : Unit
+operation ApplyObliviousAmplitudeAmplification (phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, startStateReflection : Microsoft.Quantum.Oracles.ReflectionOracle, targetStateReflection : Microsoft.Quantum.Oracles.ReflectionOracle, signalOracle : Microsoft.Quantum.Oracles.ObliviousOracle, auxiliaryRegister : Qubit[], systemRegister : Qubit[]) : Unit is Adj + Ctl
 ```
 
 
@@ -72,7 +72,7 @@ A kezdő és a cél állapotokra vonatkozó, az alkalmazások és a adjoint ált
 
 A legtöbb esetben `auxiliaryRegister` a a $ \ket{\text{Start}} állapotban van inicializálva \_ .
 
-## <a name="references"></a>Referencia
+## <a name="references"></a>Hivatkozások
 
 Lásd:
 

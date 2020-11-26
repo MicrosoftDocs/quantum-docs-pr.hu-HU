@@ -9,25 +9,25 @@ uid: microsoft.quantum.write-program
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 7a1a49e18ac9330ca6e3cc89b3e58c96eccb91db
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 4c73a070fea2ce69a0bce9bf293a4679727e27bc
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92691668"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96192027"
 ---
 # <a name="tutorial-explore-entanglement-with-q"></a>Oktatóanyag: Összefonódások megismerése Q\# nyelven
 
-Ebben az oktatóanyagban bemutatjuk, hogyan írhat olyan Q# programot, amely manipulálja és méri a qubits, és bemutatja a Felfekvés és a felakadás hatásait.
+Ebben az oktatóanyagban bemutatjuk, hogyan írhat olyan Q# programot, amely manipulálja és méri a qubits, és bemutatja a Felfekvés és a felakadás hatásait. 
 
 Írni fog egy Bell nevű alkalmazást a kvantum-összefonódás szemléltetése céljából.
 A Bell név a Bell-állapotokra utal. Ezek két qubit konkrét kvantumállapotát jelentik, amelyekkel szemléltethetők a szuperpozíció és a kvantum-összefonódás legegyszerűbb példái.
 
 ## <a name="pre-requisites"></a>Előfeltételek
 
-Ha készen áll a kódolásra, először végezze el a következő lépéseket: 
+Ha készen áll a kódolásra, először végezze el a következő lépéseket:
 
-* [Telepítse](xref:microsoft.quantum.install) a Quantum Development Kit-t az előnyben részesített nyelvi és fejlesztési környezet használatával.
+* [Telepítse](xref:microsoft.quantum.install) a Quantum Development Kit-t az előnyben részesített nyelvi és fejlesztési környezet használatával. 
 * Ha a QDK már telepítve van, győződjön meg arról, hogy a legújabb verzióra van [frissítve](xref:microsoft.quantum.update).
 
 A QDK telepítése nélkül is követheti az elbeszélést, így áttekintheti a Q# programozási nyelv áttekintését és a kvantum-számítástechnika első fogalmait.
@@ -83,7 +83,7 @@ Célunk, hogy előkészítsünk két qubits egy konkrét kvantum-állapotban, am
 
 ### <a name="initialize-qubit-using-measurement"></a>Qubit inicializálása mérés használatával
 
-Az alábbi kódrészletben bemutatjuk, hogyan dolgozhat a qubits a alkalmazásban Q# .  Két műveletet fogunk bevezetni [`M`](xref:Microsoft.Quantum.Intrinsic.m) , [`X`](xref:Microsoft.Quantum.Intrinsic.X) amely átalakítja a qubit állapotát. Ebben a kódrészletben meghatározunk egy `SetQubitState` műveletet, amelynek egyik paramétere egy qubit, a másik pedig a `desired`, amely a qubit kívánt állapotát jelöli.  A `SetQubitState` művelet elvégez egy mérést a qubiten az `M` művelet használatával.  A-ben Q# a qubit-mérések mindig a vagy a értéket adja vissza `Zero` `One` .  Ha a mérés olyan értéket ad vissza, amely nem egyenlő a kívánt értékkel, a `SetQubitState` "megfordítja" a qubit, azaz egy `X` műveletet futtat, amely a qubit állapotot olyan új állapotba változtatja, amelyben a visszaadott mérés valószínűsége `Zero` és fordított állapota `One` történik. Így mindig a `SetQubitState` kívánt állapotba helyezi a cél qubit.
+Az alábbi kódrészletben bemutatjuk, hogyan dolgozhat a qubits a alkalmazásban Q# .  Két műveletet fogunk bevezetni [`M`](xref:Microsoft.Quantum.Intrinsic.M) , [`X`](xref:Microsoft.Quantum.Intrinsic.X) amely átalakítja a qubit állapotát. Ebben a kódrészletben meghatározunk egy `SetQubitState` műveletet, amelynek egyik paramétere egy qubit, a másik pedig a `desired`, amely a qubit kívánt állapotát jelöli.  A `SetQubitState` művelet elvégez egy mérést a qubiten az `M` művelet használatával.  A-ben Q# a qubit-mérések mindig a vagy a értéket adja vissza `Zero` `One` .  Ha a mérés olyan értéket ad vissza, amely nem egyenlő a kívánt értékkel, a `SetQubitState` "megfordítja" a qubit, azaz egy `X` műveletet futtat, amely a qubit állapotot olyan új állapotba változtatja, amelyben a visszaadott mérés valószínűsége `Zero` és fordított állapota `One` történik. Így mindig a `SetQubitState` kívánt állapotba helyezi a cél qubit.
 
 Cserélje le a tartalmát a `Program.qs` következő kódra:
 
@@ -116,7 +116,7 @@ A művelet visszatérési típusa a kettőspont után van meghatározva. Ebben a
 
 Az első művelet során két Quantum műveletet használt Q# :
 
-* A [`M`](xref:Microsoft.Quantum.Intrinsic.m) művelet, amely a qubit állapotát méri
+* A [`M`](xref:Microsoft.Quantum.Intrinsic.M) művelet, amely a qubit állapotát méri
 * A [`X`](xref:Microsoft.Quantum.Intrinsic.X) qubit állapotát tükröző művelet
 
 A kvantumműveletek átalakítják a qubitek állapotát. Bizonyos esetekben a hagyományos logikai kapuk mintájára szokás kvantumkapukat emlegetni műveletek helyett. Ez a szokás a kvantum-számítástechnika korai időszakából ered, amikor az algoritmusok még csupán elméleti fogalmak voltak, és diagramként vizualizálták őket, hasonlóan a klasszikus számítástechnikában használt kapcsolási rajzokhoz.
@@ -295,7 +295,7 @@ Test results (# of 0s, # of 1s):
 ```
 
 Minden méréskor egy klasszikus értéket kérünk, de a qubit félúton van 0 és 1 között, így (statisztikailag) az esetek felében 0, a másik felében 1 értéket kapunk.
-Ez az úgynevezett **szuperpozíció** , és az első valódi betekintést nyújtja a kvantumállapotba.
+Ez az úgynevezett **szuperpozíció**, és az első valódi betekintést nyújtja a kvantumállapotba.
 
 ## <a name="prepare-entanglement"></a>Az összefonódás előkészítése
 

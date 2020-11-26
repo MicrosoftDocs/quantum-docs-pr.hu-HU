@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.AmplitudeAmplification.AmpAmpObliviousByReflectionPhases
 title: AmpAmpObliviousByReflectionPhases függvény
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.AmplitudeAmplification
@@ -14,18 +14,18 @@ qsharp.summary: >-
   >
 
   > Please use @"microsoft.quantum.amplitudeamplification.obliviousamplitudeamplificationfrompartialreflections".
-ms.openlocfilehash: 619c41153d6737a116b239a9ce3c134b02f6d456
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 58701d7718e0d3b982dc8721eab625f90526973f
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92720041"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96191720"
 ---
 # <a name="ampampobliviousbyreflectionphases-function"></a>AmpAmpObliviousByReflectionPhases függvény
 
 Névtér: [Microsoft. Quantum. AmplitudeAmplification](xref:Microsoft.Quantum.AmplitudeAmplification)
 
-Csomag [](https://nuget.org/packages/)
+Csomag: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 > [!WARNING]
@@ -63,5 +63,5 @@ function AmpAmpObliviousByReflectionPhases (phases : Microsoft.Quantum.Amplitude
 
 
 
-## <a name="output--qubitqubit--unit-adj--ctl"></a>Kimenet: ([Qubit](xref:microsoft.quantum.lang-ref.qubit)[],[Qubit](xref:microsoft.quantum.lang-ref.qubit)[]) => [egység](xref:microsoft.quantum.lang-ref.unit) : Adj + CTL
+## <a name="output--qubitqubit--unit--is-adj--ctl"></a>Kimenet: ([Qubit](xref:microsoft.quantum.lang-ref.qubit)[],[Qubit](xref:microsoft.quantum.lang-ref.qubit)[]) => [egység](xref:microsoft.quantum.lang-ref.unit)  : Adj + CTL
 

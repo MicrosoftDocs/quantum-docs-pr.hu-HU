@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.AddFxP
 title: AddFxP művelet
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Arithmetic
 qsharp.name: AddFxP
 qsharp.summary: Adds two fixed-point numbers stored in quantum registers.
-ms.openlocfilehash: cf1f1379b7e1c32aefb0fccb55f4d13c95c78d8f
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 36a5d585a493f0e6f33f74b1686aaa01cca7ac0b
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92721697"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96191040"
 ---
 # <a name="addfxp-operation"></a>AddFxP művelet
 
 Névtér: [Microsoft. Quantum. aritmetika](xref:Microsoft.Quantum.Arithmetic)
 
-Csomag [](https://nuget.org/packages/)
+Csomag: [Microsoft. Quantum. numerikus számok](https://nuget.org/packages/Microsoft.Quantum.Numerics)
 
 
 Két, a kvantum-regiszterekben tárolt, rögzített ponttal rendelkező számot adja meg.
 
 ```qsharp
-operation AddFxP (fp1 : Microsoft.Quantum.Arithmetic.FixedPoint, fp2 : Microsoft.Quantum.Arithmetic.FixedPoint) : Unit
+operation AddFxP (fp1 : Microsoft.Quantum.Arithmetic.FixedPoint, fp2 : Microsoft.Quantum.Arithmetic.FixedPoint) : Unit is Adj + Ctl
 ```
 
 

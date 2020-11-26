@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.AmplitudeAmplification.TargetStateReflectionOracle
 title: TargetStateReflectionOracle függvény
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.AmplitudeAmplification
@@ -10,18 +10,18 @@ qsharp.summary: >-
   Constructs a `ReflectionOracle` about the target state uniquely marked by the flag qubit.
 
   The target state has a single qubit set to 1, and all others 0: $\ket{1}_f$.
-ms.openlocfilehash: a6ed0397be57ef6f14a712749cc416e1fd98b71c
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 65ad316a6ac986ebd0dc28b25859026a60aa3239
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92721723"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96191108"
 ---
 # <a name="targetstatereflectionoracle-function"></a>TargetStateReflectionOracle függvény
 
 Névtér: [Microsoft. Quantum. AmplitudeAmplification](xref:Microsoft.Quantum.AmplitudeAmplification)
 
-Csomag [](https://nuget.org/packages/)
+Csomag: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 A `ReflectionOracle` megcélzott állapotot a jelző qubit egyedileg megjelölve hozza létre.

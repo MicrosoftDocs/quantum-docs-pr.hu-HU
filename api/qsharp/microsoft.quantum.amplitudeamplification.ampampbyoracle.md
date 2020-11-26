@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.AmplitudeAmplification.AmpAmpByOracle
 title: AmpAmpByOracle függvény
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.AmplitudeAmplification
@@ -14,18 +14,18 @@ qsharp.summary: >-
   >
 
   > Please use @"microsoft.quantum.amplitudeamplification.standardamplitudeamplification".
-ms.openlocfilehash: dbf64a6b310aa5846274b37eabfd0386e0749eaa
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: bd9cb0ae54d6b09a1945df80b6c62c1e966fd282
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92720088"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96191822"
 ---
 # <a name="ampampbyoracle-function"></a>AmpAmpByOracle függvény
 
 Névtér: [Microsoft. Quantum. AmplitudeAmplification](xref:Microsoft.Quantum.AmplitudeAmplification)
 
-Csomag [](https://nuget.org/packages/)
+Csomag: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 > [!WARNING]
@@ -58,5 +58,5 @@ function AmpAmpByOracle (nIterations : Int, stateOracle : Microsoft.Quantum.Orac
 
 
 
-## <a name="output--qubit--unit-adj--ctl"></a>Kimenet: [Qubit](xref:microsoft.quantum.lang-ref.qubit)[] => [egység](xref:microsoft.quantum.lang-ref.unit) : Adj + CTL
+## <a name="output--qubit--unit--is-adj--ctl"></a>Kimenet: [Qubit](xref:microsoft.quantum.lang-ref.qubit)[] => [egység](xref:microsoft.quantum.lang-ref.unit)  : Adj + CTL
 
