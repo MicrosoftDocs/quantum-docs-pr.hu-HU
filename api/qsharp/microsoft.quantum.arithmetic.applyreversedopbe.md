@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.ApplyReversedOpBE
 title: ApplyReversedOpBE művelet
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Arithmetic
 qsharp.name: ApplyReversedOpBE
 qsharp.summary: Applies an operation that takes big-endian input to a register encoding an unsigned integer using little-endian format.
-ms.openlocfilehash: a181cb16d6ae7684d49fe200d72bcbf5209018e8
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 6db1fcb7437d97b1e56c64165d1be523ed2df07a
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92721516"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96202855"
 ---
 # <a name="applyreversedopbe-operation"></a>ApplyReversedOpBE művelet
 
 Névtér: [Microsoft. Quantum. aritmetika](xref:Microsoft.Quantum.Arithmetic)
 
-Csomag [](https://nuget.org/packages/)
+Csomag: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Egy olyan műveletet alkalmaz, amely nagy endian adatbevitelt tesz lehetővé egy olyan, előjel nélküli egész számra, amely kis endian formátumot használ.

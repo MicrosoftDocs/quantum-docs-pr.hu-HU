@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Synthesis.ApplyXControlledOnTruthTable
 title: ApplyXControlledOnTruthTable művelet
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Synthesis
 qsharp.name: ApplyXControlledOnTruthTable
 qsharp.summary: Applies the @"microsoft.quantum.intrinsic.x" operation on `target`, if the Boolean function `func` evaluates to true for the classical assignment in `controlRegister`.
-ms.openlocfilehash: 73d63936f02a52dfbbad7b8575110177a9e4463d
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: aa4e1bc0d5058228721728a894b896331ec626d1
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92725250"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96203297"
 ---
 # <a name="applyxcontrolledontruthtable-operation"></a>ApplyXControlledOnTruthTable művelet
 
 Névtér: [Microsoft. Quantum. szintézis](xref:Microsoft.Quantum.Synthesis)
 
-Csomag [](https://nuget.org/packages/)
+Csomag: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 A @"microsoft.quantum.intrinsic.x" művelet bekapcsolása `target` , ha a logikai függvény Igaz értéket ad meg `func` a klasszikus hozzárendeléshez a ben `controlRegister` .
 
 ```qsharp
-operation ApplyXControlledOnTruthTable (func : BigInt, controlRegister : Qubit[], target : Qubit) : Unit
+operation ApplyXControlledOnTruthTable (func : BigInt, controlRegister : Qubit[], target : Qubit) : Unit is Adj + Ctl
 ```
 
 
@@ -61,10 +61,10 @@ Cél qubit
 
 
 
-## <a name="references"></a>Referencia
+## <a name="references"></a>Hivatkozások
 
-- [*N. LOUVER* , *J. Siewert* , PRL 91, no. 027902, 2003, arXiv: Quant-pH/0303063](https://arxiv.org/abs/quant-ph/0303063)
-- [*Mathias Soeken* , *Martin Roetteler* , arXiv: 2005.12310](https://arxiv.org/abs/2005.12310)
+- [*N. LOUVER*, *J. Siewert*, PRL 91, no. 027902, 2003, arXiv: Quant-pH/0303063](https://arxiv.org/abs/quant-ph/0303063)
+- [*Mathias Soeken*, *Martin Roetteler*, arXiv: 2005.12310](https://arxiv.org/abs/2005.12310)
 
 ## <a name="see-also"></a>Lásd még:
 

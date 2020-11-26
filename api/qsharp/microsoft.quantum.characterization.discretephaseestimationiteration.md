@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Characterization.DiscretePhaseEstimationIteration
 title: DiscretePhaseEstimationIteration művelet
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Characterization
 qsharp.name: DiscretePhaseEstimationIteration
 qsharp.summary: Performs a single iteration of an iterative (classically-controlled) phase estimation algorithm using integer powers of a unitary oracle.
-ms.openlocfilehash: 167b53d7108c64d11a4f258d17e90ba78d7dd8d8
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 8ce1e1a2bda6507285f055c87619a8760c891082
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92715069"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96204385"
 ---
 # <a name="discretephaseestimationiteration-operation"></a>DiscretePhaseEstimationIteration művelet
 
 Névtér: [Microsoft. Quantum. jellemzés](xref:Microsoft.Quantum.Characterization)
 
-Csomag [](https://nuget.org/packages/)
+Csomag: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Egy iterációs (klasszikusan vezérelt) fázis-értékelési algoritmus egyszeri ismétlését hajtja végre egy egységes Oracle egész számú erejével.
 
 ```qsharp
-operation DiscretePhaseEstimationIteration (oracle : Microsoft.Quantum.Oracles.DiscreteOracle, power : Int, theta : Double, targetState : Qubit[], controlQubit : Qubit) : Unit
+operation DiscretePhaseEstimationIteration (oracle : Microsoft.Quantum.Oracles.DiscreteOracle, power : Int, theta : Double, targetState : Qubit[], controlQubit : Qubit) : Unit is Adj + Ctl
 ```
 
 
