@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Extensions.Bitwise.Not
 title: Nem működik
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Extensions.Bitwise
@@ -14,18 +14,18 @@ qsharp.summary: >-
   >
 
   > Please use @"microsoft.quantum.bitwise.not".
-ms.openlocfilehash: 78037cc85e8c613d5863a7e1b781d6d4c4b2dce7
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: f4fc36a6a6391e4d4ef73e9d6f2a66cf6470d6f0
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92712017"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96200237"
 ---
 # <a name="not-function"></a>Nem működik
 
 Névtér: [Microsoft. Quantum. Extensions. bitenkénti](xref:Microsoft.Quantum.Extensions.Bitwise)
 
-Csomag [](https://nuget.org/packages/)
+Csomag: [Microsoft. Quantum. QSharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 > [!WARNING]

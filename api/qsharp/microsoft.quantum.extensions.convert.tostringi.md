@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Extensions.Convert.ToStringI
 title: ToStringI függvény
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Extensions.Convert
@@ -14,18 +14,18 @@ qsharp.summary: >-
   >
 
   > Please use @"microsoft.quantum.convert.intasstring".
-ms.openlocfilehash: 3306afc808304f830604c2075338dc483301ca71
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 9bb09e1d73cec408ec3be532201ef2e58bf6685e
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92711765"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96199931"
 ---
 # <a name="tostringi-function"></a>ToStringI függvény
 
 Névtér: [Microsoft. Quantum. Extensions. Convert](xref:Microsoft.Quantum.Extensions.Convert)
 
-Csomag [](https://nuget.org/packages/)
+Csomag: [Microsoft. Quantum. QSharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 > [!WARNING]
