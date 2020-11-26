@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyLowDepthAnd
 title: ApplyLowDepthAnd művelet
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyLowDepthAnd
 qsharp.summary: Inverts a given target qubit if and only if both control qubits are in the 1 state, with T-depth 1, using measurement to perform the adjoint operation.
-ms.openlocfilehash: 092a350e42d8d90942de13530fefd761b5187e1d
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 4c5e381227bf82415121add38d0c0d2959fb529d
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92717981"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96209315"
 ---
 # <a name="applylowdepthand-operation"></a>ApplyLowDepthAnd művelet
 
 Névtér: [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Csomag [](https://nuget.org/packages/)
+Csomag: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 A megadott qubit csak akkor áll le, ha mindkét vezérlő qubits 1 állapotban van, a T-depth 1 értékkel, a adjoint művelet elvégzéséhez használja a mérést.
 
 ```qsharp
-operation ApplyLowDepthAnd (control1 : Qubit, control2 : Qubit, target : Qubit) : Unit
+operation ApplyLowDepthAnd (control1 : Qubit, control2 : Qubit, target : Qubit) : Unit is Adj + Ctl
 ```
 
 
@@ -54,7 +54,7 @@ Cél kiegészítő qubit; a kötelező állapot 0
 
 
 
-## <a name="references"></a>Referencia
+## <a name="references"></a>Hivatkozások
 
 - Cody Jones: "új konstrukciók a hibatűrő Toffoli kapuhoz", leltár. Rev. A 87, 022328, 2013 [arXiv: 1212.5069](https://arxiv.org/abs/1212.5069) Doi: 10.1103/PhysRevA. 87.022328
 - Peter Selinger: "T-depthal One", leltár. Rev. A 87, 042302, 2013 [arXiv: 1210.0974](https://arxiv.org/abs/1210.0974) Doi: 10.1103/PhysRevA. 87.042302

@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyIfCA
 title: ApplyIfCA művelet
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyIfCA
 qsharp.summary: Applies a unitary operation conditioned on a classical bit.
-ms.openlocfilehash: 9057c79622f15a082963d94fc261664e00322feb
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: b0ac469d6dea51951e0d9b2cfceb54253d4b4c5d
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92718229"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96209621"
 ---
 # <a name="applyifca-operation"></a>ApplyIfCA művelet
 
 Névtér: [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Csomag [](https://nuget.org/packages/)
+Csomag: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Egy klasszikus bites, egységes műveletet alkalmaz.
 
 ```qsharp
-operation ApplyIfCA<'T> (op : ('T => Unit is Ctl + Adj), bit : Bool, target : 'T) : Unit
+operation ApplyIfCA<'T> (op : ('T => Unit is Ctl + Adj), bit : Bool, target : 'T) : Unit is Adj + Ctl
 ```
 
 
@@ -35,7 +35,7 @@ Az utótag `CA` azt jelzi, hogy az alkalmazni kívánt művelet egységes (ellen
 
 ## <a name="input"></a>Bevitel
 
-### <a name="op--t--unit-ctl--adj"></a>op: nem => [egység](xref:microsoft.quantum.lang-ref.unit) CTL + Adj
+### <a name="op--t--unit--is-adj--ctl"></a>op: 'T => [egység](xref:microsoft.quantum.lang-ref.unit)  az Adj + CTL
 
 Egy feltételesen alkalmazni kívánt művelet.
 

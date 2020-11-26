@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyToElementA
 title: ApplyToElementA művelet
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyToElementA
 qsharp.summary: Applies an operation to a given element of an array.
-ms.openlocfilehash: f34089c2a45de281507cb79bde8a8cb9d2fefe47
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: e8318a7873476ee49d8e1e235e6c917a38ee6200
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92717490"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96208873"
 ---
 # <a name="applytoelementa-operation"></a>ApplyToElementA művelet
 
 Névtér: [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Csomag [](https://nuget.org/packages/)
+Csomag: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Egy műveletet alkalmaz egy tömb egy adott elemére.
 
 ```qsharp
-operation ApplyToElementA<'T> (op : ('T => Unit is Adj), index : Int, targets : 'T[]) : Unit
+operation ApplyToElementA<'T> (op : ('T => Unit is Adj), index : Int, targets : 'T[]) : Unit is Adj
 ```
 
 
@@ -34,7 +34,7 @@ A művelet `op` , az index `index` és a célok tömbje is `targets` érvényes 
 
 ## <a name="input"></a>Bevitel
 
-### <a name="op--t--unit-adj"></a>op: nem =>i [egység](xref:microsoft.quantum.lang-ref.unit) – Adj
+### <a name="op--t--unit--is-adj"></a>op: 'T => [egység](xref:microsoft.quantum.lang-ref.unit)
 
 Egy alkalmazni kívánt művelet.
 

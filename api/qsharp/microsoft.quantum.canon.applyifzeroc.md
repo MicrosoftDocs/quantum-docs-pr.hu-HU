@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyIfZeroC
 title: ApplyIfZeroC művelet
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyIfZeroC
 qsharp.summary: Applies a controllable operation conditioned on a classical result value being zero.
-ms.openlocfilehash: cfc2a659f4da011baadff1a0d6a20a2a36d0a285
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: c89490b13d946d119f3fd38d130d90847d67fea6
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92718009"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96209349"
 ---
 # <a name="applyifzeroc-operation"></a>ApplyIfZeroC művelet
 
 Névtér: [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Csomag [](https://nuget.org/packages/)
+Csomag: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Egy, a klasszikus eredmény értékének nulla értékét alkalmazza.
 
 ```qsharp
-operation ApplyIfZeroC<'T> (result : Result, (op : ('T => Unit is Ctl), target : 'T)) : Unit
+operation ApplyIfZeroC<'T> (result : Result, (op : ('T => Unit is Ctl), target : 'T)) : Unit is Ctl
 ```
 
 
@@ -40,7 +40,7 @@ Az utótag `C` azt jelzi, hogy az alkalmazni kívánt művelet ellenőrizhető.
 Egy mérési eredmény, amely meghatározza, hogy az op alkalmazva van-e.
 
 
-### <a name="op--t--unit-ctl"></a>op: 'T => [egység](xref:microsoft.quantum.lang-ref.unit) CTL
+### <a name="op--t--unit--is-ctl"></a>op: 'T => [egység](xref:microsoft.quantum.lang-ref.unit)  CTL
 
 Egy feltételesen alkalmazni kívánt művelet.
 

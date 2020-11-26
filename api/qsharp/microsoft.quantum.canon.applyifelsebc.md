@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyIfElseBC
 title: ApplyIfElseBC művelet
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyIfElseBC
 qsharp.summary: Applies one of two controllable operations, depending on the value of a classical bit.
-ms.openlocfilehash: 032d92484dc96481cb981d9d8acfeed248a9116d
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: ea06b0a0a07659407e13caa2baa4f3e37ca2a0f7
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92718216"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96209519"
 ---
 # <a name="applyifelsebc-operation"></a>ApplyIfElseBC művelet
 
 Névtér: [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Csomag [](https://nuget.org/packages/)
+Csomag: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 A klasszikus bit értékétől függően két ellenőrizhető művelet egyikét alkalmazza.
 
 ```qsharp
-operation ApplyIfElseBC<'T, 'U> (bit : Bool, (trueOp : ('T => Unit is Ctl), trueInput : 'T), (falseOp : ('U => Unit is Ctl), falseInput : 'U)) : Unit
+operation ApplyIfElseBC<'T, 'U> (bit : Bool, (trueOp : ('T => Unit is Ctl), trueInput : 'T), (falseOp : ('U => Unit is Ctl), falseInput : 'U)) : Unit is Ctl
 ```
 
 
@@ -39,7 +39,7 @@ Adott `bit` esetben a műveletet a `trueOp` bemenetként alkalmazza, ha a `trueI
 A logikai érték, amellyel megállapítható, hogy `trueOp` alkalmazva van-e vagy sem `falseOp` .
 
 
-### <a name="trueop--t--unit-ctl"></a>trueOp: 'T => [egység](xref:microsoft.quantum.lang-ref.unit) CTL
+### <a name="trueop--t--unit--is-ctl"></a>trueOp: 'T => [egység](xref:microsoft.quantum.lang-ref.unit)  CTL
 
 Az a-re alkalmazandó, ellenőrizhető művelet `bit` `true` .
 
@@ -49,7 +49,7 @@ Az a-re alkalmazandó, ellenőrizhető művelet `bit` `true` .
 A következőhöz megadott bemenet: `trueOp` `bit` `true` .
 
 
-### <a name="falseop--u--unit-ctl"></a>falseOp: ' U => [egység](xref:microsoft.quantum.lang-ref.unit) CTL
+### <a name="falseop--u--unit--is-ctl"></a>falseOp: ' U => [egység](xref:microsoft.quantum.lang-ref.unit)  CTL
 
 Az a-re alkalmazandó, ellenőrizhető művelet `bit` `false` .
 

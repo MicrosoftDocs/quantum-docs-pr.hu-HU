@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Bitwise.Or
 title: Vagy függvény
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Bitwise
 qsharp.name: Or
 qsharp.summary: Returns the bitwise OR of two integers. This performs the same computation as the built-in `|||` operator.
-ms.openlocfilehash: fe553f7c2ec3bc547fd0cf91a843abd966d40e4d
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 94c85d924f11a75de5edc7f70d604ee9d8521aa6
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92718600"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96209825"
 ---
 # <a name="or-function"></a>Vagy függvény
 
 Névtér: [Microsoft. Quantum. bitenkénti](xref:Microsoft.Quantum.Bitwise)
 
-Csomag [](https://nuget.org/packages/)
+Csomag: [Microsoft. Quantum. QSharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 A bitenkénti vagy két egész számot ad vissza.
