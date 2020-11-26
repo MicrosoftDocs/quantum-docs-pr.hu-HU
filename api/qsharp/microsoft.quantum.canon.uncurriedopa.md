@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Canon.UncurriedOpA
 title: UncurriedOpA függvény
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: UncurriedOpA
 qsharp.summary: Given a function which returns operations, returns a new operation which takes both inputs as a tuple. The modifier `A` indicates that the operations are adjointable.
-ms.openlocfilehash: 21df20354ad2388891f32b1bf1c7781287904983
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: e535d017d2665ddb76e5f422e18b8656c73171c6
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92715222"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96204623"
 ---
 # <a name="uncurriedopa-function"></a>UncurriedOpA függvény
 
 Névtér: [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Csomag [](https://nuget.org/packages/)
+Csomag: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Egy olyan függvény, amely egy műveletet ad vissza, egy új műveletet ad vissza, amely mindkét bemenetet rekordként veszi át.
@@ -31,13 +31,13 @@ function UncurriedOpA<'T, 'U> (curriedOp : ('T -> ('U => Unit is Adj))) : (('T, 
 
 ## <a name="input"></a>Bevitel
 
-### <a name="curriedop--t---u--unit-adj"></a>curriedOp: nem > ' U => [egység](xref:microsoft.quantum.lang-ref.unit) Adj
+### <a name="curriedop--t---u--unit--is-adj"></a>curriedOp: nem > ' U => [egység](xref:microsoft.quantum.lang-ref.unit)
 
 Egy függvény, amely visszaadja A műveleteket.
 
 
 
-## <a name="output--tu--unit-adj"></a>Kimenet: (nem, ' U) => [egység](xref:microsoft.quantum.lang-ref.unit) – Adj
+## <a name="output--tu--unit--is-adj"></a>Kimenet: (nem, ' U) => [egység](xref:microsoft.quantum.lang-ref.unit)
 
 Egy olyan új művelet, `op` amely egyenértékű a következővel: `op(t, u)` `(curriedOp(t))(u)` .
 

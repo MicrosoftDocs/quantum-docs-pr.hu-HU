@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Canon.TransformedOperationA
 title: TransformedOperationA függvény
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: TransformedOperationA
 qsharp.summary: Given a function and an operation, returns a new operation whose input is transformed by the given function.
-ms.openlocfilehash: 349424a102dba7354bbaa65fffdc2b5d506a3b91
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: eceba260e601b73bdfa2de6ea6ab146820b5c59a
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92715334"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96204878"
 ---
 # <a name="transformedoperationa-function"></a>TransformedOperationA függvény
 
 Névtér: [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Csomag [](https://nuget.org/packages/)
+Csomag: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Egy függvény és egy művelet miatt egy új műveletet ad vissza, amelynek a bemenetét az adott függvény átalakítja.
@@ -35,13 +35,13 @@ function TransformedOperationA<'T, 'U> (fn : ('U -> 'T), op : ('T => Unit is Adj
 Függvény, amely átalakítja a megadott bemenetet a művelet által várt űrlapra.
 
 
-### <a name="op--t--unit-adj"></a>op: nem =>i [egység](xref:microsoft.quantum.lang-ref.unit) – Adj
+### <a name="op--t--unit--is-adj"></a>op: 'T => [egység](xref:microsoft.quantum.lang-ref.unit)
 
 Az átalakítandó művelet.
 
 
 
-## <a name="output--u--unit-adj"></a>Kimenet: ' U => [egység](xref:microsoft.quantum.lang-ref.unit) – Adj
+## <a name="output--u--unit--is-adj"></a>Kimenet: ' U => [egység](xref:microsoft.quantum.lang-ref.unit)
 
 Egy új művelet tbat hívja a `fn` bemenetét, majd átadja az eredményül kapott kimenetet `op` .
 
