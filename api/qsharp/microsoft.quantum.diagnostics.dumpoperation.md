@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Diagnostics.DumpOperation
 title: DumpOperation művelet
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Diagnostics
 qsharp.name: DumpOperation
 qsharp.summary: Given an operation, displays diagnostics about the operation that are made available by the current execution target.
-ms.openlocfilehash: 444d42e2440b30b3bdf50d55a399568bed063222
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: b0e07173ddbeb8a96d4a85928258b6e30deb394d
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92712857"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96202056"
 ---
 # <a name="dumpoperation-operation"></a>DumpOperation művelet
 
 Névtér: [Microsoft. Quantum. Diagnostics](xref:Microsoft.Quantum.Diagnostics)
 
-Csomag [](https://nuget.org/packages/)
+Csomag: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 A művelet végrehajtásakor az aktuális végrehajtási cél által elérhetővé tett művelet diagnosztika jelenik meg.
@@ -35,7 +35,7 @@ operation DumpOperation (nQubits : Int, op : (Qubit[] => Unit is Adj)) : Unit
 Azon qubits száma, amelyeken a megadott művelet működik.
 
 
-### <a name="op--qubit--unit-adj"></a>op: [Qubit](xref:microsoft.quantum.lang-ref.qubit)[] => [egység](xref:microsoft.quantum.lang-ref.unit) – Adj
+### <a name="op--qubit--unit--is-adj"></a>op: [Qubit](xref:microsoft.quantum.lang-ref.qubit)[] => [egység](xref:microsoft.quantum.lang-ref.unit)
 
 A diagnosztizálni kívánt művelet.
 

@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Diagnostics.EqualityFactB
 title: EqualityFactB függvény
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Diagnostics
 qsharp.name: EqualityFactB
 qsharp.summary: Asserts that a classical Bool variable has the expected value.
-ms.openlocfilehash: d3163281772bda392fbdd61ad58543e22022a600
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: a87d6690e701eb1530be3134d24884a8c19357e9
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92712773"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96201920"
 ---
 # <a name="equalityfactb-function"></a>EqualityFactB függvény
 
 Névtér: [Microsoft. Quantum. Diagnostics](xref:Microsoft.Quantum.Diagnostics)
 
-Csomag [](https://nuget.org/packages/)
+Csomag: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Azt állítja be, hogy a klasszikus bool változó a várt értékkel rendelkezik.

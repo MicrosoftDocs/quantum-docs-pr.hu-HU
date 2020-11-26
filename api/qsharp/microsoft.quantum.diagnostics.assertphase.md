@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Diagnostics.AssertPhase
 title: AssertPhase művelet
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Diagnostics
 qsharp.name: AssertPhase
 qsharp.summary: Asserts that the phase of an equal superposition state has the expected value.
-ms.openlocfilehash: e042c03d2a72d9ce4816a8cdb56603e175b22807
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 9130d6c735d90abbc51989ef4a68a8eff8b41371
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92712954"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96202260"
 ---
 # <a name="assertphase-operation"></a>AssertPhase művelet
 
 Névtér: [Microsoft. Quantum. Diagnostics](xref:Microsoft.Quantum.Diagnostics)
 
-Csomag [](https://nuget.org/packages/)
+Csomag: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Azt állítja be, hogy az egyenlő prioritású állapot fázisában a várt érték szerepel.
