@@ -9,12 +9,12 @@ uid: microsoft.quantum.contributing.style
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 7666974e255d537c8d611d0077b7f9b37a61f918
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: cfc201a16b1b42c82314220f77ae120076291759
+ms.sourcegitcommit: b930bb59a1ba8f41d2edc9ed98197109aa8c7f1b
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92691739"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96231655"
 ---
 # <a name="no-locq-style-guide"></a>Q# Stílus útmutató #
 ## <a name="general-conventions"></a>Általános konvenciók ##
@@ -215,7 +215,7 @@ _*_
 Mivel a Q# egy erősen és statikusan beírt nyelv, az egyik típus értéke csak más típusú érték lehet, mint egy típus-átalakítási függvény kifejezett hívása.
 Ez ellentétben áll azokkal a nyelvekkel, amelyek lehetővé teszik, hogy az értékek implicit módon módosítsák a típusokat (pl.: Type Promotion) vagy a casting használatával.
 Ennek eredményeképpen a konvertálási függvények fontos szerepet játszanak a Q# kódtár fejlesztésében, és az elnevezéssel kapcsolatban leggyakrabban felmerülő döntések egyikét alkotják.
-Azonban ez azt jelzi, hogy mivel a Type konverziók mindig _determinisztikus_ , a függvények is megírhatók, ezért a fenti tanács alá tartoznak.
+Azonban ez azt jelzi, hogy mivel a Type konverziók mindig _determinisztikus_, a függvények is megírhatók, ezért a fenti tanács alá tartoznak.
 Különösen azt javasoljuk, hogy a Type konverziós függvények soha ne legyenek elnevezve műveleteknek (pl.: `ConvertToX` ) vagy a határozószók előírási kifejezéseknek ( `ToX` ), hanem a forrás és a cél típusokat () jelző, melléknévi előírási kifejezéseknek kell nevezni `XAsY` .
 Ha a tömb típusait a konverziós függvények neveiben listázza, javasoljuk a gyorsírást `Arr` .
 A kivételes körülmények korlátozásával azt javasoljuk, hogy az összes Type konverziós függvény neve legyen, hogy `As` gyorsan azonosítható legyen.
@@ -323,7 +323,7 @@ Javasoljuk, hogy:
 
 # <a name="examples"></a>[Példák](#tab/examples)
 
-| &nbsp;  | Snippet | Leírás |
+| &nbsp;  | Snippet | Description |
 |---|---------|-------------|
 | ☑ | `newtype Oracle = (Apply : Qubit[] => Unit is Adj + Ctl)` | A név `Apply` egy `CamelCase` formázott igei kifejezés, amely arra utal, hogy az elnevezett elem egy művelet. |
 | ☒ | <s>`newtype Oracle = (apply : Qubit[] => Unit is Adj + Ctl) `</s> | Az elnevezett elemeknek kezdeti nagybetűvel kell kezdődnie. |
@@ -390,7 +390,7 @@ Hasonlóképpen, a Quantum Development Kit által biztosított nyelvi kiszolgál
 A dokumentációs megjegyzések használata így segítheti a felhasználókat a kód értelmezésében azáltal, hogy a jelen dokumentum többi konvenciója alapján nem könnyen elérhetővé tett részletekre vonatkozó hasznos hivatkozást biztosítanak.
 
 > [!div class="nextstepaction"]
-> [Dokumentációs Megjegyzés szintaxisának leírása](xref:microsoft.quantum.guide.filestructure#documentation-comments).
+> [Dokumentációs Megjegyzés szintaxisának leírása](xref:microsoft.quantum.qsharp.comments#documentation-comments).
 
 Ahhoz, hogy hatékonyan használhassa ezt a funkciót a felhasználók számára, javasoljuk, hogy a dokumentációs megjegyzések írásakor ne feledje el néhány dolgot.
 
@@ -479,7 +479,7 @@ Javasoljuk, hogy:
 
 # <a name="examples"></a>[Példák](#tab/examples)
 
-| &nbsp; | Snippet | Leírás |
+| &nbsp; | Snippet | Description |
 |---|---------|-------------|
 | ☒ | <s>`2+3`</s> | Használjon szóközöket a bináris operátorok köré. |
 | ☒ | <s>`target:Qubit`</s> | Használjon szóközt a típus megjegyzési kettőspontok használatával. |

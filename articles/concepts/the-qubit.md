@@ -128,17 +128,6 @@ A kvantum-számítógépek a kvantum-kapuk univerzális készletének használat
 Ez az egyetemességi koncepció hasonlít a hagyományos (azaz klasszikus) számítástechnikai koncepcióhoz, ahol a kapuk univerzálisnak tekintendők, ha a bemeneti bitek minden átalakítása véges hosszúságú áramkör használatával végezhető el.
 A kvantum-számítástechnika esetében a qubit elvégezhető érvényes átalakítások egységes átalakítások és mérések.
 A *adjoint művelet* vagy az összetett konjugátum átültetése rendkívül fontos a Quantum Computing számára, mivel ez szükséges a kvantum-átalakítások megfordításához.
-Q# Ez azt mutatja be, hogy a metódusok automatikusan lefordítják a Gate-sorrendeket a adjoint, így sok esetben menti a programozót a adjoints. Alább látható egy példa:
-
-```qsharp
-operation PrepareSuperposition(qubit : Qubit) : Unit
-is Adj { // Auto-generate the adjoint of the operation
-    H(qubit);
-}
-```
-
-Bár ez egy triviális példa (az < xref: Microsoft. Quantum. belső. H > művelet önadjoint), láthatja, hogy ez a bonyolultabb qubit-műveletek során felbecsülhetetlen értékű lesz.
-További információ: [Operations and functions](xref:microsoft.quantum.guide.operationsfunctions).
 
 A klasszikus számítógépeken csak négy függvény képezhető le egy kicsit. Ezzel szemben a kvantum-számítógépek egyetlen qubit végtelen számú egységes átalakítás létezik. Ezért a " [*Gates*](https://en.wikipedia.org/wiki/Quantum_logic_gate)" nevű egyszerű kvantum-műveletek egyetlen véges halmaza sem tudja pontosan replikálni a kvantum-számítástechnikai szolgáltatásban engedélyezett, egységes átalakítások végtelen készletét. Ez azt jelenti, hogy a klasszikus számítástechnikai rendszertől eltérően a kvantum-számítógép nem tudja megvalósítani az összes lehetséges kvantum-programot, amely pontosan véges számú kaput használ. Így a kvantum-számítógépek nem lehetnek univerzálisak a klasszikus számítógépek azonos értelemben. Ennek eredményeképpen, amikor azt mondjuk, hogy a kapuk halmaza *univerzális* a Quantum Computing esetében, valójában némileg gyengébb, mint a klasszikus számítástechnika.
 Az egyetemesség esetében követelmény, hogy a kvantum-számítógép csak a véges hosszúságú Gate-sorozatot használva *közelítse* meg az összes egységes mátrixot egy véges hibán belül.

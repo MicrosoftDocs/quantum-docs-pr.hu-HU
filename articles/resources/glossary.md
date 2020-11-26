@@ -87,7 +87,7 @@ Szerző: bradben MS. Author: v-benbra MS. Date: 9/1/2020 MS. topic: cikk UID: Mi
 
 ## <a name="adjoint"></a>Adjoint
 
-Egy [művelet](xref:microsoft.quantum.glossary#operation)összetett konjugált átültetése. Az [egységes](xref:microsoft.quantum.glossary#unitary-operator) operátort megvalósító műveletek esetében a adjoint a művelet inverze, és egy tőr szimbólum jelzi. Ha például a művelet `U` az u egységes operátort jelöli $ $ , akkor `Adjoint U` az $ u ^ \dagger $ érték jelenik meg. További információ: [Adjoint](xref:microsoft.quantum.guide.operationsfunctions#controlled-and-adjoint-operations).
+Egy [művelet](xref:microsoft.quantum.glossary#operation)összetett konjugált átültetése. Az [egységes](xref:microsoft.quantum.glossary#unitary-operator) operátort megvalósító műveletek esetében a adjoint a művelet inverze, és egy tőr szimbólum jelzi. Ha például a művelet `U` az u egységes operátort jelöli $ $ , akkor `Adjoint U` az $ u ^ \dagger $ érték jelenik meg. További információ: a rendszerbeli [alkalmazás](xref:microsoft.quantum.qsharp.functorapplication#functor-application).
 
 ## <a name="ancilla"></a>Ancilla
 
@@ -103,7 +103,8 @@ Egy[qubit](xref:microsoft.quantum.glossary#qubit) [kvantum-állapot](xref:micros
 
 ## <a name="callable"></a>Használata hívható
 
-Egy [művelet](xref:microsoft.quantum.glossary#operation) vagy [függvény](xref:microsoft.quantum.glossary#function) a Q# nyelven. További információ: [Operations and functions](xref:microsoft.quantum.guide.operationsfunctions).
+Egy [művelet](xref:microsoft.quantum.glossary#operation) vagy [függvény](xref:microsoft.quantum.glossary#function) a [ Q# nyelven](https://github.com/microsoft/qsharp-language/tree/main/Specifications/Language#q-language).
+További információ: [ Q# programok](xref:microsoft.quantum.guide.programs)
 
 ## <a name="clifford-group"></a>Clifford-csoport
 
@@ -111,7 +112,7 @@ Azok a műveletek [összessége, amelyek](xref:microsoft.quantum.glossary#bloch-
 
 ## <a name="controlled"></a>Ellenőrzött
 
-Olyan Quantum [művelet](xref:microsoft.quantum.glossary#operation) , amely egy vagy több [qubits](xref:microsoft.quantum.glossary#qubit) használ a cél művelethez. További információ: [ellenőrzött és adjoint műveletek](xref:microsoft.quantum.guide.operationsfunctions#controlled-and-adjoint-operations).
+Olyan Quantum [művelet](xref:microsoft.quantum.glossary#operation) , amely egy vagy több [qubits](xref:microsoft.quantum.glossary#qubit) használ a cél művelethez. További információ: a rendszerbeli [alkalmazás](xref:microsoft.quantum.qsharp.functorapplication#functor-application).
 
 ## <a name="dirac-notation"></a>Dirac jelölése
 
@@ -138,11 +139,11 @@ Két [qubits](xref:microsoft.quantum.glossary#qubit)négy specifikus, maximális
 A [kvantum-állapot](xref:microsoft.quantum.glossary#quantum-state) időbeli változásának módja. További információ: [mátrix exponenciálisok](xref:microsoft.quantum.concepts.matrix-advanced#matrix-exponentials).
 
 ## <a name="function"></a>Függvény
-A Q# tisztán klasszikus (nem Quantum) nyelvben használt alrutin típusa. Míg a függvények a kvantum-algoritmusokon belül vannak használatban, nem működhetnek [qubits](xref:microsoft.quantum.glossary#qubit) vagy hívási [műveleteken](xref:microsoft.quantum.glossary#operation). További információ: [Operations and functions](xref:microsoft.quantum.guide.operationsfunctions).
+Egy alrutin típusa a Q# tisztán determinisztikus nyelven. Míg a függvények a kvantum-algoritmusokon belül vannak használatban, nem működhetnek [qubits](xref:microsoft.quantum.glossary#qubit) vagy hívási [műveleteken](xref:microsoft.quantum.glossary#operation). További információ: [ Q# programok](xref:microsoft.quantum.guide.programs)
 
 ## <a name="gate"></a>Kapu
 
-Egy kvantum- [művelet](xref:microsoft.quantum.glossary#operation)örökölt kifejezése a klasszikus logikai kapuk fogalma alapján. A [kvantum-áramkör](xref:microsoft.quantum.glossary#quantum-circuit-diagram) a klasszikus logikai áramkörök hasonló fogalma alapján kapuk (vagy műveletek) hálózata.
+Egy örökölt kifejezés bizonyos belső kvantum- [műveletekhez](xref:microsoft.quantum.glossary#operation)a klasszikus logikai kapuk fogalma alapján. A [kvantum-kör](xref:microsoft.quantum.glossary#quantum-circuit-diagram) kapuk hálózata, a klasszikus logikai áramkörök hasonló fogalma alapján.
 
 ## <a name="global-phase"></a>Globális fázis
 
@@ -166,15 +167,11 @@ Egy változó, amelynek az értéke a létrehozása után módosítható. A-ben 
 
 ## <a name="namespace"></a>Névtér
 
-A kapcsolódó nevek (például [műveletek](xref:microsoft.quantum.glossary#operation), [függvények](xref:microsoft.quantum.glossary#function)és [felhasználó által definiált típusok](xref:microsoft.quantum.glossary#user-defined-type)) gyűjteményének címkéje. A [Microsoft. Quantum.](xref:microsoft.quantum.preparation) a névtér például a standard könyvtárban definiált összes szimbólumot felcímkézi a kezdeti állapotok előkészítéséhez.
+A kapcsolódó nevek (például [műveletek](xref:microsoft.quantum.glossary#operation), [függvények](xref:microsoft.quantum.glossary#function)és [felhasználó által definiált típusok](xref:microsoft.quantum.glossary#user-defined-type)) gyűjteményének címkéje. A [Microsoft. Quantum.](xref:Microsoft.Quantum.Preparation) a névtér például a standard könyvtárban definiált összes szimbólumot felcímkézi a kezdeti állapotok előkészítéséhez.
 
 ## <a name="operation"></a>Művelet
 
-A kvantum-számítás alapegysége a-ben Q# . Ez nagyjából megfelel a C, C++ vagy Python függvénynek, illetve a C# vagy a Java statikus metódusának. További információ: [Operations and functions](xref:microsoft.quantum.guide.operationsfunctions).
-
-## <a name="operator-application"></a>Kezelő alkalmazás
-
-Quantum művelet végrehajtása. Ez általában egy egységes mátrixot alkalmaz az aktuális kvantum-állapot vektorára.
+A kvantum-számítás alapegysége a-ben Q# . Ez nagyjából megfelel a C, C++ vagy Python függvénynek, illetve a C# vagy a Java statikus metódusának. További információ: [ Q# programok](xref:microsoft.quantum.guide.programs).
 
 ## <a name="oracle"></a>Oracle
 
@@ -182,7 +179,7 @@ Egy olyan alrutin, amely Adatfüggő adatokat biztosít a kvantum-algoritmusnak 
 
 ## <a name="partial-application"></a>Részleges alkalmazás
 
-[Függvény](xref:microsoft.quantum.glossary#function) vagy [művelet](xref:microsoft.quantum.glossary#operation) hívása az összes szükséges bemenet nélkül. Ez egy új [meghívót](xref:microsoft.quantum.glossary#callable) ad vissza, amely csak a hiányzó (aláhúzásjel által jelzett) paramétereket adja meg, amelyeket egy későbbi alkalmazásban kell megadni. Például a függvény `MyFunc(x : int, y : int) : int {return x + y;}` használatával részben alkalmazhat egy új függvényt `let NewFunc = MyFunc(_, 3)` . Az új függvényt később is meghívhatja a hiányzó paraméterrel, `NewFunc(2)` amely az *5* értéket adja vissza.  További információ: [részleges alkalmazás](xref:microsoft.quantum.guide.operationsfunctions#partial-application).
+[Függvény](xref:microsoft.quantum.glossary#function) vagy [művelet](xref:microsoft.quantum.glossary#operation) hívása az összes szükséges bemenet nélkül. Ez egy új [meghívót](xref:microsoft.quantum.glossary#callable) ad vissza, amely csak a hiányzó (aláhúzásjel által jelzett) paramétereket adja meg, amelyeket egy későbbi alkalmazásban kell megadni. További információ: [részleges alkalmazás](xref:microsoft.quantum.qsharp.partialapplication).
 
 ## <a name="pauli-operators"></a>Pauli-operátorok
 
@@ -190,7 +187,7 @@ Egy olyan alrutin, amely Adatfüggő adatokat biztosít a kvantum-algoritmusnak 
 
 ## <a name="quantum-circuit-diagram"></a>Quantum Circuit diagram
 
-Egy módszer, amely grafikusan ábrázolja az egyszerű kvantum-programok [műveleteinek](xref:microsoft.quantum.glossary#operation) (vagy [kapuinak](xref:microsoft.quantum.glossary#gate)) sorozatot, például: 
+Egy módszer, amely grafikusan ábrázolja a [Gates](xref:microsoft.quantum.glossary#gate) sorozatot az egyszerű kvantum-programokhoz, például: 
 
 ![Minta áramköri diagram](~/media/qpe.png). 
 
@@ -210,7 +207,7 @@ A kvantum-információk alapszintű egysége, amely *a klasszikus* számításte
 
 ## <a name="repeat-until-success"></a>Ismétlés a sikerig
 
-A probabilistically által sikeresnek bizonyuló kvantum-algoritmus. Hiba esetén a rutin újra próbálkozik, amíg a művelet sikertelen lesz (vagy elérte a korlátot). További információ: REPEAT to [Success (RUS)](xref:microsoft.quantum.guide.controlflow#repeat-until-success-loop)
+Olyan kvantum-algoritmusokban gyakran használt koncepció, amely egy bizonyos feltétel teljesülése esetén ismételten alkalmazza a számítást. Ha a feltétel nem teljesül, gyakran javításra van szükség a következő iteráció megadásával. További információ: [ Q# felhasználói útmutató](xref:microsoft.quantum.guide)
 
 ## <a name="standard-libraries"></a>Szabványos kódtárak
 
@@ -230,7 +227,7 @@ Az egyik [qubit](xref:microsoft.quantum.glossary#qubit) az adatok vagy a kvantum
 
 ## <a name="tuple"></a>Rekord
 
-Vesszővel tagolt értékek gyűjteménye, amely egyetlen értékként viselkedik. A rekord *típusát* a benne található értékek típusai határozzák meg. A-ben a Q# rekordok nem módosítható, és beágyazható, tömböket tartalmazhat, vagy egy tömbben használható. [immutable](xref:microsoft.quantum.glossary#immutable) További információ: a [rekord típusai](xref:microsoft.quantum.guide.types#tuple-types).
+Vesszővel tagolt értékek gyűjteménye, amely egyetlen értékként viselkedik. A rekord *típusát* a benne található értékek típusai határozzák meg. A-ben a Q# rekordok nem módosítható, és beágyazható, tömböket tartalmazhat, vagy egy tömbben használható. [immutable](xref:microsoft.quantum.glossary#immutable) További információ: [rekordok](xref:microsoft.quantum.qsharp.valueliterals#tuple-literals).
 
 ## <a name="unitary-operator"></a>Egységes operátor
 
@@ -238,4 +235,4 @@ Egy operátor, amelynek inverze megegyezik a [adjoint](xref:microsoft.quantum.gl
 
 ## <a name="user-defined-type"></a>Felhasználó által definiált típus
 
-Beépített vagy korábban definiált típusok gyűjteménye, amelyek egyetlen egységként is szerepelhetnek. További információ: [felhasználó által definiált típusok](xref:microsoft.quantum.guide.types#user-defined-types).
+Olyan egyéni típus, amely egy vagy több névvel ellátott vagy névtelen elemet tartalmazhat. További információ: [type deklarációs] Microsoft. Quantum. qsharp. typedeclarations # Type-deklarációs).

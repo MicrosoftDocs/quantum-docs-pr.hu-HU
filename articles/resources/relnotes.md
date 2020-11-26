@@ -9,12 +9,12 @@ uid: microsoft.quantum.relnotes
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 93ece8cbaa2ac8e6e0c9bb417e8f40130cb8a3fa
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 1c3c502b6487482f06820e07425b8516f259fb0d
+ms.sourcegitcommit: b930bb59a1ba8f41d2edc9ed98197109aa8c7f1b
 ms.translationtype: MT
 ms.contentlocale: hu-HU
 ms.lasthandoff: 11/26/2020
-ms.locfileid: "96192094"
+ms.locfileid: "96231791"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>A Microsoft Quantum Development Kit kibocsátási megjegyzései
 
@@ -173,7 +173,7 @@ Ez a kiadás jelentős hibajavításokat tartalmaz a 0.11.2003.2506-os verzióho
 
 A verzió a következőket tartalmazza:
 
-- Új támogatás a hozzáférés-módosítóhoz a alkalmazásban – Q# További információ: [fájl-struktúrák](xref:microsoft.quantum.guide.filestructure)
+- Új támogatás a hozzáférés-módosítóhoz a alkalmazásban – Q# További információ: [hozzáférés-módosítók](xref:microsoft.quantum.qsharp.accessmodifiers)
 - A .NET Core SDK 3.1-es verziójára frissítve
 
 A [kódtárak](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [fordítók](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [futtatókörnyezetek](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [minták](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed) és [Katák ](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed) lezárt lekéréses kérelmeinek teljes listáját itt tekintheti meg.  
@@ -258,7 +258,7 @@ A [kódtárak](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%
 
 A verzió a következőket tartalmazza:
 
-- A következőhöz tartozó [ragozott utasítások](xref:microsoft.quantum.guide.operationsfunctions#conjugations) új támogatása: Q#
+- A következőhöz tartozó [ragozott utasítások](xref:microsoft.quantum.qsharp.conjugations#conjugations) új támogatása: Q#
 - Új kódműveletek a fordítóban, például: csere, dokumentáció hozzáadása és a tömbelemek egyszerű frissítése
 - Új telepítési sablon és új projektparancsok a Visual Studio Code-bővítményhez
 - Az ApplyIf kombinátor új változatai, például a [Microsoft.Quantum.Canon.ApplyIfOne](xref:Microsoft.Quantum.Canon.ApplyIfOne)
@@ -275,7 +275,7 @@ A módosítások és a meglévő programok frissítésére vonatkozó utasítás
 
 A verzió a következőket tartalmazza:
 
-- Új indexelési helyeket a szeletelőtömbökhöz. További információért [lásd a nyelvi referenciát](xref:microsoft.quantum.guide.expressions#array-slices).
+- Új indexelés a szeletelő tömbökhöz: további információért [tekintse meg a nyelvi referenciát](xref:microsoft.quantum.qsharp.contextualexpressions#contextual-and-omitted-expressions) .
 - A [Microsoft Container Registryban](https://github.com/microsoft/ContainerRegistry)tárolt Docker-k [ Q# További információt az I adattárban](https://github.com/microsoft/iqsharp/blob/main/README.md) talál.
 - A [nyomkövetés-szimulátor](xref:microsoft.quantum.machines.qc-trace-simulator.intro) kompatibilitástörő változása, a konfigurációs beállítások frissítése, névváltozások; a frissített nevek a [.NET API-tallózóban](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.qctracesimulatorconfiguration) találhatók.
 
@@ -296,10 +296,10 @@ A módosítások és a meglévő programok frissítésére vonatkozó utasítás
 
 ### <a name="no-locq-language-syntax"></a>Q# nyelvi szintaxis
 Ez a kiadás új Q# nyelvi szintaxist helyez el:
-* Elnevezett elemek hozzáadása a [felhasználó által meghatározott típusokhoz](xref:microsoft.quantum.guide.types#user-defined-types).  
+* Megnevezett elemek hozzáadása [felhasználó által definiált típusok] Microsoft. Quantum. qsharp. typedeclarations # Type-deklarációs).  
 * A felhasználó által meghatározott típusú konstruktorok most már függvényként használhatók.
-* A [másolás és frissítéshez](xref:microsoft.quantum.guide.expressions#copy-and-update-expressions), valamint az [alkalmazás és újrafelhasználás](xref:microsoft.quantum.guide.variables#rebinding-of-mutable-symbols) új támogatása a felhasználó által meghatározott típusokban.
-* A [sikerességig ismétlődő](xref:microsoft.quantum.guide.controlflow#repeat-until-success-loop) ciklusok javítási blokkja már opcionális.
+* A [másolás és frissítéshez](xref:microsoft.quantum.qsharp.copyandupdateexpressions#copy-and-update-expressions), valamint az [alkalmazás és újrafelhasználás](xref:microsoft.quantum.qsharp.variabledeclarationsandreassignments#evaluate-and-reassign-statements) új támogatása a felhasználó által meghatározott típusokban.
+* A [sikerességig ismétlődő](xref:microsoft.quantum.qsharp.conditionalloops#repeat-statement) ciklusok javítási blokkja már opcionális.
 * A while ciklusok használata már támogatott a függvényekben (a műveletekben nem).
 
 ### <a name="library"></a>Kódtár 
@@ -327,10 +327,10 @@ A módosítások és a meglévő programok frissítésére vonatkozó utasítás
 
 ### <a name="no-locq-language-syntax"></a>Q# nyelvi szintaxis
 Ez a kiadás új Q# nyelvi szintaxist helyez el:
-* [Rövidített mód hozzáadása a kvantumműveletek](xref:microsoft.quantum.guide.operationsfunctions#controlled-and-adjoint-operations) (vezérlés és mellékletek) specializációinak `+` operátorokkal történő kifejezésére.  A régi szintaxis elavult.  A régi szintaxisok egyikét használó programok (például az `: adjoint`) továbbra is működni fognak, de egy fordítási idővel kapcsolatos figyelmeztetés jön létre.  
-* [Másolásra és frissítésre](xref:microsoft.quantum.guide.expressions#copy-and-update-expressions) szolgáló új `w/` operátor, amely egy meglévő tömb módosításaként fejezi ki egy tömb létrehozását.
-* Gyakori [alkalmazási és frissítési utasítások](xref:microsoft.quantum.guide.variables#rebinding-of-mutable-symbols) hozzáadása, például `+=`, `w/=`.
-* Új lehetőség az [open utasításokban](xref:microsoft.quantum.guide.filestructure#open-directives) használt névterek rövid nevének megadására.
+* [Rövidített mód hozzáadása a kvantumműveletek](xref:microsoft.quantum.qsharp.specializationdeclarations) (vezérlés és mellékletek) specializációinak `+` operátorokkal történő kifejezésére.  A régi szintaxis elavult.  A régi szintaxisok egyikét használó programok (például az `: adjoint`) továbbra is működni fognak, de egy fordítási idővel kapcsolatos figyelmeztetés jön létre.  
+* Vegyen fel egy új Ternáris-kezelőt a [Másolás és frissítés](xref:microsoft.quantum.qsharp.copyandupdateexpressions#copy-and-update-expressions)szolgáltatáshoz, `w/` `<-` amely egy meglévő tömb módosítására használható a tömb létrehozásához.
+* Adja hozzá a Common [Apply-and-reassign utasítást](xref:microsoft.quantum.qsharp.variabledeclarationsandreassignments#evaluate-and-reassign-statements), például:, `+=` `w/=` .
+* Új lehetőség az [open utasításokban](xref:microsoft.quantum.qsharp.namespaces#open-directives) használt névterek rövid nevének megadására.
 
 Ebben a kiadásban a tömbelemek már nem adhatók meg a set utasítások bal oldalán.  Ennek az az oka, hogy az a szintaxis azt sugallja, hogy a tömbök módosíthatók, pedig a művelet eredménye valójában mindig egy új, módosított tömb létrehozása volt.  Ehelyett fordítói hiba jön létre azzal a javaslattal, hogy az új `w/` másolási és frissítési operátort használja ugyanazon eredmény eléréséhez.  
 
@@ -405,7 +405,7 @@ A verzió a következőket tartalmazza:
 
 - A közösség által jelentett DumpRegister probléma hibajavítása ([148.](https://github.com/Microsoft/Quantum/issues/148)).
 
-- Új visszatérési képesség a [using utasításokból](xref:microsoft.quantum.guide.qubits#allocating-qubits).
+- Új lehetőség a [using-és a hitelfelvételi utasításból](xref:microsoft.quantum.qsharp.quantummemorymanagement#quantum-memory-management)való visszatéréshez.
 
 - Átalakított [útmutató az első lépésekhez](xref:microsoft.quantum.install).
 
@@ -428,7 +428,7 @@ A verzió a következőket tartalmazza:
 
 A verzió a következőket tartalmazza:
 
-- támogatja a BigInt nevű új egyszerű típust, amely egy tetszőleges méretű előjeles egész számot jelöl.  A [BigInt típusról](xref:microsoft.quantum.guide.types) itt talál további információt.
+- támogatja a BigInt nevű új egyszerű típust, amely egy tetszőleges méretű előjeles egész számot jelöl.  További információ a [BigInt](xref:microsoft.quantum.qsharp.valueliterals#bigint-literals).
 - hozzáadja a Toffoli nevű új, különleges, gyors szimulátort ad hozzá, amely nagy számú qubittel képes X-, CNEM- és több elem által vezérelt X kvantumműveleteket szimulálni.  A [Toffoli-szimulátorról](xref:microsoft.quantum.machines.toffoli-simulator) itt talál további információt.
 - egy egyszerű erőforrás-kalkulátort ad hozzá, amely a művelet adott példányának a kvantum-számítógépen való futtatásához szükséges erőforrásokat becsüli Q# meg.  Az [erőforrásbecslőről](xref:microsoft.quantum.machines.resources-estimator) itt talál további információt.
 

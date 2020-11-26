@@ -87,8 +87,8 @@ Szerző: bradben UID: Microsoft. Quantum. Concepts. Pauli MS. Author: v-benbra M
 
 Az előző megbeszélésekben a számítási szempontok alapján történik a mérés.
 Valójában más gyakori mérések történnek a kvantum-számítástechnikaban, amelyek egy adott szempontból megfelelőek a számítási szempontok alapján.
-A használata során Q# a leggyakrabban a legelterjedtebb típusú mérések lesznek a *Pauli-mérések* , amelyek általánosítják a számítási alapjait, hogy más alapértékekre, valamint a különböző qubits közötti paritásos méréseket is tartalmazzák.
-Ilyen esetekben gyakori, hogy megbeszéljük a Pauli-operátorok mérését, általában egy operátort, például az $ x, Y, z $ vagy $ z \otimes z, x \otimes x, x \otimes Y $ és így tovább.
+A használata során Q# a leggyakrabban a legelterjedtebb típusú mérések lesznek a *Pauli-mérések*, amelyek általánosítják a számítási alapjait, hogy más alapértékekre, valamint a különböző qubits közötti paritásos méréseket is tartalmazzák.
+Ilyen esetekben gyakori, hogy megbeszéljük a Pauli-operátorok mérését, általában egy operátort, például az $ x, Y, z $ vagy $ z \otimes z, x \otimes x, x \otimes Y $ és így tovább. 
 
 > [!TIP]
 > A-ben a Q# multi-Qubit Pauli-operátorokat általában típusú tömbök jelölik `Pauli[]` .
@@ -168,7 +168,7 @@ $$
 Így a két Pauli- $ Z operátorok kétféle $ $ $ , 1 és $ -1 eigenvalues álló mátrixot alkotnak $ .
 Az qubit esethez hasonlóan mindkettő fél helyet jelent, ami azt jelenti, hogy az elérhető vektor területének fele a $ + 1 $ eigenspace és a fennmaradó fele az $ -1 $ eigenspace tartozik.
 Általánosságban elmondható, hogy a kéttengelyes termék definíciója alapján a Pauli- $ Z operátorok és az identitás bármely tenser terméke is betartja $ ezt.
-Például:
+Példa:
 
 $$
 \begin{align}
@@ -252,7 +252,7 @@ Az egyik ilyen korlátozást a *nem klónozási tétel* adja meg.
 A No-Cloning tétel találó nevű.
 Az általános kvantum-állapotok egy kvantum-számítógép általi klónozását nem teszi lehetővé.
 A tétel bizonyítása rendkívül egyszerű.
-Habár a nem klónozási tétel teljes bizonyítéka egy kicsit túl technikai a vitánk számára, a további kiegészítő qubits nem a hatókörön belül van (a kiegészítő qubits a számítás során qubits használják, és könnyen használhatók és kezelhetők a alkalmazásban Q# , lásd a [kölcsönzött qubits](xref:microsoft.quantum.guide.qubits#borrowed-qubits)).
+Habár a nem klónozási tétel teljes bizonyítéka egy kicsit túl sok technikai megoldás a vitához, a további kiegészítő qubits nem a hatókörén belül.
 
 Egy ilyen kvantum-számítógép esetében a klónozási műveletet egy egységes mátrixtal kell ismertetni.
 Megtiltjuk a mérést, mivel az sérült a klónozott állapotot.
