@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Extensions.Math.ArcTan2
 title: ArcTan2 függvény
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Extensions.Math
@@ -14,18 +14,18 @@ qsharp.summary: >-
   >
 
   > Please use @"microsoft.quantum.math.arctan2".
-ms.openlocfilehash: 705ec28bf445c2bd6ef313f94a059da6ceb9408c
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 57c23d16d91c27ab63600e644ce64ac80c51af81
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92710420"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96213191"
 ---
 # <a name="arctan2-function"></a>ArcTan2 függvény
 
 Névtér: [Microsoft. Quantum. Extensions. Math](xref:Microsoft.Quantum.Extensions.Math)
 
-Csomag [](https://nuget.org/packages/)
+Csomag: [Microsoft. Quantum. QSharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 > [!WARNING]

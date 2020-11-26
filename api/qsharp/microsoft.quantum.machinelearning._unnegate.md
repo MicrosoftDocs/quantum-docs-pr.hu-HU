@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.MachineLearning._Unnegate
 title: _Unnegate függvény
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.MachineLearning
 qsharp.name: _Unnegate
 qsharp.summary: ''
-ms.openlocfilehash: c435db25e5302c180fb478c4810d25dbd9006454
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 1a2aef7db67df9890d1dfa4b6b0e370c51db4941
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92720569"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96212035"
 ---
 # <a name="_unnegate-function"></a>_Unnegate függvény
 
 Névtér: [Microsoft. Quantum. MachineLearning](xref:Microsoft.Quantum.MachineLearning)
 
-Csomag [](https://nuget.org/packages/)
+Csomag: [Microsoft. Quantum. MachineLearning](https://nuget.org/packages/Microsoft.Quantum.MachineLearning)
 
 
 

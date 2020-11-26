@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Extensions.Testing.AssertAllZero
 title: AssertAllZero művelet
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Extensions.Testing
@@ -14,18 +14,18 @@ qsharp.summary: >-
   >
 
   > Please use @"microsoft.quantum.diagnostics.assertallzero".
-ms.openlocfilehash: fdb78df887d11df42c380c146d6b3d4fb2899ad9
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: ac20aa616066cfcd9fee98331dfa956be58efead
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92711694"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96212579"
 ---
 # <a name="assertallzero-operation"></a>AssertAllZero művelet
 
 Névtér: [Microsoft. Quantum. Extensions. Testing](xref:Microsoft.Quantum.Extensions.Testing)
 
-Csomag [](https://nuget.org/packages/)
+Csomag: [Microsoft. Quantum. QSharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 > [!WARNING]
@@ -36,7 +36,7 @@ Csomag [](https://nuget.org/packages/)
 
 
 ```qsharp
-operation AssertAllZero (qubits : Qubit[]) : Unit
+operation AssertAllZero (qubits : Qubit[]) : Unit is Adj + Ctl
 ```
 
 

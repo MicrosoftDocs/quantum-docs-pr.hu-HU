@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.MachineLearning.EstimateClassificationProbabilities
 title: EstimateClassificationProbabilities művelet
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.MachineLearning
 qsharp.name: EstimateClassificationProbabilities
 qsharp.summary: Given a set of samples and a sequential classifier, estimates the classification probability for those samples by repeatedly measuring the output of the classifier on each sample.
-ms.openlocfilehash: 2b7845d39256f718cc3e415207b8a47b24620bdb
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 1cd56f6a6483b00afb168f8d84301e73eae9af65
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92709790"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96211899"
 ---
 # <a name="estimateclassificationprobabilities-operation"></a>EstimateClassificationProbabilities művelet
 
 Névtér: [Microsoft. Quantum. MachineLearning](xref:Microsoft.Quantum.MachineLearning)
 
-Csomag [](https://nuget.org/packages/)
+Csomag: [Microsoft. Quantum. MachineLearning](https://nuget.org/packages/Microsoft.Quantum.MachineLearning)
 
 
 Egy minta és egy szekvenciális osztályozó alapján a minták besorolási valószínűségét az egyes mintákon az osztályozó kimenetének ismételt mérésével becsüli meg.

@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Intrinsic.Exp
 title: Exp művelet
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Intrinsic
@@ -10,18 +10,18 @@ qsharp.summary: >-
   Applies the exponential of a multi-qubit Pauli operator.
 
   \begin{align} e^{i \theta [P_0 \otimes P_1 \cdots P_{N-1}]}, \end{align} where $P_i$ is the $i$th element of `paulis`, and where $N = $`Length(paulis)`.
-ms.openlocfilehash: b923374a954f90aba2deaead79dd419fbf67fea3
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 2eea29ec08260ea9cee1bafde80a0942e06f5abc
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92711526"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96212409"
 ---
 # <a name="exp-operation"></a>Exp művelet
 
 Névtér: [Microsoft. Quantum. belső](xref:Microsoft.Quantum.Intrinsic)
 
-Csomag [](https://nuget.org/packages/)
+Csomag: [Microsoft. Quantum. QSharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Egy több qubit Pauli-operátor exponenciális értékének alkalmazása.
@@ -29,7 +29,7 @@ Egy több qubit Pauli-operátor exponenciális értékének alkalmazása.
 \begin{align} e ^ {i \theta [P_0 \otimes P_1 \cdots P_ {N-1}]}, \end{align}, ahol $P _i $ a $i $ th eleme `paulis` , és hol $N = $ `Length(paulis)` .
 
 ```qsharp
-operation Exp (paulis : Pauli[], theta : Double, qubits : Qubit[]) : Unit
+operation Exp (paulis : Pauli[], theta : Double, qubits : Qubit[]) : Unit is Adj + Ctl
 ```
 
 
