@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Math.IsCoprimeI
 title: IsCoprimeI függvény
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Math
 qsharp.name: IsCoprimeI
 qsharp.summary: Returns true if $a$ and $b$ are co-prime and false otherwise.
-ms.openlocfilehash: bdfaecb61f56967e21bf85ba190638b43685214d
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 53131a755571ad1ac0a8a984bf229b16f67dbe51
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92723360"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96195358"
 ---
 # <a name="iscoprimei-function"></a>IsCoprimeI függvény
 
 Névtér: [Microsoft. Quantum. Math](xref:Microsoft.Quantum.Math)
 
-Csomag [](https://nuget.org/packages/)
+Csomag: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Igaz értéket ad vissza, ha a $a $ és a $b $ együttes elsődleges és hamis.

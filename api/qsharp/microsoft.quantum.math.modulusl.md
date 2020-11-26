@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Math.ModulusL
 title: Modulus függvény
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Math
 qsharp.name: ModulusL
 qsharp.summary: Computes the canonical residue of `value` modulo `modulus`.
-ms.openlocfilehash: e7e692059051fde295634c37892ec54e2cf1b095
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 5c9a8ceceac5d2cdac6b82f7f74a85e9443382a2
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92725097"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96194933"
 ---
 # <a name="modulusl-function"></a>Modulus függvény
 
 Névtér: [Microsoft. Quantum. Math](xref:Microsoft.Quantum.Math)
 
-Csomag [](https://nuget.org/packages/)
+Csomag: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Kiszámítja a többrészes adatmennyiség kanonikus maradékát `value` `modulus` .

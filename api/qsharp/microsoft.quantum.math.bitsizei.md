@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Math.BitSizeI
 title: BitSizeI függvény
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Math
@@ -10,18 +10,18 @@ qsharp.summary: >-
   For a non-negative integer `a`, returns the number of bits required to represent `a`.
 
   That is, returns the smallest $n$ such that $a < 2^n$.
-ms.openlocfilehash: e7cfe03908a8a394fc8ceb1c9facbf02f3db2d48
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 561450ef43144aa4d7820e1f15d9300018104acd
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92723193"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96195851"
 ---
 # <a name="bitsizei-function"></a>BitSizeI függvény
 
 Névtér: [Microsoft. Quantum. Math](xref:Microsoft.Quantum.Math)
 
-Csomag [](https://nuget.org/packages/)
+Csomag: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 A nem negatív egész szám esetén `a` a a jelölőhöz szükséges bitek számát adja vissza `a` .
