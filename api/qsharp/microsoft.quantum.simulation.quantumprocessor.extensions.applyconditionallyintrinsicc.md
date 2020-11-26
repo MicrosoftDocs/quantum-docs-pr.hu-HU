@@ -1,51 +1,51 @@
 ---
 uid: Microsoft.Quantum.Simulation.QuantumProcessor.Extensions.ApplyConditionallyIntrinsicC
 title: ApplyConditionallyIntrinsicC művelet
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Simulation.QuantumProcessor.Extensions
 qsharp.name: ApplyConditionallyIntrinsicC
 qsharp.summary: ''
-ms.openlocfilehash: 54367d89636eb69462040e83cc3c4b6a9f734c0c
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 847865c04bdaa51cec97826eddcdb95c66001e67
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92720137"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96228967"
 ---
 # <a name="applyconditionallyintrinsicc-operation"></a>ApplyConditionallyIntrinsicC művelet
 
 Névtér: [Microsoft. Quantum. szimulációs. QuantumProcessor. Extensions](xref:Microsoft.Quantum.Simulation.QuantumProcessor.Extensions)
 
-Csomag [](https://nuget.org/packages/)
+Csomag: [Microsoft. Quantum. QSharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 
 
 ```qsharp
-operation ApplyConditionallyIntrinsicC (measurementResults : Result[], resultsValues : Result[], onEqualOp : (Unit => Unit is Ctl), onNonEqualOp : (Unit => Unit is Ctl)) : Unit
+operation ApplyConditionallyIntrinsicC (measurementResults : Result[], resultsValues : Result[], onEqualOp : (Unit => Unit is Ctl), onNonEqualOp : (Unit => Unit is Ctl)) : Unit is Ctl
 ```
 
 
 ## <a name="input"></a>Bevitel
 
-### <a name="measurementresults--__invalidresult__"></a>measurementResults: __érvénytelen <Result>__ []
+### <a name="measurementresults--__invalidresult__"></a>measurementResults: __érvénytelen <Result>__[]
 
 
 
 
-### <a name="resultsvalues--__invalidresult__"></a>resultsValues: __érvénytelen <Result>__ []
+### <a name="resultsvalues--__invalidresult__"></a>resultsValues: __érvénytelen <Result>__[]
 
 
 
 
-### <a name="onequalop--unit--unit-ctl"></a>onEqualOp: [egység](xref:microsoft.quantum.lang-ref.unit) => [egység](xref:microsoft.quantum.lang-ref.unit) CTL
+### <a name="onequalop--unit--unit--is-ctl"></a>onEqualOp: [egység](xref:microsoft.quantum.lang-ref.unit) => [egység](xref:microsoft.quantum.lang-ref.unit)  CTL
 
 
 
 
-### <a name="onnonequalop--unit--unit-ctl"></a>onNonEqualOp: [egység](xref:microsoft.quantum.lang-ref.unit) => [egység](xref:microsoft.quantum.lang-ref.unit) CTL
+### <a name="onnonequalop--unit--unit--is-ctl"></a>onNonEqualOp: [egység](xref:microsoft.quantum.lang-ref.unit) => [egység](xref:microsoft.quantum.lang-ref.unit)  CTL
 
 
 

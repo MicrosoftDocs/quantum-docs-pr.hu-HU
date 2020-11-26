@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Math.SignD
 title: Aláírt függvény
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Math
 qsharp.name: SignD
 qsharp.summary: Returns an integer that indicates the sign of a number.
-ms.openlocfilehash: 7706ae8868e40c812fa396fbfcb9aaab815990cb
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 5e0b36a4a944c6a9f6c95dc45cc71b0296c3474e
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92720388"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96227403"
 ---
 # <a name="signd-function"></a>Aláírt függvény
 
 Névtér: [Microsoft. Quantum. Math](xref:Microsoft.Quantum.Math)
 
-Csomag [](https://nuget.org/packages/)
+Csomag: [Microsoft. Quantum. QSharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Egy szám előjelét jelző egész számot ad vissza.

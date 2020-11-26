@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.MachineLearning.TrainSequentialClassifier
 title: TrainSequentialClassifier művelet
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.MachineLearning
 qsharp.name: TrainSequentialClassifier
 qsharp.summary: Given the structure of a sequential classifier, trains the classifier on a given labeled training set.
-ms.openlocfilehash: 12c4df59941b682d9de798e6585b59d1c34924dc
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: d0b0587ffa93141739bcd6f39324571ffc28dacc
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92711303"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96228661"
 ---
 # <a name="trainsequentialclassifier-operation"></a>TrainSequentialClassifier művelet
 
 Névtér: [Microsoft. Quantum. MachineLearning](xref:Microsoft.Quantum.MachineLearning)
 
-Csomag [](https://nuget.org/packages/)
+Csomag: [Microsoft. Quantum. MachineLearning](https://nuget.org/packages/Microsoft.Quantum.MachineLearning)
 
 
 Egy szekvenciális osztályozó szerkezete miatt az osztályozó egy adott címkézett betanítási készleten van.
