@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Arrays.ElementsAt
 title: ElementsAt függvény
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
 qsharp.name: ElementsAt
 qsharp.summary: Returns the array's elements at a given range of indices.
-ms.openlocfilehash: b4bbba4dc83c4f9b89cdcb8ec32769f1c586357e
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 83b5e97085234e8249869f858400cba265d13058
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92719344"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96221453"
 ---
 # <a name="elementsat-function"></a>ElementsAt függvény
 
 Névtér: [Microsoft. Quantum. Arrays](xref:Microsoft.Quantum.Arrays)
 
-Csomag [](https://nuget.org/packages/)
+Csomag: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 A tömb azon elemeit adja vissza, amelyek az indexek adott tartományában vannak.
