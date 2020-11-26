@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Simulation.BlockEncodingToReflection
 title: BlockEncodingToReflection függvény
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Simulation
@@ -10,18 +10,18 @@ qsharp.summary: >-
   Converts a `BlockEncoding` into an equivalent `BLockEncodingReflection`.
 
   That is, given a `BlockEncoding` unitary $U$ that encodes some operator $H$ of interest, converts it into a `BlockEncodingReflection` $U'$ that encodes the same operator, but also satisfies $U'^\dagger = U'$. This increases the size of the auxiliary register of $U$ by one qubit.
-ms.openlocfilehash: a8b4c65f8c32f7f9185f1dbdacf8fc75fd4573b1
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 742d4f5623c7c26810998f6c96e2c7b05cc452d3
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92722072"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96225346"
 ---
 # <a name="blockencodingtoreflection-function"></a>BlockEncodingToReflection függvény
 
 Névtér: [Microsoft. Quantum. szimulációs](xref:Microsoft.Quantum.Simulation)
 
-Csomag [](https://nuget.org/packages/)
+Csomag: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Az a- `BlockEncoding` t megfelelőre konvertálja `BLockEncodingReflection` .
@@ -50,7 +50,7 @@ Egy egységes $U ' $, amely közösen működik a regisztereken `a` `s` , és bl
 
 Ez növeli a $U $ kiegészítő regisztrációjának méretét egy qubit.
 
-## <a name="references"></a>Referencia
+## <a name="references"></a>Hivatkozások
 
 - Hamilton szimuláció a Qubitization Guang felfüggeszti Hao Low, Isaac L. a https://arxiv.org/abs/1610.06546
 

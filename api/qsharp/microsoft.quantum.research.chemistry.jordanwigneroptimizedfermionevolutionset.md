@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Research.Chemistry.JordanWignerOptimizedFermionEvolutionSet
 title: JordanWignerOptimizedFermionEvolutionSet függvény
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Research.Chemistry
 qsharp.name: JordanWignerOptimizedFermionEvolutionSet
 qsharp.summary: Represents a dynamical generator as a set of simulatable gates and an expansion in the Pauli basis.
-ms.openlocfilehash: d2d916655b7538b39d5739d67dbb3fc9920cf67a
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 2cd555882792c29cb2ed71972739505df11fbabc
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92722142"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96225737"
 ---
 # <a name="jordanwigneroptimizedfermionevolutionset-function"></a>JordanWignerOptimizedFermionEvolutionSet függvény
 
 Névtér: [Microsoft. Quantum. Research. kémia](xref:Microsoft.Quantum.Research.Chemistry)
 
-Csomag [](https://nuget.org/packages/)
+Csomag: [Microsoft. Quantum. Research. kémia](https://nuget.org/packages/Microsoft.Quantum.Research.Chemistry)
 
 
 Szimulálható kapuk készletének és a Pauli-alapú bővítésnek a dinamikus generátort jelöli.

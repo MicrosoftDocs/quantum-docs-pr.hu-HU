@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerFermionImpl
 title: JordanWignerFermionImpl művelet
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Chemistry.JordanWigner
@@ -10,18 +10,18 @@ qsharp.summary: >-
   Represents a dynamical generator as a set of simulatable gates and an expansion in the JordanWigner basis.
 
   See [Dynamical Generator Modeling](../libraries/data-structures#dynamical-generator-modeling) for more details.
-ms.openlocfilehash: 616174d4d7f5ac8f4cea9454098d819468076648
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: e0e0afe0f0998acb9791ceb25975fe8005771ed0
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92714005"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96224938"
 ---
 # <a name="jordanwignerfermionimpl-operation"></a>JordanWignerFermionImpl művelet
 
 Névtér: [Microsoft. Quantum. kémia. JordanWigner](xref:Microsoft.Quantum.Chemistry.JordanWigner)
 
-Csomag [](https://nuget.org/packages/)
+Csomag: [Microsoft. Quantum. kémia](https://nuget.org/packages/Microsoft.Quantum.Chemistry)
 
 
 A dinamikus generátort szimulálható kapuk készlete jelöli, a JordanWigner pedig kibővíthető.
@@ -29,7 +29,7 @@ A dinamikus generátort szimulálható kapuk készlete jelöli, a JordanWigner p
 További részletekért lásd a [Dynamic Generator Modeling](../libraries/data-structures#dynamical-generator-modeling) című témakört.
 
 ```qsharp
-operation JordanWignerFermionImpl (generatorIndex : Microsoft.Quantum.Simulation.GeneratorIndex, stepSize : Double, qubits : Qubit[]) : Unit
+operation JordanWignerFermionImpl (generatorIndex : Microsoft.Quantum.Simulation.GeneratorIndex, stepSize : Double, qubits : Qubit[]) : Unit is Adj + Ctl
 ```
 
 

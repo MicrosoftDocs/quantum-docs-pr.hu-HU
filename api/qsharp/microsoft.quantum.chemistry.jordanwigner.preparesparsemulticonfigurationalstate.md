@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Chemistry.JordanWigner.PrepareSparseMultiConfigurationalState
 title: PrepareSparseMultiConfigurationalState művelet
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Chemistry.JordanWigner
 qsharp.name: PrepareSparseMultiConfigurationalState
 qsharp.summary: Sparse multi-configurational state preparation of trial state by adding excitations to initial trial state.
-ms.openlocfilehash: 1182f79a33784cdb49cb13db5cc97a0a45e59f9f
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 4d39be70c48ed49a1eec410ed6f8e5081dc1e8ca
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92713850"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96224768"
 ---
 # <a name="preparesparsemulticonfigurationalstate-operation"></a>PrepareSparseMultiConfigurationalState művelet
 
 Névtér: [Microsoft. Quantum. kémia. JordanWigner](xref:Microsoft.Quantum.Chemistry.JordanWigner)
 
-Csomag [](https://nuget.org/packages/)
+Csomag: [Microsoft. Quantum. kémia](https://nuget.org/packages/Microsoft.Quantum.Chemistry)
 
 
 Ritka, többkonfigurációs állapot előkészítése próbaverziós állapothoz a kezdeti próbaverziós állapotba való felizgatás hozzáadásával.

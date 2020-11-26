@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Simulation.InterpolatedEvolution
 title: InterpolatedEvolution függvény
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Simulation
 qsharp.name: InterpolatedEvolution
 qsharp.summary: Interpolates between two generators with a uniform schedule, returning an operation that applies simulated evolution under the resulting time-dependent generator to a qubit register.
-ms.openlocfilehash: 18026b9872f6a3344a1e5c2122f55927975ccb59
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 2ad907c02a2412dd4bf95630f401b5f1db5c8a08
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92710588"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96225108"
 ---
 # <a name="interpolatedevolution-function"></a>InterpolatedEvolution függvény
 
 Névtér: [Microsoft. Quantum. szimulációs](xref:Microsoft.Quantum.Simulation)
 
-Csomag [](https://nuget.org/packages/)
+Csomag: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 A két generátor közötti, egységes ütemtervtel rendelkező és egy olyan műveletet ad vissza, amely a szimulált evolúciót alkalmazza az eredményül kapott időfüggő generátorban egy qubit-regiszterbe.
@@ -51,7 +51,7 @@ Egy időfüggő szimuláló algoritmus, amely az evolúció szimulálása érdek
 
 
 
-## <a name="output--qubit--unit-adj--ctl"></a>Kimenet: [Qubit](xref:microsoft.quantum.lang-ref.qubit)[] => [egység](xref:microsoft.quantum.lang-ref.unit) : Adj + CTL
+## <a name="output--qubit--unit--is-adj--ctl"></a>Kimenet: [Qubit](xref:microsoft.quantum.lang-ref.qubit)[] => [egység](xref:microsoft.quantum.lang-ref.unit)  : Adj + CTL
 
 
 

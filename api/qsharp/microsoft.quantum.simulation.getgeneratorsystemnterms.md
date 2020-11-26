@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Simulation.GetGeneratorSystemNTerms
 title: GetGeneratorSystemNTerms függvény
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Simulation
 qsharp.name: GetGeneratorSystemNTerms
 qsharp.summary: Retrieves the number of terms in a `GeneratorSystem`.
-ms.openlocfilehash: 4e7dd58a6dc5c5d906370ec87152ac3244884c43
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 4b2bd679b3a6f7c30d7360712010c2c86c224ecf
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92724550"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96225193"
 ---
 # <a name="getgeneratorsystemnterms-function"></a>GetGeneratorSystemNTerms függvény
 
 Névtér: [Microsoft. Quantum. szimulációs](xref:Microsoft.Quantum.Simulation)
 
-Csomag [](https://nuget.org/packages/)
+Csomag: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Lekéri a használati feltételek számát `GeneratorSystem` .
