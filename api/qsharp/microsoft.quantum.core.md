@@ -1,19 +1,19 @@
 ---
 uid: Microsoft.Quantum.Core
 title: Microsoft. Quantum. Core névtér
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: namespace
 qsharp.name: Microsoft.Quantum.Core
 qsharp.summary: This namespace includes Q# core functions and operations.
-ms.openlocfilehash: 678cb9251b3be8bf134bbc76569821a07bb6d46e
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 634252c0fd358242d897d1eaedb3a624476b96cd
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92713262"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96213871"
 ---
-# <a name="microsoftquantumcore-namespace"></a><span data-ttu-id="5be77-102">Microsoft. Quantum. Core névtér</span><span class="sxs-lookup"><span data-stu-id="5be77-102">Microsoft.Quantum.Core namespace</span></span>
+# <a name="microsoftquantumcore-namespace"></a><span data-ttu-id="b1343-102">Microsoft. Quantum. Core névtér</span><span class="sxs-lookup"><span data-stu-id="b1343-102">Microsoft.Quantum.Core namespace</span></span>
 
-<span data-ttu-id="5be77-103">Ez a névtér Q # Core függvényeket és műveleteket tartalmaz.</span><span class="sxs-lookup"><span data-stu-id="5be77-103">This namespace includes Q# core functions and operations.</span></span>
+<span data-ttu-id="b1343-103">Ez a névtér Q # Core függvényeket és műveleteket tartalmaz.</span><span class="sxs-lookup"><span data-stu-id="b1343-103">This namespace includes Q# core functions and operations.</span></span>
 
