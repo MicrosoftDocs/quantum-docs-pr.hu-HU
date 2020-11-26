@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.MachineLearning._RandomlyRescale
 title: _RandomlyRescale művelet
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.MachineLearning
 qsharp.name: _RandomlyRescale
 qsharp.summary: Randomly rescales an input to either grow or shrink by a given factor.
-ms.openlocfilehash: 68b8d844b7ba3115f5a1a825e5b5d51d6cd045e7
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: a5ab5d3dc45fb51fe0ea7e201a9a936822285c3f
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92722534"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96196820"
 ---
 # <a name="_randomlyrescale-operation"></a>_RandomlyRescale művelet
 
 Névtér: [Microsoft. Quantum. MachineLearning](xref:Microsoft.Quantum.MachineLearning)
 
-Csomag [](https://nuget.org/packages/)
+Csomag: [Microsoft. Quantum. MachineLearning](https://nuget.org/packages/Microsoft.Quantum.MachineLearning)
 
 
 Véletlenszerűen átméretezi a bemenetet egy adott tényező növekedésével vagy zsugorodásával.

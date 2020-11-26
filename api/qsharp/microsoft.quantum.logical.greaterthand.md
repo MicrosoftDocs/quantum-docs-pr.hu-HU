@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Logical.GreaterThanD
 title: GreaterThanD függvény
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Logical
 qsharp.name: GreaterThanD
 qsharp.summary: Returns true if and only if a number is greater than another number.
-ms.openlocfilehash: 20414e80e08993a18331a8f0b385a1e4cc1255b3
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: c23d85cf513bb6d37e67260eeeb3b81b42e6771a
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92710001"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96198027"
 ---
 # <a name="greaterthand-function"></a>GreaterThanD függvény
 
 Névtér: [Microsoft. Quantum. Logic](xref:Microsoft.Quantum.Logical)
 
-Csomag [](https://nuget.org/packages/)
+Csomag: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Igaz értéket ad vissza, és csak akkor, ha egy szám nagyobb, mint egy másik szám.

@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Logical.And
 title: És függvény
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Logical
 qsharp.name: And
 qsharp.summary: Returns the Boolean conjunction of two values.
-ms.openlocfilehash: cc81f650216c4db219a79c4fe89a42447a4e95b8
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 279221ed785dd76e28146e4c22e70290936bf529
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92720797"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96198571"
 ---
 # <a name="and-function"></a>És függvény
 
 Névtér: [Microsoft. Quantum. Logic](xref:Microsoft.Quantum.Logical)
 
-Csomag [](https://nuget.org/packages/)
+Csomag: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Két érték logikai együttesét adja vissza.

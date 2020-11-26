@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.MachineLearning.ControlledRotation
 title: ControlledRotation-felhasználó által definiált típus
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: udt
 qsharp.namespace: Microsoft.Quantum.MachineLearning
 qsharp.name: ControlledRotation
 qsharp.summary: Describes a controlled rotation in terms of its target and control indices, rotation axis, and index into a model parameter vector.
-ms.openlocfilehash: afc425c16ab550fd414e656484c9ff6f0f8f3ef4
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 1e664b470caeba656ea4a73f70bbc0ef5fe76f7e
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92711359"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96196565"
 ---
 # <a name="controlledrotation-user-defined-type"></a>ControlledRotation-felhasználó által definiált típus
 
 Névtér: [Microsoft. Quantum. MachineLearning](xref:Microsoft.Quantum.MachineLearning)
 
-Csomag [](https://nuget.org/packages/)
+Csomag: [Microsoft. Quantum. MachineLearning](https://nuget.org/packages/Microsoft.Quantum.MachineLearning)
 
 
 Egy vezérelt rotációt mutat be a cél és a vezérlési indexek, a rotációs tengely és az index között a modell paraméterének vektora alapján.
