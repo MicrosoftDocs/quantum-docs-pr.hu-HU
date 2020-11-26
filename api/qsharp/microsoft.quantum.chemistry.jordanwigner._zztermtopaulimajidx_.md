@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Chemistry.JordanWigner._ZZTermToPauliMajIdx_
 title: _ZZTermToPauliMajIdx_ függvény
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Chemistry.JordanWigner
 qsharp.name: _ZZTermToPauliMajIdx_
 qsharp.summary: Converts a GeneratorIndex describing a ZZ term to an expression 'GeneratorIndex[]' in terms of Paulis.
-ms.openlocfilehash: 8c9223d54585f91e1616021bf0643e558d57589c
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: ca713260da2dd717cb1548ef86b7faa0d1b826aa
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92714130"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96214925"
 ---
 # <a name="_zztermtopaulimajidx_-function"></a>_ZZTermToPauliMajIdx_ függvény
 
 Névtér: [Microsoft. Quantum. kémia. JordanWigner](xref:Microsoft.Quantum.Chemistry.JordanWigner)
 
-Csomag [](https://nuget.org/packages/)
+Csomag: [Microsoft. Quantum. kémia](https://nuget.org/packages/Microsoft.Quantum.Chemistry)
 
 
 A ZZ kifejezést leíró GeneratorIndex alakítja át a (z) "GeneratorIndex []" kifejezésre, Paulis alapján.

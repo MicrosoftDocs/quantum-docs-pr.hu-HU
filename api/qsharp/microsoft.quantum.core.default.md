@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Core.Default
 title: Alapértelmezett függvény
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Core
 qsharp.name: Default
 qsharp.summary: Returns a default instance of the specified type.
-ms.openlocfilehash: 8ecf227cb705a040aa0a0e0bd5dd75b5b4ee1a11
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 1910d3648eda10ed329e35eb68fcf45cf357b6e5
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92713277"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96213939"
 ---
 # <a name="default-function"></a>Alapértelmezett függvény
 
 Névtér: [Microsoft. Quantum. Core](xref:Microsoft.Quantum.Core)
 
-Csomag [](https://nuget.org/packages/)
+Csomag: [Microsoft. Quantum. QSharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 A megadott típus alapértelmezett példányát adja vissza.
