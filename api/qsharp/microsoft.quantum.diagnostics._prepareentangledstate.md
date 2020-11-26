@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Diagnostics._prepareEntangledState
 title: _prepareEntangledState művelet
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Diagnostics
@@ -10,18 +10,18 @@ qsharp.summary: >-
   Given two registers, prepares the maximally entangled state between each pair of qubits on the respective registers. All qubits must start in the |0⟩ state.
 
   The result is that corresponding pairs of qubits from each register are in the $\bra{\beta_{00}}\ket{\beta_{00}}$.
-ms.openlocfilehash: 384dad5905cec50b500028e1bc352a742122b299
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 97a55b4bb85095c7d8e8432dfcd1c6d6f7e93cdc
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92713136"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96223935"
 ---
 # <a name="_prepareentangledstate-operation"></a>_prepareEntangledState művelet
 
 Névtér: [Microsoft. Quantum. Diagnostics](xref:Microsoft.Quantum.Diagnostics)
 
-Csomag [](https://nuget.org/packages/)
+Csomag: [Microsoft. Quantum. QSharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 A két regisztráció során a rendszer előkészíti a maximálisan kusza állapotot a megfelelő regisztereken található egyes qubits között.
@@ -30,7 +30,7 @@ Minden qubits a (z) | 0 ⟩ állapotban kell kezdődnie.
 Ennek eredményeképpen az egyes regisztrációk qubits tartozó párok a $ \bra{\ beta_ {00} } \ket{\ beta_} $ értékben találhatók {00} .
 
 ```qsharp
-operation _prepareEntangledState (left : Qubit[], right : Qubit[]) : Unit
+operation _prepareEntangledState (left : Qubit[], right : Qubit[]) : Unit is Adj + Ctl
 ```
 
 

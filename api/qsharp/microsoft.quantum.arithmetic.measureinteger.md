@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.MeasureInteger
 title: MeasureInteger művelet
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Arithmetic
 qsharp.name: MeasureInteger
 qsharp.summary: Measures the content of a quantum register and converts it to an integer. The measurement is performed with respect to the standard computational basis, i.e., the eigenbasis of `PauliZ`.
-ms.openlocfilehash: 7cd2d93332eb168c7c2be92a3b910033ca8c10ae
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: e3ff06e5cbb2ef8a63e4ad12308b382347c90fc3
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92720965"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96222643"
 ---
 # <a name="measureinteger-operation"></a>MeasureInteger művelet
 
 Névtér: [Microsoft. Quantum. aritmetika](xref:Microsoft.Quantum.Arithmetic)
 
-Csomag [](https://nuget.org/packages/)
+Csomag: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 A kvantum-regiszter tartalmát méri, és egy egész számra konvertálja. A mérés a standard számítási alapon történik, azaz a eigenbasis `PauliZ` .

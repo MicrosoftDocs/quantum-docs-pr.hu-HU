@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Convert.PauliArrayAsInt
 title: PauliArrayAsInt függvény
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Convert
 qsharp.name: PauliArrayAsInt
 qsharp.summary: Encodes a multi-qubit Pauli operator represented as an array of single-qubit Pauli operators into an integer.
-ms.openlocfilehash: f8ec468dd0f0cfd0d868dfc79ff715b3b4fc2f4a
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 6077110cc07c8626b22eb404c1de096ed43efcc3
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92713374"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96224241"
 ---
 # <a name="pauliarrayasint-function"></a>PauliArrayAsInt függvény
 
 Névtér: [Microsoft. Quantum. Convert](xref:Microsoft.Quantum.Convert)
 
-Csomag [](https://nuget.org/packages/)
+Csomag: [Microsoft. Quantum. QSharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Egy több qubit Pauli-operátort kódol egy egész számra, amely egy qubit Pauli-operátorok tömbje.

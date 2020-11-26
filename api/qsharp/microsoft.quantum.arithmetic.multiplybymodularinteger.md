@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.MultiplyByModularInteger
 title: MultiplyByModularInteger művelet
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Arithmetic
 qsharp.name: MultiplyByModularInteger
 qsharp.summary: Performs modular multiplication by an integer constant on a qubit register.
-ms.openlocfilehash: 6deced7862ab4cb74315219eaaab97380cdf0f92
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 080414d208a2a0c114857db8e93efb4cd74a4d8d
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92719789"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96222575"
 ---
 # <a name="multiplybymodularinteger-operation"></a>MultiplyByModularInteger művelet
 
 Névtér: [Microsoft. Quantum. aritmetika](xref:Microsoft.Quantum.Arithmetic)
 
-Csomag [](https://nuget.org/packages/)
+Csomag: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 A qubit-regiszterben egy egész állandó használatával hajtja végre a moduláris szorzást.
 
 ```qsharp
-operation MultiplyByModularInteger (constMultiplier : Int, modulus : Int, multiplier : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit
+operation MultiplyByModularInteger (constMultiplier : Int, modulus : Int, multiplier : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit is Adj + Ctl
 ```
 
 

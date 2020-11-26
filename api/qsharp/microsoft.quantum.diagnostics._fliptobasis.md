@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Diagnostics._flipToBasis
 title: _flipToBasis művelet
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Diagnostics
@@ -12,18 +12,18 @@ qsharp.summary: >-
   The correspondence between value of `basis[k]` and $\ket{\psi_k}$ is the following:
 
   - `basis[k]=0` $\rightarrow \ket{0}$. - `basis[k]=1` $\rightarrow \ket{1}$. - `basis[k]=2` $\rightarrow \ket{+}$. - `basis[k]=3` $\rightarrow \ket{i}$ ( +1 eigenstate of Pauli Y ).
-ms.openlocfilehash: e074ed2ae259f6aef49a8d327ce518a9e2caebfa
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 1581a1267902ceee81d6f01348f4ee718e49ee47
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92713150"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96223986"
 ---
 # <a name="_fliptobasis-operation"></a>_flipToBasis művelet
 
 Névtér: [Microsoft. Quantum. Diagnostics](xref:Microsoft.Quantum.Diagnostics)
 
-Csomag [](https://nuget.org/packages/)
+Csomag: [Microsoft. Quantum. QSharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 A $ \ket {0} \otimes\cdots\ket {0} $ és $ \ket{\ psi_0} \otimes \ket{\ psi_ {n-1}} $ unitaries alkalmazza, ahol a $ \ket{\ psi_k} $ érték függ `basis[k]` .
@@ -36,7 +36,7 @@ Az érték `basis[k]` és a $ \ket{\ psi_k} $ közötti megfelelés a következ�
 - `basis[k]=3` $ \rightarrow \ket{i} $ (+ 1 eigenstate: Pauli Y).
 
 ```qsharp
-operation _flipToBasis (basis : Int[], qubits : Qubit[]) : Unit
+operation _flipToBasis (basis : Int[], qubits : Qubit[]) : Unit is Adj + Ctl
 ```
 
 

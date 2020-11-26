@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.GreaterThan
 title: GreaterThan művelet
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Arithmetic
 qsharp.name: GreaterThan
 qsharp.summary: Applies a greater-than comparison between two integers encoded into qubit registers, flipping a target qubit based on the result of the comparison.
-ms.openlocfilehash: b7214b43dacd07b4750be4b681f30937185ac953
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 644d68affbdb508938f76de5025a1a463e7284e2
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92721133"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96223085"
 ---
 # <a name="greaterthan-operation"></a>GreaterThan művelet
 
 Névtér: [Microsoft. Quantum. aritmetika](xref:Microsoft.Quantum.Arithmetic)
 
-Csomag [](https://nuget.org/packages/)
+Csomag: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Több mint összehasonlítást alkalmaz a qubit-regiszterbe kódolt két egész szám között, az összehasonlítás eredményétől függően a célként megadott qubit.
 
 ```qsharp
-operation GreaterThan (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, result : Qubit) : Unit
+operation GreaterThan (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, result : Qubit) : Unit is Adj + Ctl
 ```
 
 
@@ -58,7 +58,7 @@ Egyetlen qubit, amely akkor lesz felfordítva, ha $x > y $ értéket.
 
 A (z) $x-y = (x ' + y) ' $ értéket használja, ahol a "az egymást kiegészítő értéket jelöli.
 
-## <a name="references"></a>Referencia
+## <a name="references"></a>Hivatkozások
 
 - Steven A. Cuccaro, Thomas G. Drapérier, Samuel A. Kutin, David Petra Moulton: "egy új kvantum-hullám-Carry összeadás Circuit", 2004.
   https://arxiv.org/abs/quant-ph/0410184v1

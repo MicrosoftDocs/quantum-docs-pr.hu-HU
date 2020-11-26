@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.IncrementByInteger
 title: IncrementByInteger művelet
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Arithmetic
 qsharp.name: IncrementByInteger
 qsharp.summary: Increments an unsigned quantum register by a classical integer, using phase rotations.
-ms.openlocfilehash: 363d48d697e3b2dad4d4896e6b1e701864649d9b
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: fa5e75e91206aa5f33233c8a54d6e9e7ac2950e3
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92721109"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96222966"
 ---
 # <a name="incrementbyinteger-operation"></a>IncrementByInteger művelet
 
 Névtér: [Microsoft. Quantum. aritmetika](xref:Microsoft.Quantum.Arithmetic)
 
-Csomag [](https://nuget.org/packages/)
+Csomag: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Megnöveli egy előjel nélküli kvantum-regisztrációt egy klasszikus egész számmal, fázisok forgása alapján.
 
 ```qsharp
-operation IncrementByInteger (increment : Int, target : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit
+operation IncrementByInteger (increment : Int, target : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit is Adj + Ctl
 ```
 
 

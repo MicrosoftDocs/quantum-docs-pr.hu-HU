@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Convert.IntAsBoolArray
 title: IntAsBoolArray függvény
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Convert
 qsharp.name: IntAsBoolArray
 qsharp.summary: Produces a binary representation of a positive integer, using the little-endian representation for the returned array.
-ms.openlocfilehash: 9783a49a77bdc39ffe8c7725196eb620f4cd0100
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: f89cb3d7ca29d7deaaf49573b2670534166caded
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92713458"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96224343"
 ---
 # <a name="intasboolarray-function"></a>IntAsBoolArray függvény
 
 Névtér: [Microsoft. Quantum. Convert](xref:Microsoft.Quantum.Convert)
 
-Csomag [](https://nuget.org/packages/)
+Csomag: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Egy pozitív egész szám bináris ábrázolását állítja elő a visszaadott tömb kis endian ábrázolásával.

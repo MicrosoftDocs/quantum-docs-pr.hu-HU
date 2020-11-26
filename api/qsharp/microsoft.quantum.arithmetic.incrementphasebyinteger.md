@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.IncrementPhaseByInteger
 title: IncrementPhaseByInteger művelet
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Arithmetic
 qsharp.name: IncrementPhaseByInteger
 qsharp.summary: Increments an unsigned quantum register by a classical integer, using phase rotations.
-ms.openlocfilehash: fb67455dadbc7a2f38880581f0e413a747faa8ef
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 54b83b3d4460c05478543c51f8f9c0b0e7f5b1fa
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92721073"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96222915"
 ---
 # <a name="incrementphasebyinteger-operation"></a>IncrementPhaseByInteger művelet
 
 Névtér: [Microsoft. Quantum. aritmetika](xref:Microsoft.Quantum.Arithmetic)
 
-Csomag [](https://nuget.org/packages/)
+Csomag: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Megnöveli egy előjel nélküli kvantum-regisztrációt egy klasszikus egész számmal, fázisok forgása alapján.
 
 ```qsharp
-operation IncrementPhaseByInteger (increment : Int, target : Microsoft.Quantum.Arithmetic.PhaseLittleEndian) : Unit
+operation IncrementPhaseByInteger (increment : Int, target : Microsoft.Quantum.Arithmetic.PhaseLittleEndian) : Unit is Adj + Ctl
 ```
 
 
@@ -56,9 +56,9 @@ Vegye figyelembe, hogy egyszerűsítettük az áramkört, mert a növekmény egy
 
 Tekintse meg a [ arXiv: Quant-pH/0008033v1 6. oldalának ](https://arxiv.org/pdf/quant-ph/0008033.pdf#page=6) ábráját az áramköri diagramhoz és magyarázathoz.
 
-## <a name="references"></a>Referencia
+## <a name="references"></a>Hivatkozások
 
-- [*Thomas G. drapérier* , arXiv: Quant – pH/0008033](https://arxiv.org/pdf/quant-ph/0008033v1.pdf)
+- [*Thomas G. drapérier*, arXiv: Quant – pH/0008033](https://arxiv.org/pdf/quant-ph/0008033v1.pdf)
 
 ## <a name="see-also"></a>Lásd még:
 
