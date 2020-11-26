@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyToTailA
 title: ApplyToTailA művelet
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyToTailA
 qsharp.summary: Applies an operation to the last element of an array.
-ms.openlocfilehash: a84fa6c53f3e11bef82b8b83fffa1451a8299511
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 2cacac14ad6e5003f1a50d9b84c4e0f96950dd7d
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92716973"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96207921"
 ---
 # <a name="applytotaila-operation"></a>ApplyToTailA művelet
 
 Névtér: [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Csomag [](https://nuget.org/packages/)
+Csomag: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Egy műveletet alkalmaz egy tömb utolsó elemére.
 
 ```qsharp
-operation ApplyToTailA<'T> (op : ('T => Unit is Adj), targets : 'T[]) : Unit
+operation ApplyToTailA<'T> (op : ('T => Unit is Adj), targets : 'T[]) : Unit is Adj
 ```
 
 
@@ -34,7 +34,7 @@ A művelet `op` és a célok tömbje `targets` érvényes `op(Tail(targets))` .
 
 ## <a name="input"></a>Bevitel
 
-### <a name="op--t--unit-adj"></a>op: nem =>i [egység](xref:microsoft.quantum.lang-ref.unit) – Adj
+### <a name="op--t--unit--is-adj"></a>op: 'T => [egység](xref:microsoft.quantum.lang-ref.unit)
 
 Egy alkalmazni kívánt művelet.
 

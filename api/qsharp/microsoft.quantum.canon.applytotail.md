@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyToTail
 title: ApplyToTail művelet
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyToTail
 qsharp.summary: Applies an operation to the last element of an array.
-ms.openlocfilehash: 72b55ec7161d5f6af5e4cb512c648078516c3b4e
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 6754d41e63ea0357487fa2f62bd9209843a93347
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92716986"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96207972"
 ---
 # <a name="applytotail-operation"></a>ApplyToTail művelet
 
 Névtér: [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Csomag [](https://nuget.org/packages/)
+Csomag: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Egy műveletet alkalmaz egy tömb utolsó elemére.

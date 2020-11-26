@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Canon.DelayA
 title: Késleltetési művelet
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: DelayA
 qsharp.summary: Applies a given operation with a delay.
-ms.openlocfilehash: 77c40633824ccd9250252804b08d7400936515dd
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 7c3325fd98a85c7e9123f383cbdc0a68627222c8
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92716300"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96207139"
 ---
 # <a name="delaya-operation"></a>Késleltetési művelet
 
 Névtér: [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Csomag [](https://nuget.org/packages/)
+Csomag: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Egy megadott műveletet késleltetve alkalmaz.
 
 ```qsharp
-operation DelayA<'T> (op : ('T => Unit is Adj), arg : 'T, aux : Unit) : Unit
+operation DelayA<'T> (op : ('T => Unit is Adj), arg : 'T, aux : Unit) : Unit is Adj
 ```
 
 
@@ -36,7 +36,7 @@ A kifejezés `Delay(op, arg, _)` egy olyan művelet, amely `op` a `arg` hívása
 
 ## <a name="input"></a>Bevitel
 
-### <a name="op--t--unit-adj"></a>op: nem =>i [egység](xref:microsoft.quantum.lang-ref.unit) – Adj
+### <a name="op--t--unit--is-adj"></a>op: 'T => [egység](xref:microsoft.quantum.lang-ref.unit)
 
 Egy alkalmazni kívánt művelet.
 

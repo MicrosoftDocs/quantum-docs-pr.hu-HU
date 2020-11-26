@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Canon.CZ
 title: CZ-művelet
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
@@ -10,18 +10,18 @@ qsharp.summary: >-
   Applies the controlled-Z (CZ) gate to a pair of qubits.
 
   $$ \begin{align} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 1 & 0 \\\\ 0 & 0 & 0 & -1 \end{align}, $$ where rows and columns are organized as in the quantum concepts guide.
-ms.openlocfilehash: bc38cd43a0dcaf7aea735ef6468a394e91c85593
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 419082dbf8f96a9fe2dfabeab77e1823cb59a8f2
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92716343"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96207207"
 ---
 # <a name="cz-operation"></a>CZ-művelet
 
 Névtér: [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Csomag [](https://nuget.org/packages/)
+Csomag: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 A vezérelt-Z (CZ) kaput alkalmazza egy pár qubits.
@@ -29,7 +29,7 @@ A vezérelt-Z (CZ) kaput alkalmazza egy pár qubits.
 $ $ \begin{align} 1 & 0 & 0 & 0 \\ \\ 0 & 1 & 0 & 0 \\ \\ 0 & 0 & 1 & 0 \\ \\ 0 & 0 & 0 &-1 \end{align}, $ $, ahol a sorok és oszlopok a Quantum Concepts útmutatóban vannak rendszerezve.
 
 ```qsharp
-operation CZ (control : Qubit, target : Qubit) : Unit
+operation CZ (control : Qubit, target : Qubit) : Unit is Adj + Ctl
 ```
 
 

@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyWithCA
 title: ApplyWithCA művelet
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyWithCA
 qsharp.summary: Given two operations, applies one as conjugated with the other.
-ms.openlocfilehash: abc62791416e78c1b2937a226327b71da8b8e288
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: e86c452e9693c5a4d0d4e5a36471ab46bbf66dfe
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92716888"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96208142"
 ---
 # <a name="applywithca-operation"></a>ApplyWithCA művelet
 
 Névtér: [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Csomag [](https://nuget.org/packages/)
+Csomag: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 A két művelet miatt a rendszer az egyiket a másikkal konjugáltként alkalmazza.
 
 ```qsharp
-operation ApplyWithCA<'T> (outerOperation : ('T => Unit is Adj), innerOperation : ('T => Unit is Adj + Ctl), target : 'T) : Unit
+operation ApplyWithCA<'T> (outerOperation : ('T => Unit is Adj), innerOperation : ('T => Unit is Adj + Ctl), target : 'T) : Unit is Adj + Ctl
 ```
 
 
@@ -34,12 +34,12 @@ A két művelet, illetve a $U $ és a $V $ közötti, az egységes operátorok �
 
 ## <a name="input"></a>Bevitel
 
-### <a name="outeroperation--t--unit-adj"></a>outerOperation: 'T => [egység](xref:microsoft.quantum.lang-ref.unit) – Adj
+### <a name="outeroperation--t--unit--is-adj"></a>outerOperation: 'T => [egység](xref:microsoft.quantum.lang-ref.unit)
 
 $U $ művelet, amelyet a $V $ konjugátumhoz kell használni. Vegye figyelembe, hogy a külső műveletnek $U $ adjointable kell lennie, de nem feltétlenül szükséges.
 
 
-### <a name="inneroperation--t--unit-adj--ctl"></a>innerOperation: 'T => [egység](xref:microsoft.quantum.lang-ref.unit) , adj + CTL
+### <a name="inneroperation--t--unit--is-adj--ctl"></a>innerOperation: 'T => [egység](xref:microsoft.quantum.lang-ref.unit)  az Adj + CTL
 
 Az a művelet, $V $ konjugált.
 
