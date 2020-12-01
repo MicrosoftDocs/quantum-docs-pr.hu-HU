@@ -1,0 +1,32 @@
+- name: Kifejezések a Q#-ban
+  href: index.md
+- name: Elsőbbség és asszociativitás
+  href: precedenceandassociativity.md
+- name: Operátorok
+  items:
+    - name: Másolható és frissíthető kifejezések
+      href: copyandupdateexpressions.md
+    - name: Feltételes kifejezések
+      href: conditionalexpressions.md
+    - name: Összehasonlító kifejezések
+      href: comparativeexpressions.md
+    - name: Logikai kifejezések
+      href: logicalexpressions.md
+    - name: Bitenkénti kifejezések
+      href: bitwiseexpressions.md
+    - name: Aritmetikai kifejezések
+      href: arithmeticexpressions.md
+    - name: Összefűzések
+      href: concatenation.md
+- name: Módosítók és kombinátorok
+  items:
+    - name: Részleges alkalmazás
+      href: partialapplication.md
+    - name: Funktoralkalmazás
+      href: functorapplication.md
+    - name: Elemhozzáférési kifejezések
+      href: itemaccessexpressions.md
+- name: Környezetfüggő kifejezések
+  href: contextualexpressions.md
+- name: Szövegkonstansok és alapértelmezett értékek
+  href: valueliterals.md

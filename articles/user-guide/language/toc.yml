@@ -1,4 +1,12 @@
-- name: Típusok a Q#-ban
-  href: types.md
+- name: Áttekintés
+  href: index.md
+- name: Programstruktúra
+  href: programstructure/toc.yml
+- name: Utasítások
+  href: statements/toc.yml
 - name: Kifejezések
-  href: expressions.md
+  href: expressions/toc.yml
+- name: Típusrendszer
+  href: typesystem/toc.yml
+- name: Nyelvtan
+  href: grammar.md

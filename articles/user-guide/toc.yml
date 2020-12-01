@@ -1,13 +1,13 @@
 - name: Áttekintés/tartalom
   href: index.md
-- name: A Q# alapjai
-  href: basics.md
+- name: Q#-programok
+  href: programs.md
 - name: A Q#-programok futtatásának módjai
   href: host-programs.md
-- name: A Q# nyelv
+- name: Tesztelés és hibakeresés
+  href: testing-debugging.md
+- name: Q# nyelvi útmutatók
   href: language/toc.yml
-- name: A Q# használata
-  href: using-qsharp/toc.yml
 - name: Szimulátorok és erőforrásbecslők
   href: machines/toc.yml
 - name: Q#-kódtárak

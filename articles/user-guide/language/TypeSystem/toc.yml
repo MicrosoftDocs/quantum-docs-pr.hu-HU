@@ -1,0 +1,14 @@
+- name: Típusrendszer a Q#-ban
+  href: index.md
+- name: Kvantumadattípusok
+  href: quantumdatatypes.md
+- name: Módosíthatatlanság
+  href: immutability.md
+- name: Műveletek és függvények
+  href: operationsandfunctions.md
+- name: Egyszeres rekordok egyenértéke
+  href: singletontupleequivalence.md
+- name: Altípusok és variancia
+  href: subtypingandvariance.md
+- name: Típus-paraméterezés
+  href: typeparameterizations.md
