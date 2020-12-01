@@ -10,12 +10,12 @@ uid: microsoft.quantum.install.standalone
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: a6823888dcbe8cf79f0045d2615fe8b889dcc7c3
-ms.sourcegitcommit: a13c7c86fd52a05cbf129b8dd713d6586ca1cc2c
+ms.openlocfilehash: eeb567dedc1b8123b32faf7ed3a42bb51f16a7d2
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: HT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93376422"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96228729"
 ---
 # <a name="develop-with-no-locq-applications-in-an-ide"></a>Fejlesztés Q#-alkalmazásokkal egy IDE-ben
 
@@ -63,7 +63,7 @@ Kövesse az alkalmazott fejlesztési környezetre vonatkozó fülön található
 
 1. Kattintson a **View (Nézet)**  -> **Command Palette (Parancskatalógus)** elemre, és válassza a **Q#: Create New Project (Q#: Új projekt létrehozása)** lehetőséget.
 2. Kattintson a **Standalone console application (Különálló konzolalkalmazás)** elemre.
-3. Keresse meg a projekt mentési helyét, majd kattintson a **Create Project (Projekt létrehozása)** lehetőségre.
+3. Lépjen a projekt mentési helyére. Adja meg a projekt nevét, és kattintson a **Create project** (Projekt létrehozása) gombra.
 4. A projekt sikeres létrehozását követően kattintson az **Open new project... (Új projekt megnyitása...)** lehetőségre a jobb alsó sarokban.
 
 Vizsgálja meg a projektet. Látni fog egy `Program.qs` nevű forrásfájlt. Ez egy Q#-program, amely egy egyszerű műveletet határoz meg az üzenetek konzolon való megjelenítéséhez.
@@ -84,7 +84,7 @@ Ellenőrizze a Visual Studio telepítését egy Q# `Hello World`-alkalmazás lé
 Új Q#-alkalmazás létrehozása
 
 1. Nyissa meg a Visual Studiót, majd kattintson a **File (Fájl)**  -> **New (Új)**  -> **Project (Projekt)** elemekre.
-2. A keresőmezőbe írja be a következőt: `Q#`. Ezután válassza ki a **Q#-alkalmazást** , és kattintson a **Next (Tovább)** elemre.
+2. A keresőmezőbe írja be a következőt: `Q#`. Ezután válassza ki a **Q#-alkalmazást**, és kattintson a **Next (Tovább)** elemre.
 3. Adja meg az alkalmazás nevét és helyét, majd kattintson a **Create (Létrehozás)** elemre.
 
 
