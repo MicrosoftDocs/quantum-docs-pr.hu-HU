@@ -9,12 +9,12 @@ uid: microsoft.quantum.machines.resources-estimator
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 57f6602effd25fff353a8fee7f27acc529ce82af
-ms.sourcegitcommit: c3c892ef35eae6926d0c4339d9d26bfd8be77e9a
+ms.openlocfilehash: de425c2d91c6528b13c3bedd81acb4b4273ed711
+ms.sourcegitcommit: 7c687495a79d75ae9e029e5a41baec84d9e07bb0
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96318490"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96604643"
 ---
 # <a name="quantum-development-kit-qdk-resources-estimator"></a>A Quantum Development Kit (QDK) erőforrásainak kalkulátora
 
@@ -28,9 +28,9 @@ Az erőforrás-kalkulátor használatával bármilyen Q# műveletet futtathat. T
 
 ### <a name="invoking-the-resources-estimator-from-c"></a>A C-ből származó erőforrások becslésének meghívása # 
 
-Ahogy más célgépek esetében is, először a `ResourceEstimator` osztály egy példányát kell létrehoznia, majd azt kell megadnia a művelet `Run` metódusának első paramétereként.
+Ahogy más célgépek esetében is, először a `ResourcesEstimator` osztály egy példányát kell létrehoznia, majd azt kell megadnia a művelet `Run` metódusának első paramétereként.
 
-Vegye figyelembe, hogy a `QuantumSimulator` osztálytól eltérően a `ResourceEstimator` osztály nem implementálja a <xref:System.IDisposable> felületet, így nem kell azt egy `using` utasításba belefoglalnia.
+Vegye figyelembe, hogy a `QuantumSimulator` osztálytól eltérően a `ResourcesEstimator` osztály nem implementálja a <xref:System.IDisposable> felületet, így nem kell azt egy `using` utasításba belefoglalnia.
 
 ```csharp
 using Microsoft.Quantum.Simulation.Core;
@@ -123,15 +123,15 @@ namespace Quantum.MyProgram
 
 Az erőforrások becslése a következő metrikákat követi nyomon:
 
-|Metric|Leírás|
+|Metrika|Leírás|
 |----|----|
 |__CNOT__    |A műveletek futtatási száma `CNOT` (más néven vezérelt Pauli X-műveletek).|
 |__QubitClifford__ |Egyetlen qubit Clifford-és Pauli-művelet futtatási száma.|
-|__mérték__    |A mérések futtatásának száma.  |
+|__Measure__    |A mérések futtatásának száma.  |
 |__R__    |A qubit-Forgások futtatásának száma, kivéve a `T` Clifford és a Pauli műveletet.  |
 |__T__    |A `T` műveletek és a konjugátumok futtatásának száma, beleértve a `T` műveleteket, a T_x = H. T. h és a T_y = a kifogyott. t. vízterületet.  |
 |__Mélység__|A művelet által futtatott Quantum Circuit mélysége Q# (lásd [alább](#depth-width-and-qubitcount)). Alapértelmezés szerint a mélységi metrika csak a `T` gateset számolja. További részletekért lásd a [részletes számlálót](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter).   |
-|__Szélessége__|A művelet által futtatott kvantum-kör szélessége Q# (lásd [alább](#depth-width-and-qubitcount)). Alapértelmezés szerint a mélységi metrika csak a `T` gateset számolja. További részletek: a [szélesség számlálója](xref:microsoft.quantum.machines.qc-trace-simulator.width-counter).   |
+|__Szélesség__|A művelet által futtatott kvantum-kör szélessége Q# (lásd [alább](#depth-width-and-qubitcount)). Alapértelmezés szerint a mélységi metrika csak a `T` gateset számolja. További részletek: a [szélesség számlálója](xref:microsoft.quantum.machines.qc-trace-simulator.width-counter).   |
 |__QubitCount__    |A művelet futtatása során lefoglalt qubits maximális számának alsó határa Q# . Lehetséges, hogy ez a metrika nem kompatibilis a __mélységgel__ (lásd alább).  |
 |__BorrowedWidth__    |A műveleten belül kölcsönzött qubits maximális száma Q# .  |
 
@@ -165,7 +165,7 @@ __OptimizeDepth = FALSE:__ A QubitManager a qubits újrafelhasználását javaso
 
 <xref:Microsoft.Quantum.Diagnostics.AssertMeasurementProbability>A <xref:Microsoft.Quantum.Diagnostics> névtérből való használatával információt adhat meg egy mérési művelet várható valószínűségéről. További információ: [Quantum Trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro)
 
-## <a name="see-also"></a>Lásd még
+## <a name="see-also"></a>További információ
 
 - [Quantum Trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro)
 - [Toffoli-kvantumszimulátor](xref:microsoft.quantum.machines.toffoli-simulator)
