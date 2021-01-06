@@ -9,12 +9,12 @@ ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 51e7b3bcf4402a4d0ba5647643f284e9f10c3bb3
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 72af3f5517b272d6d8159b158103b5af91d266b5
+ms.sourcegitcommit: c48cdafccb3487bf93d67fa80cdc64768445b691
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92692150"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97940886"
 ---
 # <a name="quantum-characterization-and-statistics"></a>Quantum jellemzés és statisztika #
 
@@ -56,7 +56,7 @@ Ezt úgy hangsúlyozzuk, hogy röviden leírja az iterációs fázisok becslés�
 
 Ha olyan bemeneti állapotot ad meg, amely nem eigenstate, azaz ha $U (m) \ket{\phi \_ j} = e ^ {im\phi \_ j} $, akkor a fázisok becslésének folyamata nem determinisztikus módon a kvantum-állapotot egyetlen energetikai eigenstate irányába.  A eigenstate végül az a eigenstate, amely a legvalószínűbb, hogy a megfigyelt terméket fogja létrehozni `Result` .
 
-A PE egyetlen lépése a következő, nem egységes átalakítást hajtja végre az állapot \begin{align} \ sum_j \sqrt{\Pr (\phi \_ j)} \ket{\phi \_ j} \mapsto \sum \_ j\frac {\ SQRT {\ PR (\phi \_ j)} \sqrt{\Pr (\text{result} | \phi \_ j)} \Ket{\phi \_ j}} {\sqrt{\Pr (\phi j \_ ) \sum \_ j \Pr (\text{result} | \phi \_ j)}}.
+A PE egyetlen lépése a következő, nem egységes átalakítást hajtja végre az állapot \begin{align} \ sum_j \sqrt{\Pr (\phi \_ j)} \ket{\phi \_ j} \mapsto \sum \_ j\frac {\ SQRT {\ PR (\phi \_ j)} \sqrt{\Pr (\text{result} | \phi \_ j)} \Ket{\phi \_ j}} {\sqrt{\Pr (\phi \_ j) \sum \_ k \Pr (\text{result} | \phi \_ k)}}.
 \end{align}, mivel ezt a folyamatot több értékre is megismétlik `Result` , a $ \ prod_k \pr (\text{result} \_ k | \phi j) $ maximális értékkel nem rendelkező eigenstates \_ exponenciálisan lesznek letiltva.
 Ennek eredményeképpen a következtetési folyamat általában egyetlen sajátérték rendelkező állapotokra lesz átszervezve, ha a kísérletek megfelelően vannak kiválasztva.
 
