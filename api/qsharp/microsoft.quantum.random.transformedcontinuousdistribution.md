@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Random.TransformedContinuousDistribution
 title: TransformedContinuousDistribution függvény
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Random
 qsharp.name: TransformedContinuousDistribution
 qsharp.summary: Given a continuous distribution, returns a new distribution that transforms the original by a given function.
-ms.openlocfilehash: b317eaaa0ff0180ea5d240464c96d1c6b59c9c70
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 353442a4245a9e20bb1e4c46d2e8a84d4c9534b0
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96226264"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98857773"
 ---
 # <a name="transformedcontinuousdistribution-function"></a>TransformedContinuousDistribution függvény
 
@@ -44,3 +44,15 @@ Az átalakítandó eredeti eloszlás.
 ## <a name="output--continuousdistribution"></a>Kimenet: [ContinuousDistribution](xref:Microsoft.Quantum.Random.ContinuousDistribution)
 
 Egy új, a által `distribution` a transzformációhoz kapcsolódó eloszlás `transform` .
+
+## <a name="example"></a>Példa
+
+A következő két eloszlás azonos:
+
+```qsharp
+let dist1 = ContinuousUniformDistribution(1.0, 2.0);
+let dist2 = TransformedContinuousDistribution(
+    PlusD(1.0, _),
+    ContinuousUniformDistribution(0.0, 1.0)
+);
+```

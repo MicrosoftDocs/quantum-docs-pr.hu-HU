@@ -1,6 +1,6 @@
 ---
 title: vektorok és mátrixok a kvantum-számítástechnikai leírásban: megismerheti a vektorok és mátrixok használatának alapjait.
-Szerző: QuantumWriter UID: Microsoft. Quantum. Concepts. vectors MS. Author: v-benbra MS. Date: 12/11/2017 MS. topic: No-Loc:
+Szerző: QuantumWriter UID: Microsoft. Quantum. Concepts. vectors MS. Author: v-benbra MS. Date: 12/11/2017 MS. topic: konceptuális No-Loc:
 - "Q#"
 - "$$v"
 - "$$"
@@ -85,7 +85,7 @@ Szerző: QuantumWriter UID: Microsoft. Quantum. Concepts. vectors MS. Author: v-
 
 # <a name="vectors-and-matrices"></a>Vektorok és mátrixok
 
-A kvantum-számítástechnika megismeréséhez elengedhetetlen a vektorok és mátrixok megismerése. Egy rövid bevezetést biztosítunk, és az érdekelt olvasóknak javasoljuk, hogy szabványos referenciát olvassanak a lineáris algebra, például a *furcsa, a G (1993) számára. A lineáris algebra bemutatása (Vol. 3). Wellesley, MA: Wellesley-Cambridge Press* vagy online referenciák, például [lineáris algebra](http://joshua.smcvt.edu/linearalgebra/).
+A kvantum-számítástechnika megismeréséhez elengedhetetlen a vektorok és mátrixok megismerése. Egy rövid bevezetést biztosítunk, és az érdekelt olvasóknak javasoljuk, hogy szabványos referenciát olvassanak a lineáris algebra, például a *furcsa, a G (1993) számára. A lineáris algebra bemutatása (Vol. 3). Wellesley, MA: Wellesley-Cambridge megnyomni* vagy online referenciát, például [lineáris algebra](http://joshua.smcvt.edu/linearalgebra/).
 
 A dimenzió (vagy a méret) n egy oszlop vektora (vagy egy egyszerű [*vektora*](https://en.wikipedia.org/wiki/Vector_(mathematics_and_physics))) $ $ $ $ egy $ $ oszlopként rendezett, n komplex szám $ (v_1, v_2, \ldots, v_n) gyűjteménye $ :
 
@@ -126,7 +126,7 @@ au_2 + bv_2\\\\
 au_n + bv_n \end{bmatrix} .
 $$
 
-Az [*matrix*](https://en.wikipedia.org/wiki/Matrix_(mathematics)) $ m n méretű mátrix \times $ egy olyan MN komplex számokból álló gyűjtemény, amelyeknek $ az értéke $ $ m $ és n oszlopban van rendezve $ $ , ahogy az alábbi ábrán látható:
+Az [](https://en.wikipedia.org/wiki/Matrix_(mathematics)) $ m n méretű mátrix \times $ egy olyan MN komplex számokból álló gyűjtemény, amelyeknek $ az értéke $ $ m $ és n oszlopban van rendezve $ $ , ahogy az alábbi ábrán látható:
 
 $$M = 
 \begin{bmatrix}

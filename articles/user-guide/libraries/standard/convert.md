@@ -4,16 +4,16 @@ description: Ismerje meg az általános és a felhasználó által definiált t�
 author: cgranade
 uid: microsoft.quantum.libraries.convert
 ms.author: chgranad
-ms.topic: article
+ms.topic: conceptual
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 9ec3a2ecd2aa59a10a7033e7b3067eb147ce4035
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 67f47339363a52097f342c8ae4e43a8a93d606a8
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92691099"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98858025"
 ---
 # <a name="type-conversions"></a>Típus konverziója #
 
@@ -45,7 +45,7 @@ A <xref:Microsoft.Quantum.Convert> névtér további egzotikus konverziókat is 
 Végül a Q# standard könyvtár számos felhasználó által definiált típust biztosít, például a <xref:Microsoft.Quantum.Math.Complex> és a <xref:Microsoft.Quantum.Arithmetic.LittleEndian> .
 Ezen típusok mellett a standard könyvtár a következő funkciókat nyújtja <xref:Microsoft.Quantum.Arithmetic.BigEndianAsLittleEndian> :
 
-```Q#
+```qsharp
 open Microsoft.Quantum.Arithmetic as Arithmetic;
 
 let register = Arithmetic.BigEndian(qubits);

@@ -5,16 +5,16 @@ author: QuantumWriter
 uid: microsoft.quantum.libraries.data-structures
 ms.author: martinro
 ms.date: 12/11/2017
-ms.topic: article
+ms.topic: conceptual
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: c3ce5d531618c269d15be3e4eb58ecbb597a022c
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: e9b593ba69ed41a9fb3c1298b5b945a4cbe43d5d
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92692230"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98858333"
 ---
 # <a name="data-structures-and-modeling"></a>Adatstruktúrák és-modellezés #
 
@@ -72,7 +72,7 @@ ApplyToEach(
 ## <a name="oracles"></a>Jóslatok ##
 
 A [fázisok becslése](https://en.wikipedia.org/wiki/Quantum_phase_estimation_algorithm) és az [amplitúdó-erősítési](https://en.wikipedia.org/wiki/Amplitude_amplification) irodalomban gyakran megjelenik egy Oracle koncepciója.
-Itt az Oracle kifejezés olyan tábla-kvantum-alrutint jelöl, amely qubits végez, és a választ fázisként adja vissza.
+Itt az Oracle kifejezés olyan kvantum-alrutinra utal, amely qubits végez, és a választ fázisként adja vissza.
 Ez az alrutin gyakran úgy gondolja, mint egy olyan kvantum-algoritmus bemenete, amely más paraméterek mellett is elfogadja az Oracle-t, és egy sor kvantum-műveletet alkalmaz, és a kvantum-alrutin hívását kezeli, mintha egy alapvető kapu lenne.
 Természetesen ahhoz, hogy a nagyobb algoritmus ténylegesen megvalósítható legyen, meg kell adni az Oracle-nek az alapvető kapuk konkrét összetételét, de az Oracle-t meghívó algoritmus megismeréséhez nincs szükség ilyen felbomlásra.
 A-ben Q# Ez a művelet az első osztályú értékeket használja, így a műveletek átadhatók a kvantum-algoritmusok megvalósításához a fekete dobozos módon.

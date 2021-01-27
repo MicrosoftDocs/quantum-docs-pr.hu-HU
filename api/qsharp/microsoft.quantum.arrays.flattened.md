@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Arrays.Flattened
 title: Összeolvasztott függvény
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
 qsharp.name: Flattened
 qsharp.summary: Given an array of arrays, returns the concatenation of all arrays.
-ms.openlocfilehash: 331b1714109259b21982e99d030aa0662e3aaadb
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 272533d4efd8598b21daa341c867c070a2083ce0
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96221215"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98848620"
 ---
 # <a name="flattened-function"></a>Összeolvasztott függvény
 
@@ -45,3 +45,10 @@ Az összes tömb összefűzése.
 ### <a name="t"></a>Nem
 
 Az elemek típusa `array` .
+
+## <a name="example"></a>Példa
+
+```qsharp
+let flattened = Flattened([[1, 2], [3], [4, 5, 6]]);
+// flattened = [1, 2, 3, 4, 5, 6]
+```

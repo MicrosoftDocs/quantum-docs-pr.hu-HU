@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Canon.MultiplexZ
 title: MultiplexZ művelet
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: MultiplexZ
 qsharp.summary: Applies a Pauli Z rotation conditioned on an array of qubits.
-ms.openlocfilehash: 364d23a0e57a2510f069b6db66b085368f20162e
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: dccfe86104263e23794bce33279e8748f11f5a54
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96206068"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98852430"
 ---
 # <a name="multiplexz-operation"></a>MultiplexZ művelet
 

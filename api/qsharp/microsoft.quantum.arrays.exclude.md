@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Arrays.Exclude
 title: Funkció kizárása
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
 qsharp.name: Exclude
 qsharp.summary: Returns an array containing the elements of another array, excluding elements at a given list of indices.
-ms.openlocfilehash: 4ea0d754fce4fc7e3e4e42e55b56720cb3f95ca6
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 76cdee56e84951c63e80babfdca6a3de33583cab
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96221351"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98848679"
 ---
 # <a name="exclude-function"></a>Funkció kizárása
 
@@ -50,3 +50,11 @@ Egy olyan tömb `output` `output[0]` , amely az első eleme, `array` amelynek az
 ### <a name="t"></a>Nem
 
 A tömb elemeinek típusa
+
+## <a name="example"></a>Példa
+
+```qsharp
+let array = [10, 11, 12, 13, 14, 15];
+// The following line returns [10, 12, 15].
+let subarray = Exclude([1, 3, 4], array);
+```

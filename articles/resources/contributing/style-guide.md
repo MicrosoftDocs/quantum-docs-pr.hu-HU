@@ -4,17 +4,17 @@ description: A programok és könyvtárak elnevezési, bemeneti, dokumentációs
 author: cgranade
 ms.author: chgranad
 ms.date: 10/12/2018
-ms.topic: article
+ms.topic: contributor-guide
 uid: microsoft.quantum.contributing.style
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: cfc201a16b1b42c82314220f77ae120076291759
-ms.sourcegitcommit: b930bb59a1ba8f41d2edc9ed98197109aa8c7f1b
+ms.openlocfilehash: 2edd6baf7375415e395d15bac422168216bcff9a
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96231655"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98852761"
 ---
 # <a name="no-locq-style-guide"></a>Q# Stílus útmutató #
 ## <a name="general-conventions"></a>Általános konvenciók ##
@@ -323,7 +323,7 @@ Javasoljuk, hogy:
 
 # <a name="examples"></a>[Példák](#tab/examples)
 
-| &nbsp;  | Snippet | Description |
+| &nbsp;  | Snippet | Leírás |
 |---|---------|-------------|
 | ☑ | `newtype Oracle = (Apply : Qubit[] => Unit is Adj + Ctl)` | A név `Apply` egy `CamelCase` formázott igei kifejezés, amely arra utal, hogy az elnevezett elem egy művelet. |
 | ☒ | <s>`newtype Oracle = (apply : Qubit[] => Unit is Adj + Ctl) `</s> | Az elnevezett elemeknek kezdeti nagybetűvel kell kezdődnie. |
@@ -479,7 +479,7 @@ Javasoljuk, hogy:
 
 # <a name="examples"></a>[Példák](#tab/examples)
 
-| &nbsp; | Snippet | Description |
+| &nbsp; | Snippet | Leírás |
 |---|---------|-------------|
 | ☒ | <s>`2+3`</s> | Használjon szóközöket a bináris operátorok köré. |
 | ☒ | <s>`target:Qubit`</s> | Használjon szóközt a típus megjegyzési kettőspontok használatával. |

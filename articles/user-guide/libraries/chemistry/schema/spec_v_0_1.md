@@ -4,17 +4,17 @@ description: A Broombridge Quantum kémia Schema v 0.1 specifikációinak részl
 author: cgranade
 ms.author: chgranad
 ms.date: 10/17/2018
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.libraries.chemistry.schema.spec_v_0_1
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: b99c90c434958f7b04712580789b203766cd084d
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 0a306f59a823e76ba0518d023a41f1f9d5670e7a
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835740"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98858196"
 ---
 # <a name="broombridge-specification-v01"></a>Broombridge-specifikáció – v 0.1 #
 
@@ -169,7 +169,7 @@ A `hamiltonian` tulajdonság értéke Hamilton objektum, és a `one_electron_int
 Egy Hamilton objektum is rendelkezhet tulajdonsággal `particle_hole_representation` .
 Ha van, akkor a értékének a `particle_hole_representation` szakasz hátralévő részében ismertetett formátumot kell követnie.
 
-##### <a name="one-electron-integrals-object"></a>Egy elektronos szerves objektum #####
+##### <a name="one-electron-integrals-object"></a>One-Electron szerves objektum #####
 
 Ez a szakasz a normatív.
 
@@ -199,7 +199,7 @@ one_electron_integrals:     # required
 > A Broombridge 1 alapú indexelést használ.
 
 
-##### <a name="two-electron-integrals-object"></a>Két elektronos szerves objektum #####
+##### <a name="two-electron-integrals-object"></a>Two-Electron szerves objektum #####
 
 Ez a szakasz a normatív.
 

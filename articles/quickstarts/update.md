@@ -4,18 +4,17 @@ description: Ismerteti, hogyan frissítheti Q#-projektjeit és a Microsoft Quant
 author: bradben
 ms.author: v-benbra
 ms.date: 5/30/2020
-ms.topic: article
-ms.custom: how-to
+ms.topic: quickstart
 uid: microsoft.quantum.update
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: d9678a61f5fe4ca466b6a84e9e4b68321c5baee3
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
-ms.translationtype: HT
+ms.openlocfilehash: 1b5def3226bd073c878f8573aaddd757d733ec48
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
+ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834923"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98858063"
 ---
 # <a name="update-the-microsoft-quantum-development-kit-qdk"></a>A Microsoft Quantum Development Kit (QDK) frissítése
 
@@ -282,7 +281,7 @@ A frissítési eljárás attól függ, hogy a telepítést eredetileg a Conda va
     %workspace reload
     ```
 
-***
+**_
 
 Most már használhatja a frissített IQ# kernelt a meglévő Q# Jupyter-notebookok futtatásához.
 
@@ -301,7 +300,7 @@ Most már használhatja a frissített IQ# kernelt a meglévő Q# Jupyter-noteboo
 1. Frissítse a Quantum VS Code-bővítményt
 
     - Indítsa újra a VS Code-ot
-    - Lépjen a **Bővítmények** lapra
+    - Navigáljon a _ *Extensions** lapra
     - Válassza a **Visual Studio Code-hoz készült Microsoft Quantum Development Kit** bővítményt
     - Töltse be újból a bővítményt
 

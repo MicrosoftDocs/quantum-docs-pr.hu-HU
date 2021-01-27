@@ -4,17 +4,17 @@ description: Megtudhatja, hogyan küldhet el egy GitHub-lekéréses kérelmet, h
 author: cgranade
 ms.author: chgranad
 ms.date: 10/12/2018
-ms.topic: article
+ms.topic: contributor-guide
 uid: microsoft.quantum.contributing.pulls
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 8e04e6502e0a6005dfdf0f93450bf3ffd5aaa672
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: a936283f3e51da9b97b8145bad3ab765b6423458
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87866927"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98858467"
 ---
 # <a name="opening-pull-requests"></a>Lekéréses kérelmek megnyitása #
 
@@ -87,7 +87,7 @@ This way, you can edit your personal fork to your heart's content before making 
 
 -->
 
-## <a name="next-steps"></a>Következő lépések ##
+## <a name="next-steps"></a>További lépések ##
 
 Gratulálunk a git használatával, hogy segítse a Quantum Development Kit közösségét!
 Ha többet szeretne megtudni a kód beszerzéséről, folytassa az alábbi útmutatóval.
