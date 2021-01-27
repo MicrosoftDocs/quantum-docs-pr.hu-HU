@@ -4,7 +4,7 @@ functions:
   uid: Microsoft.Quantum.Convert.BigIntAsBoolArray
 - summary: Logikai értékek adott tömbjét konvertálja egy egyenértékű nagy egész számra. A tömb 0 eleme a legkevesebb nagy egész szám.
   uid: Microsoft.Quantum.Convert.BoolArrayAsBigInt
-- summary: Egy kis endian formátumú, pozitív egész számot hoz létre egy BITS-karakterláncból.
+- summary: Nem negatív egész számot hoz létre kis endian formátumú BITS-karakterláncból.
   uid: Microsoft.Quantum.Convert.BoolArrayAsInt
 - summary: Egy kis karakterlánc miatt egy qubit Pauli-operátort ad vissza, amely egyetlen qubit Pauli-operátorok tömbje.
   uid: Microsoft.Quantum.Convert.BoolArrayAsPauli
@@ -22,7 +22,7 @@ functions:
   uid: Microsoft.Quantum.Convert.FunctionAsOperation
 - summary: Egy adott egész számot egy egyenértékű nagy egész számra konvertál.
   uid: Microsoft.Quantum.Convert.IntAsBigInt
-- summary: Egy pozitív egész szám bináris ábrázolását állítja elő a visszaadott tömb kis endian ábrázolásával.
+- summary: Egy nem negatív egész szám bináris ábrázolását állítja elő a visszaadott tömb kis endian ábrázolásával.
   uid: Microsoft.Quantum.Convert.IntAsBoolArray
 - summary: Egy adott egész számot egy egyenértékű, kétszeres pontosságú lebegőpontos számra konvertál.
   uid: Microsoft.Quantum.Convert.IntAsDouble
@@ -38,7 +38,7 @@ functions:
   uid: Microsoft.Quantum.Convert.RangeAsIntArray
 - summary: Egy típusra konvertál egy típust `Result[]` `Bool[]` , ahol a le `One` van képezve `true` és le `Zero` van képezve `false` .
   uid: Microsoft.Quantum.Convert.ResultArrayAsBoolArray
-- summary: Egy pozitív egész számot hoz létre egy rövid endian formátumú eredményekből.
+- summary: Nem negatív egész számot állít elő egy olyan eredményből álló karakterláncból, amely kis endian formátumú.
   uid: Microsoft.Quantum.Convert.ResultArrayAsInt
 - summary: Egy típusra konvertál egy típust `Result` `Bool` , ahol a le `One` van képezve `true` és le `Zero` van képezve `false` .
   uid: Microsoft.Quantum.Convert.ResultAsBool
@@ -50,9 +50,9 @@ operations:
 summary: 'Ez a névtér a különböző Q # adattípusok közötti átalakításhoz tartalmaz függvényeket.'
 uid: Microsoft.Quantum.Convert
 metadata:
-  ms.openlocfilehash: d22f0735b800d2e9a34f8c7ce58353850a4cdded
-  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.openlocfilehash: 18cef8a797a4657f1b846a5b2d2ba2a673378f9a
+  ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 10/27/2020
-  ms.locfileid: "92713822"
+  ms.lasthandoff: 01/26/2021
+  ms.locfileid: "98850064"

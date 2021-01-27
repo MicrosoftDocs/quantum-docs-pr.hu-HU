@@ -4,17 +4,17 @@ description: Ismerje meg a QDK belső műveleteit és funkcióit, beleértve a k
 author: QuantumWriter
 ms.author: martinro
 ms.date: 12/11/2017
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.libraries.standard.prelude
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 4d15226fe46be79b7d3e6f414f33f1debd691f40
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 6ed5b1677a204b9425f229a3ea0855bb789f3f75
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92692117"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98857188"
 ---
 # <a name="the-prelude"></a>A bevezetés #
 
@@ -109,13 +109,13 @@ Kezdjük azzal, hogy a $H $ és a $T $ Gates használatával bármilyen egyetlen
 A $T $ kaput a művelet implementálja <xref:Microsoft.Quantum.Intrinsic.T> , és aláírással rendelkezik, amely azt `(Qubit => Unit is Adj + Ctl)` jelzi, hogy egy egységes művelet egy qubit.
 
 Annak ellenére, hogy ez elvileg elegendő ahhoz, hogy bármilyen tetszőleges qubit műveletet le lehessen írni, a különböző célszámítógépek hatékonyabb ábrázolással rendelkezhetnek a Pauli-operátorokkal kapcsolatos rotációs műveletekhez, például a bevezetés számos módszert tartalmaz a convienently kiváltására.
-A legalapvetőbb ilyen <xref:Microsoft.Quantum.Intrinsic.r> művelet, amely egy megadott Pauli-tengely, \Begin{Equation} R (\sigma, \phi) \mathrel{: =} \exp (-i \phi \sigma/2), \end{Equation}, ahol a $ \sigma $ egy Pauli operátor, a $ \phi $ egy szög, és ahol a $ \exp $ a mátrix exponenciális értéket jelöli.
+A legalapvetőbb ilyen <xref:Microsoft.Quantum.Intrinsic.R> művelet, amely egy megadott Pauli-tengely, \Begin{Equation} R (\sigma, \phi) \mathrel{: =} \exp (-i \phi \sigma/2), \end{Equation}, ahol a $ \sigma $ egy Pauli operátor, a $ \phi $ egy szög, és ahol a $ \exp $ a mátrix exponenciális értéket jelöli.
 Aláírással rendelkezik `((Pauli, Double, Qubit) => Unit is Adj + Ctl)` , ahol a bemenet első két része a $ \sigma $ és a $ \phi $ klasszikus argumentumokat jelöli, amelyek az egységes operátor megadásához szükségesek $R (\sigma, \phi) $.
 Részben alkalmazhatjuk a $ \sigma $ és a $ \phi $ értéket egy olyan művelet beszerzéséhez, amelynek a típusa egyetlen qubit egységes.
 Például a `R(PauliZ, PI() / 4, _)` típusa `(Qubit => Unit is Adj + Ctl)` .
 
 > [!NOTE]
-> A <xref:Microsoft.Quantum.Intrinsic.r> művelet a bemeneti szöget 2 értékre osztja, és a-1 értékkel szorozza meg.
+> A <xref:Microsoft.Quantum.Intrinsic.R> művelet a bemeneti szöget 2 értékre osztja, és a-1 értékkel szorozza meg.
 > $Z $ forgás esetén ez azt jelenti, hogy a $ \ket {0} $ eigenstate a $-\phi/$2, a $ \ket $ eigenstate pedig a $ \phi/$2 által elforgatott érték, hogy a $ \ket $ eigenstate a $ \phi $ \ket {1} {1} képest legyen elforgatva {0} .
 >
 > Ez különösen azt jelenti, hogy `T` csak a nem `R(PauliZ, PI() / 8, _)` releváns [globális fázisokban](xref:microsoft.quantum.glossary#global-phase)térnek el egymástól.
@@ -217,7 +217,7 @@ Először is, mivel az qubit mérések végrehajtása meglehetősen gyakori, a b
 A <xref:Microsoft.Quantum.Intrinsic.M> művelet a Pauli $Z $ operátort méri egyetlen qubit, és aláírással rendelkezik `(Qubit => Result)` .
 A `M(q)` és a `Measure([PauliZ], [q])` kifejezés egyenértékű.
 
-A a <xref:microsoft.quantum.measurement.MultiM> Pauli $Z $ operátort a qubits minden egyes tömbje számára *külön* méri, és az egyes qubit kapott értékek *tömbjét* adja vissza `Result` .
+A a <xref:Microsoft.Quantum.Measurement.MultiM> Pauli $Z $ operátort a qubits minden egyes tömbje számára *külön* méri, és az egyes qubit kapott értékek *tömbjét* adja vissza `Result` .
 Bizonyos esetekben ez optimalizálható. Rendelkezik aláírással ( `Qubit[] => Result[])` .
 `MultiM(qs)` egyenértékű a következővel:
 

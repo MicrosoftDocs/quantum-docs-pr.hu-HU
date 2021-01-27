@@ -4,17 +4,17 @@ description: Megtudhatja, Hogyan járulhat hozzá a minta-és a függvénytár-k
 author: cgranade
 ms.author: chgranad
 ms.date: 10/12/2018
-ms.topic: article
+ms.topic: contributor-guide
 uid: microsoft.quantum.contributing.code
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 47845c4f3520e8c50cf8aefd9bf9e8f086c42842
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 54ef15db2b850e6a3bff38945c57129361517bfe
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92691807"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98856679"
 ---
 # <a name="contributing-code"></a>Hozzájárulás a kódhoz
 
@@ -59,7 +59,7 @@ function PairTest () : Unit {
 Összetettebb feltételek ellenőrizhetők a szabványos könyvtárak útmutatójának [tesztelés szakaszában](xref:microsoft.quantum.libraries.diagnostics) található módszerek használatával.
 Például a következő teszt ellenőrzi, hogy a `H(q); X(q); H(q);` hívása <xref:Microsoft.Quantum.Canon.ApplyWith> ugyanaz, mint a `Z(q)` .
 
-```Q#
+```qsharp
 @Test("QuantumSimulator")
 operation TestApplyWith() : Unit {
     let actual = ApplyWith(H, X, _);
@@ -106,7 +106,7 @@ Végül a [Microsoft nyílt forráskódjának viselkedési szabályzatában](htt
 Szeretnénk biztosítani, hogy a hozzájárulások a teljes kvantum-számítástechnikai Közösséget, a jelenlegi csodálatos sokféleségben és a jövőben is kiszolgálják, ahogy az egyre nagyobb mértékben növekszik.
 Nagyra értékeljük segítségét ennek a célnak a megvalósításában.
 
-## <a name="next-steps"></a>Következő lépések
+## <a name="next-steps"></a>További lépések
 
 Köszönjük, hogy a Quantum Development Kit nagyszerű erőforrást biztosít a teljes kvantum-programozási Közösség számára!
 További információt a következő útmutatóban talál a Q# stílussal kapcsolatban.

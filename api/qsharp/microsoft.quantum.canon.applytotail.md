@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyToTail
 title: ApplyToTail művelet
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyToTail
 qsharp.summary: Applies an operation to the last element of an array.
-ms.openlocfilehash: 6754d41e63ea0357487fa2f62bd9209843a93347
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 077e6dedee68b0bd05a668387b22f8bec87a4041
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96207972"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98850443"
 ---
 # <a name="applytotail-operation"></a>ApplyToTail művelet
 
@@ -54,6 +54,15 @@ A célok tömbje, amelyből az utolsó lesz alkalmazva `op` .
 ### <a name="t"></a>Nem
 
 Az alkalmazni kívánt művelet bemeneti típusa.
+
+## <a name="example"></a>Példa
+
+A következő Q # kódrészletek egyenértékűek:
+
+```qsharp
+ApplyToTail(H, register);
+H(Tail(register));
+```
 
 ## <a name="see-also"></a>Lásd még:
 

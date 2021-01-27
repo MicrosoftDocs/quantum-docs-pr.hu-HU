@@ -1,6 +1,6 @@
 ---
 title: Quantum Computing Szószedet leírása: A kvantum-számítástechnika során használt általános feltételek, műveletek és objektumok glosszáriuma.
-Szerző: bradben MS. Author: v-benbra MS. Date: 9/1/2020 MS. topic: cikk UID: Microsoft. Quantum. Szószedet No-Loc:
+Szerző: bradben MS. Author: v-benbra MS. Date: 9/1/2020 MS. topic: hivatkozás UID: Microsoft. Quantum. Szószedet No-Loc:
 - "Q#"
 - "$$v"
 - "$$"
@@ -227,7 +227,7 @@ Az egyik [qubit](xref:microsoft.quantum.glossary#qubit) az adatok vagy a kvantum
 
 ## <a name="tuple"></a>Rekord
 
-Vesszővel tagolt értékek gyűjteménye, amely egyetlen értékként viselkedik. A rekord *típusát* a benne található értékek típusai határozzák meg. A-ben a Q# rekordok nem módosítható, és beágyazható, tömböket tartalmazhat, vagy egy tömbben használható. [immutable](xref:microsoft.quantum.glossary#immutable) További információ: [rekordok](xref:microsoft.quantum.qsharp.valueliterals#tuple-literals).
+Vesszővel tagolt értékek gyűjteménye, amely egyetlen értékként viselkedik. A rekord *típusát* a benne található értékek típusai határozzák meg. A-ben a Q# rekordok nem módosítható, és beágyazható, tömböket tartalmazhat, vagy egy tömbben használható. [](xref:microsoft.quantum.glossary#immutable) További információ: [rekordok](xref:microsoft.quantum.qsharp.valueliterals#tuple-literals).
 
 ## <a name="unitary-operator"></a>Egységes operátor
 

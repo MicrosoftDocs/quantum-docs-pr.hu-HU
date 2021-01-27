@@ -4,17 +4,17 @@ description: Ismerje meg a Microsoft Quantum Development Kit előzetes verziój�
 author: bradben
 ms.author: v-benbra
 ms.date: 8/30/2020
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.relnotes
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 1c3c502b6487482f06820e07425b8516f259fb0d
-ms.sourcegitcommit: b930bb59a1ba8f41d2edc9ed98197109aa8c7f1b
+ms.openlocfilehash: 8aa6072e9b495db6e127cac350d5bfaec1b090ce
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96231791"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98856669"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>A Microsoft Quantum Development Kit kibocsátási megjegyzései
 
@@ -24,6 +24,16 @@ A telepítési utasításokat lásd a [telepítési útmutatóban](xref:microsof
 
 A frissítésre vonatkozó utasításokat lásd a [frissítési útmutatóban](xref:microsoft.quantum.update).
 
+## <a name="version-0152101125897"></a>0.15.2101125897 verziója
+
+*Kiadás dátuma: január 26., 2021*
+
+- Egyszerűsített qubit kiosztása, amely kényelmesebb szintaxist biztosít a qubits lefoglalásához, [lásd: részletek a Q# nyelvi tárházban](https://github.com/microsoft/qsharp-language/blob/main/Approved/1-implicitly-scoped-qubit-allocation.md).
+- Létrehozta QDK-Python adattárat, amely tartalmazza `azure-quantum` a Python-ügyfelet, amely a Quantum-ihlette optimalizálási feladatokat az Azure Quantum szolgáltatásba küldi el, valamint a `qdk` `qdk.chemistry` kémia könyvtárának Python-alapú kényelmi rétegét, Q# amely magában foglalja a molekuláris vizualizációt és funkciót, hogy bemeneti fájlokat hozzon létre számos kémiai csomaghoz, például a NWChem, a Psi4 és a OpenMolcas.
+- A zárójelek mostantól nem választhatók a műveleti és a Function típusok, a, `if` `elif` és a utasítások esetében `while` `until` . A és a `for` utasításokhoz tartozó zárójelek `use` `borrow` elavultak.
+- Továbbfejlesztett szélességi becslések az optimális mélység érdekében [: részletek](https://github.com/MicrosoftDocs/quantum-docs-pr/pull/1159).
+- A explicit mátrixként megadott, egységes művelet alkalmazása `ApplyUnitary` ([QuantumLibraries # 391](https://github.com/microsoft/QuantumLibraries/pull/391), külső hozzájárulás a Dmytro Fedoriaka alapján)
+- https://github.com/microsoft/iqsharp/issues/387A kernel indításakor jelentkező teljesítmény hatásának csökkentésével javítva Q# .
 ## <a name="version-0142011120240"></a>0.14.2011120240 verziója
 
 *Kiadás dátuma: november 25., 2020*
@@ -211,7 +221,7 @@ A [kódtárak](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%
 
 A verzió a következőket tartalmazza:
 
-- Új tesztelési attribútum az Q# egység teszteléséhez, lásd [itt](xref:Microsoft.Quantum.Diagnostics.Test) a frissített API-dokumentációt, [here](xref:microsoft.quantum.guide.testingdebugging) valamint a & hibakeresési útmutatójának frissített tesztelési útmutatóját
+- Új tesztelési attribútum az Q# egység teszteléséhez, lásd [itt](xref:Microsoft.Quantum.Diagnostics.Test) a frissített API-dokumentációt, [](xref:microsoft.quantum.guide.testingdebugging) valamint a & hibakeresési útmutatójának frissített tesztelési útmutatóját
 - A verem nyomkövetésének hozzáadása a Q# program futási hibája esetén
 - Töréspontok támogatása a Visual Studio Code-ban az [OmniSharp C# Visual Studio Code-bővítmény](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp) frissítése révén
 
@@ -486,14 +496,7 @@ További információ a [Quantum Development Kit kémiai kódtáráról](xref:mi
 
 Az új kémiai kódtárral egy új GitHub-adattárba, a [Microsoft/QuantumLibraries](https://github.com/Microsoft/QuantumLibraries) adattárba különítjük el a kódtárakat.  A példák a [Microsoft/Quantum](https://github.com/Microsoft/Quantum) adattárban maradnak.  Örömmel fogadjuk a hozzájárulásokat mindkét adattárhoz!
 
-Ez a kiadás a közösség által jelentett problémákkal kapcsolatos hibajavításokat és funkciókat tartalmaz:
-
-* IntelliSense for Q# ? ([UserVoice](https://quantum.uservoice.com/forums/906943/suggestions/32656918)).
-* .qs fájlok ([UserVoice](https://quantum.uservoice.com/forums/906097/suggestions/32593049)).
-* Javított hibaüzenet az if utasításokban használt rövidített kapcsos zárójelek esetében ([UserVoice](https://quantum.uservoice.com/forums/906208/suggestions/34718518)).
-* A rekordok dekonstrukciójának támogatása változtatható (újra)kötések esetén ([UserVoice](https://quantum.uservoice.com/forums/906208/suggestions/35020444)).
-* Hiba a megadott BitFlipCode futtatásakor ([UserVoice](https://quantum.uservoice.com/forums/906940/suggestions/35008546)).
-* A H2SimulationGUI időnként nagy csúcsokat jelenít meg ([UserVoice](https://quantum.uservoice.com/forums/906946/suggestions/34668370)).
+Ez a kiadás a Közösség által jelentett problémák hibajavításait és funkcióit tartalmazza.
 
 ### <a name="community-contributions"></a>Közösségi hozzájárulások
 
@@ -509,15 +512,7 @@ Köszönjük továbbá Rohit Gupta ([@guptarohit](https://github.com/guptarohit)
 
 *Kiadási dátum: 2018. szeptember 10.*
 
-Ez a kiadás a közösség által jelentett problémákkal kapcsolatos hibajavításokat tartalmaz. A következőket tartalmazza:
-
-* Az eltolási operátor nem használható ([GitHub](https://github.com/Microsoft/Quantum/issues/75)).
-* A(z) `DumpMachine` / `DumpRegister` a konzolon való megjelenítéskor hibába ütközik a következőn: `QCTraceSimulator` ([UserVoice](https://quantum.uservoice.com/forums/906946/suggestions/34709680)).
-* 0 qubit lefoglalásának engedélyezése ([UserVoice](https://quantum.uservoice.com/forums/906208-q-language/suggestions/34768069-allow-allocating-0-qubits)).
-* A(z) `AssertQubitState` explicit Complex() hívást igényel ([UserVoice](https://quantum.uservoice.com/forums/906208-q-language/suggestions/34713733-assertqubitstate-requires-explicit-complex-call)).
-* A(z) `Measure` művelet macOS rendszeren minden esetben a következőt adja vissza: `One` ([UserVoice](https://quantum.uservoice.com/forums/906940/suggestions/35008546)).
-
-Köszönjük! 
+Ez a kiadás a közösség által jelentett problémákkal kapcsolatos hibajavításokat tartalmaz.
 
 ## <a name="version-0218063001"></a>0\.2.1806.3001-es verzió
 

@@ -4,24 +4,24 @@ description: Ismerje meg, hogy a molekuláris elektronikus rendszerek hogyan leg
 author: bradben
 ms.author: v-benbra
 ms.date: 10/09/2017
-ms.topic: article-type-from-white-list
+ms.topic: conceptual
 uid: microsoft.quantum.chemistry.concepts.quantummodels
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 4ff3d11bfd4dae5489fc4b7efe4da4ccda00882f
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: c12ab277f06bed61991a26af96953ccdbf72b642
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833921"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98856220"
 ---
 # <a name="quantum-models-for-electronic-systems"></a>Quantum modellek az elektronikus rendszerekhez
 
 Az elektronikus rendszerek szimulálásához először a Hamilton megadásával kell kezdeni, amely a fent ismertetett Canonical kvantálási eljárásban érhető el.
 Pontosabban, a $N _e $ elektronok, a Momenta $p _i $ (három dimenzióban) és a Mass $m _e $ és a $x _i $ értékű magok, valamint a $Z _K a Hamilton operátor beolvassa a \begin{Equation} \hat{H} = \sum \_ {i = 1} ^ {N \_ e} \frac{\hat{p} \_ i ^ 2} {2m \_ e} + \frac {1} {2} \sum \_ {i\ne j} \frac{e ^ 2} {| \hat{x} \_ i-\hat{x} \_ j |}-\sum \_ {i, k} \frac{Z \_ ke ^ 2} {| \hat{x} \_ i-{y} \_ k |} + \frac {1} {2} \ sum_ {k\ne k '} \frac{Z \_ kZ \_ {k '} e ^ 2} {| y \_ k-y \_ k ' |}. \label{EQ: Ham} \end{Equation} a Momenta operátorok $ \hat{p} \_ i ^ 2 $ megtekinthetők valós térben, mint Laplacian operátorok, azaz $ \hat{p} \_ i ^ 2 =-\partial \_ {x \_ i} ^ 2-\partial \_ {y \_ i} ^ 2-\partial { \_ z \_ i} ^ 2 $.
 Itt leegyszerűsítjük azt a feltételezést, hogy a magok a molekula nyugalmában vannak.
-Ez az úgynevezett Oppenheimer közelítő, és általában érvényes a $ \hat{H} $ alacsony energiájú spektrumára, mivel az elektron tömege körülbelül 1/1836 $, a protonok tömege.
+Ez az úgynevezett Born-Oppenheimer közelítés, és általában érvényes a $ \hat{H} $ alacsony energiájú spektrumára, mivel az elektron tömege körülbelül $1/1836 $ a protonok tömege.
 Ez a Hamilton operátor könnyen megtalálható az $N \_ e $ elektronok rendszerének és a [Quantum dynamicsban](xref:microsoft.quantum.chemistry.concepts.quantumdynamics)ismertetett kanonikus kvantálási folyamatnak a kiírásával.
 
 Ahhoz, hogy a $e ^ {-i\hat {H} t} $-hoz létre kell hoznia egy egységes mátrix-ábrázolást, a $ \hat{H} $ operátort mátrixként kell képviselni.
@@ -36,7 +36,7 @@ Emiatt a probléma egyértelművé tételéhez olyan alapot kell választani, am
 
 Számos megfelelő alap használható, és a probléma megfelelő kiválasztása a Quantum kémiájának nagy részét képezi.
 Lehet, hogy a legegyszerűbb ilyen típusú készletek a (z) (a (z) (a (z) eigenfunctions (\hat{H} $) a hidrogén-hez hasonló atomok esetében a Schrödinger-egyenlet (azaz a (z)
-Más alapkészletek, például a repülőgép-hullámok vagy a valós idejű pályák is használhatók, és részletesebben a kíváncsi olvasót a szabványos ["molekuláris elektronikus szerkezeti elmélet"](https://onlinelibrary.wiley.com/doi/book/10.1002/9781119019572) szövegre utalva Helgaker.
+Más alapkészletek, például a repülőgép-hullámok vagy a valós idejű pályák is használhatók, és részletesebben a kíváncsi olvasót a szabványos ["molekuláris Electronic-Structure elmélet"](https://onlinelibrary.wiley.com/doi/book/10.1002/9781119019572) szövegre utaljuk Helgaker szerint.
 
 Míg a fenti modellben használt Államok tetszőlegesek lehetnek, a kvantum-mechanika a természetben található állapotokra vonatkozó korlátozásokat tartalmaz.
 Különösen az összes érvényes elektronikus kvantum-állapotnak nem szimmetrikusnak kell lennie az elektron-címkék cseréjekor.

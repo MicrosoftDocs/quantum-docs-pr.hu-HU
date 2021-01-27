@@ -4,17 +4,17 @@ description: Ismerje meg, hogyan tölthető be a saját adatkészlet egy osztál
 author: geduardo
 ms.author: v-edsanc
 ms.date: 02/16/2020
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.libraries.machine-learning.load
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: cd6fdb6bb33a65ee02ac8c43f40df9abeff9c841
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 7ebfe085e50d4647fdb1027250cf3134f8d8f8c2
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833709"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98856460"
 ---
 # <a name="load-and-classify-your-own-datasets"></a>Saját adatkészletek betöltése és besorolása
 
@@ -75,14 +75,14 @@ Ezeket a datsets `data.json` az alábbihoz hasonló fájl jelölheti:
 
 Tegyük fel, hogy van egy kis adathalmaza, amely a különböző macskák és kutyák magasságával és súlyával rendelkezik. Ez az adatkészlet nagyon kicsi a modell betanításához, de elegendő lesz az adatkészlet betöltési folyamatának megjelenítéséhez.
 
-| Magasság (m) | Súlyozás (kg) | Állat |
+| Magasság (m) | Tömeg (kg) | Állat |
 |-----------|------------|--------|
 | 0,54      | 30         | Figyelve    |
-| 0,30      | 8          | Cat    |
+| 0,30      | 8          | Macska    |
 | 0,91      | 44         | Figyelve    |
 | 0,86      | 31          | Figyelve    |
-| 0,32      | 5         | Cat    |
-| 0,25      | 4          | Cat    |
+| 0,32      | 5         | Macska    |
+| 0,25      | 4          | Macska    |
 
 A folyamat:
 
@@ -158,6 +158,6 @@ A .NET Core platform biztosítja a [ `System.Text.Json` csomagot](https://www.nu
 
 ***
 
-## <a name="next-steps"></a>Következő lépések
+## <a name="next-steps"></a>További lépések
 
 Most már készen áll a saját adatkészletekkel való saját kísérletek futtatására. Próbálja ki a különböző besorolásokat és adatkészleteket, és járuljon hozzá az eredményeket megosztó közösséghez.

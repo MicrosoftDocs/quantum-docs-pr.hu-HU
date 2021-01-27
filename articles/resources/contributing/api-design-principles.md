@@ -4,17 +4,17 @@ description: Q# API-tervezési alapelvek
 author: cgranade
 ms.author: chgranad
 ms.date: 3/9/2020
-ms.topic: article
+ms.topic: contributor-guide
 uid: microsoft.quantum.contributing.api-design
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: b8623ba7e876c4ccda42d0ddaa07c0012a763292
-ms.sourcegitcommit: b930bb59a1ba8f41d2edc9ed98197109aa8c7f1b
+ms.openlocfilehash: 452b32141dc660acbe8ef28530f1430e5acff9aa
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96231774"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98856699"
 ---
 # <a name="no-locq-api-design-principles"></a>Q# API-tervezési alapelvek
 
@@ -94,7 +94,7 @@ Ez a cikk felsorolja ezeket az alapelveket, és példákat mutat be arra, hogyan
   - `ForEach<'TInput, 'TOutput>('TInput => 'TOutput, 'TInput[]) => 'TOutput[]` és `Mapped<'TInput, 'TOutput>('TInput -> 'TOutput, 'TInput[]) -> 'TOutput[]` különbözik a megkötések tekintetében nyújtott garanciákkal; mindkettő különböző helyzetekben hasznos.
   - A Quantum Operations alkalmazást átalakító API-rutinok gyakran determinisztikus módon hajthatók végre, így olyan függvényként is elérhetők, mint a   `CControlled<'T>(op : 'T => Unit) => ((Bool, 'T) => Unit)` .
 
-- ✅**DO** Az egyes függvényekhez és műveletekhez az adott típus paramétereit igény szerint adja meg, és használja a bemeneti típust.
+- ✅ Az egyes függvényekhez és műveletekhez az adott típus paramétereit igény szerint adja meg, és használja a bemeneti típust.
 
   *Példák:*
   - `ApplyToEach` a típusa `<'T>(('T => Unit), 'T[]) => Unit` nem a leggyakrabban használt alkalmazás típusa, hanem az adott típus `((Qubit => Unit), Qubit[]) => Unit` .
@@ -105,7 +105,7 @@ Ez a cikk felsorolja ezeket az alapelveket, és példákat mutat be arra, hogyan
 
 **Legfontosabb elv:** válassza a bemeneti és kimeneti típusok lehetőséget a kiszámítható, valamint a meghívásos művelet céljával kommunikáló függvények és műveletek számára.
 
-- ✅**DO** A rekord típusú típusokkal logikailag csoportosíthatja azokat a bemeneteket és kimeneteket, amelyek csak akkor jelentősek, ha azokat együtt tekintik. Ezekben az esetekben érdemes lehet felhasználó által definiált típust használni.
+- ✅ A rekord típusú típusokkal logikailag csoportosíthatja azokat a bemeneteket és kimeneteket, amelyek csak akkor jelentősek, ha azokat együtt tekintik. Ezekben az esetekben érdemes lehet felhasználó által definiált típust használni.
 
   *Példák:*
   - Előfordulhat, hogy egy másik függvény helyi minimális értékeinek kimenetére szolgáló függvénynek egy keresési időközt kell megadnia bemenetként, ami lehet `LocalMinima(fn : (Double -> Double), (left : Double, right : Double)) : Double` megfelelő aláírás.
@@ -185,7 +185,7 @@ Ez a cikk felsorolja ezeket az alapelveket, és példákat mutat be arra, hogyan
   - A Microsoft által a Quantum Development Kit részeként közzétett állapot-előkészítési API-k bekerülnek a szolgáltatásba   `Microsoft.Quantum.Preparation` .
   - A Microsoft által a Quantum Development Kit részeként közzétett Quantum szimulációs API-k bekerülnek a szolgáltatásba   `Microsoft.Quantum.Simulation` .
 
-- ✅**DO** A műveleteket, a függvényeket és a felhasználó által definiált típusokat csak meghatározott tartományokon belül, a segédprogram tartományát jelző névterekben használja. Ha szükséges, használjon alnévtereket az egyes tartományalapú névtereken belüli célzott feladatok jelzéséhez.
+- ✅ A műveleteket, a függvényeket és a felhasználó által definiált típusokat csak meghatározott tartományokon belül, a segédprogram tartományát jelző névterekben használja. Ha szükséges, használjon alnévtereket az egyes tartományalapú névtereken belüli célzott feladatok jelzéséhez.
 
   *Példák:*
   - A Microsoft által közzétett Quantum Machine learning-függvénytár nagyrészt a @"microsoft.quantum.machinelearning" névtérbe kerül, de a névtér a példában szereplő adatkészleteket is megadja @"microsoft.quantum.machinelearning.datasets"   .

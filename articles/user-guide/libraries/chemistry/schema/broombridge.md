@@ -4,21 +4,21 @@ description: A Broombridge Quantum kémia sémájának áttekintése, amely a Mi
 author: martinro
 ms.author: martinro
 ms.date: 10/17/2018
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.libraries.chemistry.schema.broombridge
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: e580fd8267cc7ba30533d557eceb486f8c205be6
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: e83d2d52fcdb2a30179ca6994d2c90f41cef7dbb
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835774"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98856197"
 ---
 # <a name="broombridge-quantum-chemistry-schema"></a>Broombridge Quantum kémia-séma # 
 
-A nagy teljesítményű számítási kémia szoftverek, például a [NWChem](http://www.nwchem-sw.org/) lehetővé teszik a valós kémiai problémák széles körének modellezését. Ahhoz, hogy NWChem molekuláris modelleket lehessen elérni a Microsoft Quantum kémiát tartalmazó könyvtárral, egy **Broombridge**nevű [YAML](https://en.wikipedia.org/wiki/YAML)sémát kell használnia. A név egy olyan [mérföldkőre](https://en.wikipedia.org/wiki/Broom_Bridge) való hivatkozásként lett kiválasztva, amely bizonyos körökben a Hamiltonians szülővárosának ünnepelt. 
+A nagy teljesítményű számítási kémia szoftverek, például a [NWChem](http://www.nwchem-sw.org/) lehetővé teszik a valós kémiai problémák széles körének modellezését. Ahhoz, hogy NWChem molekuláris modelleket lehessen elérni a Microsoft Quantum kémiát tartalmazó könyvtárral, egy **Broombridge** nevű [YAML](https://en.wikipedia.org/wiki/YAML)sémát kell használnia. A név egy olyan [mérföldkőre](https://en.wikipedia.org/wiki/Broom_Bridge) való hivatkozásként lett kiválasztva, amely bizonyos körökben a Hamiltonians szülővárosának ünnepelt. 
 
 A [NWChem](https://github.com/nwchemgit/nwchem) egy nyílt forráskódú projekt, amely a megengedő oktatási közösségi licenc (ECL) 2,0-licenccel rendelkezik. A [Broombridge Quantum kémiai sémája](https://docs.microsoft.com/quantum/libraries/chemistry/schema/spec_v_0_2)egy nyílt forráskódú séma, amely [a következő](https://raw.githubusercontent.com/Microsoft/Quantum/master/Chemistry/Schema/broombridge-0.1.schema.json) [RFC 2119](https://tools.ietf.org/html/rfc2119) -es és az mit licenc alá tartozó [validator-szkriptet](https://raw.githubusercontent.com/Microsoft/Quantum/master/Chemistry/Schema/validator.py) tartalmazza: 
 

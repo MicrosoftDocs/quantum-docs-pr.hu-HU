@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyToMost
 title: ApplyToMost művelet
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyToMost
 qsharp.summary: Applies an operation to all but the last element of an array.
-ms.openlocfilehash: 7e7824b431ccff644cf5cc53145163327eb8ad36
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: a3918233e101f3d8956601dcc7d85edcf6196ac7
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96208533"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98850591"
 ---
 # <a name="applytomost-operation"></a>ApplyToMost művelet
 
@@ -54,6 +54,15 @@ A célok tömbje, amelyből az összes, de az utolsó lesz alkalmazva `op` .
 ### <a name="t"></a>Nem
 
 Az alkalmazni kívánt művelet bemeneti típusa.
+
+## <a name="example"></a>Példa
+
+A következő Q # kódrészletek egyenértékűek:
+
+```qsharp
+ApplyToMost(ApplyCNOTChain, register);
+ApplyCNOTChain(Most(register));
+```
 
 ## <a name="see-also"></a>Lásd még:
 
