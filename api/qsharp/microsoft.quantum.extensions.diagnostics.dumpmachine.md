@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Extensions.Diagnostics.DumpMachine
 title: DumpMachine függvény
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Extensions.Diagnostics
@@ -14,24 +14,24 @@ qsharp.summary: >-
   >
 
   > Please use @"microsoft.quantum.diagnostics.dumpmachine".
-ms.openlocfilehash: 0c933294c1c57d690c0df338aa2ccd8824b33c24
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 4f1015ffd3a31335d1904bfce59c8551476d479f
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96213310"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98823070"
 ---
-# <a name="dumpmachine-function"></a><span data-ttu-id="7a284-102">DumpMachine függvény</span><span class="sxs-lookup"><span data-stu-id="7a284-102">DumpMachine function</span></span>
+# <a name="dumpmachine-function"></a><span data-ttu-id="1c9a6-102">DumpMachine függvény</span><span class="sxs-lookup"><span data-stu-id="1c9a6-102">DumpMachine function</span></span>
 
-<span data-ttu-id="7a284-103">Névtér: [Microsoft. Quantum. Extensions. Diagnostics](xref:Microsoft.Quantum.Extensions.Diagnostics)</span><span class="sxs-lookup"><span data-stu-id="7a284-103">Namespace: [Microsoft.Quantum.Extensions.Diagnostics](xref:Microsoft.Quantum.Extensions.Diagnostics)</span></span>
+<span data-ttu-id="1c9a6-103">Névtér: [Microsoft. Quantum. Extensions. Diagnostics](xref:Microsoft.Quantum.Extensions.Diagnostics)</span><span class="sxs-lookup"><span data-stu-id="1c9a6-103">Namespace: [Microsoft.Quantum.Extensions.Diagnostics](xref:Microsoft.Quantum.Extensions.Diagnostics)</span></span>
 
-<span data-ttu-id="7a284-104">Csomag: [Microsoft. Quantum. QSharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span><span class="sxs-lookup"><span data-stu-id="7a284-104">Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span></span>
+<span data-ttu-id="1c9a6-104">Csomag: [Microsoft. Quantum. QSharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span><span class="sxs-lookup"><span data-stu-id="1c9a6-104">Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span></span>
 
 
 > [!WARNING]
-> <span data-ttu-id="7a284-105">A DumpMachine elavult.</span><span class="sxs-lookup"><span data-stu-id="7a284-105">DumpMachine has been deprecated.</span></span> <span data-ttu-id="7a284-106">Használja <xref:Microsoft.Quantum.Diagnostics.DumpMachine> helyette.</span><span class="sxs-lookup"><span data-stu-id="7a284-106">Please use <xref:Microsoft.Quantum.Diagnostics.DumpMachine> instead.</span></span>
+> <span data-ttu-id="1c9a6-105">A DumpMachine elavult.</span><span class="sxs-lookup"><span data-stu-id="1c9a6-105">DumpMachine has been deprecated.</span></span> <span data-ttu-id="1c9a6-106">Használja <xref:Microsoft.Quantum.Diagnostics.DumpMachine> helyette.</span><span class="sxs-lookup"><span data-stu-id="1c9a6-106">Please use <xref:Microsoft.Quantum.Diagnostics.DumpMachine> instead.</span></span>
 >
-> <span data-ttu-id="7a284-107">Használja a következőt: @"microsoft.quantum.diagnostics.dumpmachine".</span><span class="sxs-lookup"><span data-stu-id="7a284-107">Please use @"microsoft.quantum.diagnostics.dumpmachine".</span></span>
+> <span data-ttu-id="1c9a6-107">Használja a következőt: @"microsoft.quantum.diagnostics.dumpmachine".</span><span class="sxs-lookup"><span data-stu-id="1c9a6-107">Please use @"microsoft.quantum.diagnostics.dumpmachine".</span></span>
 
 
 
@@ -40,19 +40,19 @@ function DumpMachine<'T> (location : 'T) : Unit
 ```
 
 
-## <a name="input"></a><span data-ttu-id="7a284-108">Bevitel</span><span class="sxs-lookup"><span data-stu-id="7a284-108">Input</span></span>
+## <a name="input"></a><span data-ttu-id="1c9a6-108">Bevitel</span><span class="sxs-lookup"><span data-stu-id="1c9a6-108">Input</span></span>
 
-### <a name="location--t"></a><span data-ttu-id="7a284-109">hely: nem</span><span class="sxs-lookup"><span data-stu-id="7a284-109">location : 'T</span></span>
-
-
+### <a name="location--t"></a><span data-ttu-id="1c9a6-109">hely: nem</span><span class="sxs-lookup"><span data-stu-id="1c9a6-109">location : 'T</span></span>
 
 
 
-## <a name="output--unit"></a><span data-ttu-id="7a284-110">Kimenet: [egység](xref:microsoft.quantum.lang-ref.unit)</span><span class="sxs-lookup"><span data-stu-id="7a284-110">Output : [Unit](xref:microsoft.quantum.lang-ref.unit)</span></span>
+
+
+## <a name="output--unit"></a><span data-ttu-id="1c9a6-110">Kimenet: [egység](xref:microsoft.quantum.lang-ref.unit)</span><span class="sxs-lookup"><span data-stu-id="1c9a6-110">Output : [Unit](xref:microsoft.quantum.lang-ref.unit)</span></span>
 
 
 
-## <a name="type-parameters"></a><span data-ttu-id="7a284-111">Típusparaméterek</span><span class="sxs-lookup"><span data-stu-id="7a284-111">Type Parameters</span></span>
+## <a name="type-parameters"></a><span data-ttu-id="1c9a6-111">Típusparaméterek</span><span class="sxs-lookup"><span data-stu-id="1c9a6-111">Type Parameters</span></span>
 
-### <a name="t"></a><span data-ttu-id="7a284-112">Nem</span><span class="sxs-lookup"><span data-stu-id="7a284-112">'T</span></span>
+### <a name="t"></a><span data-ttu-id="1c9a6-112">Nem</span><span class="sxs-lookup"><span data-stu-id="1c9a6-112">'T</span></span>
 
