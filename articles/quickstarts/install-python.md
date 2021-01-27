@@ -4,18 +4,17 @@ description: Megtudhatja, hogyan hozhat létre Q#-alkalmazásokat a Python haszn
 author: bradben
 ms.author: v-benbra
 ms.date: 8/20/2020
-ms.topic: article
-ms.custom: how-to
+ms.topic: quickstart
 uid: microsoft.quantum.install.python
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: f6a2a7d1888cfe458fa3989a27d71fcdeed0f01f
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
-ms.translationtype: HT
+ms.openlocfilehash: 1ec40b6f1b7a8d9144860e3b8cfd554eb51bae81
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
+ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834159"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98844273"
 ---
 # <a name="develop-with-no-locq-and-python"></a>Fejlesztés Q#-pal és Pythonnal
 
@@ -72,7 +71,7 @@ Telepítse a QDK-t a Python-gazdaprogramok fejlesztéséhez Q#-műveletek meghí
     > ahol a `/path/to/dotnet-iqsharp` helyére a fájlrendszerben található `dotnet-iqsharp` eszközre mutató abszolút elérési útvonalat kell beírni.
     > Ez általában a `.dotnet/tools` területen található a felhasználó profil mappájában.
     
-***
+**_
 
 Ennyi az egész! Most már a `qsharp` Python-csomag és a Jupyterhez tartozó IQ# kernel is telepítve van, amelyek a Q#-műveletek Pythonból való fordításához és futtatásához szükséges fő funkciókat biztosítják, és lehetővé teszik a Q# Jupyter-notebookok használatát.
 
@@ -113,7 +112,7 @@ Most már készen áll arra, hogy ellenőrizze a `qsharp` Python-csomag telepít
 1. Megjelenik a meghívott művelet eredménye. Mivel a művelet egy véletlenszerű eredményt hoz létre, ezért ebben az esetben a képernyőn a `0` vagy `1` érték jelenik meg. Ha újra és újra futtatja a programot, mindkét eredményt körülbelül az esetek felében fogja látni.
 
 > [!NOTE]
-> * A Python-kód csak egy szokásos Python-program. Python Jupyter-környezeteket, beleértve Python-alapú Jupyter-notebookokat is használhat klasszikus Python-programok írásához és Q#-műveletek meghívásához. A Python-program képes Q#-műveleteket importálni bármilyen olyan .qs fájlból, amely ugyanabban a mappában található, mint maga a Python-kód.
+> _ A Python-kód csak egy normál Python-program. Python Jupyter-környezeteket, beleértve Python-alapú Jupyter-notebookokat is használhat klasszikus Python-programok írásához és Q#-műveletek meghívásához. A Python-program képes Q#-műveleteket importálni bármilyen olyan .qs fájlból, amely ugyanabban a mappában található, mint maga a Python-kód.
 
 ## <a name="next-steps"></a>További lépések
 

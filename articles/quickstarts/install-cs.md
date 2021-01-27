@@ -4,18 +4,17 @@ description: Megtudhatja, hogyan hozhat létre Q#-alkalmazást a .NET-nyelvek ha
 author: bradben
 ms.author: v-benbra
 ms.date: 8/20/2020
-ms.topic: article
-ms.custom: how-to
+ms.topic: quickstart
 uid: microsoft.quantum.install.cs
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: e8733918daa02afaea0fc1994d5f0851d4be9b93
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
-ms.translationtype: HT
+ms.openlocfilehash: de79c361331766572f5608c341be766e071e01b5
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
+ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834329"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98844309"
 ---
 # <a name="develop-with-no-locq-and-net"></a>Fejlesztés Q#-pal és .NET-tel
 
@@ -82,7 +81,7 @@ Ha a Visual Studiótól vagy a VS Code-tól eltérő szerkesztőt használ, egys
   - Válasszon egy nevet a gazdaprogram számára
   - Kattintson a **Létrehozás** elemre.
 
-***
+**_
 
 ## <a name="calling-into-no-locq-from-net"></a>A Q# meghívása a .NET-ből
 
@@ -103,7 +102,7 @@ Ha ezt a műveletet .NET-ből szeretné meghívni egy kvantumszimulátoron, hasz
 
 :::code language="fsharp" source="~/quantum/samples/interoperability/dotnet/fsharp/Host.fs" range="4-":::
 
-***
+_**
     
 ## <a name="next-steps"></a>További lépések
 

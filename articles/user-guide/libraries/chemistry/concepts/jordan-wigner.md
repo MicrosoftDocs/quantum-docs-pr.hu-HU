@@ -1,30 +1,30 @@
 ---
-title: Jordánia – Wigner-képviselet
-description: Ismerkedjen meg a Jordan-Wigner képviselettel, amely az Hamilton-operátorokat a kvantum-számítógépeken könnyebben megvalósítható, egységes mátrixokra képezi le.
+title: Jordan-Wigner képviselet
+description: Ismerkedjen meg az Jordan-Wigner ábrázolással, amely a Hamilton-operátorokat a kvantum-számítógépeken könnyebben megvalósítható, egységes mátrixokra képezi le.
 author: bradben
 ms.author: v-benbra
 ms.date: 10/09/2017
-ms.topic: article-type-from-white-list
+ms.topic: conceptual
 uid: microsoft.quantum.chemistry.concepts.jordanwigner
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 29abb4d2ef11239a58af45bc4eee3bd60d20a6c7
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 738c8262ea66b8a02ea7541e402953237dc2ea48
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833850"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98844137"
 ---
-# <a name="jordan-wigner-representation"></a>Jordánia – Wigner-képviselet
+# <a name="jordan-wigner-representation"></a>Jordan-Wigner képviselet
 
 Míg a második kvantálási Hamiltonians a $a ^ \dagger $ (létrehozás) és a $a $ (megsemmisítés) szempontjából jól reprezentálva vannak, ezek a műveletek nem alapvető műveletek a kvantum-számítógépeken.
 Ennek eredményeképpen, ha azt szeretnénk, hogy egy kvantum-számítógépen Implementáljuk azokat, az operátorokat a kvantum-számítógépeken megvalósítható, egységes mátrixokhoz kell rendelni.
 A Jordan – Wigner ábrázolás egy ilyen térképet biztosít.
 Azonban mások, például a Bravyi – Kitaev képviselet is létezik, és saját relatív előnyökkel és hátrányokkal rendelkeznek.
-A Jordan-Wigner ábrázolás legfőbb előnye az egyszerűsége.
+Az Jordan-Wigner ábrázolás legfőbb előnye az egyszerűsége.
 
-A Jordan-Wigner ábrázolása egyenesen a származtatás felé.
+A Jordan-Wigner ábrázolás egyenesen a származtatás felé.
 Ne felejtse el, hogy a $ \ket {0} _j $ állapot azt jelenti, hogy a spin orbitális $j $ üres, és a $ \ket {1} _j $ érték azt jelenti, hogy foglalt.
 Ez azt jelenti, hogy a qubits természetes módon képes tárolni egy adott spin-orbitális megszállását.
 Ezután $a ^ \ dagger_j \ket {0} _j = \ket {1} _j $ és $a ^ \ dagger_j \ket {1} _j = $0.
@@ -51,14 +51,14 @@ A teljes konstrukció a következő:
 \begin{align} a ^ \ dagger_1 &= \left (\frac{X-iY} {2} \right) \otimes 1 \otimes 1 \otimes 1 \otimes \cdots \otimes 1, \\ \\ egy ^ \ dagger_2 &= Z\otimes\left (\frac{X-iY} {2} \right) \otimes 1 \ otimes 1 \otimes \cdots \otimes 1, \\ \\ a ^ \ dagger_3 &= Z\otimes Z\otimes \left (\frac{X-iY} {2} \right) \otimes 1 \otimes \cdots \otimes 1, \\ \\ & \Vdots \\ \\ a ^ \ dagger_N &= Z\otimes Z\otimes Z\otimes Z \otimes \cdots \otimes Z\otimes \left (\frac{X-iY} {2} \right). \label{EQ: JW} \end{align}
 
 Azt is érdemes kipróbálni, hogy a szám operátorok, $n _j $, a Pauli-operátorok alapján legyenek kifejezve.
-Szerencsére a $Z $ operátorok (más néven Jordan-Wigner karakterláncok) karakterláncai megszakítják ezt a helyettesítést.
+Szerencsére a $Z $ operátorok (más néven Jordan-Wigner sztringek) karakterláncai megszakítják ezt a helyettesítést.
 Ennek elvégzése után (és emlékeztetve arra, hogy $X _jY_j = iZ_j $), \begin{Equation} n_j = a ^ \ dagger_j a_j = \frac{(1-Z_j)} {2} .
 \end{equation}
 
 
-## <a name="constructing-hamiltonians-in-jordan-wigner-representation"></a>Hamiltonians építése Jordániában – Wigner képviselet
+## <a name="constructing-hamiltonians-in-jordan-wigner-representation"></a>Hamiltonians létrehozása Jordan-Wigner ábrázolásban
 
-Miután megtettük a Hamilton Wigner-képviseletét, a Pauli-operátorok összegének lefordításával egyenesen továbbítjuk.
+Ha meghívást kaptunk a Hamilton a Pauli-operátorok összegét lefordító Jordan-Wigner-képviseletet, a rendszer azonnal továbbítja a műveletet.
 Az egyik egyszerűen le kell cserélnie a Fermionic Hamilton összes $a ^ \dagger $ és $a $ operátorát a fent megadott Pauli-operátorok karakterláncával.
 Ha az egyik végrehajtja ezt a helyettesítést, a Hamilton belül csak öt osztály szerepel.
 Ez az öt osztály a $p, a q $ és a $p, a q, az r, a s $ lehetőségeknek az egytörzsű és a kéttörzsű kifejezésekben való kiválasztásának különböző módjaihoz tartozik a Hamilton.

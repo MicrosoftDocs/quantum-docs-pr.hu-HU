@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.IncrementPhaseByInteger
 title: IncrementPhaseByInteger művelet
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Arithmetic
 qsharp.name: IncrementPhaseByInteger
 qsharp.summary: Increments an unsigned quantum register by a classical integer, using phase rotations.
-ms.openlocfilehash: 54b83b3d4460c05478543c51f8f9c0b0e7f5b1fa
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: cc7922b2940cb979394958d5eb4e9933144eb062
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96222915"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98843148"
 ---
 # <a name="incrementphasebyinteger-operation"></a>IncrementPhaseByInteger művelet
 

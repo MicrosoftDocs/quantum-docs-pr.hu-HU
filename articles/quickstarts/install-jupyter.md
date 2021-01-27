@@ -4,18 +4,17 @@ description: Megtudhatja, hogyan hozhat létre Q#-alkalmazásokat Jupyter-notebo
 author: bradben
 ms.author: v-benbra
 ms.date: 8/20/2020
-ms.topic: article
-ms.custom: how-to
+ms.topic: quickstart
 uid: microsoft.quantum.install.jupyter
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: b34d89ab33a4644c1dd4342949685f9bf84babd8
-ms.sourcegitcommit: d98190988ff03146d9ca2b0d325870cd717d729a
-ms.translationtype: HT
+ms.openlocfilehash: 4cef9b7252a2199b2ea995c4cf819a3582d9ca8f
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
+ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91771395"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98844279"
 ---
 # <a name="develop-with-no-locq-jupyter-notebooks"></a>Fejlesztés Q# Jupyter-notebookokkal
 
@@ -69,7 +68,7 @@ Az IQ# elsősorban a Jupyter és a Python által a .NET Core SDK-hoz használt b
 > ahol a `/path/to/dotnet-iqsharp` helyére a fájlrendszerben található `dotnet-iqsharp` eszközre mutató abszolút elérési útvonalat kell beírni.
 > Ez általában a `.dotnet/tools` területen található a felhasználó profil mappájában.
     
-***
+**_
 
 Ennyi az egész! Most már a Jupyterhez tartozó IQ# kernel is telepítve van, amely a Q#-műveletek Q# Jupyter-notebookokból való fordításához és futtatásához szükséges fő funkciókat biztosítja.
 
@@ -85,7 +84,7 @@ Most már készen áll arra, hogy ellenőrizze a Q# Jupyter-notebook telepítés
 
     - Ha a Jupyter Notebook nem nyílik meg automatikusan a böngészőben, a megnyitásához másolja és illessze be a böngészőbe a parancssor által megadott URL-címet.
 
-1. Válassza a **New (Új) → Q#** lehetőséget egy Jupyter-notebook létrehozásához egy Q#-kernellel, majd szúrja be a következő kódot az első notebookcellába:
+1. Válassza az _ *új Q# →** lehetőséget egy Jupyter notebook kernelrel való létrehozásához Q# , és adja hozzá a következő kódot az első jegyzetfüzet-cellához:
 
     :::code language="qsharp" source="~/quantum/samples/interoperability/qrng/Qrng.qs" range="6-13":::
 
