@@ -5,16 +5,16 @@ author: QuantumWriter
 uid: microsoft.quantum.libraries.applications
 ms.author: martinro
 ms.date: 12/11/2017
-ms.topic: article
+ms.topic: conceptual
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 5a29dcc74c638cb8ecbeb1f924d0e50d40d19f66
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 214d584840f235868c66a1fb3ee24d0acab49630
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92692166"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98857245"
 ---
 # <a name="applications"></a>Alkalmazások #
 
@@ -151,7 +151,7 @@ Ezt a két lépést alább tekintjük át.
 
 ### <a name="period-finding"></a>Időszak megállapítása ###
 
-Miután megismerte, hogyan működik a Quantum Fourier-transzformáció és a fázis becslése (lásd a [kvantum-algoritmusokat](xref:microsoft.quantum.libraries.standard.algorithms)), ezeket az eszközöket felhasználhatjuk a hagyományosan nehéz számítási probléma megoldásához, amelynek elnevezése az *időszak megállapítása* .  A következő szakaszban bemutatjuk, hogyan alkalmazhatja az időszak megállapítását a faktoring szolgáltatásba.
+Miután megismerte, hogyan működik a Quantum Fourier-transzformáció és a fázis becslése (lásd a [kvantum-algoritmusokat](xref:microsoft.quantum.libraries.standard.algorithms)), ezeket az eszközöket felhasználhatjuk a hagyományosan nehéz számítási probléma megoldásához, amelynek elnevezése az *időszak megállapítása*.  A következő szakaszban bemutatjuk, hogyan alkalmazhatja az időszak megállapítását a faktoring szolgáltatásba.
 
 A két egész szám $a $ és $N $ között, ahol a $a<N $, az időszak megállapításának célját, más néven a sorrend megállapítását is, az a _sorrend_ , amely $r $ $a $ többtényezős $N $, ahol $r $ a legkevésbé pozitív egész számnak felel meg, például $a ^ r \equiv 1 \text{mod} N $.  
 
@@ -178,7 +178,7 @@ A vezérelt $U _a $ Gate Maps $ \ket{x} $ to $ \ket{(AX) \text{mod} N} $, ha a v
 Ahhoz, hogy a $ (a ^ NX) \text{mod} N $-t lehessen elérni, egyszerűen alkalmazhatjuk a szabályozott $U _ {a ^ n} $-t, ahol a $a ^ n \text{mod} N $-t a kvantum-áramkörbe való csatlakoztatáshoz.  
 Az ilyen Moduláris aritmetika eléréséhez szükséges áramkörök leírását a [Quantum aritmetikai dokumentációja](./algorithms.md#arithmetic)tartalmazza, konkrétan a vezérelt $U \_ {a ^ i} $ műveletek megvalósításához moduláris hatványozására áramkörre van szükségünk.
 
-Míg a fenti kör megfelel a [kvantum fázisok becslésének](xref:Microsoft.Quantum.Characterization.QuantumPhaseEstimation) , és explicit módon lehetővé teszi a megrendelés megtalálását, csökkentheti a szükséges qubits számát. A Beauregard módszerét követve megtekintheti a [arXiv: Quant-pH/0205095v3](https://arxiv.org/pdf/quant-ph/0205095v3.pdf#page=8), illetve a Microsoft. Quantum. jellemzésben elérhető fázis-becslési rutinok egyikét. A [robusztus fázis becslése](xref:microsoft.quantum.characterization.robustphaseestimation) például egy extra qubit is használ.
+Míg a fenti kör megfelel a [kvantum fázisok becslésének](xref:Microsoft.Quantum.Characterization.QuantumPhaseEstimation) , és explicit módon lehetővé teszi a megrendelés megtalálását, csökkentheti a szükséges qubits számát. A Beauregard módszerét követve megtekintheti a [arXiv: Quant-pH/0205095v3](https://arxiv.org/pdf/quant-ph/0205095v3.pdf#page=8), illetve a Microsoft. Quantum. jellemzésben elérhető fázis-becslési rutinok egyikét. A [robusztus fázis becslése](xref:Microsoft.Quantum.Characterization.RobustPhaseEstimation) például egy extra qubit is használ.
 
 ### <a name="factoring"></a>Faktoring ###
 A faktoring célja, hogy meghatározza a $N $ egész szám két fő tényezőjét, ahol a $N $ egy $n $ bites szám.  

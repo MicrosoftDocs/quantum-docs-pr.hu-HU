@@ -1,6 +1,6 @@
 ---
 title: "iterációk és hurkok a Q# " leírásban: a "for" ciklusok használatának megismerése a Q# programozási nyelven.
-Szerző: bettinaheim MS. Author: Beheim MS. Date: 10/07/2020 MS. topic: cikk UID: Microsoft. Quantum. qsharp. iterációs No-Loc:
+Szerző: bettinaheim MS. Author: Beheim MS. Date: 10/07/2020 MS. topic: hivatkozás UID: Microsoft. Quantum. qsharp. iterációs No-Loc:
 - "Q#"
 - "$$v"
 

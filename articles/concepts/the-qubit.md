@@ -1,6 +1,6 @@
 ---
 title: a qubit a kvantum-számítástechnikai leírásban: Ismerje meg a qubits, a Quantum Computing információinak alapvető egységét.
-Szerző: QuantumWriter UID: Microsoft. Quantum. Concepts. qubit MS. Author: v-benbra MS. Date: 12/11/2017 MS. topic: No-Loc:
+Szerző: QuantumWriter UID: Microsoft. Quantum. Concepts. qubit MS. Author: v-benbra MS. Date: 12/11/2017 MS. topic: konceptuális No-Loc:
 - "Q#"
 - "$$v"
 - "$$"
