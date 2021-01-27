@@ -5,16 +5,16 @@ author: QuantumWriter
 uid: microsoft.quantum.concepts.control-flow
 ms.author: martinro
 ms.date: 12/11/2017
-ms.topic: article
+ms.topic: conceptual
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: ad107f5c65a4bf368d12d30e4a72786f2076205c
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 8f4b69250ed49bd56c3066d5cd40db4b8abfc9cb
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92690868"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98858706"
 ---
 # <a name="higher-order-control-flow"></a>Higher-Order vezérlési folyamat #
 
@@ -164,7 +164,7 @@ U(1, time / Float(nSteps), target);
 
 Ezen a ponton most már a Trotter – Suzuki kiterjesztésre is hivatkozhatunk, *anélkül, hogy a kvantum-mechanikara* lenne szükség.
 A bővítés gyakorlatilag egy nagyon különleges iterációs minta, amelyet a $ \eqref{EQ: Trotter-Suzuki-0} $ alapján motiválnak.
-Ezt az iterációs mintát a következő implementálja <xref:Microsoft.Quantum.Canon.DecomposedIntoTimestepsCA> :
+Ezt az iterációs mintát a következő implementálja <xref:Microsoft.Quantum.Canon.DecomposedIntoTimeStepsCA> :
 
 ```qsharp
 // The 2 indicates how many terms we need to decompose,
@@ -213,7 +213,7 @@ Ez az építés pontosan működik `ApplyWith` , ezért az új művelet törzsé
 ```
 
 Itt <xref:Microsoft.Quantum.Canon.ApplyPauliFromBitString> alkalmazta a $P $-t, részben alkalmazva azt a cél használatára a szolgáltatással való használatra `ApplyWith` .
-Vegye figyelembe azonban, hogy a *vezérlő* regisztrációját át kell alakítani a kívánt űrlapra, ezért részben alkalmazzuk a belső műveletet a `(Controlled oracle)` *célhelyen* .
+Vegye figyelembe azonban, hogy a *vezérlő* regisztrációját át kell alakítani a kívánt űrlapra, ezért részben alkalmazzuk a belső műveletet a `(Controlled oracle)` *célhelyen*.
 Így `ApplyWith` a vezérlő regisztrálása a $P $ értékkel pontosan úgy működik, ahogy a kívánt módon.
 
 Ezen a ponton megtehetjük, de valahogy nem teljesül, hogy az új műveletünk nem "érzi", mint az elmaradó alkalmazása `Controlled` .

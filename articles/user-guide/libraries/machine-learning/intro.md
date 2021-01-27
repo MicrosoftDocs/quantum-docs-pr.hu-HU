@@ -4,17 +4,17 @@ description: Ismerje meg, hogyan használják a gépi tanulást a kvantum-rendsz
 author: alexeib2
 ms.author: alexeib
 ms.date: 11/22/2019
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.libraries.machine-learning.intro
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 9f7f892fb2b76432942c86163497c22f0c73d51f
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: e2f4a4a63eef40474856426b3b29652b5d3053b2
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833802"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98854032"
 ---
 # <a name="introduction-to-quantum-machine-learning"></a>Bevezetés a Quantum Machine Learningba
 
@@ -30,7 +30,7 @@ A besorolás egy felügyelt gépi tanulási feladat, amelyben a cél az, hogy az
 Némileg hasonló a hagyományos módszerekhez, a Quantum besorolás három lépésből áll:
 - adatkódolás
 - osztályozó állapot előkészítése
-- mérés a mérés valószínűségi természete miatt ezt a három lépést többször kell megismételni. Az osztályozó állapot kódolása és számítástechnikai szintje a *kvantum-áramkörök*segítségével történik. Míg a kódolási áramkör általában adatvezérelt és paraméter nélküli, az osztályozó áramkör a megszerezhető paraméterek megfelelő készletét tartalmazza. 
+- mérés a mérés valószínűségi természete miatt ezt a három lépést többször kell megismételni. Az osztályozó állapot kódolása és számítástechnikai szintje a *kvantum-áramkörök* segítségével történik. Míg a kódolási áramkör általában adatvezérelt és paraméter nélküli, az osztályozó áramkör a megszerezhető paraméterek megfelelő készletét tartalmazza. 
 
 A javasolt megoldásban az osztályozó áramkör egy qubit és két qubit vezérelt rotációból áll. A megtekinthető paraméterek itt az elforgatási szögek. A rotációs és a vezérelt rotációs kapuk *univerzálisak* a Quantum számítási feladataihoz, ami azt jelenti, hogy az egységes súlyozási mátrixok egy elég hosszú áramkörből állhatnak, amely ilyen kapukat tartalmaz.
 
@@ -41,7 +41,7 @@ A javasolt verzióban a rendszer csak egy áramkört támogat, amelyet egyetlen 
 
 Egy egyszerű kvantum-osztályozó kialakítás összehasonlítható egy hagyományos támogatási vektoros (SVM) megoldással. Ha a SVM esetében egy adatminta $x $-re vonatkozó következtetést használ, az optimális kernel formát használja a $ \sum \ alpha_j k (x_j, x) $ értékre, ahol a $k $ egy bizonyos kernel-függvény.
 
-Ezzel szemben a Quantum osztályozó a prediktív $p (y │ x, U (\theta)) = 〈 U (\theta) x | M | U (\theta) x 〉 $, amely hasonló a Szellemhez, de technikailag egészen más. Így, ha egyszerű amplitúdó-kódolást használ, $p (y │ x, U (\theta)) $ egy másodfokú űrlap a $x $ amplitúdójában, de az űrlaphoz tartozó együtthatók már nem jelennek meg egymástól függetlenül; Ehelyett az áramköri $U (\theta) $ mátrix elemeiből összesítve vannak, ami általában lényegesen kevesebb, mint a vektor $x $-hoz tartozó dimenziója. A (z) $p (y │ x, U (\theta)) $ az eredeti funkciókban az eredeti szolgáltatásokban a (z) $2 ^ l $x $l $ értékre növelhető.
+Ezzel szemben a Quantum osztályozó a prediktív $p (y │ x, U (\theta)) = 〈 U (\theta) x | M | U (\theta) x 〉 $ értéket használja, amely hasonló a Szellemhez, de technikailag egészen más. Így, ha egyszerű amplitúdó-kódolást használ, $p (y │ x, U (\theta)) $ egy másodfokú űrlap a $x $ amplitúdójában, de az űrlaphoz tartozó együtthatók már nem jelennek meg egymástól függetlenül; Ehelyett az áramköri $U (\theta) $ mátrix elemeiből összesítve vannak, ami általában lényegesen kevesebb, mint a vektor $x $-hoz tartozó dimenziója. A (z) $p (y │ x, U (\theta)) $ az eredeti funkciókban az eredeti szolgáltatásokban a (z) $2 ^ l $x $l $ értékre növelhető.
 
 Az architektúra felderíti a viszonylag sekélyebb áramköröket, ezért *gyorsan összekeverve* kell lennie ahhoz, hogy rögzítse az adatszolgáltatások közötti összes korrelációt az összes tartományban. Az alábbi ábrán egy példa látható a leghasznosabb, gyorsan összekeverhető áramkör-összetevőre. Annak ellenére, hogy az ezzel a geometriai kapcsolattal rendelkező áramkör csak $3 n + 1 $ kapuból áll, az IT által kiszámított egységes súlyozási mátrix a $2 ^ n $ funkciók között jelentős kölcsönös beszélgetést biztosít.
 

@@ -8,6 +8,8 @@ functions:
   uid: Microsoft.Quantum.Synthesis.Extended
 - summary: Egy logikai függvény átalakításának kiszámítása a Hadamard-ben a {-1,1} Yates metódus használatával
   uid: Microsoft.Quantum.Synthesis.FastHadamardTransformed
+- summary: Minden kétszintű önálló kiszámításhoz a "flip Mask" (maszkolási maszk) érték látható, amely azt jelzi, hogy a qubits melyeket kell a megfelelő 1 – qubit-kapu alkalmazása előtt és után leállítani. A kényelmi paraméterként megadott eredménye 0.
+  uid: Microsoft.Quantum.Synthesis.FlipMasks
 - summary: MCMTMask-típust hoz létre különálló tömbként, ha a célok nem 0, ellenkező esetben üres tömböt ad vissza.
   uid: Microsoft.Quantum.Synthesis.GateMask
 - summary: Akár két MCMT maszkot is kiszámít az y és x közötti átalakításhoz.
@@ -20,6 +22,8 @@ functions:
   uid: Microsoft.Quantum.Synthesis.RMEncoding
 - summary: A logikai értékek tömbje alapján állítja be az igazság tábla értékét az új tömb hosszának visszaadása érdekében, ami `2^numVars` valószínűleg azt igényli, hogy a méretet kibővítse `table` a `false` bejegyzéseket, vagy csonkolja azokat az `2^numVars` elemekre.
   uid: Microsoft.Quantum.Synthesis.SizeAdjustedTruthTable
+- summary: Ellenőrzi, hogy a megadott tömb egy négyzet alakú mátrixot jelöl.
+  uid: Microsoft.Quantum.Synthesis.SquareMatrixFact
 - summary: Számítási kapu maszkok a szintetizáló permutációhoz.
   uid: Microsoft.Quantum.Synthesis.TBSMain
 - summary: Kiszámítja a dauer [x] és az x közötti átalakítását, és frissíti az aktuális permutációt.
@@ -34,6 +38,8 @@ functions:
   uid: Microsoft.Quantum.Synthesis.UpdatedPermutation
 - summary: 0 bites egész szám beszúrása
   uid: Microsoft.Quantum.Synthesis.WithZeroInsertedAt
+- summary: ''
+  uid: Microsoft.Quantum.Synthesis._TwoLevelDecomposition
 name: Microsoft.Quantum.Synthesis
 newtypes:
 - summary: Állapot a változó indexek alapján történő bontás során
@@ -54,8 +60,15 @@ operations:
   uid: Microsoft.Quantum.Synthesis.ApplyPermutationUsingDecompositionWithVariableOrder
 - summary: A Permutes az átalakítási alapú szintézis használatával egy olyan kvantum-állapotot adott meg, amely egy permutációt használ.
   uid: Microsoft.Quantum.Synthesis.ApplyPermutationUsingTransformation
+- summary: Az 2x2 egységes mátrix által meghatározott qubit kaput alkalmazza.
+  uid: Microsoft.Quantum.Synthesis.ApplySingleQubitUnitary
 - summary: ''
   uid: Microsoft.Quantum.Synthesis.ApplyTransposition
+- summary: >-
+    A 2 ^ n x 2 ^ n egységes mátrix által definiált kaput alkalmazza.
+
+    Sikertelen, ha a mátrix nem egységes, vagy nem megfelelő méretű.
+  uid: Microsoft.Quantum.Synthesis.ApplyUnitary
 - summary: A @"microsoft.quantum.intrinsic.x" művelet bekapcsolása `target` , ha a logikai függvény Igaz értéket ad meg `func` a klasszikus hozzárendeléshez a ben `controlRegister` .
   uid: Microsoft.Quantum.Synthesis.ApplyXControlledOnTruthTable
 - summary: A @"microsoft.quantum.intrinsic.x" művelet bekapcsolása `target` , ha a logikai függvény Igaz értéket ad meg `func` a klasszikus hozzárendeléshez a ben `controlRegister` .
@@ -63,9 +76,9 @@ operations:
 summary: Ez a névtér függvényeket és műveleteket tartalmaz a kvantum-műveletek és a logikai függvények alapján történő szintetizálása során.
 uid: Microsoft.Quantum.Synthesis
 metadata:
-  ms.openlocfilehash: 2f92f4662252148ff0e093f5392f5f00f26b661f
-  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.openlocfilehash: e238fdedcc931bb02c35591014d20b50b695b116
+  ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
   ms.translationtype: MT
   ms.contentlocale: hu-HU
-  ms.lasthandoff: 10/27/2020
-  ms.locfileid: "92725726"
+  ms.lasthandoff: 01/26/2021
+  ms.locfileid: "98855187"

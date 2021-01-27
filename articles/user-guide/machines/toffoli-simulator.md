@@ -4,17 +4,17 @@ description: Ismerje meg a Microsoft QDK Toffoli szimulátort, amely egy speciá
 author: alan-geller
 ms.author: ageller
 ms.date: 6/25/2020
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.machines.toffoli-simulator
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 036896a33fa02db671a5fd07421160df164bd41d
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 84b958912ab5116a3181c8eff4f331fc8394604c
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92690790"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98858567"
 ---
 # <a name="quantum-development-kit-qdk-toffoli-simulator"></a>Quantum Development Kit (QDK) Toffoli szimulátor
 
@@ -67,7 +67,7 @@ A Q# művelet futtatásához használja a [(z)% toffoli](xref:microsoft.quantum.
 A Toffoli Simulator a következőket támogatja:
 
 * A Forgások és a exponentiated Paulis, `R` például `Exp` a és a, ha az eredményül kapott művelet egyenlő `X` vagy az Identity Matrix.
-* Mérési és [érvényesítési](xref:Microsoft.Quantum.Diagnostics.AssertMeasurement) műveletek, de csak a Pauli `Z` alapján. Vegye figyelembe, hogy a mérési művelet valószínűsége mindig **0** vagy **1** ; nincs véletlenszerűség a Toffoli-szimulátorban.
+* Mérési és [érvényesítési](xref:Microsoft.Quantum.Diagnostics.AssertMeasurement) műveletek, de csak a Pauli `Z` alapján. Vegye figyelembe, hogy a mérési művelet valószínűsége mindig **0** vagy **1**; nincs véletlenszerűség a Toffoli-szimulátorban.
 * `DumpMachine` és `DumpRegister` függvények.
 Mindkét függvény az `Z` egyes qubit aktuális állapotának kimenetét adja eredményül, soronként egy qubit.
 

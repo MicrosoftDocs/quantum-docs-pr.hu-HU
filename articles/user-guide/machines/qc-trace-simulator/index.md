@@ -4,17 +4,17 @@ description: Ismerje meg, hogyan használható a Microsoft kvantumszámítógép
 author: vadym-kl
 ms.author: vadym
 ms.date: 06/25/2020
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.machines.qc-trace-simulator.intro
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 2e2d9f8494d8709fba34123793cecce4011b609a
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
-ms.translationtype: HT
+ms.openlocfilehash: 1e9207d7dcd6ec09353b234654e0567b377144e9
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
+ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92690838"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98858638"
 ---
 # <a name="microsoft-quantum-development-kit-qdk-quantum-trace-simulator"></a>Microsoft Quantum Development Kit (QDK) – Kvantum-nyomkövetési szimulátor
 
@@ -74,7 +74,7 @@ operation TeleportQubit(source : Qubit, target : Qubit) : Unit {
 }
 ```
 
-Amikor a kvantum-nyomkövetési szimulátor végrehajtja az `AssertMeasurementProbability` műveletet, rögzíti, hogy a `PauliZ` mérése a `source` és a `q` esetében **0,5** -ös valószínűséggel `Zero` eredményt ad. Ha később futtatja az `M` műveletet, megkeresi a kimeneti valószínűségek rögzített értékeit, és az `M` **0,5** -ös valószínűséggel `Zero` vagy `One` eredményt ad. Ha ugyanazt a kódot egy olyan szimulátoron futtatja, amely nyomon követi a kvantumállapotot, a szimulátor ellenőrzi, hogy az `AssertMeasurementProbability` megadott valószínűségei helyesek-e.
+Amikor a kvantum-nyomkövetési szimulátor végrehajtja az `AssertMeasurementProbability` műveletet, rögzíti, hogy a `PauliZ` mérése a `source` és a `q` esetében **0,5**-ös valószínűséggel `Zero` eredményt ad. Ha később futtatja az `M` műveletet, megkeresi a kimeneti valószínűségek rögzített értékeit, és az `M` **0,5**-ös valószínűséggel `Zero` vagy `One` eredményt ad. Ha ugyanazt a kódot egy olyan szimulátoron futtatja, amely nyomon követi a kvantumállapotot, a szimulátor ellenőrzi, hogy az `AssertMeasurementProbability` megadott valószínűségei helyesek-e.
 
 Ügyeljen arra, hogy ha van legalább egy olyan mérési művelet, amely nem lett jegyzettel ellátva az `AssertMeasurementProbability` használatával, a szimulátor [`UnconstrainedMeasurementException`](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.unconstrainedmeasurementexception) kivételt ad vissza.
 

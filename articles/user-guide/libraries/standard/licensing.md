@@ -4,19 +4,19 @@ description: Ismerje meg a Microsoft szabványos kódtárak használatára és a
 author: martinro
 ms.author: martinro
 ms.date: 2/16/2018
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.libraries.licensing
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 4531d8c19e35f48f6e4c3cc2cebe3d82d6fa1025
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 68364f453a6db2a10ed90abb71ace084de8a01f7
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833682"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98858674"
 ---
-# <a name="licensing"></a>Licencelés #
+# <a name="licensing"></a>Licencek #
 
 A Quantum Development Kit olyan nyílt forráskódú függvények és műveletek széles választékát biztosítja, amelyek licence az [mit licenc](https://github.com/Microsoft/Quantum/blob/main/LICENSE.txt)alá tartozik.
 A cél gépek között hordozható standard könyvtár részei a GitHubon futó [Microsoft/QuantumLibraries](https://github.com/Microsoft/QuantumLibraries) adattárból, más könyvtárakkal, például a (z) és más könyvtárakkal, például a [Quantum kémia könyvtárral](xref:microsoft.quantum.chemistry.concepts.intro)szerezhetők be.

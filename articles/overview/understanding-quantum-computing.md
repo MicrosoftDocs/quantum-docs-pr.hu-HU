@@ -9,16 +9,16 @@ uid: microsoft.quantum.overview.understanding
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 332afb4ea7de01da5d8f22fee6517032ed4f9fc1
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
-ms.translationtype: HT
+ms.openlocfilehash: c6c6249fd56c6fb65550c81ffee902eca555b0cd
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
+ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834992"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98855094"
 ---
 # <a name="understanding-quantum-computing"></a>A kvantum-számítástechnika ismertetése
 
-A kvantum-számítástechnikában a kvantummechanika alapelveit alkalmazva dolgozzák fel az adatokat. Ezért a kvantum-számítástechnikához más megközelítésre van szükség, mint a hagyományos számítástechnikához. Erre a különbségre egy példa a kvantum-számítógépekben használt processzor. Míg a klasszikus számítógépek ismerős, szilíciumalapú chipeket használnak, a kvantum-számítógépek kvantumrendszereket használnak, például atomokat, ionokat, fotonokat vagy elektronokat. A kvantumtulajdonságaik révén különböző, a 0 és az 1 értéket egyszerre lefedő kvantum-szuperpozícióban lévő biteket képesek előkészíteni.  
+A kvantum-számítástechnikában a kvantummechanika alapelveit alkalmazva dolgozzák fel az adatokat. Ezért a kvantum-számítástechnikához más megközelítésre van szükség, mint a hagyományos számítástechnikához. Erre a különbségre egy példa a kvantum-számítógépekben használt processzor. Ahol a klasszikus számítógépek ismerős szilícium-alapú chipeket használnak, a kvantum-számítógépek a kvantum-rendszereket használják (olyan rendszerek, amelyekben szabályozható a kvantummechanika egyedi tulajdonságai és viselkedése), például atomok, ionok, fotonok vagy elektronok. Míg a klasszikus számítógépek bináris logika-alapú magasságokat és mélypontot használnak, azaz az 1 és a 0 értéket, a kvantum-számítógépek a kvantum tulajdonságaikat használják olyan bitek ábrázolására, amelyek elkészíthetők az 1. és a 0. különböző kvantum-pozíciókban.  
 
 A kvantumanyagok a kvantummechanika törvényei szerint viselkednek, olyan alapelveket kihasználva, mint a valószínűségszámítás, a szuperpozíció és az összefonódás. Ezek az alapelvek olyan kvantumalgoritmusok alapját képezik, amelyek a kvantum-számítástechnika hatékonyságát használják összetett problémák megoldásához. Ez a cikk a kvantummechanika néhány olyan lényeges alapelvét írja le, amelyre a kvantum-számítástechnika is épül.
 
@@ -52,7 +52,7 @@ Az egymástól való függőség mellett a részecskék akkor is képesek megőr
 
 ### <a name="qubits-and-probability"></a>Qubitek és valószínűség
 
-A hagyományos számítógépek bitekben tárolják és dolgozzák fel az információkat, amelyek állapota 1 vagy 0 lehet, de mindkettő soha. A kvantum-számítástechnikában ennek a **qubit** felel meg, amely egy kvantumrészecske állapotát képviseli. A szuperpozíció miatt a qubitek értéke 1 vagy 0, illetve ezek között bármi lehet. A konfigurációtól függően van egy bizonyos *valószínűsége* annak, hogy a qubit 1-gyel vagy 0-val esik egybe. A **kvantum-interferencia** határozza meg annak valószínűséget, hogy a qubit az egyik vagy a másik értékkel esik-e egybe. 
+A hagyományos számítógépek bitekben tárolják és dolgozzák fel az információkat, amelyek állapota 1 vagy 0 lehet, de mindkettő soha. A kvantum-számítástechnikában ennek a **qubit** felel meg, amely egy kvantumrészecske állapotát képviseli. A szuperpozíció miatt a qubitek értéke 1 vagy 0, illetve ezek között bármi lehet. A konfigurációtól függően van egy bizonyos *valószínűsége* annak, hogy a qubit 1-gyel vagy 0-val esik egybe. A **kvantum-interferencia** határozza meg annak valószínűséget, hogy a qubit az egyik vagy a másik értékkel esik-e egybe.
 
 Emlékszik a barátjára, aki a képet készítette? Tegyük fel, hogy a fényképezőgépén speciális szűrők vannak, úgynevezett *interferenciaszűrők*. Ha a *70/30* szűrőt választja, és elkezd fényképezni, a képek 70%-án balra fog nézni, a 30%-ukon pedig jobbra. A szűrő módosította a fényképezőgép szokásos állapotát a viselkedése valószínűségének befolyásolása érdekében.
 

@@ -4,17 +4,17 @@ description: A Broombridge Quantum kémia Schema v 0.2 specifikációit részlet
 author: guanghaolow
 ms.author: gulow
 ms.date: 05/28/2019
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.libraries.chemistry.schema.spec_v_0_2
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 851d10c0137deecf8e861aad30b5e08a9ae61754
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 8d26b56d88f365144510692466bfffc7feb71d88
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833758"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98854063"
 ---
 # <a name="broombridge-specification-v02"></a>Broombridge-specifikáció – v 0.2 #
 
@@ -171,7 +171,7 @@ Minden probléma leírása objektumnak rendelkeznie kell egy `coulomb_repulsion`
 Minden probléma leírása objektumnak rendelkeznie kell egy `energy_offet` egyszerű mennyiségi objektum értékkel rendelkező tulajdonsággal.
 > Megjegyzés A és a `coulomb_repulsion` `energy_offet` hozzáadott értékek rögzítik a Hamilton identitási idejét.
 
-##### <a name="one-electron-integrals-object"></a>Egy elektronos szerves objektum #####
+##### <a name="one-electron-integrals-object"></a>One-Electron szerves objektum #####
 
 Ez a szakasz a normatív.
 
@@ -201,7 +201,7 @@ one_electron_integrals:     # required
 > A Broombridge 1 alapú indexelést használ.
 
 
-##### <a name="two-electron-integrals-object"></a>Két elektronos szerves objektum #####
+##### <a name="two-electron-integrals-object"></a>Two-Electron szerves objektum #####
 
 Ez a szakasz a normatív.
 

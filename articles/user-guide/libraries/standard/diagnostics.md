@@ -4,16 +4,16 @@ description: A Q# kvantum-programokban a hibák és hibák észleléséhez haszn
 author: cgranade
 uid: microsoft.quantum.libraries.diagnostics
 ms.author: chgranad
-ms.topic: article
+ms.topic: conceptual
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 1ab9b77c7536a1860064110810371d3a68e95b40
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: d13122187a24893d297cfdbb3ad4db03eb22ded0
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92690853"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98858683"
 ---
 # <a name="diagnostics"></a>Diagnosztika #
 
@@ -27,7 +27,7 @@ A klasszikus értékekkel kapcsolatos diagnosztika megszerzéséhez a <xref:Micr
 Alapértelmezés szerint ez a karakterláncot írja a konzolra.
 Az interpolált karakterláncokkal együtt használva <xref:Microsoft.Quantum.Intrinsic.Message> könnyedén jelenthet diagnosztikai adatokat a klasszikus értékekről:
 
-```Q#
+```qsharp
 let angle = Microsoft.Quantum.Math.PI() * 2.0 / 3.0;
 Message($"About to rotate by an angle of {angle}...");
 ```
@@ -45,7 +45,7 @@ A [teljes körű állapot-szimulátor](xref:microsoft.quantum.machines.full-stat
 
 ## <a name="facts-and-assertions"></a>Tények és kijelentések ##
 
-Ahogy azt a [tesztelési és hibakeresési](xref:microsoft.quantum.guide.testingdebugging)művelet, az aláírással `Unit -> Unit` vagy a használatával végzett műveletek `Unit => Unit` is megadhatók *egységként* .
+Ahogy azt a [tesztelési és hibakeresési](xref:microsoft.quantum.guide.testingdebugging)művelet, az aláírással `Unit -> Unit` vagy a használatával végzett műveletek `Unit => Unit` is megadhatók *egységként*.
 Az egyes egységek tesztelése általában egy kis kvantum-programból áll, valamint egy vagy több, a program helyességét ellenőrző feltételt.
 Ezek a feltételek akár _tények_ formájában is megtekinthetők, amelyek bemutatják a bemenetek vagy a _bejelentések_ értékeit, amelyek egy vagy több, bemenetként átadott qubits állapotának ellenőrzését jelzik.
 
