@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Extensions.Math.MaxD
 title: MaxD függvény
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Extensions.Math
@@ -14,12 +14,12 @@ qsharp.summary: >-
   >
 
   > Please use @"microsoft.quantum.math.maxd".
-ms.openlocfilehash: d6b0b5dd80cbaffd3a5146f1333e88eee0d08a67
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 05648435279692287d55e536e7dc1b180d6ad49c
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96212919"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98821835"
 ---
 # <a name="maxd-function"></a>MaxD függvény
 
