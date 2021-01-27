@@ -4,17 +4,17 @@ description: Ismerje meg, hogyan használhatja a részleges alkalmazást a calla
 author: bettinaheim
 ms.author: beheim
 ms.date: 10/07/2020
-ms.topic: article
+ms.topic: reference
 uid: microsoft.quantum.qsharp.partialapplication
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 2c7f66b4dd3ddb38d5e4c96a7b5bf5a0ff6d9058
-ms.sourcegitcommit: b930bb59a1ba8f41d2edc9ed98197109aa8c7f1b
+ms.openlocfilehash: 79c365f5f1e3add5a285a47f0a361e7d92684df2
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96233672"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98847563"
 ---
 <!---
 # Partial application in Q#
