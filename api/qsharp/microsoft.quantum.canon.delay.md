@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Canon.Delay
 title: Késleltetési művelet
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: Delay
 qsharp.summary: Applies a given operation with a delay.
-ms.openlocfilehash: 4f45527faa49f79fccff3892e928fed09f9f0bc8
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: c8ba128e44a9b217ec196e39ff1df639ef276784
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96216506"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98840655"
 ---
 # <a name="delay-operation"></a>Késleltetési művelet
 

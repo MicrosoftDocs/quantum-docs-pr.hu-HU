@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyIfC
 title: ApplyIfC művelet
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyIfC
 qsharp.summary: Applies a controllable operation conditioned on a classical bit.
-ms.openlocfilehash: 35430cb7cf491965b7b69ace6d3f41599dbadd51
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: ef16b23349b604d174e72d9ae06d2052e2ab60f8
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96218716"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98841861"
 ---
 # <a name="applyifc-operation"></a>ApplyIfC művelet
 
@@ -60,6 +60,19 @@ Az a bemenet, amelyre a művelet vonatkozik.
 ### <a name="t"></a>Nem
 
 A feltételesen alkalmazni kívánt művelet bemeneti típusa.
+
+## <a name="example"></a>Példa
+
+A következő előkészíti a qubits egy olyan számítási alapon történő regisztrálását, amelyet egy, az értékek tömbje megadott klasszikus bit-sztring képvisel `Bool` :
+
+```qsharp
+let bitstring = [true, false, true];
+using (register = Qubit(3)) {
+    ApplyToEach(ApplyIf(X, _, _), Zipped(bitstring, register));
+    // register should now be in the state |101⟩.
+    ...
+}
+```
 
 ## <a name="see-also"></a>Lásd még:
 

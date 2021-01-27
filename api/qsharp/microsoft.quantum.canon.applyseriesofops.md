@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplySeriesOfOps
 title: ApplySeriesOfOps művelet
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplySeriesOfOps
 qsharp.summary: Applies a list of ops and their targets sequentially on an array.
-ms.openlocfilehash: b8810e7d31689046e72905195a3a25ef80fc8d67
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: b086b01b0be86bd25a6d6cdef26bfbb53e484cb2
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96218002"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98841501"
 ---
 # <a name="applyseriesofops-operation"></a>ApplySeriesOfOps művelet
 
@@ -55,6 +55,10 @@ A Qubit-regisztrációt kell követni.
 ### <a name="t"></a>Nem
 
 
+
+## <a name="example"></a>Példa
+
+A következők az exp ([PauliX, Pauliy], 0,5) értékre vonatkoznak, hogy qubits a 0, 1//, majd X qubit 2 let Ops = [exp ([PauliX, Pauliy], 0,5, _), ApplyToFirstQubit (X, _)]; indexek kihagyhatása = [[0, 1], [2]]; ApplySeriesOfOps (Ops, indexek, qubitArray);
 
 ## <a name="see-also"></a>Lásd még:
 

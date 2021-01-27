@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyLowDepthAnd
 title: ApplyLowDepthAnd művelet
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyLowDepthAnd
 qsharp.summary: Inverts a given target qubit if and only if both control qubits are in the 1 state, with T-depth 1, using measurement to perform the adjoint operation.
-ms.openlocfilehash: 4c5e381227bf82415121add38d0c0d2959fb529d
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 7fa9d9bf2f1905bf1b59e783d7bceb8cb2e09fa4
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96209315"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98841713"
 ---
 # <a name="applylowdepthand-operation"></a>ApplyLowDepthAnd művelet
 
