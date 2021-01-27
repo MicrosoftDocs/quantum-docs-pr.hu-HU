@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Extensions.Math.MinI
 title: MinI-függvény
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Extensions.Math
@@ -14,24 +14,24 @@ qsharp.summary: >-
   >
 
   > Please use @"microsoft.quantum.math.mini".
-ms.openlocfilehash: ecb104dadb08d1f6651c7b01faec8229396283d9
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: ebcfdae041cb6b30f4b03bba75c588bc17ec1642
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96199489"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98849644"
 ---
-# <a name="mini-function"></a><span data-ttu-id="b954b-102">MinI-függvény</span><span class="sxs-lookup"><span data-stu-id="b954b-102">MinI function</span></span>
+# <a name="mini-function"></a><span data-ttu-id="ef6a5-102">MinI-függvény</span><span class="sxs-lookup"><span data-stu-id="ef6a5-102">MinI function</span></span>
 
-<span data-ttu-id="b954b-103">Névtér: [Microsoft. Quantum. Extensions. Math](xref:Microsoft.Quantum.Extensions.Math)</span><span class="sxs-lookup"><span data-stu-id="b954b-103">Namespace: [Microsoft.Quantum.Extensions.Math](xref:Microsoft.Quantum.Extensions.Math)</span></span>
+<span data-ttu-id="ef6a5-103">Névtér: [Microsoft. Quantum. Extensions. Math](xref:Microsoft.Quantum.Extensions.Math)</span><span class="sxs-lookup"><span data-stu-id="ef6a5-103">Namespace: [Microsoft.Quantum.Extensions.Math](xref:Microsoft.Quantum.Extensions.Math)</span></span>
 
-<span data-ttu-id="b954b-104">Csomag: [Microsoft. Quantum. QSharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span><span class="sxs-lookup"><span data-stu-id="b954b-104">Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span></span>
+<span data-ttu-id="ef6a5-104">Csomag: [Microsoft. Quantum. QSharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span><span class="sxs-lookup"><span data-stu-id="ef6a5-104">Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span></span>
 
 
 > [!WARNING]
-> <span data-ttu-id="b954b-105">A MinI elavult.</span><span class="sxs-lookup"><span data-stu-id="b954b-105">MinI has been deprecated.</span></span> <span data-ttu-id="b954b-106">Használja <xref:Microsoft.Quantum.Math.MinI> helyette.</span><span class="sxs-lookup"><span data-stu-id="b954b-106">Please use <xref:Microsoft.Quantum.Math.MinI> instead.</span></span>
+> <span data-ttu-id="ef6a5-105">A MinI elavult.</span><span class="sxs-lookup"><span data-stu-id="ef6a5-105">MinI has been deprecated.</span></span> <span data-ttu-id="ef6a5-106">Használja <xref:Microsoft.Quantum.Math.MinI> helyette.</span><span class="sxs-lookup"><span data-stu-id="ef6a5-106">Please use <xref:Microsoft.Quantum.Math.MinI> instead.</span></span>
 >
-> <span data-ttu-id="b954b-107">Használja a következőt: @"microsoft.quantum.math.mini".</span><span class="sxs-lookup"><span data-stu-id="b954b-107">Please use @"microsoft.quantum.math.mini".</span></span>
+> <span data-ttu-id="ef6a5-107">Használja a következőt: @"microsoft.quantum.math.mini".</span><span class="sxs-lookup"><span data-stu-id="ef6a5-107">Please use @"microsoft.quantum.math.mini".</span></span>
 
 
 
@@ -40,18 +40,18 @@ function MinI (a : Int, b : Int) : Int
 ```
 
 
-## <a name="input"></a><span data-ttu-id="b954b-108">Bevitel</span><span class="sxs-lookup"><span data-stu-id="b954b-108">Input</span></span>
+## <a name="input"></a><span data-ttu-id="ef6a5-108">Bevitel</span><span class="sxs-lookup"><span data-stu-id="ef6a5-108">Input</span></span>
 
-### <a name="a--int"></a><span data-ttu-id="b954b-109">a: [int](xref:microsoft.quantum.lang-ref.int)</span><span class="sxs-lookup"><span data-stu-id="b954b-109">a : [Int](xref:microsoft.quantum.lang-ref.int)</span></span>
-
-
-
-
-### <a name="b--int"></a><span data-ttu-id="b954b-110">b: [int](xref:microsoft.quantum.lang-ref.int)</span><span class="sxs-lookup"><span data-stu-id="b954b-110">b : [Int](xref:microsoft.quantum.lang-ref.int)</span></span>
+### <a name="a--int"></a><span data-ttu-id="ef6a5-109">a: [int](xref:microsoft.quantum.lang-ref.int)</span><span class="sxs-lookup"><span data-stu-id="ef6a5-109">a : [Int](xref:microsoft.quantum.lang-ref.int)</span></span>
 
 
 
 
+### <a name="b--int"></a><span data-ttu-id="ef6a5-110">b: [int](xref:microsoft.quantum.lang-ref.int)</span><span class="sxs-lookup"><span data-stu-id="ef6a5-110">b : [Int](xref:microsoft.quantum.lang-ref.int)</span></span>
 
-## <a name="output--int"></a><span data-ttu-id="b954b-111">Kimenet: [int](xref:microsoft.quantum.lang-ref.int)</span><span class="sxs-lookup"><span data-stu-id="b954b-111">Output : [Int](xref:microsoft.quantum.lang-ref.int)</span></span>
+
+
+
+
+## <a name="output--int"></a><span data-ttu-id="ef6a5-111">Kimenet: [int](xref:microsoft.quantum.lang-ref.int)</span><span class="sxs-lookup"><span data-stu-id="ef6a5-111">Output : [Int](xref:microsoft.quantum.lang-ref.int)</span></span>
 

@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Extensions.Math.PI
 title: PI-függvény
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Extensions.Math
@@ -14,24 +14,24 @@ qsharp.summary: >-
   >
 
   > Please use @"microsoft.quantum.math.pi".
-ms.openlocfilehash: bf036af580e842dcb87e9b412de489ab74b5b45a
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 3a9c8f93929ae2928743762804adadfbf02ec832
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96199472"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98849623"
 ---
-# <a name="pi-function"></a><span data-ttu-id="1a247-102">PI-függvény</span><span class="sxs-lookup"><span data-stu-id="1a247-102">PI function</span></span>
+# <a name="pi-function"></a><span data-ttu-id="53d0e-102">PI-függvény</span><span class="sxs-lookup"><span data-stu-id="53d0e-102">PI function</span></span>
 
-<span data-ttu-id="1a247-103">Névtér: [Microsoft. Quantum. Extensions. Math](xref:Microsoft.Quantum.Extensions.Math)</span><span class="sxs-lookup"><span data-stu-id="1a247-103">Namespace: [Microsoft.Quantum.Extensions.Math](xref:Microsoft.Quantum.Extensions.Math)</span></span>
+<span data-ttu-id="53d0e-103">Névtér: [Microsoft. Quantum. Extensions. Math](xref:Microsoft.Quantum.Extensions.Math)</span><span class="sxs-lookup"><span data-stu-id="53d0e-103">Namespace: [Microsoft.Quantum.Extensions.Math](xref:Microsoft.Quantum.Extensions.Math)</span></span>
 
-<span data-ttu-id="1a247-104">Csomag: [Microsoft. Quantum. QSharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span><span class="sxs-lookup"><span data-stu-id="1a247-104">Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span></span>
+<span data-ttu-id="53d0e-104">Csomag: [Microsoft. Quantum. QSharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span><span class="sxs-lookup"><span data-stu-id="53d0e-104">Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span></span>
 
 
 > [!WARNING]
-> <span data-ttu-id="1a247-105">A PI elavult.</span><span class="sxs-lookup"><span data-stu-id="1a247-105">PI has been deprecated.</span></span> <span data-ttu-id="1a247-106">Használja <xref:Microsoft.Quantum.Math.PI> helyette.</span><span class="sxs-lookup"><span data-stu-id="1a247-106">Please use <xref:Microsoft.Quantum.Math.PI> instead.</span></span>
+> <span data-ttu-id="53d0e-105">A PI elavult.</span><span class="sxs-lookup"><span data-stu-id="53d0e-105">PI has been deprecated.</span></span> <span data-ttu-id="53d0e-106">Használja <xref:Microsoft.Quantum.Math.PI> helyette.</span><span class="sxs-lookup"><span data-stu-id="53d0e-106">Please use <xref:Microsoft.Quantum.Math.PI> instead.</span></span>
 >
-> <span data-ttu-id="1a247-107">Használja a következőt: @"microsoft.quantum.math.pi".</span><span class="sxs-lookup"><span data-stu-id="1a247-107">Please use @"microsoft.quantum.math.pi".</span></span>
+> <span data-ttu-id="53d0e-107">Használja a következőt: @"microsoft.quantum.math.pi".</span><span class="sxs-lookup"><span data-stu-id="53d0e-107">Please use @"microsoft.quantum.math.pi".</span></span>
 
 
 
@@ -40,5 +40,5 @@ function PI () : Double
 ```
 
 
-## <a name="output--double"></a><span data-ttu-id="1a247-108">Kimenet: [dupla](xref:microsoft.quantum.lang-ref.double)</span><span class="sxs-lookup"><span data-stu-id="1a247-108">Output : [Double](xref:microsoft.quantum.lang-ref.double)</span></span>
+## <a name="output--double"></a><span data-ttu-id="53d0e-108">Kimenet: [dupla](xref:microsoft.quantum.lang-ref.double)</span><span class="sxs-lookup"><span data-stu-id="53d0e-108">Output : [Double](xref:microsoft.quantum.lang-ref.double)</span></span>
 

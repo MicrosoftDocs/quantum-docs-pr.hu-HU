@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Intrinsic.AssertProb
 title: AssertProb művelet
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Intrinsic
@@ -10,22 +10,22 @@ qsharp.summary: >-
   > [!WARNING]
 
   > AssertProb has been deprecated. Please use <xref:Microsoft.Quantum.Diagnostics.AssertMeasurementProbability> instead.
-ms.openlocfilehash: 3c0f7c7a9e0190c5a8e5f3e70a5f82a8c23a97bc
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: a3bdf8d6ae64f0d462da1781a723b27b6e1db05e
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96199097"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98849461"
 ---
-# <a name="assertprob-operation"></a><span data-ttu-id="f49a7-102">AssertProb művelet</span><span class="sxs-lookup"><span data-stu-id="f49a7-102">AssertProb operation</span></span>
+# <a name="assertprob-operation"></a><span data-ttu-id="101c9-102">AssertProb művelet</span><span class="sxs-lookup"><span data-stu-id="101c9-102">AssertProb operation</span></span>
 
-<span data-ttu-id="f49a7-103">Névtér: [Microsoft. Quantum. belső](xref:Microsoft.Quantum.Intrinsic)</span><span class="sxs-lookup"><span data-stu-id="f49a7-103">Namespace: [Microsoft.Quantum.Intrinsic](xref:Microsoft.Quantum.Intrinsic)</span></span>
+<span data-ttu-id="101c9-103">Névtér: [Microsoft. Quantum. belső](xref:Microsoft.Quantum.Intrinsic)</span><span class="sxs-lookup"><span data-stu-id="101c9-103">Namespace: [Microsoft.Quantum.Intrinsic](xref:Microsoft.Quantum.Intrinsic)</span></span>
 
-<span data-ttu-id="f49a7-104">Csomag: [Microsoft. Quantum. QSharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span><span class="sxs-lookup"><span data-stu-id="f49a7-104">Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span></span>
+<span data-ttu-id="101c9-104">Csomag: [Microsoft. Quantum. QSharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span><span class="sxs-lookup"><span data-stu-id="101c9-104">Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span></span>
 
 
 > [!WARNING]
-> <span data-ttu-id="f49a7-105">A AssertProb elavult.</span><span class="sxs-lookup"><span data-stu-id="f49a7-105">AssertProb has been deprecated.</span></span> <span data-ttu-id="f49a7-106">Használja <xref:Microsoft.Quantum.Diagnostics.AssertMeasurementProbability> helyette.</span><span class="sxs-lookup"><span data-stu-id="f49a7-106">Please use <xref:Microsoft.Quantum.Diagnostics.AssertMeasurementProbability> instead.</span></span>
+> <span data-ttu-id="101c9-105">A AssertProb elavult.</span><span class="sxs-lookup"><span data-stu-id="101c9-105">AssertProb has been deprecated.</span></span> <span data-ttu-id="101c9-106">Használja <xref:Microsoft.Quantum.Diagnostics.AssertMeasurementProbability> helyette.</span><span class="sxs-lookup"><span data-stu-id="101c9-106">Please use <xref:Microsoft.Quantum.Diagnostics.AssertMeasurementProbability> instead.</span></span>
 
 
 
@@ -34,38 +34,38 @@ operation AssertProb (bases : Pauli[], qubits : Qubit[], result : Result, prob :
 ```
 
 
-## <a name="input"></a><span data-ttu-id="f49a7-107">Bevitel</span><span class="sxs-lookup"><span data-stu-id="f49a7-107">Input</span></span>
+## <a name="input"></a><span data-ttu-id="101c9-107">Bevitel</span><span class="sxs-lookup"><span data-stu-id="101c9-107">Input</span></span>
 
-### <a name="bases--pauli"></a><span data-ttu-id="f49a7-108">alapok: [Pauli](xref:microsoft.quantum.lang-ref.pauli)[]</span><span class="sxs-lookup"><span data-stu-id="f49a7-108">bases : [Pauli](xref:microsoft.quantum.lang-ref.pauli)[]</span></span>
-
-
-
-
-### <a name="qubits--qubit"></a><span data-ttu-id="f49a7-109">qubits: [Qubit](xref:microsoft.quantum.lang-ref.qubit)[]</span><span class="sxs-lookup"><span data-stu-id="f49a7-109">qubits : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[]</span></span>
+### <a name="bases--pauli"></a><span data-ttu-id="101c9-108">alapok: [Pauli](xref:microsoft.quantum.lang-ref.pauli)[]</span><span class="sxs-lookup"><span data-stu-id="101c9-108">bases : [Pauli](xref:microsoft.quantum.lang-ref.pauli)[]</span></span>
 
 
 
 
-### <a name="result--__invalidresult__"></a><span data-ttu-id="f49a7-110">eredmény: __érvénytelen <Result>__</span><span class="sxs-lookup"><span data-stu-id="f49a7-110">result : __invalid<Result>__</span></span>
+### <a name="qubits--qubit"></a><span data-ttu-id="101c9-109">qubits: [Qubit](xref:microsoft.quantum.lang-ref.qubit)[]</span><span class="sxs-lookup"><span data-stu-id="101c9-109">qubits : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[]</span></span>
 
 
 
 
-### <a name="prob--double"></a><span data-ttu-id="f49a7-111">prob: [dupla](xref:microsoft.quantum.lang-ref.double)</span><span class="sxs-lookup"><span data-stu-id="f49a7-111">prob : [Double](xref:microsoft.quantum.lang-ref.double)</span></span>
+### <a name="result--__invalidresult__"></a><span data-ttu-id="101c9-110">eredmény: __érvénytelen <Result>__</span><span class="sxs-lookup"><span data-stu-id="101c9-110">result : __invalid<Result>__</span></span>
 
 
 
 
-### <a name="msg--string"></a><span data-ttu-id="f49a7-112">msg: [sztring](xref:microsoft.quantum.lang-ref.string)</span><span class="sxs-lookup"><span data-stu-id="f49a7-112">msg : [String](xref:microsoft.quantum.lang-ref.string)</span></span>
+### <a name="prob--double"></a><span data-ttu-id="101c9-111">prob: [dupla](xref:microsoft.quantum.lang-ref.double)</span><span class="sxs-lookup"><span data-stu-id="101c9-111">prob : [Double](xref:microsoft.quantum.lang-ref.double)</span></span>
 
 
 
 
-### <a name="tol--double"></a><span data-ttu-id="f49a7-113">tol: [dupla](xref:microsoft.quantum.lang-ref.double)</span><span class="sxs-lookup"><span data-stu-id="f49a7-113">tol : [Double](xref:microsoft.quantum.lang-ref.double)</span></span>
+### <a name="msg--string"></a><span data-ttu-id="101c9-112">msg: [sztring](xref:microsoft.quantum.lang-ref.string)</span><span class="sxs-lookup"><span data-stu-id="101c9-112">msg : [String](xref:microsoft.quantum.lang-ref.string)</span></span>
+
+
+
+
+### <a name="tol--double"></a><span data-ttu-id="101c9-113">tol: [dupla](xref:microsoft.quantum.lang-ref.double)</span><span class="sxs-lookup"><span data-stu-id="101c9-113">tol : [Double](xref:microsoft.quantum.lang-ref.double)</span></span>
 
 
 
 
 
-## <a name="output--unit"></a><span data-ttu-id="f49a7-114">Kimenet: [egység](xref:microsoft.quantum.lang-ref.unit)</span><span class="sxs-lookup"><span data-stu-id="f49a7-114">Output : [Unit](xref:microsoft.quantum.lang-ref.unit)</span></span>
+## <a name="output--unit"></a><span data-ttu-id="101c9-114">Kimenet: [egység](xref:microsoft.quantum.lang-ref.unit)</span><span class="sxs-lookup"><span data-stu-id="101c9-114">Output : [Unit](xref:microsoft.quantum.lang-ref.unit)</span></span>
 
