@@ -4,17 +4,17 @@ description: Ismerkedjen meg a második kvantálási megközelítéssel az elekt
 author: bradben
 ms.author: v-benbra
 ms.date: 10/09/2017
-ms.topic: article-type-from-white-list
+ms.topic: conceptual
 uid: microsoft.quantum.chemistry.concepts.secondquantization
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 6becd348f7b3957cb60b16bbd5a28228527e1d4c
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: a08e20d5b53aa97cb12ead0dc3a36069d0ec5df8
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835808"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98858838"
 ---
 # <a name="second-quantization"></a>Második kvantálás
 
@@ -84,7 +84,7 @@ A $2N $ spin-pályák megfoglalkozási állapota hasonló lehet a $2N $ qubits-b
 Példaként, ha $N = $2, akkor az állam $ $ \ket {0} \ket {1} \ket {1} \ket {0} , $ $
 
 a spin-pályák $1 $ és $2 $ értékűek maradnak.
-Hasonlóképpen, az állam $ $ \ket {0} \equiv \ket {0} _ {0} \cdots \ket {0} _{N-1}, $ $
+Hasonlóképpen, az állam $ $ \ket {0} \equiv \ket {0} _{0} \cdots \ket {0}_{N-1}, $ $
 
 nincsenek elektronok, és a "vákuum állapot" néven ismertek.
 
@@ -211,12 +211,12 @@ A `FermionTerm` rendszer a következők szerint automatikusan kanonikus sorrendb
     var signEqual = sign0 == sign1;
 ```
 
-## <a name="second-quantized-fermionic-hamiltonian"></a>Második-Kvantálásos Fermionic Hamilton
+## <a name="second-quantized-fermionic-hamiltonian"></a>Second-Quantized Fermionic Hamilton
 
 Valószínűleg nem meglepő, hogy az [elektronikus rendszerek](xref:microsoft.quantum.chemistry.concepts.quantummodels) Hamilton a létrehozási és a megsemmisítési operátorok alapján írhatók.
 Különösen, ha a $ \psi \_ j $ a spin-pályák, amelyek az alapot alkotják
 
-\begin{Equation} \hat{H} = \sum \_ {pq} H \_ {pq} a ^ \dagger \_ p a \_ q + \frac {1} {2} \sum \_ {pqrs} H \_ {pqrs} a ^ \dagger \_ p a ^ \dagger \_ q a \_ ra \_ s + H \_ {\textrm NUC}, \label{EQ: totalHam} \end{Equation}, ahol a $h \_ {\textrm NUC} $ a nukleáris energia (amely a Born-Oppenheimer közelítés alatt álló állandó) és
+\begin{Equation} \hat{H} = \sum \_ {pq} H \_ {pq} a ^ \dagger \_ p a \_ q + \frac {1} {2} \sum \_ {pqrs} h \_ {pqrs} a ^ \dagger \_ p a ^ \dagger \_ q a \_ ra \_ s + H \_ {\textrm NUC}, \label{EQ: totalHam} \end{Equation}, ahol a $h \_ {\textrm NUC} $ a nukleáris energia (amely állandó a Born-Oppenheimer közelítése alatt) és
 
 \begin{align} h \_ {pq} &= \int \_ {-\infty} ^ \infty \psi ^ \* \_ p (x \_ 1) \left (-\Frac{\nabla ^ 2} {2} + V (x \_ 1) \right) \psi \_ q (x \_ 1) \mathrm{d} ^ 3x \_ 1, \end{align}
 

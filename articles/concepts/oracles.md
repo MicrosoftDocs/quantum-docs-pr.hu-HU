@@ -1,6 +1,6 @@
 ---
 title: Quantum Oracles Description: megtudhatja, hogyan dolgozhat és határozhat meg a Quantum Oracles, Black Box műveleteit, amelyeket egy másik algoritmus bemenetként használ.
-Szerző: cgranade UID: Microsoft. Quantum. Concepts. Oracles MS. Author: chgranad MS. Date: 07/11/2018 MS. topic: No-Loc:
+Szerző: cgranade UID: Microsoft. Quantum. Concepts. Oracles MS. Author: chgranad MS. Date: 07/11/2018 MS. topic: konceptuális No-Loc:
 - "Q#"
 - "$$v"
 - "$$"
@@ -134,7 +134,7 @@ ahol $ \alpha : \\ { 0, 1 \\ } ^ n \times \\ { 0, 1 \\ } ^ m \to \mathbb { C } $
 
 $$
 \begin{align}
-O \ket { \psi } & = o \sum _ { x \in \\ { 0, 1 \\ } ^ n, y \in \\ { 0, 1 \\ } ^ m } \alpha (x, y) \ket { x } \ket { y } x \\\\ 0 & , = 1 ^ n, y 0, 1 ^ m (x, y) O \sum _ { \in \\ { \\ } \in \\ { \\ } } \alpha \ket { x } \ket { y }\\\\
+O \ket { \psi } & = o \sum _{ x \in \\ { 0, 1 \\ } ^ n, y \in \\ { 0, 1 \\ } ^ m } \alpha (x, y) \ket { x } \ket { y } x \\\\ 0 & , = 1 ^ n, y 0, 1 ^ m (x, y) O \sum_ { \in \\ { \\ } \in \\ { \\ } } \alpha \ket { x } \ket { y }\\\\
              &= \sum _ { x \in \\ { 0, 1 \\ } ^ n, y \in \\ { 0, 1 \\ } ^ m } \alpha (x, y) \ket { x } \ket { y \oplus f (x) } .
 \end{align}
 $$
@@ -157,6 +157,9 @@ Majd $$
         &=(-1) ^ { f (0) } Z ^ { f (0) – f (1) } \ket { + } .
 \end{align}
 $$
+
+> [!NOTE]
+>Vegye figyelembe, hogy $ z ^ { -1 } = z ^ { \dagger } = z $ és ezért $ z ^ { f (0)-f (1) } = z ^ { f (1)-f (0) } .$
 
 Általánosságban az Oracle-nézetek mindkét nézete kibővíthető úgy, hogy olyan klasszikus függvényeket képviselje, amelyek valódi számokat adnak vissza csak egyetlen bit helyett.
 

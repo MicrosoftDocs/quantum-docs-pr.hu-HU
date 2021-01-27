@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Synthesis.ApplyPermutationUsingTransformation
 title: ApplyPermutationUsingTransformation művelet
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Synthesis
 qsharp.name: ApplyPermutationUsingTransformation
 qsharp.summary: Permutes the amplitudes in a quantum state given a permutation using transformation-based synthesis.
-ms.openlocfilehash: a05b433eae2612bbf5c87522c4ef251976184aa8
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 79913bec44514d477b7ee0668b43396b297b9ab8
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96192060"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98858999"
 ---
 # <a name="applypermutationusingtransformation-operation"></a>ApplyPermutationUsingTransformation művelet
 
@@ -52,6 +52,16 @@ $N $ qubits listája, amelyre a permutáció vonatkozik.
 ## <a name="output--unit"></a>Kimenet: [egység](xref:microsoft.quantum.lang-ref.unit)
 
 
+
+## <a name="example"></a>Példa
+
+Művelet szintetizálása `SWAP` :
+
+```qsharp
+using (qubits = Qubit[2]) {
+  ApplyPermutationUsingTransformation([0, 2, 1, 3], LittleEndian(qubits));
+}
+```
 
 ## <a name="references"></a>Hivatkozások
 

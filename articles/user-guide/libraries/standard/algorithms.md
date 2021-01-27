@@ -4,17 +4,17 @@ description: Ismerje meg az alapvető kvantum-számítási algoritmusokat, bele�
 author: QuantumWriter
 ms.author: martinro
 ms.date: 12/11/2017
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.libraries.standard.algorithms
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 982103876b00718aa3b42c6bc3a07d242cde7594
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: d4d8c35b3196ffb9915c6da06116b3c7dfd0562a
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92692215"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98859006"
 ---
 # <a name="quantum-algorithms"></a>Quantum algoritmusok #
 
@@ -49,7 +49,7 @@ A háttérben elindulhat a [standard amplitúdó-erősítés](https://arxiv.org/
 A Fourier-transzformáció a klasszikus elemzés alapvető eszköze, és ugyanolyan fontos a kvantum-számításokhoz.
 Emellett a *Quantum Fourier-transzformáció* (QFT) hatékonysága messze felülmúlja a klasszikus gépen elérhetővé tenni kívánt első eszközök egyikét.
 
-A QFT hozzávetőleges általánosításával biztosítjuk a <xref:Microsoft.Quantum.Canon.ApproximateQft> műveletet, amely lehetővé teszi a további optimalizálást olyan metszési forgatásokkal, amelyek nem feltétlenül szükségesek a kívánt algoritmus pontosságához.
+A QFT hozzávetőleges általánosításával biztosítjuk a <xref:Microsoft.Quantum.Canon.ApproximateQFT> műveletet, amely lehetővé teszi a további optimalizálást olyan metszési forgatásokkal, amelyek nem feltétlenül szükségesek a kívánt algoritmus pontosságához.
 A hozzávetőleges QFT az $Z dyadic $-rotációs művelet <xref:Microsoft.Quantum.Intrinsic.RFrac> és a művelet végrehajtásához szükséges <xref:Microsoft.Quantum.Intrinsic.H> .
 A bemenet és a kimenet a big endian-kódolásban---feltételezve, hogy az indextel rendelkező qubit a `0` bináris egész számok bal szélső (legmagasabb) kis részébe van kódolva.
 Ez a [két](xref:microsoft.quantum.concepts.dirac)pontra van igazítva, mivel a $ \ket $ állapotú három qubits regisztrálása megfelel a $ {100} \ket $ állapotú _0 $ $q értéknek, {1} míg a $q _1 $ és a $q _2 $ érték a $ \ket $ állapotú {0} .

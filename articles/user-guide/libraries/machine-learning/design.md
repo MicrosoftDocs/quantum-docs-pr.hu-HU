@@ -4,17 +4,17 @@ description: Megtudhatja, hogyan tervezhet áramköri modelleket a Quantum Circu
 author: geduardo
 ms.author: v-edsanc
 ms.date: 02/17/2020
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.libraries.machine-learning.design
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 221479e616ff7a03c4ac20e0062125660314e95b
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 2100fe120ba3b5fce5d06e77d7f3f5174bc04adb
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92691152"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98858797"
 ---
 # <a name="design-your-own-classifier"></a>Saját osztályozó tervezése
 
@@ -61,6 +61,6 @@ Tegyük fel, hogy egy 784-es funkciókkal rendelkező adatkészletet használunk
 
 Javasoljuk, hogy ismerkedjen meg a [Quantum Machine learning Library API-referenciával](xref:Microsoft.Quantum.MachineLearning) , és fedezze fel az áramköri terv egyszerűsítéséhez rendelkezésre álló összes eszközt.
 
-## <a name="next-steps"></a>Következő lépések
+## <a name="next-steps"></a>További lépések
 
  Próbálkozzon különböző struktúrákkal a minták által megadott példákban. Megjelenik a modell teljesítményében bekövetkezett változás? A következő oktatóanyagban [`Load your own datasets`](xref:microsoft.quantum.libraries.machine-learning.load) megtudhatja, hogyan tölthet be adatkészleteket az osztályozók új architektúráinak kipróbálásához és megismeréséhez.

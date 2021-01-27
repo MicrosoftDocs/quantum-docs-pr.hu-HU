@@ -1,6 +1,6 @@
 ---
 title: Pauli-mérések leírása: megtudhatja, hogyan dolgozhat az egy-és több qubit Pauli-mérési műveletekkel.
-Szerző: bradben UID: Microsoft. Quantum. Concepts. Pauli MS. Author: v-benbra MS. Date: 12/11/2017 MS. topic: No-Loc:
+Szerző: bradben UID: Microsoft. Quantum. Concepts. Pauli MS. Author: v-benbra MS. Date: 12/11/2017 MS. topic: konceptuális No-Loc:
 - "Q#"
 - "$$v"
 - "$$"
@@ -139,7 +139,7 @@ $$
 
 Emellett a $ HS ^ \dagger $ a Quantum State Vector-re való alkalmazása, majd a Z mérése is megegyezik azzal $ $ , hogy a következő művelet egyenértékű `Measure([PauliY], [q])` :
 
-```Q#
+```qsharp
 operation MeasureY(qubit : Qubit) : Result {
     mutable result = Zero;
     within {
