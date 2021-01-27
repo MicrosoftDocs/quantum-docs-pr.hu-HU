@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Logical.GreaterThanOrEqualD
 title: GreaterThanOrEqualD függvény
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Logical
 qsharp.name: GreaterThanOrEqualD
 qsharp.summary: Returns true if and only if a number is greater than or equal to another number.
-ms.openlocfilehash: 0c9fa353b549d3c137beac3bcc3cfb0e742f6d07
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 98fa55c249f2ade414254d1bccda46a8602b828c
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96197806"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98815870"
 ---
 # <a name="greaterthanorequald-function"></a>GreaterThanOrEqualD függvény
 
@@ -49,7 +49,7 @@ Az összehasonlítandó második érték.
 
 A következők egyenértékűek:
 
-```Q#
+```qsharp
 let cond = a >= b;
 let cond = GreaterThanOrEqualD(a, b);
 ```
