@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Canon.TransformedOperationA
 title: TransformedOperationA függvény
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: TransformedOperationA
 qsharp.summary: Given a function and an operation, returns a new operation whose input is transformed by the given function.
-ms.openlocfilehash: eceba260e601b73bdfa2de6ea6ab146820b5c59a
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: fac0fb6e03dc515892783fb4a5fa9cfc274550b8
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96204878"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98840146"
 ---
 # <a name="transformedoperationa-function"></a>TransformedOperationA függvény
 
@@ -53,6 +53,14 @@ Egy új művelet tbat hívja a `fn` bemenetét, majd átadja az eredményül kap
 ### <a name="u"></a>' U
 
 
+
+## <a name="example"></a>Példa
+
+A következő hívás @"Microsoft.Quantum.Arithmetic.LittleEndianAsBigEndian" egy olyan művelet átalakítására szolgál, amelynek @"Microsoft.Quantum.Arithmetic.BigEndian" bemenetei egy olyan műveletbe kerülnek, amely a típusú bemeneteket fogadja el @"Microsoft.Quantum.Arithmetic.LittleEndian" :
+
+```qsharp
+let leOp = TransformedOperation(LittleEndianAsBigEndian, ApplyXorInPlaceBE);
+```
 
 ## <a name="see-also"></a>Lásd még:
 
