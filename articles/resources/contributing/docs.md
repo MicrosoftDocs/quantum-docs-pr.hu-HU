@@ -4,17 +4,17 @@ description: Ismerje meg, Hogyan járulhat hozzá a koncepcionális vagy API-tar
 author: cgranade
 ms.author: chgranad
 ms.date: 10/12/2018
-ms.topic: article
+ms.topic: contributor-guide
 uid: microsoft.quantum.contributing.docs
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 2debef858c38b9a8f11264858130ed7cb41543ae
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 8602705d2dd071e822e2ff58a9a44cd0684f77f1
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92691793"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98857359"
 ---
 # <a name="improving-documentation"></a>A dokumentáció továbbfejlesztése
 
@@ -42,7 +42,7 @@ Részletesebben ismertetjük a lekéréses kérelmeket, de most van néhány dol
 - Egyes olvasók az absztrakt és a definíciókat is hasznosnak találják, míg a többi olvasó az adott példákból kikövetkeztetve a legjobban működik. Az általános eset és a konkrét példák egyaránt segítenek abban, hogy az olvasók a lehető legtöbbet hozzanak ki a kvantum-programozásból.
 - Különösen, ha azt is írta, hogy a kód dokumentálva van, előfordulhat, hogy a dolgok nyilvánvalóak, hogy az olvasója egyáltalán nem látható. Nincs a legjobb módszer a programhoz, így nem számít, hogy milyen okos vagy tapasztalt olvasó lehet, nem tudja kitalálni, hogy milyen tervezési mintákat talál a leghasznosabb, hogy kifejezzék ötleteit a kódban. Egyértelművé teszi, hogy az olvasó Hogyan várhatja el a kód használatát, így biztosíthatja ezt a környezetet.
 - A kvantum-programozási Közösség számos tagja tudományos kutató, és elsősorban a Közösséghez való hozzájárulásuk alapján ismerik fel őket. Amellett, hogy az olvasóknak további anyagokat is találnak, érdemes megadnia, hogy az oktatási segédanyagok, például a dokumentumok, a megbeszélések, a blogbejegyzések és a szoftveres eszközök megfelelően adják meg az oktatási közreműködőket, hogy a lehető legjobb munkát használják a Közösség fejlesztéséhez.
-- A Quantum programozási Közösség egy széles körű és csodálatosan sokszínű Közösség. A harmadik féltől származó példákban (például: "Ha egy felhasználó...,...") a nem a Belefoglalás helyett a nemek közötti különbségeket is használhatja. Ha a személyek neve szerepel az idézetek és a hivatkozások között, és a nem ASCII-karakterek megfelelő bevonása a Közösség sokféleségét szolgálja ki a tagjainak tiszteletben tartásával. Hasonlóképpen, az angol nyelv számos szavát gyakran gyűlölködő módon használják, például hogy a technikai dokumentációban való használatuk az egyes olvasóknak és a Közösségnek is kárt okozhat.
+- A Quantum programozási Közösség egy széles körű és csodálatosan sokszínű Közösség. A harmadik féltől származó példákban (például "Ha egy felhasználó.......................................... Ha a személyek neve szerepel az idézetek és a hivatkozások között, és a nem ASCII-karakterek megfelelő bevonása a Közösség sokféleségét szolgálja ki a tagjainak tiszteletben tartásával. Hasonlóképpen, az angol nyelv számos szavát gyakran gyűlölködő módon használják, például hogy a technikai dokumentációban való használatuk az egyes olvasóknak és a Közösségnek is kárt okozhat.
 
 ### <a name="referencing-sample-code-from-conceptual-articles"></a>Mintául szolgáló kód hivatkozása a koncepcionális cikkekből
 
@@ -54,6 +54,19 @@ Ha a [Samples adattárból](https://github.com/Microsoft/Quantum)szeretne kódot
 
 Ez a parancs a [ `Game.qs` `chsh-game` mintából a fájl](https://github.com/microsoft/Quantum/blob/main/samples/algorithms/chsh-game/Game.qs)4 – 8. sorait importálja a Q# szintaxis kiemelése céljából, kódként megjelölve.
 Ezzel a paranccsal elkerülhető a kód duplikálása a koncepcionális cikkek és a minták tárháza között, így a dokumentációban található mintakód mindig a lehető legnaprakészebb.
+
+### <a name="contributing-image-files"></a>Közreműködő képfájlok
+
+**Fontos**: Ha a képeket sötét módban szeretné kimutatni, el kell kerülnie a fóliákat.
+
+- . Jpg fájlokhoz. semmit nem kell tennie, mivel a. jpg formátum nem támogatja az átlátszó elemeket.
+- A. png fájlok esetében fehér hátteret kell hozzáadnia, vagy az alfa-csatorna értékét a **100** értékre kell módosítania. A Windowsban a legegyszerűbb módszer a fájl megnyitása a **Paintben** , és a mentése, az eredeti fájl felülírása.
+- . SVG-fájlok esetén a legalacsonyabb rétegben hozzá kell adnia egy fehér téglalapot. Ezt az **Inkscape** használatával teheti meg:
+  1. Nyissa meg az. SVG-fájlt.
+  1. Válassza ki a négyzet-készítő eszközt, és rajzoljon egy fehér téglalapot az eredeti ábra fölé.
+  1. Az **objektumok kiválasztásához és átalakításához** kattintson a sötét nyílra, vagy nyomja le az **F1** billentyűt.
+  1. A négyszög kijelölése után kattintson az eszköztár elemre az **alsó kijelölés (vége) értékre**.
+  1. Állítsa be a téglalapot az egérrel vagy a nyílbillentyűk használatával.
 
 ## <a name="contributing-to-the-api-references"></a>Hozzájárulás az API-hivatkozásokhoz
 

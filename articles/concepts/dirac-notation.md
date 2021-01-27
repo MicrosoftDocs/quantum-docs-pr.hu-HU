@@ -1,6 +1,6 @@
 ---
 title: Dirac-jelölés leírása: megismerheti a Dirac-jelölés használatát a kvantum-állapotok, valamint a kvantum-műveletek szimulálása érdekében.
-Szerző: QuantumWriter UID: Microsoft. Quantum. Concepts. Dirac MS. Author: v-benbra MS. Date: 12/11/2017 MS. topic: No-Loc:
+Szerző: QuantumWriter UID: Microsoft. Quantum. Concepts. Dirac MS. Author: v-benbra MS. Date: 12/11/2017 MS. topic: konceptuális No-Loc:
 - "Q#"
 - "$$v"
 - "$$"
@@ -120,6 +120,7 @@ $$
 $$
 
 ### <a name="computational-basis-vectors"></a>Számítási alapú vektorok
+
 Ez azt mutatja be, hogy az ilyen állapotok milyen gyakran nevezik *számítási alapnak*: minden egyes kvantum-állapot mindig kifejezhető számítási alapú vektorok összegével, és az ilyen összegeket egyszerűen Dirac-jelöléssel lehet kifejezni.  A Converse is igaz, hogy az állapotok $ \ket { + } $ és a $ \ket { - } $ kvantum-állapotok alapja is.  Ezt a tényt láthatja, hogy
 
 $$
@@ -128,14 +129,20 @@ $$
 
 Példa a Dirac-jelölésre, vegye figyelembe a braket $ \braket { 0 | 1 } $ , amely a belső termék $ 0 $ és 1 $ között $ .  A következőképpen írható 
 
-$$\braket{0 1, 0 0 | } = \begin{bmatrix} & \end{bmatrix} \begin{bmatrix} \\\\ 1 \end{bmatrix} = 0.$$
+$$
+\braket{0 1, 0 0 | } = \begin{bmatrix} & \end{bmatrix} \begin{bmatrix} \\\\ 1 \end{bmatrix} = 0.
+$$
 
-Ez azt jelzi, hogy a $ \ket { 0 } $ és az $ \ket { 1 } $ merőleges vektor, ami azt jelenti, hogy $ \braket { 0 | 1 } = \braket { | 0 0 } = $ .  Továbbá a 0 0 1 1 1 $ \braket { | } = \braket { | } = $ ., ami azt jelenti, hogy a két számítási alap vektorok is *orthonormal*néven hívhatók.
-Ezek a orthonormal tulajdonságok az alábbi példában is hasznosak. Ha $ \ket { \psi } = { \frac { az állapot 3 } { 5 } } \ket { 1 }  +  { \frac { 4 } { 5 } } \ket { 0 } $ , akkor mivel $ \braket { 1 | 0 } = 0 az 1. $ mérési valószínűség $ $  
+Ez azt jelzi, hogy a $ \ket { 0 } $ és az $ \ket { 1 } $ merőleges vektor, ami azt jelenti, hogy $ \braket { 0 | 1 } = \braket { | 0 0 } = $ .  Továbbá a 0 0 1 1 1 $ \braket { | } = \braket { | } = $ ., ami azt jelenti, hogy a két számítási alap vektorok is *orthonormal* néven hívhatók.
 
-$$\big|\braket{1 | \psi } \big | ^ 2 = \left | \frac { 3 } { 5 } \braket { 1 | 1 }  + \frac { 4 } { 5 } \braket { 1 | 0 } \right | ^ 2 = \frac { 9 } { 25 } .$$ 
+Ezek a orthonormal tulajdonságok az alábbi példában is hasznosak. Ha $ \ket { \psi } = { \frac { az állapot 3 } { 5 } } \ket { 1 }  +  { \frac { 4 } { 5 } } \ket { 0 } $ , akkor mivel $ \braket { 1 | 0 } = 0 az 1. $ mérési valószínűség $ $ 
+
+$$
+\big|\braket{1 | \psi } \big | ^ 2 = \left | \frac { 3 } { 5 } \braket { 1 | 1 }  + \frac { 4 } { 5 } \braket { 1 | 0 } \right | ^ 2 = \frac { 9 } { 25 } .
+$$
 
 ### <a name="tensor-product-notation"></a>Tenser termék jelölése
+
 A Dirac-jelölés magában foglalja az implicit tenser termék struktúráját is.  Ez azért fontos, mert a kvantum-számítástechnika esetében a két, nem korrelált kvantum-regiszter által ismertetett állapot-vektor a két állapotú vektor kétszintű terméke.  A tensing termék szerkezetének tömör leírása vagy ennek hiánya létfontosságú, ha meg szeretné magyarázni a kvantum-számításokat.  A kétszintű termék szerkezete azt feltételezi, hogy $ \psi \otimes \phi $ bármilyen két kvantum-állapotú vektort írhatunk, és a ( $ \phi $ $ \psi $ $ \ket { \psi } \ket { \phi } $ más néven explicit módon $ \ket { \psi } \otimes \ket { \phi } $ ), $ \otimes $ a vektorok közötti írással azonban szükségtelen.  Például a nulla állapotba inicializált két qubits állapotot a következő adja meg:
 
 $$
@@ -155,6 +162,7 @@ $$
 $$
 
 ### <a name="example-describing-superposition-with-dirac-notation"></a>Példa: a Dirac-jelöléssel való Felfekvés leírása
+
 Egy másik példa arra, hogy miként használhatja a Dirac-jelölést a kvantum-állapot leírására, vegye figyelembe a következő egyenértékű módokat olyan kvantum-állapot írásához, amely egyenlő arányban jelenik meg az n érték minden lehetséges kis hosszában. $$
 
 $$
@@ -165,6 +173,7 @@ Itt az is előfordulhat, hogy az összeg az $ $ $ n BITS esetében 0 és 2 ^ { n
 Ennek a példának a megjelölése, hogy ebben a példában nem használunk $ \ket { + } ^ { \otimes n } = \ket { + } $ -t analógia $ \ket { 0 n 0-ra, } ^ { \otimes } = \ket { } $ mert ez a jelölési egyezmény általában a számítási alapállapothoz van fenntartva, és minden qubit nullára van inicializálva.  Habár ebben az esetben ez az egyezmény ésszerű lenne, nem alkalmazható a Quantum Computing-szakirodalom keretében.
 
 ### <a name="expressing-linearity-with-dirac-notation"></a>Lineárisság kifejező Dirac jelöléssel
+
 A Dirac-jelölés egy másik szép funkciója az a tény, hogy lineáris.  Ha négy kvantum-állapotú vektort szeretne írni, 
 
 $$( \alpha \ket { \psi }  + \beta \ket { \phi } ) \otimes ( \gamma \ket { \chi }  +  \delta \ket { \omega } ) = \alpha \gamma \ket { \psi } \ket { \chi }  +  \alpha \delta \ket { \psi } \ket { \omega } + \beta \gamma \ket { \phi } \ket { \chi } + \beta \delta \ket { \phi } \ket { \omega } .$$
@@ -180,6 +189,7 @@ $$|\braket{- |\psi}| ^ 2 = \left | \frac { 1 } { \sqrt { 2 } } ( \bra { 0 }  -  
 Az a tény, hogy a negatív előjel jelenik meg a valószínűség kiszámításakor, a kvantum-interferencia megnyilvánulása, amely az egyik olyan mechanizmus, amellyel a Quantum Computing előnyt élvez a klasszikus számítástechnika terén.
 
 ## <a name="ketbra-or-outer-product"></a>ketbra vagy külső termék
+
 A Dirac jelölésének utolsó eleme a *ketbra* vagy külső termék.  A külső termék a Dirac-jelöléseken belül szerepel $ \ket { \psi } \bra { \phi } $ , és más néven ketbras, mivel a melltartó és a kulcsfontosságú alaptechnológiák a brakets ellentétes sorrendben történnek.  A külső termék a mátrixok szorzásán keresztül van definiálva, mint $ \ket { \psi } \bra { \phi } = \psi \phi ^ \dagger $ a Quantum State vectors $ \psi $ és a $ \phi $ .  Ennek a jelölésnek a legegyszerűbb és vitathatatlan leggyakoribb példája a következő
 
 $$
@@ -224,11 +234,12 @@ amely megfelel a többszörös qubit mérési vitának.  Ennek az eredménynek a
 
 ## <a name="density-operators"></a>Sűrűségi operátorok
 
-Egy másik hasznos operátor, amely a Dirac jelölést *használja, más*néven *állapot*-kezelőként is ismert.
+Egy másik hasznos operátor, amely a Dirac jelölést *használja, más* néven *állapot*-kezelőként is ismert.
 A Quantum State Vector sűrűségű operátora a \rho formáját $ ölti = \ket { \psi } \bra { \psi } $ .
 Ez a fogalom azt jelenti, hogy az államot mátrixként, nem pedig vektorként jelöli meg, általában azért, mert kényelmes módot biztosít a valószínűségi számítások ábrázolására, valamint lehetővé teszi, hogy az egyik a statisztikai bizonytalanságot is leírja, valamint a kvantum-bizonytalanságot ugyanazon a formalitáson belül.
 A kvantum-számítástechnika egyes területein az általános kvantum-operátorok, a vektorok helyett mindenütt elérhetők, de nem szükségesek a mező alapjaihoz.
 Az érdekelt olvasó számára javasoljuk, hogy olvassa el a [További tudnivalókat ismertető](xref:microsoft.quantum.more-information)füzetek egyikét.
 
 ## <a name="no-locq-gate-sequences-equivalent-to-quantum-states"></a>Q# a kvantum-állapotoknak megfelelő Gate-sequencek
+
 Az utolsó pont a kvantum-jelöléssel és a Q# programozási nyelvvel ér véget: a dokumentum kezdetén megemlítettük, hogy a kvantum-állapot a kvantum-számítástechnikai információk alapvető célja.  Ekkor meglepőnek tűnhet, hogy a kvantum- Q# állapot fogalma nincs.  Ehelyett az összes állapotot csak az előkészítéséhez használt műveletek írják le.  Az előző példa egy kiváló illusztráció.  Ahelyett, hogy egységes, a regiszterben lévő összes kvantum-sztringre kifejezzék a pozíciót, az eredmény a következők egyike lehet: $ H ^ { \otimes n } \ket { 0 } $ .  Ennek az állapotnak az exponenciálisan rövidebb leírása nem csupán az előnye, hogy klasszikusan indokolja, de az algoritmus megvalósításához szükséges műveleteket is tömören definiálja.  Emiatt úgy tervezték, hogy a kiindulási és a Q# kvantum-állapot helyett a Gate-sorozatot bocsátja ki, azonban elméleti szinten a két perspektíva egyenértékű.

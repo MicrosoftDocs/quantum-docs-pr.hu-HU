@@ -1,6 +1,6 @@
 ---
 title: több qubits leírása: megtudhatja, hogyan hajthat végre műveleteket két vagy több qubits.
-Szerző: bradben UID: Microsoft. Quantum. Concepts. Multiple-qubits MS. Author: v-benbra MS. Date: 12/11/2017 MS. topic: No-Loc:
+Szerző: bradben UID: Microsoft. Quantum. Concepts. Multiple-qubits MS. Author: v-benbra MS. Date: 12/11/2017 MS. topic: konceptuális No-Loc:
 - "Q#"
 - "$$v"
 - "$$"
@@ -105,10 +105,10 @@ Ennek az az oka, hogy a kétqubitos állapotok számítási alapjait az egy qubi
 Könnyen láthatja, hogy az n qubits kvantum-állapota a $ $ 2 ^ n dimenzió egy egységének vektora, amely $ ezt az $ építkezést használja.  A vektor
 
 $$
-\begin{bmatrix}\alpha _ { 00 } 01 \\\\ 10 \alpha   _ { } \\\\ \alpha _ { 11 } \\\\ \alpha   _ { }  \end{bmatrix}
+\begin{bmatrix}\alpha _{ 00 } 01 \\\\ 10 \alpha_ { } \\\\ \alpha _{ 11 } \\\\ \alpha_ { }  \end{bmatrix}
 $$
 
-a Quantum állapotot jelöli két qubits, ha $ | \alpha _ { 00 } | ^ | \alpha 2 +_ { 01 } | ^ 2 + | \alpha _ { 10 } | ^ | \alpha 2 +_ { 11 } | ^ 2 = 1 $ . Akárcsak az egyetlen qubits esetében, a több qubits kvantum-állapot vektora a rendszerviselkedés leírásához szükséges összes információt tartalmazza.
+a Quantum állapotot jelöli két qubits, ha $ | \alpha _{ 00 } | ^ | \alpha 2 +_ { 01 } | ^ 2 + | \alpha _{ 10 } | ^ | \alpha 2 +_ { 11 } | ^ 2 = 1 $ . Akárcsak az egyetlen qubits esetében, a több qubits kvantum-állapot vektora a rendszerviselkedés leírásához szükséges összes információt tartalmazza.
 
 Ha két különálló qubits kap, az egyik az államban $ \begin{bmatrix} \alpha \\\\ \beta \end{bmatrix} $ és egy második qubit az államban $ \begin{bmatrix} \gamma \\\\ \delta \end{bmatrix} $ , akkor a megfelelő két qubit állapot    
 
@@ -124,17 +124,17 @@ $$\psi\otimes\phi = \begin{bmatrix} 1/ \sqrt { 2 } \\\\ 0 \\\\ 0 \\\\ 1/ \sqrt {
 
 Ez a két qubit állapot, amely nem írható egyetlen qubit-állapotú tenser-termékként, "kusza állapotnak" nevezzük. azt mondják, hogy a két qubits [*összekeverve*](https://en.wikipedia.org/wiki/Quantum_entanglement)van.  Lazán szólva, mivel a Quantum State nem lehet úgy gondolni, mint egy qubit-állapotú kétféle termék, az állam által birtokolt információk nem korlátozódnak egyetlen qubits sem.  Ehelyett a rendszer nem helyileg tárolja az adatokat a két állapot közötti összefüggésekben.  Ez a nem területi információ a Quantum Computing egyik fő megkülönböztető funkciója a klasszikus számítástechnika terén, és számos kvantum-protokoll esetében elengedhetetlen, beleértve a [kvantum](https://github.com/microsoft/Quantum/tree/main/samples/getting-started/teleportation) -és a [kvantum-hibajavítást](xref:microsoft.quantum.libraries.error-correction)is.
 
-## <a name="measuring-two-qubit-states"></a>Két Qubit állapot mérése ##
+## <a name="measuring-two-qubit-states"></a>Two-Qubit állapotok mérése ##
 A két qubit állapot mérése nagyon hasonlít az egyszeres qubit mérésekhez. Az állapot mérése
 
 $$
     \begin{bmatrix}
-        \alpha_ { 00 } 01 \\\\ \alpha _ { }\\\\ 
-        \alpha_ { 10 } 11 \\\\ \alpha _ {}
+        \alpha_{ 00 } 01 \\\\ \alpha_ { }\\\\ 
+        \alpha_{ 10 } 11 \\\\ \alpha_ {}
     \end{bmatrix}
 $$
 
-00 ^ 2, $ $ $ | \alpha _ { } | $ $ $ 01 $ valószínűséggel, 01 ^ 2, 10, valószínűség 10 ^ 2 és 11, a 11 ^ 2 valószínűséggel. | \alpha _ { } | $ $ $ $ | \alpha _ { } | $ $ $ $ | \alpha _ { } | $ A $ \alpha _ { 00 } , \alpha _ { 01 } , \alpha _ { 10 } $ és $ 11 változók szándékosan lettek elnevezve, hogy ez a kapcsolódás egyértelmű legyen \alpha _ { } $ . Ha a mérés után az eredmény 00, $ $ akkor a qubit rendszer kvantum állapota összeomlott, és most már
+00 ^ 2, $ $ $ | \alpha _{ } | $ $ $ 01 $ valószínűséggel, 01 ^ 2, 10, valószínűség 10 ^ 2 és 11, a 11 ^ 2 valószínűséggel. | \alpha_ { } | $ $ $ $ | \alpha _{ } | $ $ $ $ | \alpha_ { } | $ A $ \alpha _{ 00 } , \alpha_ { 01 } , \alpha _{ 10 } $ és $ 11 változók szándékosan lettek elnevezve, hogy ez a kapcsolódás egyértelmű legyen \alpha_ { } $ . Ha a mérés után az eredmény 00, $ $ akkor a qubit rendszer kvantum állapota összeomlott, és most már
 
 $$
     00 \equiv
@@ -193,7 +193,7 @@ $$
 
 ismét az intuíciónk alapján.
 
-## <a name="two-qubit-operations"></a>Két Qubit művelet
+## <a name="two-qubit-operations"></a>Two-Qubit műveletek
 Ahogy az egyetlen qubit esetében is, az egységes átalakítás a qubits-on érvényes művelet. Általánosságban elmondható, hogy az n qubits egy egységes transzformációja $ $ $ $ $ 2 ^ n \times 2 ^ n méretű mátrix U $ (tehát 2 ^ n méretű vektorok $ esetén működik $ ), például $ u ^ { -1 } = u ^ \dagger $ .
 Például a CNEM (vezérelt-NOT) Gate egy gyakran használt két qubit-kapu, amelyet a következő egységes mátrix képvisel:
 
@@ -240,7 +240,7 @@ A Gates a klasszikus információk használatával is szabályozható.  Egy klas
 Ahogy az egyetlen qubit esetében is, a két qubit is univerzális, ha bármely $ 4 \times 4 $ egységes mátrixot a kapuk szorzata tetszőleges pontossággal közelítheti meg.
 Egy univerzális Gate-készlet például a Hadamard kapu, a T-kapu és a CNEM kapu. Ezeknek a kapuknak a termékeinek használatával megközelítheti az egységes mátrixot két qubits.
 
-## <a name="many-qubit-systems"></a>Számos Qubit rendszer
+## <a name="many-qubit-systems"></a>Many-Qubit rendszerek
 Pontosan ugyanazokat a mintákat követjük, mint a két qubit esetében, így több qubit kvantum-állapotot építhet ki kisebb rendszerekből.  Az ilyen állapotok létrehozásához a kisebb állapotú tenser-termékek kiépítését kell megalkotni.  Tegyük fel például, hogy a 1011001 bites karakterláncot $ $ egy kvantum-számítógépen kódolja.  Ezt a következő módon lehet kódolni
 
 $$

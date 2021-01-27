@@ -1,20 +1,20 @@
 ---
 title: Quantum erőforrás-kalkulátor – Quantum Development Kit
 description: Ismerje meg a Microsoft QDK erőforrásainak kalkulátorát, amely a művelet adott példányának a kvantum-számítógépen való futtatásához szükséges erőforrásokat becsüli meg Q# .
-author: anpaz-msft
+author: anpaz
 ms.author: anpaz
 ms.date: 06/26/2020
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.machines.resources-estimator
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: de425c2d91c6528b13c3bedd81acb4b4273ed711
-ms.sourcegitcommit: 7c687495a79d75ae9e029e5a41baec84d9e07bb0
+ms.openlocfilehash: c3aa94c8b34ad7247fbdeab4bf4dcb96ce746014
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "96604643"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98847464"
 ---
 # <a name="quantum-development-kit-qdk-resources-estimator"></a>A Quantum Development Kit (QDK) erőforrásainak kalkulátora
 
@@ -123,7 +123,7 @@ namespace Quantum.MyProgram
 
 Az erőforrások becslése a következő metrikákat követi nyomon:
 
-|Metrika|Leírás|
+|Metric|Leírás|
 |----|----|
 |__CNOT__    |A műveletek futtatási száma `CNOT` (más néven vezérelt Pauli X-műveletek).|
 |__QubitClifford__ |Egyetlen qubit Clifford-és Pauli-művelet futtatási száma.|
@@ -143,8 +143,8 @@ A jelentett mélységi és szélességi becslések kompatibilisek egymással.
 
 A következő metrikákat kell jelenteni:
 
-__Mélység:__ A gyökérszintű művelethez – az adott kapu időpontját feltételezve, hogy végre kell hajtania.
-A (z) és a művelet végén a legutóbbi qubit rendelkezésre állási idő között meghívott vagy azt követő műveletek időeltolódása.
+__Mélység:__ A gyökérszintű művelethez – a konfigurált időpontok végrehajtásához szükséges idő.
+A (z) vagy az azt követő műveletek – a művelet elején és végén a legutóbbi qubit rendelkezésre állási idő közötti különbség.
 
 __Szélesség:__ A gyökérszintű művelethez – a ténylegesen a végrehajtáshoz használt qubits száma (és a művelet meghívása).
 A vagy az azt követő műveletekhez – a művelet elején már használt qubits kívül még hány qubits használtak.
@@ -157,15 +157,15 @@ A vagy az azt követő műveletek műveletekhez – a qubits minimális száma, 
 
 Két működési mód támogatott. A módot a QCTraceSimulatorConfiguration. OptimizeDepth beállítással választhatja ki.
 
-__OptimizeDepth = True:__ A QubitManager a qubit újrahasznosítása és az új qubit lefoglalása minden alkalommal, amikor a rendszer kéri a qubit. A gyökérszintű művelet __mélysége__ a minimális mélység (alsó határ) lesz. Ehhez a mélységhez (mindkettőt egyszerre lehet megvalósítani) kompatibilis __szélességet__ kell jelenteni. Vegye figyelembe, hogy ez a szélesség valószínűleg nem lesz optimális a mélység miatt. A __QubitCount__ alacsonyabb lehet a legfelső szintű műveletnél, mert az újrafelhasználást feltételezi.
+__OptimizeDepth = FALSE:__ Ez az alapértelmezett mód. A QubitManager a qubits újrafelhasználását javasolta, és újból felhasználja a kiadott qubits az újak lefoglalása előtt. A gyökérszintű művelet __szélessége__ a minimális szélesség (alsó határ) lesz. A rendszer a kompatibilis __mélységet__ fogja jelenteni, amelyen elérhető. A __QubitCount__ megegyeznek a gyökérszintű művelet __szélességével__ , feltéve, hogy nincs hitelfelvétel.
 
-__OptimizeDepth = FALSE:__ A QubitManager a qubits újrafelhasználását javasolta, és újból felhasználja a kiadott qubits az újak lefoglalása előtt. A gyökérszintű művelet __szélessége__ a minimális szélesség (alsó határ) lesz. A rendszer a kompatibilis __mélységet__ fogja jelenteni, amelyen elérhető. A __QubitCount__ megegyeznek a gyökérszintű művelet __szélességével__ , feltéve, hogy nincs hitelfelvétel.
+__OptimizeDepth = True:__ A QubitManager a qubit újrafelhasználását, valamint a qubit újrafelhasználásának heurisztikus optimalizálását a végrehajtás során és után hajtja végre a rendszer. A gyökérszintű művelet __mélysége__ a minimális mélység (alsó határ) lesz. Ehhez a mélységhez (mindkettőt egyszerre lehet megvalósítani) kompatibilis __szélességet__ kell jelenteni. A szélesség optimalizálása érdekében a program későbbi szakaszaiban található Gates ütemezése ütemezhető, mielőtt a program korábban megtalálta a kapukat, de a qubits úgy ütemezik újra, hogy a mélység továbbra is minimális maradjon. Mivel a qubits az időértékek alapján újra felhasználják, azt javasoljuk, hogy a Gate-időpontok egész értékként legyenek konfigurálva. A __szélesség__ nem garantáltan optimális. További információ a következő témakörben található: tanulmány [szélessége és mélysége a nyomjelzőben](https://github.com/microsoft/qsharp-runtime/tree/main/src/Simulation/Simulators/QCTraceSimulator/Docs).
 
 ## <a name="providing-the-probability-of-measurement-outcomes"></a>Mérési eredmények valószínűségének megadása
 
 <xref:Microsoft.Quantum.Diagnostics.AssertMeasurementProbability>A <xref:Microsoft.Quantum.Diagnostics> névtérből való használatával információt adhat meg egy mérési művelet várható valószínűségéről. További információ: [Quantum Trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro)
 
-## <a name="see-also"></a>További információ
+## <a name="see-also"></a>Lásd még
 
 - [Quantum Trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro)
 - [Toffoli-kvantumszimulátor](xref:microsoft.quantum.machines.toffoli-simulator)

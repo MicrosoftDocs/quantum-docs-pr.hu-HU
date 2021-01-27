@@ -4,17 +4,17 @@ description: Megtudhatja, hogyan használhatók Trotter-Suzuki képletek és qub
 author: bradben
 ms.author: v-benbra
 ms.date: 10/09/2017
-ms.topic: article-type-from-white-list
+ms.topic: conceptual
 uid: microsoft.quantum.chemistry.concepts.simulationalgorithms
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: a303d54476e42b98a14c6b452227b0e1346567c8
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: eeaa13b99ab07ce22f8a3306a756bf7ac7cde65b
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92691889"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98857596"
 ---
 # <a name="simulating-hamiltonian-dynamics"></a>Hamilton Dynamics szimulálása
 
@@ -28,7 +28,7 @@ A Trotter mögötti ötlet – a Suzuki-képletek egyszerűek: fejezze be a Hami
 Különösen $H = \ sum_ {j = 1} ^ m H_j $ legyen a Hamilton.
 Ezután $ $ e ^ {-i \ sum_ {j = 1} ^ m H_j t} = \ prod_ {j = 1} ^ m e ^ {-iH_j t} + O (m ^ 2 t ^ 2), $ $, ami azt jelenti, hogy ha $t \ll $1, akkor a közelítésben szereplő hiba elhanyagolható lesz.
 Vegye figyelembe, hogy ha $e ^ {-i H t} $ volt, akkor a közelítésben szereplő hiba nem lesz $O (m ^ 2 t ^ 2) $: nulla lenne.
-Ez a hiba azért fordul elő, mert $e ^ {-iHt} $ egy operátor exponenciális, és ennek eredményeként hiba történt a képlet használatakor, mert a $H _j $ feltételek nem ingázik ( *azaz* $H _j H_k \ne H_k H_j $-t).
+Ez a hiba azért fordul elő, mert $e ^ {-iHt} $ egy operátor exponenciális, és ennek eredményeként hiba történt a képlet használatakor, mert a $H _j $ feltételek nem ingázik (*azaz*$H _j H_k \ne H_k H_j $-t).
 
 Ha $t $ nagy, a Trotter – Suzuki-képletek továbbra is használhatók a dinamika pontos szimulálása érdekében, ha a rövid időre lépésekre bontja a folyamatot.
 $R $ legyen az időbeli evolúció lépéseinek száma, így minden alkalommal, amikor az/r $ $t időt futtat. Ezután a $ $ e ^ {-i \ sum_ {j = 1} ^ m H_j t} = \left (\ prod_ {j = 1} ^ m e ^ {-iH_j t/r} \ right) ^ r + O (m ^ 2 t $ $, ami azt jelenti, hogy ha $r $ skálák $m ^ 2 t ^ 2/\ epszilon $, akkor a hiba legfeljebb $ \epsilon $ lehet a $ \epsilon>$0 esetében.
