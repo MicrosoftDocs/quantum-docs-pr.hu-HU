@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Canon.ModularMultiplyByConstantLE
 title: ModularMultiplyByConstantLE művelet
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
@@ -14,24 +14,24 @@ qsharp.summary: >-
   >
 
   > Please use @"Microsoft.Quantum.Arithmetic.MultiplyByModularInteger".
-ms.openlocfilehash: 76341cb2b6c291e9208ccdc758456cd2f9b79dc3
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 6d313c94269de85fe05bba62ade8cc45fd3135d2
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96206204"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98852586"
 ---
-# <a name="modularmultiplybyconstantle-operation"></a><span data-ttu-id="30cef-102">ModularMultiplyByConstantLE művelet</span><span class="sxs-lookup"><span data-stu-id="30cef-102">ModularMultiplyByConstantLE operation</span></span>
+# <a name="modularmultiplybyconstantle-operation"></a><span data-ttu-id="266d4-102">ModularMultiplyByConstantLE művelet</span><span class="sxs-lookup"><span data-stu-id="266d4-102">ModularMultiplyByConstantLE operation</span></span>
 
-<span data-ttu-id="30cef-103">Névtér: [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon)</span><span class="sxs-lookup"><span data-stu-id="30cef-103">Namespace: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)</span></span>
+<span data-ttu-id="266d4-103">Névtér: [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon)</span><span class="sxs-lookup"><span data-stu-id="266d4-103">Namespace: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)</span></span>
 
-<span data-ttu-id="30cef-104">Csomag: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span><span class="sxs-lookup"><span data-stu-id="30cef-104">Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span></span>
+<span data-ttu-id="266d4-104">Csomag: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span><span class="sxs-lookup"><span data-stu-id="266d4-104">Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span></span>
 
 
 > [!WARNING]
-> <span data-ttu-id="30cef-105">A ModularMultiplyByConstantLE elavult.</span><span class="sxs-lookup"><span data-stu-id="30cef-105">ModularMultiplyByConstantLE has been deprecated.</span></span> <span data-ttu-id="30cef-106">Használja <xref:Microsoft.Quantum.Arithmetic.MultiplyByModularInteger> helyette.</span><span class="sxs-lookup"><span data-stu-id="30cef-106">Please use <xref:Microsoft.Quantum.Arithmetic.MultiplyByModularInteger> instead.</span></span>
+> <span data-ttu-id="266d4-105">A ModularMultiplyByConstantLE elavult.</span><span class="sxs-lookup"><span data-stu-id="266d4-105">ModularMultiplyByConstantLE has been deprecated.</span></span> <span data-ttu-id="266d4-106">Használja <xref:Microsoft.Quantum.Arithmetic.MultiplyByModularInteger> helyette.</span><span class="sxs-lookup"><span data-stu-id="266d4-106">Please use <xref:Microsoft.Quantum.Arithmetic.MultiplyByModularInteger> instead.</span></span>
 >
-> <span data-ttu-id="30cef-107">Használja a következőt: @"Microsoft.Quantum.Arithmetic.MultiplyByModularInteger".</span><span class="sxs-lookup"><span data-stu-id="30cef-107">Please use @"Microsoft.Quantum.Arithmetic.MultiplyByModularInteger".</span></span>
+> <span data-ttu-id="266d4-107">Használja a következőt: @"Microsoft.Quantum.Arithmetic.MultiplyByModularInteger".</span><span class="sxs-lookup"><span data-stu-id="266d4-107">Please use @"Microsoft.Quantum.Arithmetic.MultiplyByModularInteger".</span></span>
 
 
 
@@ -40,23 +40,23 @@ operation ModularMultiplyByConstantLE (constMultiplier : Int, modulus : Int, mul
 ```
 
 
-## <a name="input"></a><span data-ttu-id="30cef-108">Bevitel</span><span class="sxs-lookup"><span data-stu-id="30cef-108">Input</span></span>
+## <a name="input"></a><span data-ttu-id="266d4-108">Bevitel</span><span class="sxs-lookup"><span data-stu-id="266d4-108">Input</span></span>
 
-### <a name="constmultiplier--int"></a><span data-ttu-id="30cef-109">constMultiplier: [int](xref:microsoft.quantum.lang-ref.int)</span><span class="sxs-lookup"><span data-stu-id="30cef-109">constMultiplier : [Int](xref:microsoft.quantum.lang-ref.int)</span></span>
-
-
-
-
-### <a name="modulus--int"></a><span data-ttu-id="30cef-110">modulus: [int](xref:microsoft.quantum.lang-ref.int)</span><span class="sxs-lookup"><span data-stu-id="30cef-110">modulus : [Int](xref:microsoft.quantum.lang-ref.int)</span></span>
+### <a name="constmultiplier--int"></a><span data-ttu-id="266d4-109">constMultiplier: [int](xref:microsoft.quantum.lang-ref.int)</span><span class="sxs-lookup"><span data-stu-id="266d4-109">constMultiplier : [Int](xref:microsoft.quantum.lang-ref.int)</span></span>
 
 
 
 
-### <a name="multiplier--littleendian"></a><span data-ttu-id="30cef-111">szorzó: [LittleEndian](xref:Microsoft.Quantum.Arithmetic.LittleEndian)</span><span class="sxs-lookup"><span data-stu-id="30cef-111">multiplier : [LittleEndian](xref:Microsoft.Quantum.Arithmetic.LittleEndian)</span></span>
+### <a name="modulus--int"></a><span data-ttu-id="266d4-110">modulus: [int](xref:microsoft.quantum.lang-ref.int)</span><span class="sxs-lookup"><span data-stu-id="266d4-110">modulus : [Int](xref:microsoft.quantum.lang-ref.int)</span></span>
+
+
+
+
+### <a name="multiplier--littleendian"></a><span data-ttu-id="266d4-111">szorzó: [LittleEndian](xref:Microsoft.Quantum.Arithmetic.LittleEndian)</span><span class="sxs-lookup"><span data-stu-id="266d4-111">multiplier : [LittleEndian](xref:Microsoft.Quantum.Arithmetic.LittleEndian)</span></span>
 
 
 
 
 
-## <a name="output--unit"></a><span data-ttu-id="30cef-112">Kimenet: [egység](xref:microsoft.quantum.lang-ref.unit)</span><span class="sxs-lookup"><span data-stu-id="30cef-112">Output : [Unit](xref:microsoft.quantum.lang-ref.unit)</span></span>
+## <a name="output--unit"></a><span data-ttu-id="266d4-112">Kimenet: [egység](xref:microsoft.quantum.lang-ref.unit)</span><span class="sxs-lookup"><span data-stu-id="266d4-112">Output : [Unit](xref:microsoft.quantum.lang-ref.unit)</span></span>
 
