@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Chemistry.JordanWigner._JordanWignerOptimizedBlockEncodingQubitManager_
 title: _JordanWignerOptimizedBlockEncodingQubitManager_ függvény
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Chemistry.JordanWigner
 qsharp.name: _JordanWignerOptimizedBlockEncodingQubitManager_
 qsharp.summary: ''
-ms.openlocfilehash: 6e047cea67fb599ba8d82a3290a5d03f6d5b5b91
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: ac7785142879a19d67caaf3fcbde5dc95e566c1b
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96215673"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98851601"
 ---
 # <a name="_jordanwigneroptimizedblockencodingqubitmanager_-function"></a>_JordanWignerOptimizedBlockEncodingQubitManager_ függvény
 
