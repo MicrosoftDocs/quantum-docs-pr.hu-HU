@@ -4,76 +4,76 @@ description: Ismerje meg a Microsoft Quantum numerikus könyvtárában elérhet�
 author: thomashaener
 ms.author: thhaner
 ms.date: 5/14/2019
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.numerics.usage
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: dfcb8e9e5a15d0881750d67cf58d7ad47cbecd3a
-ms.sourcegitcommit: 897ace8b506adb2331e911ee5633dceced566174
+ms.openlocfilehash: 92efd3b8677d2f27bc59f986ce6c9e915cd23652
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91764130"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98856439"
 ---
-# <a name="using-the-numerics-library"></a><span data-ttu-id="40661-103">A numerikus könyvtár használata</span><span class="sxs-lookup"><span data-stu-id="40661-103">Using the Numerics library</span></span>
+# <a name="using-the-numerics-library"></a><span data-ttu-id="5badc-103">A numerikus könyvtár használata</span><span class="sxs-lookup"><span data-stu-id="5badc-103">Using the Numerics library</span></span>
 
-## <a name="overview"></a><span data-ttu-id="40661-104">Áttekintés</span><span class="sxs-lookup"><span data-stu-id="40661-104">Overview</span></span>
+## <a name="overview"></a><span data-ttu-id="5badc-104">Áttekintés</span><span class="sxs-lookup"><span data-stu-id="5badc-104">Overview</span></span>
 
-<span data-ttu-id="40661-105">A numerikus könyvtár három összetevőből áll</span><span class="sxs-lookup"><span data-stu-id="40661-105">The Numerics library consists of three components</span></span>
+<span data-ttu-id="5badc-105">A numerikus könyvtár három összetevőből áll</span><span class="sxs-lookup"><span data-stu-id="5badc-105">The Numerics library consists of three components</span></span>
 
-1. <span data-ttu-id="40661-106">**Alapszintű egész aritmetika** egész számokkal és összehasonlító értékekkel</span><span class="sxs-lookup"><span data-stu-id="40661-106">**Basic integer arithmetic** with integer adders and comparators</span></span>
-1. <span data-ttu-id="40661-107">Az alapszintű funkciókra épülő **magas szintű egész funkciók** ; többek között a szorzás, a osztás, az inverzió stb.  aláírt és aláíratlan egész számok esetén.</span><span class="sxs-lookup"><span data-stu-id="40661-107">**High-level integer functionality** that is built on top of the basic  functionality; it includes multiplication, division, inversion, etc.  for signed and unsigned integers.</span></span>
-1. <span data-ttu-id="40661-108">**Rögzített szintű aritmetikai funkciók** rögzített pontú inicializálással, hozzáadással, szorzással, kölcsönös, polinom értékeléssel és méréssel.</span><span class="sxs-lookup"><span data-stu-id="40661-108">**Fixed-point arithmetic functionality** with fixed-point initialization,  addition, multiplication, reciprocal, polynomial evaluation, and measurement.</span></span>
+1. <span data-ttu-id="5badc-106">**Alapszintű egész aritmetika** egész számokkal és összehasonlító értékekkel</span><span class="sxs-lookup"><span data-stu-id="5badc-106">**Basic integer arithmetic** with integer adders and comparators</span></span>
+1. <span data-ttu-id="5badc-107">Az alapszintű funkciókra épülő **magas szintű egész funkciók** ; többek között a szorzás, a osztás, az inverzió stb.  aláírt és aláíratlan egész számok esetén.</span><span class="sxs-lookup"><span data-stu-id="5badc-107">**High-level integer functionality** that is built on top of the basic  functionality; it includes multiplication, division, inversion, etc.  for signed and unsigned integers.</span></span>
+1. <span data-ttu-id="5badc-108">**Rögzített szintű aritmetikai funkciók** rögzített pontú inicializálással, hozzáadással, szorzással, kölcsönös, polinom értékeléssel és méréssel.</span><span class="sxs-lookup"><span data-stu-id="5badc-108">**Fixed-point arithmetic functionality** with fixed-point initialization,  addition, multiplication, reciprocal, polynomial evaluation, and measurement.</span></span>
 
-<span data-ttu-id="40661-109">Ezen összetevők mindegyike egyetlen utasítás használatával érhető el `open` :</span><span class="sxs-lookup"><span data-stu-id="40661-109">All of these components can be accessed using a single `open` statement:</span></span>
+<span data-ttu-id="5badc-109">Ezen összetevők mindegyike egyetlen utasítás használatával érhető el `open` :</span><span class="sxs-lookup"><span data-stu-id="5badc-109">All of these components can be accessed using a single `open` statement:</span></span>
 ```qsharp
 open Microsoft.Quantum.Arithmetic;
 ```
 
-## <a name="types"></a><span data-ttu-id="40661-110">Típusok</span><span class="sxs-lookup"><span data-stu-id="40661-110">Types</span></span>
+## <a name="types"></a><span data-ttu-id="5badc-110">Típusok</span><span class="sxs-lookup"><span data-stu-id="5badc-110">Types</span></span>
 
-<span data-ttu-id="40661-111">A numerikus könyvtár a következő típusokat támogatja</span><span class="sxs-lookup"><span data-stu-id="40661-111">The numerics library supports the following types</span></span>
+<span data-ttu-id="5badc-111">A numerikus könyvtár a következő típusokat támogatja</span><span class="sxs-lookup"><span data-stu-id="5badc-111">The numerics library supports the following types</span></span>
 
-1. <span data-ttu-id="40661-112">**`LittleEndian`**: Egy `qArr : Qubit[]` egész számot jelölő qubit tömb, amely `qArr[0]` a legkevésbé jelentős bitet jelöli.</span><span class="sxs-lookup"><span data-stu-id="40661-112">**`LittleEndian`**: A qubit array `qArr : Qubit[]` that represents an integer where `qArr[0]` denotes the least significant bit.</span></span>
-1. <span data-ttu-id="40661-113">**`SignedLittleEndian`**: Ugyanaz, mint `LittleEndian` a kivételével, hogy a két kiegészítésben tárolt, aláírt egész számot jelöli.</span><span class="sxs-lookup"><span data-stu-id="40661-113">**`SignedLittleEndian`**: Same as `LittleEndian` except that it represents a signed integer stored in two's complement.</span></span>
-1. <span data-ttu-id="40661-114">**`FixedPoint`**: Egy qubit tömbből `qArr2 : Qubit[]` és egy bináris pont pozícióból álló valós számot képvisel `pos` , amely a bináris pont bal oldalán lévő bináris számjegyek számát számlálja.</span><span class="sxs-lookup"><span data-stu-id="40661-114">**`FixedPoint`**: Represents a real number consisting of a qubit array `qArr2 : Qubit[]` and a binary point position `pos`, which counts the number of binary digits to the left of the binary point.</span></span> <span data-ttu-id="40661-115">`qArr2` a tárolása ugyanúgy történik, mint a `SignedLittleEndian` .</span><span class="sxs-lookup"><span data-stu-id="40661-115">`qArr2` is stored in the same way as `SignedLittleEndian`.</span></span>
+1. <span data-ttu-id="5badc-112">**`LittleEndian`**: Egy `qArr : Qubit[]` egész számot jelölő qubit tömb, amely `qArr[0]` a legkevésbé jelentős bitet jelöli.</span><span class="sxs-lookup"><span data-stu-id="5badc-112">**`LittleEndian`**: A qubit array `qArr : Qubit[]` that represents an integer where `qArr[0]` denotes the least significant bit.</span></span>
+1. <span data-ttu-id="5badc-113">**`SignedLittleEndian`**: Ugyanaz, mint `LittleEndian` a kivételével, hogy a két kiegészítésben tárolt, aláírt egész számot jelöli.</span><span class="sxs-lookup"><span data-stu-id="5badc-113">**`SignedLittleEndian`**: Same as `LittleEndian` except that it represents a signed integer stored in two's complement.</span></span>
+1. <span data-ttu-id="5badc-114">**`FixedPoint`**: Egy qubit tömbből `qArr2 : Qubit[]` és egy bináris pont pozícióból álló valós számot képvisel `pos` , amely a bináris pont bal oldalán lévő bináris számjegyek számát számlálja.</span><span class="sxs-lookup"><span data-stu-id="5badc-114">**`FixedPoint`**: Represents a real number consisting of a qubit array `qArr2 : Qubit[]` and a binary point position `pos`, which counts the number of binary digits to the left of the binary point.</span></span> <span data-ttu-id="5badc-115">`qArr2` a tárolása ugyanúgy történik, mint a `SignedLittleEndian` .</span><span class="sxs-lookup"><span data-stu-id="5badc-115">`qArr2` is stored in the same way as `SignedLittleEndian`.</span></span>
 
-## <a name="operations"></a><span data-ttu-id="40661-116">Műveletek</span><span class="sxs-lookup"><span data-stu-id="40661-116">Operations</span></span>
+## <a name="operations"></a><span data-ttu-id="5badc-116">Műveletek</span><span class="sxs-lookup"><span data-stu-id="5badc-116">Operations</span></span>
 
-<span data-ttu-id="40661-117">A fenti három típus mindegyikéhez számos művelet érhető el:</span><span class="sxs-lookup"><span data-stu-id="40661-117">For each of the three types above, a variety of operations is available:</span></span>
+<span data-ttu-id="5badc-117">A fenti három típus mindegyikéhez számos művelet érhető el:</span><span class="sxs-lookup"><span data-stu-id="5badc-117">For each of the three types above, a variety of operations is available:</span></span>
 
 1. **`LittleEndian`**
-    - <span data-ttu-id="40661-118">Összeadás</span><span class="sxs-lookup"><span data-stu-id="40661-118">Addition</span></span>
-    - <span data-ttu-id="40661-119">Összehasonlítás</span><span class="sxs-lookup"><span data-stu-id="40661-119">Comparison</span></span>
-    - <span data-ttu-id="40661-120">Szorzás</span><span class="sxs-lookup"><span data-stu-id="40661-120">Multiplication</span></span>
-    - <span data-ttu-id="40661-121">Négyszögesítése</span><span class="sxs-lookup"><span data-stu-id="40661-121">Squaring</span></span>
-    - <span data-ttu-id="40661-122">Osztás (a maradéktal)</span><span class="sxs-lookup"><span data-stu-id="40661-122">Division (with remainder)</span></span>
+    - <span data-ttu-id="5badc-118">Összeadás</span><span class="sxs-lookup"><span data-stu-id="5badc-118">Addition</span></span>
+    - <span data-ttu-id="5badc-119">Összehasonlítás</span><span class="sxs-lookup"><span data-stu-id="5badc-119">Comparison</span></span>
+    - <span data-ttu-id="5badc-120">Szorzás</span><span class="sxs-lookup"><span data-stu-id="5badc-120">Multiplication</span></span>
+    - <span data-ttu-id="5badc-121">Négyszögesítése</span><span class="sxs-lookup"><span data-stu-id="5badc-121">Squaring</span></span>
+    - <span data-ttu-id="5badc-122">Osztás (a maradéktal)</span><span class="sxs-lookup"><span data-stu-id="5badc-122">Division (with remainder)</span></span>
 
 1. **`SignedLittleEndian`**
-    - <span data-ttu-id="40661-123">Összeadás</span><span class="sxs-lookup"><span data-stu-id="40661-123">Addition</span></span>
-    - <span data-ttu-id="40661-124">Összehasonlítás</span><span class="sxs-lookup"><span data-stu-id="40661-124">Comparison</span></span>
-    - <span data-ttu-id="40661-125">A többverziós adattárház 2</span><span class="sxs-lookup"><span data-stu-id="40661-125">Inversion modulo 2's complement</span></span>
-    - <span data-ttu-id="40661-126">Szorzás</span><span class="sxs-lookup"><span data-stu-id="40661-126">Multiplication</span></span>
-    - <span data-ttu-id="40661-127">Négyszögesítése</span><span class="sxs-lookup"><span data-stu-id="40661-127">Squaring</span></span>
+    - <span data-ttu-id="5badc-123">Összeadás</span><span class="sxs-lookup"><span data-stu-id="5badc-123">Addition</span></span>
+    - <span data-ttu-id="5badc-124">Összehasonlítás</span><span class="sxs-lookup"><span data-stu-id="5badc-124">Comparison</span></span>
+    - <span data-ttu-id="5badc-125">A többverziós adattárház 2</span><span class="sxs-lookup"><span data-stu-id="5badc-125">Inversion modulo 2's complement</span></span>
+    - <span data-ttu-id="5badc-126">Szorzás</span><span class="sxs-lookup"><span data-stu-id="5badc-126">Multiplication</span></span>
+    - <span data-ttu-id="5badc-127">Négyszögesítése</span><span class="sxs-lookup"><span data-stu-id="5badc-127">Squaring</span></span>
 
 1. **`FixedPoint`**
-    - <span data-ttu-id="40661-128">Előkészítés/inicializálás klasszikus értékekre</span><span class="sxs-lookup"><span data-stu-id="40661-128">Preparation / initialization to a classical values</span></span>
-    - <span data-ttu-id="40661-129">Hozzáadás (klasszikus állandó vagy más kvantum rögzített pont)</span><span class="sxs-lookup"><span data-stu-id="40661-129">Addition (classical constant or other quantum fixed-point)</span></span>
-    - <span data-ttu-id="40661-130">Összehasonlítás</span><span class="sxs-lookup"><span data-stu-id="40661-130">Comparison</span></span>
-    - <span data-ttu-id="40661-131">Szorzás</span><span class="sxs-lookup"><span data-stu-id="40661-131">Multiplication</span></span>
-    - <span data-ttu-id="40661-132">Négyszögesítése</span><span class="sxs-lookup"><span data-stu-id="40661-132">Squaring</span></span>
-    - <span data-ttu-id="40661-133">Többfunkciós kiértékelés a páros és páratlan függvények esetében</span><span class="sxs-lookup"><span data-stu-id="40661-133">Polynomial evaluation with specialization for even and odd functions</span></span>
-    - <span data-ttu-id="40661-134">Kölcsönös (1/x)</span><span class="sxs-lookup"><span data-stu-id="40661-134">Reciprocal (1/x)</span></span>
-    - <span data-ttu-id="40661-135">Mérés (klasszikus dupla)</span><span class="sxs-lookup"><span data-stu-id="40661-135">Measurement (classical Double)</span></span>
+    - <span data-ttu-id="5badc-128">Előkészítés/inicializálás klasszikus értékekre</span><span class="sxs-lookup"><span data-stu-id="5badc-128">Preparation / initialization to a classical values</span></span>
+    - <span data-ttu-id="5badc-129">Hozzáadás (klasszikus állandó vagy más kvantum rögzített pont)</span><span class="sxs-lookup"><span data-stu-id="5badc-129">Addition (classical constant or other quantum fixed-point)</span></span>
+    - <span data-ttu-id="5badc-130">Összehasonlítás</span><span class="sxs-lookup"><span data-stu-id="5badc-130">Comparison</span></span>
+    - <span data-ttu-id="5badc-131">Szorzás</span><span class="sxs-lookup"><span data-stu-id="5badc-131">Multiplication</span></span>
+    - <span data-ttu-id="5badc-132">Négyszögesítése</span><span class="sxs-lookup"><span data-stu-id="5badc-132">Squaring</span></span>
+    - <span data-ttu-id="5badc-133">Többfunkciós kiértékelés a páros és páratlan függvények esetében</span><span class="sxs-lookup"><span data-stu-id="5badc-133">Polynomial evaluation with specialization for even and odd functions</span></span>
+    - <span data-ttu-id="5badc-134">Kölcsönös (1/x)</span><span class="sxs-lookup"><span data-stu-id="5badc-134">Reciprocal (1/x)</span></span>
+    - <span data-ttu-id="5badc-135">Mérés (klasszikus dupla)</span><span class="sxs-lookup"><span data-stu-id="5badc-135">Measurement (classical Double)</span></span>
 
-<span data-ttu-id="40661-136">Az egyes műveletekkel kapcsolatos további információkért és részletes dokumentációért tekintse meg a Q# könyvtár-dokumentációt a [docs.microsoft.com](https://docs.microsoft.com/quantum) címen.</span><span class="sxs-lookup"><span data-stu-id="40661-136">For more information and detailed documentation for each of these operations, see the Q# library reference docs at [docs.microsoft.com](https://docs.microsoft.com/quantum)</span></span>
+<span data-ttu-id="5badc-136">Az egyes műveletekkel kapcsolatos további információkért és részletes dokumentációért tekintse meg a Q# könyvtár-dokumentációt a [docs.microsoft.com](https://docs.microsoft.com/quantum) címen.</span><span class="sxs-lookup"><span data-stu-id="5badc-136">For more information and detailed documentation for each of these operations, see the Q# library reference docs at [docs.microsoft.com](https://docs.microsoft.com/quantum)</span></span>
 
-## <a name="sample-integer-addition"></a><span data-ttu-id="40661-137">Minta: egész szám hozzáadása</span><span class="sxs-lookup"><span data-stu-id="40661-137">Sample: Integer addition</span></span>
+## <a name="sample-integer-addition"></a><span data-ttu-id="5badc-137">Minta: egész szám hozzáadása</span><span class="sxs-lookup"><span data-stu-id="5badc-137">Sample: Integer addition</span></span>
 
-<span data-ttu-id="40661-138">Alapszintű példaként vegye fontolóra a $ $ \ket x\ket y\mapsto \ket x\ket {x + y} $ $ értéket, amely egy n-qubit egész $x $ és egy n-vagy (n + 1) értékű művelet, amely a qubit regisztrálja $y $ bemenetként, amely az utóbbi, amelynek a összege a $ (x + y) $-ra van leképezve.</span><span class="sxs-lookup"><span data-stu-id="40661-138">As a basic example, consider the operation $$ \ket x\ket y\mapsto \ket x\ket{x+y} $$ that is, an operation that takes an n-qubit integer $x$ and an n- or (n+1)-qubit register $y$ as input, the latter of which it maps to the sum $(x+y)$.</span></span> <span data-ttu-id="40661-139">Vegye figyelembe, hogy az összeg számítása $2 ^ n $, ha $y $ egy $n $ bites regisztrációban van tárolva.</span><span class="sxs-lookup"><span data-stu-id="40661-139">Note that the sum is computed modulo $2^n$ if $y$ is stored in an $n$-bit register.</span></span>
+<span data-ttu-id="5badc-138">Alapszintű példaként vegye fontolóra a $ $ \ket x\ket y\mapsto \ket x\ket {x + y} $ $ értéket, amely egy n-qubit egész $x $ és egy n-vagy (n + 1) értékű művelet, amely a qubit regisztrálja $y $ bemenetként, amely az utóbbi, amelynek a összege a $ (x + y) $-ra van leképezve.</span><span class="sxs-lookup"><span data-stu-id="5badc-138">As a basic example, consider the operation $$ \ket x\ket y\mapsto \ket x\ket{x+y} $$ that is, an operation that takes an n-qubit integer $x$ and an n- or (n+1)-qubit register $y$ as input, the latter of which it maps to the sum $(x+y)$.</span></span> <span data-ttu-id="5badc-139">Vegye figyelembe, hogy az összeg számítása $2 ^ n $, ha $y $ egy $n $ bites regisztrációban van tárolva.</span><span class="sxs-lookup"><span data-stu-id="5badc-139">Note that the sum is computed modulo $2^n$ if $y$ is stored in an $n$-bit register.</span></span>
 
-<span data-ttu-id="40661-140">A Quantum Development Kit használatával ez a művelet a következőképpen alkalmazható:</span><span class="sxs-lookup"><span data-stu-id="40661-140">Using the Quantum Development Kit, this operation can be applied as follows:</span></span>
+<span data-ttu-id="5badc-140">A Quantum Development Kit használatával ez a művelet a következőképpen alkalmazható:</span><span class="sxs-lookup"><span data-stu-id="5badc-140">Using the Quantum Development Kit, this operation can be applied as follows:</span></span>
 ```qsharp
 operation TestMyAddition(xValue : Int, yValue : Int, n : Int) : Unit {
     using ((xQubits, yQubits) = (Qubit[n], Qubit[n]))
@@ -91,39 +91,39 @@ operation TestMyAddition(xValue : Int, yValue : Int, n : Int) : Unit {
 }
 ```
 
-## <a name="sample-evaluating-smooth-functions"></a><span data-ttu-id="40661-141">Minta: simított függvények kiértékelése</span><span class="sxs-lookup"><span data-stu-id="40661-141">Sample: Evaluating smooth functions</span></span>
+## <a name="sample-evaluating-smooth-functions"></a><span data-ttu-id="5badc-141">Minta: simított függvények kiértékelése</span><span class="sxs-lookup"><span data-stu-id="5badc-141">Sample: Evaluating smooth functions</span></span>
 
-<span data-ttu-id="40661-142">Ha olyan simított függvényeket szeretne kiértékelni, mint például a $ \sin (x) $ a kvantum-számítógépen, ahol a $x $ a kvantum `FixedPoint` -szám, a Quantum Development Kit numerikus könyvtár biztosítja a műveleteket `EvaluatePolynomialFxP` és a-t `Evaluate[Even/Odd]PolynomialFxP` .</span><span class="sxs-lookup"><span data-stu-id="40661-142">To evaluate smooth functions such as $\sin(x)$ on a quantum computer, where $x$ is a quantum `FixedPoint` number, the Quantum Development Kit numerics library provides the operations `EvaluatePolynomialFxP` and `Evaluate[Even/Odd]PolynomialFxP`.</span></span>
+<span data-ttu-id="5badc-142">Ha olyan simított függvényeket szeretne kiértékelni, mint például a $ \sin (x) $ a kvantum-számítógépen, ahol a $x $ a kvantum `FixedPoint` -szám, a Quantum Development Kit numerikus könyvtár biztosítja a műveleteket `EvaluatePolynomialFxP` és a-t `Evaluate[Even/Odd]PolynomialFxP` .</span><span class="sxs-lookup"><span data-stu-id="5badc-142">To evaluate smooth functions such as $\sin(x)$ on a quantum computer, where $x$ is a quantum `FixedPoint` number, the Quantum Development Kit numerics library provides the operations `EvaluatePolynomialFxP` and `Evaluate[Even/Odd]PolynomialFxP`.</span></span>
 
-<span data-ttu-id="40661-143">Az első `EvaluatePolynomialFxP` lehetővé teszi, hogy kiértékelje a "$ P (x) = a_0 + a_1x + a_2x ^ 2 + \cdots + a_dx ^ d, $ $, ahol a $d $ a *mértékét*.</span><span class="sxs-lookup"><span data-stu-id="40661-143">The first, `EvaluatePolynomialFxP`, allows to evaluate a polynomial of the form $$ P(x) = a_0 + a_1x + a_2x^2 + \cdots + a_dx^d, $$ where $d$ denotes the *degree*.</span></span> <span data-ttu-id="40661-144">Ehhez minden szükséges, hogy a polinom `[a_0,..., a_d]` (típus `Double[]` ), a bemenet `x : FixedPoint` és a kimenet `y : FixedPoint` (kezdetben nulla) a következő:</span><span class="sxs-lookup"><span data-stu-id="40661-144">To do so, all that is needed are the polynomial coefficients `[a_0,..., a_d]` (of type `Double[]`), the input `x : FixedPoint` and the output `y : FixedPoint` (initially zero):</span></span>
+<span data-ttu-id="5badc-143">Az első `EvaluatePolynomialFxP` lehetővé teszi, hogy kiértékelje a "$ P (x) = a_0 + a_1x + a_2x ^ 2 + \cdots + a_dx ^ d, $ $, ahol a $d $ a *mértékét*.</span><span class="sxs-lookup"><span data-stu-id="5badc-143">The first, `EvaluatePolynomialFxP`, allows to evaluate a polynomial of the form $$ P(x) = a_0 + a_1x + a_2x^2 + \cdots + a_dx^d, $$ where $d$ denotes the *degree*.</span></span> <span data-ttu-id="5badc-144">Ehhez minden szükséges, hogy a polinom `[a_0,..., a_d]` (típus `Double[]` ), a bemenet `x : FixedPoint` és a kimenet `y : FixedPoint` (kezdetben nulla) a következő:</span><span class="sxs-lookup"><span data-stu-id="5badc-144">To do so, all that is needed are the polynomial coefficients `[a_0,..., a_d]` (of type `Double[]`), the input `x : FixedPoint` and the output `y : FixedPoint` (initially zero):</span></span>
 ```qsharp
 EvaluatePolynomialFxP([1.0, 2.0], x, y);
 ```
-<span data-ttu-id="40661-145">Az eredmény, $P (x) = 1 + 2x $, a következő helyen lesz tárolva: `yFxP` .</span><span class="sxs-lookup"><span data-stu-id="40661-145">The result, $P(x)=1+2x$, will be stored in `yFxP`.</span></span>
+<span data-ttu-id="5badc-145">Az eredmény, $P (x) = 1 + 2x $, a következő helyen lesz tárolva: `yFxP` .</span><span class="sxs-lookup"><span data-stu-id="5badc-145">The result, $P(x)=1+2x$, will be stored in `yFxP`.</span></span>
 
-<span data-ttu-id="40661-146">A második, `EvaluateEvenPolynomialFxP` és a harmadik, a `EvaluateOddPolynomialFxP` páros és páratlan függvények esetében is specializálódott.</span><span class="sxs-lookup"><span data-stu-id="40661-146">The second, `EvaluateEvenPolynomialFxP`, and the third, `EvaluateOddPolynomialFxP`, are specializations for the cases of even and odd functions, respectively.</span></span> <span data-ttu-id="40661-147">Ez a páros/páratlan függvény esetében $f (x) $ és $ $ P_ {even} (x) = a_0 + a_1 x ^ 2 + a_2 x ^ 4 + \cdots + a_d x ^ {2D}, a $ $ $f (x) $ megközelítő értéke $P _ {even} (x) $ vagy $P _ {odd} (x): = x\cdot P_ {even} (x) $, ill.</span><span class="sxs-lookup"><span data-stu-id="40661-147">That is, for an even/odd function $f(x)$ and $$ P_{even}(x)=a_0 + a_1 x^2 + a_2 x^4 + \cdots + a_d x^{2d}, $$ $f(x)$ is approximated well by $P_{even}(x)$ or $P_{odd}(x) := x\cdot P_{even}(x)$, respectively.</span></span>
-<span data-ttu-id="40661-148">A-ben Q# Ez a két eset a következőképpen kezelhető:</span><span class="sxs-lookup"><span data-stu-id="40661-148">In Q#, these two cases can be handled as follows:</span></span>
+<span data-ttu-id="5badc-146">A második, `EvaluateEvenPolynomialFxP` és a harmadik, a `EvaluateOddPolynomialFxP` páros és páratlan függvények esetében is specializálódott.</span><span class="sxs-lookup"><span data-stu-id="5badc-146">The second, `EvaluateEvenPolynomialFxP`, and the third, `EvaluateOddPolynomialFxP`, are specializations for the cases of even and odd functions, respectively.</span></span> <span data-ttu-id="5badc-147">Ez a páros/páratlan függvény esetében $f (x) $ és $ $ P_ {even} (x) = a_0 + a_1 x ^ 2 + a_2 x ^ 4 + \cdots + a_d x ^ {2D}, a $ $ $f (x) $ megközelítő értéke $P _ {even} (x) $ vagy $P _ {odd} (x): = x\cdot P_ {even} (x) $, ill.</span><span class="sxs-lookup"><span data-stu-id="5badc-147">That is, for an even/odd function $f(x)$ and $$ P_{even}(x)=a_0 + a_1 x^2 + a_2 x^4 + \cdots + a_d x^{2d}, $$ $f(x)$ is approximated well by $P_{even}(x)$ or $P_{odd}(x) := x\cdot P_{even}(x)$, respectively.</span></span>
+<span data-ttu-id="5badc-148">A-ben Q# Ez a két eset a következőképpen kezelhető:</span><span class="sxs-lookup"><span data-stu-id="5badc-148">In Q#, these two cases can be handled as follows:</span></span>
 ```qsharp
 EvaluateEvenPolynomialFxP([1.0, 2.0], x, y);
 ```
-<span data-ttu-id="40661-149">amely kiértékeli $P _ {even} (x) = 1 + 2x ^ 2 $ értéket, és</span><span class="sxs-lookup"><span data-stu-id="40661-149">which evaluates $P_{even}(x) = 1 + 2x^2$, and</span></span>
+<span data-ttu-id="5badc-149">amely kiértékeli $P _ {even} (x) = 1 + 2x ^ 2 $ értéket, és</span><span class="sxs-lookup"><span data-stu-id="5badc-149">which evaluates $P_{even}(x) = 1 + 2x^2$, and</span></span>
 ```qsharp
 EvaluateOddPolynomialFxP([1.0, 2.0], x, y);
 ```
-<span data-ttu-id="40661-150">amely kiértékeli $P _ {odd} (x) = x + 2x ^ 3 $ értéket.</span><span class="sxs-lookup"><span data-stu-id="40661-150">which evaluates $P_{odd}(x) = x + 2x^3$.</span></span>
+<span data-ttu-id="5badc-150">amely kiértékeli $P _ {odd} (x) = x + 2x ^ 3 $ értéket.</span><span class="sxs-lookup"><span data-stu-id="5badc-150">which evaluates $P_{odd}(x) = x + 2x^3$.</span></span>
 
-## <a name="more-samples"></a><span data-ttu-id="40661-151">További példák</span><span class="sxs-lookup"><span data-stu-id="40661-151">More samples</span></span>
+## <a name="more-samples"></a><span data-ttu-id="5badc-151">További példák</span><span class="sxs-lookup"><span data-stu-id="5badc-151">More samples</span></span>
 
-<span data-ttu-id="40661-152">További mintákat a [fő minták tárházában](https://github.com/Microsoft/Quantum)talál.</span><span class="sxs-lookup"><span data-stu-id="40661-152">You can find more samples in the [main samples repository](https://github.com/Microsoft/Quantum).</span></span>
+<span data-ttu-id="5badc-152">További mintákat a [fő minták tárházában](https://github.com/Microsoft/Quantum)talál.</span><span class="sxs-lookup"><span data-stu-id="5badc-152">You can find more samples in the [main samples repository](https://github.com/Microsoft/Quantum).</span></span>
 
-<span data-ttu-id="40661-153">Első lépésként klónozott a tárházat, és nyissa meg az `Numerics` almappát:</span><span class="sxs-lookup"><span data-stu-id="40661-153">To get started, clone the repo and open the `Numerics` subfolder:</span></span>
+<span data-ttu-id="5badc-153">Első lépésként klónozott a tárházat, és nyissa meg az `Numerics` almappát:</span><span class="sxs-lookup"><span data-stu-id="5badc-153">To get started, clone the repo and open the `Numerics` subfolder:</span></span>
 
 ```bash
 git clone https://github.com/Microsoft/Quantum.git
 cd Quantum/samples/numerics
 ```
 
-<span data-ttu-id="40661-154">Ezután az `cd` egyik minta mappájába, és futtassa a mintát a használatával</span><span class="sxs-lookup"><span data-stu-id="40661-154">Then, `cd` into one of the sample folders and run the sample via</span></span>
+<span data-ttu-id="5badc-154">Ezután az `cd` egyik minta mappájába, és futtassa a mintát a használatával</span><span class="sxs-lookup"><span data-stu-id="5badc-154">Then, `cd` into one of the sample folders and run the sample via</span></span>
 
 ```bash
 dotnet run
