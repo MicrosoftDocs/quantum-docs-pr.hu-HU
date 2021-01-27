@@ -1,51 +1,51 @@
 ---
 uid: Microsoft.Quantum.Oracles.ObliviousOracleFromDeterministicStateOracle
 title: ObliviousOracleFromDeterministicStateOracle függvény
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Oracles
 qsharp.name: ObliviousOracleFromDeterministicStateOracle
 qsharp.summary: Combines the oracles `DeterministicStateOracle` and `ObliviousOracle`.
-ms.openlocfilehash: 8f1fe34e38edefba228fb9d01e1712e4c0916970
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: c7aa80feda67d68216f318073ee8c6a5eb0653c0
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96226689"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98854526"
 ---
-# <a name="obliviousoraclefromdeterministicstateoracle-function"></a><span data-ttu-id="2a106-102">ObliviousOracleFromDeterministicStateOracle függvény</span><span class="sxs-lookup"><span data-stu-id="2a106-102">ObliviousOracleFromDeterministicStateOracle function</span></span>
+# <a name="obliviousoraclefromdeterministicstateoracle-function"></a><span data-ttu-id="174f7-102">ObliviousOracleFromDeterministicStateOracle függvény</span><span class="sxs-lookup"><span data-stu-id="174f7-102">ObliviousOracleFromDeterministicStateOracle function</span></span>
 
-<span data-ttu-id="2a106-103">Névtér: [Microsoft. Quantum. Oracles](xref:Microsoft.Quantum.Oracles)</span><span class="sxs-lookup"><span data-stu-id="2a106-103">Namespace: [Microsoft.Quantum.Oracles](xref:Microsoft.Quantum.Oracles)</span></span>
+<span data-ttu-id="174f7-103">Névtér: [Microsoft. Quantum. Oracles](xref:Microsoft.Quantum.Oracles)</span><span class="sxs-lookup"><span data-stu-id="174f7-103">Namespace: [Microsoft.Quantum.Oracles](xref:Microsoft.Quantum.Oracles)</span></span>
 
-<span data-ttu-id="2a106-104">Csomag: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span><span class="sxs-lookup"><span data-stu-id="2a106-104">Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span></span>
+<span data-ttu-id="174f7-104">Csomag: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span><span class="sxs-lookup"><span data-stu-id="174f7-104">Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span></span>
 
 
-<span data-ttu-id="2a106-105">Egyesíti az Oracle `DeterministicStateOracle` -ket és a-t `ObliviousOracle` .</span><span class="sxs-lookup"><span data-stu-id="2a106-105">Combines the oracles `DeterministicStateOracle` and `ObliviousOracle`.</span></span>
+<span data-ttu-id="174f7-105">Egyesíti az Oracle `DeterministicStateOracle` -ket és a-t `ObliviousOracle` .</span><span class="sxs-lookup"><span data-stu-id="174f7-105">Combines the oracles `DeterministicStateOracle` and `ObliviousOracle`.</span></span>
 
 ```qsharp
 function ObliviousOracleFromDeterministicStateOracle (ancillaOracle : Microsoft.Quantum.Oracles.DeterministicStateOracle, signalOracle : Microsoft.Quantum.Oracles.ObliviousOracle) : Microsoft.Quantum.Oracles.ObliviousOracle
 ```
 
 
-## <a name="input"></a><span data-ttu-id="2a106-106">Bevitel</span><span class="sxs-lookup"><span data-stu-id="2a106-106">Input</span></span>
+## <a name="input"></a><span data-ttu-id="174f7-106">Bevitel</span><span class="sxs-lookup"><span data-stu-id="174f7-106">Input</span></span>
 
-### <a name="ancillaoracle--deterministicstateoracle"></a><span data-ttu-id="2a106-107">ancillaOracle: [DeterministicStateOracle](xref:Microsoft.Quantum.Oracles.DeterministicStateOracle)</span><span class="sxs-lookup"><span data-stu-id="2a106-107">ancillaOracle : [DeterministicStateOracle](xref:Microsoft.Quantum.Oracles.DeterministicStateOracle)</span></span>
+### <a name="ancillaoracle--deterministicstateoracle"></a><span data-ttu-id="174f7-107">ancillaOracle: [DeterministicStateOracle](xref:Microsoft.Quantum.Oracles.DeterministicStateOracle)</span><span class="sxs-lookup"><span data-stu-id="174f7-107">ancillaOracle : [DeterministicStateOracle](xref:Microsoft.Quantum.Oracles.DeterministicStateOracle)</span></span>
 
-<span data-ttu-id="2a106-108">Olyan állapot-előkészítési Oracle $A $, amely a (z `DeterministicStateOracle` ) $a $ regiszterben működik.</span><span class="sxs-lookup"><span data-stu-id="2a106-108">A state preparation oracle $A$ of type `DeterministicStateOracle` acting on register $a$.</span></span>
-
-
-### <a name="signaloracle--obliviousoracle"></a><span data-ttu-id="2a106-109">signalOracle: [ObliviousOracle](xref:Microsoft.Quantum.Oracles.ObliviousOracle)</span><span class="sxs-lookup"><span data-stu-id="2a106-109">signalOracle : [ObliviousOracle](xref:Microsoft.Quantum.Oracles.ObliviousOracle)</span></span>
-
-<span data-ttu-id="2a106-110">Egy Oracle $U $ típusú, amely `ObliviousOracle` a register $a, s $ címen közösen működik.</span><span class="sxs-lookup"><span data-stu-id="2a106-110">A oracle $U$ of type `ObliviousOracle` acting jointly on register $a,s$.</span></span>
+<span data-ttu-id="174f7-108">Olyan állapot-előkészítési Oracle $A $, amely a (z `DeterministicStateOracle` ) $a $ regiszterben működik.</span><span class="sxs-lookup"><span data-stu-id="174f7-108">A state preparation oracle $A$ of type `DeterministicStateOracle` acting on register $a$.</span></span>
 
 
+### <a name="signaloracle--obliviousoracle"></a><span data-ttu-id="174f7-109">signalOracle: [ObliviousOracle](xref:Microsoft.Quantum.Oracles.ObliviousOracle)</span><span class="sxs-lookup"><span data-stu-id="174f7-109">signalOracle : [ObliviousOracle](xref:Microsoft.Quantum.Oracles.ObliviousOracle)</span></span>
 
-## <a name="output--obliviousoracle"></a><span data-ttu-id="2a106-111">Kimenet: [ObliviousOracle](xref:Microsoft.Quantum.Oracles.ObliviousOracle)</span><span class="sxs-lookup"><span data-stu-id="2a106-111">Output : [ObliviousOracle](xref:Microsoft.Quantum.Oracles.ObliviousOracle)</span></span>
+<span data-ttu-id="174f7-110">Egy Oracle $U $ típusú, amely `ObliviousOracle` a register $a, s $ címen közösen működik.</span><span class="sxs-lookup"><span data-stu-id="174f7-110">A oracle $U$ of type `ObliviousOracle` acting jointly on register $a,s$.</span></span>
 
-<span data-ttu-id="2a106-112">Egy Oracle $O = UA $ típusú `ObliviousOracle` .</span><span class="sxs-lookup"><span data-stu-id="2a106-112">An oracle $O=UA$ of type `ObliviousOracle`.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="2a106-113">Lásd még:</span><span class="sxs-lookup"><span data-stu-id="2a106-113">See Also</span></span>
 
-- [<span data-ttu-id="2a106-114">Microsoft. Quantum. Oracles. DeterministicStateOracle</span><span class="sxs-lookup"><span data-stu-id="2a106-114">Microsoft.Quantum.Oracles.DeterministicStateOracle</span></span>](xref:Microsoft.Quantum.Oracles.DeterministicStateOracle)
-- [<span data-ttu-id="2a106-115">Microsoft. Quantum. Oracles. ObliviousOracle</span><span class="sxs-lookup"><span data-stu-id="2a106-115">Microsoft.Quantum.Oracles.ObliviousOracle</span></span>](xref:Microsoft.Quantum.Oracles.ObliviousOracle)
+## <a name="output--obliviousoracle"></a><span data-ttu-id="174f7-111">Kimenet: [ObliviousOracle](xref:Microsoft.Quantum.Oracles.ObliviousOracle)</span><span class="sxs-lookup"><span data-stu-id="174f7-111">Output : [ObliviousOracle](xref:Microsoft.Quantum.Oracles.ObliviousOracle)</span></span>
+
+<span data-ttu-id="174f7-112">Egy Oracle $O = UA $ típusú `ObliviousOracle` .</span><span class="sxs-lookup"><span data-stu-id="174f7-112">An oracle $O=UA$ of type `ObliviousOracle`.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="174f7-113">Lásd még:</span><span class="sxs-lookup"><span data-stu-id="174f7-113">See Also</span></span>
+
+- [<span data-ttu-id="174f7-114">Microsoft. Quantum. Oracles. DeterministicStateOracle</span><span class="sxs-lookup"><span data-stu-id="174f7-114">Microsoft.Quantum.Oracles.DeterministicStateOracle</span></span>](xref:Microsoft.Quantum.Oracles.DeterministicStateOracle)
+- [<span data-ttu-id="174f7-115">Microsoft. Quantum. Oracles. ObliviousOracle</span><span class="sxs-lookup"><span data-stu-id="174f7-115">Microsoft.Quantum.Oracles.ObliviousOracle</span></span>](xref:Microsoft.Quantum.Oracles.ObliviousOracle)
