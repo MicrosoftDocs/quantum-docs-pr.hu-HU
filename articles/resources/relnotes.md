@@ -9,12 +9,12 @@ uid: microsoft.quantum.relnotes
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 8aa6072e9b495db6e127cac350d5bfaec1b090ce
-ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
+ms.openlocfilehash: dd37581dff2a512a29eb7729ecbf81412917b8f8
+ms.sourcegitcommit: e915baf3b84ee3a562004c5b31d157d21533d450
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98856669"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99101458"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>A Microsoft Quantum Development Kit kibocsátási megjegyzései
 
@@ -23,6 +23,15 @@ Ez a cikk információkat tartalmaz a Quantum Development Kit egyes verzióiról
 A telepítési utasításokat lásd a [telepítési útmutatóban](xref:microsoft.quantum.install).
 
 A frissítésre vonatkozó utasításokat lásd a [frissítési útmutatóban](xref:microsoft.quantum.update).
+
+## <a name="version-0152101126807"></a>0.15.2101.126807 verziója
+
+*Kiadás dátuma: január 29., 2021*
+
+- Sablonok hozzáadva a Q# fordítóprogramokhoz a IonQ és a Honeywell-szolgáltatók számára a végrehajtható fájlok célzásához
+- A Q# kernel szintaxisának kiemelése a Q# [0.15.2101125897](#version-0152101125897) verzióban bevezetett szintaxis módosításainak belefoglalása
+- Hibajavítás az Q# Azure Quantum-on keresztül küldött programok bemeneti argumentumaként való átadásának támogatásához `%azure.execute` : probléma [#401](https://github.com/microsoft/iqsharp/issues/401)
+- Az "engedély megtagadva" hiba elhárítása `az` a `iqsharp-base` Docker-rendszerképeken belül: probléma [#404](https://github.com/microsoft/iqsharp/issues/404)
 
 ## <a name="version-0152101125897"></a>0.15.2101125897 verziója
 
@@ -34,6 +43,7 @@ A frissítésre vonatkozó utasításokat lásd a [frissítési útmutatóban](x
 - Továbbfejlesztett szélességi becslések az optimális mélység érdekében [: részletek](https://github.com/MicrosoftDocs/quantum-docs-pr/pull/1159).
 - A explicit mátrixként megadott, egységes művelet alkalmazása `ApplyUnitary` ([QuantumLibraries # 391](https://github.com/microsoft/QuantumLibraries/pull/391), külső hozzájárulás a Dmytro Fedoriaka alapján)
 - https://github.com/microsoft/iqsharp/issues/387A kernel indításakor jelentkező teljesítmény hatásának csökkentésével javítva Q# .
+
 ## <a name="version-0142011120240"></a>0.14.2011120240 verziója
 
 *Kiadás dátuma: november 25., 2020*
