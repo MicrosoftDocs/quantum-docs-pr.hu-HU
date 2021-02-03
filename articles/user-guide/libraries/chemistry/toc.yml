@@ -1,9 +1,0 @@
-- name: Telepítés és ellenőrzés
-  href: installation.md
-- name: Kvantumkémiai fogalmak
-  href: concepts/toc.yml
-- name: A kémiai kódtár meghívása
-  topicHref: samples/index.md
-  href: samples/toc.yml
-- name: Séma
-  href: schema/toc.yml
